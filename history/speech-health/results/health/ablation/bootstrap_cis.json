@@ -1,0 +1,362 @@
+{
+  "abl_dcaps_omni": {
+    "n_clips": 275,
+    "n_speakers": 275,
+    "point": {
+      "orig": 0.835,
+      "lowpass": 0.764,
+      "reversed": 0.621,
+      "noise": 0.827
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.779,
+        "auc_hi": 0.889
+      },
+      "lowpass": {
+        "auc_lo": 0.692,
+        "auc_hi": 0.827,
+        "diff_vs_orig": -0.072,
+        "diff_lo": -0.127,
+        "diff_hi": -0.021,
+        "diff_significant": true
+      },
+      "reversed": {
+        "auc_lo": 0.544,
+        "auc_hi": 0.694,
+        "diff_vs_orig": -0.216,
+        "diff_lo": -0.308,
+        "diff_hi": -0.12,
+        "diff_significant": true
+      },
+      "noise": {
+        "auc_lo": 0.766,
+        "auc_hi": 0.884,
+        "diff_vs_orig": -0.008,
+        "diff_lo": -0.045,
+        "diff_hi": 0.026,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_dcaps_qwen": {
+    "n_clips": 275,
+    "n_speakers": 275,
+    "point": {
+      "orig": 0.643,
+      "lowpass": 0.584,
+      "reversed": 0.543,
+      "noise": 0.592
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.561,
+        "auc_hi": 0.726
+      },
+      "lowpass": {
+        "auc_lo": 0.505,
+        "auc_hi": 0.666,
+        "diff_vs_orig": -0.059,
+        "diff_lo": -0.125,
+        "diff_hi": 0.005,
+        "diff_significant": false
+      },
+      "reversed": {
+        "auc_lo": 0.459,
+        "auc_hi": 0.624,
+        "diff_vs_orig": -0.102,
+        "diff_lo": -0.211,
+        "diff_hi": 0.003,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.509,
+        "auc_hi": 0.669,
+        "diff_vs_orig": -0.052,
+        "diff_lo": -0.117,
+        "diff_hi": 0.01,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_kcl_read_omni": {
+    "n_clips": 37,
+    "n_speakers": 37,
+    "point": {
+      "orig": 0.759,
+      "lowpass": 0.574,
+      "reversed": 0.557,
+      "noise": 0.714
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.596,
+        "auc_hi": 0.904
+      },
+      "lowpass": {
+        "auc_lo": 0.365,
+        "auc_hi": 0.77,
+        "diff_vs_orig": -0.184,
+        "diff_lo": -0.421,
+        "diff_hi": 0.06,
+        "diff_significant": false
+      },
+      "reversed": {
+        "auc_lo": 0.353,
+        "auc_hi": 0.747,
+        "diff_vs_orig": -0.201,
+        "diff_lo": -0.413,
+        "diff_hi": 0.003,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.531,
+        "auc_hi": 0.871,
+        "diff_vs_orig": -0.045,
+        "diff_lo": -0.228,
+        "diff_hi": 0.146,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_kcl_read_qwen": {
+    "n_clips": 37,
+    "n_speakers": 37,
+    "point": {
+      "orig": 0.604,
+      "lowpass": 0.667,
+      "reversed": 0.726,
+      "noise": 0.592
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.407,
+        "auc_hi": 0.793
+      },
+      "lowpass": {
+        "auc_lo": 0.47,
+        "auc_hi": 0.843,
+        "diff_vs_orig": 0.064,
+        "diff_lo": -0.155,
+        "diff_hi": 0.284,
+        "diff_significant": false
+      },
+      "reversed": {
+        "auc_lo": 0.544,
+        "auc_hi": 0.881,
+        "diff_vs_orig": 0.122,
+        "diff_lo": -0.099,
+        "diff_hi": 0.345,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.394,
+        "auc_hi": 0.778,
+        "diff_vs_orig": -0.014,
+        "diff_lo": -0.26,
+        "diff_hi": 0.239,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_nv_vowel_omni": {
+    "n_clips": 1035,
+    "n_speakers": 107,
+    "point": {
+      "orig": 0.604,
+      "lowpass": 0.513,
+      "reversed": 0.611,
+      "noise": 0.555
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.55,
+        "auc_hi": 0.656
+      },
+      "lowpass": {
+        "auc_lo": 0.437,
+        "auc_hi": 0.587,
+        "diff_vs_orig": -0.091,
+        "diff_lo": -0.156,
+        "diff_hi": -0.028,
+        "diff_significant": true
+      },
+      "reversed": {
+        "auc_lo": 0.555,
+        "auc_hi": 0.663,
+        "diff_vs_orig": 0.007,
+        "diff_lo": -0.04,
+        "diff_hi": 0.052,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.503,
+        "auc_hi": 0.609,
+        "diff_vs_orig": -0.048,
+        "diff_lo": -0.116,
+        "diff_hi": 0.022,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_nv_vowel_qwen": {
+    "n_clips": 1035,
+    "n_speakers": 107,
+    "point": {
+      "orig": 0.573,
+      "lowpass": 0.533,
+      "reversed": 0.548,
+      "noise": 0.551
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.516,
+        "auc_hi": 0.63
+      },
+      "lowpass": {
+        "auc_lo": 0.461,
+        "auc_hi": 0.609,
+        "diff_vs_orig": -0.04,
+        "diff_lo": -0.133,
+        "diff_hi": 0.055,
+        "diff_significant": false
+      },
+      "reversed": {
+        "auc_lo": 0.491,
+        "auc_hi": 0.603,
+        "diff_vs_orig": -0.026,
+        "diff_lo": -0.064,
+        "diff_hi": 0.011,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.482,
+        "auc_hi": 0.616,
+        "diff_vs_orig": -0.022,
+        "diff_lo": -0.107,
+        "diff_hi": 0.065,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_pcg_vowel_omni": {
+    "n_clips": 2000,
+    "n_speakers": 100,
+    "point": {
+      "orig": 0.498,
+      "lowpass": 0.542,
+      "reversed": 0.498,
+      "noise": 0.562
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.427,
+        "auc_hi": 0.573
+      },
+      "lowpass": {
+        "auc_lo": 0.477,
+        "auc_hi": 0.609,
+        "diff_vs_orig": 0.044,
+        "diff_lo": -0.035,
+        "diff_hi": 0.117,
+        "diff_significant": false
+      },
+      "reversed": {
+        "auc_lo": 0.429,
+        "auc_hi": 0.567,
+        "diff_vs_orig": -0.001,
+        "diff_lo": -0.035,
+        "diff_hi": 0.033,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.503,
+        "auc_hi": 0.622,
+        "diff_vs_orig": 0.063,
+        "diff_lo": -0.029,
+        "diff_hi": 0.15,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_pcg_vowel_omni_half": {
+    "n_clips": 1000,
+    "n_speakers": 100,
+    "point": {
+      "orig": 0.525,
+      "lowpass": 0.578,
+      "reversed": 0.544,
+      "noise": 0.581
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.443,
+        "auc_hi": 0.611
+      },
+      "lowpass": {
+        "auc_lo": 0.503,
+        "auc_hi": 0.657,
+        "diff_vs_orig": 0.054,
+        "diff_lo": -0.033,
+        "diff_hi": 0.137,
+        "diff_significant": false
+      },
+      "reversed": {
+        "auc_lo": 0.462,
+        "auc_hi": 0.623,
+        "diff_vs_orig": 0.018,
+        "diff_lo": -0.026,
+        "diff_hi": 0.062,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.498,
+        "auc_hi": 0.656,
+        "diff_vs_orig": 0.054,
+        "diff_lo": -0.05,
+        "diff_hi": 0.155,
+        "diff_significant": false
+      }
+    }
+  },
+  "abl_pcg_vowel_qwen": {
+    "n_clips": 2000,
+    "n_speakers": 100,
+    "point": {
+      "orig": 0.553,
+      "lowpass": 0.562,
+      "reversed": 0.549,
+      "noise": 0.534
+    },
+    "ci": {
+      "orig": {
+        "auc_lo": 0.509,
+        "auc_hi": 0.603
+      },
+      "lowpass": {
+        "auc_lo": 0.5,
+        "auc_hi": 0.615,
+        "diff_vs_orig": 0.007,
+        "diff_lo": -0.057,
+        "diff_hi": 0.067,
+        "diff_significant": false
+      },
+      "reversed": {
+        "auc_lo": 0.496,
+        "auc_hi": 0.599,
+        "diff_vs_orig": -0.005,
+        "diff_lo": -0.047,
+        "diff_hi": 0.036,
+        "diff_significant": false
+      },
+      "noise": {
+        "auc_lo": 0.471,
+        "auc_hi": 0.588,
+        "diff_vs_orig": -0.02,
+        "diff_lo": -0.091,
+        "diff_hi": 0.047,
+        "diff_significant": false
+      }
+    }
+  }
+}
