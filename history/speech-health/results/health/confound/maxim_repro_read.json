@@ -1,0 +1,62 @@
+{
+  "italian": {
+    "raw": {
+      "auc": 0.995,
+      "ci": [
+        0.96,
+        1.0
+      ],
+      "n": 236
+    },
+    "maxim_style": {
+      "auc": 0.932,
+      "ci": [
+        0.868,
+        0.967
+      ],
+      "n": 9085
+    },
+    "mean_dur_raw_PD": 70.9,
+    "mean_dur_raw_HC": 50.3
+  },
+  "neurovoz": {
+    "raw": {
+      "auc": 0.804,
+      "ci": [
+        0.701,
+        0.857
+      ],
+      "n": 1270
+    },
+    "maxim_style": {
+      "auc": 0.731,
+      "ci": [
+        0.565,
+        0.841
+      ],
+      "n": 631
+    },
+    "mean_dur_raw_PD": 2.9,
+    "mean_dur_raw_HC": 3.2
+  },
+  "pcgita": {
+    "raw": {
+      "auc": 0.678,
+      "ci": [
+        0.533,
+        0.755
+      ],
+      "n": 1117
+    },
+    "maxim_style": {
+      "auc": 0.657,
+      "ci": [
+        0.499,
+        0.747
+      ],
+      "n": 2096
+    },
+    "mean_dur_raw_PD": 5.3,
+    "mean_dur_raw_HC": 5.2
+  }
+}
