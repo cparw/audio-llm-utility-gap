@@ -1,0 +1,5 @@
+scorefile,n,auc_model,auc_noisefloor_alone,rho_score_vs_noisefloor,p,rho_within_control,rho_within_pd
+italian_read300_af3_v2,221,0.6263,0.8032,-0.065,0.33599321136667376,0.1467,-0.0845
+italian_read300_kimi_v2,221,0.7955,0.8032,-0.3355,3.2452084172534833e-07,-0.1764,0.0054
+italian_read_af3_v2,221,0.6614,0.8032,-0.2075,0.0019252763660664194,-0.072,-0.147
+italian_read_kimi_v2,221,0.8063,0.8032,-0.3585,4.2045215411262934e-08,-0.2755,0.0447
