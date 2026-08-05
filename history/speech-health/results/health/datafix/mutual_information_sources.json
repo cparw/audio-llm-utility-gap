@@ -1,0 +1,7 @@
+{
+  "pcgita": "Copia de PCGITA_metadata.xlsx sheet PD+HC, exact-id join",
+  "neurovoz": "zenodo_upload/metadata/data_hc.csv + data_pd.csv, join on (group, zero-padded last filename field)",
+  "dcaps": "DCAPS_challenge/labels/detailed_lables.csv, join on Participant id",
+  "italian": "soleymani_checks/demographics_speakers.csv + manifest-derived",
+  "kcl": "soleymani_checks/demographics_speakers.csv + manifest-derived"
+}
