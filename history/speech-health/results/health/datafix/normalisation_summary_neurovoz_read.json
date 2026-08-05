@@ -1,0 +1,34 @@
+{
+  "dataset": "neurovoz",
+  "task": "read",
+  "n_in": 1270,
+  "n_out": 1206,
+  "T_seconds": 1.5627,
+  "target_lufs": -23.0,
+  "n_cropped": 1206,
+  "n_dropped": 64,
+  "crop_fisher_p": 0.0012241801262020146,
+  "drop_fisher_p": 0.0012241801262020146,
+  "by_label": [
+    {
+      "label": 0,
+      "n": 649,
+      "n_cropped": 629,
+      "pct_cropped": 96.91833590138675,
+      "n_dropped": 20,
+      "pct_dropped": 3.0816640986132513,
+      "median_dur_before": 3.1579375,
+      "median_sec_removed": 1.5952375
+    },
+    {
+      "label": 1,
+      "n": 621,
+      "n_cropped": 577,
+      "pct_cropped": 92.914653784219,
+      "n_dropped": 44,
+      "pct_dropped": 7.085346215780998,
+      "median_dur_before": 2.713,
+      "median_sec_removed": 1.1503
+    }
+  ]
+}
