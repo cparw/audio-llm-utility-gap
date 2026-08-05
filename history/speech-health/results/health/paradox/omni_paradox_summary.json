@@ -1,0 +1,132 @@
+{
+  "model": "Qwen2.5-Omni-7B",
+  "prompt": "Based only on this recording, does this speaker show signs of depression? Answer with one word, Yes or No.",
+  "threshold_session": 0.11499999999999999,
+  "n_clips": 390,
+  "n_pairs": 195,
+  "speakers": 74,
+  "blocks": {
+    "conflict|thr0.50": {
+      "n": 195,
+      "speakers": 74,
+      "mean_p": 0.064,
+      "acc": 0.313,
+      "bal_acc": 0.514,
+      "pred_dep_rate": 0.021,
+      "auc": 0.297
+    },
+    "agreement|thr0.50": {
+      "n": 195,
+      "speakers": 74,
+      "mean_p": 0.278,
+      "acc": 0.528,
+      "bal_acc": 0.667,
+      "pred_dep_rate": 0.236,
+      "auc": 0.868
+    },
+    "conflict|dep|thr0.50": {
+      "n": 138,
+      "speakers": 37,
+      "mean_p": 0.055,
+      "acc": 0.029,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.029,
+      "auc": NaN
+    },
+    "conflict|ctl|thr0.50": {
+      "n": 57,
+      "speakers": 37,
+      "mean_p": 0.086,
+      "acc": 1.0,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.0,
+      "auc": NaN
+    },
+    "agreement|dep|thr0.50": {
+      "n": 138,
+      "speakers": 37,
+      "mean_p": 0.382,
+      "acc": 0.333,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.333,
+      "auc": NaN
+    },
+    "agreement|ctl|thr0.50": {
+      "n": 57,
+      "speakers": 37,
+      "mean_p": 0.028,
+      "acc": 1.0,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.0,
+      "auc": NaN
+    },
+    "conflict|thr_session": {
+      "n": 195,
+      "speakers": 74,
+      "mean_p": 0.064,
+      "acc": 0.287,
+      "bal_acc": 0.419,
+      "pred_dep_rate": 0.149,
+      "auc": 0.297
+    },
+    "agreement|thr_session": {
+      "n": 195,
+      "speakers": 74,
+      "mean_p": 0.278,
+      "acc": 0.723,
+      "bal_acc": 0.794,
+      "pred_dep_rate": 0.451,
+      "auc": 0.868
+    },
+    "conflict|dep|thr_session": {
+      "n": 138,
+      "speakers": 37,
+      "mean_p": 0.055,
+      "acc": 0.101,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.101,
+      "auc": NaN
+    },
+    "conflict|ctl|thr_session": {
+      "n": 57,
+      "speakers": 37,
+      "mean_p": 0.086,
+      "acc": 0.737,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.263,
+      "auc": NaN
+    },
+    "agreement|dep|thr_session": {
+      "n": 138,
+      "speakers": 37,
+      "mean_p": 0.382,
+      "acc": 0.623,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.623,
+      "auc": NaN
+    },
+    "agreement|ctl|thr_session": {
+      "n": 57,
+      "speakers": 37,
+      "mean_p": 0.028,
+      "acc": 0.965,
+      "bal_acc": NaN,
+      "pred_dep_rate": 0.035,
+      "auc": NaN
+    }
+  },
+  "follow_label": 0.28717948717948716,
+  "follow_words": 0.7128205128205128,
+  "paired_conflict_acc": 0.28717948717948716,
+  "paired_agreement_acc": 0.7230769230769231,
+  "paired_diff": -0.4358974358974359,
+  "paired_diff_ci": [
+    -0.5607533622065192,
+    -0.3049773391812865
+  ],
+  "mcnemar_p": 5.0749031687767575e-20,
+  "shuffle_null_mean": 0.49922307692307694,
+  "whole_interview_auc_same_speakers": 0.9569028487947406,
+  "whole_interview_acc_same_speakers": 0.918918918918919,
+  "whole_interview_auc_all275": 0.8354356966797157
+}
