@@ -1,0 +1,4 @@
+prompt_id,n,mean_p,auc,bal_at_0p5,bal_oracle_t,yes_rate,mass
+P00_baseline,275,0.285,0.835,0.767,0.788,0.276,0.98
+P02_ignore_words,275,0.233,0.849,0.695,0.793,0.189,0.954
+P08_symptom_acoustic,275,0.271,0.762,0.63,0.684,0.12,0.971
