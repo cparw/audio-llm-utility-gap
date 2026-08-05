@@ -1,0 +1,21 @@
+{
+  "n_conflict": 195,
+  "n_agreement": 195,
+  "n_pairs": 195,
+  "speakers": 74,
+  "conflict_depressed_positive_words": 138,
+  "conflict_control_negative_words": 57,
+  "conflict_speakers_dep": 37,
+  "conflict_speakers_ctl": 37,
+  "median_conflict_dur_s": 30.4,
+  "median_agreement_dur_s": 29.4,
+  "interviewer_turns_removed": 2651,
+  "raw_turns": 26083,
+  "kept_participant_turns": 23351,
+  "segments_total": 6214,
+  "tfidf_segment_auc": 0.576,
+  "match_tiers": {
+    "strict_same_speaker": 146,
+    "loose_same_speaker": 49
+  }
+}
