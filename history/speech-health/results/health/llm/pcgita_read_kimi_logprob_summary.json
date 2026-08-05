@@ -1,0 +1,19 @@
+{
+  "model": "kimi-audio-7b-instruct",
+  "metric": "p_yes = P(Yes)/(P(Yes)+P(No)) at first answer position",
+  "n_clips": 1117,
+  "n_speakers": 117,
+  "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+  "p_yes_min": 0.10214280602812488,
+  "p_yes_q1": 0.3664776641584159,
+  "p_yes_median": 0.44851310294129665,
+  "p_yes_q3": 0.5339704265202679,
+  "p_yes_max": 0.9501784353812895,
+  "p_yes_mean": 0.4566921950078965,
+  "frac_above_0p5": 0.3455684870188004,
+  "answer_mass_median": 0.9961057007312775,
+  "answer_mass_mean": 0.9957988080747873,
+  "auc": 0.6160714285714285,
+  "n_pos": 560,
+  "n_neg": 557
+}
