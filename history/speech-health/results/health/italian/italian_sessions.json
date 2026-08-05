@@ -1,0 +1,105 @@
+{
+  "2016-05-26": {
+    "label": 1,
+    "n": 80,
+    "kept": 52,
+    "floor_dbfs": -63.1,
+    "speech_minus_floor_db": 35.34,
+    "encoders": [
+      "BWF_bext(ProTools/Audition)",
+      "Mixcraft_7.7"
+    ]
+  },
+  "2016-06-16": {
+    "label": 1,
+    "n": 80,
+    "kept": 66,
+    "floor_dbfs": -83.2,
+    "speech_minus_floor_db": 59.13,
+    "encoders": [
+      "BWF_bext(ProTools/Audition)"
+    ]
+  },
+  "2017-01-10": {
+    "label": 0,
+    "n": 45,
+    "kept": 30,
+    "floor_dbfs": -45.99,
+    "speech_minus_floor_db": 18.95,
+    "encoders": [
+      "LIST/id3_other",
+      "bare_fmt_data",
+      "mp3cut.net(MP3 transcode)"
+    ]
+  },
+  "2017-01-24": {
+    "label": 1,
+    "n": 96,
+    "kept": 40,
+    "floor_dbfs": -33.69,
+    "speech_minus_floor_db": 10.18,
+    "encoders": [
+      "bare_fmt_data"
+    ]
+  },
+  "2017-02-10": {
+    "label": 1,
+    "n": 181,
+    "kept": 81,
+    "floor_dbfs": -30.85,
+    "speech_minus_floor_db": 10.48,
+    "encoders": [
+      "bare_fmt_data"
+    ]
+  },
+  "2017-03-17": {
+    "label": 0,
+    "n": 32,
+    "kept": 24,
+    "floor_dbfs": -44.23,
+    "speech_minus_floor_db": 33.75,
+    "encoders": [
+      "bare_fmt_data"
+    ]
+  },
+  "2017-03-21": {
+    "label": 0,
+    "n": 93,
+    "kept": 85,
+    "floor_dbfs": -64.82,
+    "speech_minus_floor_db": 41.16,
+    "encoders": [
+      "bare_fmt_data"
+    ]
+  },
+  "2017-03-23": {
+    "label": 0,
+    "n": 144,
+    "kept": 139,
+    "floor_dbfs": -67.15,
+    "speech_minus_floor_db": 43.15,
+    "encoders": [
+      "bare_fmt_data"
+    ]
+  },
+  "2017-03-30": {
+    "label": 0,
+    "n": 48,
+    "kept": 41,
+    "floor_dbfs": -55.38,
+    "speech_minus_floor_db": 23.61,
+    "encoders": [
+      "bare_fmt_data"
+    ]
+  },
+  "2017-04-02": {
+    "label": 0,
+    "n": 32,
+    "kept": 31,
+    "floor_dbfs": -57.06,
+    "speech_minus_floor_db": 26.44,
+    "encoders": [
+      "bare_fmt_data"
+    ]
+  }
+}
