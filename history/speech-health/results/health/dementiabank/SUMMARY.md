@@ -42,3 +42,13 @@ Sample rate uniform 44.1 kHz in both groups; formats parallel (mp3+wav each).
   score tracks MMSE at spearman -0.35 within dementia speakers.
 - Age and sex matched subset built ADReSS-style: 81 pairs, gap 7.1y -> 1.1y.
 - All 468 segments cut to 16 kHz mono wav, ready for the model scorers
+
+## First model result on the conflict set (run locally on Apple silicon)
+qwen2-audio, all 468 segments, both prompt arms, answer mass 0.996:
+- agreement arm AUC 0.699 [0.636, 0.759], essentially the text baseline (0.699 OOF)
+- conflict arm AUC 0.413 [0.305, 0.533], a 0.29 drop, to chance
+So on alzheimer's the model's accuracy is the accuracy of the words: it matches the
+text baseline when the words agree with the diagnosis and falls to chance when they
+point away. The conflict interval includes 0.5, so the claim is "falls to chance",
+not "inverts", and this set is tertile-selected rather than matched pairs; both
+caveats travel with the number.
