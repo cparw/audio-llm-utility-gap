@@ -68,7 +68,10 @@ print(f"segments: {len(segs)} from {len(set((s['grp'],s['spk']) for s in segs))}
 print(f"  by group: dementia {sum(s['label'] for s in segs)}, control {sum(1-s['label'] for s in segs)}")
 
 # text-only "how impaired do the words look", out-of-fold logistic over 5 speaker folds
-FEATS = ["ttr","retrace","fillers","unintel","errors","pauses","rate","nw"]
+# CONTENT markers only. rate and nw are excluded on purpose: they are realised
+# acoustically as speaking speed, so selecting on them builds a rate shortcut
+# into the conflict arm (caught by the validity battery at AUC 0.92).
+FEATS = ["ttr","retrace","fillers","unintel","errors","pauses"]
 X = np.array([[s[f] for f in FEATS] for s in segs], float)
 X = (X - X.mean(0)) / (X.std(0) + 1e-9)
 y = np.array([s["label"] for s in segs], float)
