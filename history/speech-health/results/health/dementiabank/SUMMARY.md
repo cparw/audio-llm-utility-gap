@@ -74,3 +74,16 @@ made paired, on identical clips: probe minus answer is +0.195 [+0.025, +0.356]
 on the conflict arm (p=0.011) and +0.162 [+0.084, +0.240] on agreement
 (p=0.0005). The encoder knows significantly more than the answer uses, measured
 on the same segments, for the third condition.
+
+## Steering at the probe's own layer (the final local experiment)
+Layer 22, the median nested choice. Direction = difference in class means, fit on
+held-out speakers per fold, added to the hidden states with per-frame
+renormalisation, projector and llm frozen. Matched-norm random control.
+- baseline: conflict 0.41, agreement 0.70
+- diagnosis direction, c=0.5/1/2: conflict 0.37/0.56/0.46, agreement 0.52/0.42/0.56
+- random direction,   c=0.5/1/2: conflict 0.43/0.58/0.52, agreement 0.65/0.54/0.49
+The random direction moves the answer as much as the diagnosis direction does,
+agreement degrades immediately either way, and nothing is monotonic. Steering at
+the layer the probe itself selected, on the clips where the paired gap is
+significant (+0.195), still cannot push the answer toward the diagnosis. The
+deficit is in the readout, now shown on all three conditions.
