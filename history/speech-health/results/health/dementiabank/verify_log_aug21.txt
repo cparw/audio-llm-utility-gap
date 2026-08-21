@@ -18,3 +18,6 @@ pclm taskcond neurovoz: prompts ['ddk', 'read', 'vowel'], peak layer per prompt 
 localize_kcl_read: 34 stages, projector 0.85, min 0.817, max 0.883, final 0.883
 localize_neurovoz_read: 34 stages, projector 0.928, min 0.857, max 0.928, final 0.861
 localize_dcaps_interview: 34 stages, projector 0.573, min 0.508, max 0.576, final 0.549
+== kcl fresh local rerun, public zenodo audio (record 2867216) ==
+read: n 37, AUC 0.646 vs stored 0.658 (reliance_qwen), same yes rate 1.00, reproduces
+spontaneous: n 36, AUC 0.740, yes rate 1.00, new number, fills the last table cell
