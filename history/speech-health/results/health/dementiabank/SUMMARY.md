@@ -104,3 +104,13 @@ One caveat that travels with the LLM half: on this task the words carry signal t
 (text baseline 0.699), so part of the late rise can be internal transcription; the
 matching Parkinson's read-speech result (July run: KCL stays 0.82-0.88 through the LLM,
 words carry nothing there) closes that hole.
+
+## Plugging the probe's best layer into the projector (no training)
+Encoder layer 24 (the per layer probe's peak, 0.824) fed to the projector in place of
+the final encoder layer, everything frozen, all 468 segments rescored with the same
+diagnosis prompt. It does not work: overall answer AUC 0.488 vs baseline 0.618,
+agreement 0.469 vs 0.699, conflict 0.554 vs 0.413, and the yes rate collapses from
+80 percent to 9 percent (answer mass stays 0.995). The projector expects the final
+layer's distribution, so the training free plug is out. The trainable versions
+(retrain the projector on layer 24, or a small trained readout on the frozen encoder)
+are the remaining candidates for a fix section.
