@@ -87,3 +87,20 @@ agreement degrades immediately either way, and nothing is monotonic. Steering at
 the layer the probe itself selected, on the clips where the paired gap is
 significant (+0.195), still cannot push the answer toward the diagnosis. The
 deficit is in the readout, now shown on all three conditions.
+
+## Per-layer probing, encoder and language model (the meeting plot)
+Requested in the Aug 21 meeting: probing across every stage, not just the chosen layer.
+Same recipe everywhere: StandardScaler + logistic regression (balanced), 5-fold GroupKFold
+by speaker, all 468 segments, 228 speakers.
+- Encoder (33 states): 0.655 at the conv front end, climbs through the transformer,
+  peak 0.824 at layer 24, 0.758 at the last layer. Full curve in ad_encoder_perlayer.csv.
+- Language model at the audio token positions (projector then 32 layers, diagnosis
+  prompt, no transcript given): 0.754 at the projector, rises steadily to 0.862 around
+  layer 29, 0.851 at the final layer. Full curve in ad_llm_perlayer.csv.
+- The model's own answer on the same clips: 0.618 (recording prompt), 0.633 (voice prompt).
+So the information is present in the encoder, survives the projector, becomes MORE
+linearly readable through the language model, and the answer still does not use it.
+One caveat that travels with the LLM half: on this task the words carry signal too
+(text baseline 0.699), so part of the late rise can be internal transcription; the
+matching Parkinson's read-speech result (July run: KCL stays 0.82-0.88 through the LLM,
+words carry nothing there) closes that hole.
