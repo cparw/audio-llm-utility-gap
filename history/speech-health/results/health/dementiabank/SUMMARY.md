@@ -62,3 +62,13 @@ away. One flag that must travel with it: omni answers No on 100 percent of these
 segments, so its AUC ranks confidences without ever crossing the threshold, the
 same degeneracy it shows on parkinson's. qwen2-audio decides properly here
 (80 percent yes) and is the cleaner citation of the two.
+
+## The gap, measured on alzheimer's (same clips as the answers)
+Encoder probe on qwen2-audio's own audio encoder, nested layer selection inside
+speaker-disjoint folds (layers 18-27 chosen):
+- all 468 segments: probe 0.78
+- conflict arm:  probe 0.61 vs the model's answer 0.41
+- agreement arm: probe 0.86 vs the model's answer 0.70
+On the segments where the words point away from the diagnosis, the encoder still
+carries the diagnosis above chance while the answer falls to chance. The gap and
+the behaviour are now measured on identical data for the third condition.
