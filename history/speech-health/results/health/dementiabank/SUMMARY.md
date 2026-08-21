@@ -69,6 +69,8 @@ speaker-disjoint folds (layers 18-27 chosen):
 - all 468 segments: probe 0.78
 - conflict arm:  probe 0.61 vs the model's answer 0.41
 - agreement arm: probe 0.86 vs the model's answer 0.70
-On the segments where the words point away from the diagnosis, the encoder still
-carries the diagnosis above chance while the answer falls to chance. The gap and
-the behaviour are now measured on identical data for the third condition.
+The marginal intervals are wide (conflict probe [0.49, 0.72]), so the claim is
+made paired, on identical clips: probe minus answer is +0.195 [+0.025, +0.356]
+on the conflict arm (p=0.011) and +0.162 [+0.084, +0.240] on agreement
+(p=0.0005). The encoder knows significantly more than the answer uses, measured
+on the same segments, for the third condition.
