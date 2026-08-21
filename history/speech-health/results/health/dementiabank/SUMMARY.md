@@ -52,3 +52,13 @@ text baseline when the words agree with the diagnosis and falls to chance when t
 point away. The conflict interval includes 0.5, so the claim is "falls to chance",
 not "inverts", and this set is tertile-selected rather than matched pairs; both
 caveats travel with the number.
+
+## Second model on the conflict set (also run locally)
+qwen2.5-omni, all 468 segments, answer mass 0.96:
+- agreement arm AUC 0.766 [0.706, 0.820]
+- conflict arm AUC 0.444 [0.330, 0.581]
+Same shape as qwen2-audio: strong where the words agree, chance where they point
+away. One flag that must travel with it: omni answers No on 100 percent of these
+segments, so its AUC ranks confidences without ever crossing the threshold, the
+same degeneracy it shows on parkinson's. qwen2-audio decides properly here
+(80 percent yes) and is the cleaner citation of the two.
