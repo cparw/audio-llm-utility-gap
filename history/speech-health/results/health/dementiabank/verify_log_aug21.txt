@@ -1,0 +1,20 @@
+kcl read peak: L17 0.9667
+kcl spont peak: L19 0.9167
+kcl manifest task=?: 73 clips, 38 speakers
+kcl read behavioral_diag_AUC 0.652, n 37
+dcaps behavioral_diag_AUC 0.647, n 275
+INDEPENDENT recompute AD encoder L24 (rank AUC): 0.8243 vs csv 0.824
+INDEPENDENT recompute AD answer main (rank AUC): 0.6178 vs 0.618
+INDEPENDENT recompute AD answer voice (rank AUC): 0.6332 vs 0.633
+
+== evening pass 2 ==
+pcgita read answer: n 1117, AUC 0.539, yes rate 1.000  (col behav_diag)
+neurovoz read answer: n 1270, AUC 0.552, yes rate 1.000  (col behav_diag)
+kcl read answer: n 37, AUC 0.658, yes rate 1.000  (col behav_diag)
+kcl_pd_read_summary.json: behavioral_diag_AUC 0.658, n 37
+dcaps_dep_summary.json: behavioral_diag_AUC 0.647, n 275
+pclm taskcond pcgita: prompts ['ddk', 'monologue', 'read', 'vowel', 'words'], peak layer per prompt [13, 20, 13, 13, 13], max weight 0.045, uniform 0.030, largest weight change across prompts 0.0161, min corr 0.206
+pclm taskcond neurovoz: prompts ['ddk', 'read', 'vowel'], peak layer per prompt [15, 15, 9], max weight 0.039, uniform 0.030, largest weight change across prompts 0.0108, min corr 0.140
+localize_kcl_read: 34 stages, projector 0.85, min 0.817, max 0.883, final 0.883
+localize_neurovoz_read: 34 stages, projector 0.928, min 0.857, max 0.928, final 0.861
+localize_dcaps_interview: 34 stages, projector 0.573, min 0.508, max 0.576, final 0.549
