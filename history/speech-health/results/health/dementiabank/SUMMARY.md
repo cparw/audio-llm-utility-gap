@@ -114,3 +114,18 @@ agreement 0.469 vs 0.699, conflict 0.554 vs 0.413, and the yes rate collapses fr
 layer's distribution, so the training free plug is out. The trainable versions
 (retrain the projector on layer 24, or a small trained readout on the frozen encoder)
 are the remaining candidates for a fix section.
+
+## The last three fixes, all run locally (26 Aug)
+- Few shot, one dementia and one healthy example in the prompt: kcl read falls 0.65 to 0.46,
+  alzheimers falls 0.62 to 0.45, and the model answers no to nearly everything both times.
+  Multi audio prompting collapses it, as predicted in the meeting.
+- Projector retrained on encoder layer 24, everything else frozen, 2 of 5 folds, 3 epochs:
+  0.596 out of fold. It recovers from the broken untrained plug (0.488) but does not beat
+  the original answer (0.618). Changing the layer is not the bottleneck.
+- Text only through the model itself: qwen2 audio reading just the transcript scores 0.613
+  overall vs 0.618 with audio, agreement 0.671 vs 0.699, conflict 0.472 vs 0.413. The two
+  routes land in the same place. Per clip correlation is modest though, r 0.24, same yes/no
+  55 percent, so on alzheimers the aggregate match is the claim, not clip level copying.
+- Text subtraction on alzheimers, from the same files: pushing the words out lifts conflict
+  only to 0.476 while agreement falls to 0.454. Same trade as depression, no free lunch.
+Scores stay local per the data agreement (ad_fewshot_scores.csv, ad_textonly_scores.csv).
