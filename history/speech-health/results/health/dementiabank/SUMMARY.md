@@ -129,3 +129,13 @@ are the remaining candidates for a fix section.
 - Text subtraction on alzheimers, from the same files: pushing the words out lifts conflict
   only to 0.476 while agreement falls to 0.454. Same trade as depression, no free lunch.
 Scores stay local per the data agreement (ad_fewshot_scores.csv, ad_textonly_scores.csv).
+
+## CORRECTION and the real projector result (28 Aug, all five folds)
+The earlier "0.596, only gets back to even" line was wrong: that number scored a
+half empty prediction file while three folds were still queued. With all five folds
+done, retraining ONLY the projector on encoder layer 24 (everything else frozen,
+3 epochs, speaker disjoint) moves the model's own answers to 0.798 overall
+(baseline 0.618), agreement 0.887 (was 0.699), conflict 0.573 (was 0.413).
+Per fold 0.795 to 0.888, no weak fold. Same supervision as the readout, so the
+fair comparison is readout 0.824 vs retrained projector answers 0.798: the model
+can be made to use what it hears by retraining its smallest part.
