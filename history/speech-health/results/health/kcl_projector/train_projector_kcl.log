@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1862.15it/s]
+Loading weights:   0%|          | 0/876 [00:00<?, ?it/s]Loading weights:  22%|██▏       | 189/876 [00:00<00:00, 1869.12it/s]Loading weights:  44%|████▍     | 384/876 [00:00<00:00, 1851.90it/s]Loading weights:  65%|██████▌   | 570/876 [00:01<00:00, 343.57it/s] Loading weights:  78%|███████▊  | 679/876 [00:01<00:00, 315.19it/s]Loading weights:  86%|████████▌ | 755/876 [00:03<00:00, 129.67it/s]Loading weights:  92%|█████████▏| 805/876 [00:04<00:00, 104.89it/s]Loading weights:  96%|█████████▌| 840/876 [00:04<00:00, 106.31it/s]Loading weights:  99%|█████████▉| 868/876 [00:04<00:00, 111.29it/s]Loading weights: 100%|██████████| 876/876 [00:04<00:00, 175.56it/s]
+37 clips, 37 speakers, 16 pd
+/Users/chaitanyaparwatkar/Desktop/Hard drive data for paper/KCL/train_projector_kcl.py:67: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  tot += float(loss); nb += 1
+fold 0 epoch 0 loss 1.1884  1 min
+fold 0 epoch 1 loss 0.4115  3 min
+fold 0 epoch 2 loss 0.1430  5 min
+fold 0 eval done
+fold 1 epoch 0 loss 1.2174  7 min
+fold 1 epoch 1 loss 0.7199  9 min
+fold 1 epoch 2 loss 0.3913  10 min
+fold 1 eval done
+fold 2 epoch 0 loss 1.7872  12 min
+fold 2 epoch 1 loss 0.6244  13 min
+fold 2 epoch 2 loss 0.7146  15 min
+fold 2 eval done
+fold 3 epoch 0 loss 1.1849  17 min
+fold 3 epoch 1 loss 0.4117  18 min
+fold 3 epoch 2 loss 0.1307  20 min
+fold 3 eval done
+fold 4 epoch 0 loss 1.1292  21 min
+fold 4 epoch 1 loss 0.3892  23 min
+fold 4 epoch 2 loss 0.1527  24 min
+fold 4 eval done
+KCL RETRAINED PROJECTOR overall AUC 0.750  (kcl answer baseline 0.66)
