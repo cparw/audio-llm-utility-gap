@@ -1,0 +1,13 @@
+quantity,n,mean,ci_low,ci_high
+pitt answer,468,0.618,0.565,0.667
+pitt projector retrained,468,0.798,0.756,0.838
+pitt readout strict,468,0.784,0.742,0.824
+pitt transcript only,468,0.614,0.557,0.667
+pitt projector minus answer (paired),468,0.181,0.120,0.242
+pitt readout minus answer (paired),468,0.167,0.103,0.231
+adresso answer,237,0.636,0.566,0.707
+adresso transcript only,237,0.617,0.547,0.688
+kcl answer,37,0.648,0.452,0.836
+kcl projector retrained,37,0.749,0.568,0.901
+kcl projector minus answer (paired),37,0.110,-0.121,0.354
+adress2020 answer pooled,156,0.652,0.566,0.737
