@@ -1,0 +1,318 @@
+% ICASSP 2027 submission, draft v2 (2 Sep). 4 pages of text + references on page 5.
+% Compiled with IEEEtran conference class for length checking; swap to spconf.sty at submission.
+% Every number traces to a result file in the repo (results/health/...) or docs/paper1/VERIFIED_NUMBERS.md.
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,graphicx,booktabs,microtype,url}
+\graphicspath{{../../figures/paper1/}}
+
+\begin{document}
+
+\title{The Representation Utility Gap: Audio Language Models Encode Clinical Speech Signal Their Answers Do Not Use}
+
+\author{\IEEEauthorblockN{Chaitanya Parwatkar, Minoo Ahmadi, Nima Kelidari, Ashutosh Chaubey, Mohammad Soleymani}
+\IEEEauthorblockA{University of Southern California, Los Angeles, CA, USA}}
+
+\maketitle
+
+\begin{abstract}
+Audio language models now answer clinical questions about speech directly: given a recording,
+a prompt asks whether the speaker is depressed, cognitively impaired, or has Parkinson's, and the
+model replies. We test whether those answers use what the models hold. On three conditions chosen
+so that the words carry nothing, some, or everything of the diagnosis, linear probes read the
+disease from the frozen encoder of an audio LLM at 0.78 to 0.96 AUC, while the model's own answers
+on the same clips sit at 0.54 to 0.66. Transcript-only input lands where audio input lands (0.61
+against 0.62 on Alzheimer's), synthesised speech carrying the same words scores the same as the
+patient's voice, and when the words contradict the diagnosis six of nine models fall below chance.
+Seven fixes that leave the weights untouched, from prompting to activation steering, do not close
+the gap. Training the smallest parts does: a linear readout on the frozen states reads 0.78 where
+the answer reads 0.62, and retraining only the projector lifts the model's own answers to 0.80.
+The gap replicates on a second Alzheimer's dataset with new speakers and on the ADReSS-2020
+benchmark split. The information is not missing. The readout is.
+\end{abstract}
+
+\begin{IEEEkeywords}
+audio language models, clinical speech, probing, Alzheimer's disease, Parkinson's disease, depression
+\end{IEEEkeywords}
+
+\section{Introduction}\label{sec:intro}
+
+Speech carries measurable signs of Parkinson's disease, depression and Alzheimer's disease, and
+audio language models (audio LLMs) now answer clinical questions about a recording in natural
+language. That makes them attractive for screening: one model, one prompt, no task-specific
+training. Probing studies add to the appeal by showing that speaker state is richly encoded across
+the layers of these models \cite{probing}.
+
+The unexamined assumption is that the answer reflects what the layers hold. Clinical evaluations
+score answers on data where the spoken words and the diagnosis point the same way, so a model that
+reads the transcript and a model that listens to the voice are indistinguishable by construction.
+Two recent studies find heavy reliance on text for emotion and synthetic paralinguistic tasks
+\cite{listen,voxparadox}; multi-dataset clinical benchmarks exist but evaluate no audio LLMs, or
+evaluate text-only models on transcripts \cite{speechdx,fend}. None compares, inside one model,
+the information present in its representations with the information used by its answer.
+
+We make that comparison on three conditions chosen so that the clinically correct degree of word
+reliance differs by construction. In Parkinson's read speech every speaker reads the same passage,
+so the words carry nothing. In depression interviews the words carry part of the diagnosis. In
+Alzheimer's picture descriptions the words carry most of it. On every condition we train a linear
+probe on the frozen model's hidden states and query the same model, on the same clips, with the
+same question.
+
+Three findings follow. (i) The clinical signal is present: probes read it from the encoder at 0.78
+to 0.96 AUC, and on Alzheimer's it keeps rising through the language model's own layers. (ii) The
+answer does not use it: the model's answers sit at 0.54 to 0.66, transcript-only input lands in the
+same place, synthesised speech carrying the same words scores the same as the patient's voice, and
+when the words contradict the diagnosis the answers invert. (iii) The gap is a readout problem, not
+a representation problem: seven fixes that leave the weights untouched fail, and the two that train
+the smallest parts work, on two diseases. Section~\ref{sec:setup} gives the design and the controls
+that keep it honest, Section~\ref{sec:results} the results as a ladder from the gap to the fix, and
+Section~\ref{sec:discussion} what the gap means for evaluating and deploying these models.
+
+\section{Setup}\label{sec:setup}
+
+\noindent\textbf{Models.} Nine audio LLMs, all frozen: qwen2-audio \cite{qwen2audio},
+qwen2.5-omni \cite{qwen25omni}, qwen3-omni \cite{qwen3omni}, audio flamingo 2 and 3
+\cite{af2,af3}, kimi-audio \cite{kimiaudio}, salmonn \cite{salmonn}, mimo-audio
+\cite{mimoaudio} and diva \cite{diva}. All nine answer the conflict test; the layer-wise probing and
+the fixes use qwen2-audio, whose encoder (33 hidden-state stages) and language model (33 stages at
+the audio-token positions) we probe end to end.
+
+\noindent\textbf{Datasets.} Parkinson's read speech: PC-GITA (Spanish, 1117 clips)
+\cite{pcgita}, Neurovoz (Spanish, 1270) \cite{neurovoz}, MDVR-KCL (English, 37 speakers)
+\cite{kcl}. Depression: DAIC-WOZ interviews (275 participants) \cite{daic}. Alzheimer's: the
+DementiaBank Pitt cookie-theft descriptions (468 thirty-second segments, 228 speakers)
+\cite{pitt,dementiabank}, the ADReSSo recordings (237 speakers) \cite{adresso}, and the ADReSS-2020
+benchmark split (108 train, 48 test) \cite{adress2020}. An Italian Parkinson's corpus was excluded
+after recording properties alone separated its groups at 0.995 (Section~\ref{sec:controls}).
+
+\noindent\textbf{Prompt and metric.} Verbatim, with no transcript supplied in any audio condition:
+\emph{``Based only on this recording, does this speaker show signs of X? Answer with one word, Yes
+or No.''} We read $p_{\text{yes}} = P(\text{Yes})/(P(\text{Yes})+P(\text{No}))$ from the logits
+at the first answer position, one forward pass, no generation, and report AUC against the clinical
+label. We also record the mass $P(\text{Yes})+P(\text{No})$ and the yes-rate, because some models
+answer Yes on every clip (qwen2-audio on PC-GITA) or No on every clip (qwen2.5-omni); those AUCs
+rank confidences that never cross the threshold, and we flag them.
+
+\noindent\textbf{Probe.} An $\ell_2$-regularised logistic probe on the mean-pooled hidden state of
+one layer, with standardisation fitted inside the training fold. Folds are speaker-disjoint
+(grouped 5-fold). Where a layer is chosen, it is chosen inside the training folds; selecting the
+layer after seeing the test fold inflates AUC by $+0.03$ on average across 18 cells and by up to
+$+0.14$, so we quote the nested value wherever both exist.
+
+\noindent\textbf{Conflict sets.} From the raw DAIC transcripts we take 26{,}083 participant turns,
+score each with a text sentiment model, and keep the moments where a depressed participant speaks
+positively (138) or a control speaks negatively (57), paired with matched agreement segments from
+the same speakers: 195 pairs over 74 speakers, with label and lexical direction independent
+($\phi = 0.000$). On Pitt we score the words of each segment with a content-marker fluency model,
+after removing speaking rate, which alone reaches 0.92 and would make the split trivial; 146
+segments land in conflict and 322 in agreement. Nothing is synthesised: the voices are real
+patients and the contradicting words occur naturally.
+
+\noindent\textbf{Transcript and synthesis controls.} For the transcript-only condition the model
+receives the segment's transcript (official for Pitt, Whisper \cite{whisper} for ADReSSo) with the
+same question and no audio. For the synthesis condition each transcript is spoken by a neutral
+Piper voice \cite{piper} and scored like the real recording.
+
+\subsection{Controls on the measurement}\label{sec:controls}
+
+Before any result depends on the probe, we checked what else it could be reading. Six recording
+measurements containing no speech content separate patients from controls at 0.995 on the Italian
+corpus, and two groups of healthy elderly controls from that cohort recorded on different days
+separate at 1.000; we exclude it. On the four Parkinson's and depression corpora the recording-only
+floor is 0.45 to 0.80 and the probe stays above it; on Neurovoz, age matching moves the encoder
+probe from 0.95 to 0.91 while a silence-only probe falls from 0.72 to 0.58. On Pitt the strongest
+channel feature, duration, reaches 0.61 and all six together 0.65, below the probe. Finally the
+signal travels: a probe trained on PC-GITA read speech and tested cold on MDVR-KCL, a different
+language and recording setup, reaches 0.86 (Table~\ref{tab:cross}).
+
+\section{Results}\label{sec:results}
+
+\subsection{The signal is there, and the answer does not use it}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{plot1_encoder_layers.png}
+\caption{A linear probe on every encoder layer of qwen2-audio (solid) against the model's own
+answer on the same clips (dashed, one line per task). On the three Parkinson's sets the probe sits
+at 0.89 to 0.96 while the answers sit at 0.54 to 0.66; on Alzheimer's the probe reaches 0.78 under
+strict speaker-disjoint selection while the answer reads 0.62. On depression at a 30\,s window both
+are near 0.66, and that condition's evidence comes from the conflict test instead.}
+\label{fig:gap}
+\end{figure}
+
+Figure~\ref{fig:gap} shows the gap directly. Under nested layer selection the encoder probe reads
+0.92 on PC-GITA, 0.96 on Neurovoz and 0.89 on MDVR-KCL read speech, and 0.78 on the Pitt
+Alzheimer's segments (0.82 at the curve's peak); the same model's answers on the same clips read
+0.54, 0.55, 0.66 and 0.62. On Alzheimer's the signal does not stop at the encoder: probing the
+language model's own stages at the audio-token positions, the readable signal rises to 0.86 by the
+deep layers while the answer stays where it was. On depression at the 30\,s window qwen2-audio
+accepts, the nested probe (0.66) and the answer (0.65) coincide; the depression evidence below rests
+on the conflict construction, not on this gap.
+
+\subsection{What the answer uses instead: the words}
+
+Three controls agree. \emph{Transcript only.} Given the Pitt transcript and no audio, qwen2-audio
+scores 0.61 (95\% bootstrap interval 0.56 to 0.67); with the audio it scores 0.62 (0.57 to 0.67). On
+ADReSSo the pair is 0.62 and 0.64. On DAIC the transcript-only answer of qwen2.5-omni correlates
+with its own audio answer at $r = 0.83$ and returns the identical Yes/No on 96\% of segments, and
+across the depression grid no model beats its own transcript (0 of 6; median text 0.81, audio
+0.83). \emph{Synthesised voice.} Replacing each Pitt patient's voice with a neutral synthetic voice
+speaking the same words leaves the answers essentially unchanged (qwen2-audio 0.62 real, 0.60
+synthetic; qwen2.5-omni 0.67 synthetic; diva 0.69; mimo-audio 0.58) and the transcript alone does
+best of all (0.72, 0.72, 0.71, 0.57). The same shape holds on DAIC. \emph{Words check.} A probe
+trained only on Pitt segments where the words agree with the diagnosis reaches 0.95 within that
+set and at most 0.58 on the segments where the words contradict it, with no speaker shared; on
+ADReSSo the same test gives 0.99 within and 0.39 to 0.61 on conflict, on a small conflict group of
+19. What the probe learns on this task is, to a large degree, the words, and they enter at the
+encoder itself, which was trained to transcribe.
+
+\subsection{The stress test: when words and diagnosis disagree}
+
+\begin{table}[t]
+\centering\small
+\caption{Depression conflict test, 195 matched pairs, no transcript given. AUC against the clinical
+label; below 0.5 means the model follows the words rather than the diagnosis. Six of nine models
+invert. Audio flamingo 2 is flat on both arms and has no signal to invert.}
+\label{tab:conflict}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+model & conflict & agreement \\
+\midrule
+salmonn            & \textbf{0.29} & 0.85 \\
+diva               & \textbf{0.30} & 0.70 \\
+qwen2.5-omni       & \textbf{0.31} & 0.85 \\
+qwen3-omni         & \textbf{0.35} & 0.87 \\
+qwen2-audio        & \textbf{0.35} & 0.92 \\
+audio flamingo 3   & \textbf{0.36} & 0.93 \\
+mimo-audio         & 0.47 & 0.82 \\
+kimi-audio         & 0.52 & 0.87 \\
+audio flamingo 2   & 0.55 & 0.57 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:conflict} gives the depression conflict test. Six of nine models, from five
+independent labs, score below chance where the words point away from the diagnosis, as low as
+0.29, while scoring 0.70 to 0.93 on the matched segments where words and diagnosis agree. On the
+Pitt Alzheimer's conflict segments qwen2-audio reads 0.41 against 0.70 on agreement. A model that
+listened would not invert; a model that reads must.
+
+\subsection{Fixes that leave the weights alone fail}
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{The answer on the conflict segments under each fix (AUC). The first block leaves the
+weights untouched, on the depression conflict pairs; the second, on the Alzheimer's conflict
+segments. Only the two fixes that train something move it.}
+\label{tab:fixes}
+\begin{tabular}{@{}lc@{}}
+\toprule
+fix & conflict AUC \\
+\midrule
+\multicolumn{2}{@{}l}{\emph{depression, no training}} \\
+the model's own answer & 0.30 \\
+best of 12 prompt wordings & 0.48 \\
+text subtraction, best weight & 0.50 \\
+activation steering, best strength & 0.54 \\
+\midrule
+\multicolumn{2}{@{}l}{\emph{Alzheimer's, no training}} \\
+the model's own answer & 0.41 \\
+few-shot, example audios in the prompt & 0.46 \\
+probe's best layer into the projector, untrained & 0.55 \\
+\midrule
+\multicolumn{2}{@{}l}{\emph{Alzheimer's, a small part trained}} \\
+linear readout on the frozen states & \textbf{0.61} \\
+projector retrained on layer 24 & \textbf{0.57} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:fixes} lists the attempts. Twelve prompt wordings never lift the depression
+conflict AUC above 0.48. Learned layer mixing over the encoder reaches 0.909 against 0.916 for
+choosing one layer honestly, and conditioning the mixture on the prompt adds 0.0004. Subtracting
+the transcript-only logits from the audio logits at weight $\alpha$ makes the model stop following
+the words at $\alpha = 0.9$ (agreement with the lexical direction falls from 0.70 to 0.50) but
+conflict AUC only reaches 0.50, and on held-out speakers $\alpha = 0$ is chosen in four of five
+folds. Adding a multiple of the difference-in-means diagnosis direction to the encoder output
+damages the agreement arm at the smallest coefficient before conflict moves, and a random direction
+of the same norm displaces the answer equally; across 20 steered conditions the apparent gain
+correlates at $-0.92$ with the lexical signal being destroyed. Placing example recordings in the
+prompt collapses the answers to a single class. Feeding the probe's best encoder layer into the
+projector without training breaks the answer (0.62 to 0.49 overall): the projector wants the layer
+it was trained on.
+
+\subsection{Training the smallest part works}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{plot_projector_two_datasets.png}
+\caption{Retraining only the projector, everything else frozen, speaker-disjoint folds. The model's
+own answers improve on both diseases. On Alzheimer's the gain is $+0.18$ (95\% interval 0.12 to
+0.24); on MDVR-KCL, with 37 speakers, it is $+0.11$ (interval $-0.12$ to $0.35$), a direction rather
+than a significant result.}
+\label{fig:projector}
+\end{figure}
+
+Two interventions train a small component and both close most of the gap. A linear readout on the
+frozen hidden states, which is the probe itself, reads 0.78 (interval 0.74 to 0.82) on the Pitt
+segments where the answer reads 0.62, a paired gain of $+0.17$ (0.10 to 0.23). Retraining only the
+projector, the connector between the audio encoder and the language model, on the diagnosis
+answer, with the encoder and the language model frozen and encoder layer 24 as its input, lifts the
+model's own answers from 0.62 to 0.80 (0.76 to 0.84), a paired gain of $+0.18$ (0.12 to 0.24), and
+from 0.70 to 0.89 on the agreement segments. On the conflict segments the readout reaches 0.61 and
+the retrained projector 0.57: word conflict remains the hard case, and only the readout partly
+rescues it. The same projector recipe on MDVR-KCL moves the Parkinson's answers from 0.65 to 0.75
+(Figure~\ref{fig:projector}). % [PENDING: control run retraining the projector on the default final
+% layer, no plug, to separate the effect of training from the effect of the layer. Running.]
+
+\subsection{The gap is not one dataset's}
+
+\begin{table}[t]
+\centering\small
+\caption{A probe trained on one Parkinson's read-speech dataset and tested cold on another
+(qwen2-audio encoder). The diagonal is within-dataset. Transfer is partial but real across
+language and recording setup.}
+\label{tab:cross}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+train $\backslash$ test & KCL & Neurovoz & PC-GITA \\
+\midrule
+KCL       & 0.97 & 0.58 & 0.64 \\
+Neurovoz  & 0.74 & 0.95 & 0.66 \\
+PC-GITA   & 0.86 & 0.46 & 0.93 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On ADReSSo, 237 speakers none of whom appear in Pitt, the probe reaches 0.90 and the model's
+answer 0.64, with transcript-only input at 0.62. On the ADReSS-2020 benchmark split, with the
+layer chosen inside the 108 training recordings, the probe reads the 48 test recordings at AUC 0.78
+and accuracy 71\%, against the challenge's own acoustic baseline of 62.5\%; pooled over all 156
+recordings the probe reads 0.82 and the answer 0.65. Across the Parkinson's sets the probe
+transfers across language (Table~\ref{tab:cross}).
+
+\section{Discussion}\label{sec:discussion}
+
+Read together, the ladder has one shape. The clinical signal is present at every depth of the
+model, the answer does not use it, and what the answer uses instead is the words. Everything that
+leaves the weights untouched fails to change this, and everything that trains the smallest part
+succeeds, on two diseases. The deficit therefore lives in the readout, not in the representation:
+these models are better clinical encoders than clinical reporters, and evaluations that score
+their answers only where words and diagnosis agree cannot tell a model that listens from one that
+reads.
+
+\noindent\textbf{Limitations.} The layer-wise probing and the fixes are on one model; the nine-model
+evidence is the answer-side conflict test. The depression probe and answer coincide at the 30\,s
+window, so that condition's claim rests on the conflict construction. MDVR-KCL has 37 speakers and
+its projector gain is not significant on its own. ADReSSo transcripts are ASR output, its conflict
+group has 19 segments, and its ADReSS-2020 test labels were recovered by matching transcripts to
+Pitt, a procedure that scored 107 of 108 with no errors on the training recordings whose labels are
+known. The encoder association, that 6 of 7 transcription-trained encoders invert against 0 of 2
+that were not (Fisher $p = 0.08$), is suggestive and post hoc. On DAIC, scores track PTSD severity
+as closely as depression severity (0.60 against 0.59), so the models detect distress rather than
+depression specifically. Pitt and DAIC are distributed under their own agreements; we release
+segment identifiers, scripts and all per-clip scores, not audio or text.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}
