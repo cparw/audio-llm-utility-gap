@@ -8,7 +8,8 @@ another way it gets rerun, not merged.
   normalisation, no trimming, no denoising. The model gets the waveform as decoded.
 - Window: 30 seconds. Pitt segments are cut at the manifest's start_ms/end_ms
   (`DementiaBank/pitt_conflict_manifest.csv`, `scripts/dementiabank/cut_segments.py`).
-  ADReSSo, ADReSS-2020 and KCL: the first 30 s of the recording (`ffmpeg -ac 1 -ar 16000 -t 30`).
+  ADReSSo, ADReSS-2020 and KCL: 30 s starting at the patient's first words (the interviewer's
+  prompt is skipped using Whisper segment timestamps; `scripts/adresso/recut_at_patient.py`).
   DAIC: participant turns merged to about 30 s (`scripts/prep/dcaps_prep.py`).
 - Synthetic voice condition: the same transcript spoken by one fixed Piper voice, then treated
   exactly like a real clip above (16 kHz mono, same window rule).
@@ -25,6 +26,12 @@ another way it gets rerun, not merged.
   "YES" (same for No). Also store the mass P(Yes)+P(No) and report the yes-rate next to every AUC.
 - Metric: AUC against the clinical label. Bootstrap 2000 resamples for intervals
   (`results/health/bootstrap_cis.csv` shows the format).
+
+## Transcripts
+- Use the dataset's official transcripts where they exist (Pitt, ADReSS-2020, DAIC).
+- Where none exist (ADReSSo): faster-whisper, model `small.en`, compute type int8, vad_filter on,
+  language en. Same model and settings for every dataset that needs ASR.
+- Read speech (KCL, PC-GITA, Neurovoz): everyone reads the same passage, no transcripts needed.
 
 ## Probes
 - Hidden states mean-pooled over time, one vector per layer (`scripts/adresso/extract_probe_score.py`).
