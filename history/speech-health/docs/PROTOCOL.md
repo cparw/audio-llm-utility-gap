@@ -29,8 +29,8 @@ another way it gets rerun, not merged.
 
 ## Transcripts
 - Use the dataset's official transcripts where they exist (Pitt, ADReSS-2020, DAIC).
-- Where none exist (ADReSSo): faster-whisper, model `small.en`, compute type int8, vad_filter on,
-  language en. Same model and settings for every dataset that needs ASR.
+- Where none exist (ADReSSo): whisper-large-v3 (faster-whisper build, compute type int8, vad_filter on,
+  language en). Same model as the cluster transcription runs. Same settings for every dataset that needs ASR.
 - Read speech (KCL, PC-GITA, Neurovoz): everyone reads the same passage, no transcripts needed.
 
 ## Probes
