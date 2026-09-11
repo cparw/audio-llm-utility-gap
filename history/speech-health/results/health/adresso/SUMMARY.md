@@ -15,3 +15,8 @@ agreement reaches 0.99 within agreement and falls to 0.39 to 0.61 on conflict ac
 layers (best-within layer 21: 0.988 within, 0.389 on conflict). Same picture as pitt:
 what the probe learns on this task is largely the words. Conflict n is small, treat as
 consistent-with, not as a standalone number.
+
+## patient-onset windows and whisper-large-v3 (11 Sep)
+Clips re-cut to start at the patient's first words (interviewer prompt skipped). Probe best layer 0.894,
+the model's own answer 0.665 [0.594, 0.734], transcript-only with whisper-large-v3 text 0.682
+(small.en text gave 0.617, so the transcript quality mattered). Same gap.

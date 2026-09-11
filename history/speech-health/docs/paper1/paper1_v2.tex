@@ -163,7 +163,7 @@ on the conflict construction, not on this gap.
 
 Three controls agree. \emph{Transcript only.} Given the Pitt transcript and no audio, qwen2-audio
 scores 0.68 (95\% bootstrap interval 0.63 to 0.72); with the audio it scores 0.62 (0.57 to 0.67).
-The audio adds nothing the words did not already carry. On ADReSSo the pair is 0.62 and 0.66. On DAIC the transcript-only answer of qwen2.5-omni correlates
+The audio adds nothing the words did not already carry. On ADReSSo the pair is 0.68 and 0.66. On DAIC the transcript-only answer of qwen2.5-omni correlates
 with its own audio answer at $r = 0.83$ and returns the identical Yes/No on 96\% of segments, and
 across the depression grid no model beats its own transcript (0 of 6; median text 0.81, audio
 0.83). \emph{Synthesised voice.} Replacing each Pitt patient's voice with a neutral synthetic voice
@@ -299,7 +299,7 @@ PC-GITA   & 0.86 & 0.46 & 0.93 \\
 \end{table}
 
 On ADReSSo, 237 speakers none of whom appear in Pitt, the probe reaches 0.89 and the model's
-answer 0.66 (0.59 to 0.73), with transcript-only input at 0.62. On the ADReSS-2020 benchmark split,
+answer 0.66 (0.59 to 0.73), with transcript-only input at 0.68. On the ADReSS-2020 benchmark split,
 with the layer chosen inside the 108 training recordings, the probe reads the 48 test recordings at
 AUC 0.80 and accuracy 73\%, against the challenge's own acoustic baseline of 62.5\% (text-based
 systems reach 85 to 90\%, which is the point: the words carry this task); pooled over all 156
@@ -343,7 +343,7 @@ encoder probe, nested: PC-GITA / Neurovoz / KCL read / Pitt & 0.92 / 0.96 / 0.89
 encoder probe, curve peak, Pitt / language-model stages, Pitt & 0.82 / 0.86 \\
 model's own answer: PC-GITA / Neurovoz / KCL / DAIC / Pitt & 0.54 / 0.55 / 0.66 / 0.65 / 0.62 \\
 answer-position probe, Pitt: final layer / best layer / conflict & 0.80 / 0.83 / 0.69 \\
-transcript only, Pitt (clean text) / ADReSSo & 0.68 / 0.62 \\
+transcript only, Pitt (clean text) / ADReSSo (whisper-large-v3) & 0.68 / 0.68 \\
 DAIC transcript vs own audio answer: $r$ / identical Yes-No & 0.83 / 96\% \\
 synthetic voice, Pitt: qwen2-audio / omni / diva / mimo & 0.60 / 0.67 / 0.69 / 0.58 \\
 words only, Pitt: qwen2-audio / omni / diva / mimo & 0.72 / 0.72 / 0.71 / 0.57 \\
@@ -357,7 +357,7 @@ trained readout, Pitt: overall / agreement / conflict & 0.78 / 0.86 / 0.61 \\
 projector retrained, Pitt: overall / agreement / conflict & 0.80 / 0.89 / 0.57 \\
 projector retrained, KCL: before / after & 0.65 / 0.75 \\
 paired gains, Pitt (95\% intervals): projector / readout & +0.18 [0.12, 0.24] / +0.17 [0.10, 0.23] \\
-ADReSSo: probe / answer / transcript only & 0.89 / 0.66 / 0.62 \\
+ADReSSo: probe / answer / transcript only & 0.89 / 0.66 / 0.68 \\
 ADReSS-2020 official split: probe AUC / accuracy / challenge acoustic baseline & 0.80 / 73\% / 62.5\% \\
 ADReSS-2020 pooled: probe / answer & 0.87 / 0.68 \\
 cross dataset, Parkinson's: PC-GITA to KCL / Neurovoz to KCL & 0.86 / 0.74 \\
