@@ -20,3 +20,10 @@ consistent-with, not as a standalone number.
 Clips re-cut to start at the patient's first words (interviewer prompt skipped). Probe best layer 0.894,
 the model's own answer 0.665 [0.594, 0.734], transcript-only with whisper-large-v3 text 0.682
 (small.en text gave 0.617, so the transcript quality mattered). Same gap.
+
+## Nested layer choice on the patient window (adresso_pooled_patient_probe.csv, 11 Sep)
+Same recipe as the per-layer curve (StratifiedKFold 5, seed 42, balanced logistic regression,
+scaler inside the fold), layer chosen inside each outer training fold: 0.872 (layers 26 to 27
+chosen). Peak over layers after seeing all folds: 0.894 at layer 27. The paper quotes the nested
+value. Answer on the same window 0.664 [0.590, 0.733]; transcript only (whisper-large-v3)
+0.682 [0.616, 0.749]; paired difference transcript minus answer +0.018 [-0.069, +0.104].

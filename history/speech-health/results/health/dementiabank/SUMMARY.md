@@ -139,3 +139,16 @@ done, retraining ONLY the projector on encoder layer 24 (everything else frozen,
 Per fold 0.795 to 0.888, no weak fold. Same supervision as the readout, so the
 fair comparison is readout 0.824 vs retrained projector answers 0.798: the model
 can be made to use what it hears by retraining its smallest part.
+
+## Words check on Pitt (pitt_words_check.csv, from ad_arm_transfer_curves.npz)
+Probe trained only on the agreement segments, tested within agreement (5 fold) and on the
+conflict segments, every layer. Encoder: within agreement peaks at 0.955 (layer 24), on
+conflict at most 0.582 (layer 21). Language-model stages: 0.953 within, at most 0.547 on
+conflict. The arms are tertile-selected and share 47 of 228 speakers, so this is the same
+caveat as the conflict number itself. Same picture as ADReSSo (one clip per speaker there).
+
+## Bootstrap intervals regenerated (scripts/paper1/bootstrap_cis.py, 11 Sep)
+2000 clip-level resamples, seed 0, one script for every row of results/health/bootstrap_cis.csv.
+Pitt transcript only, clean text: 0.676 [0.626, 0.723]. Audio answer minus clean transcript,
+paired on the same 468 clips: -0.059 [-0.124, +0.009]. Conflict arm, paired: readout minus
+answer +0.195 [+0.043, +0.344], projector minus answer +0.160 [+0.025, +0.298].
