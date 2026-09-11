@@ -1,6 +1,3 @@
-% ICASSP 2027 submission, draft v3 (11 Sep). 4 pages of text + references on page 5.
-% Compiled with IEEEtran conference class for length checking; swap to spconf.sty at submission.
-% Every number traces to a result file in the repo (results/health/...) or docs/paper1/VERIFIED_NUMBERS.md.
 \documentclass[conference]{IEEEtran}
 \usepackage{amsmath,graphicx,booktabs,microtype,url}
 \graphicspath{{../../figures/paper1/}}
@@ -276,8 +273,7 @@ state at the answer position itself, the vector from which Yes or No is read, re
 layer and 0.83 at its best (0.69 on the conflict segments, the highest conflict number in this paper)
 while the emitted answer on the same state reads 0.62. The language model integrates the signal; the
 projection to the answer tokens discards it. The same projector recipe on MDVR-KCL moves the Parkinson's answers from 0.65 to 0.75
-(Figure~\ref{fig:projector}). % [PENDING: control run retraining the projector on the default final
-% layer, no plug, to separate the effect of training from the effect of the layer. Running.]
+(Figure~\ref{fig:projector}).
 
 \subsection{The gap is not one dataset's}
 
@@ -289,7 +285,7 @@ language and recording setup.}
 \label{tab:cross}
 \begin{tabular}{@{}lccc@{}}
 \toprule
-train $\backslash$ test & KCL & Neurovoz & PC-GITA \\
+trained on, tested on & KCL & Neurovoz & PC-GITA \\
 \midrule
 KCL       & 0.97 & 0.58 & 0.64 \\
 Neurovoz  & 0.74 & 0.95 & 0.66 \\
