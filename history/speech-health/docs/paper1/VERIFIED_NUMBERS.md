@@ -26,7 +26,7 @@ Six of nine below guessing. Flamingo 2 is flat on BOTH arms, so it has no signal
 
 ## The gap
 - Encoder probe, pc-gita read, NESTED layer selection: **0.9167**
-- Model's own answer, same clips: 0.63
+- Model's own answer, same clips: 0.54 (pcg_pd_read_summary.json behavioral_diag_AUC 0.539; the earlier 0.63 here was a transcription error)
 - Peeking inflation across 18 encoder cells: +0.031 mean (NOT 0.06)
 - Nested numbers move up to 0.049 across seeds -> quote 2 decimals, never 3
 
