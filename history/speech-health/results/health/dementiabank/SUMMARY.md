@@ -152,3 +152,12 @@ caveat as the conflict number itself. Same picture as ADReSSo (one clip per spea
 Pitt transcript only, clean text: 0.676 [0.626, 0.723]. Audio answer minus clean transcript,
 paired on the same 468 clips: -0.059 [-0.124, +0.009]. Conflict arm, paired: readout minus
 answer +0.195 [+0.043, +0.344], projector minus answer +0.160 [+0.025, +0.298].
+
+## No-plug control: projector retrained on its default input (11 Sep, train_projector_noplug.log, projector_noplug_oof.npy)
+Same recipe as the layer-24 run (AdamW 1e-4, 3 epochs, fp32 projector, everything else frozen,
+speaker-disjoint 5 fold) but the projector keeps its default input, the final encoder layer (32).
+Overall 0.763 [0.720, 0.806]; agreement 0.865; conflict 0.484 [0.384, 0.582].
+Paired against the answer: +0.145 [+0.082, +0.209]. Layer 24 minus no plug, paired: +0.035
+[-0.004, +0.073] overall, +0.089 [+0.004, +0.177] on the conflict arm.
+Reading: the training carries most of the gain; the earlier layer adds a little overall and
+matters on the conflict arm. This separates "training the projector" from "changing its input".

@@ -53,6 +53,16 @@ c = arm == "conflict"
 ci("pitt answer, conflict arm", y[c], p_ans[c]); ci("pitt readout strict, conflict arm", y[c], probe_m[c]); ci("pitt projector retrained, conflict arm", y[c], proj[c])
 paired("pitt readout minus answer, conflict arm (paired)", y[c], probe_m[c], p_ans[c])
 paired("pitt projector minus answer, conflict arm (paired)", y[c], proj[c], p_ans[c])
+
+# no-plug control: projector retrained on its default input (final encoder layer)
+_np = f"{D}/DementiaBank/projector_noplug_oof.npy"
+if not os.path.exists(_np): _np = f"{D}/DementiaBank/projector_noplug_oof_partial.npy"
+nop = np.load(_np); assert (nop != 0).all(), "no-plug oof incomplete"
+ci("pitt projector retrained, no plug (final layer)", y, nop)
+paired("pitt projector no plug minus answer (paired)", y, nop, p_ans)
+paired("pitt projector layer 24 minus no plug (paired)", y, proj, nop)
+ci("pitt projector no plug, conflict arm", y[c], nop[c])
+paired("pitt projector layer 24 minus no plug, conflict arm (paired)", y[c], proj[c], nop[c])
 # ADReSSo, patient-onset window
 ar = rd(f"{D}/adresso/adresso_scores_qwen2audio_patient.csv"); at = rd(f"{D}/adresso/adresso_textonly_v3_scores.csv")
 tmap = {r["spk"]: r for r in at}

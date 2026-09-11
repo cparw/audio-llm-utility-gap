@@ -12,12 +12,17 @@ pitt audio answer minus transcript only clean (paired),468,-0.059,-0.124,0.009
 "pitt projector retrained, conflict arm",146,0.573,0.479,0.667
 "pitt readout minus answer, conflict arm (paired)",146,0.195,0.043,0.344
 "pitt projector minus answer, conflict arm (paired)",146,0.160,0.025,0.298
-adresso answer (patient window),237,0.664,0.590,0.733
-adresso transcript only (whisper-large-v3),237,0.682,0.616,0.749
-adresso transcript minus answer (paired),237,0.018,-0.069,0.104
-adress2020 answer pooled (patient window),156,0.681,0.603,0.762
-"adress2020 answer, official test split",48,0.782,0.633,0.911
-"adress2020 answer, official train split",108,0.624,0.516,0.732
-kcl answer,37,0.646,0.449,0.818
-kcl projector retrained,37,0.750,0.564,0.908
-kcl projector minus answer (paired),37,0.104,-0.137,0.350
+"pitt projector retrained, no plug (final layer)",468,0.763,0.720,0.806
+pitt projector no plug minus answer (paired),468,0.145,0.082,0.209
+pitt projector layer 24 minus no plug (paired),468,0.035,-0.004,0.073
+"pitt projector no plug, conflict arm",146,0.484,0.384,0.582
+"pitt projector layer 24 minus no plug, conflict arm (paired)",146,0.089,0.004,0.177
+adresso answer (patient window),237,0.664,0.596,0.735
+adresso transcript only (whisper-large-v3),237,0.682,0.613,0.748
+adresso transcript minus answer (paired),237,0.018,-0.075,0.102
+adress2020 answer pooled (patient window),156,0.681,0.598,0.762
+"adress2020 answer, official test split",48,0.782,0.635,0.902
+"adress2020 answer, official train split",108,0.624,0.514,0.730
+kcl answer,37,0.646,0.445,0.819
+kcl projector retrained,37,0.750,0.568,0.904
+kcl projector minus answer (paired),37,0.104,-0.126,0.339
