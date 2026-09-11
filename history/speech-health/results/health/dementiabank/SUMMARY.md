@@ -161,3 +161,23 @@ Paired against the answer: +0.145 [+0.082, +0.209]. Layer 24 minus no plug, pair
 [-0.004, +0.073] overall, +0.089 [+0.004, +0.177] on the conflict arm.
 Reading: the training carries most of the gain; the earlier layer adds a little overall and
 matters on the conflict arm. This separates "training the projector" from "changing its input".
+
+## Age and sex matched evaluation (11 Sep, scripts/dementiabank/age_matched_eval.py, age_matched_eval.csv)
+Controls are younger (speaker mean 64.3 vs 72.0 years over the 228 speakers) and age alone reads 0.70
+on the 468 segments. Matching within the 228 speakers with the age_match_pitt.py rule (same sex, nearest
+age within 3 years, Probable/Possible AD only) gives 64 pairs, 268 segments, mean age AD 65.8 vs control
+67.0, age alone 0.38. On those segments the existing out-of-fold encoder probe reads 0.79 and the model's
+answer 0.66 (agreement n=195: 0.84 / 0.72; conflict n=73: 0.65 / 0.47). Evaluation only is restricted;
+folds and layer were fit on all speakers. The gap is not an age effect.
+
+## Recording floor on Pitt (DementiaBank/floor.log)
+Six recording measurements with no speech content: duration alone 0.61, level 0.52, silence fraction
+0.59, noise floor 0.51, centroid 0.57, rolloff 0.55; all six together 0.65. Below the text baseline
+(0.70) and the probe (0.78).
+
+## Synthetic voice provenance (Minoo Ahmadi's run on CARC)
+The Pitt synthetic-voice and words-only numbers in the paper (qwen2-audio 0.60 / 0.72, qwen2.5-omni
+0.67 / 0.72, diva 0.69 / 0.71, mimo-audio 0.58 / 0.57) come from Minoo's Piper TTS run on the cluster
+(pitt468_tts_minoo, daic275_tts_minoo) and were read from the shared Google Doc TTS tab. Per-clip csvs
+are not on this disk yet; requested. The qwen2-audio real-voice 0.62 and qwen2.5-omni real-voice 0.68
+are p_main from ad_scores_qwen2audio.csv and ad_scores_omni.csv (recording wording).

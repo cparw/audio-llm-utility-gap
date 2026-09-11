@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# One RNG stream for the whole file: append new rows at the END; inserting a row shifts every interval after it.
 """Bootstrap intervals for every per-clip answer, probe and fix score the paper quotes.
 2000 clip-level resamples, seed 0, percentile interval. Paired rows resample the same clips in
 both arms and report the difference. Regenerates results/health/bootstrap_cis.csv in full."""
@@ -83,5 +84,5 @@ print("kcl n", len(yk), "oof n", len(ok))
 ci("kcl answer", yk, pk); ci("kcl projector retrained", yk, ok); paired("kcl projector minus answer (paired)", yk, ok, pk)
 with open(OUT, "w", newline="") as f:
     w = csv.writer(f); w.writerow(["quantity", "n", "mean", "ci_low", "ci_high"])
-    for r in out: w.writerow([r[0], r[1], f"{r[2]:.3f}", f"{r[3]:.3f}", f"{r[4]:.3f}"])
+    for r in out: w.writerow([r[0], r[1], f"{r[2]:.4f}", f"{r[3]:.4f}", f"{r[4]:.4f}"])
 print("wrote", OUT)

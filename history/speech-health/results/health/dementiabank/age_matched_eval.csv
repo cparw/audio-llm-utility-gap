@@ -1,0 +1,17 @@
+quantity,value
+pairs,64
+segments,268
+mean age AD,65.8
+mean age control,67.0
+all 468: age alone AUC,0.7
+all 468: speaker mean age control,64.3
+all 468: speaker mean age dementia (all dx),72.0
+matched: probe AUC,0.79
+matched: answer AUC,0.656
+matched: age alone AUC,0.379
+matched agreement n,195
+matched agreement: probe AUC,0.839
+matched agreement: answer AUC,0.723
+matched conflict n,73
+matched conflict: probe AUC,0.646
+matched conflict: answer AUC,0.469
