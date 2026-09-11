@@ -7,7 +7,7 @@
 
 \begin{document}
 
-\title{The Representation Utility Gap: Audio Language Models Encode Clinical Speech Signal Their Answers Do Not Use}
+\title{The Representation Utility Gap in Audio LLMs for Clinical Speech}
 
 \author{\IEEEauthorblockN{Chaitanya Parwatkar, Minoo Ahmadi, Nima Kelidari, Ashutosh Chaubey, Mohammad Soleymani}
 \IEEEauthorblockA{University of Southern California, Los Angeles, CA, USA}}
@@ -58,7 +58,7 @@ Alzheimer's picture descriptions the words carry most of it. On every condition 
 probe on the frozen model's hidden states and query the same model, on the same clips, with the
 same question.
 
-Three findings follow. (i) The clinical signal is present: probes read it from the encoder at 0.78
+The paper answers three questions in order: what the models do out of the box, what they hold inside, and why the two differ. Three findings follow. (i) The clinical signal is present: probes read it from the encoder at 0.78
 to 0.96 AUC, and on Alzheimer's it keeps rising through the language model's own layers. (ii) The
 answer does not use it: the model's answers sit at 0.54 to 0.66, transcript-only input scores the
 same or better, synthesised speech carrying the same words scores the same as the patient's voice, and
@@ -130,7 +130,14 @@ language and recording setup, reaches 0.86 (Table~\ref{tab:cross}).
 
 \section{Results}\label{sec:results}
 
-\subsection{The signal is there, and the answer does not use it}
+\subsection{Out of the box: the answers}
+
+Asked the diagnosis question directly, the models are barely useful. On the Parkinson's read-speech
+sets qwen2-audio's answers read 0.54, 0.55 and 0.66, on the Pitt Alzheimer's segments 0.62, on
+depression 0.65, and several models never cross their own threshold at all (qwen2-audio answers Yes
+on every PC-GITA clip). This is the number a clinician would get today.
+
+\subsection{The representation is there, and the answer does not use it}
 
 \begin{figure}[t]
 \centering
@@ -323,6 +330,42 @@ that were not (Fisher $p = 0.08$), is suggestive and post hoc. On DAIC, scores t
 as closely as depression severity (0.60 against 0.59), so the models detect distress rather than
 depression specifically. Pitt and DAIC are distributed under their own agreements; we release
 segment identifiers, scripts and all per-clip scores, not audio or text.
+
+\section*{Every measurement in one place (internal review copy, cut before submission)}
+\begin{table}[h]
+\centering\scriptsize
+\begin{tabular}{@{}p{0.62\columnwidth}r@{}}
+\toprule
+measurement & AUC \\
+\midrule
+encoder probe, nested: PC-GITA / Neurovoz / KCL read / Pitt & 0.92 / 0.96 / 0.89 / 0.78 \\
+encoder probe, curve peak, Pitt / language-model stages, Pitt & 0.82 / 0.86 \\
+model's own answer: PC-GITA / Neurovoz / KCL / DAIC / Pitt & 0.54 / 0.55 / 0.66 / 0.65 / 0.62 \\
+answer-position probe, Pitt: final layer / best layer / conflict & 0.80 / 0.83 / 0.69 \\
+transcript only, Pitt (clean text) / ADReSSo & 0.68 / 0.62 \\
+DAIC transcript vs own audio answer: $r$ / identical Yes-No & 0.83 / 96\% \\
+synthetic voice, Pitt: qwen2-audio / omni / diva / mimo & 0.60 / 0.67 / 0.69 / 0.58 \\
+words only, Pitt: qwen2-audio / omni / diva / mimo & 0.72 / 0.72 / 0.71 / 0.57 \\
+words check, Pitt: within agreement / on conflict & 0.95 / $\le$0.58 \\
+words check, ADReSSo: within agreement / on conflict (n=19) & 0.99 / 0.39 to 0.61 \\
+DAIC conflict, nine models: below 0.5 & 6 of 9 \\
+Pitt conflict, qwen2-audio: conflict / agreement & 0.41 / 0.70 \\
+fixes on conflict: prompts / subtraction / steering / few-shot / plug & 0.48 / 0.50 / 0.54 / 0.46 / 0.55 \\
+layer mixer vs one honest layer / prompt-conditioned mixer gain & 0.909 vs 0.916 / +0.0004 \\
+trained readout, Pitt: overall / agreement / conflict & 0.78 / 0.86 / 0.61 \\
+projector retrained, Pitt: overall / agreement / conflict & 0.80 / 0.89 / 0.57 \\
+projector retrained, KCL: before / after & 0.65 / 0.75 \\
+paired gains, Pitt (95\% intervals): projector / readout & +0.18 [0.12, 0.24] / +0.17 [0.10, 0.23] \\
+ADReSSo: probe / answer / transcript only & 0.89 / 0.66 / 0.62 \\
+ADReSS-2020 official split: probe AUC / accuracy / challenge acoustic baseline & 0.80 / 73\% / 62.5\% \\
+ADReSS-2020 pooled: probe / answer & 0.87 / 0.68 \\
+cross dataset, Parkinson's: PC-GITA to KCL / Neurovoz to KCL & 0.86 / 0.74 \\
+classical acoustic floor (eGeMAPS): Pitt / ADReSSo / ADReSS-2020 / KCL & 0.62 / 0.73 / 0.70 / 0.80 \\
+recording-only floor: Italian corpus (excluded) / other corpora & 0.995 / 0.45 to 0.80 \\
+matched 300\,s window, depression: flamingo 3 / omni / kimi & 0.86 / 0.84 / 0.83 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
