@@ -39,7 +39,7 @@ the layers of these models \cite{probing}.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.88\columnwidth]{plot1_encoder_layers.png}
+\includegraphics[width=0.8\columnwidth]{plot1_encoder_layers.png}
 \caption{A linear probe on every encoder layer of qwen2-audio (solid) against the model's own
 answer on the same clips (dashed, one line for each task). On the three Parkinson's sets the probe sits
 at 0.89 to 0.96 while the answers sit at 0.54 to 0.66; on Alzheimer's the probe reaches 0.78 under
@@ -184,7 +184,7 @@ encoder itself, which was trained to transcribe.
 \centering\footnotesize
 \caption{Depression conflict test, 195 matched pairs, no transcript given. AUC against the clinical
 label; below 0.5 means the model follows the words rather than the diagnosis. Six of nine models
-invert. Audio flamingo 2 is flat on both arms and has no signal to invert.}
+invert; audio flamingo 2 is flat on both arms.}
 \label{tab:conflict}
 \begin{tabular}{@{}lcc@{}}
 \toprule
@@ -253,8 +253,7 @@ where conflict AUC is 0.50; larger $\alpha$ reaches 0.67 only by collapsing the 
 0.18, and on held-out speakers $\alpha = 0$ is chosen in four of five folds. Adding a multiple of the difference-in-means diagnosis direction to the encoder output
 damages the agreement arm at the smallest coefficient before conflict moves, and a random direction
 of the same norm displaces the answer equally; across 20 steered conditions the apparent gain
-correlates at $-0.92$ with the lexical signal being destroyed. Placing example recordings in the
-prompt collapses the answers to a single class. Feeding the probe's best encoder layer into the
+correlates at $-0.92$ with the lexical signal being destroyed. Feeding the probe's best encoder layer into the
 projector without training breaks the answer (0.62 to 0.49 overall): the projector was trained on the
 final layer's output and does not accept another layer's without retraining. A trained alternative
 from prior work fares no better: a checkpoint built with the VoxParadox recipe, prompt-conditioned
@@ -266,7 +265,7 @@ encoder layer.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.7\columnwidth]{plot_projector_two_datasets.png}
+\includegraphics[width=0.64\columnwidth]{plot_projector_two_datasets.png}
 \caption{Retraining only the projector, everything else frozen, speaker-disjoint folds. The model's
 own answers improve on both diseases. On Alzheimer's the gain is $+0.18$ (95\% interval 0.12 to
 0.24); on MDVR-KCL, with 37 speakers, it is $+0.10$ (interval $-0.14$ to $0.35$), a direction rather
@@ -280,7 +279,11 @@ segments where the answer reads 0.62, a paired gain of $+0.17$ (0.10 to 0.23). R
 projector, the connector between the audio encoder and the language model, on the diagnosis
 answer, with the encoder and the language model frozen and encoder layer 24 as its input, lifts the
 model's own answers from 0.62 to 0.80 (0.76 to 0.84), a paired gain of $+0.18$ (0.12 to 0.24), and
-from 0.70 to 0.89 on the agreement segments. On the conflict segments the readout reaches 0.61 (a
+from 0.70 to 0.89 on the agreement segments. Retraining the projector on its default input, the final
+encoder layer, lifts the answers to 0.76 (0.72 to 0.81; agreement 0.87, conflict 0.48); the layer-24
+input adds $+0.035$ ($-0.004$ to $+0.073$) overall and $+0.089$ ($+0.004$ to $+0.177$) on conflict:
+the training carries the gain, the earlier layer helps on conflict. On the conflict segments the
+readout reaches 0.61 (a
 paired gain of $+0.20$, interval 0.04 to 0.34) and the retrained projector 0.57 ($+0.16$, 0.03 to
 0.30): both trained fixes move word conflict, and both leave it near 0.6. That the deficit sits in the last step, not earlier, is testable: a probe on the hidden
 state at the answer position itself, the vector from which Yes or No is read, reads 0.80 at the final
@@ -295,8 +298,8 @@ baseline, to 0.75 (Figure~\ref{fig:projector}).
 \centering\small
 \caption{A probe trained on one Parkinson's read-speech dataset and tested cold on another
 (qwen2-audio encoder). Diagonal: within-dataset nested values (Section~\ref{sec:gap}). Transfer is
-partial and does not follow language: the two Spanish sets transfer to each other (0.46, 0.66) worse
-than to English MDVR-KCL (0.86, 0.74).}
+partial and does not follow language: Spanish to Spanish (0.46, 0.66) is worse than Spanish to
+English (0.86, 0.74).}
 \label{tab:cross}
 \begin{tabular}{@{}lccc@{}}
 \toprule
@@ -343,12 +346,10 @@ projector answers the recording wording. ADReSSo transcripts are ASR output (whi
 group has 19 segments, and the ADReSS-2020 test labels were recovered by matching transcripts to
 Pitt (107 of 108 correct and none wrong on the training recordings, whose labels are known), pending
 the official labels. The DAIC 30\,s clips were not filtered for
-interviewer speech and are re-cut on the cluster before camera-ready. The projector was retrained with encoder layer 24 as its input, so training and
-layer choice are not yet separated; a control that retrains it on its default input layer is running,
-and the readout result, which changes no layer, carries the claim on its own. On DAIC, scores track PTSD severity
+interviewer speech and will be re-cut. On DAIC, scores track PTSD severity
 as closely as depression severity (0.60 against 0.59): the models detect distress, not depression
-specifically. Pitt and DAIC are distributed under their own agreements; we release
-segment identifiers, scripts and the score of every clip, not audio or text.
+specifically. Pitt and DAIC stay under their own agreements; we release segment identifiers,
+scripts and every clip's score.
 
 \clearpage
 \begin{table*}[!t]
@@ -376,6 +377,8 @@ VoxParadox-recipe checkpoint on conflict: checkpoint / base & 0.37 / 0.35 \\
 layer mixer vs one nested layer / prompt-conditioned mixer gain & 0.909 vs 0.916 / +0.0004 \\
 trained readout, Pitt: overall / agreement / conflict & 0.78 / 0.86 / 0.61 \\
 projector retrained, Pitt: overall / agreement / conflict & 0.80 / 0.89 / 0.57 \\
+projector retrained on its default final layer (no plug), Pitt: overall / agreement / conflict & 0.76 / 0.87 / 0.48 \\
+layer 24 minus final-layer projector (paired): overall / conflict & +0.035 [$-$0.004, 0.073] / +0.089 [0.004, 0.177] \\
 projector retrained, KCL: before / after & 0.65 / 0.75 \\
 paired gains, Pitt (95\% intervals): projector / readout & +0.18 [0.12, 0.24] / +0.17 [0.10, 0.23] \\
 paired gains on the conflict arm, Pitt: readout / projector & +0.20 [0.04, 0.34] / +0.16 [0.03, 0.30] \\
