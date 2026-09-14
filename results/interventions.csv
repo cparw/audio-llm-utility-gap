@@ -1,0 +1,14 @@
+dataset,model,intervention,conflict_auc,agreement_auc
+E-DAIC,Qwen2.5-Omni,own answer,0.3,0.87
+E-DAIC,Qwen2.5-Omni,best of 12 prompt wordings,0.34,0.8
+E-DAIC,Qwen2.5-Omni,text subtraction alpha 0.9,0.5,0.72
+E-DAIC,Qwen2.5-Omni,text subtraction alpha 2.0,0.67,0.18
+E-DAIC,Qwen2-Audio,own answer,0.35,0.92
+E-DAIC,Qwen2-Audio,best of 12 prompt wordings,0.48,0.85
+E-DAIC,Qwen2-Audio,activation steering best strength,0.54,0.5
+Pitt,Qwen2-Audio,own answer,0.41,0.7
+Pitt,Qwen2-Audio,few-shot audio examples,0.46,0.45
+Pitt,Qwen2-Audio,best encoder layer into untrained projector,0.55,0.47
+Pitt,Qwen2-Audio,steering at the probe's layer c=1,0.56,0.42
+Pitt,Qwen2-Audio,linear readout on frozen states,0.61,0.86
+Pitt,Qwen2-Audio,projector retrained on final encoder output,0.48,0.86

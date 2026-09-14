@@ -1,13 +1,41 @@
 # The Representation Utility Gap in Audio LLMs for Clinical Speech
 
 Chaitanya Parwatkar, Nima Kelidari, Minoo Ahmadi, Ashutosh Chaubey, Mohammad Soleymani
-University of Southern California
+University of Southern California. Submitted to ICASSP 2027.
 
-Companion page for the ICASSP 2027 submission. It holds the numbers that did not fit in the four-page paper. Everything below uses the same probes, prompts, folds and scoring as the paper. All values are AUC against the clinical label unless stated otherwise. Segment identifiers and the scripts will be added here after the review period.
+Companion page for the paper. It holds the figures, the tables as CSV, and the numbers that did not fit in four pages. Everything here uses the same probes, prompts, folds and scoring as the paper. All values are AUC against the clinical label unless stated otherwise.
+
+**The claim in one paragraph.** We ask whether an audio LLM's diagnosis answer uses the information its own representations hold. A linear probe on Qwen2-Audio's frozen hidden states recovers the diagnosis at 0.78 to 0.96 AUC across seven clinical datasets, while the model's own answer on the same clips reaches 0.54 to 0.66. The answer follows the words: the transcript alone matches or beats it, and on segments where the words point away from the diagnosis six of nine audio LLMs fall to 0.36 or lower. The signal survives to the hidden state the answer is read from (0.80), so the loss happens in the readout. Seven interventions that leave the weights frozen do not recover it; retraining only the projector on the encoder's final output lifts the Pitt answer from 0.62 to 0.76.
+
+## Contents
+
+- [Figures](#figures)
+- [1. Interventions on the conflict sets](#1-interventions-on-the-conflict-sets)
+- [2. Longer audio windows on depression](#2-longer-audio-windows-on-depression)
+- [3. Transcript-only control, full detail](#3-transcript-only-control-full-detail)
+- [4. Recording and demographic controls](#4-recording-and-demographic-controls)
+- [5. Alzheimer's datasets beyond Pitt](#5-alzheimers-datasets-beyond-pitt)
+- [6. Depth of the signal](#6-depth-of-the-signal)
+- [7. Setup](#7-setup)
+- [Repository layout](#repository-layout)
+
+## Figures
+
+**Figure 1 of the paper.** (a) Where we read the model: a linear probe on every encoder layer, every language-model stage at the audio-token positions, and the hidden state the answer is read from; the transcript-only control feeds the words with no audio. (b) Qwen2-Audio on the Pitt Alzheimer's segments: the probe stays above 0.75 at every depth and reaches 0.80 at the answer state, while the model's own answer scores 0.62 and the transcript alone 0.68.
+
+<img src="figures/fig1_gap.png" width="420">
+
+**Table 1 as a picture.** Probe against the model's own answer on every dataset. The gap is widest on Parkinson's read speech, where every speaker reads the same passage and the words carry nothing, narrower on Alzheimer's, and absent on depression.
+
+<img src="figures/probe_vs_answer.png" width="720">
+
+**Table 2 as a picture.** The same nine models on depression segments where the words agree with the label and where they oppose it. A model that listened would not invert.
+
+<img src="figures/conflict_dumbbell.png" width="620">
 
 ## 1. Interventions on the conflict sets
 
-Conflict and agreement AUC for every intervention we tried. The paper reports the two that retrain a component and summarises the rest in one sentence. Depression rows use the E-DAIC conflict set (195 matched pairs, 74 speakers). Alzheimer's rows use the Pitt conflict set (146 conflict, 322 agreement segments).
+Conflict and agreement AUC for every intervention we tried. The paper reports the two that retrain a component and summarises the rest in one sentence. Depression rows use the E-DAIC conflict set (195 matched pairs, 74 speakers). Alzheimer's rows use the Pitt conflict set (146 conflict, 322 agreement segments). CSV: `results/interventions.csv`.
 
 | Intervention | Model | Conflict | Agreement |
 |---|---|---|---|
@@ -60,6 +88,8 @@ Qwen2-Audio accepts 30 s of audio. Three models that accept longer input were sc
 | ADReSSo, audio, same clips | 0.66 (0.60 to 0.74) |
 | E-DAIC, Qwen2.5-Omni transcript-only answer against its own audio answer | r = 0.83, identical Yes/No on 96% of segments |
 
+The control was not run on the Parkinson's read-speech sets, where every speaker reads the same passage, nor on ADReSS-2020.
+
 Words check. A probe trained only on Pitt segments where the words agree with the diagnosis reaches 0.95 within that set and at most 0.58 on the segments where the words contradict it. On ADReSSo, one clip per speaker, the same test gives 0.99 within and 0.39 to 0.61 on a conflict group of 19.
 
 ## 4. Recording and demographic controls
@@ -107,6 +137,16 @@ Probes on the language model's stages at the audio-token positions: Pitt rises t
 - Alzheimer's conflict set: Pitt segments scored by a text-only logistic model over CHAT fluency markers fitted out of fold, speaking rate excluded. 146 conflict and 322 agreement segments.
 - Transcripts: Pitt official with annotation codes stripped; ADReSSo transcribed with whisper-large-v3; E-DAIC ships its own.
 - Hardware: Alzheimer's runs on Apple Silicon (MPS); the nine-model sweep on one V100 or A40 per job.
+
+## Repository layout
+
+```
+figures/   fig1_gap.pdf and .png (Figure 1 of the paper), probe_vs_answer.png, conflict_dumbbell.png
+results/   table1_main.csv, table2_conflict.csv, table3_cross_dataset.csv, interventions.csv
+code/      the scripts that produced the numbers, with a README mapping each script to the table or figure it feeds
+```
+
+No audio, transcripts, labels or per-clip scores are in this repository. Each dataset is available from its distributor under its own agreement: PC-GITA, NeuroVoz, MDVR-KCL, E-DAIC (AVEC 2019), DementiaBank Pitt, ADReSSo, ADReSS-2020.
 
 ## Contact
 

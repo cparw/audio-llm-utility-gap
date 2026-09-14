@@ -1,0 +1,8 @@
+condition,dataset,probe_auc,answer_audio_auc,answer_text_only_auc
+PD,PC-GITA,0.92,0.54,
+PD,NeuroVoz,0.96,0.55,
+PD,MDVR-KCL,0.89,0.66,
+MDD,E-DAIC,0.66,0.65,
+AD,Pitt,0.78,0.62,0.68
+AD,ADReSSo,0.87,0.66,0.68
+AD,ADReSS-2020,0.82,0.68,

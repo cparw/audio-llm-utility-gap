@@ -1,0 +1,12 @@
+dataset,model,conflict_auc,agreement_auc,note
+E-DAIC,SALMONN,0.29,0.85,
+E-DAIC,DiVA,0.3,0.7,
+E-DAIC,Qwen2.5-Omni,0.31,0.85,
+E-DAIC,Qwen3-Omni,0.35,0.87,
+E-DAIC,Qwen2-Audio,0.35,0.92,
+E-DAIC,Audio Flamingo 3,0.36,0.93,
+E-DAIC,MiMo-Audio,0.47,0.82,
+E-DAIC,Kimi-Audio,0.52,0.87,
+E-DAIC,Audio Flamingo 2,0.55,0.57,
+Pitt,Qwen2-Audio,0.41,0.7,
+Pitt,Qwen2.5-Omni,0.44,0.77,answers No on every clip
