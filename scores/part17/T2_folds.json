@@ -1,0 +1,2758 @@
+{
+ "result": "T2_folds",
+ "part": "PART17 task 2",
+ "date": "2026-09-23T05:14:16",
+ "command": [
+  "cd <local data dir>/release/edaic_rerun/part17/T2 && /usr/local/bin/python3 verify_single.py",
+  "/usr/local/bin/python3 verify_egemaps.py",
+  "/usr/local/bin/python3 verify_repeats_perclip.py",
+  "/usr/local/bin/python3 verify_edaicfull.py (needs edaicfull_shards.tgz extracted to ./edaicfull/)",
+  "/usr/local/bin/python3 noise.py",
+  "/usr/local/bin/python3 conv.py",
+  "/usr/local/bin/python3 verify_auc_only.py all",
+  "/usr/local/bin/python3 build_folds.py",
+  "/usr/local/bin/python3 verify_written.py",
+  "/usr/local/bin/python3 build_docs.py"
+ ],
+ "env": {
+  "python": "3.10.2",
+  "machine": "arm64",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "scipy": "1.15.3",
+  "pandas": "2.3.3"
+ },
+ "tie_rules": {
+  "mac": "sklearn GroupKFold(5) as installed here: np.argsort(counts)[::-1] with numpy's default kind",
+  "stable": "same algorithm with np.argsort(counts, kind='stable')[::-1]; reproduces the pod runs",
+  "seeds": "speaker ids renumbered by numpy.random.default_rng(seed).permutation(np.unique(ids)), seed 0..4, then GroupKFold(5)",
+  "shuffle": "GroupKFold(5, shuffle=True, random_state=r), r 0..4 (E-DAIC full window only)"
+ },
+ "seed": "no bootstrap in this task; fold seeds as in tie_rules",
+ "sources": {
+  "scores/part16/EDAICFULL/edaic_full_nested_repeats.json": "817e9d58ffab070287d97147d5775563be12c094be555e433339f899381ae96e",
+  "scores/part16/EDAICFULL/edaic_full_perclip.csv": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770",
+  "<local data dir>/release/edaic_rerun/part16/EDAICFULL/probe_boot.py": "4ecca1f8ba81b3b1c2a514416ff36ad01e48beef67142d954105003900873517",
+  "<local data dir>/release/edaic_rerun/part16/POD1/sft1c_folds.json": "b994ec51ad4833f9b54042e9fa6c264d9da4ed17733e2646f100c3a3fb40476e",
+  "<local data dir>/release/edaic_rerun/part16/POD2/pitt468_folds.csv": "6592bd515c5bc1c386e2e7fa568da738373c714a321dfd9cf65247cbae81d5ff",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_ans_nested_oof.csv": "8f6667e7cf67ac4352750b7c16a0e0cfc914e29711d37cc8ae51d2aaaa863715",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv": "819aea0259baa36b3ac7de9504a8392557263df1e9f101fa4239caec4feb3fc4",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_llm_nested_oof.csv": "ed836c1148c404231795e2b5f93dbf67b0ad87769ad342e78873c795705a32d6",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_proj_nested_oof.csv": "8571feb6d107fd37450a3eac163c61c24db0c3117e9bb7305a91219ff3282092",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_ans_nested_oof.csv": "ca1acc0abb731c7b133c4fb3d013ff3d2658a23426384fe64f578ff7d5e008ec",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv": "5c0571a4c5f9f5970b9a610999bf357c6899b996c0b03df9a4d732226ef3c32b",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_llm_nested_oof.csv": "36feaec75ad762762e2e148126f6efa6dc1d7ef2d8a8a5d7b6b6b0578da7391f",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_proj_nested_oof.csv": "2f3223dc6412e922f7f206fa15510c71951b4a87bcd42a044e908e34c06926fb",
+  "<local data dir>/release/omni_final/omni_edaic_ans_nested_oof.csv": "e8029cd46918926b558e1cce24298c0b58d45517dee20841f6b53315d93c91ca",
+  "<local data dir>/release/omni_final/omni_edaic_ans_perlayer.csv": "fb7a767939b4ba6a34756523c5af4c77bd0935dbf598f1bf80844b76379f5bcc",
+  "<local data dir>/release/omni_final/omni_edaic_enc_nested_oof.csv": "e5038ff9582d59e698b01fcc96e579876f696bd1a62dcdcf44d881a8e006a84c",
+  "<local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv": "aa45ad8a6a030ed70538b113f9a38d6fa1d810c466c42183a8f0fe0b0bc4dafd",
+  "<local data dir>/release/omni_final/omni_edaic_llm_nested_oof.csv": "28c2314e2af86a3f8a2e9be961c1a3697786c9a2a8ee80c18e409eb8e6f2d950",
+  "<local data dir>/release/omni_final/omni_edaic_llm_perlayer.csv": "a453d88a88334729094be7fb1d5dd775431dcbaac3d43c8db52239caa931bf95",
+  "<local data dir>/release/omni_final/omni_edaic_nested.json": "aabe8ed0d340932e16a27f4038d1d068dc12216d3822ae73e0fb3a47a50a7165",
+  "<local data dir>/release/omni_final/omni_edaic_nested_repeats.json": "f01c5da4974bde2df82ca2ab071666dac646ab3ffd9c5c17efb17c3721b74829",
+  "<local data dir>/release/omni_final/omni_edaic_proj_nested_oof.csv": "25559d990414bc2d8368616cb8817c713f1fa5a3dc9065fb04e960ddaa8b8646",
+  "<local data dir>/release/omni_final/omni_edaic_proj_perlayer.csv": "a2035a1bd51860bbbc6eaa460233067ee9ba1bccf5942c66ecebbda7c66c3458",
+  "<local data dir>/release/omni_final/omni_pitt_ans_nested_oof.csv": "c52906612932f76789aacd8a063206104973161b5ebf59c5df1c0ad738346896",
+  "<local data dir>/release/omni_final/omni_pitt_ans_perlayer.csv": "ca0dd2575907aa53ecedc52ab35b43b25856815090abc5eebf0125623ce254c2",
+  "<local data dir>/release/omni_final/omni_pitt_enc_nested_oof.csv": "6102b824a5883cb59bf3c14186fb233ee1e31030bccc5cd94cb8e0cb290bfed6",
+  "<local data dir>/release/omni_final/omni_pitt_encoder_perlayer.csv": "1e4a885cc2ddff92622ca3b94298f7f8ac5538fa955fd0f7fe93cbe5c2aafb18",
+  "<local data dir>/release/omni_final/omni_pitt_llm_nested_oof.csv": "bdd2923cbd3dc5bae74368808ccceb2bdd6f1740241389451d00a610feef521f",
+  "<local data dir>/release/omni_final/omni_pitt_llm_perlayer.csv": "4300f8d3869276687d98fd6d4116598cb73610009139269cf924e4ddc79cab24",
+  "<local data dir>/release/omni_final/omni_pitt_nested.json": "4484a443bc4b5c0406040b9c1f1d4feb34fa1bba0cdf2358fb2648cbfe5214c4",
+  "<local data dir>/release/omni_final/omni_pitt_nested_repeats.json": "dc4bb27a4c6cfd43ea8abe1b3c12a4718501a01951691bf64a4d9238cdf67cba",
+  "<local data dir>/release/omni_final/omni_pitt_proj_nested_oof.csv": "033c3dff9b0a18194bbe9d755a59bd6abb07b7eabf8ae05b91072b07f9647e85",
+  "<local data dir>/release/omni_final/omni_pitt_proj_perlayer.csv": "592d3db3a27e57fd7f3b6429826aafb026871fed71db47cb80de66441ce4343d",
+  "<local data dir>/release/omni_final/q2a_adress2020_ans_perlayer.csv": "01e8ccb401822121e17788cccf934bdce2079208c575800bc8315d3f2a0655cb",
+  "<local data dir>/release/omni_final/q2a_adress2020_encoder_perlayer.csv": "9f17f08c0ca55d918e4997dd331191a1f343a2c87dac657ce23705bc52796580",
+  "<local data dir>/release/omni_final/q2a_adress2020_llm_perlayer.csv": "ca0aedf29c75edcaba9ee4b5e45ced7954afc3a21094d01557e9945061365b61",
+  "<local data dir>/release/omni_final/q2a_adress2020_nested_repeats.json": "8f9321d7cde73ed31241e9c0abad46a3f8b5cd321ed707ef71ef552e882ee134",
+  "<local data dir>/release/omni_final/q2a_adresso_ans_perlayer.csv": "d915eef163da7ae7d96c9362bbc4c91a81a8019908169045eb70dfb0661accf8",
+  "<local data dir>/release/omni_final/q2a_adresso_encoder_perlayer.csv": "272010cc3f0bb094d159346d797fdaf600becbbcd49cb9b79e107a465184f47c",
+  "<local data dir>/release/omni_final/q2a_adresso_llm_perlayer.csv": "446c56b55ed2057224f947cba0c80736399ac2912abe56a831710a816bb2eb7f",
+  "<local data dir>/release/omni_final/q2a_adresso_nested_repeats.json": "f31f5a3b83635ac544792348c65b29061809f89fc35321abab93ad7fc10a0313",
+  "<local data dir>/release/omni_final/q2a_edaic_ans_perlayer.csv": "84dbf7eeaa2e4944da72e7ad10092f73d352eb1036f1663e4028f535b3f384ca",
+  "<local data dir>/release/omni_final/q2a_edaic_encoder_perlayer.csv": "5306aff20fff994a8cdf38d6d220b164961dd77a1e1462d6fdff36bd1e21e428",
+  "<local data dir>/release/omni_final/q2a_edaic_llm_perlayer.csv": "05886e6a813ce03beee24c757642f4a9f58638f5e2c273c933c8c35661251d38",
+  "<local data dir>/release/omni_final/q2a_edaic_nested_repeats.json": "90e4518be9a12d5b2f362a933df3e0fd616a9e5bc7a1695d84e74f13b695673a",
+  "<local data dir>/release/omni_final/q2a_kcl_ans_perlayer.csv": "c2856bb1cb62b390cdf1a9e4777ae77e2b38aa50f64ff21ef06c19688f2d5053",
+  "<local data dir>/release/omni_final/q2a_kcl_encoder_perlayer.csv": "70ed33402976cd8075a04609cfa37bbcc49bbce95e050696227d6cb897d3dfb2",
+  "<local data dir>/release/omni_final/q2a_kcl_llm_perlayer.csv": "8ab911780850a3f8f6d84f0789fadba7dcbb2330960b336aefc1f15764b6c10b",
+  "<local data dir>/release/omni_final/q2a_kcl_nested_repeats.json": "c9ae37925abdc28d8d4876c8b8ec127a08bb88dea78597a15f1ce4650d829ab1",
+  "<local data dir>/release/omni_final/q2a_neurovoz_ans_perlayer.csv": "d8a8ca5f166f3ce73d66fa908425bb1789c1c3a03eeede8d6206569a15c79e86",
+  "<local data dir>/release/omni_final/q2a_neurovoz_encoder_perlayer.csv": "da5ef067e40efa0cc109a70d5d65be62f4908ff20b6e621f054abd8d930a9fe4",
+  "<local data dir>/release/omni_final/q2a_neurovoz_llm_perlayer.csv": "b9f4c925ea03bbae3eb7ea3e682cfc28c91fd52675aee335bfb6c60f2209567d",
+  "<local data dir>/release/omni_final/q2a_neurovoz_nested_repeats.json": "f378894174e37b5261edd26aa7e2e33920b5ec8420a910313e84f2776f008727",
+  "<local data dir>/release/omni_final/q2a_pcgita_ans_perlayer.csv": "db1c4002ec853cca8594cd80e43f6d0ecdee2bcbf5894f657c7694cc3a5a6690",
+  "<local data dir>/release/omni_final/q2a_pcgita_encoder_perlayer.csv": "bcf3a91f888a873eb4b6ac4ddefdb0fabc8443ea98d90b93612b837954566359",
+  "<local data dir>/release/omni_final/q2a_pcgita_llm_perlayer.csv": "ae3196497c12c86901d2a49f51a8f33d2db8f2cab4d942748b3ea3cb9358e5c2",
+  "<local data dir>/release/omni_final/q2a_pcgita_nested_repeats.json": "588eb24d611a99caaaeeac2637fab1b3404426dedbcba3c884b7be0bee80ae03",
+  "<local data dir>/release/omni_final/q2a_pitt_ans_perlayer.csv": "0115d208c5e3e6d7a830bc21b72ad5e421a0c9d7af83e70ff106d6b65eff28ef",
+  "<local data dir>/release/omni_final/q2a_pitt_encoder_perlayer.csv": "d78d0c5319a222a4603084e50ef12fcd18a2d06be54b995d151144d6d6c2697e",
+  "<local data dir>/release/omni_final/q2a_pitt_llm_perlayer.csv": "415a5a86444a190c5b68ec7171ec98349b4a4b27901f6865c2f8adf41ea81029",
+  "<local data dir>/release/omni_final/q2a_pitt_nested_repeats.json": "ba576018b973f22001c8ce2973e7a5471309936a5a2fe7fcd38f1a0990fdfc28",
+  "<local data dir>/release/overnight/egemaps_adress2020.npz": "b41ec448978f73ce0b7fcb6a211342f6eb10951e11feddfbcfb3a78bdba02ffe",
+  "<local data dir>/release/overnight/egemaps_adresso.npz": "088a749215b2ccc3b85f68830eb2079b374146b6323fe377c63bac933417c936",
+  "<local data dir>/release/overnight/egemaps_edaic.npz": "49707760e8f81043b3e8eb62c86545d9e9c633f8dbada9a109211d81443d4613",
+  "<local data dir>/release/overnight/egemaps_kcl.npz": "d586ac79aa964aedab79e11926f05ea2a5b88ecc1d2ac54f88f691e3cce80e56",
+  "<local data dir>/release/overnight/egemaps_neurovoz.npz": "9a4bbf7a51653a7982171f203378b68a4bd60822eef171d098465e7587dd5479",
+  "<local data dir>/release/overnight/egemaps_pcgita.npz": "96ab426c2d29e3f0b51ccef182e5559e033e2b016f8eae23b283170b29f79f98",
+  "<local data dir>/release/overnight/egemaps_pitt.npz": "2146a91d0c30ad36f4e984884de13dab8aa29a81e48c5e25436f3129911b485b",
+  "<local data dir>/release/overnight/perclip/egemaps_adress2020_oof.csv": "43a1c9fa8bf970ae38c70e2d84c0eb8c24e1bcc8e0245f2a100dc16b2537e6c7",
+  "<local data dir>/release/overnight/perclip/egemaps_adresso_oof.csv": "3e2f74845cae9fcc2b7b602093cb378cbf882d98ca07e0d85e42677bd28f87f2",
+  "<local data dir>/release/overnight/perclip/egemaps_edaic_oof.csv": "23ad97fceca75bd4c54442b10791f07b494b31ee90420915dd91aff6214b42dd",
+  "<local data dir>/release/overnight/perclip/egemaps_kcl_oof.csv": "8956f24147fcd3456c717d9f3a70df7d9eaa21495b2266885c04049b1d71d84c",
+  "<local data dir>/release/overnight/perclip/egemaps_neurovoz_oof.csv": "83696be6e5e3888e5bcb64a279cc8012f6f6473945c704063dba4f774dd92b9a",
+  "<local data dir>/release/overnight/perclip/egemaps_pcgita_oof.csv": "1e76cb03fc7a91530c9e0b25a02f446fa4457c8509c97ff9fef3542238df5d13",
+  "<local data dir>/release/overnight/perclip/egemaps_pitt_oof.csv": "d043d62f3f950c603b87064abdbd7eab3af5716d5267183a91b6e19f55990d30",
+  "<local data dir>/release/overnight/scripts/part5a_egemaps.py": "d2675b43b8178e79411db10151d7dafca5a4efa97eb3e491e2b817b82be99d4d",
+  "<local data dir>/release/overnight2/kimi/kimi_edaic_states.npz": "f0d270f5ea603079557147b9fc33f04b1733a049cfbade6802d0dfa11389a747",
+  "<local data dir>/release/overnight2/kimi/kimi_pcgita_states.npz": "4f494f83c52239dc14b6cbd182971457fbfd51d17837a0e3fc3fb41d6cf0ac3e",
+  "<local data dir>/release/overnight2/kimi/kimi_pitt_states.npz": "a8921a8c09392bbd7dbb95b734f77874475655ef79c7af63711062c5b143e185",
+  "<local data dir>/release/overnight2/kimi_new/kimi_adress2020_nested_repeats.json": "97192f96b6cb6c46c14f1cd0e1734cc3c546c05f9987329f633d363eff9a9041",
+  "<local data dir>/release/overnight2/kimi_new/kimi_adress2020_states.npz": "2ee5cad85bd22ae87895f27ce28391bbae6180c8a8b9109db54b68d3c5f4c0bc",
+  "<local data dir>/release/overnight2/kimi_new/kimi_adresso_nested_repeats.json": "9f8aebcfdc30837072d1ccdd1d8d2e74bf413275cfa5508c76e077f02f66f0fd",
+  "<local data dir>/release/overnight2/kimi_new/kimi_adresso_states.npz": "8afb51b5debcbbd5c33887100095a465fe4f97c1e8f350c8601414ac641a0c4e",
+  "<local data dir>/release/overnight2/kimi_new/kimi_kcl_nested_repeats.json": "6f18ddf89bf737a073b3c6979ffdf0c7b04619ed3b93b0701b0e6cc9a1d404f9",
+  "<local data dir>/release/overnight2/kimi_new/kimi_kcl_states.npz": "847430bbc8877dde4ea2e85a882924602228cbb3af09fac5f68887ffa637144a",
+  "<local data dir>/release/overnight2/kimi_new/kimi_neurovoz_nested_repeats.json": "2140dc7698ee14b18ebf310423ea0fbfb8455d0d68409e710ad072cb234bc9fa",
+  "<local data dir>/release/overnight2/kimi_new/kimi_neurovoz_states.npz": "4e7548b5789b13c7499963e6e53fb38ff1991e480e889fd3aad9083b26dbe67e",
+  "<local data dir>/release/overnight2/part10/o25_edaic_states.npz": "6f689cf44c8c761b3049d18a1725f12c7bcb39cabfda5e889867a7cd2ace41c1",
+  "<local data dir>/release/overnight2/part10/o25_pitt_states.npz": "21d5beb3f6b520e54a418afb1d6ac106c88b7c9ce5b831bb465bf005cf8c46e7",
+  "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47",
+  "<local data dir>/release/overnight2/part3/kimi_edaic_ans_perlayer.csv": "f887a530ba38352ca0d2ff573e521ca113cc976caac1ebde76c191f45398bdff",
+  "<local data dir>/release/overnight2/part3/kimi_edaic_llm_perlayer.csv": "ab99d53c1f9af6849ee6e982bf591f75e73a6019b906163b5bbfcda4200ac7bf",
+  "<local data dir>/release/overnight2/part3/kimi_edaic_nested_repeats.json": "ab82a2898ed1501e3bb4be861b30aacfcf59c607d54023c676471401fa976203",
+  "<local data dir>/release/overnight2/part3/kimi_pcgita_ans_perlayer.csv": "dbdd619aae0dd4c0556af7a56cd9bb37a8c36410aaa8311ff242ca0bd28a56ce",
+  "<local data dir>/release/overnight2/part3/kimi_pcgita_llm_perlayer.csv": "757904c3abf7b64770f5772c2ea61692f3f91ae75dcf57d02184e68b1a27ce3b",
+  "<local data dir>/release/overnight2/part3/kimi_pcgita_nested_repeats.json": "24ad240cc88a60a782df4a6acd67397f96f69b2b9a900cd86a977fc0937069fb",
+  "<local data dir>/release/overnight2/part3/kimi_pitt_ans_perlayer.csv": "3b07ef609822ee73fa1dd06d1565f8cb0e59d493001b1940c188d871c133d9c3",
+  "<local data dir>/release/overnight2/part3/kimi_pitt_llm_perlayer.csv": "d2eaef264f5b528d16777e7288a52fe92f640c39b5c444eaf48d5be0b82bfe02",
+  "<local data dir>/release/overnight2/part3/kimi_pitt_nested_repeats.json": "d1fb5c829f5cf49ff3307ab3a728e9c430c5273c6cc04423b38d76825ee0b14a",
+  "<local data dir>/release/overnight2/q3o/q3o_adress2020_states.npz": "84d09453cc16b7b6c44c7ad6ee84c93cf98417f7236610fe0c0b5d579f6e28ef",
+  "<local data dir>/release/overnight2/q3o/q3o_adresso_states.npz": "8072d5d81e191ef9716f69abfde36a080bd507b045c8186b8c821bc729226657",
+  "<local data dir>/release/overnight2/q3o/q3o_kcl_states.npz": "acbd2cc04b4e3db61880e6bf2762b2dfc0d0d9a83cb1771a700920a6c3feb1b7",
+  "<local data dir>/release/overnight2/q3o/q3o_neurovoz_states.npz": "9bcc1971b0775e4f66457a844820b0b904e3a8f834e7954119cfc0d531002f43",
+  "<local data dir>/release/overnight2/q3o/q3o_pcgita_states.npz": "cb14b0226b542c384575c6d0e3a42fa36723d6741adc9f53232daf91ceea079e",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_ans_nested_oof.csv": "3f8dbd4b60e8b982de6466f3ebd36d6eedc1fd87420c51a13a4078d911619b73",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_enc_nested_oof.csv": "7b141019fa29dcc6a815aef6c260c148d1861f16687a0cbdb4263da3c6a3fd84",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_llm_nested_oof.csv": "6b4afa566dd17cc1da8434c3ad59b001c31290eb9d56c07099e990337d2bb2b4",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_nested.json": "c7e5dc7f009535c1a4810cf71c21081f3fa7e5b4004292b5a5aa721ea412686d",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_nested_repeats.json": "ce07c1398734977908096a92cfd4193f08c33da08fc3de6009d8b97d912d1206",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_proj_nested_oof.csv": "773f0414f21219f036add3c7bfed3a7de8f51ce595c0f6be9fe86f194cf07b75",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adresso_ans_nested_oof.csv": "409dc866cceb4d322bad18b8e6aacfdf07b4385e1e4831d28b5fa40495682075",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adresso_enc_nested_oof.csv": "2406630381970ab6a2458893879a8844f24e7742e81991696e125ad83c0fa4cd",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adresso_llm_nested_oof.csv": "236897f8055feef95dbb6144531628da17d52b7fa94990ee738b2e7a4a6a77d1",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adresso_nested.json": "51ece4ee72494ebd02bc973910c4d1e80f61ea4e15b21498f973cabc0b3e7bf3",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adresso_nested_repeats.json": "9ff359ddae662bf1e2495484919a855444d1f5c8055c164e54b95555ccc56231",
+  "<local data dir>/release/overnight2/q3o_new/q3o_adresso_proj_nested_oof.csv": "2e666b118a950bcf7707141bc15d5ed521bd58face1051635afb8800b98eaf6d",
+  "<local data dir>/release/overnight2/q3o_new/q3o_kcl_ans_nested_oof.csv": "eac3550ef3fc31af8f9dedee3bbe801bd214f84781161c47689dbefa027dd970",
+  "<local data dir>/release/overnight2/q3o_new/q3o_kcl_enc_nested_oof.csv": "fc49a481ec63229263eae6db75265dd4e02a1d9ce00797197f0650228ada9c13",
+  "<local data dir>/release/overnight2/q3o_new/q3o_kcl_llm_nested_oof.csv": "f31ee0210002c5a60a0293afb77d9c3db85d18f396eb446daa2cffc83279dcff",
+  "<local data dir>/release/overnight2/q3o_new/q3o_kcl_nested.json": "af0a3a5ecc0becf9fdbd308f3334da3921f62c541fad01eef0950f590bc7c926",
+  "<local data dir>/release/overnight2/q3o_new/q3o_kcl_nested_repeats.json": "2e06faebdf14212ff2ecf67562d32bb8ab9e67643a00f5bce80a83f5f8ed561e",
+  "<local data dir>/release/overnight2/q3o_new/q3o_kcl_proj_nested_oof.csv": "b3aa75b9112d3958adcd3409f5fe766755f5be39d795b1bcfe731343b6e47ab1",
+  "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_ans_nested_oof.csv": "08a473c26b7ff44785a7c8c81c7792e54c21f23fea106643406c723603737fe3",
+  "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_enc_nested_oof.csv": "4716ed4a0241bcddf65e2ab52830eb35ef1f1ab57e70a2679e0fdf2f5090ff78",
+  "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_llm_nested_oof.csv": "79ca6f5a497728fc183836dc9fe35cea5470ecabbb691f6a816e47d4dde4a898",
+  "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_nested.json": "82defb2a771d481d691ba78617069d54da68e5473a33e226c9692a7ecb882c32",
+  "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_nested_repeats.json": "268286d1e12039b6b71d3ccdee0ee2f0f93c60b25d334cefe4b4ff6f4364647f",
+  "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_proj_nested_oof.csv": "d7a35772946fca6e3515935f5ccaa40ed7170361fcd1cf8ada6d6cf245c4f9dc",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_ans_nested_oof.csv": "26b4e9cf5767e1d8583838e4ec9355c6745dbacbf069b3582afe0e066161809e",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_enc_nested_oof.csv": "153c3f49c0a4a41d399449aed2ab7a42256bb4c0167d4d0265d371fb6b523f45",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_llm_nested_oof.csv": "1fb20b5febca7c1a00c63483c134f2311da1c5e908bbe63cebebf11ffb2f6cbc",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_nested.json": "dc23d4d4549273c5dd3d3b63c01a9fe2c78c58fa8d850264a1e862318093a477",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_nested_repeats.json": "866a456f2ffb967ef2c28805c29fcc6b8fc85d9c9ee8c6055b8c053a2fdd52d3",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_proj_nested_oof.csv": "efcd1a6d4c046dcf5865fb67fdd02eaab7516423f80497c58875ae03867af4ac",
+  "<local data dir>/release/scripts/nested_probe_local.py": "3452dffe9b1f3dd0fb23a32dd38e408ff6984be898a754168e7656d31c38131c",
+  "<local data dir>/paper work/paper1_local_runs/kcl_probe_recut/kcl_states.npz": "0a6c7538d0c11bf189d82d99e4a5dc845c7897568c16cb35fed6ee0817f4d6ab",
+  "<local data dir>/paper work/paper1_local_runs/part16_EDAICFULL_states/edaicfull_shards.tgz": "e87a39a212e37177d7fb06dd31cb024e26e7c13e1a3f6eaf739eda299638941e",
+  "<local data dir>/paper work/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz": "3fb154784cc0fcf88094b32dcf16e162a1ffa23989aeb33d40abc84f7bcce7d0",
+  "<local data dir>/paper work/paper1_local_runs/part16_POD3_states/q3o_pitt_states.npz": "002e7d6bebbef99a9d07d7dcd3e58e78c66b19fdf149410305c7a9236631a2a3",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adress2020_ans_nested_oof.csv": "f0c635df7069a19bd7eb3860fed09b2fc8c52906e99acd59616881f525169b97",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adress2020_enc_nested_oof.csv": "cf47001db1f0dda3461472367971b84eee80142f07a8c527f472fea6922f7d78",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adress2020_llm_nested_oof.csv": "b3e2a194b43a6c71594be47104e4760072967fa4323184d73ad8120fbdc30876",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adress2020_nested.json": "2149c9d17cd99b15f0ec2d8a347cf1ca9fe13285b3f05009cf26448027678ccb",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adress2020_states.npz": "185e808e61b0154a170bbe7298dc42b858f7fc97978196c969ae97db71caeabd",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adresso_ans_nested_oof.csv": "a5f832534ac3336f0e54583daf7a3eb27933e3a8ad55262c13e1b245c7245636",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adresso_enc_nested_oof.csv": "26399fe6de168832d2b42814d9c1b146425e8790bf12d44935f448d20fa01aaf",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adresso_llm_nested_oof.csv": "4891f6f29d89108212d66cd2cae73f8bd6318a38729965cedac02c0b9300db4b",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adresso_nested.json": "f69c6c37c2851afcd3537b8cf334d74a274f29b610d13d924aec5130129af41c",
+  "<local data dir>/paper work/paper1_local_runs/probe2/adresso_states.npz": "47325c0bfc54d25e64692c36177554ce199899897a39fd072a7557aef6b99d24",
+  "<local data dir>/paper work/paper1_local_runs/probe2/edaic_ans_nested_oof.csv": "7a7b92a95f144a7f95114287432490c1130597959e54d2e153ffa95d218bb3fa",
+  "<local data dir>/paper work/paper1_local_runs/probe2/edaic_enc_nested_oof.csv": "774762a28952b7612fbd51aff1f232a18b88c3cb8037d6904e7fed68504d9e3b",
+  "<local data dir>/paper work/paper1_local_runs/probe2/edaic_llm_nested_oof.csv": "c6c7e99cd0a70a8fb954efa81d0bc7e5c6dc1dc613130e0e69a56228183a827b",
+  "<local data dir>/paper work/paper1_local_runs/probe2/edaic_nested.json": "09c0fc7d6ff8ad0aac133bd2df8d835cfc05afca1d3378def9adc906cfa2c8ae",
+  "<local data dir>/paper work/paper1_local_runs/probe2/edaic_states.npz": "07ac61e197c29ec24bb2e123f408fe66c92b8bceb10e01ed4e40397c4ae4cc89",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_ans_nested_oof.csv": "c01caddc6574cf80855d6c7a1a6a19fc45d5d89c4e132ebcfe2316375c3d9292",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_enc_nested_oof.csv": "8a482455de677c4478f1494ee4e30548d9ce8220290e38846355ff0bb333a1db",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_llm_nested_oof.csv": "bf683463eff7ef28b5f688f0ff215f99a78124a29154892ce3d9e5443636c59c",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_local_enc_nested_oof.csv": "ffcbdb2df695323735b92c2e67b9531a2797603327135bf1c0354bc1462c6821",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_local_llm_nested_oof.csv": "65a6d86bb299a0c9ebf2638d3e860062b952cef29196bfdedb8c2585b97fe208",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_local_nested.json": "00c8ae728c000ed650c00b1a94d637cf8443f49c7add1bf403e1c1f242e727cd",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_nested.json": "58b13e77ea69581891a2d8b949352bd8a845fc8d003b36df6f934d5272112f29",
+  "<local data dir>/paper work/paper1_local_runs/probe2/kcl_states.npz": "0a6c7538d0c11bf189d82d99e4a5dc845c7897568c16cb35fed6ee0817f4d6ab",
+  "<local data dir>/paper work/paper1_local_runs/probe2/nested_probe_local.py": "3f2f28d9a19c64ed4e944b7d4014e7fa6d4b9488a456c2bbaba4ff6070a8df4b",
+  "<local data dir>/paper work/paper1_local_runs/probe2/neurovoz_ans_nested_oof.csv": "5a385fecaeba7283312e793a8424fd42a0fb368a680c7a52ee36924c8bb31133",
+  "<local data dir>/paper work/paper1_local_runs/probe2/neurovoz_enc_nested_oof.csv": "34f9830688af6d6ef5769c39ef248fdb069485a9ff78a902af6d656c7de0767e",
+  "<local data dir>/paper work/paper1_local_runs/probe2/neurovoz_llm_nested_oof.csv": "bbf84f38debb61975b5dc7cc5876f46c7bc6c6550ce41d6f4e87dca98c72d279",
+  "<local data dir>/paper work/paper1_local_runs/probe2/neurovoz_nested.json": "0fe13c1a3c34b2764612635f4c0cad040a06b083d8e06526901cc4a6ddb5a4b6",
+  "<local data dir>/paper work/paper1_local_runs/probe2/neurovoz_states.npz": "32990a7a1c658eb9778295648028bfb132abc4cbc160f9bde131d136e1b1150c",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pcgita_ans_nested_oof.csv": "b6cc8b8a5f92912019519f1aeec252b1513129299eb12aa8ac83f192e32c5bd0",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pcgita_enc_nested_oof.csv": "7595a6dc31671f0d76619a8a31a4d7df79f785248c043d146452edeb675c3e5e",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pcgita_llm_nested_oof.csv": "4c1fb02be14d8b2fde9b90c8786131ee10d65e8b840797dae84d2ad4317f26e3",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pcgita_nested.json": "6c4aeb20fac883ce30b470a468b4c4db02e6caf669f5dd7836e69ea863a3c43a",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pcgita_states.npz": "da63b4c061389b76d33c68e945a232b5fee003eab9fb37063107e01562653d13",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pitt_ans_nested_oof.csv": "4274dc9e1627008a9e1e36830f03f71baf7975adf15336308acba293ed4f07f9",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pitt_enc_nested_oof.csv": "8ca5068f249e3a274edd11fc9f389285722c6dad135cb75a992235a7df3acc33",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pitt_llm_nested_oof.csv": "06da0a9d3f8e50d113f16f82c11a465fc688d529a0b2278e1718000b06bcacac",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pitt_nested.json": "081635c39f4480574b34a4ee51a4df06f3a5dd25d12ac63e14b7950caf4565e8",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pitt_states.npz": "5d8272dc673cdbded7c0a84207d5306ffdd30b6d1fee6a99b549b05d7087494c",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/edaic_ans_nested_oof.csv": "7328124f2ec1fa6e6f5b2e7f503a49ddd15ba36cf7b5ef541dde3af754e4cdb5",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/edaic_enc_nested_oof.csv": "a3dcd749081bbb10d928865b5e26e997cbe5ec5c86aee7014970f00866e599de",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/edaic_llm_nested_oof.csv": "bf1569b66dbaabbac886fad54f47e7ad425a2823701b8b2e85c4aa79a459e64e",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/edaic_nested.json": "7dd27116354101a0f1a009fe99258f20992f966b8efbe1b78a0a363ac6dc8505",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/neurovoz_ans_nested_oof.csv": "4c46a86d44cf378133780d240bbe0979f446eef3359f48a4f78f08f1f72d583d",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/neurovoz_enc_nested_oof.csv": "713b0410e76d82ba8550cfe38ca966e9d89ad86a3effd0a53e7e4ffaf7d24033",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/neurovoz_llm_nested_oof.csv": "cecc0f2f14ee60d0e2f651e0f6f5bf047998d09ab5d788a7990504e5e33a6b5d",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/neurovoz_nested.json": "62c1f9d02eba20960c8eb944489b02b464daaac036319c3bce1508e9b9a3d1c4",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pod_runs/pitt_enc_nested_oof.csv": "8ca5068f249e3a274edd11fc9f389285722c6dad135cb75a992235a7df3acc33"
+ },
+ "outputs": [
+  "folds/adress2020_groupkfold5_mac.csv",
+  "folds/adress2020_groupkfold5_pod.csv",
+  "folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+  "folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+  "folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+  "folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+  "folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+  "folds/adresso_groupkfold5_mac.csv",
+  "folds/adresso_groupkfold5_pod.csv",
+  "folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+  "folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+  "folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+  "folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+  "folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+  "folds/edaic_full_groupkfold5_shuffle_rs0.csv",
+  "folds/edaic_full_groupkfold5_shuffle_rs1.csv",
+  "folds/edaic_full_groupkfold5_shuffle_rs2.csv",
+  "folds/edaic_full_groupkfold5_shuffle_rs3.csv",
+  "folds/edaic_full_groupkfold5_shuffle_rs4.csv",
+  "folds/edaic_groupkfold5_mac.csv",
+  "folds/edaic_groupkfold5_pod.csv",
+  "folds/edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+  "folds/edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+  "folds/edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+  "folds/edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+  "folds/edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_mac.csv",
+  "folds/kcl_groupkfold5_pod.csv",
+  "folds/kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+  "folds/neurovoz_groupkfold5_mac.csv",
+  "folds/neurovoz_groupkfold5_pod.csv",
+  "folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+  "folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+  "folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+  "folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+  "folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+  "folds/pcgita_groupkfold5_mac.csv",
+  "folds/pcgita_groupkfold5_pod.csv",
+  "folds/pcgita_groupkfold5_pod_seed0.csv",
+  "folds/pcgita_groupkfold5_pod_seed1.csv",
+  "folds/pcgita_groupkfold5_pod_seed2.csv",
+  "folds/pcgita_groupkfold5_pod_seed3.csv",
+  "folds/pcgita_groupkfold5_pod_seed4.csv",
+  "folds/pitt_groupkfold5_mac.csv",
+  "folds/pitt_groupkfold5_mac_seed0.csv",
+  "folds/pitt_groupkfold5_mac_seed1.csv",
+  "folds/pitt_groupkfold5_mac_seed2.csv",
+  "folds/pitt_groupkfold5_mac_seed3.csv",
+  "folds/pitt_groupkfold5_mac_seed4.csv",
+  "folds/pitt_groupkfold5_pod.csv",
+  "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed0.csv",
+  "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed1.csv",
+  "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed2.csv",
+  "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed3.csv",
+  "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed4.csv",
+  "folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+  "folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+  "folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+  "folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+  "folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+  "folds/README.md",
+  "scores/part17/rows/T2.tsv",
+  "scores/part17/T2_folds.json",
+  "scripts/part17/T2/gkf.py",
+  "scripts/part17/T2/eng.py",
+  "scripts/part17/T2/verify_single.py",
+  "scripts/part17/T2/verify_egemaps.py",
+  "scripts/part17/T2/verify_repeats_perclip.py",
+  "scripts/part17/T2/verify_auc_only.py",
+  "scripts/part17/T2/verify_edaicfull.py",
+  "scripts/part17/T2/noise.py",
+  "scripts/part17/T2/conv.py",
+  "scripts/part17/T2/labelsets.py",
+  "scripts/part17/T2/pyes_check.py",
+  "scripts/part17/T2/build_folds.py",
+  "scripts/part17/T2/build_docs.py",
+  "scripts/part17/T2/verify_written.py",
+  "scripts/part17/T2/verify_written_edaicfull.py",
+  "reports/part17/T2/verify_written.log",
+  "reports/part17/T2/conv.log",
+  "scores/part17/T2/single_results.jsonl",
+  "scores/part17/T2/egemaps_results.jsonl",
+  "scores/part17/T2/repeats_perclip_results.jsonl",
+  "scores/part17/T2/auc_only_results.jsonl",
+  "scores/part17/T2/edaicfull_results.json",
+  "scores/part17/T2/noise_results.jsonl",
+  "scores/part17/T2/conv_results.jsonl",
+  "scores/part17/T2/files_manifest.json",
+  "scores/part17/T2/written_check.jsonl",
+  "reports/part17/T2/verify_single.log",
+  "reports/part17/T2/verify_repeats_perclip.log",
+  "reports/part17/T2/verify_auc_only.log",
+  "reports/part17/T2/verify_edaicfull.log",
+  "reports/part17/T2/noise.log"
+ ],
+ "files": [
+  {
+   "file": "folds/pitt_groupkfold5_mac.csv",
+   "dataset": "pitt",
+   "family": "single_mac",
+   "rule": "mac",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     3
+    ],
+    "Control172": [
+     1
+    ]
+   }
+  },
+  {
+   "file": "folds/adresso_groupkfold5_mac.csv",
+   "dataset": "adresso",
+   "family": "single_mac",
+   "rule": "mac",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 237,
+   "n_speakers": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adress2020_groupkfold5_mac.csv",
+   "dataset": "adress2020",
+   "family": "single_mac",
+   "rule": "mac",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 156,
+   "n_speakers": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pcgita_groupkfold5_mac.csv",
+   "dataset": "pcgita",
+   "family": "single_mac",
+   "rule": "mac",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 1100,
+   "n_speakers": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/neurovoz_groupkfold5_mac.csv",
+   "dataset": "neurovoz",
+   "family": "single_mac",
+   "rule": "mac",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 1270,
+   "n_speakers": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/kcl_groupkfold5_mac.csv",
+   "dataset": "kcl",
+   "family": "single_mac",
+   "rule": "mac",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 37,
+   "n_speakers": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_groupkfold5_mac.csv",
+   "dataset": "edaic",
+   "family": "single_mac",
+   "rule": "mac",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pitt_groupkfold5_pod.csv",
+   "dataset": "pitt",
+   "family": "single_pod",
+   "rule": "stable",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     3
+    ],
+    "Control172": [
+     0
+    ]
+   }
+  },
+  {
+   "file": "folds/adresso_groupkfold5_pod.csv",
+   "dataset": "adresso",
+   "family": "single_pod",
+   "rule": "stable",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 237,
+   "n_speakers": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adress2020_groupkfold5_pod.csv",
+   "dataset": "adress2020",
+   "family": "single_pod",
+   "rule": "stable",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 156,
+   "n_speakers": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pcgita_groupkfold5_pod.csv",
+   "dataset": "pcgita",
+   "family": "single_pod",
+   "rule": "stable",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 1100,
+   "n_speakers": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/neurovoz_groupkfold5_pod.csv",
+   "dataset": "neurovoz",
+   "family": "single_pod",
+   "rule": "stable",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 1270,
+   "n_speakers": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/kcl_groupkfold5_pod.csv",
+   "dataset": "kcl",
+   "family": "single_pod",
+   "rule": "stable",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 37,
+   "n_speakers": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_groupkfold5_pod.csv",
+   "dataset": "edaic",
+   "family": "single_pod",
+   "rule": "stable",
+   "seed": null,
+   "status": "CONFIRMED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "dataset": "pitt",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 0,
+   "status": "UNVERIFIED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     1
+    ],
+    "Control172": [
+     1
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "dataset": "pitt",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 1,
+   "status": "UNVERIFIED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     1
+    ],
+    "Control172": [
+     4
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "dataset": "pitt",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 2,
+   "status": "UNVERIFIED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     1
+    ],
+    "Control172": [
+     4
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "dataset": "pitt",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 3,
+   "status": "UNVERIFIED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     1
+    ],
+    "Control172": [
+     4
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "dataset": "pitt",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 4,
+   "status": "UNVERIFIED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     0
+    ],
+    "Control172": [
+     2
+    ]
+   }
+  },
+  {
+   "file": "folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "dataset": "adresso",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 0,
+   "status": "UNVERIFIED",
+   "n": 237,
+   "n_speakers": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "dataset": "adresso",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 1,
+   "status": "UNVERIFIED",
+   "n": 237,
+   "n_speakers": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "dataset": "adresso",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 2,
+   "status": "UNVERIFIED",
+   "n": 237,
+   "n_speakers": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "dataset": "adresso",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 3,
+   "status": "UNVERIFIED",
+   "n": 237,
+   "n_speakers": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "dataset": "adresso",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 4,
+   "status": "UNVERIFIED",
+   "n": 237,
+   "n_speakers": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "dataset": "adress2020",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 0,
+   "status": "UNVERIFIED",
+   "n": 156,
+   "n_speakers": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "dataset": "adress2020",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 1,
+   "status": "UNVERIFIED",
+   "n": 156,
+   "n_speakers": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "dataset": "adress2020",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 2,
+   "status": "UNVERIFIED",
+   "n": 156,
+   "n_speakers": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "dataset": "adress2020",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 3,
+   "status": "UNVERIFIED",
+   "n": 156,
+   "n_speakers": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "dataset": "adress2020",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 4,
+   "status": "UNVERIFIED",
+   "n": 156,
+   "n_speakers": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pcgita_groupkfold5_pod_seed0.csv",
+   "dataset": "pcgita",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 0,
+   "status": "CONFIRMED",
+   "n": 1100,
+   "n_speakers": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pcgita_groupkfold5_pod_seed1.csv",
+   "dataset": "pcgita",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 1,
+   "status": "CONFIRMED",
+   "n": 1100,
+   "n_speakers": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pcgita_groupkfold5_pod_seed2.csv",
+   "dataset": "pcgita",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 2,
+   "status": "CONFIRMED",
+   "n": 1100,
+   "n_speakers": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pcgita_groupkfold5_pod_seed3.csv",
+   "dataset": "pcgita",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 3,
+   "status": "CONFIRMED",
+   "n": 1100,
+   "n_speakers": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pcgita_groupkfold5_pod_seed4.csv",
+   "dataset": "pcgita",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 4,
+   "status": "CONFIRMED",
+   "n": 1100,
+   "n_speakers": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "dataset": "neurovoz",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 0,
+   "status": "UNVERIFIED",
+   "n": 1270,
+   "n_speakers": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "dataset": "neurovoz",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 1,
+   "status": "UNVERIFIED",
+   "n": 1270,
+   "n_speakers": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "dataset": "neurovoz",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 2,
+   "status": "UNVERIFIED",
+   "n": 1270,
+   "n_speakers": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "dataset": "neurovoz",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 3,
+   "status": "UNVERIFIED",
+   "n": 1270,
+   "n_speakers": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "dataset": "neurovoz",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 4,
+   "status": "UNVERIFIED",
+   "n": 1270,
+   "n_speakers": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "dataset": "kcl",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 0,
+   "status": "UNVERIFIED",
+   "n": 37,
+   "n_speakers": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "dataset": "kcl",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 1,
+   "status": "UNVERIFIED",
+   "n": 37,
+   "n_speakers": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "dataset": "kcl",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 2,
+   "status": "UNVERIFIED",
+   "n": 37,
+   "n_speakers": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "dataset": "kcl",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 3,
+   "status": "UNVERIFIED",
+   "n": 37,
+   "n_speakers": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "dataset": "kcl",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 4,
+   "status": "UNVERIFIED",
+   "n": 37,
+   "n_speakers": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "dataset": "edaic",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 0,
+   "status": "UNVERIFIED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "dataset": "edaic",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 1,
+   "status": "UNVERIFIED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "dataset": "edaic",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 2,
+   "status": "UNVERIFIED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "dataset": "edaic",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 3,
+   "status": "UNVERIFIED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "dataset": "edaic",
+   "family": "seed_pod",
+   "rule": "stable",
+   "seed": 4,
+   "status": "UNVERIFIED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/pitt_groupkfold5_mac_seed0.csv",
+   "dataset": "pitt",
+   "family": "seed_mac",
+   "rule": "mac",
+   "seed": 0,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     4
+    ],
+    "Control172": [
+     1
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_mac_seed1.csv",
+   "dataset": "pitt",
+   "family": "seed_mac",
+   "rule": "mac",
+   "seed": 1,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     2
+    ],
+    "Control172": [
+     0
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_mac_seed2.csv",
+   "dataset": "pitt",
+   "family": "seed_mac",
+   "rule": "mac",
+   "seed": 2,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     0
+    ],
+    "Control172": [
+     1
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_mac_seed3.csv",
+   "dataset": "pitt",
+   "family": "seed_mac",
+   "rule": "mac",
+   "seed": 3,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     1
+    ],
+    "Control172": [
+     3
+    ]
+   }
+  },
+  {
+   "file": "folds/pitt_groupkfold5_mac_seed4.csv",
+   "dataset": "pitt",
+   "family": "seed_mac",
+   "rule": "mac",
+   "seed": 4,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     3
+    ],
+    "Control172": [
+     2
+    ]
+   }
+  },
+  {
+   "file": "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed0.csv",
+   "dataset": "pitt",
+   "family": "seed_pod_pod3",
+   "rule": "stable",
+   "seed": 0,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     3
+    ],
+    "Control172": [
+     3
+    ]
+   }
+  },
+  {
+   "file": "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed1.csv",
+   "dataset": "pitt",
+   "family": "seed_pod_pod3",
+   "rule": "stable",
+   "seed": 1,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     3
+    ],
+    "Control172": [
+     4
+    ]
+   }
+  },
+  {
+   "file": "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed2.csv",
+   "dataset": "pitt",
+   "family": "seed_pod_pod3",
+   "rule": "stable",
+   "seed": 2,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     3
+    ],
+    "Control172": [
+     0
+    ]
+   }
+  },
+  {
+   "file": "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed3.csv",
+   "dataset": "pitt",
+   "family": "seed_pod_pod3",
+   "rule": "stable",
+   "seed": 3,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     1
+    ],
+    "Control172": [
+     4
+    ]
+   }
+  },
+  {
+   "file": "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed4.csv",
+   "dataset": "pitt",
+   "family": "seed_pod_pod3",
+   "rule": "stable",
+   "seed": 4,
+   "status": "CONFIRMED",
+   "n": 468,
+   "n_speakers": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "pitt_172": {
+    "Dementia172": [
+     4
+    ],
+    "Control172": [
+     4
+    ]
+   }
+  },
+  {
+   "file": "folds/edaic_full_groupkfold5_shuffle_rs0.csv",
+   "dataset": "edaic_full",
+   "family": "shuffle",
+   "rule": "shuffle random_state=0",
+   "seed": 0,
+   "status": "CONFIRMED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_full_groupkfold5_shuffle_rs1.csv",
+   "dataset": "edaic_full",
+   "family": "shuffle",
+   "rule": "shuffle random_state=1",
+   "seed": 1,
+   "status": "CONFIRMED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_full_groupkfold5_shuffle_rs2.csv",
+   "dataset": "edaic_full",
+   "family": "shuffle",
+   "rule": "shuffle random_state=2",
+   "seed": 2,
+   "status": "CONFIRMED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_full_groupkfold5_shuffle_rs3.csv",
+   "dataset": "edaic_full",
+   "family": "shuffle",
+   "rule": "shuffle random_state=3",
+   "seed": 3,
+   "status": "CONFIRMED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  },
+  {
+   "file": "folds/edaic_full_groupkfold5_shuffle_rs4.csv",
+   "dataset": "edaic_full",
+   "family": "shuffle",
+   "rule": "shuffle random_state=4",
+   "seed": 4,
+   "status": "CONFIRMED",
+   "n": 275,
+   "n_speakers": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "pitt_172": null
+  }
+ ],
+ "written_file_check": [
+  {
+   "file": "adress2020_groupkfold5_mac.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 156,
+   "checks": [
+    {
+     "run": "q2a_probe2_adress2020",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_adress2020",
+     "stream": "llm",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_adress2020",
+     "stream": "ans",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "egemaps_adress2020",
+     "stream": "egemaps",
+     "maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "max_over_checks": 1.1102230246251565e-16
+  },
+  {
+   "file": "adress2020_groupkfold5_pod.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 156,
+   "checks": [
+    {
+     "run": "q3o_new_adress2020",
+     "stream": "enc",
+     "maxabs": 0.003201433170855361
+    },
+    {
+     "run": "q3o_new_adress2020",
+     "stream": "proj",
+     "maxabs": 0.01397362105207961
+    },
+    {
+     "run": "q3o_new_adress2020",
+     "stream": "llm",
+     "maxabs": 1.96472835872763e-05
+    },
+    {
+     "run": "q3o_new_adress2020",
+     "stream": "ans",
+     "maxabs": 6.379562077674095e-05
+    }
+   ],
+   "max_over_checks": 0.01397362105207961
+  },
+  {
+   "file": "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 156,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 156,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 156,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 156,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 156,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adresso_groupkfold5_mac.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 237,
+   "checks": [
+    {
+     "run": "q2a_probe2_adresso",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_adresso",
+     "stream": "llm",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_adresso",
+     "stream": "ans",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "egemaps_adresso",
+     "stream": "egemaps",
+     "maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "max_over_checks": 1.1102230246251565e-16
+  },
+  {
+   "file": "adresso_groupkfold5_pod.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 237,
+   "checks": [
+    {
+     "run": "q3o_new_adresso",
+     "stream": "enc",
+     "maxabs": 0.001825773333418157
+    },
+    {
+     "run": "q3o_new_adresso",
+     "stream": "proj",
+     "maxabs": 0.01833281637807993
+    },
+    {
+     "run": "q3o_new_adresso",
+     "stream": "llm",
+     "maxabs": 0.0016856468351248433
+    },
+    {
+     "run": "q3o_new_adresso",
+     "stream": "ans",
+     "maxabs": 0.030587812026271255
+    }
+   ],
+   "max_over_checks": 0.030587812026271255
+  },
+  {
+   "file": "adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 237,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 237,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 237,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 237,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 237,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "edaic_groupkfold5_mac.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [
+    {
+     "run": "q2a_probe2_edaic",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_edaic",
+     "stream": "llm",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_edaic",
+     "stream": "ans",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "egemaps_edaic",
+     "stream": "egemaps",
+     "maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "max_over_checks": 1.1102230246251565e-16
+  },
+  {
+   "file": "edaic_groupkfold5_pod.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [
+    {
+     "run": "q2a_probe2_podruns_edaic",
+     "stream": "enc",
+     "maxabs": 0.24548219325086754
+    },
+    {
+     "run": "q2a_probe2_podruns_edaic",
+     "stream": "llm",
+     "maxabs": 0.06469854720462248
+    },
+    {
+     "run": "q2a_probe2_podruns_edaic",
+     "stream": "ans",
+     "maxabs": 0.12985672892950945
+    },
+    {
+     "run": "omni_final_edaic",
+     "stream": "enc",
+     "maxabs": 0.00931928199375276
+    },
+    {
+     "run": "omni_final_edaic",
+     "stream": "proj",
+     "maxabs": 0.019355538907600722
+    },
+    {
+     "run": "omni_final_edaic",
+     "stream": "llm",
+     "maxabs": 0.03364214151801226
+    },
+    {
+     "run": "omni_final_edaic",
+     "stream": "ans",
+     "maxabs": 0.027717876993065715
+    }
+   ],
+   "max_over_checks": 0.24548219325086754
+  },
+  {
+   "file": "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "kcl_groupkfold5_mac.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 37,
+   "checks": [
+    {
+     "run": "q2a_probe2_kcl",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_kcl",
+     "stream": "llm",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_kcl",
+     "stream": "ans",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "egemaps_kcl",
+     "stream": "egemaps",
+     "maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "max_over_checks": 1.1102230246251565e-16
+  },
+  {
+   "file": "kcl_groupkfold5_pod.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 37,
+   "checks": [
+    {
+     "run": "q2a_probe2_kcl_local",
+     "stream": "enc",
+     "maxabs": 1.2954306032486596e-05
+    },
+    {
+     "run": "q2a_probe2_kcl_local",
+     "stream": "llm",
+     "maxabs": 0.002664097082096639
+    },
+    {
+     "run": "q3o_new_kcl",
+     "stream": "enc",
+     "maxabs": 2.1521980384076045e-05
+    },
+    {
+     "run": "q3o_new_kcl",
+     "stream": "proj",
+     "maxabs": 6.0051588158693825e-05
+    },
+    {
+     "run": "q3o_new_kcl",
+     "stream": "llm",
+     "maxabs": 0.0006723895375571054
+    },
+    {
+     "run": "q3o_new_kcl",
+     "stream": "ans",
+     "maxabs": 0.0027637430297619003
+    }
+   ],
+   "max_over_checks": 0.0027637430297619003
+  },
+  {
+   "file": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 37,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 37,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 37,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 37,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 37,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "neurovoz_groupkfold5_mac.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1270,
+   "checks": [
+    {
+     "run": "q2a_probe2_neurovoz",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_neurovoz",
+     "stream": "llm",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_neurovoz",
+     "stream": "ans",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "egemaps_neurovoz",
+     "stream": "egemaps",
+     "maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "max_over_checks": 1.1102230246251565e-16
+  },
+  {
+   "file": "neurovoz_groupkfold5_pod.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1270,
+   "checks": [
+    {
+     "run": "q2a_probe2_podruns_neurovoz",
+     "stream": "enc",
+     "maxabs": 0.09027806040235897
+    },
+    {
+     "run": "q2a_probe2_podruns_neurovoz",
+     "stream": "llm",
+     "maxabs": 0.2488944850720532
+    },
+    {
+     "run": "q2a_probe2_podruns_neurovoz",
+     "stream": "ans",
+     "maxabs": 0.20076597979658928
+    },
+    {
+     "run": "q3o_new_neurovoz",
+     "stream": "enc",
+     "maxabs": 0.00062902831068129
+    },
+    {
+     "run": "q3o_new_neurovoz",
+     "stream": "proj",
+     "maxabs": 0.042935745509533496
+    },
+    {
+     "run": "q3o_new_neurovoz",
+     "stream": "llm",
+     "maxabs": 0.012594883891269504
+    },
+    {
+     "run": "q3o_new_neurovoz",
+     "stream": "ans",
+     "maxabs": 0.04472711448920963
+    }
+   ],
+   "max_over_checks": 0.2488944850720532
+  },
+  {
+   "file": "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 1270,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 1270,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 1270,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 1270,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 1270,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "pcgita_groupkfold5_mac.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1100,
+   "checks": [
+    {
+     "run": "q2a_probe2_pcgita",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_pcgita",
+     "stream": "llm",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_pcgita",
+     "stream": "ans",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "egemaps_pcgita",
+     "stream": "egemaps",
+     "maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "max_over_checks": 1.1102230246251565e-16
+  },
+  {
+   "file": "pcgita_groupkfold5_pod.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1100,
+   "checks": [
+    {
+     "run": "q3o_new_pcgita",
+     "stream": "enc",
+     "maxabs": 1.3891458536252621e-06
+    },
+    {
+     "run": "q3o_new_pcgita",
+     "stream": "proj",
+     "maxabs": 0.010577207799284782
+    },
+    {
+     "run": "q3o_new_pcgita",
+     "stream": "llm",
+     "maxabs": 0.026873329092507503
+    },
+    {
+     "run": "q3o_new_pcgita",
+     "stream": "ans",
+     "maxabs": 0.04612190409806849
+    }
+   ],
+   "max_over_checks": 0.04612190409806849
+  },
+  {
+   "file": "pcgita_groupkfold5_pod_seed0.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1100,
+   "checks": [
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "ans",
+     "maxabs": 0.023262752556817035
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "enc",
+     "maxabs": 3.1481474166428214e-06
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "llm",
+     "maxabs": 0.07066651368092924
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "proj",
+     "maxabs": 0.07066651368092924
+    }
+   ],
+   "max_over_checks": 0.07066651368092924
+  },
+  {
+   "file": "pcgita_groupkfold5_pod_seed1.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1100,
+   "checks": [
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "ans",
+     "maxabs": 0.02403536593359762
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "enc",
+     "maxabs": 0.03996038088058479
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "llm",
+     "maxabs": 0.02991394317031537
+    }
+   ],
+   "max_over_checks": 0.03996038088058479
+  },
+  {
+   "file": "pcgita_groupkfold5_pod_seed2.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1100,
+   "checks": [
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "ans",
+     "maxabs": 0.08310793253902626
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "enc",
+     "maxabs": 1.5410557452910645e-05
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "llm",
+     "maxabs": 0.02076412734220401
+    }
+   ],
+   "max_over_checks": 0.08310793253902626
+  },
+  {
+   "file": "pcgita_groupkfold5_pod_seed3.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1100,
+   "checks": [
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "ans",
+     "maxabs": 0.051577005345421145
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "enc",
+     "maxabs": 1.4051831815908855e-06
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "llm",
+     "maxabs": 0.028888645846886107
+    }
+   ],
+   "max_over_checks": 0.051577005345421145
+  },
+  {
+   "file": "pcgita_groupkfold5_pod_seed4.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 1100,
+   "checks": [
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "ans",
+     "maxabs": 0.06353592814718362
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "enc",
+     "maxabs": 6.871753452375451e-06
+    },
+    {
+     "run": "q3o_POD3_pcgita",
+     "stream": "llm",
+     "maxabs": 0.07241041009060098
+    }
+   ],
+   "max_over_checks": 0.07241041009060098
+  },
+  {
+   "file": "pitt_groupkfold5_mac.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "q2a_probe2_pitt",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_pitt",
+     "stream": "llm",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_pitt",
+     "stream": "ans",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "q2a_probe2_podruns_pitt",
+     "stream": "enc",
+     "maxabs": 1.1102230246251565e-16
+    },
+    {
+     "run": "egemaps_pitt",
+     "stream": "egemaps",
+     "maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "max_over_checks": 1.1102230246251565e-16
+  },
+  {
+   "file": "pitt_groupkfold5_mac_seed0.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "omni_part10_pitt_nested5",
+     "stream": "enc",
+     "maxabs": 0.0
+    }
+   ],
+   "max_over_checks": 0.0
+  },
+  {
+   "file": "pitt_groupkfold5_mac_seed1.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "omni_part10_pitt_nested5",
+     "stream": "enc",
+     "maxabs": 0.0
+    }
+   ],
+   "max_over_checks": 0.0
+  },
+  {
+   "file": "pitt_groupkfold5_mac_seed2.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "omni_part10_pitt_nested5",
+     "stream": "enc",
+     "maxabs": 0.0
+    }
+   ],
+   "max_over_checks": 0.0
+  },
+  {
+   "file": "pitt_groupkfold5_mac_seed3.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "omni_part10_pitt_nested5",
+     "stream": "enc",
+     "maxabs": 0.0
+    }
+   ],
+   "max_over_checks": 0.0
+  },
+  {
+   "file": "pitt_groupkfold5_mac_seed4.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "omni_part10_pitt_nested5",
+     "stream": "enc",
+     "maxabs": 0.0
+    }
+   ],
+   "max_over_checks": 0.0
+  },
+  {
+   "file": "pitt_groupkfold5_pod.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "omni_final_pitt",
+     "stream": "enc",
+     "maxabs": 0.009058065613064326
+    },
+    {
+     "run": "omni_final_pitt",
+     "stream": "proj",
+     "maxabs": 0.02859501779454443
+    },
+    {
+     "run": "omni_final_pitt",
+     "stream": "llm",
+     "maxabs": 0.061259522981092496
+    },
+    {
+     "run": "omni_final_pitt",
+     "stream": "ans",
+     "maxabs": 0.05526620382250727
+    }
+   ],
+   "max_over_checks": 0.061259522981092496
+  },
+  {
+   "file": "pitt_groupkfold5_pod_Control15ids_seed0.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "enc",
+     "maxabs": 0.024835487943619006
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "proj",
+     "maxabs": 0.013849679216421773
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "llm",
+     "maxabs": 0.030824095281782316
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "ans",
+     "maxabs": 0.016034723212914714
+    }
+   ],
+   "max_over_checks": 0.030824095281782316
+  },
+  {
+   "file": "pitt_groupkfold5_pod_Control15ids_seed1.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "enc",
+     "maxabs": 0.009761670648095355
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "llm",
+     "maxabs": 0.03229603637515577
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "ans",
+     "maxabs": 0.053625771501655706
+    }
+   ],
+   "max_over_checks": 0.053625771501655706
+  },
+  {
+   "file": "pitt_groupkfold5_pod_Control15ids_seed2.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "enc",
+     "maxabs": 0.024635584552191392
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "llm",
+     "maxabs": 0.032610961399831995
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "ans",
+     "maxabs": 0.021526199143087177
+    }
+   ],
+   "max_over_checks": 0.032610961399831995
+  },
+  {
+   "file": "pitt_groupkfold5_pod_Control15ids_seed3.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "enc",
+     "maxabs": 0.017499137891433314
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "llm",
+     "maxabs": 0.03881621330373142
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "ans",
+     "maxabs": 0.041754014964074576
+    }
+   ],
+   "max_over_checks": 0.041754014964074576
+  },
+  {
+   "file": "pitt_groupkfold5_pod_Control15ids_seed4.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "enc",
+     "maxabs": 0.02589983591063605
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "llm",
+     "maxabs": 0.03023577390715365
+    },
+    {
+     "run": "q3o_POD3_pitt",
+     "stream": "ans",
+     "maxabs": 0.03923095101332974
+    }
+   ],
+   "max_over_checks": 0.03923095101332974
+  },
+  {
+   "file": "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "status": "UNVERIFIED",
+   "speakers_disjoint": true,
+   "n": 468,
+   "checks": [],
+   "max_over_checks": null
+  },
+  {
+   "file": "edaic_full_groupkfold5_shuffle_rs0.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "enc",
+     "maxabs": 0.005604862349405326
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "proj",
+     "maxabs": 0.005110548205332299
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "llm",
+     "maxabs": 0.024009331247045462
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "ans",
+     "maxabs": 0.023293128867411056
+    }
+   ],
+   "max_over_checks": 0.024009331247045462,
+   "note": "the saved per-clip file holds only the mean over the five splits, so the five files are checked together"
+  },
+  {
+   "file": "edaic_full_groupkfold5_shuffle_rs1.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "enc",
+     "maxabs": 0.005604862349405326
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "proj",
+     "maxabs": 0.005110548205332299
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "llm",
+     "maxabs": 0.024009331247045462
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "ans",
+     "maxabs": 0.023293128867411056
+    }
+   ],
+   "max_over_checks": 0.024009331247045462,
+   "note": "the saved per-clip file holds only the mean over the five splits, so the five files are checked together"
+  },
+  {
+   "file": "edaic_full_groupkfold5_shuffle_rs2.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "enc",
+     "maxabs": 0.005604862349405326
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "proj",
+     "maxabs": 0.005110548205332299
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "llm",
+     "maxabs": 0.024009331247045462
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "ans",
+     "maxabs": 0.023293128867411056
+    }
+   ],
+   "max_over_checks": 0.024009331247045462,
+   "note": "the saved per-clip file holds only the mean over the five splits, so the five files are checked together"
+  },
+  {
+   "file": "edaic_full_groupkfold5_shuffle_rs3.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "enc",
+     "maxabs": 0.005604862349405326
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "proj",
+     "maxabs": 0.005110548205332299
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "llm",
+     "maxabs": 0.024009331247045462
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "ans",
+     "maxabs": 0.023293128867411056
+    }
+   ],
+   "max_over_checks": 0.024009331247045462,
+   "note": "the saved per-clip file holds only the mean over the five splits, so the five files are checked together"
+  },
+  {
+   "file": "edaic_full_groupkfold5_shuffle_rs4.csv",
+   "status": "CONFIRMED",
+   "speakers_disjoint": true,
+   "n": 275,
+   "checks": [
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "enc",
+     "maxabs": 0.005604862349405326
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "proj",
+     "maxabs": 0.005110548205332299
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "llm",
+     "maxabs": 0.024009331247045462
+    },
+    {
+     "run": "EDAICFULL_mean_of_5",
+     "stream": "ans",
+     "maxabs": 0.023293128867411056
+    }
+   ],
+   "max_over_checks": 0.024009331247045462,
+   "note": "the saved per-clip file holds only the mean over the five splits, so the five files are checked together"
+  }
+ ],
+ "note": "clip_id and speaker_id are exactly as each run used them; Pitt participant 172 is two labels (Control172, Dementia172) as used."
+}
