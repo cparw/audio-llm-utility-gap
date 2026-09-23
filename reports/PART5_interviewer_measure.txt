@@ -1,0 +1,227 @@
+====================================================================================================
+PART 5  INTERVIEWER SPEECH INSIDE THE 30 s SCORED WINDOW.  MEASURE ONLY.
+====================================================================================================
+Written 2026-09-22 18:46.  NOTHING WAS RECUT.  No clip, manifest or Table 1 file was touched.
+This part answers one question: how much of each scored window is the interviewer talking.
+It does not change any result. The decision rule is at the bottom.
+
+----------------------------------------------------------------------------------------------------
+METHOD, AND WHY TWO NUMBERS ARE GIVEN FOR PITT
+----------------------------------------------------------------------------------------------------
+Interviewer speech is the *INV: tier of the CHAT transcript. Participant speech is *PAR:.
+A window is the [start, end] interval actually used to cut the scored clip. For each window I take
+every *INV: utterance, clip it to the window, and union the clipped intervals, so two interviewer
+turns that overlap are not counted twice.
+
+Pitt is measured TWICE because the Pitt transcripts are not fully timed:
+  6589 *PAR: and 1683 *INV: utterances carry a time bullet; 537 *PAR: and 795 *INV: do not.
+  LOWER BOUND  = union of TIMED *INV: intervals only. Every second of it is on disk. Untimed
+                 interviewer turns contribute zero, which is why it is a floor and not an estimate.
+  UPPER BOUND  = the lower bound plus, for each UNTIMED *INV: utterance, the whole gap between its
+                 timed neighbours, clipped to the window. That gap is the widest the turn could
+                 possibly be, so this is a ceiling. The truth is between the two.
+ADReSS-2020 is fully timed (0 untimed utterances in all 156 files), so its numbers are exact and the
+two bounds coincide.
+ADReSSo has no timed transcript at all, so it gets neither. See its section.
+
+NOT USED: pitt_conflict_manifest.csv column inv_ms_in_window. It is 0.0000 on all 468 rows because
+the regex behind it requires a time bullet on the *INV: line and 795 Pitt *INV: lines have none.
+It is a known artefact (DISCREPANCIES.md D4) and it is not cited anywhere below.
+
+SOURCES (every number below comes from one of these):
+  Pitt window times      /Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv  (start_ms, end_ms)
+  Pitt all-tertile times /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all_segments.csv
+  Pitt CHAT              /Volumes/G-Drive Pro/DementiaBank/transcripts/<Control|Dementia>/cookie/<session>.cha
+  Pitt source audio      /Volumes/G-Drive Pro/DementiaBank/Pitt/<grp>/cookie/0wav/<session>.wav  (mp3 fallback)
+  ADReSSo windows        /Volumes/G-Drive Pro/paper work/Hard drive data for paper/adresso/adresso_manifest_patient.csv  (start_s)
+  ADReSSo clips          /Volumes/G-Drive Pro/paper work/Hard drive data for paper/adresso/segments_patient/<spk>.wav
+  ADReSSo ASR            /Volumes/G-Drive Pro/paper work/Hard drive data for paper/adresso/adresso_transcripts_patient.csv
+  ADReSS-2020 windows    /Volumes/G-Drive Pro/paper work/Hard drive data for paper/adress2020/adress2020_manifest_patient.csv  (start_s)
+  ADReSS-2020 CHAT       /Volumes/G-Drive Pro/paper work/Hard drive data for paper/DementiaBank/challenges/ADReSS-2020/ADReSS-IS2020-{train_x,test_x}/ADReSS-IS2020-data/{train,test}/transcription/
+  CHAT parser            /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/cha.py  (the same parser the 1a audit used)
+  per-window numbers     /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part5_interviewer_per_window.csv
+
+----------------------------------------------------------------------------------------------------
+5.1  PITT, 468 scored windows (the set the Table 1 Pitt row is built on)
+----------------------------------------------------------------------------------------------------
+Window length, seconds: min 30.0000  median 33.2855  mean 34.5103  max 55.5610
+  Windows of exactly 30000 ms in the manifest: 1/468.  Longer than 30 s: 467/468.
+  The cut clips themselves are 0/468 at exactly 30.0000 s (min 30.0100 s), which is DISCREPANCIES.md D5;
+  the one 30000 ms manifest row cuts to a 30.0100 s wav. So 'the 468 thirty-second segments' is wrong
+  either way. The share below therefore uses the REAL window length,
+  not a nominal 30 s, because dividing by 30 would overstate the interviewer share on every row.
+Window start into the recording: min 0.0000  median 7.3915  max 219.4200
+  Windows starting at 0.0000 s: 1/468 = 0.0021
+
+  LOWER BOUND, timed *INV: only (every second measured on disk):
+    interviewer seconds inside the window:   median 0.0000   mean 0.7191   min 0.0000   max 12.8170
+    interviewer share of the window:         median 0.0000   mean 0.0209   min 0.0000   max 0.3308
+      (share denominator: real window length, median 33.2855 s)
+    windows holding MORE THAN 5 s of interviewer speech: 13/468 = 0.0278
+    longest single interviewer stretch inside one window: 12.8170 s
+    windows with any timed interviewer audio: >0 s 168/468, >0.5 s 128/468, >2 s 67/468
+
+  UPPER BOUND, timed plus the full bracketing gap of every untimed *INV: (a ceiling):
+    interviewer seconds inside the window:   median 0.0000   mean 2.5400   min 0.0000   max 41.6120
+    interviewer share of the window:         median 0.0000   mean 0.0688   min 0.0000   max 0.8464
+      (share denominator: real window length)
+    windows holding MORE THAN 5 s of interviewer speech: 75/468 = 0.1603
+    windows holding an untimed *INV: turn whose whole bracket falls inside the window: 103/468 = 0.2201
+    interviewer words carried by those untimed turns: 175
+
+  Windows containing at least one interviewer WORD (timed or bracketed inside): 213/468 = 0.4551
+  Reproduces AUDIT_1a1c_ad.txt FLAG 1 exactly: 213/468, 168/128/67 at >0/>0.5/>2 s, longest 12.8170 s,
+  103/468 untimed-inside. Same parser, same windows, recomputed from the .cha files.
+
+  Read this the right way. 255 of the 468 windows have NO interviewer word at all, which is why the
+  median is 0.0000 s. The interviewer is concentrated in a minority of windows, not spread evenly.
+
+  If a nominal 30 s denominator were used instead of the real window length:
+    share median 0.0000  mean 0.0240 (lower bound)
+
+----------------------------------------------------------------------------------------------------
+5.1b  PITT, all 708 windows including the discarded middle tertile (PART 13 set), for comparison
+----------------------------------------------------------------------------------------------------
+Included because the 468 is a tertile-selected subset (D12) and the selection was on text fluency,
+which could in principle correlate with how much the interviewer talks. It does not.
+Window length: min 30.0000  median 33.3100  mean 34.4735  max 73.2580
+    interviewer seconds inside the window:   median 0.0000   mean 0.7780   min 0.0000   max 14.0730
+    interviewer share of the window:         median 0.0000   mean 0.0225   min 0.0000   max 0.4471
+      (share denominator: real window length)
+    windows holding MORE THAN 5 s of interviewer speech: 23/708 = 0.0325
+    (upper bound: median share 0.0000, mean 0.0652, >5 s 107/708)
+    middle tertile alone, n=240: median inv s 0.0000, mean 0.8928, median share 0.0000, >5 s 10/240
+    The 468 and the 708 give the same picture, so the tertile selection is not hiding interviewer speech.
+
+----------------------------------------------------------------------------------------------------
+5.2  ADReSSo, 237 scored windows  (= the ADReSS-M English train split, D7)
+----------------------------------------------------------------------------------------------------
+*** INTERVIEWER SECONDS CANNOT BE MEASURED FOR THIS SET. ***
+There is no timed transcript on disk for it, and there is no speaker-labelled transcript either.
+The ADReSSo folder /Volumes/G-Drive Pro/DementiaBank/challenges/ADReSSo holds only four .tgz archives.
+The 237 scored clips come from the ADReSS-M English training split, whose tree contains mp3 audio,
+ADReSS-M-meta.csv, the format_task csvs and the groundtruth csvs, and no .cha, no .txt and no
+segmentation csv. That is a missing-file fact, checked on disk, not an inference.
+So for ADReSSo the four quantities asked for -- interviewer seconds median and mean, interviewer
+share median and mean, and the count of windows over 5 s -- DO NOT EXIST and are not reported.
+Reporting a number here would mean inventing one.
+
+What IS measurable for ADReSSo:
+  scored clip length, s: min 2.0400  median 30.0000  mean 29.1403  max 30.0000
+    exactly 30.0000 s: 212/237 = 0.8945;  shorter: 25/237 = 0.1055
+  source mp3 length, s: min 22.2912  median 70.4784  max 268.4865
+  window start start_s: min 0.0000  median 3.4400  mean 7.4665  max 45.0000
+  *** windows starting at 0.0000 s, no shift off the start of the recording: 90/237 = 0.3797 ***
+     A window that starts at 0.0 s starts where the recording starts, which on this task is where
+     the examiner says the prompt. That is the reason the subset was asked for.
+
+  THE 90 WINDOWS THAT START AT 0.0 s, as far as the files allow:
+    clip length, s: min 22.2912  median 30.0000  mean 29.6244  max 30.0000
+    source mp3 length, s: min 22.2912  median 67.1361  max 235.8596
+    label split: AD 28, control 62
+    interviewer seconds: NOT MEASURABLE, no timed transcript. Same as the full 237.
+
+  SUBSTITUTE EVIDENCE, clearly labelled: whisper ASR of the scored clips themselves
+  (/Volumes/G-Drive Pro/paper work/Hard drive data for paper/adresso/adresso_transcripts_patient.csv). No speaker labels, no timings, so it can show
+  that the interviewer is present but never how many seconds. It is a LOWER BOUND on leakage.
+    ASR words per clip: min 0  median 50.0000  mean 49.1308  max 105
+    clips whose own ASR carries an examiner prompt phrase in the first 200 characters: 10/237 = 0.0422
+      ids: adrso027, adrso037, adrso041, adrso071, adrso083, adrso090, adrso116, adrso160, adrso243, adrso287
+    of those, inside the 90 windows that start at 0.0 s: 4/90 = 0.0444   ids: adrso027, adrso071, adrso160, adrso287
+    in the 147 windows that start after 0.0 s: 6/147 = 0.0408   ids: adrso037, adrso041, adrso083, adrso090, adrso116, adrso243
+    The prompt phrase is 0.0444 of the start-at-0.0 windows against 0.0408 of the rest.
+    Do not turn this into a percentage of window time. It is a count of clips, and ASR misses
+    quiet or overlapped examiner speech, so the true leakage is at least this and probably more.
+
+----------------------------------------------------------------------------------------------------
+5.3  ADReSS-2020, 156 scored windows  (fully timed CHAT, so these are exact)
+----------------------------------------------------------------------------------------------------
+All 156 .cha files present. Untimed utterances across all of them: 0. Nothing is bracketed, nothing is bounded, every number here is measured.
+Scored clip length, s: min 4.3332  median 30.0000  mean 29.4190  max 30.0000
+  exactly 30.0000 s: 142/156 = 0.9103
+Window start start_s: min 0.0000  median 4.0000  mean 7.6737  max 45.0000
+  Windows starting at 0.0000 s: 59/156 = 0.3782
+
+    interviewer seconds inside the window:   median 1.4495   mean 2.4236   min 0.0000   max 17.7990
+    interviewer share of the window:         median 0.0501   mean 0.0853   min 0.0000   max 0.5933
+      (share denominator: real window length, median 30.0000 s)
+    windows holding MORE THAN 5 s of interviewer speech: 22/156 = 0.1410
+    longest single interviewer stretch inside one window: 17.7990 s
+    windows with interviewer audio: >0 s 114/156, >0.5 s 107/156, >2 s 60/156
+    windows containing at least one interviewer word: 114/156 = 0.7308
+  Reproduces AUDIT_1a1c_ad.txt 1a.3 exactly: 114/156, 107, 60, longest 17.7990 s, 59/156 starting at 0.0.
+
+  ADReSS-2020 split by whether the window was shifted off the start (the same cut ADReSSo was
+  asked for, and here it can actually be measured):
+    start at 0.0 s, n=59:  median inv s 1.8280   mean 2.0972   median share 0.0609   mean share 0.0700   >5 s 4/59 = 0.0678
+    start  > 0.0 s, n=97: median inv s 1.2400   mean 2.6222   median share 0.0439   mean share 0.0946   >5 s 18/97 = 0.1856
+    The shift helps but does not clear the interviewer out of the window.
+
+  Worst ten ADReSS-2020 windows by interviewer seconds:
+    S139   train label 1  window 45.0000-75.0000 s  inv 17.7990 s  share 0.5933  inv words 20
+    S156   train label 1  window 45.0000-75.0000 s  inv 16.2820 s  share 0.5427  inv words 28
+    S182   test  label 1  window 9.7200-39.7200 s  inv 15.4190 s  share 0.5140  inv words 23
+    S080   train label 1  window 3.6000-33.6000 s  inv 13.8380 s  share 0.4613  inv words 9
+    S145   train label 1  window 19.6200-49.6200 s  inv 11.3940 s  share 0.3798  inv words 18
+    S124   train label 1  window 5.0000-35.0000 s  inv 10.0180 s  share 0.3339  inv words 28
+    S068   train label 0  window 0.0000-30.0000 s  inv 9.5330 s  share 0.3178  inv words 2
+    S033   train label 0  window 0.0000-30.0000 s  inv 8.9840 s  share 0.2995  inv words 27
+    S087   train label 1  window 24.0000-54.0000 s  inv 8.6030 s  share 0.2868  inv words 15
+    S201   test  label 0  window 4.0000-34.0000 s  inv 8.3870 s  share 0.2796  inv words 2
+
+  Worst ten Pitt windows by timed interviewer seconds (lower bound):
+    Dem 173-1    agreement  window 16.9940-55.7340 s  inv 12.8170 s  share 0.3308  inv words 61
+    Dem 049-0    agreement  window 36.8760-68.5000 s  inv 8.7050 s  share 0.2753  inv words 38
+    Dem 218-1    agreement  window 10.0980-40.3730 s  inv 8.4540 s  share 0.2792  inv words 43
+    Dem 276-0    agreement  window 0.0000-31.7470 s  inv 7.2830 s  share 0.2294  inv words 35
+    Dem 698-0    conflict   window 4.2220-44.4180 s  inv 6.6230 s  share 0.1648  inv words 37
+    Con 105-2    agreement  window 3.3720-38.0530 s  inv 6.6130 s  share 0.1907  inv words 35
+    Dem 695-0    agreement  window 1.9710-43.1660 s  inv 6.4000 s  share 0.1554  inv words 26
+    Dem 488-0    conflict   window 3.4630-38.8830 s  inv 5.9560 s  share 0.1682  inv words 28
+    Dem 539-0    agreement  window 72.4230-105.0200 s  inv 5.8940 s  share 0.1808  inv words 23
+    Dem 591-0    agreement  window 11.9480-47.5340 s  inv 5.6230 s  share 0.1580  inv words 23
+
+====================================================================================================
+DECISION RULE
+====================================================================================================
+Rule as given: if the MEDIAN interviewer share of the window is under 15 percent, conclude
+'no recut needed, sensitivity check not triggered'. If over 15 percent, the recut sensitivity
+check is TRIGGERED for that set. PART 5 does not perform the recut either way.
+
+Median interviewer share of the scored window, per set:
+  Pitt (468)        0.0000  lower bound   |  0.0000  upper bound   -> UNDER 0.1500 on both
+  Pitt (708, all tertiles)  0.0000  lower bound                       -> UNDER 0.1500
+  ADReSS-2020 (156) 0.0501  exact                                     -> UNDER 0.1500
+  ADReSSo (237)     NOT MEASURABLE, no timed transcript exists              -> rule cannot be applied
+
+Means, for completeness, because the median hides the tail:
+  Pitt (468)        mean share 0.0209 lower, 0.0688 upper
+  ADReSS-2020 (156) mean share 0.0853
+
+VERDICT
+  Pitt          NO RECUT NEEDED, SENSITIVITY CHECK NOT TRIGGERED. Median share 0.0000 (lower)
+                and 0.0000 (upper), both far under 0.1500. 13 of 468 windows hold more
+                than 5 s of interviewer speech on the lower bound, 75 of 468 on the upper.
+  ADReSS-2020   NO RECUT NEEDED, SENSITIVITY CHECK NOT TRIGGERED. Median share 0.0501, exact,
+                under 0.1500. 22 of 156 windows hold more than 5 s of interviewer speech.
+  ADReSSo       RULE CANNOT BE APPLIED. There is no timed transcript for this set, so the median
+                interviewer share does not exist. No recut is triggered on a set that cannot be
+                measured, and it is not cleared either. What is on the record instead is the ASR
+                lower bound: 10 of 237 clips still contain an examiner prompt phrase,
+                4 of them among the 90 windows that start at 0.0 s.
+
+  No set crosses the 15 percent median line, so on the rule as written the sensitivity check is
+  NOT TRIGGERED and no recut is performed. Nothing in Table 1 changes from PART 5.
+
+  One honest caveat, stated because it matters and not because it changes the verdict. The median
+  is under the line on every measurable set, but the median is 0.0000 on Pitt precisely because 255
+  of 468 windows have no interviewer in them at all. The interviewer sits in a minority of windows
+  and sits there heavily: the worst Pitt window is 12.8170 s of interviewer inside a
+  38.7400 s window (Dem 173-1, share 0.3308); the worst ADReSS-2020 window is
+  17.7990 s inside 30.0000 s (S139, share 0.5933). 35 windows across the
+  two sets carry more than 5 s. A median-based rule passes those windows; a per-window rule would
+  not. That is a property of the rule, not a finding about the data, and the rule is the one given.
+
+====================================================================================================
+END PART 5. Measure only. No clip was recut, no manifest was rewritten, no Table 1 file was touched.
+====================================================================================================

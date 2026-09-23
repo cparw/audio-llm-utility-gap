@@ -1,0 +1,98 @@
+======================================================================================================================
+PART 14 SPEAKER LEVEL BOOTSTRAP CIs   2000 draws, numpy.random.default_rng(0) reseeded per cell,
+resampling SPEAKERS with replacement, percentile 2.5/97.5. Same method as Part 10 (scripts_part10/part10_lib.py).
+======================================================================================================================
+
+Score files : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_{o25,q2a,q3o,af3,kimi,af2}*.csv
+Manifest    : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14_manifest_new.csv  (966 rows, 483 conflict + 483 agreement, 138 speakers)
+Join key    : clip basename <set>_<pid>_<seg_uid>.wav
+Script      : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_part14/part14_boot.py
+
+JOIN NOTE. The 966 manifest rows cover only 794 distinct clips. All 483 conflict clips are distinct, but the
+agreement arm draws on 311 distinct clips, 103 of which are reused in 2 to 6 pairs each. Scores are identical
+for every repeat of a clip, so the repeats were collapsed to one score per clip and then mapped back onto the
+966 manifest rows. That keeps the 483 + 483 pair convention already used in PART14_table2_old_vs_new.csv.
+The per arm AUCs below reproduce that table's new_conflict and new_agreement columns exactly.
+
+======================================================================================================================
+B. PER MODEL AUC BY ARM, AND POOLED
+======================================================================================================================
+
+model             arm             AUC    CI lo    CI hi     n   spk  degen
+--------------------------------------------------------------------------
+Qwen2.5-Omni      conflict     0.2218   0.1829   0.2632   483   138      0
+Qwen2.5-Omni      agreement    0.9482   0.9039   0.9828   483   138      0
+Qwen2.5-Omni      pooled       0.6343   0.5960   0.6720   966   138      0
+Qwen2-Audio       conflict     0.2280   0.1816   0.2782   483   138      0
+Qwen2-Audio       agreement    0.9478   0.9128   0.9762   483   138      0
+Qwen2-Audio       pooled       0.6277   0.5876   0.6700   966   138      0
+Qwen3-Omni-30B    conflict     0.3008   0.2454   0.3641   483   138      0
+Qwen3-Omni-30B    agreement    0.9638   0.9336   0.9864   483   138      0
+Qwen3-Omni-30B    pooled       0.6867   0.6464   0.7287   966   138      0
+Audio Flamingo 3  conflict     0.4235   0.3606   0.4880   483   138      0
+Audio Flamingo 3  agreement    0.8095   0.7447   0.8696   483   138      0
+Audio Flamingo 3  pooled       0.6283   0.5787   0.6780   966   138      0
+Kimi-Audio        conflict     0.5258   0.4501   0.5977   483   138      0
+Kimi-Audio        agreement    0.8744   0.8172   0.9223   483   138      0
+Kimi-Audio        pooled       0.7146   0.6581   0.7689   966   138      0
+Audio Flamingo 2  conflict     0.5286   0.4512   0.6015   483   138      0
+Audio Flamingo 2  agreement    0.6083   0.5126   0.6997   483   138      0
+Audio Flamingo 2  pooled       0.5678   0.4919   0.6402   966   138      0
+
+All 18 cells used 2000 usable draws, 0 degenerate.
+
+======================================================================================================================
+C. PAIRED CONFLICT MINUS AGREEMENT DELTA
+======================================================================================================================
+
+Speaker list drawn ONCE per replicate, both arms recomputed inside that draw, so the delta is paired.
+
+model              conflict  agreement    delta    CI lo    CI hi  excl 0   spk  degen
+--------------------------------------------------------------------------------------
+Qwen2.5-Omni         0.2218     0.9482  -0.7264  -0.7786  -0.6655    True   138      0
+Qwen2-Audio          0.2280     0.9478  -0.7198  -0.7689  -0.6679    True   138      0
+Qwen3-Omni-30B       0.3008     0.9638  -0.6630  -0.7192  -0.6030    True   138      0
+Audio Flamingo 3     0.4235     0.8095  -0.3860  -0.4675  -0.3018    True   138      0
+Kimi-Audio           0.5258     0.8744  -0.3486  -0.4248  -0.2795    True   138      0
+Audio Flamingo 2     0.5286     0.6083  -0.0797  -0.1488  -0.0104    True   138      0
+
+All six deltas are negative and all six 95 percent CIs exclude zero. AUC is lower in the conflict arm for
+every model. Audio Flamingo 2 has the smallest gap and the CI upper bound closest to zero, -0.0104.
+
+Robustness to the reused agreement clips. Recomputing on the 794 distinct clips (483 conflict, 311 agreement)
+moves each delta slightly further from zero and all six still exclude zero:
+  Qwen2.5-Omni -0.7429 [-0.7869, -0.6944]   Qwen2-Audio -0.7328 [-0.7780, -0.6837]
+  Qwen3-Omni-30B -0.6719 [-0.7266, -0.6105]  Audio Flamingo 3 -0.4190 [-0.4878, -0.3461]
+  Kimi-Audio -0.3678 [-0.4394, -0.3020]      Audio Flamingo 2 -0.1011 [-0.1647, -0.0384]
+The reported 966 row numbers are therefore the conservative ones.
+
+======================================================================================================================
+YES RATES ON THE NEW 483 PAIR SET
+======================================================================================================================
+
+model               conflict  agreement   pooled   >80% either arm  >80% pooled
+-------------------------------------------------------------------------------
+Qwen2.5-Omni          0.2236     0.2919   0.2578             False        False
+Qwen2-Audio           0.9400     0.8675   0.9037              True         True
+Qwen3-Omni-30B        0.3892     0.4182   0.4037             False        False
+Audio Flamingo 3      0.7039     0.6687   0.6863             False        False
+Kimi-Audio            0.8364     0.7578   0.7971              True        False
+Audio Flamingo 2      0.9710     0.9834   0.9772              True         True
+
+Yes rate is the share of clips with p_yes > 0.5, n = 966.
+The claim that Kimi-Audio and Audio Flamingo 2 answer Yes on more than 80 percent of clips no longer holds
+as stated. Audio Flamingo 2 holds easily, 0.9772 pooled. Kimi-Audio is 0.7971 pooled, above 80 percent in the
+conflict arm only (0.8364) and below it in the agreement arm (0.7578). Qwen2-Audio, which the claim does not
+name, is above 80 percent in both arms, 0.9400 and 0.8675.
+
+======================================================================================================================
+MERGE AND APPEND
+======================================================================================================================
+
+PART10_bootstrap_cis_NEWROWS.csv (64 rows) merged into bootstrap/bootstrap_cis.csv (31 rows) after an exact
+11 column header match. Existing rows verified unchanged and in original order. Then the 18 B rows and 6 C
+rows were appended. Paired rows carry the delta in the 'auc' column and say so in 'note'.
+
+Final row count of bootstrap/bootstrap_cis.csv, excluding header: 119   (31 + 64 + 24)
+Pre merge backup: /Users/chaitanyaparwatkar/Desktop/release/bootstrap/bootstrap_cis.csv.bak_pre_part14
+

@@ -1,0 +1,11 @@
+{
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt": "Based only on this transcript of what the person said, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "condition": "ad",
+ "transcripts": "/workspace/text/pitt_all_text.csv",
+ "n": 708,
+ "auc": 0.6215,
+ "median_mass": 0.9966,
+ "script": "/workspace/text_score.py",
+ "date": "2026-09-23"
+}

@@ -1,0 +1,171 @@
+PART 8 + PART 9. E-DAIC conflict-set reproducibility and validity without human raters
+written 2026-09-22 | /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/PART8_9_validity.txt
+==============================================================================================================
+
+PART 8. The E-DAIC half of the conflict construction, as px_build.py actually does it
+source: /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/scripts/audiollm/px_build.py (291 lines)
+==============================================================================================================
+The E-DAIC half takes one input feature set and one target. The input features are the raw words of each
+segment, turned into text features by TfidfVectorizer(ngram_range=(1, 2), min_df=2, sublinear_tf=True) at
+line 145, and in parallel four lexicon scalars val, nsent, npos, nneg produced at lines 137-139 by
+LX.score on the same text; nothing acoustic enters the rule. The target label is the speaker-level
+Depression_label merged from detailed_lables.csv at line 67 and carried onto every segment of that speaker
+as S["y"] at line 127, with Depression_severity carried alongside as sev. The fold scheme is
+StratifiedGroupKFold(5, shuffle=True, random_state=0) split on groups=pid at line 143, with an explicit
+speaker-leak assertion at line 144, and each fold's held-out predict_proba is written back into the
+out-of-fold vector oof at line 147, so every segment is scored by a model that never saw that speaker.
+Each segment is scored twice, therefore: once by the lexicon into (val, npos, nneg) and once by the
+out-of-fold TF-IDF logistic regression into oof in [0,1]. The eligibility gate at line 154 keeps only
+segments with speech_s >= 5, nw >= 25 and span >= 8. The exact rule that marks a segment conflict is
+lines 159-162: POSW = (val >= 5) & (npos >= 3) & (nneg == 0); NEGW = (val <= -4) & (nneg >= 2) & (npos == 0);
+CONF = ((y == 1) & (sev >= 15) & POSW) | ((y == 0) & (sev <= 4) & NEGW), i.e. a segment is conflict when a
+PHQ-8-depressed speaker with severity at least 15 produces strongly positive lexicon words, or a control
+speaker with severity at most 4 produces strongly negative lexicon words, and the mirrored pairing
+AGR = ((y == 1) & (sev >= 15) & NEGW) | ((y == 0) & (sev <= 4) & POSW) supplies the agreement partner,
+matched on span within the same speaker at lines 183-190 with a looser fallback POSW2/NEGW2 at lines 164-166.
+
+  QUOTED, the TF-IDF half (px_build.py lines 137-151, verbatim):
+    137 | sc = S.text.fillna("").map(LX.score)
+    138 | S["val"]  = [x[0] for x in sc]; S["nsent"] = [x[1] for x in sc]
+    139 | S["npos"] = [x[2] for x in sc]; S["nneg"]  = [x[3] for x in sc]
+    140 | 
+    141 | X, y, g = S.text.fillna("").tolist(), S.y.values, S.pid.values
+    142 | oof = np.zeros(len(y))
+    143 | for tr, te in StratifiedGroupKFold(5, shuffle=True, random_state=0).split(X, y, groups=g):
+    144 |     assert not (set(g[tr]) & set(g[te])), "speaker leak"
+    145 |     m = make_pipeline(TfidfVectorizer(ngram_range=(1, 2), min_df=2, sublinear_tf=True),
+    146 |                       LogisticRegression(max_iter=2000, class_weight="balanced"))
+    147 |     m.fit([X[i] for i in tr], y[tr]); oof[te] = m.predict_proba([X[i] for i in te])[:, 1]
+    148 | S["oof"] = oof
+    149 | print("TF-IDF segment-level OOF AUC (speaker-disjoint GroupKFold): %.3f" % roc_auc_score(y, oof))
+    150 | print("lexicon valence vs TF-IDF oof correlation: %.3f" % np.corrcoef(S.val, S.oof)[0, 1])
+    151 | S.to_csv(f"{OUT}/daic_segments_scored.csv", index=False)
+
+  QUOTED, the two arms of the rule (px_build.py lines 154-166, verbatim):
+    154 | E = S[(S.speech_s >= 5) & (S.nw >= 25) & (S.span >= 8)].copy()   # enough audio to score
+    155 | print("\neligible segments (>=5s speech, >=25 words, >=8s span): %d from %d speakers"
+    156 |       % (len(E), E.pid.nunique()))
+    157 | 
+    158 | # strong lexical signal, and the speaker is unambiguous on PHQ-8
+    159 | POSW = (E.val >=  5) & (E.npos >= 3) & (E.nneg == 0)
+    160 | NEGW = (E.val <= -4) & (E.nneg >= 2) & (E.npos == 0)
+    161 | CONF = ((E.y == 1) & (E.sev >= 15) & POSW) | ((E.y == 0) & (E.sev <= 4) & NEGW)
+    162 | AGR  = ((E.y == 1) & (E.sev >= 15) & NEGW) | ((E.y == 0) & (E.sev <= 4) & POSW)
+    163 | # looser mirror, used only as fallback when a speaker has no strict agreement segment
+    164 | POSW2 = (E.val >=  3) & (E.npos >= 2) & (E.npos > E.nneg)
+    165 | NEGW2 = (E.val <= -3) & (E.nneg >= 2) & (E.nneg > E.npos)
+    166 | AGR2  = ((E.y == 1) & NEGW2) | ((E.y == 0) & POSW2)
+
+  QUOTED, the interviewer / participant filter the task points at as 98-106 (px_build.py lines 96-107, verbatim):
+     96 | # ---------------------------------------------------------------- 2. interviewer filter
+     97 | # E-DAIC *_Transcript.csv is raw ASR of the room with no speaker column, so the
+     98 | # virtual interviewer's questions are interleaved with the participant's answers.
+     99 | # Rule: drop any turn whose text STARTS with a question stem or an interviewer
+    100 | # discourse marker. Also drop turns longer than 60s (malformed spanning rows).
+    101 | Q = re.compile(r"^\s*(what|how|why|where|when|who|which|do you|are you|did you|have you|"
+    102 |                r"can you|could you|would you|will you|tell me|has (there|that)|is (there|it)|"
+    103 |                r"does |i'd love to hear|that sounds|okay so|so how|and how|and what)\b", re.I)
+    104 | T["is_q"] = T.text.fillna("").map(lambda s: bool(Q.match(s)))
+    105 | n_q   = int(T.is_q.sum())
+    106 | n_bad = int(((~T.is_q) & (T.dur > 60)).sum())
+    107 | C = T[(~T.is_q) & (T.dur <= 60) & (T.nw >= 1)].copy()
+
+  NOT REPRODUCIBLE ON THIS MACHINE. The conflict RULE is written on the dq_lex valence outputs val, npos
+  and nneg (px_build.py line 12 `import dq_lex as LX`, resolved from sys.path.insert of
+  /scratch1/parwatka/pd_probing/code_clean at line 11; scored at lines 137-139; used at lines 159-162).
+  dq_lex is not on this Mac and not on the G-Drive (DISCREPANCIES.md D13). The manifest carries only its
+  OUTPUTS per segment, not the lexicon, so no text can be rescored under the identical rule. Only the
+  TF-IDF half, lines 141-149,, fully specified by public sklearn calls , is reproducible. Everything in
+  PART 9 below is therefore a NAMED, PUBLIC substitute measured AGAINST the shipped dq_lex outputs, never
+  a silent stand-in for them.
+
+==============================================================================================================
+
+PART 9. Validity checks that need no human raters
+==============================================================================================================
+
+9a. HEARD-WINDOW TEXT on the 390 manifest rows
+    manifest: /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/results/health/paradox/manifest.csv  (390 rows: 195 conflict, 195 agreement)
+    transcripts: /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/edaic_transcripts/<pid>_Transcript.csv  (275 files)
+    window rule: keep transcript turns with manifest.start <= Start_Time < manifest.start + 30.0
+    participant rule: px_build.py's own question-stem regex (lines 101-103) applied verbatim, plus its
+      companion gates dur <= 60 and nw >= 1 (line 107). Turns matching the stem are dropped as interviewer.
+    VALIDATION: heard participant words match part7_heard_window.csv row for row, 390/390 exact.
+      (full-segment participant words match 389/390; the single disagreement is a003178, pid 439,
+       205 here vs 171 in part7, a full-window end-clipping difference, not a heard-window one.)
+    heard-window participant words: median 47.0000  mean 51.2385  min 1.0000  max 174.0000
+    rows where the heard window already is the whole segment: 292/390 (0.7487)
+    unique segments behind the 390 rows: 297 (agreement partners are reused across conflict rows)
+    text written to: /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part9_heard_window_sentiment.csv
+
+9b. SENTIMENT MODEL USED
+    cardiffnlp/twitter-roberta-base-sentiment-latest, the FIRST choice in the task list, installed and run.
+    NO lexicon fallback was needed. transformers 5.5.4 + torch 2.11.0 under /usr/local/bin/python3 (3.10.2);
+    the default python3 on this Mac (3.14.6) has no torch, so the 3.10 interpreter was used.
+    id2label = {0: negative, 1: neutral, 2: positive}. Sign rule: p(positive) > p(negative) -> positive,
+    else negative. Neutral probability is ignored, so every row gets a sign (mean p_neutral = 0.2349).
+
+9c. SENTIMENT SIGN vs the manifest's dq_lex lex_direction
+    HEARD WINDOW, first 30 s (the headline)
+    conflict   n=195  agreement=0.9231  p_chance=0.5671  kappa=0.8223   [sent+lex+ 126 | sent+lex- 3 | sent-lex+ 12 | sent-lex- 54]
+    agreement  n=195  agreement=0.9487  p_chance=0.5820  kappa=0.8773   [sent+lex+ 53 | sent+lex- 6 | sent-lex+ 4 | sent-lex- 132]
+    ALL 390    n=390  agreement=0.9359  p_chance=0.5000  kappa=0.8718   [sent+lex+ 179 | sent+lex- 9 | sent-lex+ 16 | sent-lex- 186]
+
+    FULL SEGMENT TEXT, for reference
+    conflict   n=195  agreement=0.9333  p_chance=0.5671  kappa=0.8460   [sent+lex+ 127 | sent+lex- 2 | sent-lex+ 11 | sent-lex- 55]
+    agreement  n=195  agreement=0.9487  p_chance=0.5820  kappa=0.8773   [sent+lex+ 53 | sent+lex- 6 | sent-lex+ 4 | sent-lex- 132]
+    ALL 390    n=390  agreement=0.9410  p_chance=0.5000  kappa=0.8821   [sent+lex+ 180 | sent+lex- 8 | sent-lex+ 15 | sent-lex- 187]
+
+    Reading: an independent public sentiment model reproduces the sign of the unavailable dq_lex valence
+    on 0.9359 of all 390 rows from the heard window alone (kappa 0.8718). The lexicon half of the rule is
+    still NOT REPRODUCED bit-identically (D13), but its DIRECTION is not an artefact of a private lexicon.
+
+    Same-rule re-derivation. Substituting the public sentiment sign for lex_direction in the px_build arms
+    (conflict = label 1 with positive words, or label 0 with negative words) reclassifies each row:
+      all 390: same set=0.9359  kappa=0.8718   [conf/conf 180 | conf/agr 10 | agr/conf 15 | agr/agr 185]
+      manifest conflict  rows kept as conflict  by the public model: 180/195 = 0.9231
+      manifest agreement rows kept as agreement by the public model: 185/195 = 0.9487
+
+9d. PITT: fluency-classifier direction vs SPEAKING-RATE direction
+    file: /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all_segments.csv  n=708
+    rate is the feature build_ad_conflict.py deliberately excludes. Line 74 keeps only
+      FEATS = ["ttr","retrace","fillers","unintel","errors","pauses"], lines 71-73 say rate and nw are
+      "excluded on purpose: they are realised acoustically as speaking speed, so selecting on them builds
+      a rate shortcut". This check asks whether the shortcut was actually avoided.
+    medians: p_text 0.5780 | rate 1.6958 words/s. Rule: value > median -> hi, else lo.
+    RAW hi/lo coding, all 708: agreement=0.3588  p_chance=0.5000  kappa=-0.2825  [hi/hi 127 | hi/lo 227 | lo/hi 227 | lo/lo 127]
+    The two point the SAME clinical way but with opposite sign, so read it aligned as well:
+      rate AUC for the dementia label = 0.3030 (below 0.5: slower speech goes with dementia)
+      p_text AUC for the dementia label = 0.6990
+      Spearman(p_text, rate) = -0.4047
+    ALIGNED coding (slow rate mapped onto the dementia side), all 708: agreement=0.6412  kappa=0.2825
+    Subgroups, each using its OWN within-group medians so no arm is degenerate:
+      tertile  high       n=234  raw agreement=0.4017 kappa=-0.1966 | aligned agreement=0.5983 kappa=0.1966
+      tertile  low        n=234  raw agreement=0.3675 kappa=-0.2650 | aligned agreement=0.6325 kappa=0.2650
+      tertile  middle     n=240  raw agreement=0.4667 kappa=-0.0667 | aligned agreement=0.5333 kappa=0.0667
+      orig_set DROPPED    n=240  raw agreement=0.4667 kappa=-0.0667 | aligned agreement=0.5333 kappa=0.0667
+      orig_set agreement  n=322  raw agreement=0.2795 kappa=-0.4410 | aligned agreement=0.7205 kappa=0.4410
+      orig_set conflict   n=146  raw agreement=0.4247 kappa=-0.1507 | aligned agreement=0.5753 kappa=0.1507
+    Reading: excluding rate from FEATS did NOT decorrelate the selection from speaking rate. The text
+    fluency score and rate carry the same ordering with the sign flipped (Spearman -0.4047), and on the
+    322 orig_set==agreement rows the raw disagreement is strongest (aligned kappa 0.4410), i.e. the
+    agreement arm is where the rate shortcut is most nearly recovered from the content markers alone.
+
+9e. 80-ITEM BLIND RATER SHEET, HEARD-WINDOW TEXT ONLY
+    sheet: /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/rater_sheet_heard80.csv
+    key:   /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/rater_key_heard80.csv
+    columns match /Users/chaitanyaparwatkar/Desktop/release/overnight/rater_sheet.csv exactly:
+      id,dataset,label,transcript,rater1,rater2   (rater1/rater2 left blank for the human pass)
+    build: unique seg_uid within each arm (conflict 195 unique of 195, agreement 102 unique of 195),
+      40 drawn from each with numpy RandomState(0), concatenated, then permuted by the same RandomState(0)
+      so arm is not inferable from row order. ids R001..R080 assigned AFTER the shuffle.
+    transcript field = HEARD WINDOW text only (first 30 s, participant turns), never the full segment.
+    balance: {'conflict': 40, 'agreement': 40} ; label mix: {1: 55, 0: 25}
+    transcript words: median 43.5000  mean 48.3875  min 9.0000  max 162.0000
+
+==============================================================================================================
+Files written by this section
+  /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/PART8_9_validity.txt
+  /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part9_heard_window_sentiment.csv   (390 rows, per-row probabilities and signs)
+  /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/rater_sheet_heard80.csv
+  /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/rater_key_heard80.csv

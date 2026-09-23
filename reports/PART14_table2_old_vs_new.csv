@@ -1,0 +1,7 @@
+model,old_conflict,old_agreement,new_conflict,new_agreement,old_gap,new_gap,gap_change,n_conflict,n_agreement,n_speakers,source
+Qwen2.5-Omni,0.2684,0.9012,0.2218,0.9482,0.6328,0.7264,0.0936,483,483,138,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv
+Qwen2-Audio,0.307,0.9252,0.228,0.9478,0.6182,0.7198,0.1016,483,483,138,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv
+Qwen3-Omni-30B,0.3049,0.8924,0.3008,0.9638,0.5875,0.663,0.0755,483,483,138,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv
+Audio Flamingo 3,0.4709,0.7891,0.4235,0.8095,0.3182,0.386,0.0678,483,483,138,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv
+Kimi-Audio,0.5486,0.8346,0.5258,0.8744,0.286,0.3486,0.0626,483,483,138,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv
+Audio Flamingo 2,0.5022,0.569,0.5286,0.6083,0.0668,0.0797,0.0129,483,483,138,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv

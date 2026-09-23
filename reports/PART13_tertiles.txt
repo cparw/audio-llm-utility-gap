@@ -1,0 +1,278 @@
+PART 13 - MIDDLE-TERTILE COMPARISON (Pitt), plus PART 6 prep
+Written 2026-09-22. Every AUC is a rank statistic (ties at 0.5), 4 decimals, with its source file.
+Rule followed: nothing was recomputed that needed a GPU, no pods rented, nothing written outside
+/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/.
+
+================================================================================
+0. JOIN AND ROW-IDENTITY CHECK (do this before reading any number below)
+================================================================================
+Scores : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_zeroshot_scores.csv
+Labels : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all_segments.csv
+Clip list (carries the same tertile/orig_set columns, used as a cross-check):
+         /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/mf_pitt_all.csv
+
+Join key parsed from the clip basename <grp>_<session>_<start_ms>.wav, e.g. Control_002-0_3754.wav
+-> grp=Control, session=002-0, start_ms=3754.
+  708 of 708 clips parsed, 0 duplicate keys on either side, 0 unmatched rows in either direction.
+  label column agrees on 708 of 708 rows.
+
+The rerun's kept set IS the paper's set, row for row.
+Compared against /Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv (468 rows):
+  paper manifest keys 468, rerun kept keys (orig_set != DROPPED) 468, intersection 468,
+  rerun-only 0, paper-only 0.
+  conflict/agreement assignment agrees on 468 of 468 (crosstab is perfectly diagonal:
+  agreement 322 -> agreement 322, conflict 146 -> conflict 146, DROPPED 240 -> not in manifest).
+So the PART 13 rebuild reproduces build_ad_conflict.py exactly and the 708-vs-468 comparison below
+is apples to apples on the audio side. Tertile cuts recomputed empirically: 33rd/67th percentile of
+p_text over 708 = 0.4854 / 0.6879, identical to pitt_all_segments.json.
+
+Note: "middle tertile" and "DROPPED" are the same 240 rows by construction. They are printed twice
+below only because the task asked for both framings; they are not two measurements.
+
+================================================================================
+13a. QWEN2.5-OMNI ZERO SHOT, per clip
+================================================================================
+Source     : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_zeroshot_scores.csv
+Run header : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_zeroshot.json
+             Qwen/Qwen2.5-Omni-7B, bfloat16, cuda, prompt "Based only on this recording, does this
+             speaker show signs of dementia? Answer with one word, Yes or No.", n 708, auc 0.6695
+Paper cell : 0.6578, n 468, "zero shot, 30 s window"
+             /Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv line for
+             Qwen2.5-Omni,pitt,zero shot answer
+
+  subset                               n    pos    neg    AUC       vs paper 0.6578
+  -----------------------------------  ---  -----  -----  --------  ---------------
+  all 708                              708    421    287  0.6695    +0.0117
+  kept 468 (orig_set != DROPPED)       468    290    178  0.6711    +0.0133
+  discarded 240 (orig_set == DROPPED)  240    131    109  0.6665    +0.0087
+  tertile low                          234    101    133  0.6641    +0.0063
+  tertile middle (= the discarded 240) 240    131    109  0.6665    +0.0087
+  tertile high                         234    189     45  0.6437    -0.0141
+  conflict 146 (inside the kept 468)   146    101     45  0.6062    -0.0516
+  agreement 322 (inside the kept 468)  322    189    133  0.6958    +0.0380
+
+  AUC recomputed on the paper manifest's exact 468 rows = 0.6711 (same rows, same statistic).
+
+Speaker level (mean p_yes per speaker, label = max):
+  all                n_speakers 266   0.7177
+  kept 468 rows      n_speakers 228   0.7046   (228 matches the speaker count in
+                                                /Users/chaitanyaparwatkar/Desktop/release/bootstrap/bootstrap_cis.csv)
+  discarded 240 rows n_speakers 147   0.7086
+
+Two different things are mixed into the +0.0133 gap against the paper, and they must be kept apart:
+  (i)  run-to-run offset: on the IDENTICAL 468 rows this rerun gives 0.6711 where the paper's run
+       gave 0.6578, a difference of +0.0133 that has nothing to do with selection.
+  (ii) selection effect: measured inside this one run, kept 468 minus all 708 = 0.6711 - 0.6695
+       = +0.0016.
+The run-to-run offset is about eight times the selection effect.
+
+Speaker-cluster bootstrap of the selection effect (2000 draws, resampling the 266 speakers with
+replacement, seed 42, both AUCs recomputed on each draw):
+  AUC all 708   boot mean 0.6690   95% CI [0.6201, 0.7132]
+  AUC kept 468  boot mean 0.6701   95% CI [0.6173, 0.7191]
+  delta (kept 468 - all 708)  point +0.0016   boot mean +0.0011
+                              95% CI [-0.0285, +0.0332]   P(delta > 0) = 0.5285
+The selection effect on the audio zero-shot cell is not distinguishable from zero.
+
+What the selection DOES move, hard, is the text score it was built from
+(p_text column in pitt_all_segments.csv, the out-of-fold text-fluency score):
+  subset        n    pos_rate   AUC of p_text itself   median p_text
+  all 708     708     0.5946    0.6990                 0.5780
+  kept 468    468     0.6197    0.7385                 0.5868
+  DROPPED 240 240     0.5458    0.5820                 0.5780
+  low 234     234     0.4316    0.5065                 0.4041
+  middle 240  240     0.5458    0.5820                 0.5780
+  high 234    234     0.8077    0.7266                 0.8054
+Keeping only the extreme tertiles inflates the selector's OWN AUC by +0.0395 (0.7385 vs 0.6990)
+and wrecks the class balance inside each tertile (high tertile is 80.77% positive, low is 43.16%).
+The audio model does not inherit that inflation.
+
+================================================================================
+13b. PROBES - CANNOT BE SPLIT. THE PER-CLIP PREDICTIONS WERE NEVER WRITTEN.
+================================================================================
+The task asks for o25_pitt_all_*_nested_oof.csv. Those files DO NOT EXIST.
+  find /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun -name "*nested_oof*"  ->  no results.
+The pitt_all probe run emitted only per-layer aggregates, no per-clip out-of-fold column, so there
+is no way on this Mac to recompute a probe AUC restricted to the middle tertile. There is also no
+log for that run (logs/ holds only podB and podC, neither mentions pitt_all), so it was not lost in
+sync - it was never produced. Getting the split requires re-emitting the OOF vector from the pod
+that ran the probes. This is the one cell of PART 13 that is still outstanding.
+
+What DOES exist, all on the full 708 and therefore not a subset comparison:
+  /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_nested_repeats.json
+    encoder    0.7968   mean of 5 repeats, n 708, 32 points, per repeat 0.7967 0.8033 0.7907 0.7907 0.8027
+    projector  0.7632   single split,      n 708,  1 point
+    LM         0.8125   mean of 5 repeats, n 708, 29 points, per repeat 0.8117 0.8051 0.8180 0.8196 0.8081
+    answer     0.7744   mean of 5 repeats, n 708, 29 points, per repeat 0.7613 0.7876 0.7920 0.7799 0.7513
+  per-layer curves, column auc_oof:
+    /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_encoder_perlayer.csv
+      max 0.8197 at layer 27, last layer 0.8130
+    /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_proj_perlayer.csv
+      0.7704
+    /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_llm_perlayer.csv
+      max 0.8266 at stage 10, last stage 0.8093
+    /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_ans_perlayer.csv
+      max 0.8132 at stage 22, last stage 0.7875 (stage 0 is the 0.5 placeholder, excluded)
+
+  encoder, 708 vs paper:   0.7968 vs 0.7706   =  +0.0262
+  answer,  708 vs paper:   0.7744 vs 0.7636   =  +0.0108
+  Do not read either as a selection effect. They compare a different row set AND a different run,
+  and 13a showed the run-to-run offset alone is +0.0133 on identical rows.
+
+  The paper's numbers used above are from
+  /Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv:
+    Qwen2.5-Omni,pitt,encoder probe,0.7706,468 (five split nested, part10 re-run; the lookup notes it
+      supersedes omni_final 0.7761 and the single-split 0.7969)
+    Qwen2.5-Omni,pitt,answer-state probe,0.7636,468
+  FLAG: the task sheet asks me to print the answer probe beside 0.7709. 0.7709 is NOT the Pitt
+  answer-probe value in master_lookup.csv and does not appear anywhere in master/ or bootstrap/.
+  The value on file is 0.7636. Fix the task sheet or tell me where 0.7709 comes from before it
+  goes in the paper.
+
+  INCOMPLETE, DO NOT CITE - partial fine-tune OOF, the only per-clip vector that exists for the 708:
+  /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/sft_pitt_all_state.json
+  has "done": [0, 1], i.e. 2 of 5 folds, 284 of 708 clips scored (the rest are still 0.0 placeholders).
+  On those 284 only:  all 0.8196 | kept 468 rows 0.8187 | DROPPED rows 0.8177 |
+                      low 0.6739 | middle 0.8177 | high 0.8352
+  This is 2/5 of a fine-tune, the folds are not balanced across tertiles, and it is listed here only
+  so nobody re-derives it and mistakes it for a result.
+
+================================================================================
+13c. TEXT - FILE NOT PRESENT YET
+================================================================================
+/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_text.csv does not exist.
+Nothing matching *text* exists anywhere under edaic_rerun/. Still running on a pod.
+When it lands, the same join in section 0 works unchanged and the comparison cell is the paper's
+0.6629 (master_lookup.csv, Qwen2.5-Omni,pitt,transcript only, n 468,
+source overnight2/text_new/o25_pitt_text.json).
+
+================================================================================
+13d. DOES THE TERTILE SELECTION INFLATE OR DEFLATE? SIGNED DELTAS
+================================================================================
+Convention: delta = AUC on the kept 468 minus AUC on the full 708, both from the SAME run, so the
+run-to-run offset cancels. Positive = the selection INFLATES the published cell.
+
+  cell                        kept 468   all 708   delta      verdict
+  --------------------------  ---------  --------  ---------  ------------------------------------
+  Qwen2.5-Omni zero shot        0.6711    0.6695   +0.0016    INFLATES, but negligible; 95% CI
+                                                              [-0.0285, +0.0332] spans zero,
+                                                              P(delta>0) = 0.5285
+  p_text, the selector itself   0.7385    0.6990   +0.0395    INFLATES, clearly
+  encoder probe                    n/a    0.7968      n/a     NOT MEASURABLE, see 13b
+  answer probe                     n/a    0.7744      n/a     NOT MEASURABLE, see 13b
+  transcript only                  n/a       n/a      n/a     NOT MEASURABLE, file missing, see 13c
+
+Secondary deltas against the full 708, same run:
+  discarded middle 240 - all 708   0.6665 - 0.6695 = -0.0030
+  low tertile      - all 708       0.6641 - 0.6695 = -0.0054
+  high tertile     - all 708       0.6437 - 0.6695 = -0.0258
+  conflict 146     - all 708       0.6062 - 0.6695 = -0.0633
+  agreement 322    - all 708       0.6958 - 0.6695 = +0.0263
+
+CORRECTION TO PROPOSE FOR D12
+D12 currently says the Pitt 468 is "a deliberately polarised subset" and implies the Table 1 Pitt
+cells are inflated by that polarisation. The selection claim is fully confirmed - the 468 is exactly
+the extreme-tertile union, 468 of 468 rows verified against the shipped manifest, the middle third
+is discarded, and the selector's own AUC jumps +0.0395 when you keep only the extremes. But on the
+one cell that can currently be measured, the audio zero-shot, the inflation is +0.0016 with a CI
+that spans zero. The discarded middle third is not a harder subset for the audio model: it scores
+0.6665 against 0.6695 for everything.
+Suggested wording: say the selection is real and undisclosed and that it inflates the TEXT-based
+signal it was built from by +0.0395, and say that for the Qwen2.5-Omni audio zero-shot cell the
+measured inflation is +0.0016 (95% CI -0.0285 to +0.0332), i.e. the audio cell survives the
+selection almost unchanged. Do NOT write that the probe cells are inflated until the per-clip OOF
+from 13b exists - that number is not currently measurable and must not be asserted.
+The sharper polarisation effect to report is inside the kept set, not between kept and dropped:
+conflict 0.6062 vs agreement 0.6958, a spread of 0.0896, on 146 and 322 clips.
+
+================================================================================
+PART 6 PREP - make_fig1, read only, NOT RUN
+================================================================================
+There are two scripts. The one that made the figure now in the paper is the second.
+
+A. /Users/chaitanyaparwatkar/Desktop/paper1_final/make_fig1.py   (Qwen2-Audio era, 5404 bytes, 14 Sep)
+   CLI: python make_fig1.py [panel_key ...]   keys pd, mdd, pd_kcl, ad.
+        No args -> every panel whose encoder CSV exists, except pd_kcl.
+        Output: fig1_gap.pdf next to the script if no args, else fig1_gap_<keys joined by _>.pdf,
+        plus the same name .png at 220 dpi.
+   Inputs per panel, hard-coded in the PANELS list:
+        enc CSV + enc_col, optional llm CSV + llm_col, optional ans CSV + ans_col.
+        The E-DAIC panel is dict(key="mdd", enc=HERE/"edaic_encoder_perlayer.csv", enc_col="auc",
+        llm=None, ans=None, answer_audio=0.65, answer_text=None).
+   Dashed line: it is a literal scalar, the "answer_audio" field, drawn with
+        ax.hlines(p["answer_audio"], 0, xmax, ...) in a grey (0,(4,2)) dash. "answer_text" is the
+        dotted second line. Both are plain numbers in the dict - no file, no computation.
+   State right now: this script CANNOT draw an E-DAIC panel. HERE/edaic_encoder_perlayer.csv does
+        not exist (paper1_final/ holds only kcl_encoder_perlayer.csv and kcl_llm_perlayer.csv), and
+        its other root D = "/Users/chaitanyaparwatkar/Desktop/Hard drive data for paper" does not
+        exist on this Mac at all, so the ad panel is dead too. Run as is with "mdd" it exits with
+        "no panel data found".
+
+B. /Users/chaitanyaparwatkar/Desktop/release/scripts/make_fig1_omni.py   (the current one)
+   CLI: python make_fig1_omni.py OUT.pdf key[,key,...]
+        keys: pcgita neurovoz kcl edaic pitt adresso adress2020. Both args are required.
+        Writes OUT.pdf and OUT.png, and prints one summary line per panel already containing
+        "enc max ... | proj ... | llm max ... | ans max ... | zero-shot audio ... text ...".
+   Inputs per key k, all under P = "/Volumes/G-Drive Pro/paper1_local_runs/omni_final" (that volume
+   IS mounted), all read with column auc_oof:
+        omni_{k}_encoder_perlayer.csv   32 rows expected
+        omni_{k}_proj_perlayer.csv       1 row
+        omni_{k}_llm_perlayer.csv       29 rows
+        omni_{k}_ans_perlayer.csv       29 rows, stage 0 is a 0.5 placeholder and is dropped
+        omni_{k}_zeroshot_scores.csv    columns label, p_yes
+   plus TEXT["edaic"] = "/Volumes/G-Drive Pro/paper1_local_runs/omni_edaic30_text.csv" (exists).
+   Dashed line: NOT a parameter. The grey (0,(5,2)) dashed line is computed inside the script by
+        clip_auc() from omni_{k}_zeroshot_scores.csv - it ranks label against p_yes with ties at 0.5.
+        The dotted (0,(1,1.6)) line is the same function on the TEXT csv. So to put the dashed line
+        at a given value you either feed it a scores CSV whose AUC IS that value, or add an override.
+
+   Good news for the 0.8285 line: no override is needed. Running the script's own clip_auc on
+   /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv
+   returns exactly 0.8285 (n 275), matching variants/o25_full_zeroshot.json "auc": 0.8285.
+   The same function gives 0.8122 on o25_mid300_zeroshot_scores.csv and 0.7205 on
+   o25_mid30_zeroshot_scores.csv, matching the D14 table.
+
+   The full-window E-DAIC curve files are all present and already carry the auc_oof column the
+   script wants, with the row counts it wants:
+     /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv  32 rows
+     /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_proj_perlayer.csv      1 row
+     /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_llm_perlayer.csv      29 rows
+     /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_ans_perlayer.csv      29 rows, stage 0 = 0.5
+   and the same four exist with mid30 and mid300 prefixes. Whole-set probe values for the full
+   window, from variants/o25_full_nested_repeats.json: enc 0.5930, proj 0.5293, llm 0.6853,
+   ans 0.7542, n 275.
+
+   WHAT WOULD NEED TO CHANGE to point B at the full-window E-DAIC curves with a dashed line at 0.8285
+   (three edits, no new data needed):
+     1. Per-key input root. P is a single hard-coded folder and the filenames are omni_{k}_*.
+        The rerun files live in a different folder with an o25_{variant}_ prefix. Either add a
+        per-key path/prefix map, or register three new keys edaic_full / edaic_mid300 / edaic_mid30
+        pointing at edaic_rerun/variants with prefix o25_full_, o25_mid300_, o25_mid30_.
+     2. Zero-shot scores path. Point the dashed line's source at
+        variants/o25_full_zeroshot_scores.csv. The value then comes out at 0.8285 on its own.
+        Only if you want the line pinned regardless of the CSV should you add an explicit
+        dashed-value argument.
+     3. Transcript dotted line. There is NO full-window E-DAIC text CSV anywhere under edaic_rerun/,
+        so TEXT for these keys must be None or the dotted line will silently keep showing the OLD
+        30 s transcript number from omni_edaic30_text.csv and be mislabelled. Set it to None until
+        the text run lands.
+   Also add TITLE entries for the new keys, or the script raises a KeyError on TITLE[k].
+
+   FONT WARNING, worth fixing in the same pass. pdffonts on both
+   /Users/chaitanyaparwatkar/Desktop/release/paper/fig1_gap_omni.pdf and
+   /Users/chaitanyaparwatkar/Desktop/paper1_final/figures/fig1_gap.pdf reports
+     BMQQDV+DejaVuSans   Type 3   Custom   emb yes   sub yes   uni no
+   Type 3 is what IEEE PDF eXpress rejects. Add
+     matplotlib.rcParams["pdf.fonttype"] = 42
+   before the first savefig so the next fig1_gap.pdf embeds TrueType instead.
+
+   FILE NAME. The tex includes the plain name:
+     /Users/chaitanyaparwatkar/Desktop/paper1_final/AudioLLMHealthUtilityGap.tex line 36
+       \includegraphics[width=\columnwidth]{fig1_gap.pdf}
+   so the deliverable must be called fig1_gap.pdf, not fig1_gap_omni.pdf. (tex mtime is 14 Sep,
+   not today, which PART 12 is waiting on.)
+
+   BLOCKER ON THIS MAC. Neither the default python3 nor /usr/bin/python3 nor homebrew 3.11/3.12/3.13
+   has matplotlib. The only interpreter here that does is
+     /Library/Frameworks/Python.framework/Versions/3.10/bin/python3   matplotlib 3.10.7
+   Use that one to run make_fig1. I did not run it.

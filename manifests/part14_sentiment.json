@@ -1,0 +1,15 @@
+{
+ "model": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+ "n_segments": 6214,
+ "threshold": 0.7,
+ "id2label": {
+  "0": "negative",
+  "1": "neutral",
+  "2": "positive"
+ },
+ "clearly_positive": 1749,
+ "clearly_negative": 1004,
+ "source": "/Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/results/health/paradox/daic_segments_scored.csv",
+ "device": "mps",
+ "minutes": 0.4
+}
