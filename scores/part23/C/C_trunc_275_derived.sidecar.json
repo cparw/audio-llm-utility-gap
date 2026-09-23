@@ -1,0 +1,229 @@
+{
+ "what": "per-window audio actually consumed by Qwen3-Omni and AF3 on the 275 E-DAIC full windows, DERIVED from windows_full.csv lengths with the processor arithmetic; the same arithmetic reproduces all 10 measured (model, file) pairs exactly (derived_vs_measured); samples_est = round(win_dur_s*16000), so a token count can be off by 1 at a frame boundary",
+ "derived_vs_measured": [
+  {
+   "model": "q3o",
+   "pid": "300",
+   "derived": [
+    75980,
+    9877
+   ],
+   "measured": [
+    75980,
+    9877
+   ],
+   "equal": true
+  },
+  {
+   "model": "af3",
+   "pid": "300",
+   "derived": [
+    60000,
+    15000
+   ],
+   "measured": [
+    60000,
+    15000
+   ],
+   "equal": true
+  },
+  {
+   "model": "q3o",
+   "pid": "359",
+   "derived": [
+    60530,
+    7869
+   ],
+   "measured": [
+    60530,
+    7869
+   ],
+   "equal": true
+  },
+  {
+   "model": "af3",
+   "pid": "359",
+   "derived": [
+    60000,
+    15000
+   ],
+   "measured": [
+    60000,
+    15000
+   ],
+   "equal": true
+  },
+  {
+   "model": "q3o",
+   "pid": "417",
+   "derived": [
+    45149,
+    5870
+   ],
+   "measured": [
+    45149,
+    5870
+   ],
+   "equal": true
+  },
+  {
+   "model": "af3",
+   "pid": "417",
+   "derived": [
+    45150,
+    11287
+   ],
+   "measured": [
+    45150,
+    11287
+   ],
+   "equal": true
+  },
+  {
+   "model": "q3o",
+   "pid": "612",
+   "derived": [
+    28650,
+    3725
+   ],
+   "measured": [
+    28650,
+    3725
+   ],
+   "equal": true
+  },
+  {
+   "model": "af3",
+   "pid": "612",
+   "derived": [
+    28650,
+    7162
+   ],
+   "measured": [
+    28650,
+    7162
+   ],
+   "equal": true
+  },
+  {
+   "model": "q3o",
+   "pid": "716",
+   "derived": [
+    90000,
+    11700
+   ],
+   "measured": [
+    90000,
+    11700
+   ],
+   "equal": true
+  },
+  {
+   "model": "af3",
+   "pid": "716",
+   "derived": [
+    60000,
+    15000
+   ],
+   "measured": [
+    60000,
+    15000
+   ],
+   "equal": true
+  }
+ ],
+ "summary": {
+  "q3o": {
+   "n": 275,
+   "n_cut": 0,
+   "max_heard_s": 900.0,
+   "max_audio_tokens": 11700,
+   "n_over_300s": 217
+  },
+  "af3": {
+   "n": 275,
+   "n_cut": 136,
+   "cut_at_s": 600,
+   "max_heard_s": 600.0,
+   "max_audio_tokens": 15000,
+   "paper_log_warnings": 136,
+   "paper_log_multiset_match": true,
+   "heard_s_of_cut_windows": [
+    600.0
+   ],
+   "lost_s_total": 32599.2,
+   "median_lost_s_of_cut": 300.0
+  }
+ },
+ "af3_paper_log_check": {
+  "log": "<local data dir>/edaic_rerun/logs/podA/af3_full.log",
+  "warning_lines": 136,
+  "multiset_equal_to_derived_cut_windows": true
+ },
+ "why_not_all_275_on_the_pod": "authors' decision 2026-09-23 ~14:07Z: RunPod balance low, run only the few files that prove the behaviour",
+ "versions": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "librosa": "1.0.0",
+  "python": "3.12.3"
+ },
+ "sources": {
+  "windows_full.csv": {
+   "path": "manifests/edaic_windows_full.csv",
+   "sha256": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017"
+  },
+  "build_windows.py": {
+   "path": "scripts/edaic_full/build_windows.py",
+   "sha256": "a8f2597678459494b18902538678c9a156ab09d5855f2f62e90f249205488c84"
+  },
+  "tarballs": "https://dcapswoz.ict.usc.edu/wwwedaic/data/<pid>_P.tar.gz for pid 716 300 359 417 612 (sha256 in pod_tgz_sha256.txt)",
+  "build_report": "pod /workspace/edaicfull/build_report.csv: stitched vs src_dur_s max|d| 0.0000, window vs win_dur_s max|d| 0.0001, 5/5",
+  "wheel_copy": "<local data dir>/scores/part22/src/tf5170/transformers",
+  "installed_vs_wheel_sha256": {
+   "models/qwen3_omni_moe/processing_qwen3_omni_moe.py": {
+    "pod_installed": "6371b86629dec798c3334b7ca82833a0c4d5c0b65bdb042d8a209f9704fef035",
+    "wheel_copy": "6371b86629dec798c3334b7ca82833a0c4d5c0b65bdb042d8a209f9704fef035",
+    "equal": true
+   },
+   "models/qwen3_omni_moe/modeling_qwen3_omni_moe.py": {
+    "pod_installed": "1c1fc322dfa547c697576e8ad3c88b817aa382abc9db5d966755be3d9fabf7ce",
+    "wheel_copy": "1c1fc322dfa547c697576e8ad3c88b817aa382abc9db5d966755be3d9fabf7ce",
+    "equal": true
+   },
+   "models/whisper/feature_extraction_whisper.py": {
+    "pod_installed": "dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb",
+    "wheel_copy": "dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb",
+    "equal": true
+   },
+   "feature_extraction_sequence_utils.py": {
+    "pod_installed": "db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d",
+    "wheel_copy": "db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d",
+    "equal": true
+   },
+   "processing_utils.py": {
+    "pod_installed": "53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5",
+    "wheel_copy": "53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5",
+    "equal": true
+   },
+   "models/audioflamingo3/processing_audioflamingo3.py": {
+    "pod_installed": "99f026a2d7074fcabdafe2d1775386d69db7b0441374222247055c3ccb1bca2f",
+    "wheel_copy": "99f026a2d7074fcabdafe2d1775386d69db7b0441374222247055c3ccb1bca2f",
+    "equal": true
+   },
+   "models/audioflamingo3/modeling_audioflamingo3.py": {
+    "pod_installed": "d1aa0faa2d8e79c841028b7f0837cae80a66154916082f6f01c6addef89f00d9",
+    "wheel_copy": "d1aa0faa2d8e79c841028b7f0837cae80a66154916082f6f01c6addef89f00d9",
+    "equal": true
+   }
+  }
+ },
+ "command": "python3 p23c_assemble.py <pulled dir> (Mac)",
+ "scripts": {
+  "p23c_proc.py": "scripts/part23/C/p23c_proc.py",
+  "p23c_model.py": "scripts/part23/C/p23c_model.py",
+  "p23c_assemble.py": "<local data dir>/scores/part23/C/scripts/p23c_assemble.py",
+  "build_windows.py": "scripts/edaic_full/build_windows.py",
+  "dl5.sh": "<local data dir>/scores/part23/C/scripts/dl5.sh"
+ },
+ "date_utc": "2026-09-23T14:18:36Z"
+}

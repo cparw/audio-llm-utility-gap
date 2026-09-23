@@ -1,0 +1,9 @@
+id	what	value	lo	hi	n	n_spk	file	two_dp	vs_half
+q3o_full_n_cut	Qwen3-Omni E-DAIC full window: windows cut by the processor (of 275)	0			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a
+q3o_full_max_heard_s	Qwen3-Omni E-DAIC full window: longest audio actually consumed, seconds	900.0			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a
+q3o_full_max_audio_tokens	Qwen3-Omni E-DAIC full window: audio placeholder tokens for the 900 s window	11700			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a
+af3_full_cut_at_s	AF3 E-DAIC full window: processor cap, seconds (max_audio_len)	600			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a
+af3_full_n_cut	AF3 E-DAIC full window: windows cut to their first 600 s (of 275)	136			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a
+af3_full_max_audio_tokens	AF3 E-DAIC full window: audio placeholder tokens at the 600 s cap	15000			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a
+af3_full_paper_log_cut_warnings	AF3 paper run log: '[transformers] ... truncating to first 600s' lines	136			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a
+af3_716_p_yes_repro	AF3 p_yes on window 716, this pod (paper 0.9401)	0.9327			275	275	scores/part23/C/C_trunc_275_derived.csv		n/a

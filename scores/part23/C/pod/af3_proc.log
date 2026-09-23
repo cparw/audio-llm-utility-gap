@@ -1,0 +1,12 @@
+MODEL nvidia/audio-flamingo-3-hf rev 7d4bae64ee29878af6504ae6f6bb3e40492838ad tf 5.17.0 | proc AudioFlamingo3Processor | fe WhisperFeatureExtractor
+FE {"chunk_length": 30, "n_samples": 480000, "nb_max_frames": 3000, "hop_length": 160, "sampling_rate": 16000, "feature_size": 128, "n_fft": 400} | PROC {"max_audio_len": 600, "audio_token": "<sound>"} | audio_token_id 151669
+DEFAULT audio_kwargs {"sampling_rate": 16000, "return_attention_mask": true, "padding": "max_length"} | MERGED {"sampling_rate": 16000, "return_attention_mask": true, "padding": "max_length", "return_tensors": "pt", "padding_side": "left"}
+HUB preprocessor_config.json {}
+HUB processor_config.json {"processor_class": "AudioFlamingo3Processor"}
+HUB config.json audio_config {"n_window": null, "n_window_infer": null, "max_source_positions": 1500, "conv_chunksize": null, "num_mel_bins": 128, "output_dim": null}
+FILE {"pid": "612", "window_s": 286.5, "samples_in": 4584000, "audio_s_in": 286.5, "input_features_shape": [10, 128, 3000], "feature_frames": 28650, "feature_frames_if_uncut": 28650, "heard_s": 286.5, "audio_placeholder_tokens": 7162, "tokens_if_uncut": 7162, "input_ids_len": 7208, "cut": 0}
+FILE {"pid": "417", "window_s": 451.4999, "samples_in": 7223998, "audio_s_in": 451.4999, "input_features_shape": [16, 128, 3000], "feature_frames": 45150, "feature_frames_if_uncut": 45150, "heard_s": 451.5, "audio_placeholder_tokens": 11287, "tokens_if_uncut": 11287, "input_ids_len": 11333, "cut": 0}
+FILE {"pid": "359", "window_s": 605.3001, "samples_in": 9684801, "audio_s_in": 605.3001, "input_features_shape": [20, 128, 3000], "feature_frames": 60000, "feature_frames_if_uncut": 60531, "heard_s": 600.0, "audio_placeholder_tokens": 15000, "tokens_if_uncut": 15133, "input_ids_len": 15046, "cut": 1}
+FILE {"pid": "300", "window_s": 759.8001, "samples_in": 12156801, "audio_s_in": 759.8001, "input_features_shape": [20, 128, 3000], "feature_frames": 60000, "feature_frames_if_uncut": 75981, "heard_s": 600.0, "audio_placeholder_tokens": 15000, "tokens_if_uncut": 18995, "input_ids_len": 15046, "cut": 1}
+FILE {"pid": "716", "window_s": 900.0001, "samples_in": 14400000, "audio_s_in": 900.0, "input_features_shape": [20, 128, 3000], "feature_frames": 60000, "feature_frames_if_uncut": 90000, "heard_s": 600.0, "audio_placeholder_tokens": 15000, "tokens_if_uncut": 22500, "input_ids_len": 15046, "cut": 1}
+PROC_DONE af3
