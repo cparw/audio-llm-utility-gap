@@ -1,0 +1,15 @@
+SETUP_START 14:07:01
+PIP_OK tf 5.17.0 torch 2.8.0+cu128 sk 1.9.1 librosa 1.0.0 np 2.1.2 scipy 1.18.1 sf 0.14.0 acc 1.15.0 hub 1.32.0 cuda True
+HF_DONE 14:07:42
+FETCH_EXIT 0 14:12:53
+built 275 / 275   failures 0
+stitched vs src_dur_s : max|d| 0.0000  n within 0.05s 275/275
+window   vs win_dur_s : max|d| 0.0001  n within 0.05s 275/275
+native sr != windows_full.csv sr : 0
+BUILD_OK 14:18:23
+sklearn 1.9.1 numpy 2.1.2: implied vs saved fold agree 275/275; implied sizes [55, 55, 55, 55, 55] saved sizes [55, 55, 55, 55, 55]
+WHOLE_START fold 2 14:18:24
+WHOLE_EXIT 0 fold 2 15:03:55
+CONTROL_DECISION 1 27.4 15:03:55
+CTRL_START fold 2 15:03:55
+CTRL_EXIT 0 fold 2 15:18:38
