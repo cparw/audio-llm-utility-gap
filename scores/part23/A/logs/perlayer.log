@@ -1,0 +1,4 @@
+perlayer enc: n_layers 32 peak auc_oof 0.6875 @ 19  7s
+perlayer llm: n_layers 29 peak auc_oof 0.7753 @ 28  12s
+perlayer ans: n_layers 29 peak auc_oof 0.8552 @ 23  14s
+perlayer proj: n_layers 1 peak auc_oof 0.6094 @ 0  15s

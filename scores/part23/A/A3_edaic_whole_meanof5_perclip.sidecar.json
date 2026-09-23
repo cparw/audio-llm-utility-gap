@@ -1,0 +1,481 @@
+{
+ "result_file": "scores/part23/A/A3_edaic_whole_meanof5_perclip.csv",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "bootstrap": {
+  "n_draws": 2000,
+  "seed": "numpy default_rng(0), fresh per cell",
+  "unit": "speaker (one clip per speaker)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "draw_code": "rng.choice(len(uspk), size=len(uspk), replace=True)"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "dtype": "bfloat16",
+ "auc": "rank formula (probe_boot.py auc_rank)",
+ "sources": {
+  "/workspace/p23a/probe/enc_rep0.npz": {
+   "sha256_first1MB": "aed597e37416e568b6af782ea1b733fd00d12c3784593a8c211bfeb69e69bc4d",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe/enc_rep1.npz": {
+   "sha256_first1MB": "40cffc248af15ebe3376b4dfe04880bcbc6c988c95396099131092426b5f0370",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe/enc_rep2.npz": {
+   "sha256_first1MB": "2134f0d17dbdce4be4532a263f2638700993370508750e77dd985546139ad4b0",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe/enc_rep3.npz": {
+   "sha256_first1MB": "c97316f1339f395332f6ccf787d5e04dec882169da18c653b4d39d7cbb241147",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe/enc_rep4.npz": {
+   "sha256_first1MB": "c3e21effa0792138ec61a04a357e88a8c627b710f3f181833477fcf530ff3b9d",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe/proj_rep0.npz": {
+   "sha256_first1MB": "4d65268b2fd7742218266cab7253df91877c5bd6135a8138c719b0966b50eb1b",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe/proj_rep1.npz": {
+   "sha256_first1MB": "23648d88057ccf6193d54e2569a5ffb72bafa6e6e175152ad5ed824b50b71e29",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe/proj_rep2.npz": {
+   "sha256_first1MB": "9a8a8eb12cda4e936303d65a2a330d27fbe3d523b152f87c6c84db6466b61c27",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe/proj_rep3.npz": {
+   "sha256_first1MB": "a3564eb96f908edf2e5fee88b402a17c31f9c8a2154f9ae467f21e6c9ed27085",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe/proj_rep4.npz": {
+   "sha256_first1MB": "af789c777c35b30f27cff9321d88564bfa53e557f5a68c2c77680ab0aeedfa01",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe/llm_rep0.npz": {
+   "sha256_first1MB": "e6798361d31e336283e1896127bd5750daf53599f50118ba204fb66e7ed8c931",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/llm_rep1.npz": {
+   "sha256_first1MB": "0599e5c35aecddf24e48bbfe2644962a721e2a2a3b9e8df74376d011dfc7736d",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/llm_rep2.npz": {
+   "sha256_first1MB": "9aa7279c5957cd1f1f87e301cc3003fe5d1cf5f35a188fdfb2d7b4a0ab53224e",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/llm_rep3.npz": {
+   "sha256_first1MB": "4886b516e72e8980bc59ca95dfcdf5f01622587f0f6596a2e0b071030e0aa756",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/llm_rep4.npz": {
+   "sha256_first1MB": "c69f358d2f16601c5a3dad980d6cf80c9a3aa0b90bf09416efe42ab40b6de9b4",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/ans_rep0.npz": {
+   "sha256_first1MB": "48b03e4435db20629b51e3b88af2806e2148958de125538920d04d060e330196",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/ans_rep1.npz": {
+   "sha256_first1MB": "94bd2bf373f1ce1086b47cef0ac80f5ad4a6473317d64d35ddde98cbdfd1cd63",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/ans_rep2.npz": {
+   "sha256_first1MB": "dd7fcf1175362c9ccdb5b11e7e2af1fa60f9a7775bee03c4223f8726e90c7d77",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/ans_rep3.npz": {
+   "sha256_first1MB": "63ce23c0e57189b4e0fc1e022f1f9efcbd242fcbf3a3b5ac85065850d54a342c",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe/ans_rep4.npz": {
+   "sha256_first1MB": "6afbe45b565587ae46cf2906646d060c5b064bf63315bcf1928dd1966569dbe4",
+   "bytes": 6844
+  },
+  "/workspace/p23a/folds/edaic_full_groupkfold5_shuffle_rs0.csv": {
+   "sha256_first1MB": "838978c629b24570fa39600fcc2cffbe4d07d18942196beb10f7d013c95987fb",
+   "bytes": 4150
+  },
+  "/workspace/p23a/folds/edaic_full_groupkfold5_shuffle_rs1.csv": {
+   "sha256_first1MB": "9f005e42c7edd3a938027f78b21ee223e031f53f097cd9956f5686ac54a6a749",
+   "bytes": 4150
+  },
+  "/workspace/p23a/folds/edaic_full_groupkfold5_shuffle_rs2.csv": {
+   "sha256_first1MB": "7f806a02c3f967af96cece42ee73d8c0663b92a1ba54eba30eb02827d413acfc",
+   "bytes": 4150
+  },
+  "/workspace/p23a/folds/edaic_full_groupkfold5_shuffle_rs3.csv": {
+   "sha256_first1MB": "23b99947912fb847c4e316cc5dfe07d9e9ce3ca1a5f588dbc05188dd9304150d",
+   "bytes": 4150
+  },
+  "/workspace/p23a/folds/edaic_full_groupkfold5_shuffle_rs4.csv": {
+   "sha256_first1MB": "df177992a39ea2baa4b92d44ceafe02d282bf8e6de4fad2d691585e279aa4bc3",
+   "bytes": 4150
+  },
+  "/workspace/p23a/A_extract_perclip.csv": {
+   "sha256_first1MB": "c3610f3e71fb28f4271d05ed81bf4d9ed356d7d4c1df640a8529c6bfad9bed65",
+   "bytes": 62515
+  },
+  "/workspace/p23a/ref/T7b_edaic300_meanof5_perclip.csv": {
+   "sha256_first1MB": "4ec65125609317c9d119a7eb03cd3d4090fec86ff362c458f5bcc8b171c6393e",
+   "bytes": 120374
+  },
+  "/workspace/p23a/p23a_probe.py": {
+   "sha256_first1MB": "5c9d7440cb926893927a32daa3534950a441de13032564b74c553408641c08ac",
+   "bytes": 7507
+  },
+  "/workspace/p23a/ref/probe_boot.py": {
+   "sha256_first1MB": "4ecca1f8ba81b3b1c2a514416ff36ad01e48beef67142d954105003900873517",
+   "bytes": 8016
+  }
+ },
+ "command": "cd /workspace/p23a && python3 p23a_report.py item3",
+ "library_versions": {
+  "python": "3.12.3",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "pandas": "3.0.6",
+  "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+  "extract_transformers": "5.17.0",
+  "extract_torch": "2.8.0+cu128",
+  "extract_numpy": "2.1.2",
+  "extract_librosa": "1.0.0",
+  "extract_python": "3.12.3",
+  "extract_cuda": "12.8",
+  "extract_gpu": "NVIDIA H100 NVL",
+  "extract_attn": "sdpa"
+ },
+ "results": {
+  "streams": {
+   "enc": {
+    "per_repeat": [
+     0.5722778019428737,
+     0.6088154269972452,
+     0.6083079599826011,
+     0.5801797883137596,
+     0.6209946353487024
+    ],
+    "per_repeat_4dp": [
+     0.5723,
+     0.6088,
+     0.6083,
+     0.5802,
+     0.621
+    ],
+    "meanof5": 0.5981151225170365,
+    "ci": [
+     0.5267311182365152,
+     0.6671965691183561
+    ],
+    "usable": 2000,
+    "meanof5_of_4dp_rounded": 0.5981,
+    "auc_of_mean_oof_NOT_USED": 0.6058431201971872,
+    "layers_picked": [
+     [
+      31,
+      17,
+      10,
+      25,
+      25
+     ],
+     [
+      25,
+      3,
+      25,
+      9,
+      25
+     ],
+     [
+      25,
+      25,
+      25,
+      31,
+      17
+     ],
+     [
+      19,
+      17,
+      8,
+      25,
+      25
+     ],
+     [
+      25,
+      18,
+      25,
+      19,
+      25
+     ]
+    ],
+    "minus_whole_answer": -0.23848049876758004,
+    "ci_minus_whole_answer": [
+     -0.32436175626283104,
+     -0.15047018915731827
+    ],
+    "excludes_zero": "yes",
+    "ref_300s_meanof5": 0.5884,
+    "ref_300s_ci": "[0.5268, 0.6523]",
+    "ref_300s_minus_answer": -0.2394,
+    "meanof5_300s_recomputed_from_T7b": 0.588386254893432,
+    "whole_minus_300s_probe": 0.009728867623604476,
+    "ci_whole_minus_300s_probe": [
+     -0.025316415953700475,
+     0.04743401840894168
+    ]
+   },
+   "proj": {
+    "per_repeat": [
+     0.5702479338842975,
+     0.607293025953313,
+     0.5993910395824271,
+     0.5967087139335944,
+     0.5591561548499348
+    ],
+    "per_repeat_4dp": [
+     0.5702,
+     0.6073,
+     0.5994,
+     0.5967,
+     0.5592
+    ],
+    "meanof5": 0.5865593736407134,
+    "ci": [
+     0.5165975883062285,
+     0.6585340571298824
+    ],
+    "usable": 2000,
+    "meanof5_of_4dp_rounded": 0.5866,
+    "auc_of_mean_oof_NOT_USED": 0.6041757285776425,
+    "layers_picked": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    "minus_whole_answer": -0.2500362476439031,
+    "ci_minus_whole_answer": [
+     -0.3338842380952382,
+     -0.16232375948645536
+    ],
+    "excludes_zero": "yes",
+    "ref_300s_meanof5": 0.561,
+    "ref_300s_ci": "[0.4871, 0.6339]",
+    "ref_300s_minus_answer": -0.2668,
+    "meanof5_300s_recomputed_from_T7b": 0.5609975351602146,
+    "whole_minus_300s_probe": 0.025561838480498866,
+    "ci_whole_minus_300s_probe": [
+     -0.017926695375169326,
+     0.07115932258381097
+    ]
+   },
+   "llm": {
+    "per_repeat": [
+     0.7456140350877193,
+     0.743801652892562,
+     0.7480788748731333,
+     0.7374945628534145,
+     0.7435841670291431
+    ],
+    "per_repeat_4dp": [
+     0.7456,
+     0.7438,
+     0.7481,
+     0.7375,
+     0.7436
+    ],
+    "meanof5": 0.7437146585471944,
+    "ci": [
+     0.6751994206457648,
+     0.8097127623304795
+    ],
+    "usable": 2000,
+    "meanof5_of_4dp_rounded": 0.7437,
+    "auc_of_mean_oof_NOT_USED": 0.7503987240829346,
+    "layers_picked": [
+     [
+      28,
+      26,
+      28,
+      11,
+      28
+     ],
+     [
+      15,
+      11,
+      11,
+      28,
+      15
+     ],
+     [
+      23,
+      10,
+      15,
+      27,
+      28
+     ],
+     [
+      15,
+      10,
+      23,
+      28,
+      28
+     ],
+     [
+      28,
+      28,
+      15,
+      28,
+      23
+     ]
+    ],
+    "minus_whole_answer": -0.09288096273742208,
+    "ci_minus_whole_answer": [
+     -0.16093403148149338,
+     -0.025735708894878803
+    ],
+    "excludes_zero": "yes",
+    "ref_300s_meanof5": 0.7001,
+    "ref_300s_ci": "[0.6231, 0.7727]",
+    "ref_300s_minus_answer": -0.1276,
+    "meanof5_300s_recomputed_from_T7b": 0.7001014934029288,
+    "whole_minus_300s_probe": 0.04361316514426561,
+    "ci_whole_minus_300s_probe": [
+     0.0005711088848807615,
+     0.09206448019801981
+    ]
+   },
+   "ans": {
+    "per_repeat": [
+     0.8330433521821081,
+     0.8557343772654777,
+     0.8235464694794838,
+     0.83202841815282,
+     0.835218210816297
+    ],
+    "per_repeat_4dp": [
+     0.833,
+     0.8557,
+     0.8235,
+     0.832,
+     0.8352
+    ],
+    "meanof5": 0.8359141655792375,
+    "ci": [
+     0.7818876721140123,
+     0.8831752574963986
+    ],
+    "usable": 2000,
+    "meanof5_of_4dp_rounded": 0.8359,
+    "auc_of_mean_oof_NOT_USED": 0.8447150935189213,
+    "layers_picked": [
+     [
+      27,
+      21,
+      23,
+      28,
+      28
+     ],
+     [
+      27,
+      27,
+      28,
+      28,
+      27
+     ],
+     [
+      28,
+      23,
+      27,
+      28,
+      21
+     ],
+     [
+      28,
+      28,
+      24,
+      23,
+      28
+     ],
+     [
+      28,
+      27,
+      27,
+      28,
+      27
+     ]
+    ],
+    "minus_whole_answer": -0.0006814557053790304,
+    "ci_minus_whole_answer": [
+     -0.04550966749307937,
+     0.04357614671356697
+    ],
+    "excludes_zero": "no",
+    "ref_300s_meanof5": 0.7435,
+    "ref_300s_ci": "[0.6793, 0.8065]",
+    "ref_300s_minus_answer": -0.0843,
+    "meanof5_300s_recomputed_from_T7b": 0.7434826736262143,
+    "whole_minus_300s_probe": 0.09243149195302314,
+    "ci_whole_minus_300s_probe": [
+     0.049124766201991577,
+     0.13727158643595222
+    ]
+   }
+  },
+  "zero_shot_whole_auc": 0.8365956212846165,
+  "saved_folds_equal_groupkfold_on_this_stack": {
+   "rs0": true,
+   "rs1": true,
+   "rs2": true,
+   "rs3": true,
+   "rs4": true
+  }
+ },
+ "written_utc": "2026-09-23T14:20:10Z",
+ "probe": "nested: outer folds READ from folds/edaic_full_groupkfold5_shuffle_rs{0..4}.csv; inner GroupKFold(4, shuffle=True, random_state=rep) layer selection by inner OOF AUC; StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced', C=1.0); float32 features; five repeats; reported value = mean of the five per-repeat AUCs (paper convention)",
+ "probe_commands": [
+  "cd /workspace/p23a && nohup python3 p23a_probe.py probe enc > probe_enc.log 2>&1 &",
+  "cd /workspace/p23a && nohup python3 p23a_probe.py probe proj > probe_proj.log 2>&1 &",
+  "cd /workspace/p23a && nohup python3 p23a_probe.py probe llm > probe_llm.log 2>&1 &",
+  "cd /workspace/p23a && nohup python3 p23a_probe.py probe ans > probe_ans.log 2>&1 &"
+ ],
+ "states": "enc 32x1280 per-layer mean over time; proj 1x3584 mean over audio positions; llm 29x3584 mean over audio-token positions; ans 29x3584 at the first answer position"
+}

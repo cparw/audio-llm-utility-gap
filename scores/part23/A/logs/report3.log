@@ -1,0 +1,26 @@
+ITEM3 encoder      whole mean-of-5 0.5981 [0.5267, 0.6672]  (300 s 0.5884 [0.5268, 0.6523]) | minus whole answer -0.2385 [-0.3244, -0.1505] (300 s -0.2394) | per-repeat [0.5723, 0.6088, 0.6083, 0.5802, 0.621] layers [[31, 17, 10, 25, 25], [25, 3, 25, 9, 25], [25, 25, 25, 31, 17], [19, 17, 8, 25, 25], [25, 18, 25, 19, 25]]
+PASTE A3_enc_meanof5_whole: 0.5981 [0.5267, 0.6672] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.60 [0.53, 0.67] | above 0.5
+PASTE A3_enc_meanof5_minus_answer_whole: -0.2385 [-0.3244, -0.1505] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp -0.24 [-0.32, -0.15] | difference: excludes 0
+PASTE A3_enc_meanof5_whole_minus_300s: 0.0097 [-0.0253, 0.0474] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.01 [-0.03, 0.05] | difference: includes 0
+ITEM3 projector    whole mean-of-5 0.5866 [0.5166, 0.6585]  (300 s 0.5610 [0.4871, 0.6339]) | minus whole answer -0.2500 [-0.3339, -0.1623] (300 s -0.2668) | per-repeat [0.5702, 0.6073, 0.5994, 0.5967, 0.5592] layers [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+PASTE A3_proj_meanof5_whole: 0.5866 [0.5166, 0.6585] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.59 [0.52, 0.66] | above 0.5
+PASTE A3_proj_meanof5_minus_answer_whole: -0.2500 [-0.3339, -0.1623] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp -0.25 [-0.33, -0.16] | difference: excludes 0
+PASTE A3_proj_meanof5_whole_minus_300s: 0.0256 [-0.0179, 0.0712] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.03 [-0.02, 0.07] | difference: includes 0
+ITEM3 LM           whole mean-of-5 0.7437 [0.6752, 0.8097]  (300 s 0.7001 [0.6231, 0.7727]) | minus whole answer -0.0929 [-0.1609, -0.0257] (300 s -0.1276) | per-repeat [0.7456, 0.7438, 0.7481, 0.7375, 0.7436] layers [[28, 26, 28, 11, 28], [15, 11, 11, 28, 15], [23, 10, 15, 27, 28], [15, 10, 23, 28, 28], [28, 28, 15, 28, 23]]
+PASTE A3_llm_meanof5_whole: 0.7437 [0.6752, 0.8097] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.74 [0.68, 0.81] | above 0.5
+PASTE A3_llm_meanof5_minus_answer_whole: -0.0929 [-0.1609, -0.0257] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp -0.09 [-0.16, -0.03] | difference: excludes 0
+PASTE A3_llm_meanof5_whole_minus_300s: 0.0436 [0.0006, 0.0921] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.04 [0.00, 0.09] | difference: excludes 0
+ITEM3 answer state whole mean-of-5 0.8359 [0.7819, 0.8832]  (300 s 0.7435 [0.6793, 0.8065]) | minus whole answer -0.0007 [-0.0455, 0.0436] (300 s -0.0843) | per-repeat [0.833, 0.8557, 0.8235, 0.832, 0.8352] layers [[27, 21, 23, 28, 28], [27, 27, 28, 28, 27], [28, 23, 27, 28, 21], [28, 28, 24, 23, 28], [28, 27, 27, 28, 27]]
+PASTE A3_ans_meanof5_whole: 0.8359 [0.7819, 0.8832] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.84 [0.78, 0.88] | above 0.5
+PASTE A3_ans_meanof5_minus_answer_whole: -0.0007 [-0.0455, 0.0436] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp -0.00 [-0.05, 0.04] | difference: includes 0
+PASTE A3_ans_meanof5_whole_minus_300s: 0.0924 [0.0491, 0.1373] n=275 n_spk=275 scores/part23/A/A3_edaic_whole_meanof5_perclip.csv | two-dp 0.09 [0.05, 0.14] | difference: excludes 0
+PERLAYER enc: o25_whole_encoder_perlayer.csv rows 32 header ['layer', 'auc_mean', 'auc_std', 'auc_oof'] peak auc_oof 0.6875 @ 19 (300 s file peak 0.6896 @ 19)
+PERLAYER llm: o25_whole_llm_perlayer.csv rows 29 header ['stage', 'auc_mean', 'auc_std', 'auc_oof'] peak auc_oof 0.7753 @ 28 (300 s file peak 0.7630 @ 14)
+PERLAYER ans: o25_whole_ans_perlayer.csv rows 29 header ['stage', 'auc_mean', 'auc_std', 'auc_oof'] peak auc_oof 0.8552 @ 23 (300 s file peak 0.7929 @ 28)
+PERLAYER proj: o25_whole_proj_perlayer.csv rows 1 header ['stage', 'auc_mean', 'auc_std', 'auc_oof'] peak auc_oof 0.6094 @ 0 (300 s file peak 0.5895 @ 0)
+PASTE A3s_enc_best_single_stage: 0.6491 [0.5742, 0.7209] n=275 n_spk=275 scores/part23/A/A3s_edaic_whole_beststage.csv | two-dp 0.65 [0.57, 0.72] | above 0.5
+PASTE A3s_enc_best_single_stage_minus_answer: -0.1875 [-0.2777, -0.0940] n=275 n_spk=275 scores/part23/A/A3s_edaic_whole_beststage.csv | two-dp -0.19 [-0.28, -0.09] | difference: excludes 0
+PASTE A3s_llm_best_single_stage: 0.7698 [0.7020, 0.8344] n=275 n_spk=275 scores/part23/A/A3s_edaic_whole_beststage.csv | two-dp 0.77 [0.70, 0.83] | above 0.5
+PASTE A3s_llm_best_single_stage_minus_answer: -0.0668 [-0.1312, -0.0016] n=275 n_spk=275 scores/part23/A/A3s_edaic_whole_beststage.csv | two-dp -0.07 [-0.13, -0.00] | difference: excludes 0
+PASTE A3s_ans_best_single_stage: 0.8497 [0.7933, 0.8970] n=275 n_spk=275 scores/part23/A/A3s_edaic_whole_beststage.csv | two-dp 0.85 [0.79, 0.90] | above 0.5
+PASTE A3s_ans_best_single_stage_minus_answer: 0.0131 [-0.0329, 0.0567] n=275 n_spk=275 scores/part23/A/A3s_edaic_whole_beststage.csv | two-dp 0.01 [-0.03, 0.06] | difference: includes 0
