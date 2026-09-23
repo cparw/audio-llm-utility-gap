@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 547.20it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  23%|██▎       | 558/2447 [00:00<00:00, 5576.61it/s]Loading weights:  49%|████▉     | 1198/2447 [00:00<00:00, 6048.71it/s]Loading weights:  74%|███████▎  | 1803/2447 [00:00<00:00, 5490.69it/s]Loading weights:  96%|█████████▋| 2358/2447 [00:00<00:00, 5257.13it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 5398.27it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+DROPOUT_CONFIG {"audio_config.dropout": 0.0, "audio_config.attention_dropout": 0.0, "audio_config.activation_dropout": 0.0, "audio_config.encoder_layerdrop": 0.0, "text_config.attention_dropout": 0.0}
+YES=7414 NO=2308 YES_SET=[7414, 9454, 9693, 9834, 14004, 14080] NO_SET=[902, 2152, 2308, 2753, 5664, 8996]
+MODEL Qwen/Qwen2.5-Omni-7B | 468 clips, 228 speakers | folds from file /workspace/code/pitt_groupkfold5_pod.csv sizes [94, 94, 94, 93, 93] | pod GroupKFold agrees on 468/468 | SEED 2

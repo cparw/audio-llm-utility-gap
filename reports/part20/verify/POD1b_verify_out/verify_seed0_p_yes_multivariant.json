@@ -1,0 +1,296 @@
+{
+ "file": "<local data dir>/scratch/p1b/std_ft_seed0_pitt_oof.csv",
+ "meta": {
+  "key": "clip_id",
+  "score": "p_yes_multivariant",
+  "speaker": "speaker",
+  "arm": "set",
+  "fold": "fold",
+  "cols": [
+   "path",
+   "clip_id",
+   "speaker",
+   "label",
+   "set",
+   "fold",
+   "p_yes",
+   "p_yes_multivariant",
+   "answer_mass",
+   "seed",
+   "prompt"
+  ]
+ },
+ "checks": {
+  "n": 468,
+  "md5": "addb23a72c3ee2a1d98207f1feaacf7a",
+  "nan_scores": 0,
+  "score_min_max": [
+   0.02163068205884523,
+   0.9961840025138056
+  ],
+  "prompts": [
+   "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+  ],
+  "prompt_verbatim_ok": true,
+  "n_spk": 228,
+  "n_pos": 290,
+  "n_neg": 178,
+  "arm_counts": {
+   "agreement": 322,
+   "conflict": 146
+  },
+  "arm_label_counts": {
+   "agreement": {
+    "pos": 189,
+    "neg": 133
+   },
+   "conflict": {
+    "pos": 101,
+    "neg": 45
+   }
+  },
+  "arm_spk": {
+   "agreement": 175,
+   "conflict": 100
+  },
+  "arm_from_prefix_agrees": true,
+  "fold_file": "folds/pitt_groupkfold5_pod.csv",
+  "fold_file_md5": "6c611f6822a29cc422bf90ffc03f3535",
+  "fold_file_same_clips": true,
+  "fold_file_speaker_mismatch": 0,
+  "fold_col_mismatch_vs_file": 0,
+  "sidecar_prompt_ok": true,
+  "sidecar_n": 468,
+  "sidecar_n_speakers": 228,
+  "orig_same_clips": true,
+  "orig_speaker_mismatch": 0,
+  "orig_label_mismatch": 0,
+  "orig_arm_mismatch": 0,
+  "identical_scores_to_orig": 0,
+  "max_abs_diff_vs_orig": 0.8565350759161431,
+  "pearson_vs_orig": 0.8128241131136674,
+  "state_folds_done": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "state_oof_max_abs_diff_vs_csv": 0.18526949503437407
+ },
+ "cells": [
+  {
+   "id": "overall",
+   "what": "overall OOF AUC",
+   "value": 0.7989345215032932,
+   "trap": 0.7989345215032932,
+   "lo": 0.7427794895762236,
+   "hi": 0.8509895511324731,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "conflict_poolall",
+   "what": "conflict arm OOF AUC (pool all)",
+   "value": 0.5344334433443344,
+   "trap": 0.5344334433443344,
+   "lo": 0.4238886940938133,
+   "hi": 0.6455088774391708,
+   "n": 146,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "conflict_poolarm",
+   "what": "conflict arm OOF AUC (pool arm)",
+   "value": 0.5344334433443344,
+   "trap": 0.5344334433443344,
+   "lo": 0.4269125390630135,
+   "hi": 0.6502921918121254,
+   "n": 146,
+   "n_spk": 100,
+   "degenerate": 0
+  },
+  {
+   "id": "agreement_poolall",
+   "what": "agreement arm OOF AUC (pool all)",
+   "value": 0.9000278473962684,
+   "trap": 0.9000278473962684,
+   "lo": 0.858071858897558,
+   "hi": 0.9375186184089238,
+   "n": 322,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "agreement_poolarm",
+   "what": "agreement arm OOF AUC (pool arm)",
+   "value": 0.9000278473962684,
+   "trap": 0.9000278473962684,
+   "lo": 0.8593115511197211,
+   "hi": 0.9377663020061583,
+   "n": 322,
+   "n_spk": 175,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_conf_minus_agr",
+   "what": "paired conflict minus agreement (pool all)",
+   "value": -0.365594404051934,
+   "trap": null,
+   "lo": -0.4795877326237275,
+   "hi": -0.2500560478913124,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_vs_orig_overall",
+   "what": "paired this seed minus original, overall",
+   "value": 0.03165439752034094,
+   "trap": null,
+   "lo": -0.012827954175567336,
+   "hi": 0.07719946181942115,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_vs_orig_conflict",
+   "what": "paired this seed minus original, conflict arm (pool all)",
+   "value": 0.015511551155115488,
+   "trap": null,
+   "lo": -0.09192929889347044,
+   "hi": 0.12051188626949311,
+   "n": 146,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_vs_orig_agreement",
+   "what": "paired this seed minus original, agreement arm (pool all)",
+   "value": 0.040716871543939215,
+   "trap": null,
+   "lo": -0.0029795117333617474,
+   "hi": 0.08549542401226844,
+   "n": 322,
+   "n_spk": 228,
+   "degenerate": 0
+  }
+ ],
+ "sidecar": {
+  "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+  "seed": 0,
+  "order_rng": "np.random.RandomState(0*1000 + fold*10 + epoch)",
+  "torch_manual_seed": 0,
+  "clip_list": "/workspace/code/mf_pitt468_pod.csv",
+  "folds_file": "/workspace/code/pitt_groupkfold5_pod.csv",
+  "pod_groupkfold_agreement": 468,
+  "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+  "n": 468,
+  "n_speakers": 228,
+  "folds": 5,
+  "epochs": 3,
+  "lr": 0.0001,
+  "trained": "projector only (thinker.audio_tower.proj)",
+  "dropout_config": {
+   "audio_config.dropout": 0.0,
+   "audio_config.attention_dropout": 0.0,
+   "audio_config.activation_dropout": 0.0,
+   "audio_config.encoder_layerdrop": 0.0,
+   "text_config.attention_dropout": 0.0
+  },
+  "yes_id": 7414,
+  "no_id": 2308,
+  "yes_set": [
+   7414,
+   9454,
+   9693,
+   9834,
+   14004,
+   14080
+  ],
+  "no_set": [
+   902,
+   2152,
+   2308,
+   2753,
+   5664,
+   8996
+  ],
+  "loss_per_fold_epoch": {
+   "0_0": 0.5547747211979035,
+   "0_1": 0.2865068896021196,
+   "0_2": 0.160669960300712,
+   "1_0": 0.6032584377011673,
+   "1_1": 0.3651289504001485,
+   "1_2": 0.13163555044192762,
+   "2_0": 0.5939660869230003,
+   "2_1": 0.34854294820364945,
+   "2_2": 0.12180517761492454,
+   "3_0": 0.585145971313119,
+   "3_1": 0.3465129104703665,
+   "3_2": 0.138824638105308,
+   "4_0": 0.612738137771686,
+   "4_1": 0.36379969962437947,
+   "4_2": 0.15544747812673448
+  },
+  "minutes_per_fold": {
+   "0": 2.45,
+   "1": 2.44,
+   "2": 2.45,
+   "3": 2.44,
+   "4": 2.39
+  },
+  "peak_gpu_gb": 19.521,
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "sklearn": "1.9.1",
+  "numpy": "2.1.2",
+  "command": "python3 /workspace/code/std_ft_seed.py /workspace/code/mf_pitt468_pod.csv /workspace/code/pitt_groupkfold5_pod.csv 0 /workspace/scores/part20/POD1b/std_ft_seed0_pitt",
+  "date": "2026-09-23"
+ },
+ "per_fold": {
+  "0": {
+   "n": 94,
+   "auc_within_fold": 0.7868480725623582,
+   "answer_mass_min": 0.9978402256965637,
+   "answer_mass_median": 0.9994338769465685,
+   "n_answer_mass_below_half": 0
+  },
+  "1": {
+   "n": 94,
+   "auc_within_fold": 0.8794188861985472,
+   "answer_mass_min": 0.998479351401329,
+   "answer_mass_median": 0.9994309414178133,
+   "n_answer_mass_below_half": 0
+  },
+  "2": {
+   "n": 94,
+   "auc_within_fold": 0.7257824143070045,
+   "answer_mass_min": 0.9978831708431244,
+   "answer_mass_median": 0.9993072506040335,
+   "n_answer_mass_below_half": 0
+  },
+  "3": {
+   "n": 93,
+   "auc_within_fold": 0.8328460038986355,
+   "answer_mass_min": 0.9983563125133514,
+   "answer_mass_median": 0.9995971210300922,
+   "n_answer_mass_below_half": 0
+  },
+  "4": {
+   "n": 93,
+   "auc_within_fold": 0.8464439655172413,
+   "answer_mass_min": 0.9936942234635353,
+   "answer_mass_median": 0.9979472309350967,
+   "n_answer_mass_below_half": 0
+  }
+ },
+ "answer_mass": {
+  "median": 0.9993060193955898,
+  "min": 0.9936942234635353,
+  "n_below_half": 0
+ }
+}

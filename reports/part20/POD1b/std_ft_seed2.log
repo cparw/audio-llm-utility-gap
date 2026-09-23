@@ -1,0 +1,68 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 615.83it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 624/2447 [00:00<00:00, 6238.53it/s]Loading weights:  51%|█████     | 1248/2447 [00:00<00:00, 6098.60it/s]Loading weights:  76%|███████▌  | 1859/2447 [00:00<00:00, 5705.75it/s]Loading weights:  99%|█████████▉| 2433/2447 [00:00<00:00, 5514.18it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 5668.39it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+DROPOUT_CONFIG {"audio_config.dropout": 0.0, "audio_config.attention_dropout": 0.0, "audio_config.activation_dropout": 0.0, "audio_config.encoder_layerdrop": 0.0, "text_config.attention_dropout": 0.0}
+YES=7414 NO=2308 YES_SET=[7414, 9454, 9693, 9834, 14004, 14080] NO_SET=[902, 2152, 2308, 2753, 5664, 8996]
+MODEL Qwen/Qwen2.5-Omni-7B | 468 clips, 228 speakers | folds from file /workspace/code/pitt_groupkfold5_pod.csv sizes [94, 94, 94, 93, 93] | pod GroupKFold agrees on 468/468 | SEED 2
+INPUT CACHE loaded /root/pitt468_inputs.pt: 468 clips
+INPUT CACHE equals fresh processing on 3 spot-check clips (exact)
+  fold 0 ep 0 step 200 0.345 s/step
+fold 0 epoch 0 loss 0.6049 2.1 min
+  fold 0 ep 1 step 400 0.344 s/step
+  fold 0 ep 1 step 600 0.343 s/step
+fold 0 epoch 1 loss 0.6374 4.3 min
+  fold 0 ep 2 step 800 0.342 s/step
+  fold 0 ep 2 step 1000 0.342 s/step
+fold 0 epoch 2 loss 0.6004 6.4 min
+fold 0 CHECKPOINT 6.69 min, peak 19.52 GB
+  fold 1 ep 0 step 200 0.343 s/step
+fold 1 epoch 0 loss 0.6181 8.8 min
+  fold 1 ep 1 step 400 0.344 s/step
+  fold 1 ep 1 step 600 0.344 s/step
+fold 1 epoch 1 loss 0.3411 11.0 min
+  fold 1 ep 2 step 800 0.343 s/step
+  fold 1 ep 2 step 1000 0.343 s/step
+fold 1 epoch 2 loss 0.1160 13.1 min
+fold 1 CHECKPOINT 6.73 min, peak 19.521 GB
+  fold 2 ep 0 step 200 0.343 s/step
+fold 2 epoch 0 loss 0.6378 15.6 min
+  fold 2 ep 1 step 400 0.343 s/step
+  fold 2 ep 1 step 600 0.343 s/step
+fold 2 epoch 1 loss 0.5496 17.7 min
+  fold 2 ep 2 step 800 0.343 s/step
+  fold 2 ep 2 step 1000 0.343 s/step
+fold 2 epoch 2 loss 0.4125 19.8 min
+fold 2 CHECKPOINT 6.71 min, peak 19.521 GB
+  fold 3 ep 0 step 200 0.342 s/step
+fold 3 epoch 0 loss 0.6078 22.3 min
+  fold 3 ep 1 step 400 0.343 s/step
+  fold 3 ep 1 step 600 0.343 s/step
+fold 3 epoch 1 loss 0.3781 24.4 min
+  fold 3 ep 2 step 800 0.343 s/step
+  fold 3 ep 2 step 1000 0.343 s/step
+fold 3 epoch 2 loss 0.1797 26.6 min
+fold 3 CHECKPOINT 6.73 min, peak 19.521 GB
+  fold 4 ep 0 step 200 0.343 s/step
+fold 4 epoch 0 loss 0.5972 29.0 min
+  fold 4 ep 1 step 400 0.343 s/step
+  fold 4 ep 1 step 600 0.343 s/step
+fold 4 epoch 1 loss 0.3798 31.2 min
+  fold 4 ep 2 step 800 0.343 s/step
+  fold 4 ep 2 step 1000 0.343 s/step
+fold 4 epoch 2 loss 0.1575 33.3 min
+fold 4 CHECKPOINT 6.68 min, peak 19.521 GB
+WROTE /workspace/scores/part20/POD1b/std_ft_seed2_pitt_oof.csv total 33.5 min

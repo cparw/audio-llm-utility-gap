@@ -1,0 +1,72 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "seed": 0,
+ "order_rng": "np.random.RandomState(0*1000 + fold*10 + epoch)",
+ "torch_manual_seed": 0,
+ "clip_list": "/workspace/code/mf_pitt468_pod.csv",
+ "folds_file": "/workspace/code/pitt_groupkfold5_pod.csv",
+ "pod_groupkfold_agreement": 468,
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "folds": 5,
+ "epochs": 3,
+ "lr": 0.0001,
+ "trained": "projector only (thinker.audio_tower.proj)",
+ "dropout_config": {
+  "audio_config.dropout": 0.0,
+  "audio_config.attention_dropout": 0.0,
+  "audio_config.activation_dropout": 0.0,
+  "audio_config.encoder_layerdrop": 0.0,
+  "text_config.attention_dropout": 0.0
+ },
+ "yes_id": 7414,
+ "no_id": 2308,
+ "yes_set": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004,
+  14080
+ ],
+ "no_set": [
+  902,
+  2152,
+  2308,
+  2753,
+  5664,
+  8996
+ ],
+ "loss_per_fold_epoch": {
+  "0_0": 0.5547747211979035,
+  "0_1": 0.2865068896021196,
+  "0_2": 0.160669960300712,
+  "1_0": 0.6032584377011673,
+  "1_1": 0.3651289504001485,
+  "1_2": 0.13163555044192762,
+  "2_0": 0.5939660869230003,
+  "2_1": 0.34854294820364945,
+  "2_2": 0.12180517761492454,
+  "3_0": 0.585145971313119,
+  "3_1": 0.3465129104703665,
+  "3_2": 0.138824638105308,
+  "4_0": 0.612738137771686,
+  "4_1": 0.36379969962437947,
+  "4_2": 0.15544747812673448
+ },
+ "minutes_per_fold": {
+  "0": 2.45,
+  "1": 2.44,
+  "2": 2.45,
+  "3": 2.44,
+  "4": 2.39
+ },
+ "peak_gpu_gb": 19.521,
+ "transformers": "5.17.0",
+ "torch": "2.8.0+cu128",
+ "sklearn": "1.9.1",
+ "numpy": "2.1.2",
+ "command": "python3 /workspace/code/std_ft_seed.py /workspace/code/mf_pitt468_pod.csv /workspace/code/pitt_groupkfold5_pod.csv 0 /workspace/scores/part20/POD1b/std_ft_seed0_pitt",
+ "date": "2026-09-23"
+}
