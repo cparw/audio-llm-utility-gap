@@ -1,0 +1,19 @@
+zs_whole	0.8366	0.7786	0.8866
+zs_300_T7b	0.8278	0.7703	0.8822
+zs_whole_minus_300	0.0088	-0.0320	0.0510
+enc_meanof5	0.5981	0.5267	0.6672	per-rep [0.5723, 0.6088, 0.6083, 0.5802, 0.621]
+enc_minus_zs_whole	-0.2385	-0.3244	-0.1505
+proj_meanof5	0.5866	0.5166	0.6585	per-rep [0.5702, 0.6073, 0.5994, 0.5967, 0.5592]
+proj_minus_zs_whole	-0.2500	-0.3339	-0.1623
+llm_meanof5	0.7437	0.6752	0.8097	per-rep [0.7456, 0.7438, 0.7481, 0.7375, 0.7436]
+llm_minus_zs_whole	-0.0929	-0.1609	-0.0257
+ans_meanof5	0.8359	0.7819	0.8832	per-rep [0.833, 0.8557, 0.8235, 0.832, 0.8352]
+ans_minus_zs_whole	-0.0007	-0.0455	0.0436
+FT_whole_n	275	folds [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]	per-fold [0.9079, 0.8592, 0.8117, 0.4302, 0.8304]
+FT_whole_pooled	0.7931	0.7263	0.8536
+FT_whole_minus_zs_whole	-0.0435	-0.0939	0.0027
+FT_ctrl300_n	275	folds [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]	per-fold [0.9758, 0.8233, 0.8358, 0.7442, 0.8043]
+FT_ctrl300_pooled	0.8150	0.7465	0.8776
+FT_ctrl300_minus_zs_whole	-0.0216	-0.0759	0.0289
+FT_whole_minus_ctrl300	-0.0219	-0.0783	0.0356
+FT_whole_mass_min	0.0000	fold3_mass_median 0.0000
