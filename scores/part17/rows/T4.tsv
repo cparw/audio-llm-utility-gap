@@ -1,0 +1,32 @@
+id	what	value	lo	hi	n	n_spk	file
+T4_pitt_o25_enc_mean5	Qwen2.5-Omni Pitt encoder probe, mean of five per-repeat AUCs	0.7706	0.7157	0.8220	468	228	<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz
+T4_pitt_o25_enc_avgprob_NOTUSED	Qwen2.5-Omni Pitt encoder probe, AUC of averaged probabilities (NOT used)	0.7917	0.7324	0.8480	468	228	<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz
+T4_edaic_o25_llm_avgprob	Qwen2.5-Omni E-DAIC 300 s window LM probe, AUC of per-clip OOF averaged over 5 repeats	0.7088	0.6232	0.7874	275	275	scores/part16/EDAICFULL/edaic_full_perclip.csv
+T4_edaic_o25_llm_minus_answer_avgprob	Qwen2.5-Omni E-DAIC 300 s window LM probe minus zero-shot answer, paired, averaged-prob convention	-0.1190	-0.1995	-0.0478	275	275	scores/part16/EDAICFULL/edaic_full_perclip.csv
+T4_edaic_o25_enc_avgprob	Qwen2.5-Omni E-DAIC 300 s window encoder probe, AUC of per-clip OOF averaged over 5 repeats	0.5916	0.5110	0.6706	275	275	scores/part16/EDAICFULL/edaic_full_perclip.csv
+T4_edaic_o25_enc_minus_answer_avgprob	Qwen2.5-Omni E-DAIC 300 s window encoder probe minus zero-shot answer, paired, averaged-prob convention	-0.2361	-0.3272	-0.1394	275	275	scores/part16/EDAICFULL/edaic_full_perclip.csv
+T4_edaic_o25_llm_mean5_jsononly	Qwen2.5-Omni E-DAIC 300 s window LM probe, mean of five per-repeat AUCs (json per_repeat list; the per-clip repeats were later reproduced on Linux sklearn 1.9.1 in T7b: 95% CI [0.6231, 0.7727], paired minus the zero-shot answer -0.1276 [-0.1993, -0.0629])	0.7001			275	275	scores/part16/EDAICFULL/edaic_full_nested_repeats.json
+T4_edaic_o25_enc_mean5_jsononly	Qwen2.5-Omni E-DAIC 300 s window encoder probe, mean of five per-repeat AUCs (json per_repeat list; the per-clip repeats were later reproduced on Linux sklearn 1.9.1 in T7b: 95% CI [0.5268, 0.6523], paired minus the zero-shot answer -0.2394 [-0.3188, -0.1572])	0.5884			275	275	scores/part16/EDAICFULL/edaic_full_nested_repeats.json
+T4_pcgita_q3o_enc_mean5	Qwen3-Omni PC-GITA encoder probe, mean of five per-repeat AUCs	0.8969	0.8322	0.9454	1100	100	<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv
+T4_pcgita_q3o_enc_avgprob_NOTUSED	Qwen3-Omni PC-GITA encoder probe, AUC of averaged probabilities (NOT used)	0.9109	0.8452	0.9600	1100	100	<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv
+T4_pitt_q3o_enc_mean5	Qwen3-Omni Pitt encoder probe, mean of five per-repeat AUCs	0.8122	0.7613	0.8625	468	228	<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv
+T4_pitt_q3o_enc_avgprob_NOTUSED	Qwen3-Omni Pitt encoder probe, AUC of averaged probabilities (NOT used)	0.8354	0.7817	0.8877	468	228	<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv
+T4_pitt_kimi_pooled	Kimi-Audio Pitt pooled zero-shot answer AUC	0.7180	0.6585	0.7742	468	228	<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+T4_pitt_kimi_conflict	Kimi-Audio Pitt conflict zero-shot answer AUC	0.7197	0.6201	0.8147	146	100	<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+T4_pitt_kimi_agreement	Kimi-Audio Pitt agreement zero-shot answer AUC	0.7227	0.6560	0.7896	322	175	<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+T4_pitt_kimi_SUPERSEDED_overnight_pooled	Kimi-Audio SUPERSEDED overnight/kimi copy Pitt pooled zero-shot answer AUC	0.6964	0.6324	0.7575	468	228	<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv
+T4_pitt_kimi_SUPERSEDED_overnight_conflict	Kimi-Audio SUPERSEDED overnight/kimi copy Pitt conflict zero-shot answer AUC	0.7078	0.6037	0.8083	146	100	<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv
+T4_pitt_kimi_SUPERSEDED_overnight_agreement	Kimi-Audio SUPERSEDED overnight/kimi copy Pitt agreement zero-shot answer AUC	0.7014	0.6309	0.7730	322	175	<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv
+T4_pitt_af2_pooled	Audio Flamingo 2 Pitt pooled zero-shot answer AUC	0.5724	0.5066	0.6424	468	228	<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv
+T4_pitt_af2_conflict	Audio Flamingo 2 Pitt conflict zero-shot answer AUC	0.6310	0.5336	0.7260	146	100	<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv
+T4_pitt_af2_agreement	Audio Flamingo 2 Pitt agreement zero-shot answer AUC	0.5544	0.4760	0.6296	322	175	<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv
+T4_pitt_af2_SUPERSEDED_audio_pooled	Audio Flamingo 2 SUPERSEDED af2_pitt_audio Pitt pooled zero-shot answer AUC	0.5273	0.4622	0.5924	468	228	<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv
+T4_pitt_af2_SUPERSEDED_audio_conflict	Audio Flamingo 2 SUPERSEDED af2_pitt_audio Pitt conflict zero-shot answer AUC	0.6691	0.5650	0.7654	146	100	<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv
+T4_pitt_af2_SUPERSEDED_audio_agreement	Audio Flamingo 2 SUPERSEDED af2_pitt_audio Pitt agreement zero-shot answer AUC	0.4895	0.4182	0.5591	322	175	<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv
+T4_pitt_q3o_conflict_fullfit	Qwen3-Omni Pitt conflict arm answer-state probe, full-fit probe restricted to the arm	0.6394	0.5326	0.7451	146	100	<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz
+T4_pitt_q3o_agreement_fullfit	Qwen3-Omni Pitt agreement arm answer-state probe, full-fit probe restricted to the arm	0.9032	0.8627	0.9400	322	175	<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz
+T4_pitt_o25_lora	Qwen2.5-Omni Pitt LoRA fine tune out-of-fold AUC (125 tied values, ties averaged)	0.8250	0.7735	0.8729	468	228	<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv
+T4_pitt_o25_lora_plus_proj	Qwen2.5-Omni Pitt LoRA plus projector fine tune out-of-fold AUC (114 tied values, ties averaged)	0.7696	0.7135	0.8253	468	228	<local data dir>/release/omni_final/abl2_pitt_both_oof.csv
+T4_lookup_rows_before	master_lookup.csv data rows before Part 17 T4	221					<local data dir>/release/master/master_lookup.csv.bak_pre_part17
+T4_lookup_rows_after	master_lookup.csv data rows after Part 17 T4	231					<local data dir>/release/master/master_lookup.csv
+T4_lookup_stale_prefix_rows	master_lookup.csv rows whose source still starts <local data dir>/paper1_local_runs/ (after T4)	75					<local data dir>/release/master/master_lookup.csv
