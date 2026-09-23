@@ -1,0 +1,5 @@
+segments 169, speakers 88, speakers still to do 73
+20/73 speakers  113s  fails 0
+40/73 speakers  147s  fails 0
+60/73 speakers  166s  fails 0
+DONE speakers ok 73 fails 0 wavs on disk 2257  180s

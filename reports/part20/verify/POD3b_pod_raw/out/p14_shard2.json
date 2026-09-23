@@ -1,0 +1,30 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/workspace/p20/p14_distinct_manifest.csv",
+ "shard": 2,
+ "nshard": 4,
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "n": 198,
+ "window_seconds": 30.0,
+ "dtype": "bfloat16",
+ "device": "cuda",
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "torch": "2.8.0+cu128",
+ "transformers": "5.17.0",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at first answer position, single-token Yes/No variants",
+ "command": "HF_HOME=/workspace/hf WINDOW_S=30.0 python3 p20_score.py p14_distinct_manifest.csv out/p14_shard2.csv 2 4",
+ "date": "2026-09-23"
+}
