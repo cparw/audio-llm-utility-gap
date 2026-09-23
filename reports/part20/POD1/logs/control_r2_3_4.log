@@ -1,0 +1,37 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  42%|████▏     | 1020/2447 [00:00<00:00, 10145.22it/s]Loading weights:  83%|████████▎ | 2035/2447 [00:00<00:00, 9951.99it/s] Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 9198.02it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B | 468 clips, 228 speakers | YES 7414 NO 2308 YES_V [9454, 7414, 9693, 9834, 14004, 14080] NO_V [2753, 2308, 2152, 902, 8996, 5664] | weights uniform | folds [3, 4] | proj Linear 4591104
+fold 3 WEIGHT TABLE (train n=375, mean weight 1.000000):
+   label 0 conflict  n= 36 weight=1.000000 total=36.000
+   label 0 agreement n=106 weight=1.000000 total=106.000
+   label 1 conflict  n= 82 weight=1.000000 total=82.000
+   label 1 agreement n=151 weight=1.000000 total=151.000
+fold 3 epoch 0 ce 0.5905 weighted 0.5905 steps 375 2.9 min peak 21.0 GB
+fold 3 epoch 1 ce 0.3364 weighted 0.3364 steps 375 5.8 min peak 21.0 GB
+fold 3 epoch 2 ce 0.1696 weighted 0.1696 steps 375 8.7 min peak 21.0 GB
+/workspace/scores/part20/POD1/balanced_ft_pitt.py:126: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "peak_gb": torch.cuda.max_memory_allocated() / 1e9, "date": datetime.datetime.utcnow().isoformat()},
+fold 3 eval done n_test 93 9.1 min
+fold 4 WEIGHT TABLE (train n=375, mean weight 1.000000):
+   label 0 conflict  n= 42 weight=1.000000 total=42.000
+   label 0 agreement n=107 weight=1.000000 total=107.000
+   label 1 conflict  n= 66 weight=1.000000 total=66.000
+   label 1 agreement n=160 weight=1.000000 total=160.000
+fold 4 epoch 0 ce 0.6164 weighted 0.6164 steps 375 11.9 min peak 21.0 GB
+fold 4 epoch 1 ce 0.4127 weighted 0.4127 steps 375 14.8 min peak 21.0 GB
+fold 4 epoch 2 ce 0.2376 weighted 0.2376 steps 375 17.7 min peak 21.0 GB
+fold 4 eval done n_test 93 18.1 min
+PROCESS DONE folds [3, 4] 18.1 min
