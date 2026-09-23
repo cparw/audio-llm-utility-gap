@@ -1,0 +1,3 @@
+pcgita ans X (1100, 49, 2048) float32 n=1100 pos=550 spk=100 sklearn 1.9.1 numpy 2.1.2 scipy 1.18.1
+fits done 7s
+BEST pcgita ans stage 15 mean 0.896200 [0.832556,0.945203] per_repeat [0.908, 0.8902, 0.8884, 0.8869, 0.9075] 10s

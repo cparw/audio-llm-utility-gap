@@ -1,0 +1,12 @@
+[
+ {
+  "user_api": "blas",
+  "internal_api": "openblas",
+  "num_threads": 32,
+  "prefix": "libscipy_openblas",
+  "filepath": "/usr/local/lib/python3.12/dist-packages/numpy.libs/libscipy_openblas64_-ff651d7f.so",
+  "version": "0.3.27",
+  "threading_layer": "pthreads",
+  "architecture": "SkylakeX"
+ }
+]

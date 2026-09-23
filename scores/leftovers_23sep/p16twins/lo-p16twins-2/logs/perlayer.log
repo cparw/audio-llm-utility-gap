@@ -1,0 +1,3 @@
+pitt enc X (468, 32, 1280) float32 n=468 pos=290 spk=228 sklearn 1.9.1 numpy 2.1.2 scipy 1.18.1
+fits done 2s
+BEST pitt enc stage 30 mean 0.827577 [0.776522,0.876001] per_repeat [0.8311, 0.8126, 0.8259, 0.8477, 0.8206] 3s
