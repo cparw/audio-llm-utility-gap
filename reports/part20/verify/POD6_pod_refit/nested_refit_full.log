@@ -1,0 +1,6 @@
+seed 0: AUC 0.928723 layers [24, 24, 19, 24, 25]
+seed 1: AUC 0.915834 layers [19, 19, 17, 24, 27]
+seed 2: AUC 0.925291 layers [23, 18, 24, 11, 19]
+seed 3: AUC 0.912936 layers [24, 27, 24, 18, 24]
+seed 4: AUC 0.926245 layers [18, 24, 25, 25, 24]
+mean of five 0.9218056268903727
