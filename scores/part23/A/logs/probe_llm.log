@@ -1,0 +1,7 @@
+llm: (275, 29, 3584) float32  n 275 n_spk 275 pos 66
+  llm repeat 0: AUC 0.7456  layers [28, 26, 28, 11, 28]  28s
+  llm repeat 1: AUC 0.7438  layers [15, 11, 11, 28, 15]  47s
+  llm repeat 2: AUC 0.7481  layers [23, 10, 15, 27, 28]  72s
+  llm repeat 3: AUC 0.7375  layers [15, 10, 23, 28, 28]  84s
+  llm repeat 4: AUC 0.7436  layers [28, 28, 15, 28, 23]  102s
+llm DONE per_repeat [0.7456, 0.7438, 0.7481, 0.7375, 0.7436] mean-of-5 0.7437

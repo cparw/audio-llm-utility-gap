@@ -1,0 +1,120 @@
+{
+ "files": {
+  "enc": {
+   "file": "scores/part23/o25_whole_encoder_perlayer.csv",
+   "header": [
+    "layer",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "ref_header": [
+    "layer",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "n_rows": 32,
+   "peak_auc_oof": 0.6874728142670726,
+   "peak_stage": 19,
+   "peak_auc_mean": 0.7033875968992247,
+   "peak_auc_mean_stage": 19,
+   "ref_300s_peak_auc_oof": 0.6895751776134552,
+   "ref_300s_peak_stage": 19
+  },
+  "llm": {
+   "file": "scores/part23/o25_whole_llm_perlayer.csv",
+   "header": [
+    "stage",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "ref_header": [
+    "stage",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "n_rows": 29,
+   "peak_auc_oof": 0.775264607800493,
+   "peak_stage": 28,
+   "peak_auc_mean": 0.7816279069767442,
+   "peak_auc_mean_stage": 28,
+   "ref_300s_peak_auc_oof": 0.7630129041612296,
+   "ref_300s_peak_stage": 14
+  },
+  "ans": {
+   "file": "scores/part23/o25_whole_ans_perlayer.csv",
+   "header": [
+    "stage",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "ref_header": [
+    "stage",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "n_rows": 29,
+   "peak_auc_oof": 0.8552269102508337,
+   "peak_stage": 23,
+   "peak_auc_mean": 0.8572093023255813,
+   "peak_auc_mean_stage": 23,
+   "ref_300s_peak_auc_oof": 0.792880962737422,
+   "ref_300s_peak_stage": 28
+  },
+  "proj": {
+   "file": "scores/part23/o25_whole_proj_perlayer.csv",
+   "header": [
+    "stage",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "ref_header": [
+    "stage",
+    "auc_mean",
+    "auc_std",
+    "auc_oof"
+   ],
+   "n_rows": 1,
+   "peak_auc_oof": 0.6093953892996955,
+   "peak_stage": 0,
+   "peak_auc_mean": 0.6119224806201551,
+   "peak_auc_mean_stage": 0,
+   "ref_300s_peak_auc_oof": 0.5895316804407713,
+   "ref_300s_peak_stage": 0
+  }
+ },
+ "method": "part16/EDAICFULL/perlayer.py layer_curve verbatim: GroupKFold(n_splits=5) by speaker (no shuffle), StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced', C=1.0) per stage; auc_mean/auc_std over the 5 test folds, auc_oof on pooled OOF",
+ "command": "cd /workspace/p23a && nohup python3 p23a_probe.py perlayer > perlayer.log 2>&1 &",
+ "n": 275,
+ "n_speakers": 275,
+ "sources": {
+  "/workspace/p23a/A_extract_perclip.csv": "c3610f3e71fb28f4271d05ed81bf4d9ed356d7d4c1df640a8529c6bfad9bed65",
+  "/workspace/p23a/p23a_probe.py": "5c9d7440cb926893927a32daa3534950a441de13032564b74c553408641c08ac",
+  "/workspace/p23a/ref/perlayer.py": "03688322188157c0fc8d0981ea964dfd2865d20657b5d29589a41d717bf587f9"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "library_versions": {
+  "python": "3.12.3",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "pandas": "3.0.6",
+  "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+  "extract_transformers": "5.17.0",
+  "extract_torch": "2.8.0+cu128",
+  "extract_numpy": "2.1.2",
+  "extract_librosa": "1.0.0",
+  "extract_python": "3.12.3",
+  "extract_cuda": "12.8",
+  "extract_gpu": "NVIDIA H100 NVL",
+  "extract_attn": "sdpa"
+ }
+}

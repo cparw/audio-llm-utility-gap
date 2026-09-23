@@ -1,0 +1,7 @@
+ans: (275, 29, 3584) float32  n 275 n_spk 275 pos 66
+  ans repeat 0: AUC 0.8330  layers [27, 21, 23, 28, 28]  28s
+  ans repeat 1: AUC 0.8557  layers [27, 27, 28, 28, 27]  47s
+  ans repeat 2: AUC 0.8235  layers [28, 23, 27, 28, 21]  72s
+  ans repeat 3: AUC 0.8320  layers [28, 28, 24, 23, 28]  84s
+  ans repeat 4: AUC 0.8352  layers [28, 27, 27, 28, 27]  102s
+ans DONE per_repeat [0.833, 0.8557, 0.8235, 0.832, 0.8352] mean-of-5 0.8359

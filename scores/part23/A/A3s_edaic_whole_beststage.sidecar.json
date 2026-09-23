@@ -1,0 +1,104 @@
+{
+ "result_file": "scores/part23/A/A3s_edaic_whole_beststage.csv",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "bootstrap": {
+  "n_draws": 2000,
+  "seed": "numpy default_rng(0), fresh per cell",
+  "unit": "speaker (one clip per speaker)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "draw_code": "rng.choice(len(uspk), size=len(uspk), replace=True)"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "dtype": "bfloat16",
+ "auc": "rank formula (probe_boot.py auc_rank)",
+ "sources": {
+  "/workspace/p23a/probe/fixed_enc.npz": {
+   "sha256_first1MB": "ee0ef46122de0bc857335c42eb8dd85f8aeed1766955f6714af13c0cbefc0477",
+   "bytes": 353792
+  },
+  "/workspace/p23a/probe/fixed_llm.npz": {
+   "sha256_first1MB": "e4d0d4bbe387929e80edec09f121ef737fd6164b6eebe8e7c420f5a881927a9c",
+   "bytes": 320672
+  },
+  "/workspace/p23a/probe/fixed_ans.npz": {
+   "sha256_first1MB": "493b0a798f8fa8bc3e902eecf5fb072ad340a72de1c30034a8c00d380babec90",
+   "bytes": 320672
+  },
+  "/workspace/p23a/p23a_probe.py": {
+   "sha256_first1MB": "5c9d7440cb926893927a32daa3534950a441de13032564b74c553408641c08ac",
+   "bytes": 7507
+  }
+ },
+ "command": "cd /workspace/p23a && python3 p23a_report.py item3",
+ "library_versions": {
+  "python": "3.12.3",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "pandas": "3.0.6",
+  "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+  "extract_transformers": "5.17.0",
+  "extract_torch": "2.8.0+cu128",
+  "extract_numpy": "2.1.2",
+  "extract_librosa": "1.0.0",
+  "extract_python": "3.12.3",
+  "extract_cuda": "12.8",
+  "extract_gpu": "NVIDIA H100 NVL",
+  "extract_attn": "sdpa"
+ },
+ "results": {
+  "enc": {
+   "best_stage": 25,
+   "meanof5": 0.6491373060751051,
+   "ci": [
+    0.5741917590712116,
+    0.7208716055265453
+   ],
+   "minus_whole_answer": -0.1874583152095114,
+   "ci_minus": [
+    -0.27767962197443224,
+    -0.09402782331810469
+   ]
+  },
+  "llm": {
+   "best_stage": 28,
+   "meanof5": 0.7697984630998985,
+   "ci": [
+    0.7020083218227823,
+    0.8344295330502877
+   ],
+   "minus_whole_answer": -0.06679715818471799,
+   "ci_minus": [
+    -0.13120427220183856,
+    -0.0016227762803234765
+   ]
+  },
+  "ans": {
+   "best_stage": 27,
+   "meanof5": 0.849688270262433,
+   "ci": [
+    0.7933444528323899,
+    0.8970207397126053
+   ],
+   "minus_whole_answer": 0.013092648977816479,
+   "ci_minus": [
+    -0.03293782672540385,
+    0.05670566393026399
+   ]
+  }
+ },
+ "written_utc": "2026-09-23T14:20:19Z",
+ "note": "SUPPLEMENT, not the paper convention: each single stage probed on the same five saved outer splits with no inner selection; the best stage is picked on the reported AUC itself, so the value is optimistic.",
+ "probe_commands": [
+  "cd /workspace/p23a && nohup python3 p23a_probe.py fixed enc > fixed_enc.log 2>&1 &",
+  "cd /workspace/p23a && nohup python3 p23a_probe.py fixed llm > fixed_llm.log 2>&1 &",
+  "cd /workspace/p23a && nohup python3 p23a_probe.py fixed ans > fixed_ans.log 2>&1 &"
+ ]
+}
