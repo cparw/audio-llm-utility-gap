@@ -1,0 +1,433 @@
+{
+ "date": "2026-09-20",
+ "run": "v2 (third direction definition added)",
+ "script": "/Users/chaitanyaparwatkar/Desktop/release/scripts/part10_readout_direction_v2.py",
+ "previous_script": "/Users/chaitanyaparwatkar/Desktop/release/scripts/part10_readout_direction.py",
+ "previous_log_kept": "/Users/chaitanyaparwatkar/Desktop/release/omni/readout_direction.log",
+ "this_log": "/Users/chaitanyaparwatkar/Desktop/release/omni/readout_direction_v2.log",
+ "previous_outputs_kept": {
+  "csv": "/Users/chaitanyaparwatkar/Desktop/release/omni/readout_direction_v1.csv",
+  "json": "/Users/chaitanyaparwatkar/Desktop/release/omni/readout_direction_v1.json"
+ },
+ "python": "3.10.2",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "state_paths": {
+  "pitt": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_pitt_states.npz",
+  "edaic": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_edaic_states.npz"
+ },
+ "scores_paths": {
+  "pitt": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_pitt_zeroshot_scores.csv",
+  "edaic": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_edaic_zeroshot_scores.csv"
+ },
+ "readout_path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/omni25_readout.pt",
+ "yes_token_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_token_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "norm_type": "Qwen2_5OmniRMSNorm",
+ "norm_eps": 1e-06,
+ "features": "ans[:, -1, :], the final LM stage at the first answer position",
+ "norm_handling": "The LAST entry of hidden_states is ALREADY through the final RMSNorm, so the states are used AS SAVED with no extra norm. This was established in run 1 and re-verified here by reproducing the stored p_yes from the final-stage state through the Yes/No lm_head rows under both conventions. As-saved reproduces the stored p_yes far better than applying RMSNorm a second time; see per-dataset norm_checks for the numbers. The verdict is unchanged from run 1.",
+ "direction_definitions": {
+  "d_plain": "mean over the 5 Yes lm_head rows minus the mean over the 5 No lm_head rows. Unweighted. This is what run 1 used.",
+  "d_top": "the single Yes lm_head row with the highest mean mass minus the single No lm_head row with the highest mean mass.",
+  "d_weighted": "sum_i w_yes_i * yes_row_i minus sum_j w_no_j * no_row_j. THE NEW ONE, primary for this run when it passes the gate."
+ },
+ "d_weighted_weighting_rule": "In words: for every clip in the dataset, take the final-stage answer state as saved, multiply it by the 10 Yes/No lm_head rows to get 10 logits, and softmax those 10 logits AMONG THEMSELVES. The full-vocabulary softmax is not available because state @ lm_head_full.T was not saved, so the softmax is renormalised WITHIN the 10 Yes/No rows. That is exactly the renormalisation the scorer's p_yes uses, so the weights live on the same scale as the reported p_yes. Average each of the 10 probabilities over all clips in that dataset to get the raw mean mass per variant id. Then divide the 5 Yes masses by their sum so the Yes weights add to 1, and separately divide the 5 No masses by their sum so the No weights add to 1. d_weighted is the Yes-weight-weighted sum of the Yes lm_head rows minus the No-weight-weighted sum of the No lm_head rows. The weights are computed per dataset, from that dataset's own clips. The raw mean masses and the normalised weights are both recorded per dataset below, at 4 decimals and at full precision, so the rule is auditable.",
+ "p_yes_convention": "p_yes = sum(exp(logit_yes_ids)) / (sum(exp(logit_yes_ids)) + sum(exp(logit_no_ids))), i.e. the Yes half of the same 10-way softmax",
+ "gate": {
+  "rule": "a definition PASSES if |projection AUC - zero-shot AUC| <= 0.01, where the projection AUC is the AUC of states . d and the zero-shot AUC is computed from that dataset's own per-clip scores file",
+  "tolerance": 0.01,
+  "reference_source": "roc_auc_score(label, p_yes) read from o25_<tag>_zeroshot_scores.csv",
+  "hardcoded": false,
+  "primary_rule": "d_weighted is used as the primary direction if it passes. If it does not, the fallback is the first of d_plain, d_top that passes, and the fallback is named explicitly in fallback_note and in the CSV column direction_used."
+ },
+ "probe_settings": {
+  "model": "sklearn LogisticRegression",
+  "max_iter": 2000,
+  "class_weight": "balanced",
+  "solver": "lbfgs (default)",
+  "C": 1.0,
+  "scaler": "StandardScaler fit inside the training fold only",
+  "cv": "GroupKFold(n_splits=5) grouped by speaker",
+  "scoring": "out of fold",
+  "features": "ans[:, -1, :], the final LM stage at the first answer position",
+  "w_raw": "coef_ / StandardScaler.scale_, averaged over the 5 folds"
+ },
+ "random_floor": {
+  "n_directions": 1000,
+  "seed": 0,
+  "dim": 3584,
+  "statistic": "mean absolute cosine with the chosen d"
+ },
+ "csv_column_notes": {
+  "direction_used": "which of the three definitions was used for the probe columns",
+  "auc_d": "projection AUC of the CHOSEN direction",
+  "auc_probe_without_d": "OUT OF FOLD: per training fold, w_perp = w_fold - (w_fold.d/d.d) d, projected on that fold's held-out speakers, standardised WITHIN the fold, then pooled. CHANGED FROM RUN 1, deliberately and stated here: run 1 pooled the RAW per-fold projections. A bare dot product drops the StandardScaler mean and the logistic intercept, so every fold's projection carries its own offset and scale; pooling the raw values mixes incomparable scales and the AUC collapses towards chance. The matched control added in this run proves the collapse is the pooling and not the removal of d: computed the same raw-pooled way with d KEPT IN, Pitt reads 0.4685 against 0.4692 with d removed. Both the raw-pooled value and the mean of the 5 per-fold AUCs, each with its d-kept control, are in every dataset's readout_removal_detail block, so run 1's number is still directly comparable. The in-sample version is kept as auc_probe_without_d_insample; at p=3584 >> n it is perfectly separable and reads 1.0000, so it measures separability, not residual signal.",
+  "cosine": "cosine(w_raw, chosen d), w_raw averaged over the 5 outer folds",
+  "ci_lo/ci_hi": "2.5 and 97.5 percentiles of the speaker bootstrap of that cosine",
+  "delta_plain/delta_top/delta_weighted": "sanity delta for each definition: projection AUC minus the zero-shot AUC from that dataset's own per-clip file"
+ },
+ "blas_note": "numpy is built on Apple Accelerate, which raises spurious divide/overflow/invalid FPU status flags on matmul. Run 1 checked matmul against np.einsum and an explicit elementwise-sum reference: agreement to 0.0, and the same flags fire on random data. Results are unaffected; the flags are suppressed.",
+ "differences_from_run_1": [
+  "d_weighted, the mass-weighted direction, is added and is the primary direction here.",
+  "Pitt reaches the probe for the first time: it failed the gate in run 1 under d_plain (delta +0.0188) and passes here under d_weighted (delta +0.0031).",
+  "auc_probe_without_d is now standardised within the fold before pooling, with a matched d-kept control. See csv_column_notes. Run 1's raw-pooled convention is kept alongside it in readout_removal_detail, so nothing from run 1 is lost or silently overwritten.",
+  "The norm verdict is unchanged and re-verified: states are used AS SAVED, no extra norm."
+ ],
+ "pcgita": "NOT AVAILABLE: no o25 state file was re-extracted for PC-GITA. Skipped, as in run 1.",
+ "datasets": [
+  {
+   "dataset": "pitt",
+   "direction_used": "d_weighted",
+   "gate_overall": "PASS",
+   "fallback_note": "",
+   "state_path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_pitt_states.npz",
+   "scores_path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_pitt_zeroshot_scores.csv",
+   "n": 468,
+   "n_speakers": 228,
+   "n_positive": 290,
+   "norm_verdict": "as_saved_no_norm",
+   "norm_checks": {
+    "as_saved_no_norm": {
+     "mean_abs_err": 0.0057,
+     "max_abs_err": 0.0245,
+     "pearson_r": 0.9968,
+     "auc": 0.6609
+    },
+    "rmsnorm_applied": {
+     "mean_abs_err": 0.1539,
+     "max_abs_err": 0.3465,
+     "pearson_r": 0.9817,
+     "auc": 0.6863
+    }
+   },
+   "auc_zeroshot_file": 0.6578,
+   "gate_tolerance": 0.01,
+   "auc_exact_logodds": 0.6609,
+   "delta_exact_logodds": 0.0031,
+   "directions": {
+    "d_plain": {
+     "norm": 0.5625,
+     "cos_with_d_plain": 1.0,
+     "proj_auc": 0.6766,
+     "delta": 0.0188,
+     "spearman_vs_exact_logodds": 0.9936,
+     "gate": "FAIL"
+    },
+    "d_top": {
+     "norm": 0.6025,
+     "cos_with_d_plain": 0.862,
+     "proj_auc": 0.6609,
+     "delta": 0.0031,
+     "spearman_vs_exact_logodds": 1.0,
+     "gate": "PASS"
+    },
+    "d_weighted": {
+     "norm": 0.6022,
+     "cos_with_d_plain": 0.8633,
+     "proj_auc": 0.6608,
+     "delta": 0.0031,
+     "spearman_vs_exact_logodds": 1.0,
+     "gate": "PASS"
+    }
+   },
+   "gate_passed_by": [
+    "d_top",
+    "d_weighted"
+   ],
+   "cos_d_top_d_weighted": 1.0,
+   "cos_d_plain_d_weighted": 0.8633,
+   "top_yes_id": 9454,
+   "top_no_id": 2753,
+   "mean_mass_yes_ids": {
+    "7414": 0.0,
+    "9454": 0.3492,
+    "9693": 0.0015,
+    "9834": 0.0,
+    "14004": 0.0
+   },
+   "mean_mass_no_ids": {
+    "902": 0.0,
+    "2152": 0.0015,
+    "2308": 0.0,
+    "2753": 0.6477,
+    "8996": 0.0
+   },
+   "mean_mass_yes_ids_full_precision": {
+    "7414": 9.989419981351915e-06,
+    "9454": 0.34920271421889687,
+    "9693": 0.0014577933993185532,
+    "9834": 4.116451936515885e-06,
+    "14004": 8.017574848221832e-06
+   },
+   "mean_mass_no_ids_full_precision": {
+    "902": 9.237686559789365e-06,
+    "2152": 0.001509281484991647,
+    "2308": 3.3830317926140756e-05,
+    "2753": 0.6477158188942698,
+    "8996": 4.920055127112514e-05
+   },
+   "weights_yes_normalised": {
+    "7414": 0.0,
+    "9454": 0.9958,
+    "9693": 0.0042,
+    "9834": 0.0,
+    "14004": 0.0
+   },
+   "weights_no_normalised": {
+    "902": 0.0,
+    "2152": 0.0023,
+    "2308": 0.0001,
+    "2753": 0.9975,
+    "8996": 0.0001
+   },
+   "weights_yes_normalised_full_precision": {
+    "7414": 2.848564227722152e-05,
+    "9454": 0.9957798969353278,
+    "9693": 0.004157016259663068,
+    "9834": 1.1738396977388668e-05,
+    "14004": 2.286276575453255e-05
+   },
+   "weights_no_normalised_full_precision": {
+    "902": 1.4226766450034456e-05,
+    "2152": 0.002324412617310859,
+    "2308": 5.210135989682171e-05,
+    "2753": 0.9975334865238928,
+    "8996": 7.5772732449498e-05
+   },
+   "auc_probe_oof": 0.7709,
+   "auc_d": 0.6608,
+   "cosine_w_d": -0.0109,
+   "cosine_random_mean_abs": 0.0135,
+   "cosine_over_random_floor": 0.801,
+   "w_raw_norm": 26.1713,
+   "auc_probe_without_d_outoffold": 0.7662,
+   "auc_probe_without_d_insample": 1.0,
+   "auc_wraw_insample": 1.0,
+   "readout_removal_detail": {
+    "d_removed_raw_pooled": 0.4692,
+    "d_kept_raw_pooled_control": 0.4685,
+    "d_removed_standardised_within_fold_pooled": 0.7662,
+    "d_kept_standardised_within_fold_pooled_control": 0.765,
+    "d_removed_mean_of_per_fold_aucs": 0.7941,
+    "d_kept_mean_of_per_fold_aucs_control": 0.7914,
+    "per_fold_auc_d_removed": [
+     0.7922,
+     0.7956,
+     0.8539,
+     0.7653,
+     0.7633
+    ],
+    "per_fold_auc_d_kept_control": [
+     0.7886,
+     0.7918,
+     0.8504,
+     0.7632,
+     0.7628
+    ]
+   },
+   "bootstrap": {
+    "draws": 2000,
+    "seed": 0,
+    "unit": "speaker",
+    "refit_per_draw": true,
+    "valid_draws": 2000,
+    "mean": -0.0074,
+    "ci_lo": -0.0235,
+    "ci_hi": 0.0097
+   }
+  },
+  {
+   "dataset": "edaic",
+   "direction_used": "d_weighted",
+   "gate_overall": "PASS",
+   "fallback_note": "",
+   "state_path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_edaic_states.npz",
+   "scores_path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_edaic_zeroshot_scores.csv",
+   "n": 275,
+   "n_speakers": 275,
+   "n_positive": 66,
+   "norm_verdict": "as_saved_no_norm",
+   "norm_checks": {
+    "as_saved_no_norm": {
+     "mean_abs_err": 0.0022,
+     "max_abs_err": 0.0102,
+     "pearson_r": 0.9996,
+     "auc": 0.666
+    },
+    "rmsnorm_applied": {
+     "mean_abs_err": 0.0436,
+     "max_abs_err": 0.3964,
+     "pearson_r": 0.9951,
+     "auc": 0.6719
+    }
+   },
+   "auc_zeroshot_file": 0.662,
+   "gate_tolerance": 0.01,
+   "auc_exact_logodds": 0.666,
+   "delta_exact_logodds": 0.004,
+   "directions": {
+    "d_plain": {
+     "norm": 0.5625,
+     "cos_with_d_plain": 1.0,
+     "proj_auc": 0.666,
+     "delta": 0.004,
+     "spearman_vs_exact_logodds": 0.997,
+     "gate": "PASS"
+    },
+    "d_top": {
+     "norm": 0.6025,
+     "cos_with_d_plain": 0.862,
+     "proj_auc": 0.6661,
+     "delta": 0.0041,
+     "spearman_vs_exact_logodds": 1.0,
+     "gate": "PASS"
+    },
+    "d_weighted": {
+     "norm": 0.6022,
+     "cos_with_d_plain": 0.863,
+     "proj_auc": 0.666,
+     "delta": 0.004,
+     "spearman_vs_exact_logodds": 1.0,
+     "gate": "PASS"
+    }
+   },
+   "gate_passed_by": [
+    "d_plain",
+    "d_top",
+    "d_weighted"
+   ],
+   "cos_d_top_d_weighted": 1.0,
+   "cos_d_plain_d_weighted": 0.863,
+   "top_yes_id": 9454,
+   "top_no_id": 2753,
+   "mean_mass_yes_ids": {
+    "7414": 0.0,
+    "9454": 0.1189,
+    "9693": 0.0004,
+    "9834": 0.0,
+    "14004": 0.0
+   },
+   "mean_mass_no_ids": {
+    "902": 0.0,
+    "2152": 0.0016,
+    "2308": 0.0,
+    "2753": 0.8789,
+    "8996": 0.0001
+   },
+   "mean_mass_yes_ids_full_precision": {
+    "7414": 3.778168411284484e-06,
+    "9454": 0.11887386784890747,
+    "9693": 0.0004128931642575701,
+    "9834": 1.1203039502078731e-06,
+    "14004": 3.5285955656522034e-06
+   },
+   "mean_mass_no_ids_full_precision": {
+    "902": 1.0025352592909967e-05,
+    "2152": 0.0016404848775706013,
+    "2308": 4.5680244955795614e-05,
+    "2753": 0.8789210295401854,
+    "8996": 8.759190360334831e-05
+   },
+   "weights_yes_normalised": {
+    "7414": 0.0,
+    "9454": 0.9965,
+    "9693": 0.0035,
+    "9834": 0.0,
+    "14004": 0.0
+   },
+   "weights_no_normalised": {
+    "902": 0.0,
+    "2152": 0.0019,
+    "2308": 0.0001,
+    "2753": 0.998,
+    "8996": 0.0001
+   },
+   "weights_yes_normalised_full_precision": {
+    "7414": 3.1670752794456674e-05,
+    "9454": 0.9964682545963354,
+    "9693": 0.0034611049355729386,
+    "9834": 9.391023797593032e-06,
+    "14004": 2.957869149972422e-05
+   },
+   "weights_no_normalised_full_precision": {
+    "902": 1.1383328962477685e-05,
+    "2152": 0.0018626954858986862,
+    "2308": 5.186782715114958e-05,
+    "2753": 0.9979745967609329,
+    "8996": 9.945659705492043e-05
+   },
+   "auc_probe_oof": 0.6543,
+   "auc_d": 0.666,
+   "cosine_w_d": 0.0194,
+   "cosine_random_mean_abs": 0.0135,
+   "cosine_over_random_floor": 1.429,
+   "w_raw_norm": 14.7934,
+   "auc_probe_without_d_outoffold": 0.6478,
+   "auc_probe_without_d_insample": 1.0,
+   "auc_wraw_insample": 1.0,
+   "readout_removal_detail": {
+    "d_removed_raw_pooled": 0.5336,
+    "d_kept_raw_pooled_control": 0.5383,
+    "d_removed_standardised_within_fold_pooled": 0.6478,
+    "d_kept_standardised_within_fold_pooled_control": 0.6534,
+    "d_removed_mean_of_per_fold_aucs": 0.645,
+    "d_kept_mean_of_per_fold_aucs_control": 0.653,
+    "per_fold_auc_d_removed": [
+     0.688,
+     0.5749,
+     0.6904,
+     0.6725,
+     0.5993
+    ],
+    "per_fold_auc_d_kept_control": [
+     0.686,
+     0.5821,
+     0.6935,
+     0.6829,
+     0.6202
+    ]
+   },
+   "bootstrap": {
+    "draws": 2000,
+    "seed": 0,
+    "unit": "speaker",
+    "refit_per_draw": true,
+    "valid_draws": 2000,
+    "mean": 0.0158,
+    "ci_lo": -0.0029,
+    "ci_hi": 0.0345
+   },
+   "gate_reference_note": "run 1 recorded that a brief quoted 0.6290 as the E-DAIC zero-shot AUC, but 0.6290 is the Qwen3-Omni-30B number in q3o_edaic_zeroshot.json. The Qwen2.5-Omni-7B per-clip file o25_edaic_zeroshot_scores.csv gives the value used here. As in run 1, the gate reference is read from that file and never hardcoded."
+  }
+ ],
+ "supersedes": {
+  "superseded_value": 0.7843,
+  "superseded_label": "Pitt answer-position probe at the FINAL layer, Qwen2.5-Omni",
+  "superseded_source": "/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pitt_ans_perlayer.csv, last row (stage 28), column auc_oof",
+  "superseded_cited_at": "overnight2/paper_vs_omni_v2.csv row 79, 'Sec 4.4, probe on the answer state achieves 0.80 at the final layer'",
+  "also_superseded": {
+   "value": 0.796,
+   "label": "max auc_oof over the 29 stages of omni_pitt_ans_perlayer.csv",
+   "cited_at": "overnight2/paper_vs_omni_v2.csv row 60, \"Sec 4.2, 'the answer state itself achieves 0.80'\""
+  },
+  "authoritative_value": 0.7709,
+  "authoritative_source": "/Users/chaitanyaparwatkar/Desktop/release/omni/readout_direction.csv, row dataset=pitt, column auc_probe; states from overnight2/part10/o25_pitt_states.npz",
+  "authoritative_definition": "out-of-fold AUC of a LogisticRegression probe on ans[:, -1, :], the final LM stage at the first answer position, GroupKFold(5) by speaker, StandardScaler fit inside the training fold only",
+  "why": "0.7843 and 0.7960 are single-split per-layer values read off a per-layer sweep; 0.7709 is the part10 out-of-fold estimate on the same final-layer answer state, and is the estimator the paper now quotes everywhere.",
+  "paper_effect": "Sections 4.2 and 4.4 both state 0.77 for the answer-position probe at the final layer.",
+  "date": "2026-09-20",
+  "note": "Nothing under omni_final was modified. This block records the supersession only."
+ }
+}
