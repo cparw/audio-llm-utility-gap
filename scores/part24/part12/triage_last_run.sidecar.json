@@ -1,0 +1,446 @@
+{
+ "result": "hand triage of the MISMATCH rows of Part 12 run AudioLLMHealthUtilityGap_20260923_063842",
+ "per_row_csv": "scores/part24/part12/triage_last_run.csv",
+ "n": 20,
+ "triage_counts": {
+  "MISPAIRING": 16,
+  "REAL": 2,
+  "MISPAIRING (file copy)": 2
+ },
+ "command": "/usr/local/bin/python3 triage_verify.py",
+ "seed": "numpy default_rng(0), fresh per cell",
+ "bootstrap": "2000 draws, idx = rng.choice(S, size=S, replace=True) over sorted unique speakers, 2.5/97.5 percentiles, paired = same idx, one-class draws skipped",
+ "auc": "sklearn.metrics.roc_auc_score",
+ "model_id": "none run here (reads saved per-clip scores)",
+ "gpu": "none (Mac CPU)",
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "sklearn": "1.7.2"
+ },
+ "inputs_sha256_first1mb": {
+  "<local data dir>/release/omni_final/omnisft_edaic_oof.csv": "e03a15d118376af1ed6a3b51d90526646de886bf307f1c93766a82d3f5211611",
+  "<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f",
+  "<local data dir>/release/edaic_rerun/variants/sft_full_oof.csv": "b520dfc84bd45064e66c0a7a63fd39230a9e37b646d7bc0764dbe886efc70c1f",
+  "<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+  "<local data dir>/release/omni_final/omnisft_pitt_oof.csv": "fd715b2a5ec64118aa2e1a7d9b3e9c20b928b97fac67680b285e036d1c1550d2",
+  "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+  "<local data dir>/release/omni_final/omnisft_adresso_oof.csv": "f2cf92a44d64841d28d9e5baa6401baedbf8549081b38bd727afffa67066a41d",
+  "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+  "<local data dir>/release/omni_final/omnisft_adress2020_oof.csv": "8f3c58b0bc117bf6cf105610ef90154d4124d6bd99926da2e6be3955ca964e00",
+  "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_kcl_oof.csv": "8e9dd3f1460c06bda79e85e124656735f734c58ae682cec2733dc1fd0b40fc82",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_neurovoz_oof.csv": "6b83d202c23e31671889226c39252b8fe53772354622f69c52aca8fc17ebc110",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_pcgita_oof.csv": "a06273048a22a8c8525cd7babd4ea96919dfc9ce826eb8ad8a6cb09914444997",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_edaicfull_oof.csv": "fbadd00ab4c7c83ae154d1e40884f07d84ba28b19ba3df9e59b344df6e36580d",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_edaic30_oof.csv": "8d67a62491d4dd8b5ed1d7ece77dfc8f5afc330ddf6b7fb7d8bb5506bd2547cc",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_pitt_oof.csv": "27bee080d35d02d30cf5b7a990c2e4c04108824110d20bdb50e852f9277ad853",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_adresso_oof.csv": "874facf0ced52e8911b0eb3dfe7f38a3418649e3bb5ec3094b090e66c031ed17",
+  "<local data dir>/release/scores/part20/POD6/A_language_saliency/A_tfidf_adress2020_oof.csv": "a54d539291051ac84a6e38d3872d0653a89c0316c75607c818bf18f1df8618ae",
+  "<local data dir>/release/edaic_rerun/part16/M7_perclip/pcgita.csv": "7633772d9c82b9c9b631d1c1849bc8d443153a19f4e0a6167f1e7c6ebdfb7995",
+  "<local data dir>/release/omni_final/omni_pcgita_nested_repeats.json": "json",
+  "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv": "f05009f50479d215b5c7c9797ee13b39db4241d79dd891aaba899a6c88e0d607",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_zeroshot_scores.csv": "800767343844138ad67a6f8ee01d8142d10db7d413e29d7a6ac6fa338c1b08cf",
+  "<local data dir>/release/edaic_rerun/part16/POD4/channel_norm_neurovoz.csv": "1ced828ab6e396225ad4d5183b7e2023324ae1cb390b6683af6fc1b7ef5a6212",
+  "<local data dir>/release/scores/part20/POD6/B_neurovoz_matched/B_encprobe_nested5_nvmatched_oof.csv": "51647e459f1c58691f15534b03a0d9d3ec8a3e4c1dfeea1b1065acfc7cb06a05",
+  "<local data dir>/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_pairs.csv": "803b5470d5ea35cd12a4e2b1012fa622a0ddf45c248856cb346b899698b2e6c4",
+  "<local data dir>/release/scores/part20/POD6/B_neurovoz_matched/B_zeroshot_nvmatched.csv": "20035d45b639b9b6814b94eaac0fe4286f6eb846a60429426301b8433115ba71",
+  "<local data dir>/release/edaic_rerun/part16/POD1/p14_o25_1a_joined.csv": "7d6a614d1e06c2ecc6f50bc8c4a47390319972337c84d77ae55cc626a80c8754",
+  "<local data dir>/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv": "dc482629d4cb28ba33025b5221f38dbb398927724a35d14941f37cfd45883793",
+  "<local data dir>/release/scores/part20/POD3c/p14_q3o_text.csv": "096b9c92402dbbe0a4e201604a5bb7e16708382580175c74ee64322260e96a80",
+  "<local data dir>/release/scores/part20/POD3b/sst2_pairs_o25_audio.csv": "7252949fbb5e8daa3b61b36341767211f6dfd5ed5d29474ff59b0df186ad6b66",
+  "~/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/config.json": "f85f5a078951471e32d6ce5dd169acf619e3480c83daf195e5016ef3eb89b1a9",
+  "<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_params.json": "json",
+  "<local data dir>/release/edaic_rerun/pitt_all_segments.csv": "e7b37bc0581b3964ede6ab0f8e0f141cff4f02f7e885e78386bcd0debe0bc482",
+  "<local data dir>/release/overnight2/part3/af3_pitt.csv": "675eab0366cb0506ee8fcec01b623e587278dd7251613325d96ee12e19909c4f",
+  "<local data dir>/release/overnight2/part10/af3_pitt.csv": "c421d9884331e0fa4e7db745041cd06b63dd2f6708f53cf12f37477fe77dd23b"
+ },
+ "cells": {
+  "gain_edaic30": {
+   "name": "E-DAIC first 30 s: projector FT minus zero shot",
+   "value": -0.053682760620559766,
+   "lo": -0.12213079117984738,
+   "hi": 0.015197706506654163,
+   "usable": 2000,
+   "n": 275,
+   "n_spk": 275,
+   "ft": 0.6083442076265043,
+   "zs": 0.6620269682470641
+  },
+  "gain_edaicfull": {
+   "name": "E-DAIC full window: projector FT minus zero shot",
+   "value": -0.18634913730607516,
+   "lo": -0.26962465201465197,
+   "hi": -0.10979770518702947,
+   "usable": 2000,
+   "n": 275,
+   "n_spk": 275,
+   "ft": 0.6421270117442367,
+   "zs": 0.8284761490503119
+  },
+  "gain_pitt": {
+   "name": "pitt: projector FT minus zero shot",
+   "value": 0.10951181712514524,
+   "lo": 0.04541749774549659,
+   "hi": 0.1728238051550943,
+   "usable": 2000,
+   "n": 468,
+   "n_spk": 228,
+   "ft": 0.7672801239829523,
+   "zs": 0.6577683068578071
+  },
+  "gain_adresso": {
+   "name": "adresso: projector FT minus zero shot",
+   "value": 0.2095509622238061,
+   "lo": 0.12938243308983835,
+   "hi": 0.28674672933358264,
+   "usable": 2000,
+   "n": 237,
+   "n_spk": 237,
+   "ft": 0.8245901639344261,
+   "zs": 0.61503920171062
+  },
+  "gain_adress2020": {
+   "name": "adress2020: projector FT minus zero shot",
+   "value": 0.14431295200525973,
+   "lo": 0.04895805776014106,
+   "hi": 0.2369567901234568,
+   "usable": 2000,
+   "n": 156,
+   "n_spk": 156,
+   "ft": 0.7684089414858646,
+   "zs": 0.6240959894806049
+  },
+  "tfidf_kcl": {
+   "name": "TF-IDF word LR kcl",
+   "value": 0.43154761904761907,
+   "lo": 0.25595063025210085,
+   "hi": 0.6286961722488037,
+   "usable": 2000,
+   "n": 37,
+   "n_spk": 37
+  },
+  "tfidf_neurovoz": {
+   "name": "TF-IDF word LR neurovoz",
+   "value": 0.5814234211433916,
+   "lo": 0.5421893835058569,
+   "hi": 0.6206387582942401,
+   "usable": 2000,
+   "n": 1270,
+   "n_spk": 107
+  },
+  "tfidf_pcgita": {
+   "name": "TF-IDF word LR pcgita",
+   "value": 0.619576859504132,
+   "lo": 0.5700374834356696,
+   "hi": 0.668078873989627,
+   "usable": 2000,
+   "n": 1100,
+   "n_spk": 100
+  },
+  "tfidf_edaicfull": {
+   "name": "TF-IDF word LR edaicfull",
+   "value": 0.6777584457010294,
+   "lo": 0.597347233032336,
+   "hi": 0.7549459930313589,
+   "usable": 2000,
+   "n": 275,
+   "n_spk": 275
+  },
+  "tfidf_edaic30": {
+   "name": "TF-IDF word LR edaic30",
+   "value": 0.48441351312164704,
+   "lo": 0.402769116109563,
+   "hi": 0.56241549682713,
+   "usable": 2000,
+   "n": 275,
+   "n_spk": 275
+  },
+  "tfidf_pitt": {
+   "name": "TF-IDF word LR pitt",
+   "value": 0.8353157690817511,
+   "lo": 0.7864873037857802,
+   "hi": 0.8862106723536967,
+   "usable": 2000,
+   "n": 468,
+   "n_spk": 228
+  },
+  "tfidf_adresso": {
+   "name": "TF-IDF word LR adresso",
+   "value": 0.8471133285816108,
+   "lo": 0.7960508161371885,
+   "hi": 0.8921638941143653,
+   "usable": 2000,
+   "n": 237,
+   "n_spk": 237
+  },
+  "tfidf_adress2020": {
+   "name": "TF-IDF word LR adress2020",
+   "value": 0.9253780407626562,
+   "lo": 0.8866156964490165,
+   "hi": 0.9587484734925201,
+   "usable": 2000,
+   "n": 156,
+   "n_spk": 156
+  },
+  "delta_pcgita": {
+   "name": "PC-GITA Delta, single split probe minus zero shot",
+   "value": 0.34538677685950425,
+   "lo": 0.26363164315908605,
+   "hi": 0.42747673948462256,
+   "usable": 2000,
+   "n": 1100,
+   "n_spk": 100,
+   "probe": 0.9088644628099174,
+   "zs": 0.5634776859504131,
+   "probe_mean5_json": 0.8941,
+   "delta_mean5_point": 0.33062231404958686
+  },
+  "delta_pitt": {
+   "name": "Pitt Delta, mean of 5 repeat probe AUCs minus zero shot",
+   "value": 0.11280123982952339,
+   "lo": 0.04550149479611408,
+   "hi": 0.1768100605302148,
+   "usable": 2000,
+   "n": 468,
+   "n_spk": 228,
+   "probe": 0.7705695466873305,
+   "zs": 0.6577683068578071
+  },
+  "q3o_pcgita_zs_shipped": {
+   "name": "Qwen3-Omni PC-GITA zero shot (shipped)",
+   "value": 0.5967206611570248,
+   "lo": 0.5239535961808512,
+   "hi": 0.6618733721512647,
+   "usable": 2000,
+   "n": 1100,
+   "n_spk": 100
+  },
+  "q3o_pcgita_zs_pod3": {
+   "name": "Qwen3-Omni PC-GITA zero shot (pod3)",
+   "value": 0.6015404958677686,
+   "lo": 0.5303907178723626,
+   "hi": 0.6674188892351118,
+   "usable": 2000,
+   "n": 1100,
+   "n_spk": 100
+  },
+  "nv_5feat_after": {
+   "name": "NeuroVoz five channel features after normalisation",
+   "value": 0.6024603688568316,
+   "lo": 0.5479183541853261,
+   "hi": 0.6580330955490713,
+   "usable": 2000,
+   "n": 1270,
+   "n_spk": 107
+  },
+  "nv_5feat_before": {
+   "name": "NeuroVoz five channel features before normalisation",
+   "value": 0.7977316768768501,
+   "lo": 0.7247518463972635,
+   "hi": 0.8610928561702559,
+   "usable": 2000,
+   "n": 1270,
+   "n_spk": 107
+  },
+  "nvm_enc": {
+   "name": "NeuroVoz matched encoder probe, mean of 5 seeds",
+   "value": 0.8985816533924595,
+   "lo": 0.8429651673553534,
+   "hi": 0.9428485412573152,
+   "usable": 2000,
+   "n": 907,
+   "n_spk": 76,
+   "n_pairs_file": 38
+  },
+  "nvm_zs": {
+   "name": "NeuroVoz matched zero shot",
+   "value": 0.6281860528439867,
+   "lo": 0.5583984098020588,
+   "hi": 0.698501869263965,
+   "usable": 2000,
+   "n": 907,
+   "n_spk": 76
+  },
+  "o25t_conf": {
+   "name": "Qwen2.5-Omni transcript, conflict 483",
+   "value": 0.14978066327425865,
+   "lo": 0.11309219358834663,
+   "hi": 0.18867861454580095,
+   "usable": 2000,
+   "n": 483,
+   "n_spk": 138
+  },
+  "o25t_agr483": {
+   "name": "Qwen2.5-Omni transcript, agreement 483 rows",
+   "value": 0.9596244955255308,
+   "lo": 0.9305849101229896,
+   "hi": 0.982335812416036,
+   "usable": 2000,
+   "n": 483,
+   "n_spk": 138
+  },
+  "o25t_agr311": {
+   "name": "Qwen2.5-Omni transcript, agreement 311 distinct",
+   "value": 0.9620494240059458,
+   "lo": 0.934488731540365,
+   "hi": 0.9822039105028112,
+   "usable": 2000,
+   "n": 311,
+   "n_spk": 138
+  },
+  "q3ot_conf": {
+   "name": "Qwen3-Omni transcript, conflict 483",
+   "value": 0.22428496227408318,
+   "lo": 0.17567670125086302,
+   "hi": 0.27422703505644674,
+   "usable": 2000,
+   "n": 483,
+   "n_spk": 138
+  },
+  "q3ot_agr483": {
+   "name": "Qwen3-Omni transcript, agreement 483 rows",
+   "value": 0.9470082470608878,
+   "lo": 0.9130581378113736,
+   "hi": 0.975711706715578,
+   "usable": 2000,
+   "n": 483,
+   "n_spk": 138
+  },
+  "q3ot_agr311": {
+   "name": "Qwen3-Omni transcript, agreement 311 distinct",
+   "value": 0.9522946859903382,
+   "lo": 0.9249386313275202,
+   "hi": 0.9749757659547419,
+   "usable": 2000,
+   "n": 311,
+   "n_spk": 138,
+   "n_rows_check": 311
+  },
+  "o25a_conf": {
+   "name": "Qwen2.5-Omni AUDIO, conflict 483 (look-alike check)",
+   "value": 0.22177575013160206,
+   "lo": 0.1828646149784432,
+   "hi": 0.2632112160440995,
+   "usable": 2000,
+   "n": 483,
+   "n_spk": 138
+  },
+  "o25a_agr483": {
+   "name": "Qwen2.5-Omni AUDIO, agreement 483 (look-alike check)",
+   "value": 0.9481663449728023,
+   "lo": 0.9038819299212365,
+   "hi": 0.9827866513474888,
+   "usable": 2000,
+   "n": 483,
+   "n_spk": 138
+  },
+  "q3oa_conf": {
+   "name": "Qwen3-Omni AUDIO, conflict 483",
+   "value": 0.30075451833655026,
+   "lo": 0.24541840607781334,
+   "hi": 0.36412393684799244,
+   "usable": 2000,
+   "n": 483,
+   "n_spk": 138
+  },
+  "sst2_conf": {
+   "name": "SST-2 pairs, Qwen2.5-Omni audio, conflict",
+   "value": 0.46194420276582104,
+   "lo": 0.41653697927373423,
+   "hi": 0.5102493846117782,
+   "usable": 2000,
+   "n": 1334,
+   "n_spk": 162,
+   "n_pairs": 1334
+  },
+  "sst2_gap_distinct": {
+   "name": "SST-2 pairs, agreement (distinct segments) minus conflict",
+   "value": 0.39342553232089517,
+   "lo": 0.3409733792909971,
+   "hi": 0.44204601371955055,
+   "usable": 2000,
+   "n": 2133,
+   "n_spk": 162
+  },
+  "sst2_gap_all": {
+   "name": "SST-2 pairs, agreement (all rows) minus conflict",
+   "value": 0.3696910202399487,
+   "lo": 0.30732686686819416,
+   "hi": 0.4269286085719596,
+   "usable": 2000,
+   "n": 2668,
+   "n_spk": 162
+  },
+  "params": {
+   "name": "trainable parameters",
+   "lora_arith": 5046272,
+   "lora_json": 5046272,
+   "proj_arith": 4591104,
+   "proj_json": 4591104
+  },
+  "rate_708": {
+   "name": "speaking rate alone, all 708 segments, direction free",
+   "value": 0.6970130848237562,
+   "lo": 0.6406826443981289,
+   "hi": 0.7494691997472906,
+   "usable": 2000,
+   "n": 708,
+   "n_spk": 266,
+   "raw": 0.30298691517624377,
+   "builder_comment": [
+    "# into the conflict arm (caught by the validity battery at AUC 0.92)."
+   ]
+  },
+  "rate_468": {
+   "name": "speaking rate alone, kept 468 segments, direction free",
+   "value": 0.7082332429290972,
+   "lo": 0.6387165150531878,
+   "hi": 0.7687988069116111,
+   "usable": 2000,
+   "n": 468,
+   "n_spk": 228,
+   "raw": 0.29176675707090277,
+   "n_kept": 468
+  },
+  "af3_part3_conflict": {
+   "name": "AF3 Pitt conflict (part3 copy)",
+   "value": 0.616941694169417,
+   "lo": 0.5187574078195253,
+   "hi": 0.7208645016976274,
+   "usable": 2000,
+   "n": 146,
+   "n_spk": 100
+  },
+  "af3_part3_agreement": {
+   "name": "AF3 Pitt agreement (part3 copy)",
+   "value": 0.582209491983928,
+   "lo": 0.5080047772127028,
+   "hi": 0.6528474272621662,
+   "usable": 2000,
+   "n": 322,
+   "n_spk": 175
+  },
+  "af3_part10_conflict": {
+   "name": "AF3 Pitt conflict (part10 copy)",
+   "value": 0.6074807480748076,
+   "lo": 0.5063107837528604,
+   "hi": 0.7128714613192494,
+   "usable": 2000,
+   "n": 146,
+   "n_spk": 100
+  },
+  "af3_part10_agreement": {
+   "name": "AF3 Pitt agreement (part10 copy)",
+   "value": 0.5854716155468034,
+   "lo": 0.5144020389556301,
+   "hi": 0.655419169155412,
+   "usable": 2000,
+   "n": 322,
+   "n_spk": 175
+  }
+ },
+ "date_utc": "2026-09-23T21:50:46Z"
+}

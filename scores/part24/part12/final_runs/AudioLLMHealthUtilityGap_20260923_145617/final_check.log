@@ -1,0 +1,339 @@
+=== final_check.sh  2026-09-23 14:56:17 PDT
+run folder: <local data dir>/part24/part12/final_runs/AudioLLMHealthUtilityGap_20260923_145617
+tex: <local data dir>/paper1_final/AudioLLMHealthUtilityGap.tex
+     mtime 2026-09-23 06:38:06  size 41424 B  sha256 1e17f74389f274a8
+
+=== 1. Part 12 (run_part12.sh; takes a few minutes)
+run_part12.sh exit 0 after 4 s; full stdout in part12_stdout.log
+  work dir: <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617
+  added basis: sentences in AudioLLMHealthUtilityGap.tex not in pasted_tex_dryrun.tex
+Part 12 status counts by group
+status       MATCH  MISMATCH  UNMATCHED
+order_group                            
+added_23sep     28        16         32
+other           78         3         10
+red              7         1          1
+
+MISMATCH rows: 20
+- tex line 77 [added_23sep]  paper 0.43 to 0.62  |  matcher file 0.5246 to 0.7634  (o25_kcl_text.csv ; o25_neurovoz_text.json ; o25_pcgita_text.)
+    text: A logistic regression on transcript word counts, speaker-disjoint, reaches 0.43 to 0.62 on the Parkinson's sets, 0.68 on E-DAIC and 0.84 to 0.93 on the Alzheimer's sets.
+    TRIAGE: MISPAIRING
+    why: Matcher paired the range with the Qwen2.5-Omni transcript ANSWER set. The sentence is about the word regression: range 0.43 to 0.62. Wording note: the model is TF-IDF weighted words, not raw word counts.
+    recomputed: MDVR-KCL 0.4315 [0.2560, 0.6287] n=37 spk=37; NeuroVoz 0.5814 [0.5422, 0.6206] n=1270 spk=107; PC-GITA 0.6196 [0.5700, 0.6681] n=1100 spk=100
+- tex line 77 [added_23sep]  paper 0.68  |  matcher file 0.823  (o25_edaicfull_text.json)
+    text: A logistic regression on transcript word counts, speaker-disjoint, reaches 0.43 to 0.62 on the Parkinson's sets, 0.68 on E-DAIC and 0.84 to 0.93 on the Alzheimer's sets.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with the Qwen2.5-Omni transcript answer (0.823). The word regression on the full interview gives 0.68.
+    recomputed: E-DAIC full 0.6778 [0.5973, 0.7549] n=275 spk=275 (first 30 s would be 0.4844 [0.4028, 0.5624] n=275 spk=275)
+- tex line 77 [added_23sep]  paper 0.84 to 0.93  |  matcher file 0.5246 to 0.7634  (o25_kcl_text.csv ; o25_neurovoz_text.json ; o25_pcgita_text.)
+    text: A logistic regression on transcript word counts, speaker-disjoint, reaches 0.43 to 0.62 on the Parkinson's sets, 0.68 on E-DAIC and 0.84 to 0.93 on the Alzheimer's sets.
+    TRIAGE: MISPAIRING
+    why: Matcher reused the Parkinson's answer set. Word regression range 0.84 to 0.93.
+    recomputed: Pitt 0.8353 [0.7865, 0.8862] n=468 spk=228; ADReSSo 0.8471 [0.7961, 0.8922] n=237 spk=237; ADReSS 0.9254 [0.8866, 0.9587] n=156 spk=156
+- tex line 97 [other]  paper 0.92  |  matcher file 0.7082  (pitt_all_segments.csv)
+    text: For Alzheimer's disease, we score the words of each segment in Pitt database with a logistic regression trained on six fluency markers from the CHAT transcription codes : type token ratio, retraces, fillers, unintelligible tokens, errors and pauses, with speaking rate excluded because it alone reaches 0.92 and would make the split trivial.
+    TRIAGE: REAL
+    why: No result file gives 0.92. Speaking rate alone gives 0.70 (all 708) and 0.71 (kept 468), direction free. 0.92 appears only in a code comment of build_ad_conflict.py ('caught by the validity battery at AUC 0.92'), with no output file behind it, and that comment describes a rate shortcut in the selected arm, not rate alone. Fix: 0.70, or drop the number.
+    recomputed: all 708 0.6970 [0.6407, 0.7495] n=708 spk=266 (raw 0.3030); kept 468 0.7082 [0.6387, 0.7688] n=468 spk=228 (raw 0.2918)
+- tex line 149 [added_23sep]  paper 0.63  |  matcher file 0.654  (omni_pitt_zeroshot_scores.csv)
+    text: On 38 age and sex matched NeuroVoz pairs the encoder probe stays at 0.90 and the zero-shot answer at 0.63.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with the Pitt age matched zero shot (0.654). The NeuroVoz matched run gives 0.63.
+    recomputed: 0.6282 [0.5584, 0.6985] n=907 spk=76
+- tex line 149 [added_23sep]  paper 0.35  |  matcher file 0.8941  (omni_pcgita_nested_repeats.json)
+    text: The paired difference \Delta of Section \refsec:setup excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL, at 0.35 on PC-GITA and 0.11 on Pitt.
+    TRIAGE: MISPAIRING
+    why: Matcher paired 0.35 with the probe AUC 0.8941. The Delta file gives 0.35. Caveat: it uses the single split probe (0.91); the paper's PC-GITA probe is the five repeat mean 0.89, which gives 0.33. Pitt's 0.11 uses the five repeat mean, so the two Deltas use different probe estimators. No five repeat per-clip PC-GITA file exists on the Mac to put an interval on the 0.33.
+    recomputed: Delta 0.3454 [0.2636, 0.4275] n=1100 spk=100 (probe 0.9089, zero shot 0.5635); with the five repeat probe mean 0.8941 the point is 0.3306
+- tex line 149 [added_23sep]  paper 0.11  |  matcher file 0.7846  (q2a_pitt_nested_repeats.json)
+    text: The paired difference \Delta of Section \refsec:setup excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL, at 0.35 on PC-GITA and 0.11 on Pitt.
+    TRIAGE: MISPAIRING
+    why: Matcher paired 0.11 with the Qwen2-Audio Pitt probe AUC. The corrected M7 Delta gives 0.11.
+    recomputed: Delta 0.1128 [0.0455, 0.1768] n=468 spk=228 (probe 0.7706, zero shot 0.6578)
+- tex line 149 [added_23sep]  paper 0.60  |  matcher file 0.7619  (q3o_pitt_zeroshot_scores.csv)
+    text: On Qwen3-Omni the encoder probe reaches 0.90 on PC-GITA and 0.81 on Pitt against zero-shot answers of 0.60 and 0.77.
+    TRIAGE: MISPAIRING
+    why: Matcher paired the PC-GITA 0.60 with the Pitt zero shot (0.7619). Both PC-GITA files round to 0.60.
+    recomputed: shipped 0.5967 [0.5240, 0.6619] n=1100 spk=100; pod rerun 0.6015 [0.5304, 0.6674] n=1100 spk=100
+- tex line 149 [added_23sep]  paper 0.60  |  matcher file 0.9213  (omni_neurovoz_nested_repeats.json)
+    text: Normalising loudness and noise floor lowers those features to 0.60 on NeuroVoz and leaves the encoder probe at 0.89.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with the NeuroVoz encoder probe (0.9213). 'Those features' are the channel features; after normalisation they give 0.60.
+    recomputed: after 0.6025 [0.5479, 0.6580] n=1270 spk=107 (before 0.7977 [0.7248, 0.8611] n=1270 spk=107)
+- tex line 149 [added_23sep]  paper 0.90  |  matcher file 0.7953  (pitt_enc_nested5_oof.npz)
+    text: On 38 age and sex matched NeuroVoz pairs the encoder probe stays at 0.90 and the zero-shot answer at 0.63.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with the Pitt age matched probe (0.7953). The NeuroVoz matched run gives 0.90.
+    recomputed: 0.8986 [0.8430, 0.9428] n=907 spk=76; pairs file rows 38
+- tex line 172 [other]  paper 0.59  |  matcher file 0.5822  (af3_pitt.csv)
+    text: Audio Flamingo 3 | Alzheimer's Agree. :: Audio Flamingo 3 & 0.42 & 0.81 & 0.61 & 0.59
+    TRIAGE: MISPAIRING (file copy)
+    why: Right quantity, different copy of the same run. The paper's 0.59 is the part10 copy (0.59); the matcher used the part3 copy (0.58). Part 20 POD4c re-scored 10 Pitt windows and reproduced part10 exactly, not part3 (DISCREPANCIES.md). Decide which copy ships in the release; if part10, update master_lookup so the matcher stops flagging it.
+    recomputed: part10 0.5855 [0.5144, 0.6554] n=322 spk=175; part3 0.5822 [0.5080, 0.6528] n=322 spk=175
+- tex line 172 [other]  paper 0.61  |  matcher file 0.6169  (af3_pitt.csv)
+    text: Audio Flamingo 3 | Alzheimer's Conflict :: Audio Flamingo 3 & 0.42 & 0.81 & 0.61 & 0.59
+    TRIAGE: MISPAIRING (file copy)
+    why: Right quantity, different copy of the same run. The paper's 0.61 is the part10 copy (0.61); the matcher used the part3 copy (0.62). Part 20 POD4c re-scored 10 Pitt windows and reproduced part10 exactly, not part3 (DISCREPANCIES.md). Decide which copy ships in the release; if part10, update master_lookup so the matcher stops flagging it.
+    recomputed: part10 0.6075 [0.5063, 0.7129] n=146 spk=100; part3 0.6169 [0.5188, 0.7209] n=146 spk=100
+- tex line 180 [added_23sep]  paper 0.22  |  matcher file 0.7987  (omni_pitt_text.csv)
+    text: On the same pairs the transcript alone scores 0.15 on conflict and 0.96 on agreement for Qwen2.5-Omni and 0.22 and 0.95 for Qwen3-Omni, and its decision matches the audio answer on 86 percent of clips.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with a Pitt Qwen2.5-Omni text file. The Qwen3-Omni transcript file gives 0.22.
+    recomputed: 0.2243 [0.1757, 0.2742] n=483 spk=138; look-alike: Qwen2.5-Omni AUDIO conflict 0.2218 [0.1829, 0.2632] n=483 spk=138
+- tex line 180 [added_23sep]  paper 0.95  |  matcher file 0.7987  (omni_pitt_text.csv)
+    text: On the same pairs the transcript alone scores 0.15 on conflict and 0.96 on agreement for Qwen2.5-Omni and 0.22 and 0.95 for Qwen3-Omni, and its decision matches the audio answer on 86 percent of clips.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with a Pitt Qwen2.5-Omni text file. The Qwen3-Omni transcript agreement arm gives 0.95 (311 distinct) or 0.95 (483 rows).
+    recomputed: 311 distinct 0.9523 [0.9249, 0.9750] n=311 spk=138; 483 rows 0.9470 [0.9131, 0.9757] n=483 spk=138; look-alike: Qwen2.5-Omni AUDIO agreement 483 0.9482 [0.9039, 0.9828] n=483 spk=138
+- tex line 180 [added_23sep]  paper 0.46  |  matcher file 0.5322  (omni_pitt_zeroshot_scores.csv)
+    text: A second sentiment scorer selects 1,334 pairs, on which the conflict arm scores 0.46 and stays 0.39 below the agreement arm.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with the Pitt conflict arm (0.5322). The second scorer run gives 0.46.
+    recomputed: 0.4619 [0.4165, 0.5102] n=1334 spk=162; pairs 1334
+- tex line 180 [added_23sep]  paper 0.39  |  matcher file 0.5322  (omni_pitt_zeroshot_scores.csv)
+    text: A second sentiment scorer selects 1,334 pairs, on which the conflict arm scores 0.46 and stays 0.39 below the agreement arm.
+    TRIAGE: MISPAIRING
+    why: Matcher paired it with the Pitt conflict arm. 0.39 is the gap with distinct agreement segments (the Table 2 convention); with all 1,334 agreement rows it is 0.37.
+    recomputed: distinct agreement segments 0.3934 [0.3410, 0.4420] n=2133 spk=162; all agreement rows 0.3697 [0.3073, 0.4269] n=2668 spk=162
+- tex line 180 [added_23sep]  paper 0.96  |  matcher file 0.1498  (p14_o25_1a_joined.csv)
+    text: On the same pairs the transcript alone scores 0.15 on conflict and 0.96 on agreement for Qwen2.5-Omni and 0.22 and 0.95 for Qwen3-Omni, and its decision matches the audio answer on 86 percent of clips.
+    TRIAGE: MISPAIRING
+    why: Matcher paired the agreement 0.96 with the conflict value 0.1498. Both agreement definitions round to 0.96.
+    recomputed: 311 distinct 0.9620 [0.9345, 0.9822] n=311 spk=138; 483 rows 0.9596 [0.9306, 0.9823] n=483 spk=138 (conflict 0.1498 [0.1131, 0.1887] n=483 spk=138)
+- tex line 226 [added_23sep]  paper 5.0  |  matcher file 0.8032  (omni_pitt_nested_repeats.json)
+    text: LoRA on the language model, with 5.0 M trainable parameters against 4.6 M for the projector, reaches 0.83 on Pitt and 0.55 on its conflict segments.
+    TRIAGE: MISPAIRING
+    why: Matcher paired a parameter count (millions) with an AUC. 5,046,272 = 5.0 M.
+    recomputed: json 5,046,272; arithmetic 28 x 8 x ((3584+3584)+(3584+512)x2+(3584+3584)) = 5,046,272
+- tex line 226 [added_23sep]  paper 4.6  |  matcher file 0.8032  (omni_pitt_nested_repeats.json)
+    text: LoRA on the language model, with 5.0 M trainable parameters against 4.6 M for the projector, reaches 0.83 on Pitt and 0.55 on its conflict segments.
+    TRIAGE: MISPAIRING
+    why: Matcher paired a parameter count with an AUC. 4,591,104 = 4.6 M.
+    recomputed: json 4,591,104; arithmetic 1280 x 3584 + 3584 = 4,591,104
+- tex line 244 [red]  paper (claim, no number)  |  matcher file pcgita +0.3227 [0.2391, 0.404]; neurovoz +0.2078 [0.1588, 0.2578]; kcl -0.0149 [  (C_intervals.csv)
+    text: \colorred resulting in a significant performance gain in AD and MDD detection.
+    TRIAGE: REAL
+    why: The AD half holds (all three gains positive, intervals above zero). The MDD half is wrong: on E-DAIC 30 s the gain is negative with an interval spanning zero, and on the full window fine tuning lowers the AUC with an interval entirely below zero. The paper's own Section 3 sentence (line 226) says E-DAIC drops. Fix: say AD only.
+    recomputed: AD: Pitt 0.1095 [0.0454, 0.1728] n=468 spk=228; ADReSSo 0.2096 [0.1294, 0.2867] n=237 spk=237; ADReSS 0.1443 [0.0490, 0.2370] n=156 spk=156. MDD: E-DAIC 30 s -0.0537 [-0.1221, 0.0152] n=275 spk=275; E-DAIC full window -0.1863 [-0.2696, -0.1098] n=275 spk=275
+
+MISMATCH triage counts: MISPAIRING 16, REAL 2, MISPAIRING (file copy) 2
+
+UNMATCHED rows: 43  (method/design constants: 16)
+- tex line 81 [other]  paper 15 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: The model hears the participant's whole interview, capped at 15 minutes for the 89 longest.
+- tex line 81 [other]  paper 89 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: The model hears the participant's whole interview, capped at 15 minutes for the 89 longest.
+- tex line 83 [other]  paper 30 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Models hear the first 30 s, the length Qwen2-Audio accepts, so the conflict test in Table \reftab:conflict runs on the same clips for all six models.
+- tex line 87 [added_23sep]  paper 5 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Folds are speaker-disjoint (GroupKFold, 5 folds), and the layer is chosen inside the training folds, with the AUC reported as the mean over five repeats of the fold assignment. %Where a layer is chosen, it is chosen inside the training folds; selecting the layer after seeing the test fold inflates AUC by +0.03 on average across 18 cells and by up to +0.14, so we quote the nested value wherever bot
+- tex line 87 [other]  paper 2000 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Probing. The probe in Eq. \refeq:probe is logistic regression with \ell_2 penalty at C=1, balanced class weights and 2000 iterations, on features standardized inside the training fold.
+- tex line 87 [other]  paper 1 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Probing. The probe in Eq. \refeq:probe is logistic regression with \ell_2 penalty at C=1, balanced class weights and 2000 iterations, on features standardized inside the training fold.
+- tex line 88 [added_23sep]  paper 32 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Layer-wise probing is performed on Qwen2.5-Omni , end-to-end on 32 hidden states in its audio encoder and 29 in its language model, taken at the audio-token positions, the projected input and the outputs of its 28 layers.
+- tex line 88 [added_23sep]  paper 29 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Layer-wise probing is performed on Qwen2.5-Omni , end-to-end on 32 hidden states in its audio encoder and 29 in its language model, taken at the audio-token positions, the projected input and the outputs of its 28 layers.
+- tex line 88 [added_23sep]  paper 28  |  count 28 not found as n or n_spk in index rows for (no dataset)
+    text: Layer-wise probing is performed on Qwen2.5-Omni , end-to-end on 32 hidden states in its audio encoder and 29 in its language model, taken at the audio-token positions, the projected input and the outputs of its 28 layers.
+- tex line 92 [added_23sep]  paper 99  |  percentage with no indexed file value for context [model=Qwen2.5-Omni (default); data=pitt; stream=zero_shot; arm=conflict]
+    text: Under greedy decoding the first word is Yes or No on every conflict clip and matches the answer read from the logits on 99 percent of them. %The two score within 0.01 of each other on Pitt.
+- tex line 95 [other]  paper 25 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Conflict set construction. From the raw E-DAIC transcripts, with the interviewer removed, we take every participant segment of at least 25 words and 5 s of speech and score it with a RoBERTa sentiment classifier trained on TweetEval .
+- tex line 95 [other]  paper 5 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Conflict set construction. From the raw E-DAIC transcripts, with the interviewer removed, we take every participant segment of at least 25 words and 5 s of speech and score it with a RoBERTa sentiment classifier trained on TweetEval .
+- tex line 95 [added_23sep]  paper 4 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: A participant with a PHQ-8 score of 15 or more speaking positively, or a healthy control with a PHQ-8 score of 4 or less speaking negatively, constitutes a conflict segment.
+- tex line 95 [added_23sep]  paper 15 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: A participant with a PHQ-8 score of 15 or more speaking positively, or a healthy control with a PHQ-8 score of 4 or less speaking negatively, constitutes a conflict segment.
+- tex line 95 [added_23sep]  paper 0.70 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: A segment is counted as positive or negative if that class has a probability of at least 0.70.
+- tex line 97 [other]  paper 30 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: The median segment fits inside the 30 s window, and 91 percent of segments have at least half their words inside it.
+- tex line 97 [other]  paper 91  |  percentage with no indexed file value for context [model=Qwen2.5-Omni (default); data=any; stream=any; arm=all]
+    text: The median segment fits inside the 30 s window, and 91 percent of segments have at least half their words inside it.
+- tex line 101 [added_23sep]  paper 95  |  percentage with no indexed file value for context [model=Qwen2.5-Omni (default); data=pitt_agematched; stream=age_gap_years; arm=all; dataset from previous sentence, stream from previous sentence]
+    text: Intervals are 95 percent speaker-level bootstrap intervals from 2000 draws, and a difference is called significant when its interval excludes zero.
+- tex line 101 [added_23sep]  paper 2000  |  count 2000 not found as n or n_spk in index rows for pitt_agematched
+    text: Intervals are 95 percent speaker-level bootstrap intervals from 2000 draws, and a difference is called significant when its interval excludes zero.
+- tex line 140 [other]  paper 30 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: Qwen3-Omni and Audio Flamingo 3 reach 0.87 and 0.86 on the same interviews, while Qwen2-Audio, which hears 30 s, stays at 0.63.
+- tex line 149 [red]  paper 0.06 on PC-GITA to 0.18  |  no named set compatible with context [model=Qwen3-Omni; data=adresso; stream=enc_minus_egemaps; arm=all; delta] (streams ['enc_minus_egemaps'], group ALL7)
+    text: The encoder probe beats the eGeMAPS baseline on all seven datasets, by 0.06 on PC-GITA to 0.18 on ADReSSo.
+- tex line 149 [added_23sep]  paper 38  |  count 38 not found as n or n_spk in index rows for pitt_agematched
+    text: On 38 age and sex matched NeuroVoz pairs the encoder probe stays at 0.90 and the zero-shot answer at 0.63.
+- tex line 149 [added_23sep]  paper 0.01  |  no indexed value for context [model=Qwen2-Audio; data=any; stream=readout_cosine; arm=all; respectively mapping]; hint: equal after rounding: Qwen2-Audio|kcl|lm_probe|all=0.005952 (kcl_groupkfold5_pod.csv) / Qwen2-Audio|
+    text: On Qwen2-Audio and Qwen3-Omni the cosine is 0.01 and 0.005, at the random floor, and removing the readout direction leaves their probes at 0.81 and 0.83.
+- tex line 149 [added_23sep]  paper 0.005  |  no indexed value for context [model=Qwen3-Omni; data=any; stream=readout_cosine; arm=all; respectively mapping]
+    text: On Qwen2-Audio and Qwen3-Omni the cosine is 0.01 and 0.005, at the random floor, and removing the readout direction leaves their probes at 0.81 and 0.83.
+- tex line 149 [added_23sep]  paper 0.81  |  no indexed value for context [model=Qwen3-Omni; data=any; stream=answer_state_probe_minus_readout; arm=all]; hint: equal after rounding: Qwen3-Omni|adress2020|projector_probe|all=0.8149 (q3o_adress2020_nested_repeats.jso
+    text: On Qwen2-Audio and Qwen3-Omni the cosine is 0.01 and 0.005, at the random floor, and removing the readout direction leaves their probes at 0.81 and 0.83.
+- tex line 149 [added_23sep]  paper 0.83  |  no indexed value for context [model=Qwen3-Omni; data=any; stream=answer_state_probe_minus_readout; arm=all]; hint: equal after rounding: Qwen3-Omni|pitt|answer_state_probe|all=0.8268 (q3o_pitt_nested_repeats.json) / Qwen
+    text: On Qwen2-Audio and Qwen3-Omni the cosine is 0.01 and 0.005, at the random floor, and removing the readout direction leaves their probes at 0.81 and 0.83.
+- tex line 180 [added_23sep]  paper 0.60  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: The conflict arm stays below chance under the two other prompt wordings, at 0.34 and 0.24, and under sentiment thresholds of 0.60 and 0.80, at 0.26 and 0.19.
+- tex line 180 [added_23sep]  paper 86  |  percentage with no indexed file value for context [model=Qwen3-Omni; data=any; stream=zero_shot; arm=all]
+    text: On the same pairs the transcript alone scores 0.15 on conflict and 0.96 on agreement for Qwen2.5-Omni and 0.22 and 0.95 for Qwen3-Omni, and its decision matches the audio answer on 86 percent of clips.
+- tex line 180 [added_23sep]  paper 0.34  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: The conflict arm stays below chance under the two other prompt wordings, at 0.34 and 0.24, and under sentiment thresholds of 0.60 and 0.80, at 0.26 and 0.19.
+- tex line 180 [added_23sep]  paper 0.24  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: The conflict arm stays below chance under the two other prompt wordings, at 0.34 and 0.24, and under sentiment thresholds of 0.60 and 0.80, at 0.26 and 0.19.
+- tex line 180 [added_23sep]  paper 0.80  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: The conflict arm stays below chance under the two other prompt wordings, at 0.34 and 0.24, and under sentiment thresholds of 0.60 and 0.80, at 0.26 and 0.19.
+- tex line 180 [added_23sep]  paper 0.26  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: The conflict arm stays below chance under the two other prompt wordings, at 0.34 and 0.24, and under sentiment thresholds of 0.60 and 0.80, at 0.26 and 0.19.
+- tex line 180 [added_23sep]  paper 87 [method constant]  |  method/design constant, not a result; no file value indexed
+    text: It also answers Yes on 97 percent of the clips, and Qwen2-Audio on 87 percent or more, so their AUC reflects ranking rather than decisions.
+- tex line 180 [added_23sep]  paper 97  |  percentage with no indexed file value for context [model=Qwen2-Audio; data=any; stream=zero_shot; arm=all]
+    text: It also answers Yes on 97 percent of the clips, and Qwen2-Audio on 87 percent or more, so their AUC reflects ranking rather than decisions.
+- tex line 180 [added_23sep]  paper 334  |  count 334 not found as n or n_spk in index rows for (no dataset)
+    text: A second sentiment scorer selects 1,334 pairs, on which the conflict arm scores 0.46 and stays 0.39 below the agreement arm.
+- tex line 180 [added_23sep]  paper 1  |  count 1 not found as n or n_spk in index rows for (no dataset)
+    text: A second sentiment scorer selects 1,334 pairs, on which the conflict arm scores 0.46 and stays 0.39 below the agreement arm.
+- tex line 180 [added_23sep]  paper 0.18  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: With the dataset's own binary label in place of the PHQ-8 cut points of 15 and 4 the set grows to 924 clips and the conflict arm scores 0.18.
+- tex line 180 [added_23sep]  paper 4  |  count 4 not found as n or n_spk in index rows for (no dataset)
+    text: With the dataset's own binary label in place of the PHQ-8 cut points of 15 and 4 the set grows to 924 clips and the conflict arm scores 0.18.
+- tex line 180 [added_23sep]  paper 15  |  count 15 not found as n or n_spk in index rows for (no dataset)
+    text: With the dataset's own binary label in place of the PHQ-8 cut points of 15 and 4 the set grows to 924 clips and the conflict arm scores 0.18.
+- tex line 180 [added_23sep]  paper 0.19  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: The conflict arm stays below chance under the two other prompt wordings, at 0.34 and 0.24, and under sentiment thresholds of 0.60 and 0.80, at 0.26 and 0.19.
+- tex line 180 [added_23sep]  paper 0.01  |  prompt-wording sensitivity figure; no averaged prompt-variant delta is indexed (omni_final/omni_*_p2.json and _p3.json hold the per-wording runs)
+    text: Asking Qwen2.5-Omni to judge the voice alone leaves its Pitt answer within 0.01 of the recording wording.
+- tex line 226 [added_23sep]  paper 0.55  |  no indexed value for context [model=Qwen2.5-Omni (default); data=pitt; stream=lm_probe; arm=conflict]; hint: equal after rounding: Qwen2.5-Omni|adresso|transcript|all=0.5542 (o25_adresso_text.json) / Qwen2.5-Omni|pitt|lo
+    text: LoRA on the language model, with 5.0 M trainable parameters against 4.6 M for the projector, reaches 0.83 on Pitt and 0.55 on its conflict segments.
+- tex line 226 [added_23sep]  paper 0.83  |  no indexed value for context [model=Qwen2.5-Omni (default); data=pitt; stream=lm_probe; arm=conflict]; hint: equal after rounding: Qwen2.5-Omni|edaic_full|zero_shot|all=0.8285 (o25_full_zeroshot.json) / Qwen2.5-Omni|pitt
+    text: LoRA on the language model, with 5.0 M trainable parameters against 4.6 M for the projector, reaches 0.83 on Pitt and 0.55 on its conflict segments.
+
+flagged rows with triage written to scores/part24/part12/final_runs/AudioLLMHealthUtilityGap_20260923_145617/flagged_rows_triaged.csv
+
+=== 2. PDF: <local data dir>/paper1_submission_23sep/paper_29.pdf
+     mtime 2026-09-23 06:37:37  size 180839 B  sha256 0b1ada4c90e33f15
+page count: 5
+----- page 5 text (pdftotext, reading order) -----
+information in their representation and future work should
+focus on further narrowing the utility gap.
+
+Acknowledgments
+Research was sponsored by the ARO under Cooperative
+Agreement Number W911NF-25-2-0040 and the NIMH under
+Award Number R61MH135407. The views and conclusions
+contained in this document are those of the authors and not
+of the U.S. Government. The Pitt corpus was supported by
+NIA grants AG03705 and AG05133. The authors declare no
+conflict of interest.
+
+Compliance with Ethical Standards
+This study was a secondary analysis of existing recordings
+only acquired under each distributor’s data agreement. No new
+recordings were made, no audio is redistributed, and no ethical
+approval was required for this secondary analysis.
+6. REFERENCES
+[1] Nicholas Cummins et al., “A review of depression and suicide
+risk assessment using speech analysis,” Speech Commun., vol.
+71, pp. 10 to 49, 2015.
+[2] N. P. Narendra, Björn Schuller, and Paavo Alku, “The detection
+of Parkinson’s disease from speech using voice source information,” IEEE/ACM Trans. Audio, Speech, Lang. Process., vol. 29,
+pp. 1925 to 1936, 2021.
+[3] Erfan Loweimi, Sofia de la Fuente Garcia, and Saturnino Luz,
+“Zero-shot speech-based depression and anxiety assessment with
+LLMs,” in Proc. Interspeech, 2025, pp. 489 to 493.
+[4] Sejal Bhalla et al., “SpeechDx: A multi-task benchmark for
+clinical speech AI,” arXiv:2606.17339, 2026.
+[5] Zhongren Dong et al., “Foundation model-based evaluation of
+neuropsychiatric disorders: A lifespan-inclusive, multi-modal,
+and multi-lingual study,” IEEE J. Sel. Topics Signal Process.,
+vol. 19, no. 5, pp. 796 to 809, 2025.
+[6] Jingyi Chen et al., “Do audio LLMs really LISTEN, or just transcribe? Measuring lexical vs. acoustic emotion cues reliance,”
+in Proc. EACL, 2026, pp. 5848 to 5877.
+[7] Jiacheng Pang, Ashutosh Chaubey, and Mohammad Soleymani,
+“Do audio LLMs listen or read? Analyzing and mitigating
+paralinguistic failures with VoxParadox,” in Proc. ICML, 2026.
+[8] Yunfei Chu et al.,
+“Qwen2-audio technical report,”
+arXiv:2407.10759, 2024.
+[9] Jin Xu et al.,
+“Qwen2.5-omni technical report,”
+arXiv:2503.20215, 2025.
+[10] Jin Xu et al.,
+“Qwen3-omni technical report,”
+arXiv:2509.17765, 2025.
+[11] Sreyan Ghosh et al., “Audio flamingo 2: An audio-language
+model with long-audio understanding and expert reasoning abilities,” in Proc. ICML, 2025, pp. 19358 to 19405.
+[12] Arushi Goel et al., “Audio flamingo 3: Advancing audio intelligence with fully open large audio language models,” in Proc.
+NeurIPS, 2025.
+
+[13] Kimi Team et al.,
+“Kimi-audio technical report,”
+arXiv:2504.18425, 2025.
+[14] Juan Rafael Orozco-Arroyave et al., “New Spanish speech corpus database for the analysis of people suffering from Parkinson’s disease,” in Proc. LREC, 2014, pp. 342 to 347.
+[15] Janaı́na Mendes-Laureano et al., “NeuroVoz: A Castillian
+Spanish corpus of parkinsonian speech,” Sci. Data, vol. 11, no.
+1, pp. 1367, 2024.
+[16] Hagen Jaeger, Dhaval Trivedi, and Michael Stadtschnitzer, “Mobile device voice recordings at King’s college London (MDVRKCL) from both early and advanced Parkinson’s disease patients
+and healthy controls,” Zenodo, doi:10.5281/zenodo.2867216,
+2019.
+[17] Fabien Ringeval et al., “AVEC 2019 workshop and challenge:
+State-of-mind, detecting depression with AI, and cross-cultural
+affect recognition,” in Proc. Audio/Visual Emotion Challenge
+and Workshop (AVEC), 2019, pp. 3 to 12.
+[18] Kurt Kroenke et al., “The PHQ-8 as a measure of current
+depression in the general population,” J. Affect. Disord., vol.
+114, no. 1 to 3, pp. 163 to 173, 2009.
+[19] James T. Becker et al., “The natural history of Alzheimer’s
+disease: Description of study cohort and accuracy of diagnosis,”
+Arch. Neurol., vol. 51, no. 6, pp. 585 to 594, 1994.
+[20] Saturnino Luz et al., “Detecting cognitive decline using speech
+only: The ADReSSo challenge,” in Proc. Interspeech, 2021, pp.
+3780 to 3784.
+[21] Saturnino Luz et al., “Multilingual Alzheimer’s dementia recognition through spontaneous speech: A signal processing grand
+challenge,” in Proc. ICASSP, 2023, pp. 1 to 2.
+[22] Saturnino Luz et al., “Alzheimer’s dementia recognition through
+spontaneous speech: The ADReSS challenge,” in Proc. Interspeech, 2020, pp. 2172 to 2176.
+[23] Francesco Barbieri et al., “TweetEval: Unified benchmark and
+comparative evaluation for tweet classification,” in Findings of
+EMNLP, 2020, pp. 1644 to 1650.
+[24] Brian MacWhinney, The CHILDES Project: Tools for Analyzing Talk, Lawrence Erlbaum, 3rd edition, 2000.
+[25] Kathleen C. Fraser, Jed A. Meltzer, and Frank Rudzicz, “Linguistic features identify Alzheimer’s disease in narrative speech,”
+J. Alzheimer’s Dis., vol. 49, no. 2, pp. 407 to 422, 2016.
+[26] Alec Radford et al., “Robust speech recognition via large-scale
+weak supervision,” in Proc. ICML, 2023, pp. 28492 to 28518.
+[27] Florian Eyben et al., “The Geneva minimalistic acoustic parameter set (GeMAPS) for voice research and affective computing,”
+IEEE Trans. Affective Comput., vol. 7, no. 2, pp. 190 to 202, 2016.
+[28] Benjamin Elizalde et al., “CLAP learning audio concepts from
+natural language supervision,” in Proc. ICASSP, 2023, pp. 1 to 5.
+
+----- end of page 5 (731 words) -----
+PAGE 5 CHECK: 15 words sit above the first Acknowledgments / Ethics / References heading (body text on page 5):
+    | information in their representation and future work should
+    | focus on further narrowing the utility gap.
+    | 
+
+=== 3. font sizes (PyMuPDF 1.28.2)
+pages 5; distinct sizes 44; most common (body) 10.06 pt
+SMALLEST font size: 5.98 pt  (1 chars)
+    page 4  NimbusRomNo9L-Regu  '1'
+LARGEST font size:  14.35 pt  (48 chars)
+    page 5  NimbusRomNo9L-Medi  'Acknowledgments'
+    page 5  NimbusRomNo9L-Medi  'Compliance with Ethical Standards'
+sizes under 9 pt (size: chars, pages, first example):
+    5.98 pt: 1 chars, pages [4], e.g. p4 NimbusRomNo9L-Regu '1'
+    6.97 pt: 34 chars, pages [2, 3, 4], e.g. p2 NimbusRomNo9L-Regu 'probe'; p2 CMMI7 'ℓ'; p2 CMSY7 '⊤'
+    7.49 pt: 11 chars, pages [1], e.g. p1 STIXGeneral-Italic 'proj.'; p1 STIXGeneral-Regular 'chance'
+    7.97 pt: 92 chars, pages [1, 4], e.g. p1 NimbusRomNo9L-Regu 'Corresponding author:'; p1 NimbusRomNo9L-Regu 'soleymani@ict.usc.edu.'; p4 NimbusRomNo9L-Regu 'https://github.com/parw8649/audio-llm-utility-gap'
+    8.49 pt: 45 chars, pages [1], e.g. p1 STIXGeneral-Regular '0.56'; p1 STIXGeneral-Regular 'PC-GITA (PD)'; p1 STIXGeneral-Regular '0.66'
+    8.88 pt: 932 chars, pages [5], e.g. p5 NimbusRomNo9L-Regu 'N. P. Narendra, Bj'; p5 NimbusRomNo9L-Regu 'orn Schuller, and Paavo Alku,'; p5 NimbusRomNo9L-Regu '“The detection'
+    8.89 pt: 56 chars, pages [5], e.g. p5 NimbusRomNo9L-Regu 'Jiacheng Pang, Ashutosh Chaubey, and Mohammad Sole'
+    8.9 pt: 307 chars, pages [5], e.g. p5 NimbusRomNo9L-Regu 'of Parkinson’s disease from speech using voice sou'; p5 NimbusRomNo9L-Regu 'Arushi Goel et al.,'; p5 NimbusRomNo9L-Regu '“Audio flamingo 3:'
+    8.92 pt: 183 chars, pages [5], e.g. p5 NimbusRomNo9L-Regu 'paralinguistic failures with VoxParadox,”'; p5 NimbusRomNo9L-Regu 'in'; p5 NimbusRomNo9L-ReguItal 'Proc. ICML'
+    8.93 pt: 121 chars, pages [5], e.g. p5 NimbusRomNo9L-Regu 'comparative evaluation for tweet classification,”'; p5 NimbusRomNo9L-Regu 'in'; p5 NimbusRomNo9L-ReguItal 'Findings of'
+    8.94 pt: 176 chars, pages [1, 5], e.g. p1 NimbusRomNo9L-Regu 'Linear probe AUC at each layer of Qwen2.5-Omni wit'; p5 NimbusRomNo9L-Regu 'Juan Rafael Orozco-Arroyave et al.,'; p5 NimbusRomNo9L-Regu '“New Spanish speech cor-'
+    8.95 pt: 58 chars, pages [5], e.g. p5 NimbusRomNo9L-Regu 'Francesco Barbieri et al.,'; p5 NimbusRomNo9L-Regu '“TweetEval:'; p5 NimbusRomNo9L-Regu 'Unified benchmark and'
+    8.97 pt: 1727 chars, pages [1, 3, 4, 5], e.g. p1 NimbusRomNo9L-Regu 'dataset per condition.'; p1 NimbusRomNo9L-Regu 'Each point is that layer’s out-of-fold AUC.'; p3 NimbusRomNo9L-Regu 'model after retraining only its projector on speak'
+    8.98 pt: 59 chars, pages [5], e.g. p5 NimbusRomNo9L-Regu 'Nicholas Cummins et al.,'; p5 NimbusRomNo9L-Regu '“A review of depression and suicide'
+    8.99 pt: 225 chars, pages [1, 4, 5], e.g. p1 STIXGeneral-Regular '0.5'; p1 STIXGeneral-Regular '0.7'; p1 STIXGeneral-Regular '0.9'
+note: sizes a few percent under a round size (e.g. 8.9 for 9) usually come from font expansion or a scaled box
+pdffonts: 14 fonts, 0 not embedded, 0 Type 3
+
+=== done. log: scores/part24/part12/final_runs/AudioLLMHealthUtilityGap_20260923_145617/final_check.log

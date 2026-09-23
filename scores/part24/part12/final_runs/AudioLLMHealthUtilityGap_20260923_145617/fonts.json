@@ -1,0 +1,1360 @@
+{
+ "pdf": "<local data dir>/paper1_submission_23sep/paper_29.pdf",
+ "pages": 5,
+ "smallest": 5.98,
+ "largest": 14.35,
+ "body": 10.06,
+ "sizes": {
+  "5.98": {
+   "chars": 1,
+   "pages": [
+    4
+   ],
+   "examples": [
+    [
+     4,
+     "NimbusRomNo9L-Regu",
+     "1"
+    ]
+   ]
+  },
+  "6.97": {
+   "chars": 34,
+   "pages": [
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "probe"
+    ],
+    [
+     2,
+     "CMMI7",
+     "\u2113"
+    ],
+    [
+     2,
+     "CMSY7",
+     "\u22a4"
+    ],
+    [
+     2,
+     "CMMI7",
+     "\u2113"
+    ],
+    [
+     2,
+     "CMMI7",
+     "\u2113"
+    ]
+   ]
+  },
+  "7.49": {
+   "chars": 11,
+   "pages": [
+    1
+   ],
+   "examples": [
+    [
+     1,
+     "STIXGeneral-Italic",
+     "proj."
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "chance"
+    ]
+   ]
+  },
+  "7.97": {
+   "chars": 92,
+   "pages": [
+    1,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Corresponding author:"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "soleymani@ict.usc.edu."
+    ],
+    [
+     4,
+     "NimbusRomNo9L-Regu",
+     "https://github.com/parw8649/audio-llm-utility-gap"
+    ]
+   ]
+  },
+  "8.49": {
+   "chars": 45,
+   "pages": [
+    1
+   ],
+   "examples": [
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.56"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "PC-GITA (PD)"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.66"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "Pitt (AD)"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.83"
+    ]
+   ]
+  },
+  "8.88": {
+   "chars": 932,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "N. P. Narendra, Bj"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "orn Schuller, and Paavo Alku,"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "\u201cThe detection"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "tion,\u201d"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-ReguItal",
+     "IEEE/ACM Trans. Audio, Speech, Lang. Process."
+    ]
+   ]
+  },
+  "8.89": {
+   "chars": 56,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Jiacheng Pang, Ashutosh Chaubey, and Mohammad Sole"
+    ]
+   ]
+  },
+  "8.9": {
+   "chars": 307,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "of Parkinson\u2019s disease from speech using voice sou"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Arushi Goel et al.,"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "\u201cAudio flamingo 3:"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Advancing audio intelli-"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "bile device voice recordings at King\u2019s college Lon"
+    ]
+   ]
+  },
+  "8.92": {
+   "chars": 183,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "paralinguistic failures with VoxParadox,\u201d"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "in"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-ReguItal",
+     "Proc. ICML"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     ", 2026."
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "State-of-mind, detecting depression with AI, and c"
+    ]
+   ]
+  },
+  "8.93": {
+   "chars": 121,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "comparative evaluation for tweet classification,\u201d"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "in"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-ReguItal",
+     "Findings of"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Benjamin Elizalde et al.,"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "\u201cCLAP learning audio concepts from"
+    ]
+   ]
+  },
+  "8.94": {
+   "chars": 176,
+   "pages": [
+    1,
+    5
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Linear probe AUC at each layer of Qwen2.5-Omni wit"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Juan Rafael Orozco-Arroyave et al.,"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "\u201cNew Spanish speech cor-"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Spanish corpus of parkinsonian speech,\u201d"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-ReguItal",
+     "Sci. Data"
+    ]
+   ]
+  },
+  "8.95": {
+   "chars": 58,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Francesco Barbieri et al.,"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "\u201cTweetEval:"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Unified benchmark and"
+    ]
+   ]
+  },
+  "8.97": {
+   "chars": 1727,
+   "pages": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "dataset per condition."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Each point is that layer\u2019s out-of-fold AUC."
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "model after retraining only its projector on speak"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "Zero-shot"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "Fine-tuned"
+    ]
+   ]
+  },
+  "8.98": {
+   "chars": 59,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Nicholas Cummins et al.,"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "\u201cA review of depression and suicide"
+    ]
+   ]
+  },
+  "8.99": {
+   "chars": 225,
+   "pages": [
+    1,
+    4,
+    5
+   ],
+   "examples": [
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.5"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.7"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.9"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.5"
+    ],
+    [
+     1,
+     "STIXGeneral-Regular",
+     "0.7"
+    ]
+   ]
+  },
+  "9.0": {
+   "chars": 174,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "risk assessment using speech analysis,\u201d"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-ReguItal",
+     "Speech Commun."
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     ", vol."
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "neuropsychiatric disorders:"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "A lifespan-inclusive, multi-modal,"
+    ]
+   ]
+  },
+  "9.02": {
+   "chars": 117,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Erfan Loweimi, Sofia de la Fuente Garcia, and Satu"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Fabien Ringeval et al.,"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "\u201cAVEC 2019 workshop and challenge:"
+    ]
+   ]
+  },
+  "9.03": {
+   "chars": 112,
+   "pages": [
+    3,
+    5
+   ],
+   "examples": [
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "AUC of Qwen2.5-Omni per dataset."
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "Zero-shot audio and"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "scribe?"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "Measuring lexical vs. acoustic emotion cues relian"
+    ]
+   ]
+  },
+  "9.04": {
+   "chars": 121,
+   "pages": [
+    4,
+    5
+   ],
+   "examples": [
+    [
+     4,
+     "NimbusRomNo9L-Regu",
+     "nosis and on matched agreement segments from the s"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "affect recognition,\u201d"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "in"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-ReguItal",
+     "Proc. Audio/Visual Emotion Challenge"
+    ]
+   ]
+  },
+  "9.05": {
+   "chars": 55,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "spontaneous speech:"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "The ADReSS challenge,\u201d"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Regu",
+     "in"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-ReguItal",
+     "Proc. Inter-"
+    ]
+   ]
+  },
+  "9.06": {
+   "chars": 883,
+   "pages": [
+    3,
+    5
+   ],
+   "examples": [
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "text"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "take"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "the"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "recording"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "and"
+    ]
+   ]
+  },
+  "9.86": {
+   "chars": 3038,
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "We train linear probes on its hidden states and qu"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "of speech as a robust marker for a range of disord"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "can use the words as well as the voice, because th"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "tions and found that no single encoder generalizes"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "language content from real clinical recordings tha"
+    ]
+   ]
+  },
+  "9.87": {
+   "chars": 427,
+   "pages": [
+    1,
+    2,
+    3
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "under three conditions that differ in language sal"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Parkin-"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Recent advances in speech processing demonstrated "
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "uated on their accuracy and little attention is gi"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "models use to reach their decisions."
+    ]
+   ]
+  },
+  "9.88": {
+   "chars": 230,
+   "pages": [
+    2,
+    3
+   ],
+   "examples": [
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "The depression interviews sit between the Parkinso"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "For Alzheimer\u2019s disease we use picture description"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "since every speaker reads the same sentences."
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "On E-DAIC the"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "probe reaches 0.80 and the zero-shot answer 0.67."
+    ]
+   ]
+  },
+  "9.89": {
+   "chars": 601,
+   "pages": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "models for clinical assessment ["
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "]."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Recently, large pre-trained"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "In this paper, we compare what an Audio LLM\u2019s repr"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "LLMs on the conflict sets to test whether the para"
+    ]
+   ]
+  },
+  "9.9": {
+   "chars": 482,
+   "pages": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "models fall below chance."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Retraining only the audio projector"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Current AI-based diagnosis approaches are primaril"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "start at the beginning of the recording, so interv"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "states in its audio encoder and 29 in its language"
+    ]
+   ]
+  },
+  "9.91": {
+   "chars": 547,
+   "pages": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "son\u2019s read-speech, depression interviews and Alzhe"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "son\u2019s read-speech, depression interviews and Alzhe"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "the encoder output into the language model\u2019s input"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "Such a comparison on its own cannot tell if a mode"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "ment of at least 25 words and 5 s of speech and sc"
+    ]
+   ]
+  },
+  "9.92": {
+   "chars": 477,
+   "pages": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "that score answers only where words and diagnosis "
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "from representations and show that retraining only"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "said."
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "Given that the speech signals are real, the contra"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "share of the diagnosis in each condition."
+    ]
+   ]
+  },
+  "9.93": {
+   "chars": 542,
+   "pages": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Parkinson\u2019s and Alzheimer\u2019s, suggesting a represen"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "narrows the gap on Parkinson\u2019s and Alzheimer\u2019s."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Evaluations"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "degradation in the deep encoder layers."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "We extend their study"
+    ]
+   ]
+  },
+  "9.94": {
+   "chars": 484,
+   "pages": [
+    1,
+    2,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Medi",
+     "Fig. 1"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "systematic study of Audio LLMs\u2019 reliance on lingui"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "corpus released for AVEC 2019, with 275 participan"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "semantic content and fluency carry most of the dia"
+    ]
+   ]
+  },
+  "9.95": {
+   "chars": 480,
+   "pages": [
+    1,
+    2,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Audio LLMs can answer clinical questions about a r"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "ity gap."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Where the words contradict the diagnosis, four of "
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "on paralinguistic or linguistic speech, since the "
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "the model gets the words alone, with the same prom"
+    ]
+   ]
+  },
+  "9.96": {
+   "chars": 1938,
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Medi",
+     "ABSTRACT"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "ture descriptions."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Probes detect the disorders with AUC from"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "not tell a model that listens from one that reads."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Alzheimer\u2019s disease, Parkinson\u2019s disease, depressi"
+    ]
+   ]
+  },
+  "9.97": {
+   "chars": 114,
+   "pages": [
+    1,
+    2
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "["
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "] benchmarked pretrained audio encoders on clinica"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "penalty at"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     ", balanced class weights and 2000 iterations,"
+    ]
+   ]
+  },
+  "9.98": {
+   "chars": 429,
+   "pages": [
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "trained and evaluated on speaker-disjoint folds pr"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "mean-pool the hidden states over time and fit a lo"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "speaker\u2019s diagnosis, such as a depressed participa"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "healthy control scored as impaired, is a conflict "
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "with transcripts, used with the annotation codes s"
+    ]
+   ]
+  },
+  "9.99": {
+   "chars": 662,
+   "pages": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "["
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "]."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Audio language models (Audio LLMs) now answer clin"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Dong et al."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "["
+    ]
+   ]
+  },
+  "10.0": {
+   "chars": 403,
+   "pages": [
+    1,
+    2,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "but their output depends on both paralinguistic an"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "based clinical diagnosis is grounded in the audito"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "common across architectures."
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "The models are Qwen2-Audio"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "["
+    ]
+   ]
+  },
+  "10.01": {
+   "chars": 117,
+   "pages": [
+    2,
+    3
+   ],
+   "examples": [
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "occur naturally."
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "We also run a transcript only baseline where"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "ADReSSo ["
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "] and the three Parkinson\u2019s sets are transcribed"
+    ]
+   ]
+  },
+  "10.02": {
+   "chars": 593,
+   "pages": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "cues, so it is unclear how much of it is grounded "
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "read its answer from the logits at the first answe"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "and the diagnosis usually point in the same direct"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "Hence,"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "For Alzheimer\u2019s disease, we score the words of eac"
+    ]
+   ]
+  },
+  "10.03": {
+   "chars": 420,
+   "pages": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "spoken words carry different shares of the diagnos"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "Parkin-"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Medi",
+     "Table 1"
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "."
+    ],
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "age alone falls to 0.39, while the encoder probe r"
+    ]
+   ]
+  },
+  "10.04": {
+   "chars": 125,
+   "pages": [
+    3,
+    4
+   ],
+   "examples": [
+    [
+     3,
+     "NimbusRomNo9L-Regu",
+     "a PHQ-8 score of 4 or less speaking negatively, co"
+    ],
+    [
+     4,
+     "NimbusRomNo9L-Regu",
+     "Alzheimer\u2019s the deficit sits in the readout rather"
+    ]
+   ]
+  },
+  "10.05": {
+   "chars": 299,
+   "pages": [
+    2,
+    4
+   ],
+   "examples": [
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "a probe on the hidden state at this position."
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "The model reads"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "inside the training folds, with the AUC reported a"
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "over five repeats of the fold assignment."
+    ],
+    [
+     2,
+     "NimbusRomNo9L-Regu",
+     "Layer-wise probing"
+    ]
+   ]
+  },
+  "10.06": {
+   "chars": 6831,
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "rather"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "than"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "the"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "words."
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "We"
+    ]
+   ]
+  },
+  "11.96": {
+   "chars": 205,
+   "pages": [
+    1
+   ],
+   "examples": [
+    [
+     1,
+     "NimbusRomNo9L-Medi",
+     "THE REPRESENTATION UTILITY GAP IN AUDIO LLMS FOR C"
+    ],
+    [
+     1,
+     "NimbusRomNo9L-ReguItal",
+     "Chaitanya Parwatkar, Nima Kelidari, Minoo Ahmadi, "
+    ],
+    [
+     1,
+     "NimbusRomNo9L-Regu",
+     "University of Southern California, Los Angeles, CA"
+    ]
+   ]
+  },
+  "14.35": {
+   "chars": 48,
+   "pages": [
+    5
+   ],
+   "examples": [
+    [
+     5,
+     "NimbusRomNo9L-Medi",
+     "Acknowledgments"
+    ],
+    [
+     5,
+     "NimbusRomNo9L-Medi",
+     "Compliance with Ethical Standards"
+    ]
+   ]
+  }
+ },
+ "pymupdf": "1.28.2"
+}
