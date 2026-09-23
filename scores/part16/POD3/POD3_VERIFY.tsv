@@ -1,0 +1,26 @@
+id	what	run_value	verify_value	agree_4dp	run_lo	run_hi	verify_lo	verify_hi	n	n_spk	file
+3a_pitt_zeroshot_pod	zero-shot answer AUC		0.7673	False			0.7101	0.8198	468	228	scores/part16/POD3/q3o_pitt_zeroshot_scores.csv
+3a_pitt_zeroshot_shipped	zero-shot answer AUC		0.7619	False			0.7054	0.8130	468	228	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv
+3a_pcgita_zeroshot_pod	zero-shot answer AUC		0.6015	False			0.5304	0.6674	1100	100	scores/part16/POD3/q3o_pcgita_zeroshot_scores.csv
+3a_pcgita_zeroshot_shipped	zero-shot answer AUC		0.5967	False			0.5240	0.6619	1100	100	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv
+3a_attn_sdpa	zero-shot answer AUC, sdpa kernel		0.7673	False					468	228	scores/part16/POD3/q3o_pitt_attn_backend.csv
+3a_attn_eager	zero-shot answer AUC, eager kernel		0.7679	False					468	228	scores/part16/POD3/q3o_pitt_attn_backend.csv
+3a_pitt_rescore_runA	zero-shot answer AUC (rerun)		0.7673	False					468	228	scores/part16/POD3/q3o_pitt_rescore_runA.csv
+3a_pitt_rescore_runB	zero-shot answer AUC (rerun)		0.7673	False					468	228	scores/part16/POD3/q3o_pitt_rescore_runB.csv
+3a_pitt_enc_nested	Pitt 468 enc nested probe AUC	0.8122	0.8122	True	0.7613	0.8625	0.7613	0.8625	468	228	scores/part16/POD3/q3o_pitt_encoder_nested_oof.csv
+3a_pitt_proj_nested	Pitt 468 proj nested probe AUC	0.7820	0.7820	True	0.7228	0.8368	0.7228	0.8368	468	228	scores/part16/POD3/q3o_pitt_proj_nested_oof.csv
+3a_pitt_llm_nested	Pitt 468 llm nested probe AUC	0.8445	0.8445	True	0.8003	0.8878	0.8003	0.8878	468	228	scores/part16/POD3/q3o_pitt_llm_nested_oof.csv
+3a_pitt_ans_nested	Pitt 468 ans nested probe AUC	0.8237	0.8237	True	0.7827	0.8641	0.7827	0.8641	468	228	scores/part16/POD3/q3o_pitt_ans_nested_oof.csv
+3a_pcgita_enc_nested	PC-GITA 1100 enc nested probe AUC	0.8969	0.8969	True	0.8322	0.9454	0.8322	0.9454	1100	100	scores/part16/POD3/q3o_pcgita_encoder_nested_oof.csv
+3a_pcgita_proj_nested	PC-GITA 1100 proj nested probe AUC	0.8872	0.8873	False	0.8156	0.9431	0.8159	0.9431	1100	100	scores/part16/POD3/q3o_pcgita_proj_nested_oof.csv
+3a_pcgita_llm_nested	PC-GITA 1100 llm nested probe AUC	0.8772	0.8772	True	0.8117	0.9309	0.8118	0.9309	1100	100	scores/part16/POD3/q3o_pcgita_llm_nested_oof.csv
+3a_pcgita_ans_nested	PC-GITA 1100 ans nested probe AUC	0.8814	0.8814	True	0.8171	0.9330	0.8171	0.9330	1100	100	scores/part16/POD3/q3o_pcgita_ans_nested_oof.csv
+3b_all_auc_probe	Pitt all arm, probe AUC	0.8307	0.8307	True					468	228	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_all_auc_d	Pitt all arm, direction alone AUC	0.7656	0.7656	True					468	228	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_all_auc_probe_without_d	Pitt all arm, probe minus direction AUC	0.8305	0.8305	True					468	228	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_conflict_auc_probe	Pitt conflict arm, probe AUC	0.6145	0.6145	True					146	100	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_conflict_auc_d	Pitt conflict arm, direction alone AUC	0.6029	0.6029	True					146	100	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_conflict_auc_probe_without_d	Pitt conflict arm, probe minus direction AUC	0.6196	0.6196	True					146	100	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_agreement_auc_probe	Pitt agreement arm, probe AUC	0.9349	0.9349	True					322	175	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_agreement_auc_d	Pitt agreement arm, direction alone AUC	0.8264	0.8264	True					322	175	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_agreement_auc_probe_without_d	Pitt agreement arm, probe minus direction AUC	0.9341	0.9341	True					322	175	scores/part16/POD3/readout_direction_q3o_by_arm.csv
