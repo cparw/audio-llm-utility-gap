@@ -1,0 +1,113 @@
+T 12:39:10 procs 5 gpu 100 %, 64616 MiB root_df 13%
+s1 3158 fold 0 epoch 1 loss 0.3574 4.2 min
+s2 3247 fold 0 epoch 1 loss 0.6374 4.3 min
+s3 3247 fold 0 epoch 1 loss 0.3410 4.3 min
+T 12:40:14 procs 5 gpu 100 %, 64616 MiB root_df 13%
+s1 3195 fold 0 epoch 1 loss 0.3574 4.2 min
+s2 3284 fold 0 epoch 1 loss 0.6374 4.3 min
+s3 3284 fold 0 epoch 1 loss 0.3410 4.3 min
+T 12:41:19 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3272 fold 0 CHECKPOINT 6.67 min, peak 19.52 GB
+s2 3361 fold 0 CHECKPOINT 6.69 min, peak 19.52 GB
+s3 3361 fold 0 CHECKPOINT 6.69 min, peak 19.52 GB
+T 12:42:25 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3308 fold 0 CHECKPOINT 6.67 min, peak 19.52 GB
+s2 3397 fold 0 CHECKPOINT 6.69 min, peak 19.52 GB
+s3 3397 fold 0 CHECKPOINT 6.69 min, peak 19.52 GB
+T 12:43:31 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3379 fold 1 epoch 0 loss 0.6066 8.8 min
+s2 3468 fold 1 epoch 0 loss 0.6181 8.8 min
+s3 3468 fold 1 epoch 0 loss 0.5915 8.8 min
+T 12:44:36 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3415 fold 1 epoch 0 loss 0.6066 8.8 min
+s2 3504 fold 1 epoch 0 loss 0.6181 8.8 min
+s3 3504 fold 1 epoch 0 loss 0.5915 8.8 min
+T 12:45:40 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3487 fold 1 epoch 1 loss 0.3528 10.9 min
+s2 3576 fold 1 epoch 1 loss 0.3411 11.0 min
+s3 3576 fold 1 epoch 1 loss 0.3354 11.0 min
+T 12:46:44 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3524 fold 1 epoch 1 loss 0.3528 10.9 min
+s2 3613 fold 1 epoch 1 loss 0.3411 11.0 min
+s3 3613 fold 1 epoch 1 loss 0.3354 11.0 min
+T 12:47:57 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3603 fold 1 CHECKPOINT 6.72 min, peak 19.521 GB
+s2 3692 fold 1 CHECKPOINT 6.73 min, peak 19.521 GB
+s3 3692 fold 1 CHECKPOINT 6.71 min, peak 19.521 GB
+T 12:49:09 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3639 fold 1 CHECKPOINT 6.72 min, peak 19.521 GB
+s2 3728 fold 1 CHECKPOINT 6.73 min, peak 19.521 GB
+s3 3728 fold 1 CHECKPOINT 6.71 min, peak 19.521 GB
+T 12:50:16 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3711 fold 2 epoch 0 loss 0.5639 15.5 min
+s2 3800 fold 2 epoch 0 loss 0.6378 15.6 min
+s3 3800 fold 2 epoch 0 loss 0.5789 15.5 min
+T 12:51:31 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3747 fold 2 epoch 0 loss 0.5639 15.5 min
+s2 3836 fold 2 epoch 0 loss 0.6378 15.6 min
+s3 3836 fold 2 epoch 0 loss 0.5789 15.5 min
+T 12:52:36 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3819 fold 2 epoch 1 loss 0.2987 17.6 min
+s2 3908 fold 2 epoch 1 loss 0.5496 17.7 min
+s3 3908 fold 2 epoch 1 loss 0.3423 17.7 min
+T 12:53:40 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3856 fold 2 epoch 1 loss 0.2987 17.6 min
+s2 3945 fold 2 epoch 1 loss 0.5496 17.7 min
+s3 3945 fold 2 epoch 1 loss 0.3423 17.7 min
+T 12:54:44 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 3935 fold 2 CHECKPOINT 6.71 min, peak 19.521 GB
+s2 4024 fold 2 CHECKPOINT 6.71 min, peak 19.521 GB
+s3 4024 fold 2 CHECKPOINT 6.71 min, peak 19.521 GB
+T 12:55:49 procs 5 gpu 99 %, 64622 MiB root_df 13%
+s1 3971 fold 2 CHECKPOINT 6.71 min, peak 19.521 GB
+s2 4060 fold 2 CHECKPOINT 6.71 min, peak 19.521 GB
+s3 4060 fold 2 CHECKPOINT 6.71 min, peak 19.521 GB
+T 12:56:53 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4043 fold 3 epoch 0 loss 0.6077 22.2 min
+s2 4132 fold 3 epoch 0 loss 0.6078 22.3 min
+s3 4132 fold 3 epoch 0 loss 0.6287 22.2 min
+T 12:57:58 procs 5 gpu 99 %, 64622 MiB root_df 13%
+s1 4079 fold 3 epoch 0 loss 0.6077 22.2 min
+s2 4168 fold 3 epoch 0 loss 0.6078 22.3 min
+s3 4168 fold 3 epoch 0 loss 0.6287 22.2 min
+T 12:59:02 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4151 fold 3 epoch 1 loss 0.4036 24.4 min
+s2 4240 fold 3 epoch 1 loss 0.3781 24.4 min
+s3 4240 fold 3 epoch 1 loss 0.4132 24.4 min
+T 13:00:06 procs 5 gpu 100 %, 65150 MiB root_df 13%
+s1 4188 fold 3 epoch 1 loss 0.4036 24.4 min
+s2 4277 fold 3 epoch 1 loss 0.3781 24.4 min
+s3 4277 fold 3 epoch 1 loss 0.4132 24.4 min
+T 13:01:10 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4267 fold 3 CHECKPOINT 6.72 min, peak 19.521 GB
+s2 4356 fold 3 CHECKPOINT 6.73 min, peak 19.521 GB
+s3 4356 fold 3 CHECKPOINT 6.72 min, peak 19.521 GB
+T 13:02:14 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4303 fold 3 CHECKPOINT 6.72 min, peak 19.521 GB
+s2 4392 fold 3 CHECKPOINT 6.73 min, peak 19.521 GB
+s3 4392 fold 3 CHECKPOINT 6.72 min, peak 19.521 GB
+T 13:03:18 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4375 fold 4 epoch 0 loss 0.6069 28.9 min
+s2 4464 fold 4 epoch 0 loss 0.5972 29.0 min
+s3 4464 fold 4 epoch 0 loss 0.5813 29.0 min
+T 13:04:22 procs 5 gpu 99 %, 64622 MiB root_df 13%
+s1 4411 fold 4 epoch 0 loss 0.6069 28.9 min
+s2 4464 fold 4 epoch 0 loss 0.5972 29.0 min
+s3 4464 fold 4 epoch 0 loss 0.5813 29.0 min
+T 13:05:25 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4447 fold 4 epoch 1 loss 0.3819 31.1 min
+s2 4536 fold 4 epoch 1 loss 0.3798 31.2 min
+s3 4536 fold 4 epoch 1 loss 0.3244 31.1 min
+T 13:06:29 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4483 fold 4 epoch 1 loss 0.3819 31.1 min
+s2 4572 fold 4 epoch 1 loss 0.3798 31.2 min
+s3 4572 fold 4 epoch 1 loss 0.3244 31.1 min
+T 13:07:32 procs 5 gpu 100 %, 64622 MiB root_df 13%
+s1 4556 fold 4 epoch 2 loss 0.6940 33.2 min
+s2 4645 fold 4 epoch 2 loss 0.1575 33.3 min
+s3 4645 fold 4 epoch 2 loss 0.1394 33.2 min
+T 13:08:35 procs 3 gpu 75 %, 21541 MiB root_df 13%
+s1 4677 WROTE /workspace/scores/part20/POD1b/std_ft_seed1_pitt_oof.csv total 33.5 min
+s2 4766 WROTE /workspace/scores/part20/POD1b/std_ft_seed2_pitt_oof.csv total 33.5 min
+s3 4765 WROTE /workspace/scores/part20/POD1b/std_ft_seed3_pitt_oof.csv total 33.5 min
+NEW_RESULT
