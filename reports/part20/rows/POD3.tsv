@@ -1,0 +1,6 @@
+id	what	value_computed	value_verified	lo	hi	n	n_spk	file	two_dp	vs_half	agree_4dp
+POD3_ft966_conflict	Omni projector FT on 966 E-DAIC clips, conflict AUC (483 rows)	0.5932	0.5932	0.5087	0.6831	483	138	scores/part20/POD3/p14_ft966_oof.csv	0.59 [0.51, 0.68]	above	True
+POD3_ft966_agreement483	Omni projector FT on 966 E-DAIC clips, agreement AUC (483 rows)	0.6228	0.6228	0.5222	0.7238	483	138	scores/part20/POD3/p14_ft966_oof.csv	0.62 [0.52, 0.72]	above	True
+POD3_ft966_agreement311	Omni projector FT on 966 E-DAIC clips, agreement AUC (311 distinct segments)	0.6686	0.6686	0.5727	0.7586	311	138	scores/part20/POD3/p14_ft966_oof.csv	0.67 [0.57, 0.76]	above	True
+POD3_ft966_paired_conf_minus_agr483	Omni projector FT on 966 clips, paired conflict minus agreement (483 rows)	-0.0296	-0.0296	-0.1124	0.0491	966	138	scores/part20/POD3/p14_ft966_oof.csv	-0.03 [-0.11, 0.05]	straddles_0	True
+POD3_ft966_paired_conf_minus_agr311	Omni projector FT on 966 clips, paired conflict minus agreement (311 distinct)	-0.0754	-0.0754	-0.1513	0.0010	794	138	scores/part20/POD3/p14_ft966_oof.csv	-0.08 [-0.15, 0.00]	straddles_0	True

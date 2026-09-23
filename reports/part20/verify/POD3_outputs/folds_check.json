@@ -1,0 +1,47 @@
+{
+ "n_fold_rows": 966,
+ "n_man_rows": 966,
+ "n_ref_rows": 966,
+ "sklearn": "1.9.1",
+ "numpy": "2.1.2",
+ "fold_file_clip_eq_ref_seg_uid_positional": true,
+ "fold_file_spk_eq_ref_positional": true,
+ "man_path_key_eq_ref_positional": true,
+ "man_label_eq_ref": true,
+ "man_set_eq_ref": true,
+ "man_pair_eq_ref": true,
+ "man_fold_eq_fold_file": true,
+ "mismatch_vs_own_stable": 0,
+ "mismatch_vs_sklearn_here": 0,
+ "mismatch_vs_default_argsort_here": 612,
+ "speaker_split_across_folds_rows": 0,
+ "n_speakers": 138,
+ "fold_rows": [
+  194,
+  194,
+  194,
+  192,
+  192
+ ],
+ "fold_speakers": [
+  28,
+  28,
+  28,
+  27,
+  27
+ ],
+ "fold_conflict_rows": [
+  97,
+  97,
+  97,
+  96,
+  96
+ ],
+ "fold_pos_rows": [
+  92,
+  68,
+  92,
+  54,
+  104
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "csv": "/workspace/scores/part20/POD3/p14_ft966_oof.csv",
+ "csv_md5": "7ca99cb0acfeb179be4dcd88d850dea8",
+ "checks": {
+  "csv_speaker_matches_id": true,
+  "csv_arm_matches_id": true,
+  "label_matches_ref": true,
+  "multiset_equals_ref": true,
+  "positional_order_equals_ref": true,
+  "no_nan_scores": true,
+  "csv_prompt_all_verbatim": true,
+  "sidecar_prompt_fields": [
+   [
+    ".prompt",
+    true
+   ]
+  ],
+  "sidecar_prompt_verbatim": true,
+  "folds_speaker_disjoint": true,
+  "folds_equal_my_stable_gkf": true,
+  "folds_cover_csv_speakers": true,
+  "run_manifest_speakers_equal_folds_rows": true,
+  "folds_equal_my_stable_gkf_on_run_manifest": true,
+  "folds_equal_sklearn_gkf_here": true
+ },
+ "n": 966,
+ "n_speakers": 138,
+ "arm_counts": {
+  "agreement": 483,
+  "conflict": 483
+ },
+ "arm_pos": {
+  "agreement": 205,
+  "conflict": 205
+ },
+ "arm_speakers": {
+  "agreement": 138,
+  "conflict": 138
+ },
+ "sidecar": "/workspace/scores/part20/POD3/p14_ft966_oof.sidecar.json",
+ "distinct_agreement_segments": 311,
+ "max_p_yes_spread_within_repeated_segment": 0.0,
+ "values": {
+  "conflict": {
+   "auc": 0.5931742410949289,
+   "auc_trap": 0.593174241094929,
+   "mw_minus_trap": -1.1102230246251565e-16,
+   "lo": 0.5086622473809388,
+   "hi": 0.683114928715514,
+   "n": 483,
+   "n_spk": 138,
+   "n_pos": 205,
+   "n_neg": 278,
+   "usable": 2000
+  },
+  "agreement483": {
+   "auc": 0.6228110194771013,
+   "auc_trap": 0.6228110194771013,
+   "mw_minus_trap": 0.0,
+   "lo": 0.5222262670288206,
+   "hi": 0.7238100923320775,
+   "n": 483,
+   "n_spk": 138,
+   "n_pos": 205,
+   "n_neg": 278,
+   "usable": 2000
+  },
+  "agreement311": {
+   "auc": 0.6686176142697882,
+   "auc_trap": 0.668617614269788,
+   "mw_minus_trap": 1.1102230246251565e-16,
+   "lo": 0.5726899383358885,
+   "hi": 0.7585877692709527,
+   "n": 311,
+   "n_spk": 138,
+   "n_pos": 104,
+   "n_neg": 207,
+   "usable": 2000
+  },
+  "pooled966": {
+   "auc": 0.6091814353395333,
+   "auc_trap": 0.6091814353395333,
+   "mw_minus_trap": 0.0,
+   "lo": 0.5248010734605223,
+   "hi": 0.697345067636173,
+   "n": 966,
+   "n_spk": 138,
+   "n_pos": 410,
+   "n_neg": 556,
+   "usable": 2000
+  },
+  "paired_conf_minus_agr483": {
+   "auc": -0.02963677838217238,
+   "lo": -0.11242597160073434,
+   "hi": 0.04909860194201977,
+   "n": 966,
+   "n_spk": 138,
+   "usable": 2000,
+   "frac_diff_below0": 0.7615
+  },
+  "paired_conf_minus_agr311": {
+   "auc": -0.07544337317485927,
+   "lo": -0.15134199400533244,
+   "hi": 0.000984416450056787,
+   "n": 794,
+   "n_spk": 138,
+   "usable": 2000,
+   "frac_diff_below0": 0.973
+  }
+ },
+ "folds_file": "/workspace/p20/part14_groupkfold5_pod.csv",
+ "folds_n_rows": 966,
+ "folds_n_speakers": 138,
+ "folds_sizes_rows": [
+  194,
+  194,
+  194,
+  192,
+  192
+ ],
+ "folds_mismatch_vs_my_stable": 0,
+ "run_manifest": "/workspace/p20/p14_ft966_manifest.csv",
+ "run_manifest_n": 966,
+ "sklearn_version": "1.9.1",
+ "numpy_version": "2.1.2",
+ "folds_mismatch_vs_sklearn_here": 0
+}
