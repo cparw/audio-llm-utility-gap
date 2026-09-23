@@ -1,0 +1,33 @@
+id	what	value	lo	hi	n	n_spk	file
+3b_all_cos	Q3O Pitt readout-direction cosine, all clips (random floor 0.0177 [0.0008,0.0498])	0.0051			468	228	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_all_auc_probe	Q3O Pitt answer-state probe AUC, all clips	0.8307	0.7833	0.8741	468	228	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_all_auc_d	Q3O Pitt AUC of the readout direction alone, all clips	0.7656	0.7088	0.8179	468	228	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_all_auc_wo_d	Q3O Pitt probe AUC with the readout direction removed, all clips	0.8305	0.7826	0.8737	468	228	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_conflict_cos	Q3O Pitt readout-direction cosine, CONFLICT arm (random floor 0.0177 [0.0008,0.0516])	-0.0067			146	100	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_conflict_auc_probe	Q3O Pitt answer-state probe AUC, CONFLICT arm	0.6145	0.5021	0.7246	146	100	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_conflict_auc_d	Q3O Pitt AUC of the readout direction alone, CONFLICT arm	0.6029	0.4965	0.7025	146	100	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_conflict_auc_wo_d	Q3O Pitt probe AUC with the readout direction removed, CONFLICT arm	0.6196	0.5094	0.7283	146	100	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_agreement_cos	Q3O Pitt readout-direction cosine, AGREEMENT arm (random floor 0.0172 [0.0007,0.0480])	0.0086			322	175	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_agreement_auc_probe	Q3O Pitt answer-state probe AUC, AGREEMENT arm	0.9349	0.9034	0.9614	322	175	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_agreement_auc_d	Q3O Pitt AUC of the readout direction alone, AGREEMENT arm	0.8264	0.7741	0.8731	322	175	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3b_agreement_auc_wo_d	Q3O Pitt probe AUC with the readout direction removed, AGREEMENT arm	0.9341	0.9021	0.9604	322	175	scores/part16/POD3/readout_direction_q3o_by_arm.csv
+3a_pitt_zeroshot_pod	Q3O Pitt zero-shot answer AUC, THIS pod (rank formula, deterministic, reproduced twice bit-exact)	0.7673			468	228	scores/part16/POD3/q3o_pitt_zeroshot_scores.csv
+3a_pitt_zeroshot_shipped	Q3O Pitt zero-shot answer AUC, SHIPPED file recomputed here with the rank formula	0.7619			468	228	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv
+3a_pitt_enc_nested	Q3O Pitt ENCODER nested probe AUC (5-repeat mean, layer chosen inside the training folds)	0.8122	0.7613	0.8625	468	228	scores/part16/POD3/q3o_pitt_encoder_perlayer.csv
+3a_pitt_enc_best_stage	Q3O Pitt ENCODER best single stage = layer 30 (descriptive max, oracle-selected)	0.8276	0.7765	0.8760	468	228	scores/part16/POD3/q3o_pitt_encoder_perlayer.csv
+3a_pitt_proj_nested	Q3O Pitt PROJECTOR probe AUC (single point, no layer choice)	0.7820	0.7228	0.8368	468	228	scores/part16/POD3/q3o_pitt_proj_perlayer.csv
+3a_pitt_llm_nested	Q3O Pitt LANGUAGE MODEL nested probe AUC (5-repeat mean, layer chosen inside the training folds)	0.8445	0.8003	0.8878	468	228	scores/part16/POD3/q3o_pitt_llm_perlayer.csv
+3a_pitt_llm_best_stage	Q3O Pitt LANGUAGE MODEL best single stage = thinker layer 13 (descriptive max, oracle-selected)	0.8634	0.8179	0.9062	468	228	scores/part16/POD3/q3o_pitt_llm_perlayer.csv
+3a_pitt_ans_nested	Q3O Pitt ANSWER STATE nested probe AUC (5-repeat mean, stage chosen inside the training folds)	0.8237	0.7827	0.8641	468	228	scores/part16/POD3/q3o_pitt_ans_perlayer.csv
+3a_pitt_ans_best_stage	Q3O Pitt ANSWER STATE best single stage = thinker layer 26 (descriptive max, oracle-selected)	0.8485	0.8069	0.8882	468	228	scores/part16/POD3/q3o_pitt_ans_perlayer.csv
+3a_pcgita_zeroshot_pod	Q3O PC-GITA zero-shot answer AUC, THIS pod (re-extracted from original audio)	0.6015			1100	100	scores/part16/POD3/q3o_pcgita_zeroshot_scores.csv
+3a_pcgita_zeroshot_shipped	Q3O PC-GITA zero-shot answer AUC, SHIPPED file recomputed here	0.5967			1100	100	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv
+3a_attn_sdpa	Q3O Pitt zero-shot AUC, sdpa attention kernel (mechanism test, all else fixed)	0.7673			468	228	scores/part16/POD3/q3o_pitt_attn_backend.csv
+3a_attn_eager	Q3O Pitt zero-shot AUC, eager attention kernel (mechanism test, all else fixed)	0.7679			468	228	scores/part16/POD3/q3o_pitt_attn_backend.csv
+3a_pcgita_enc_nested	Q3O PC-GITA ENCODER nested probe AUC (5-repeat mean, layer chosen inside the training folds)	0.8969	0.8322	0.9454	1100	100	scores/part16/POD3/q3o_pcgita_encoder_perlayer.csv
+3a_pcgita_enc_best_stage	Q3O PC-GITA ENCODER best single stage = audio encoder layer 14 (descriptive max, oracle-selected)	0.9133	0.8519	0.9604	1100	100	scores/part16/POD3/q3o_pcgita_encoder_perlayer.csv
+3a_pcgita_proj_nested	Q3O PC-GITA PROJECTOR probe AUC (single point, no layer choice; 0.8872 in memory, see DISCREPANCIES LOW)	0.8873	0.8156	0.9431	1100	100	scores/part16/POD3/q3o_pcgita_proj_perlayer.csv
+3a_pcgita_llm_nested	Q3O PC-GITA LANGUAGE MODEL nested probe AUC (5-repeat mean, layer chosen inside the training folds)	0.8772	0.8117	0.9309	1100	100	scores/part16/POD3/q3o_pcgita_llm_perlayer.csv
+3a_pcgita_llm_best_stage	Q3O PC-GITA LANGUAGE MODEL best single stage = thinker layer 14 (descriptive max, oracle-selected)	0.8960	0.8341	0.9463	1100	100	scores/part16/POD3/q3o_pcgita_llm_perlayer.csv
+3a_pcgita_ans_nested	Q3O PC-GITA ANSWER STATE nested probe AUC (5-repeat mean, stage chosen inside the training folds)	0.8814	0.8171	0.9330	1100	100	scores/part16/POD3/q3o_pcgita_ans_perlayer.csv
+3a_pcgita_ans_best_stage	Q3O PC-GITA ANSWER STATE best single stage = thinker layer 15 (descriptive max, oracle-selected)	0.8962	0.8327	0.9452	1100	100	scores/part16/POD3/q3o_pcgita_ans_perlayer.csv
