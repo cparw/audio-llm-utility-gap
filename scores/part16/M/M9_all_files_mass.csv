@@ -1,0 +1,306 @@
+model,dataset,n,n_speakers,median_mass,p10_mass,min_mass,share_below_0.01,share_below_0.15,mass_column_used,file
+Audio Flamingo 2,kcl30b,37,37,0.8661956191062927,0.8434171855449677,0.8355233371257782,0.0,0.0,mass,<local data dir>/paper1_local_runs/af2_kcl30b_audio.csv
+Audio Flamingo 2,kcl,37,37,0.8692581206560135,0.8305831879377366,0.7957277968525887,0.0,0.0,mass,<local data dir>/paper1_local_runs/af2_kcl_audio.csv
+Audio Flamingo 2,smoke,3,3,0.8694102317094803,0.8620700508356094,0.8602350056171417,0.0,0.0,mass,<local data dir>/paper1_local_runs/af2_smoke.csv
+Qwen2.5-Omni,kcl30b,37,37,0.8866126649081707,0.872691143117845,0.8625209257006645,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_kcl30b_audio.csv
+Audio Flamingo 3,pcgita,1100,100,0.89680315554142,0.8419533684849739,0.7507123351097107,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/part3/af3_pcgita.csv
+unattributed,pcgita1100,1100,100,0.8974962383508682,0.845315358042717,0.7346421778202057,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/runpod_results/pcgita1100_af3.csv
+Audio Flamingo 2,adresso,237,237,0.8983031809329987,0.8688084304332733,0.8443357199430466,0.0,0.0,mass,<local data dir>/paper1_local_runs/af2_adresso_audio.csv
+Audio Flamingo 3,pcgita40,40,40,0.9000676870346069,0.8617089584469795,0.8130543828010559,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af3_pcgita40_control.csv
+Audio Flamingo 3,kcl,37,37,0.9019507169723512,0.8595228612422943,0.8148707449436188,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_kcl_audio.csv
+Audio Flamingo 2,pitt,468,228,0.9043519198894501,0.8836810916662217,0.8437738418579102,0.0,0.0,mass,<local data dir>/paper1_local_runs/af2_pitt_audio.csv
+Audio Flamingo 2,adress2020,156,156,0.904718279838562,0.8825097382068634,0.8488394320011139,0.0,0.0,mass,<local data dir>/paper1_local_runs/af2_adress2020_audio.csv
+Qwen2-Audio,adresso,237,237,0.9109534621238708,0.7951909348368644,0.5272713899612427,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_adresso_text.csv
+Audio Flamingo 3,adress2020,156,156,0.9115000367164612,0.8528097122907639,0.791933536529541,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_adress2020_text.csv
+Audio Flamingo 3,neurovoz,1270,107,0.913163885474205,0.851852086186409,0.7900493144989014,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/af3_new/af3_neurovoz.csv
+Audio Flamingo 3,neurovoz,1270,107,0.913163885474205,0.851852086186409,0.7900493144989014,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/af3_neurovoz.csv
+unattributed,neurovoz1270,1270,107,0.9133096635341644,0.8530131876468658,0.7910874485969543,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/runpod_results/neurovoz1270_af3.csv
+Audio Flamingo 3,pitt,468,228,0.91733218729496,0.8506651282310486,0.7154479920864105,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_pitt_text.csv
+Audio Flamingo 3,unknown,275,275,0.9266144931316376,0.8681938290596009,0.7764758467674255,0.0,0.0,answer_mass,scores/edaic_windows/af3_mid30.csv
+Audio Flamingo 3,edaic,275,275,0.9272385239601136,0.8869627714157104,0.8288556784391403,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/final/af3_edaic.csv
+Audio Flamingo 3,edaic,275,275,0.9272385239601136,0.8869627714157104,0.8288556784391403,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/part10/af3_edaic.csv
+Qwen2-Audio,pitt,468,228,0.930038794875145,0.7991005212068558,0.4424881786108017,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_pitt_text.csv
+Audio Flamingo 2,kcl37,37,37,0.9304426610469818,0.923946064710617,0.9143491089344024,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af2_results/af2_kcl37.csv
+unattributed,unknown,966,138,0.9310977533459663,0.8636986687779427,0.6233386248350143,0.0,0.0,answer_mass,scores/edaic_conflict_v2/p14_af3.csv
+Audio Flamingo 3,edaic_conflict,390,74,0.9332423061132431,0.8719659507274627,0.7536211907863617,0.0,0.0,answer_mass,<local data dir>/Desktop/release/edaic_conflict_new/af3_edaic_conflict.csv
+Audio Flamingo 3,edaic_conflict,390,74,0.9332423061132431,0.8719659507274627,0.7536211907863617,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/af3_edaic_conflict.csv
+Qwen2.5-Omni,pitt,20,13,0.9341611862182616,0.9197134166955948,0.9172996133565904,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v1s.csv
+Audio Flamingo 2,edaic275,275,275,0.9392204284667968,0.9245920777320862,0.9038091897964478,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af2_results/af2_edaic275.csv
+Audio Flamingo 3,kcl37,37,37,0.9398329854011536,0.9260631561279297,0.8941052258014679,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af3_kcl37_verify.csv
+Audio Flamingo 3,unknown,275,275,0.9398461580276488,0.8872427761554718,0.8150552809238434,0.0,0.0,answer_mass,scores/edaic_windows/af3_mid300.csv
+Audio Flamingo 2,pcgita1100,1100,100,0.9400466978549957,0.9323404699563981,0.9215295612812042,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af2_results/af2_pcgita1100.csv
+Qwen2.5-Omni,pitt,20,13,0.9406844526529312,0.9263309642672538,0.9188309013843536,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v4s.csv
+Audio Flamingo 2,neurovoz1270,1270,107,0.9412429481744766,0.9323609709739684,0.9219017922878264,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af2_results/af2_neurovoz1270.csv
+Audio Flamingo 3,unknown,275,275,0.9413084536790848,0.8851350545883179,0.6766101717948914,0.0,0.0,answer_mass,scores/edaic_windows/af3_full.csv
+Audio Flamingo 3,unknown,275,275,0.9413084536790848,0.8851350545883179,0.6766101717948914,0.0,0.0,answer_mass,scores/pitt_all/af3_full.csv
+unattributed,unknown,966,138,0.9423083662986755,0.928677886724472,0.9091677665710448,0.0,0.0,answer_mass,scores/edaic_conflict_v2/p14_af2.csv
+Qwen2.5-Omni,pitt,468,228,0.9423086047172546,0.9214904680848122,0.903411015868187,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v1s_strip.csv
+Qwen2-Audio,adress2020,156,156,0.9424025788903236,0.8551567308604717,0.6859629899263382,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_adress2020_text.csv
+unattributed,kcl37,37,37,0.9424661993980408,0.9151164710521698,0.8130976557731628,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/runpod_results/kcl37_recut_af3.csv
+unattributed,edaic275,275,275,0.9426113963127136,0.8861295580863953,0.7835180461406708,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/runpod_results/edaic275_af3.csv
+Qwen2.5-Omni,pitt,20,13,0.943361297249794,0.9319439128041268,0.923069193959236,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v2s.csv
+Audio Flamingo 3,kcl,37,37,0.9434018433094024,0.9203962504863739,0.813214510679245,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/af3_new/af3_kcl.csv
+Audio Flamingo 3,kcl,37,37,0.9434018433094024,0.9203962504863739,0.813214510679245,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/af3_kcl.csv
+Audio Flamingo 3,kcl,37,37,0.9434018433094024,0.9203962504863739,0.813214510679245,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/part3/af3_kcl.csv
+Qwen2.5-Omni,pitt,468,228,0.943814992904663,0.9214941740036011,0.9006712958216667,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v7s_strip.csv
+Audio Flamingo 3,edaic30,275,275,0.9441188126802444,0.8934306621551513,0.7838408052921295,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_edaic30_text.csv
+unattributed,adress2020,156,156,0.9442116469144821,0.918868899345398,0.8600836396217346,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/runpod_results/adress2020_af3.csv
+Audio Flamingo 3,kcl30b,37,37,0.9447878003120422,0.9175940692424774,0.8129226267337799,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_kcl30b_audio.csv
+Audio Flamingo 2,unknown,390,74,0.9452540427446365,0.9340953648090362,0.9116645455360411,0.0,0.0,answer_mass,<local data dir>/Desktop/release/edaic_conflict_new/af2/perclip_390rows_af2.csv
+Audio Flamingo 2,edaic_conflict,390,74,0.9452540427446365,0.9340953648090362,0.9116645455360411,0.0,0.0,answer_mass,<local data dir>/Desktop/release/edaic_conflict_new/af2/af2_edaic_conflict_30s.csv
+Audio Flamingo 3,adress2020,156,156,0.9457225352525711,0.9171235263347626,0.8601750731468201,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/af3_adress2020.csv
+Audio Flamingo 3,adress2020,156,156,0.9457225352525711,0.9171235263347626,0.8601750731468201,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/af3_new/af3_adress2020.csv
+Audio Flamingo 3,adress2020,156,156,0.9461354613304138,0.9189871102571487,0.8583584725856781,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_adress2020_audio.csv
+Qwen2.5-Omni,pitt,468,228,0.9465623162686825,0.9257789149880409,0.9027575254440308,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v3s_strip.csv
+Audio Flamingo 3,pitt,468,228,0.948388084769249,0.9093532621860505,0.7586762383580208,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/part10/af3_pitt.csv
+Audio Flamingo 3,pitt,468,228,0.948388084769249,0.9093532621860505,0.7586762383580208,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/final/af3_pitt.csv
+Audio Flamingo 3,pitt,468,228,0.948676809668541,0.9133042812347412,0.7391040101647377,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/part3/af3_pitt.csv
+Audio Flamingo 3,pitt,468,228,0.948895737528801,0.9124510288238524,0.7547941952943802,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_pitt_audio.csv
+Qwen2.5-Omni,adress2020,156,156,0.9492531456053256,0.9205838590860367,0.8904154896736145,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adress2020_text_v7s.csv
+Qwen2.5-Omni,adress2020,156,156,0.9494892284274101,0.9262668155133724,0.893130749464035,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adress2020_text_v1s.csv
+Qwen2.5-Omni,adresso,237,237,0.951541505753994,0.9358030050992966,0.8813982456922531,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_adresso_audio.csv
+Qwen2.5-Omni,adress2020,156,156,0.9517365396022797,0.925868958234787,0.9003982543945312,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adress2020_text_v3s.csv
+Audio Flamingo 3,edaicfull,275,275,0.951814353466034,0.9041127264499664,0.793448731303215,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_edaicfull_text.csv
+Qwen2.5-Omni,pitt,468,228,0.9518627002835274,0.9341283366084099,0.9145113825798036,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_pitt_text.csv
+unattributed,pitt468,468,228,0.9523705840110779,0.927055199444294,0.7656692862510681,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/runpod_results/pitt468_af3.csv
+Audio Flamingo 3,smoke,3,1,0.9528866410255432,0.9498541235923768,0.9490959942340852,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_smoke_audio.csv
+Qwen2.5-Omni,pitt,468,228,0.9530255366116762,0.9379780754446984,0.9076008945703506,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_pitt_audio.csv
+Qwen2.5-Omni,adress2020,156,156,0.9549062848091125,0.9422853589057922,0.9098960012197496,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_adress2020_audio.csv
+Qwen2.5-Omni,adresso,237,237,0.9565730541944504,0.9328728079795837,0.8202472487464547,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adresso_text_v1s.csv
+Audio Flamingo 3,adresso,237,237,0.9567984640598296,0.9201881289482117,0.5404112637042999,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_adresso_audio.csv
+Qwen2.5-Omni,adress2020,156,156,0.9572695307433605,0.9375856146216393,0.910382643342018,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_adress2020_text.csv
+unattributed,adresso237,237,237,0.9573426842689514,0.9219435691833495,0.5624448955059052,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/runpod_results/adresso237_af3.csv
+Qwen2.5-Omni,adresso,237,237,0.957626525312662,0.935060441493988,0.7285924647003412,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adresso_text_v7s.csv
+Audio Flamingo 3,adresso,237,237,0.9578540325164796,0.921510249376297,0.5485797375440598,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/af3_adresso.csv
+Audio Flamingo 3,adresso,237,237,0.9578540325164796,0.921510249376297,0.5485797375440598,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/af3_new/af3_adresso.csv
+Qwen2.5-Omni,adresso,237,237,0.958630569279194,0.9351270750164986,0.7151879379525781,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adresso_text_v3s.csv
+Qwen2-Audio,edaic30,275,275,0.959451586008072,0.8766993522644043,0.6523239426314831,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_edaic30_text.csv
+Qwen2.5-Omni,adresso,237,237,0.9610180705785752,0.9438675031065942,0.8939288500696421,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_adresso_text.csv
+Audio Flamingo 2,adresso237,237,237,0.9613619148731232,0.9523787677288056,0.9431703090667723,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af2_results/af2_adresso237.csv
+Audio Flamingo 2,pitt468,468,228,0.9625724405050278,0.9508032828569413,0.9350520074367524,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv
+Audio Flamingo 3,adresso,237,237,0.9648930132389067,0.8995150983333587,0.816786140203476,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_adresso_text.csv
+Audio Flamingo 3,conflict,390,74,0.9660986829549074,0.8892095983028412,0.7236226350069046,0.0,0.0,mass,<local data dir>/paper1_local_runs/af3_conflict_text.csv
+Qwen2-Audio,edaicfull,275,275,0.9664300009608268,0.9095821246504784,0.8071786165237427,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_edaicfull_text.csv
+Audio Flamingo 2,adress2020,156,156,0.9675679206848145,0.9538246989250182,0.9391726851463318,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/af2_results/af2_adress2020.csv
+Kimi-Audio,conflict,390,74,0.9695406258106232,0.944992133975029,0.8756531327962875,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_conflict_text.csv
+Qwen2.5-Omni,conflict,390,74,0.97902812063694,0.9569359660148621,0.9345509707927704,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_conflict_text.csv
+Kimi-Audio,adresso,237,237,0.9796972274780272,0.96135693192482,0.920482099056244,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_adresso_text.csv
+Qwen2-Audio,conflict,390,74,0.9808017835021019,0.8778848350048065,0.6103512346744537,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_conflict_text.csv
+Qwen2.5-Omni,edaic30,275,275,0.9813490845263004,0.9674735277891159,0.9328334033489228,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_edaic30_text.csv
+Kimi-Audio,pitt,468,228,0.981995329260826,0.9678193449974061,0.946995735168457,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_pitt_text.csv
+Kimi-Audio,edaicfull,275,275,0.984457477927208,0.9642892718315125,0.9215151965618134,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_edaicfull_text.csv
+Kimi-Audio,edaic30,275,275,0.9846373498439788,0.9727834075689317,0.9509133100509644,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_edaic30_text.csv
+Qwen2.5-Omni,edaic30,275,275,0.9847699329257013,0.9665188804268837,0.9283498227596284,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v7s.csv
+Qwen2.5-Omni,edaicfull,275,275,0.9848074018955232,0.9719936370849609,0.9536787271499634,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_edaicfull_text.csv
+Qwen2.5-Omni,unknown,390,74,0.9854272366501391,0.958503469824791,0.9083067178726196,0.0,0.0,mass,<local data dir>/Desktop/release/overnight/edaic_paradox/omni_clip_scores.csv
+Kimi-Audio,adress2020,156,156,0.9854746907949448,0.9773550182580948,0.9528129696846008,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_adress2020_text.csv
+Qwen2.5-Omni,edaic30,20,20,0.9858556669205427,0.9677844397723676,0.963755428791046,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v4s.csv
+Qwen2.5-Omni,edaic30,275,275,0.9858768247067928,0.969676099717617,0.9288670122623444,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v3s.csv
+Qwen2.5-Omni,edaic30,275,275,0.9861263763159512,0.9705765321850777,0.9321673214435576,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v1s.csv
+Qwen2.5-Omni,edaic30,20,20,0.9867024659179151,0.9726736180484296,0.9651551842689514,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v2s.csv
+Qwen2.5-Omni,kcl,37,37,0.9887885749340056,0.9874063909053804,0.9852591156959534,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_kcl_zeroshot_scores.csv
+Qwen2.5-Omni,kcl,37,37,0.9887885749340056,0.9874063909053804,0.9852591156959534,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv
+Qwen2.5-Omni,kcl37,37,37,0.9891204237937928,0.9871658563613891,0.9851227849721907,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/omni_results/omni_kcl37_recut_audio.csv
+unattributed,unknown,966,138,0.9901652211556212,0.9405870288610458,0.6956106051802635,0.0,0.0,answer_mass,scores/part16/pod_sync/p14_q2a_text.csv
+unattributed,unknown,966,138,0.9901652211556212,0.9405870288610458,0.6956106051802635,0.0,0.0,answer_mass,<local data dir>/Desktop/release/edaic_rerun/part15/partB/p14_q2a_text.csv
+Qwen2.5-Omni,edaic,275,275,0.9911644905805588,0.9861069053411484,0.9694016501307487,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_edaic_p2.csv
+Qwen2.5-Omni,edaic,275,275,0.9911644905805588,0.9861069053411484,0.9694016501307487,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_edaic_p2.csv
+Qwen2.5-Omni,kcl,37,37,0.9915443658828736,0.9890149295330048,0.98521026968956,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_kcl_p2.csv
+Qwen2.5-Omni,kcl,37,37,0.9915443658828736,0.9890149295330048,0.98521026968956,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_kcl_p2.csv
+Qwen2.5-Omni,adress2020,156,156,0.991967648267746,0.9880199581384659,0.9843012988567352,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_adress2020_p2.csv
+Qwen2.5-Omni,adress2020,156,156,0.991967648267746,0.9880199581384659,0.9843012988567352,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_adress2020_p2.csv
+Qwen2.5-Omni,adresso,237,237,0.9920248687267303,0.9875623643398285,0.984021246433258,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_adresso_p2.csv
+Qwen2.5-Omni,adresso,237,237,0.9920248687267303,0.9875623643398285,0.984021246433258,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_adresso_p2.csv
+Qwen2.5-Omni,pitt,468,228,0.9922087490558624,0.9886679470539094,0.9838862717151642,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_pitt_p2.csv
+Qwen2.5-Omni,pitt,468,228,0.9922087490558624,0.9886679470539094,0.9838862717151642,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_pitt_p2.csv
+Qwen2.5-Omni,kcl,37,37,0.9927691519260406,0.9910399317741395,0.9891298860311508,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_kcl_p3.csv
+Qwen2.5-Omni,kcl,37,37,0.9927691519260406,0.9910399317741395,0.9891298860311508,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_kcl_p3.csv
+Qwen2.5-Omni,pitt,468,228,0.9930511564016342,0.9916539937257767,0.989552527666092,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_pitt_p3.csv
+Qwen2.5-Omni,pitt,468,228,0.9930511564016342,0.9916539937257767,0.989552527666092,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_pitt_p3.csv
+Qwen2.5-Omni,adress2020,156,156,0.9931405782699585,0.9918216317892075,0.990443766117096,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_adress2020_p3.csv
+Qwen2.5-Omni,adress2020,156,156,0.9931405782699585,0.9918216317892075,0.990443766117096,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_adress2020_p3.csv
+Qwen2.5-Omni,adresso,237,237,0.9932777285575868,0.9920791268348694,0.99067223072052,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_adresso_p3.csv
+Qwen2.5-Omni,adresso,237,237,0.9932777285575868,0.9920791268348694,0.99067223072052,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_adresso_p3.csv
+Qwen2.5-Omni,edaic,275,275,0.9933061450719832,0.9901018142700196,0.9850399270653724,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_edaic_p3.csv
+Qwen2.5-Omni,edaic,275,275,0.9933061450719832,0.9901018142700196,0.9850399270653724,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_edaic_p3.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9943686127662659,0.9929376602172851,0.9908995032310486,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_neurovoz_p3.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9943686127662659,0.9929376602172851,0.9908995032310486,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_neurovoz_p3.csv
+Kimi-Audio,smoke,2,1,0.9945511817932128,0.9940040111541747,0.9938672184944152,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part3/kimi_smoke_zeroshot_scores.csv
+Kimi-Audio,smoke,2,1,0.9945511817932128,0.9940040111541747,0.9938672184944152,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi/kimi_smoke_zeroshot_scores.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9946672469377518,0.9925511807203293,0.9892600178718568,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_pcgita_p3.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9946672469377518,0.9925511807203293,0.9892600178718568,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_pcgita_p3.csv
+Qwen2.5-Omni,pcgita1100,1100,100,0.9951477944850922,0.9939116865396501,0.9914949536323548,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/omni_results/omni_pcgita1100_audio.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9952073693275452,0.9938926979899406,0.9911609888076782,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9952073693275452,0.9938926979899406,0.9911609888076782,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_pcgita_zeroshot_scores.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9952434152364731,0.9941072314977646,0.9926794171333312,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_neurovoz_zeroshot_scores.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9952434152364731,0.9941072314977646,0.9926794171333312,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv
+Kimi-Audio,adresso,237,237,0.9955982565879822,0.9920842766761779,0.96981480717659,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi_new/kimi_adresso_zeroshot_scores.csv
+Kimi-Audio,adresso,237,237,0.9955982565879822,0.9920842766761779,0.96981480717659,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/kimi_adresso_zeroshot_scores.csv
+Qwen2.5-Omni,unknown,275,275,0.9958081096410752,0.9936502337455749,0.9899290204048156,0.0,0.0,mass,scores/edaic_windows/o25_mid30_zeroshot_scores.csv
+Qwen2.5-Omni,unknown,275,275,0.9958438873291016,0.9932029753923416,0.9866856038570404,0.0,0.0,mass,scores/edaic_windows/o25_mid300_zeroshot_scores.csv
+Qwen2-Audio,edaic,275,275,0.9959132522344588,0.9873167842626572,0.9746744632720948,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe_results/edaic_zeroshot_scores.csv
+Qwen2-Audio,edaic,275,275,0.9959258288145064,0.9872762873768807,0.9746851921081544,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/edaic_zeroshot_scores.csv
+Qwen2-Audio,edaic275,275,275,0.995934471487999,0.9873002111911774,0.9747664332389832,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/qwen2audio_edaic275_audio.csv
+Qwen2-Audio,edaic,275,275,0.995934471487999,0.9873002111911774,0.9747664332389832,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/pod_runs/edaic_zeroshot_scores.csv
+Kimi-Audio,pcgita,1100,100,0.9959426373243332,0.9938024520874024,0.9839569330215454,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv
+Kimi-Audio,pcgita,1100,100,0.9959426373243332,0.9938024520874024,0.9839569330215454,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi/kimi_pcgita_zeroshot_scores.csv
+Qwen2.5-Omni,pitt,20,13,0.9959572851657867,0.9950387239456175,0.9933275282382964,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v1.csv
+Kimi-Audio,adresso,237,237,0.9960148632526398,0.9927448928356171,0.9741898775100708,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_adresso_audio.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9960830509662628,0.9938173860311507,0.9870517700910568,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_neurovoz_p2.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9960830509662628,0.9938173860311507,0.9870517700910568,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_neurovoz_p2.csv
+Kimi-Audio,neurovoz,1270,107,0.9961485117673874,0.9947199285030365,0.9809311330318452,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/kimi_neurovoz_zeroshot_scores.csv
+Kimi-Audio,neurovoz,1270,107,0.9961485117673874,0.9947199285030365,0.9809311330318452,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi_new/kimi_neurovoz_zeroshot_scores.csv
+Qwen2.5-Omni,edaic,259,64,0.99622905254364,0.9940351247787476,0.9913673996925354,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part3/omni_edaic_segs_zeroshot_scores.csv
+Qwen2.5-Omni,unknown,275,275,0.996233567595482,0.9938397258520127,0.9915412962436676,0.0,0.0,mass,scores/pitt_all/o25_full_zeroshot_scores.csv
+Qwen2.5-Omni,unknown,275,275,0.996233567595482,0.9938397258520127,0.9915412962436676,0.0,0.0,mass,scores/edaic_windows/o25_full_zeroshot_scores.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9964001029729843,0.9930838763713836,0.98494952917099,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_pcgita_p2.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9964001029729843,0.9930838763713836,0.98494952917099,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_pcgita_p2.csv
+Qwen2.5-Omni,pitt,20,13,0.9964115023612976,0.9956976681947708,0.9943213164806366,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v2.csv
+Qwen2.5-Omni,smoke,2,1,0.9964288976043463,0.9958111833781003,0.9956567548215388,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/smoke_q2a_zeroshot_scores.csv
+Qwen2.5-Omni,smoke,2,1,0.9964288976043463,0.9958111833781003,0.9956567548215388,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/smoke_q2a_zeroshot_scores.csv
+Qwen2.5-Omni,edaic275,275,275,0.9965280145406724,0.995185774564743,0.9922630041837692,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/omni_results/omni_edaic275_audio.csv
+Qwen2.5-Omni,pitt468,468,228,0.9965315610170364,0.9956167638301849,0.9943568110466005,0.0,0.0,answer_mass,<local data dir>/paper1_local_runs/omni_results/omni_pitt468_audio.csv
+Qwen2.5-Omni,pitt_all,708,266,0.9965848624706268,0.9956442087888717,0.9935631304979324,0.0,0.0,answer_mass,scores/pitt_all/o25_pitt_all_text.csv
+Qwen2.5-Omni,pitt,468,228,0.996614396572113,0.9956919759511949,0.9943217933177948,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv
+Qwen2.5-Omni,pitt,468,228,0.996614396572113,0.9956919759511949,0.9943217933177948,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part10/o25_pitt_zeroshot_scores.csv
+Qwen2.5-Omni,pitt,468,228,0.996614396572113,0.9956919759511949,0.9943217933177948,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_pitt_zeroshot_scores.csv
+Qwen2.5-Omni,edaic,275,275,0.9966187253594398,0.9951856583356857,0.9920702129602432,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_edaic_zeroshot_scores.csv
+Qwen2.5-Omni,edaic,275,275,0.9966187253594398,0.9951856583356857,0.9920702129602432,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part10/o25_edaic_zeroshot_scores.csv
+Qwen2.5-Omni,edaic,275,275,0.9966187253594398,0.9951856583356857,0.9920702129602432,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_edaic_zeroshot_scores.csv
+Kimi-Audio,pitt,468,228,0.9966231435537338,0.9917780682444572,0.9829561114311218,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+Kimi-Audio,pitt,468,228,0.9966231435537338,0.9917780682444572,0.9829561114311218,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi/kimi_pitt_zeroshot_scores.csv
+Qwen2.5-Omni,pitt,468,228,0.9966443926095963,0.9953864216804504,0.9924605786800385,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_pitt_text.csv
+Qwen2.5-Omni,pitt,468,228,0.9966443926095963,0.9953864216804504,0.9924605786800385,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/o25_pitt_text.csv
+Qwen2.5-Omni,edaic_conflict,390,74,0.9966529980301858,0.994700987637043,0.9907322525978088,0.0,0.0,mass,<local data dir>/Desktop/release/edaic_conflict_new/o25_edaic_conflict_zeroshot_scores.csv
+Qwen2.5-Omni,edaic_conflict,390,74,0.9966529980301858,0.994700987637043,0.9907322525978088,0.0,0.0,mass,<local data dir>/Desktop/release/podE_final/out/o25_edaic_conflict_zeroshot_scores.csv
+Qwen2.5-Omni,adress2020,156,156,0.996662050485611,0.9957392364740372,0.9950958490371704,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_adress2020_zeroshot_scores.csv
+Qwen2.5-Omni,adress2020,156,156,0.996662050485611,0.9957392364740372,0.9950958490371704,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_adress2020_zeroshot_scores.csv
+Qwen2.5-Omni,adresso,237,237,0.996677666902542,0.9958130836486817,0.9945845603942872,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/omni_adresso_zeroshot_scores.csv
+Qwen2.5-Omni,adresso,237,237,0.996677666902542,0.9958130836486817,0.9945845603942872,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/omni_adresso_zeroshot_scores.csv
+Qwen2-Audio,adress2020,156,156,0.9966805800795556,0.9931062161922455,0.9817187637090684,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe_results/adress2020_zeroshot_scores.csv
+Qwen2.5-Omni,pitt_all,708,266,0.9966816529631615,0.9959190964698792,0.9944646656513214,0.0,0.0,mass,scores/pitt_all/o25_pitt_all_zeroshot_scores.csv
+Qwen2.5-Omni,pitt,20,13,0.9966896772384644,0.9959603667259216,0.9948550760746002,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v3.csv
+unattributed,unknown,966,138,0.9966950118541718,0.994851753115654,0.9914804697036744,0.0,0.0,mass,scores/edaic_conflict_v2/p14_o25_zeroshot_scores.csv
+Qwen2-Audio,pitt,468,228,0.9966980665922164,0.9933391347527505,0.971694678068161,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv
+Qwen2-Audio,pitt,468,228,0.9967006146907806,0.99335016310215,0.971832662820816,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe_results/pitt_zeroshot_scores.csv
+Qwen2.5-Omni,smoke,2,1,0.9967165440320969,0.9962815374135972,0.9961727857589722,0.0,0.0,mass,<local data dir>/Desktop/release/omni_final/smoke_omni_zeroshot_scores.csv
+Qwen2.5-Omni,smoke,2,1,0.9967165440320969,0.9962815374135972,0.9961727857589722,0.0,0.0,mass,<local data dir>/paper1_local_runs/omni_final/smoke_omni_zeroshot_scores.csv
+Qwen2-Audio,adress2020,156,156,0.9967229887843132,0.9931092709302902,0.9815637469291688,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/adress2020_zeroshot_scores.csv
+Qwen2-Audio,pitt,468,228,0.9967856258153915,0.9934358164668083,0.97183957695961,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_pitt_audio.csv
+Kimi-Audio,pitt,468,228,0.9967911839485168,0.992592951655388,0.984996497631073,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_pitt_audio.csv
+Qwen2-Audio,adress2020,156,156,0.9968173056840897,0.9932318180799484,0.981680616736412,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_adress2020_audio.csv
+Qwen2.5-Omni,adress2020,156,156,0.9968242645263672,0.9958857148885728,0.994888037443161,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/o25_adress2020_text.csv
+Qwen2.5-Omni,adress2020,156,156,0.9968242645263672,0.9958857148885728,0.994888037443161,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_adress2020_text.csv
+unattributed,unknown,156,156,0.9968242645263672,0.9958857148885728,0.994888037443161,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/TEST_text.csv
+Qwen2.5-Omni,pitt,20,13,0.9968980699777603,0.9950850903987885,0.9942986071109772,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v5.csv
+Qwen2-Audio,adresso,237,237,0.9969336986541748,0.9936134636402129,0.9873510748147964,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/adresso_zeroshot_scores.csv
+Qwen2-Audio,adresso,237,237,0.9969404935836792,0.9936269536614418,0.9873097836971284,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe_results/adresso_zeroshot_scores.csv
+Qwen2.5-Omni,pitt,20,13,0.9969431757926941,0.9961645513772963,0.9948124885559082,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_pitt_text_v4.csv
+Qwen2-Audio,unknown,275,275,0.9970297515392303,0.9899393409490586,0.9748281128704548,0.0,0.0,mass,scores/pitt_all/q2a_full_zeroshot_scores.csv
+Qwen2-Audio,unknown,275,275,0.9970297515392303,0.9899393409490586,0.9748281128704548,0.0,0.0,mass,scores/edaic_windows/q2a_full_zeroshot_scores.csv
+Qwen2-Audio,adresso,237,237,0.997042715549469,0.9937320500612259,0.9874674528837204,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_adresso_audio.csv
+Kimi-Audio,adress2020,156,156,0.9971073567867279,0.9923944026231766,0.9804921746253968,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/kimi_adress2020_zeroshot_scores.csv
+Kimi-Audio,adress2020,156,156,0.9971073567867279,0.9923944026231766,0.9804921746253968,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi_new/kimi_adress2020_zeroshot_scores.csv
+Qwen2.5-Omni,adress2020,20,20,0.9971846044063568,0.9961814075708391,0.99563530087471,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adress2020_text_v1.csv
+Qwen2-Audio,unknown,275,275,0.9972422420978546,0.991059684753418,0.9748281128704548,0.0,0.0,mass,scores/edaic_windows/q2a_mid300_zeroshot_scores.csv
+Kimi-Audio,kcl,37,37,0.9972690641880037,0.9960074543952941,0.9921298623085022,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi_new/kimi_kcl_zeroshot_scores.csv
+Kimi-Audio,kcl,37,37,0.9972690641880037,0.9960074543952941,0.9921298623085022,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/kimi_kcl_zeroshot_scores.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9972724057734011,0.9967755109071732,0.9953200817108154,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_neurovoz_text.csv
+Qwen2.5-Omni,neurovoz,1270,107,0.9972724057734011,0.9967755109071732,0.9953200817108154,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/o25_neurovoz_text.csv
+Kimi-Audio,adress2020,156,156,0.9974410980939864,0.9939097166061401,0.9873509407043456,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_adress2020_audio.csv
+Qwen2.5-Omni,adresso,237,237,0.9974790513515472,0.996680599451065,0.9863807242363692,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/o25_adresso_text.csv
+Qwen2.5-Omni,adresso,237,237,0.9974790513515472,0.996680599451065,0.9863807242363692,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_adresso_text.csv
+Kimi-Audio,pitt,468,228,0.9974833130836487,0.9934389352798463,0.981921285390854,0.0,0.0,mass,<local data dir>/Desktop/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9977965392172335,0.9968557350337507,0.994757890701294,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_pcgita_text.csv
+Qwen2.5-Omni,pcgita,1100,100,0.9977965392172335,0.9968557350337507,0.994757890701294,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/o25_pcgita_text.csv
+Qwen2.5-Omni,adresso,20,20,0.9978366419672966,0.9968855023384094,0.9962582886219024,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_adresso_text_v1.csv
+Kimi-Audio,kcl30b,37,37,0.9978708773851396,0.9968820452690125,0.9945730566978456,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_kcl30b_audio.csv
+Qwen2.5-Omni,kcl,37,37,0.9980287663638592,0.9972999263554811,0.9966929964721204,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_kcl_text.csv
+Qwen2.5-Omni,kcl,37,37,0.9980287663638592,0.9972999263554811,0.9966929964721204,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podE_final/out/o25_kcl_text.csv
+Kimi-Audio,edaic,275,275,0.998050570487976,0.9969719648361206,0.9942303597927094,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part3/kimi_edaic_zeroshot_scores.csv
+Kimi-Audio,edaic,275,275,0.998050570487976,0.9969719648361206,0.9942303597927094,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/kimi/kimi_edaic_zeroshot_scores.csv
+Kimi-Audio,smoke,3,3,0.998200625181198,0.9981632649898529,0.9981539249420166,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_smoke2.csv
+Kimi-Audio,unknown,275,275,0.9982790946960448,0.9970893621444702,0.9945348352193832,0.0,0.0,mass,scores/pitt_all/kimi_full_zeroshot_scores.csv
+Kimi-Audio,kcl,37,37,0.998283624649048,0.9975066602230073,0.996292680501938,0.0,0.0,mass,<local data dir>/paper1_local_runs/kimi_kcl_audio.csv
+Qwen2.5-Omni,conflict,390,74,0.9984242171049118,0.9975829169154167,0.9945857226848602,0.0,0.0,mass,<local data dir>/Desktop/release/podE_final/out/o25_conflict_match_zeroshot_scores.csv
+Qwen2.5-Omni,conflict,390,74,0.9984242171049118,0.9975829169154167,0.9945857226848602,0.0,0.0,mass,<local data dir>/Desktop/release/edaic_conflict_new/o25_conflict_match_zeroshot_scores.csv
+Qwen2.5-Omni,edaic30,275,275,0.9985819905996324,0.9979557603597641,0.9971038103103638,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/o25_edaic30_text.csv
+Qwen2.5-Omni,edaic30,275,275,0.9985819905996324,0.9979557603597641,0.9971038103103638,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_edaic30_text.csv
+Qwen2.5-Omni,edaic30,20,20,0.9985874574631453,0.9978474721312524,0.9966995418071748,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v3.csv
+unattributed,unknown,966,138,0.9986017988994718,0.997373029589653,0.9935183525085448,0.0,0.0,answer_mass,<local data dir>/Desktop/release/edaic_rerun/part15/partB/p14_o25_text.csv
+unattributed,unknown,966,138,0.9986017988994718,0.997373029589653,0.9935183525085448,0.0,0.0,answer_mass,scores/part16/pod_sync/p14_o25_text.csv
+Qwen2.5-Omni,conflict,390,74,0.998605102300644,0.9974898099899292,0.9953338801860808,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_conflict_text.csv
+Qwen2.5-Omni,conflict,390,74,0.998605102300644,0.9974898099899292,0.9953338801860808,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/o25_conflict_text.csv
+Qwen2.5-Omni,edaic30,20,20,0.9986627493053675,0.9980887383222579,0.9975929260253906,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v5.csv
+Qwen2.5-Omni,edaic30,20,20,0.9986787559464574,0.9975309520959855,0.9960446655750276,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v1.csv
+Kimi-Audio,unknown,275,275,0.9987076371908188,0.9973555475473403,0.9944717288017272,0.0,0.0,mass,scores/edaic_windows/kimi_mid300_zeroshot_scores.csv
+Qwen2.5-Omni,edaic30,20,20,0.9987412374466658,0.9978681325912476,0.9972216486930848,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v4.csv
+Qwen2.5-Omni,edaic30,20,20,0.9987927451729774,0.9976139113307,0.9966230392456056,0.0,0.0,mass,<local data dir>/paper1_local_runs/rebuild/omni_edaic30_text_v2.csv
+Qwen2.5-Omni,edaicfull,275,275,0.998899981379509,0.9979663968086243,0.9967092871665956,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/o25_edaicfull_text.csv
+Qwen2.5-Omni,edaicfull,275,275,0.998899981379509,0.9979663968086243,0.9967092871665956,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/o25_edaicfull_text.csv
+Qwen2-Audio,edaic_conflict,390,74,0.9989346556831152,0.9948018100112677,0.9856283217668532,0.0,0.0,mass,<local data dir>/Desktop/release/edaic_conflict_new/q2a_edaic_conflict_zeroshot_scores.csv
+Qwen2-Audio,edaic_conflict,390,74,0.9989346556831152,0.9948018100112677,0.9856283217668532,0.0,0.0,mass,<local data dir>/Desktop/release/podE_final/out/q2a_edaic_conflict_zeroshot_scores.csv
+unattributed,unknown,966,138,0.9989490555599332,0.9944128692150116,0.9743061363697052,0.0,0.0,mass,scores/edaic_conflict_v2/p14_q2a_zeroshot_scores.csv
+Qwen2-Audio,unknown,275,275,0.9989950340241194,0.9944595456123352,0.9578070938587188,0.0,0.0,mass,scores/edaic_windows/q2a_mid30_zeroshot_scores.csv
+Kimi-Audio,unknown,275,275,0.99911617487669,0.997893512248993,0.994054764509201,0.0,0.0,mass,scores/edaic_windows/kimi_mid30_zeroshot_scores.csv
+unattributed,kcl,37,37,0.9991311356425284,0.9980243504047395,0.996868461370468,0.0,0.0,mass,<local data dir>/paper1_local_runs/kcl_probe_recut/kcl_zeroshot_scores.csv
+Qwen2-Audio,kcl,37,37,0.9991311356425284,0.9980243504047395,0.996868461370468,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv
+Qwen2-Audio,kcl30b,37,37,0.9991907440125942,0.9981063157320023,0.9969717115163804,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_kcl30b_audio.csv
+Qwen3-Omni-30B-A3B,unknown,275,275,0.9991925656795502,0.9983192741870881,0.994899958372116,0.0,0.0,mass,scores/edaic_windows/q3o_full_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,unknown,275,275,0.9991925656795502,0.9983192741870881,0.994899958372116,0.0,0.0,mass,scores/pitt_all/q3o_full_zeroshot_scores.csv
+Kimi-Audio,unknown,390,74,0.999193474650383,0.9981361970305443,0.9961492866277696,0.0,0.0,answer_mass,<local data dir>/Desktop/release/edaic_conflict_new/kimi/perclip_390rows_kimi.csv
+Kimi-Audio,edaic_conflict,390,74,0.999193474650383,0.9981361970305443,0.9961492866277696,0.0,0.0,mass,<local data dir>/Desktop/release/edaic_conflict_new/kimi/kimi_edaic_conflict_zeroshot_scores.csv
+Qwen2-Audio,neurovoz,1270,107,0.9992140547838062,0.9984360238537192,0.9842047840356828,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe_results/neurovoz_zeroshot_scores.csv
+Qwen2-Audio,neurovoz,1270,107,0.9992140547838062,0.9984360238537192,0.9842047840356828,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/pod_runs/neurovoz_zeroshot_scores.csv
+Qwen2-Audio,neurovoz,1270,107,0.9992167884483933,0.998434256389737,0.9841738566756248,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/neurovoz_zeroshot_scores.csv
+unattributed,unknown,966,138,0.99922913312912,0.9978828728199004,0.9929368495941162,0.0,0.0,mass,scores/edaic_conflict_v2/p14_kimi_zeroshot_scores.csv
+Qwen2-Audio,pcgita,1100,1100,0.9994133650325239,0.9987790144979953,0.9975547939538956,0.0,0.0,mass,<local data dir>/paper1_local_runs/probe2/pcgita_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,unknown,275,275,0.9994644932448864,0.9987660020589828,0.9979736804962158,0.0,0.0,mass,scores/edaic_windows/q3o_mid300_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pitt,468,228,0.999529168009758,0.9993274062871932,0.9969913959503174,0.0,0.0,mass,scores/part16/POD3/q3o_pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,unknown,275,275,0.9995325356721878,0.9992083072662353,0.9984371066093444,0.0,0.0,mass,scores/edaic_windows/q3o_mid30_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pitt,468,228,0.999533087015152,0.9993177115917207,0.9984645247459412,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pitt,468,228,0.999533087015152,0.9993177115917207,0.9984645247459412,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part10/q3o_pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pitt,468,228,0.999533087015152,0.9993177115917207,0.9984645247459412,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/final/q3o_pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pitt,468,228,0.999533087015152,0.9993177115917207,0.9984645247459412,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,adresso,237,237,0.9995370209217072,0.9993546783924103,0.9990410655736924,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_adresso_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,adresso,237,237,0.9995370209217072,0.9993546783924103,0.9990410655736924,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_adresso_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,adresso,237,237,0.9995370209217072,0.9993546783924103,0.9990410655736924,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o/q3o_adresso_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,adress2020,156,156,0.9995424151420593,0.9993486702442169,0.997895285487175,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_adress2020_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,adress2020,156,156,0.9995424151420593,0.9993486702442169,0.997895285487175,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o/q3o_adress2020_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,adress2020,156,156,0.9995424151420593,0.9993486702442169,0.997895285487175,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_adress2020_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,kcl,37,37,0.9995728433132172,0.999423748254776,0.9993423819541932,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o/q3o_kcl_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,kcl,37,37,0.9995728433132172,0.999423748254776,0.9993423819541932,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_kcl_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,kcl,37,37,0.9995728433132172,0.999423748254776,0.9993423819541932,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_kcl_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,neurovoz,1270,107,0.9996153712272644,0.9992905259132384,0.9982790052890778,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_neurovoz_text.csv
+Qwen3-Omni-30B-A3B,neurovoz,1270,107,0.9996153712272644,0.9992905259132384,0.9982790052890778,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_neurovoz_text.csv
+Qwen2-Audio,kcl30,31,31,0.9996226988732816,0.9986080452799796,0.9963257610797882,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_kcl30_audio.csv
+Qwen3-Omni-30B-A3B,edaic_conflict,390,74,0.9996460229158401,0.9993437379598616,0.9988989233970642,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_edaic_conflict_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,edaic_conflict,390,74,0.9996460229158401,0.9993437379598616,0.9988989233970642,0.0,0.0,mass,<local data dir>/Desktop/release/edaic_conflict_new/q3o_edaic_conflict_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pcgita,1100,100,0.9996571764349937,0.9995751470327378,0.9992325901985168,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o/q3o_pcgita_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pcgita,1100,100,0.9996571764349937,0.9995751470327378,0.9992325901985168,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_pcgita_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pcgita,1100,100,0.9996571764349937,0.9995751470327378,0.9992325901985168,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv
+unattributed,unknown,966,138,0.999671757221222,0.9993421286344528,0.9987323582172394,0.0,0.0,mass,scores/edaic_conflict_v2/p14_q3o_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,neurovoz,1270,107,0.9996859133243561,0.9996250033378601,0.9994548559188844,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_neurovoz_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,neurovoz,1270,107,0.9996859133243561,0.9996250033378601,0.9994548559188844,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_neurovoz_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,neurovoz,1270,107,0.9996859133243561,0.9996250033378601,0.9994548559188844,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o/q3o_neurovoz_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,kcl,37,37,0.9997010566294192,0.9995012164115906,0.998595267534256,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_kcl_text.csv
+Qwen3-Omni-30B-A3B,kcl,37,37,0.9997010566294192,0.9995012164115906,0.998595267534256,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_kcl_text.csv
+Qwen3-Omni-30B-A3B,edaic,275,275,0.9997146762907504,0.9992617666721345,0.9983277767896652,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/part10/q3o_edaic_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,edaic,275,275,0.9997146762907504,0.9992617666721345,0.9983277767896652,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/final/q3o_edaic_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,edaic,275,275,0.9997146762907504,0.9992617666721345,0.9983277767896652,0.0,0.0,mass,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_edaic_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,edaic,275,275,0.9997146762907504,0.9992617666721345,0.9983277767896652,0.0,0.0,mass,<local data dir>/Desktop/release/podD2_final/out/q3o_edaic_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,pcgita,1100,100,0.9997223988175392,0.9994311183691024,0.9988620281219482,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_pcgita_text.csv
+Qwen3-Omni-30B-A3B,pcgita,1100,100,0.9997223988175392,0.9994311183691024,0.9988620281219482,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_pcgita_text.csv
+Qwen3-Omni-30B-A3B,pitt,468,228,0.9997306242585182,0.9995907887816429,0.9990876615047456,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_pitt_text.csv
+Qwen3-Omni-30B-A3B,pitt,468,228,0.9997306242585182,0.9995907887816429,0.9990876615047456,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_pitt_text.csv
+Qwen3-Omni-30B-A3B,adress2020,156,156,0.9997393786907196,0.9996383041143417,0.9994615018367768,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_adress2020_text.csv
+Qwen3-Omni-30B-A3B,adress2020,156,156,0.9997393786907196,0.9996383041143417,0.9994615018367768,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_adress2020_text.csv
+Qwen3-Omni-30B-A3B,adresso,237,237,0.9997605979442596,0.9996434390544892,0.999248905107379,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_adresso_text.csv
+Qwen3-Omni-30B-A3B,adresso,237,237,0.9997605979442596,0.9996434390544892,0.999248905107379,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_adresso_text.csv
+Qwen2-Audio,kcl,37,37,0.9997725270222872,0.9996378634590655,0.9991489797830582,0.0,0.0,mass,<local data dir>/paper1_local_runs/qwen2audio_kcl_audio.csv
+Qwen3-Omni-30B-A3B,edaic30,275,275,0.9998604357242584,0.9994898848235607,0.999187022447586,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_edaic30_text.csv
+Qwen3-Omni-30B-A3B,edaic30,275,275,0.9998604357242584,0.9994898848235607,0.999187022447586,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_edaic30_text.csv
+Qwen3-Omni-30B-A3B,conflict,390,74,0.9999074907973409,0.9996576122939587,0.9988711178302764,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_conflict_text.csv
+Qwen3-Omni-30B-A3B,conflict,390,74,0.9999074907973409,0.9996576122939587,0.9988711178302764,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_conflict_text.csv
+Qwen3-Omni-30B-A3B,edaicfull,275,275,0.999927227385342,0.9995495364069938,0.9992305636405944,0.0,0.0,answer_mass,<local data dir>/Desktop/release/overnight2/text_new/q3o_edaicfull_text.csv
+Qwen3-Omni-30B-A3B,edaicfull,275,275,0.999927227385342,0.9995495364069938,0.9992305636405944,0.0,0.0,answer_mass,<local data dir>/Desktop/release/podD2_final/out/q3o_edaicfull_text.csv

@@ -1,0 +1,103 @@
+id	what	value	lo	hi	n	n_spk	file
+M9.AudioFlamingo2.adress2020.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9676	0.9664	0.9689	156	156	<local data dir>/paper1_local_runs/af2_results/af2_adress2020.csv
+M9.AudioFlamingo2.adresso.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9614	0.9607	0.9628	237	237	<local data dir>/paper1_local_runs/af2_results/af2_adresso237.csv
+M9.AudioFlamingo2.edaic.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9392	0.9383	0.9407	275	275	<local data dir>/paper1_local_runs/af2_results/af2_edaic275.csv
+M9.AudioFlamingo2.edaic_conflict.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9453	0.9437	0.9479	390	74	<local data dir>/Desktop/release/edaic_conflict_new/af2/af2_edaic_conflict_30s.csv
+M9.AudioFlamingo2.edaic_conflict_v2.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9423	0.9409	0.9434	966	138	scores/edaic_conflict_v2/p14_af2.csv
+M9.AudioFlamingo2.kcl.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9304	0.9285	0.9341	37	37	<local data dir>/paper1_local_runs/af2_results/af2_kcl37.csv
+M9.AudioFlamingo2.neurovoz.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9412	0.9398	0.9427	1270	107	<local data dir>/paper1_local_runs/af2_results/af2_neurovoz1270.csv
+M9.AudioFlamingo2.pcgita.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9400	0.9390	0.9413	1100	100	<local data dir>/paper1_local_runs/af2_results/af2_pcgita1100.csv
+M9.AudioFlamingo2.pitt.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9626	0.9614	0.9639	468	228	<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv
+M9.AudioFlamingo3.adress2020.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9457	0.9415	0.9477	156	156	<local data dir>/Desktop/release/overnight2/af3_new/af3_adress2020.csv
+M9.AudioFlamingo3.adresso.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9579	0.9541	0.9614	237	237	<local data dir>/Desktop/release/overnight2/af3_new/af3_adresso.csv
+M9.AudioFlamingo3.edaic.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9272	0.9226	0.9328	275	275	<local data dir>/Desktop/release/overnight2/part10/af3_edaic.csv
+M9.AudioFlamingo3.edaic_conflict.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9332	0.9239	0.9435	390	74	<local data dir>/Desktop/release/edaic_conflict_new/af3_edaic_conflict.csv
+M9.AudioFlamingo3.edaic_conflict_v2.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9311	0.9271	0.9361	966	138	scores/edaic_conflict_v2/p14_af3.csv
+M9.AudioFlamingo3.edaic_full.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9413	0.9342	0.9476	275	275	scores/edaic_windows/af3_full.csv
+M9.AudioFlamingo3.edaic_mid30.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9266	0.9192	0.9333	275	275	scores/edaic_windows/af3_mid30.csv
+M9.AudioFlamingo3.edaic_mid300.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9398	0.9334	0.9441	275	275	scores/edaic_windows/af3_mid300.csv
+M9.AudioFlamingo3.kcl.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9434	0.9374	0.9501	37	37	<local data dir>/Desktop/release/overnight2/part3/af3_kcl.csv
+M9.AudioFlamingo3.neurovoz.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9132	0.9076	0.9177	1270	107	<local data dir>/Desktop/release/overnight2/af3_new/af3_neurovoz.csv
+M9.AudioFlamingo3.pcgita.zero_shot_answer	median answer mass P(Yes)+P(No)	0.8968	0.8921	0.9013	1100	100	<local data dir>/Desktop/release/overnight2/part3/af3_pcgita.csv
+M9.AudioFlamingo3.pitt.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9487	0.9463	0.9505	468	228	<local data dir>/Desktop/release/overnight2/part3/af3_pitt.csv
+M9.Kimi-Audio.adress2020.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9971	0.9967	0.9976	156	156	<local data dir>/Desktop/release/overnight2/kimi_new/kimi_adress2020_zeroshot_scores.csv
+M9.Kimi-Audio.adresso.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9956	0.9953	0.9962	237	237	<local data dir>/Desktop/release/overnight2/kimi_new/kimi_adresso_zeroshot_scores.csv
+M9.Kimi-Audio.edaic.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9981	0.9980	0.9982	275	275	<local data dir>/Desktop/release/overnight2/part3/kimi_edaic_zeroshot_scores.csv
+M9.Kimi-Audio.edaic_conflict.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9992	0.9990	0.9993	390	74	<local data dir>/Desktop/release/edaic_conflict_new/kimi/kimi_edaic_conflict_zeroshot_scores.csv
+M9.Kimi-Audio.edaic_conflict_v2.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9992	0.9991	0.9994	966	138	scores/edaic_conflict_v2/p14_kimi_zeroshot_scores.csv
+M9.Kimi-Audio.edaic_full.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9983	0.9981	0.9984	275	275	scores/pitt_all/kimi_full_zeroshot_scores.csv
+M9.Kimi-Audio.edaic_mid30.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9991	0.9990	0.9992	275	275	scores/edaic_windows/kimi_mid30_zeroshot_scores.csv
+M9.Kimi-Audio.edaic_mid300.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9987	0.9985	0.9989	275	275	scores/edaic_windows/kimi_mid300_zeroshot_scores.csv
+M9.Kimi-Audio.kcl.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9973	0.9970	0.9977	37	37	<local data dir>/Desktop/release/overnight2/kimi_new/kimi_kcl_zeroshot_scores.csv
+M9.Kimi-Audio.neurovoz.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9961	0.9961	0.9962	1270	107	<local data dir>/Desktop/release/overnight2/kimi_new/kimi_neurovoz_zeroshot_scores.csv
+M9.Kimi-Audio.pcgita.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9959	0.9958	0.9960	1100	100	<local data dir>/Desktop/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv
+M9.Kimi-Audio.pitt.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9966	0.9963	0.9970	468	228	<local data dir>/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+M9.Qwen2-Audio.adress2020.transcript_only	median answer mass P(Yes)+P(No)	0.9424	0.9341	0.9503	156	156	<local data dir>/paper1_local_runs/qwen2audio_adress2020_text.csv
+M9.Qwen2-Audio.adresso.transcript_only	median answer mass P(Yes)+P(No)	0.9110	0.8975	0.9225	237	237	<local data dir>/paper1_local_runs/qwen2audio_adresso_text.csv
+M9.Qwen2-Audio.conflict.transcript_only	median answer mass P(Yes)+P(No)	0.9808	0.9713	0.9864	390	74	<local data dir>/paper1_local_runs/qwen2audio_conflict_text.csv
+M9.Qwen2-Audio.edaic.transcript_only	median answer mass P(Yes)+P(No)	0.9595	0.9497	0.9643	275	275	<local data dir>/paper1_local_runs/qwen2audio_edaic30_text.csv
+M9.Qwen2-Audio.edaic30.transcript_only	median answer mass P(Yes)+P(No)	0.9595	0.9497	0.9643	275	275	<local data dir>/paper1_local_runs/qwen2audio_edaic30_text.csv
+M9.Qwen2-Audio.edaicfull.transcript_only	median answer mass P(Yes)+P(No)	0.9664	0.9611	0.9720	275	275	<local data dir>/paper1_local_runs/qwen2audio_edaicfull_text.csv
+M9.Qwen2-Audio.pitt.transcript_only	median answer mass P(Yes)+P(No)	0.9300	0.9236	0.9362	468	228	<local data dir>/paper1_local_runs/qwen2audio_pitt_text.csv
+M9.Qwen2-Audio.adress2020.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9967	0.9965	0.9971	156	156	<local data dir>/paper1_local_runs/probe2/adress2020_zeroshot_scores.csv
+M9.Qwen2-Audio.adresso.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9969	0.9966	0.9971	237	237	<local data dir>/paper1_local_runs/probe2/adresso_zeroshot_scores.csv
+M9.Qwen2-Audio.edaic.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9959	0.9952	0.9964	275	275	<local data dir>/paper1_local_runs/probe2/edaic_zeroshot_scores.csv
+M9.Qwen2-Audio.edaic_conflict.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9989	0.9985	0.9992	390	74	<local data dir>/Desktop/release/edaic_conflict_new/q2a_edaic_conflict_zeroshot_scores.csv
+M9.Qwen2-Audio.edaic_conflict_v2.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9989	0.9987	0.9992	966	138	scores/edaic_conflict_v2/p14_q2a_zeroshot_scores.csv
+M9.Qwen2-Audio.edaic_full.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9970	0.9965	0.9975	275	275	scores/edaic_windows/q2a_full_zeroshot_scores.csv
+M9.Qwen2-Audio.edaic_mid30.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9990	0.9987	0.9993	275	275	scores/edaic_windows/q2a_mid30_zeroshot_scores.csv
+M9.Qwen2-Audio.edaic_mid300.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9972	0.9969	0.9976	275	275	scores/edaic_windows/q2a_mid300_zeroshot_scores.csv
+M9.Qwen2-Audio.kcl.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9991	0.9989	0.9994	37	37	<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv
+M9.Qwen2-Audio.neurovoz.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9992	0.9992	0.9992	1270	107	<local data dir>/paper1_local_runs/probe2/neurovoz_zeroshot_scores.csv
+M9.Qwen2-Audio.pcgita.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9994	0.9994	0.9994	1100	1100	<local data dir>/paper1_local_runs/probe2/pcgita_zeroshot_scores.csv
+M9.Qwen2-Audio.pitt.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9967	0.9965	0.9969	468	228	<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv
+M9.Qwen2.5-Omni.adress2020.transcript_only	median answer mass P(Yes)+P(No)	0.9968	0.9967	0.9969	156	156	<local data dir>/Desktop/release/overnight2/text_new/o25_adress2020_text.csv
+M9.Qwen2.5-Omni.adresso.transcript_only	median answer mass P(Yes)+P(No)	0.9975	0.9974	0.9975	237	237	<local data dir>/Desktop/release/overnight2/text_new/o25_adresso_text.csv
+M9.Qwen2.5-Omni.conflict.transcript_only	median answer mass P(Yes)+P(No)	0.9986	0.9984	0.9988	390	74	<local data dir>/Desktop/release/overnight2/text_new/o25_conflict_text.csv
+M9.Qwen2.5-Omni.edaic.transcript_only	median answer mass P(Yes)+P(No)	0.9986	0.9985	0.9986	275	275	<local data dir>/Desktop/release/overnight2/text_new/o25_edaic30_text.csv
+M9.Qwen2.5-Omni.edaic30.transcript_only	median answer mass P(Yes)+P(No)	0.9986	0.9985	0.9986	275	275	<local data dir>/Desktop/release/overnight2/text_new/o25_edaic30_text.csv
+M9.Qwen2.5-Omni.edaicfull.transcript_only	median answer mass P(Yes)+P(No)	0.9989	0.9988	0.9990	275	275	<local data dir>/Desktop/release/overnight2/text_new/o25_edaicfull_text.csv
+M9.Qwen2.5-Omni.kcl.transcript_only	median answer mass P(Yes)+P(No)	0.9980	0.9979	0.9981	37	37	<local data dir>/Desktop/release/overnight2/text_new/o25_kcl_text.csv
+M9.Qwen2.5-Omni.neurovoz.transcript_only	median answer mass P(Yes)+P(No)	0.9973	0.9973	0.9974	1270	107	<local data dir>/Desktop/release/overnight2/text_new/o25_neurovoz_text.csv
+M9.Qwen2.5-Omni.pcgita.transcript_only	median answer mass P(Yes)+P(No)	0.9978	0.9978	0.9978	1100	100	<local data dir>/Desktop/release/overnight2/text_new/o25_pcgita_text.csv
+M9.Qwen2.5-Omni.pitt.transcript_only	median answer mass P(Yes)+P(No)	0.9966	0.9965	0.9968	468	228	<local data dir>/Desktop/release/overnight2/text_new/o25_pitt_text.csv
+M9.Qwen2.5-Omni.pitt_all.transcript_only	median answer mass P(Yes)+P(No)	0.9966	0.9965	0.9966	708	266	scores/pitt_all/o25_pitt_all_text.csv
+M9.Qwen2.5-Omni.adress2020.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9967	0.9965	0.9968	156	156	<local data dir>/paper1_local_runs/omni_final/omni_adress2020_zeroshot_scores.csv
+M9.Qwen2.5-Omni.adresso.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9967	0.9966	0.9968	237	237	<local data dir>/paper1_local_runs/omni_final/omni_adresso_zeroshot_scores.csv
+M9.Qwen2.5-Omni.edaic.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9966	0.9965	0.9967	275	275	<local data dir>/paper1_local_runs/omni_final/omni_edaic_zeroshot_scores.csv
+M9.Qwen2.5-Omni.edaic_conflict.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9967	0.9965	0.9968	390	74	<local data dir>/Desktop/release/edaic_conflict_new/o25_edaic_conflict_zeroshot_scores.csv
+M9.Qwen2.5-Omni.edaic_conflict_v2.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9967	0.9966	0.9968	966	138	scores/edaic_conflict_v2/p14_o25_zeroshot_scores.csv
+M9.Qwen2.5-Omni.edaic_full.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9962	0.9960	0.9964	275	275	scores/edaic_windows/o25_full_zeroshot_scores.csv
+M9.Qwen2.5-Omni.edaic_mid30.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9958	0.9956	0.9960	275	275	scores/edaic_windows/o25_mid30_zeroshot_scores.csv
+M9.Qwen2.5-Omni.edaic_mid300.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9958	0.9956	0.9962	275	275	scores/edaic_windows/o25_mid300_zeroshot_scores.csv
+M9.Qwen2.5-Omni.kcl.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9888	0.9881	0.9903	37	37	<local data dir>/paper1_local_runs/omni_final/omni_kcl_zeroshot_scores.csv
+M9.Qwen2.5-Omni.neurovoz.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9952	0.9952	0.9953	1270	107	<local data dir>/paper1_local_runs/omni_final/omni_neurovoz_zeroshot_scores.csv
+M9.Qwen2.5-Omni.pcgita.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9952	0.9951	0.9953	1100	100	<local data dir>/paper1_local_runs/omni_final/omni_pcgita_zeroshot_scores.csv
+M9.Qwen2.5-Omni.pitt.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9966	0.9965	0.9967	468	228	<local data dir>/paper1_local_runs/omni_final/omni_pitt_zeroshot_scores.csv
+M9.Qwen2.5-Omni.pitt_all.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9967	0.9966	0.9967	708	266	scores/pitt_all/o25_pitt_all_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.adress2020.transcript_only	median answer mass P(Yes)+P(No)	0.9997	0.9997	0.9998	156	156	<local data dir>/Desktop/release/overnight2/text_new/q3o_adress2020_text.csv
+M9.Qwen3-Omni-30B-A3B.adresso.transcript_only	median answer mass P(Yes)+P(No)	0.9998	0.9997	0.9998	237	237	<local data dir>/Desktop/release/overnight2/text_new/q3o_adresso_text.csv
+M9.Qwen3-Omni-30B-A3B.conflict.transcript_only	median answer mass P(Yes)+P(No)	0.9999	0.9999	0.9999	390	74	<local data dir>/Desktop/release/overnight2/text_new/q3o_conflict_text.csv
+M9.Qwen3-Omni-30B-A3B.edaic.transcript_only	median answer mass P(Yes)+P(No)	0.9999	0.9998	0.9999	275	275	<local data dir>/Desktop/release/overnight2/text_new/q3o_edaic30_text.csv
+M9.Qwen3-Omni-30B-A3B.edaic30.transcript_only	median answer mass P(Yes)+P(No)	0.9999	0.9998	0.9999	275	275	<local data dir>/Desktop/release/overnight2/text_new/q3o_edaic30_text.csv
+M9.Qwen3-Omni-30B-A3B.edaicfull.transcript_only	median answer mass P(Yes)+P(No)	0.9999	0.9999	0.9999	275	275	<local data dir>/Desktop/release/overnight2/text_new/q3o_edaicfull_text.csv
+M9.Qwen3-Omni-30B-A3B.kcl.transcript_only	median answer mass P(Yes)+P(No)	0.9997	0.9996	0.9998	37	37	<local data dir>/Desktop/release/overnight2/text_new/q3o_kcl_text.csv
+M9.Qwen3-Omni-30B-A3B.neurovoz.transcript_only	median answer mass P(Yes)+P(No)	0.9996	0.9996	0.9996	1270	107	<local data dir>/Desktop/release/overnight2/text_new/q3o_neurovoz_text.csv
+M9.Qwen3-Omni-30B-A3B.pcgita.transcript_only	median answer mass P(Yes)+P(No)	0.9997	0.9997	0.9997	1100	100	<local data dir>/Desktop/release/overnight2/text_new/q3o_pcgita_text.csv
+M9.Qwen3-Omni-30B-A3B.pitt.transcript_only	median answer mass P(Yes)+P(No)	0.9997	0.9997	0.9997	468	228	<local data dir>/Desktop/release/overnight2/text_new/q3o_pitt_text.csv
+M9.Qwen3-Omni-30B-A3B.adress2020.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9995	0.9995	0.9996	156	156	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_adress2020_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.adresso.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9995	0.9995	0.9996	237	237	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_adresso_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.edaic.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9997	0.9997	0.9997	275	275	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_edaic_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.edaic_conflict.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9996	0.9996	0.9997	390	74	<local data dir>/Desktop/release/edaic_conflict_new/q3o_edaic_conflict_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.edaic_conflict_v2.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9997	0.9996	0.9997	966	138	scores/edaic_conflict_v2/p14_q3o_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.edaic_full.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9992	0.9991	0.9993	275	275	scores/edaic_windows/q3o_full_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.edaic_mid30.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9995	0.9995	0.9996	275	275	scores/edaic_windows/q3o_mid30_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.edaic_mid300.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9995	0.9994	0.9996	275	275	scores/edaic_windows/q3o_mid300_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.kcl.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9996	0.9995	0.9996	37	37	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_kcl_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.neurovoz.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9997	0.9997	0.9997	1270	107	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_neurovoz_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.pcgita.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9997	0.9997	0.9997	1100	100	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv
+M9.Qwen3-Omni-30B-A3B.pitt.zero_shot_answer	median answer mass P(Yes)+P(No)	0.9995	0.9995	0.9995	468	228	<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv
+M9.MINIMUM	minimum median answer mass across the published grid (Audio Flamingo 3 / pcgita / zero shot answer)	0.8968	0.8921	0.9013	1100	100	<local data dir>/Desktop/release/overnight2/part3/af3_pcgita.csv
+M9.SWEEPMIN	minimum median answer mass across every mass-bearing file on disk (Audio Flamingo 2 / kcl30b)	0.8662			37	37	<local data dir>/paper1_local_runs/af2_kcl30b_audio.csv
+M9.CELLS	master_lookup cells with an answer mass recorded	98			221		scores/part16/M/M9_answer_mass.csv
+M9.FILES	per-clip score files on disk with an answer mass recorded	307			608		scores/part16/M/M9_inventory.csv
