@@ -1,0 +1,64 @@
+PART 24 item 2 verifier, 2026-09-23T21:49:31Z
+env python 3.14.6 numpy 2.5.3 pandas 3.0.6 sklearn 1.9.1 pymupdf 1.28.2
+answer line: E-DAIC whole zero shot AUC recomputed 0.836596 -> 0.8366 (n 275, speakers 275, positives 66); figure uses 0.8366
+copy check pdf: part24 e05e5188fc39554024e8d5ef3cb31020  zip/figures e05e5188fc39554024e8d5ef3cb31020  identical True
+copy check png: part24 9b99fb6ef3d5ac834b93480b352ebe64  zip/figures 9b99fb6ef3d5ac834b93480b352ebe64  identical True
+current zip/figures/fig1_gap.pdf md5 bbefb559a5768dcb07d11ed5d440da18 (unchanged if bbefb559a5768dcb07d11ed5d440da18)
+[fig1_gap_whole.pdf] page 243.78 x 187.20 pt; PyMuPDF char size min 9.0 max 9.0 over 28 spans
+[fig1_gap_whole.pdf] span fonts: ['STIXGeneral-Italic', 'STIXGeneral-Regular']
+[fig1_gap_whole.pdf] pdffonts | name                                 type              encoding         emb sub uni object ID
+[fig1_gap_whole.pdf] pdffonts | ------------------------------------ ----------------- ---------------- --- --- --- ---------
+[fig1_gap_whole.pdf] pdffonts | CZRBLR+STIXGeneral-Regular           CID TrueType      Identity-H       yes yes yes     18  0
+[fig1_gap_whole.pdf] pdffonts | FTXWZA+STIXGeneral-Italic            CID TrueType      Identity-H       yes yes yes     25  0
+[fig1_gap_whole_v4layout.pdf] page 243.78 x 144.00 pt; PyMuPDF char size min 9.0 max 10.0 over 20 spans
+[fig1_gap_whole_v4layout.pdf] span fonts: ['STIXGeneral-Regular']
+[fig1_gap_whole_v4layout.pdf] pdffonts | name                                 type              encoding         emb sub uni object ID
+[fig1_gap_whole_v4layout.pdf] pdffonts | ------------------------------------ ----------------- ---------------- --- --- --- ---------
+[fig1_gap_whole_v4layout.pdf] pdffonts | CZRBLR+STIXGeneral-Regular           CID TrueType      Identity-H       yes yes yes     18  0
+[OVERLEAF fig1_gap.pdf (current, for comparison)] page 244.08 x 187.20 pt; PyMuPDF char size min 7.5 max 9.0 over 28 spans
+[OVERLEAF fig1_gap.pdf (current, for comparison)] spans under 9 pt: [(7.5, 'chance'), (7.5, 'proj.'), (8.5, '0.56'), (8.5, '0.66'), (8.5, '0.83'), (8.5, 'E-DAIC (MDD)'), (8.5, 'PC-GITA (PD)'), (8.5, 'Pitt (AD)')]
+[OVERLEAF fig1_gap.pdf (current, for comparison)] span fonts: ['STIXGeneral-Italic', 'STIXGeneral-Regular']
+[OVERLEAF fig1_gap.pdf (current, for comparison)] pdffonts | name                                 type              encoding         emb sub uni object ID
+[OVERLEAF fig1_gap.pdf (current, for comparison)] pdffonts | ------------------------------------ ----------------- ---------------- --- --- --- ---------
+[OVERLEAF fig1_gap.pdf (current, for comparison)] pdffonts | CZRBLR+STIXGeneral-Regular           CID TrueType      Identity-H       yes yes yes     18  0
+[OVERLEAF fig1_gap.pdf (current, for comparison)] pdffonts | FTXWZA+STIXGeneral-Italic            CID TrueType      Identity-H       yes yes yes     25  0
+[fig1_gap_whole] PC-GITA answer line plotted 0.5635
+[fig1_gap_whole] Pitt answer line plotted 0.6578
+[fig1_gap_whole] E-DAIC answer line plotted 0.8366
+[fig1_gap_whole] Line2D vs mirror csv  PC-GITA encoder  n 32  max |diff| 0 (layer 0)
+[fig1_gap_whole] Line2D vs mirror csv  PC-GITA llm      n 29  max |diff| 0 (layer 0)
+[fig1_gap_whole] Line2D vs mirror csv  Pitt    encoder  n 32  max |diff| 0 (layer 0)
+[fig1_gap_whole] Line2D vs mirror csv  Pitt    llm      n 29  max |diff| 0 (layer 0)
+[fig1_gap_whole] Line2D vs pod csv  E-DAIC  encoder  n 32  max |diff| 0 (layer 0)
+[fig1_gap_whole] Line2D vs pod csv  E-DAIC  llm      n 29  max |diff| 0 (layer 0)
+[fig1_gap_whole] LARGEST per layer |figure arrays - pod curves| E-DAIC = 0
+[fig1_gap_whole_v4layout] PC-GITA answer line plotted 0.5635
+[fig1_gap_whole_v4layout] Pitt answer line plotted 0.6578
+[fig1_gap_whole_v4layout] E-DAIC answer line plotted 0.8366
+[fig1_gap_whole_v4layout] Line2D vs mirror csv  PC-GITA encoder  n 32  max |diff| 0 (layer 0)
+[fig1_gap_whole_v4layout] Line2D vs mirror csv  PC-GITA llm      n 29  max |diff| 0 (layer 0)
+[fig1_gap_whole_v4layout] Line2D vs mirror csv  Pitt    encoder  n 32  max |diff| 0 (layer 0)
+[fig1_gap_whole_v4layout] Line2D vs mirror csv  Pitt    llm      n 29  max |diff| 0 (layer 0)
+[fig1_gap_whole_v4layout] Line2D vs pod csv  E-DAIC  encoder  n 32  max |diff| 0 (layer 0)
+[fig1_gap_whole_v4layout] Line2D vs pod csv  E-DAIC  llm      n 29  max |diff| 0 (layer 0)
+[fig1_gap_whole_v4layout] LARGEST per layer |figure arrays - pod curves| E-DAIC = 0
+[fig1_gap_whole.pdf] PDF vertices vs mirror csv  PC-GITA encoder  max |diff| 8.7e-08
+[fig1_gap_whole.pdf] PDF vertices vs mirror csv  PC-GITA llm      max |diff| 8.5e-08
+[fig1_gap_whole.pdf] PDF vertices vs mirror csv  Pitt    encoder  max |diff| 8.6e-08
+[fig1_gap_whole.pdf] PDF vertices vs mirror csv  Pitt    llm      max |diff| 8.6e-08
+[fig1_gap_whole.pdf] PDF vertices vs pod csv  E-DAIC  encoder  max |diff| 8.6e-08
+[fig1_gap_whole.pdf] PDF vertices vs pod csv  E-DAIC  llm      max |diff| 7.8e-08
+[fig1_gap_whole_v4layout.pdf] PDF vertices vs mirror csv  PC-GITA encoder  max |diff| 3.3e-08
+[fig1_gap_whole_v4layout.pdf] PDF vertices vs mirror csv  PC-GITA llm      max |diff| 2.8e-08
+[fig1_gap_whole_v4layout.pdf] PDF vertices vs mirror csv  Pitt    encoder  max |diff| 2.5e-08
+[fig1_gap_whole_v4layout.pdf] PDF vertices vs mirror csv  Pitt    llm      max |diff| 2.9e-08
+[fig1_gap_whole_v4layout.pdf] PDF vertices vs pod csv  E-DAIC  encoder  max |diff| 2.6e-08
+[fig1_gap_whole_v4layout.pdf] PDF vertices vs pod csv  E-DAIC  llm      max |diff| 2.4e-08
+new vs current Overleaf figure, PDF vertices  PC-GITA encoder  max |diff| 0
+new vs current Overleaf figure, PDF vertices  PC-GITA llm      max |diff| 0
+new vs current Overleaf figure, PDF vertices  Pitt    encoder  max |diff| 0
+new vs current Overleaf figure, PDF vertices  Pitt    llm      max |diff| 0
+new vs current Overleaf figure, PDF vertices  E-DAIC  encoder  max |diff| 0.0297
+new vs current Overleaf figure, PDF vertices  E-DAIC  llm      max |diff| 0.0597
+pod vs Linux recompute  encoder  n 32  max |diff| 0.0006 at stage 8 (pod 0.5824, recompute 0.5830); stages equal at 4 dp 4/32; recompute file's own pod column vs pod csv 0
+pod vs Linux recompute  llm      n 29  max |diff| 0.0020 at stage 22 (pod 0.7093, recompute 0.7113); stages equal at 4 dp 6/29; recompute file's own pod column vs pod csv 0
