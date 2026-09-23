@@ -1,0 +1,3 @@
+id	what	value	lo	hi	n	n_spk	file
+M7fix	Qwen2.5-Omni Pitt encoder probe, 5-repeat (CORRECTED source)	0.7706	0.7157	0.8220	468	228	scores/part10/pitt_enc_nested5_oof.npz
+M7fix	Qwen2.5-Omni Pitt paired probe minus zero-shot (CORRECTED)	+0.1128	0.0455	0.1768	468	228	scores/part16/M/M7_perclip/pitt_FIXED.csv
