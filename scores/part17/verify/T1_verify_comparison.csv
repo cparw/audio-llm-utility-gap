@@ -1,0 +1,33 @@
+model,stream,quantity,verifier,task,agree
+Qwen2-Audio,audio,agreement_old_483,0.9478 0.9128 0.9762,0.9478 0.9128 0.9762,True
+Qwen2-Audio,audio,agreement_new_distinct,0.9608 0.9351 0.9814,0.9608 0.9351 0.9814,True
+Qwen2-Audio,audio,conflict,0.2280 0.1816 0.2782,0.2280 0.1816 0.2782,True
+Qwen2-Audio,audio,paired_new,-0.7328 -0.7780 -0.6837,-0.7328 -0.7780 -0.6837,True
+Qwen2.5-Omni,audio,agreement_old_483,0.9482 0.9039 0.9828,0.9482 0.9039 0.9828,True
+Qwen2.5-Omni,audio,agreement_new_distinct,0.9647 0.9376 0.9857,0.9647 0.9376 0.9857,True
+Qwen2.5-Omni,audio,conflict,0.2218 0.1829 0.2632,0.2218 0.1829 0.2632,True
+Qwen2.5-Omni,audio,paired_new,-0.7429 -0.7869 -0.6944,-0.7429 -0.7869 -0.6944,True
+Qwen3-Omni-30B-A3B,audio,agreement_old_483,0.9638 0.9336 0.9864,0.9638 0.9336 0.9864,True
+Qwen3-Omni-30B-A3B,audio,agreement_new_distinct,0.9727 0.9507 0.9904,0.9727 0.9507 0.9904,True
+Qwen3-Omni-30B-A3B,audio,conflict,0.3008 0.2454 0.3641,0.3008 0.2454 0.3641,True
+Qwen3-Omni-30B-A3B,audio,paired_new,-0.6719 -0.7266 -0.6105,-0.6719 -0.7266 -0.6105,True
+Audio Flamingo 2,audio,agreement_old_483,0.6083 0.5126 0.6997,0.6083 0.5126 0.6997,True
+Audio Flamingo 2,audio,agreement_new_distinct,0.6297 0.5451 0.7087,0.6297 0.5451 0.7087,True
+Audio Flamingo 2,audio,conflict,0.5286 0.4512 0.6015,0.5286 0.4512 0.6015,True
+Audio Flamingo 2,audio,paired_new,-0.1011 -0.1647 -0.0384,-0.1011 -0.1647 -0.0384,True
+Audio Flamingo 3,audio,agreement_old_483,0.8095 0.7447 0.8696,0.8095 0.7447 0.8696,True
+Audio Flamingo 3,audio,agreement_new_distinct,0.8425 0.7963 0.8854,0.8425 0.7963 0.8854,True
+Audio Flamingo 3,audio,conflict,0.4235 0.3606 0.4880,0.4235 0.3606 0.4880,True
+Audio Flamingo 3,audio,paired_new,-0.4190 -0.4878 -0.3461,-0.4190 -0.4878 -0.3461,True
+Kimi-Audio,audio,agreement_old_483,0.8744 0.8172 0.9223,0.8744 0.8172 0.9223,True
+Kimi-Audio,audio,agreement_new_distinct,0.8936 0.8479 0.9329,0.8936 0.8479 0.9329,True
+Kimi-Audio,audio,conflict,0.5258 0.4501 0.5977,0.5258 0.4501 0.5977,True
+Kimi-Audio,audio,paired_new,-0.3678 -0.4394 -0.3020,-0.3678 -0.4394 -0.3020,True
+Qwen2.5-Omni,transcript,agreement_old_483,0.9596 0.9306 0.9823,0.9596 0.9306 0.9823,True
+Qwen2.5-Omni,transcript,agreement_new_distinct,0.9620 0.9345 0.9822,0.9620 0.9345 0.9822,True
+Qwen2.5-Omni,transcript,conflict,0.1498 0.1131 0.1887,0.1498 0.1131 0.1887,True
+Qwen2.5-Omni,transcript,paired_new,-0.8123 -0.8536 -0.7692,-0.8123 -0.8536 -0.7692,True
+Qwen2-Audio,transcript,agreement_old_483,0.9081 0.8515 0.9547,0.9081 0.8515 0.9547,True
+Qwen2-Audio,transcript,agreement_new_distinct,0.9199 0.8791 0.9560,0.9199 0.8791 0.9560,True
+Qwen2-Audio,transcript,conflict,0.2359 0.1851 0.2886,0.2359 0.1851 0.2886,True
+Qwen2-Audio,transcript,paired_new,-0.6840 -0.7516 -0.6161,-0.6840 -0.7516 -0.6161,True

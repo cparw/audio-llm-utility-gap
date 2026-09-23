@@ -1,0 +1,33 @@
+id	what	value	lo	hi	n	n_spk	file
+T1_o25_conflict	E-DAIC Table 2 Qwen2.5-Omni audio conflict	0.2218	0.1829	0.2632	483	138	scores/part17/T1_perclip_all966.csv
+T1_o25_agreement_OLD_483rows	E-DAIC Table 2 Qwen2.5-Omni audio agreement OLD 483 rows	0.9482	0.9039	0.9828	483	138	scores/part17/T1_perclip_all966.csv
+T1_o25_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2.5-Omni audio agreement NEW 311 distinct	0.9647	0.9376	0.9857	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_o25_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2.5-Omni audio SUPPLEMENTARY paired conflict minus agreement, distinct	-0.7429	-0.7869	-0.6944	794	138	scores/part17/T1_perclip_all966.csv
+T1_q2a_conflict	E-DAIC Table 2 Qwen2-Audio audio conflict	0.2280	0.1816	0.2782	483	138	scores/part17/T1_perclip_all966.csv
+T1_q2a_agreement_OLD_483rows	E-DAIC Table 2 Qwen2-Audio audio agreement OLD 483 rows	0.9478	0.9128	0.9762	483	138	scores/part17/T1_perclip_all966.csv
+T1_q2a_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2-Audio audio agreement NEW 311 distinct	0.9608	0.9351	0.9814	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_q2a_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2-Audio audio SUPPLEMENTARY paired conflict minus agreement, distinct	-0.7328	-0.7780	-0.6837	794	138	scores/part17/T1_perclip_all966.csv
+T1_q3o_conflict	E-DAIC Table 2 Qwen3-Omni-30B-A3B audio conflict	0.3008	0.2454	0.3641	483	138	scores/part17/T1_perclip_all966.csv
+T1_q3o_agreement_OLD_483rows	E-DAIC Table 2 Qwen3-Omni-30B-A3B audio agreement OLD 483 rows	0.9638	0.9336	0.9864	483	138	scores/part17/T1_perclip_all966.csv
+T1_q3o_agreement_NEW_311distinct	E-DAIC Table 2 Qwen3-Omni-30B-A3B audio agreement NEW 311 distinct	0.9727	0.9507	0.9904	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_q3o_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Qwen3-Omni-30B-A3B audio SUPPLEMENTARY paired conflict minus agreement, distinct	-0.6719	-0.7266	-0.6105	794	138	scores/part17/T1_perclip_all966.csv
+T1_af2_conflict	E-DAIC Table 2 Audio Flamingo 2 audio conflict	0.5286	0.4512	0.6015	483	138	scores/part17/T1_perclip_all966.csv
+T1_af2_agreement_OLD_483rows	E-DAIC Table 2 Audio Flamingo 2 audio agreement OLD 483 rows	0.6083	0.5126	0.6997	483	138	scores/part17/T1_perclip_all966.csv
+T1_af2_agreement_NEW_311distinct	E-DAIC Table 2 Audio Flamingo 2 audio agreement NEW 311 distinct	0.6297	0.5451	0.7087	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_af2_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Audio Flamingo 2 audio SUPPLEMENTARY paired conflict minus agreement, distinct	-0.1011	-0.1647	-0.0384	794	138	scores/part17/T1_perclip_all966.csv
+T1_af3_conflict	E-DAIC Table 2 Audio Flamingo 3 audio conflict	0.4235	0.3606	0.4880	483	138	scores/part17/T1_perclip_all966.csv
+T1_af3_agreement_OLD_483rows	E-DAIC Table 2 Audio Flamingo 3 audio agreement OLD 483 rows	0.8095	0.7447	0.8696	483	138	scores/part17/T1_perclip_all966.csv
+T1_af3_agreement_NEW_311distinct	E-DAIC Table 2 Audio Flamingo 3 audio agreement NEW 311 distinct	0.8425	0.7963	0.8854	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_af3_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Audio Flamingo 3 audio SUPPLEMENTARY paired conflict minus agreement, distinct	-0.4190	-0.4878	-0.3461	794	138	scores/part17/T1_perclip_all966.csv
+T1_kimi_conflict	E-DAIC Table 2 Kimi-Audio audio conflict	0.5258	0.4501	0.5977	483	138	scores/part17/T1_perclip_all966.csv
+T1_kimi_agreement_OLD_483rows	E-DAIC Table 2 Kimi-Audio audio agreement OLD 483 rows	0.8744	0.8172	0.9223	483	138	scores/part17/T1_perclip_all966.csv
+T1_kimi_agreement_NEW_311distinct	E-DAIC Table 2 Kimi-Audio audio agreement NEW 311 distinct	0.8936	0.8479	0.9329	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_kimi_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Kimi-Audio audio SUPPLEMENTARY paired conflict minus agreement, distinct	-0.3678	-0.4394	-0.3020	794	138	scores/part17/T1_perclip_all966.csv
+T1_o25t_conflict	E-DAIC Table 2 Qwen2.5-Omni transcript conflict	0.1498	0.1131	0.1887	483	138	scores/part17/T1_perclip_all966.csv
+T1_o25t_agreement_OLD_483rows	E-DAIC Table 2 Qwen2.5-Omni transcript agreement OLD 483 rows	0.9596	0.9306	0.9823	483	138	scores/part17/T1_perclip_all966.csv
+T1_o25t_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2.5-Omni transcript agreement NEW 311 distinct	0.9620	0.9345	0.9822	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_o25t_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2.5-Omni transcript SUPPLEMENTARY paired conflict minus agreement, distinct	-0.8123	-0.8536	-0.7692	794	138	scores/part17/T1_perclip_all966.csv
+T1_q2at_conflict	E-DAIC Table 2 Qwen2-Audio transcript conflict	0.2359	0.1851	0.2886	483	138	scores/part17/T1_perclip_all966.csv
+T1_q2at_agreement_OLD_483rows	E-DAIC Table 2 Qwen2-Audio transcript agreement OLD 483 rows	0.9081	0.8515	0.9547	483	138	scores/part17/T1_perclip_all966.csv
+T1_q2at_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2-Audio transcript agreement NEW 311 distinct	0.9199	0.8791	0.9560	311	138	scores/part17/T1_perclip_distinct_agreement.csv
+T1_q2at_paired_conflict_minus_agreement_NEW_311distinct	E-DAIC Table 2 Qwen2-Audio transcript SUPPLEMENTARY paired conflict minus agreement, distinct	-0.6840	-0.7516	-0.6161	794	138	scores/part17/T1_perclip_all966.csv
