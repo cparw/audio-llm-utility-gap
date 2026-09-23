@@ -1,0 +1,24 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1383.16it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  55%|█████▍    | 1335/2447 [00:00<00:00, 13324.50it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 13243.14it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 10s on cuda
+STAGES enc 32 (+1 proj) | llm stages 29 | max_position_embeddings 32768
+audio token 151646 | yes [7414, 9454, 9693, 9834, 14004] | no [902, 2152, 2308, 2753, 8996] | WINDOW_S 0.0
+1/10 305.wav p_yes 0.578 mass 0.994 dur 900s aud_tok 7500 seq 7548 fit 1 2.8s  tot 13s
+6/10 301.wav p_yes 0.060 mass 0.996 dur 900s aud_tok 7500 seq 7548 fit 1 1.3s  tot 19s
+10/10 346.wav p_yes 0.980 mass 0.999 dur 699s aud_tok 7500 seq 7548 fit 1 1.3s  tot 23s
+EXTRACTION DONE 22.736596822738647
