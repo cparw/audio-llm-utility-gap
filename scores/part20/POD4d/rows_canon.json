@@ -1,0 +1,110 @@
+[
+ {
+  "id": "kimi_pitt_noinv_overall",
+  "what": "Kimi-Audio zero-shot Pitt interviewer-free (PAR-only) overall AUC",
+  "value": "0.5981",
+  "lo": "0.5345",
+  "hi": "0.6617",
+  "n": 468,
+  "n_spk": 228,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_noinv_overall.csv",
+  "two_dp": "0.60 [0.53, 0.66]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_orig_canonical_overall",
+  "what": "Kimi-Audio zero-shot Pitt original windows overall AUC (canonical paper file, recomputed)",
+  "value": "0.7180",
+  "lo": "0.6585",
+  "hi": "0.7742",
+  "n": 468,
+  "n_spk": 228,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_canonical_overall.csv",
+  "two_dp": "0.72 [0.66, 0.77]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_orig_minus_noinv_overall",
+  "what": "Kimi-Audio zero-shot Pitt overall: original (canonical file) minus interviewer-free AUC (paired)",
+  "value": "0.1199",
+  "lo": "0.0718",
+  "hi": "0.1665",
+  "n": 468,
+  "n_spk": 228,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_minus_noinv_overall.csv",
+  "two_dp": "0.12 [0.07, 0.17]",
+  "vs_half": "interval excludes zero"
+ },
+ {
+  "id": "kimi_pitt_noinv_conflict",
+  "what": "Kimi-Audio zero-shot Pitt interviewer-free (PAR-only) conflict AUC",
+  "value": "0.6972",
+  "lo": "0.5905",
+  "hi": "0.7946",
+  "n": 146,
+  "n_spk": 100,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_noinv_conflict.csv",
+  "two_dp": "0.70 [0.59, 0.79]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_orig_canonical_conflict",
+  "what": "Kimi-Audio zero-shot Pitt original windows conflict AUC (canonical paper file, recomputed)",
+  "value": "0.7197",
+  "lo": "0.6201",
+  "hi": "0.8147",
+  "n": 146,
+  "n_spk": 100,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_canonical_conflict.csv",
+  "two_dp": "0.72 [0.62, 0.81]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_orig_minus_noinv_conflict",
+  "what": "Kimi-Audio zero-shot Pitt conflict: original (canonical file) minus interviewer-free AUC (paired)",
+  "value": "0.0224",
+  "lo": "-0.0495",
+  "hi": "0.0996",
+  "n": 146,
+  "n_spk": 100,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_minus_noinv_conflict.csv",
+  "two_dp": "0.02 [-0.05, 0.10]",
+  "vs_half": "interval includes zero"
+ },
+ {
+  "id": "kimi_pitt_noinv_agreement",
+  "what": "Kimi-Audio zero-shot Pitt interviewer-free (PAR-only) agreement AUC",
+  "value": "0.5612",
+  "lo": "0.4860",
+  "hi": "0.6364",
+  "n": 322,
+  "n_spk": 175,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_noinv_agreement.csv",
+  "two_dp": "0.56 [0.49, 0.64]",
+  "vs_half": "interval includes 0.5"
+ },
+ {
+  "id": "kimi_pitt_orig_canonical_agreement",
+  "what": "Kimi-Audio zero-shot Pitt original windows agreement AUC (canonical paper file, recomputed)",
+  "value": "0.7227",
+  "lo": "0.6560",
+  "hi": "0.7896",
+  "n": 322,
+  "n_spk": 175,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_canonical_agreement.csv",
+  "two_dp": "0.72 [0.66, 0.79]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_orig_minus_noinv_agreement",
+  "what": "Kimi-Audio zero-shot Pitt agreement: original (canonical file) minus interviewer-free AUC (paired)",
+  "value": "0.1615",
+  "lo": "0.1068",
+  "hi": "0.2168",
+  "n": 322,
+  "n_spk": 175,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_minus_noinv_agreement.csv",
+  "two_dp": "0.16 [0.11, 0.22]",
+  "vs_half": "interval excludes zero"
+ }
+]

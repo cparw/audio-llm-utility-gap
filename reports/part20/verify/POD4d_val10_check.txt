@@ -1,0 +1,17 @@
+POD4d VERIFIER: 10-window validation against the canonical file (checked 2026-09-23 12:32Z)
+pod file: /workspace/scores/part20/POD4d/val10_orig_scores.csv (10 rows, first 10 conflict Control windows of mf_orig468.csv)
+canonical: release/overnight2/part3/kimi_pitt_zeroshot_scores.csv (md5 83dff4c65f7403b4266cdae6cc996196, identical to the pod copy)
+tolerance required by the job: 1e-3 on p_yes
+RESULT: FAIL
+  max |p_yes_ref - canonical p_yes| = 0.0768 (conflict_Con_045-0_35325.wav 0.72143 vs 0.79821)
+  max |p_yes (rule-3 set, adds ' YES'/' NO') - canonical| = 0.0768
+  rule-3 vs ref token set differ by < 1e-4 on these 10, so the token set is NOT the cause
+  answer mass agrees to 1.0e-3 (max 0.00103)
+  per window: 0.49207/0.48719, 0.29667/0.29642, 0.65150/0.60161, 0.83028/0.80614, 0.49802/0.55062,
+              0.77745/0.80226, 0.92072/0.93465, 0.31602/0.33096, 0.79821/0.72143, 0.92552/0.90904
+checks that DID pass: prompt verbatim; heard duration 30.0 s on all 10; source wavs 16 kHz mono (no resampling);
+  original segment sha256 468/468 match release/scores/part20/pitt_noinv_cut/source_segments.sha256;
+  interviewer-free clips sha256 468/468 match on the Mac and on the pod; durations 468/468 equal part16 par_dur_s_recut;
+  fold column 468/468 equals folds/pitt_groupkfold5_pod.csv; speakers and labels 468/468 equal the canonical file.
+consequence: this environment does not reproduce the canonical Kimi scores to 1e-3, so a paired
+  canonical-original minus fresh-interviewer-free difference would mix the cut effect with run-to-run drift of this size.

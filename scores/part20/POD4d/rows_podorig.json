@@ -1,0 +1,110 @@
+[
+ {
+  "id": "kimi_pitt_orig_podrerun_overall",
+  "what": "Kimi-Audio zero-shot Pitt original windows overall AUC (this pod's rerun, same env as the cut)",
+  "value": "0.7151",
+  "lo": "0.6553",
+  "hi": "0.7730",
+  "n": 468,
+  "n_spk": 228,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_podrerun_overall.csv",
+  "two_dp": "0.72 [0.66, 0.77]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_podorig_minus_noinv_overall",
+  "what": "Kimi-Audio zero-shot Pitt overall: original (pod rerun) minus interviewer-free AUC (paired, same env)",
+  "value": "0.1170",
+  "lo": "0.0692",
+  "hi": "0.1650",
+  "n": 468,
+  "n_spk": 228,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_podorig_minus_noinv_overall.csv",
+  "two_dp": "0.12 [0.07, 0.16]",
+  "vs_half": "interval excludes zero"
+ },
+ {
+  "id": "kimi_pitt_canon_minus_podorig_overall",
+  "what": "Kimi-Audio zero-shot Pitt overall: canonical file minus this pod's rerun of the same original windows (paired, environment drift)",
+  "value": "0.0029",
+  "lo": "-0.0049",
+  "hi": "0.0108",
+  "n": 468,
+  "n_spk": 228,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_canon_minus_podorig_overall.csv",
+  "two_dp": "0.00 [-0.00, 0.01]",
+  "vs_half": "interval includes zero"
+ },
+ {
+  "id": "kimi_pitt_orig_podrerun_conflict",
+  "what": "Kimi-Audio zero-shot Pitt original windows conflict AUC (this pod's rerun, same env as the cut)",
+  "value": "0.7215",
+  "lo": "0.6210",
+  "hi": "0.8153",
+  "n": 146,
+  "n_spk": 100,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_podrerun_conflict.csv",
+  "two_dp": "0.72 [0.62, 0.82]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_podorig_minus_noinv_conflict",
+  "what": "Kimi-Audio zero-shot Pitt conflict: original (pod rerun) minus interviewer-free AUC (paired, same env)",
+  "value": "0.0242",
+  "lo": "-0.0519",
+  "hi": "0.1016",
+  "n": 146,
+  "n_spk": 100,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_podorig_minus_noinv_conflict.csv",
+  "two_dp": "0.02 [-0.05, 0.10]",
+  "vs_half": "interval includes zero"
+ },
+ {
+  "id": "kimi_pitt_canon_minus_podorig_conflict",
+  "what": "Kimi-Audio zero-shot Pitt conflict: canonical file minus this pod's rerun of the same original windows (paired, environment drift)",
+  "value": "-0.0018",
+  "lo": "-0.0215",
+  "hi": "0.0160",
+  "n": 146,
+  "n_spk": 100,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_canon_minus_podorig_conflict.csv",
+  "two_dp": "-0.00 [-0.02, 0.02]",
+  "vs_half": "interval includes zero"
+ },
+ {
+  "id": "kimi_pitt_orig_podrerun_agreement",
+  "what": "Kimi-Audio zero-shot Pitt original windows agreement AUC (this pod's rerun, same env as the cut)",
+  "value": "0.7192",
+  "lo": "0.6528",
+  "hi": "0.7867",
+  "n": 322,
+  "n_spk": 175,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_orig_podrerun_agreement.csv",
+  "two_dp": "0.72 [0.65, 0.79]",
+  "vs_half": "above 0.5"
+ },
+ {
+  "id": "kimi_pitt_podorig_minus_noinv_agreement",
+  "what": "Kimi-Audio zero-shot Pitt agreement: original (pod rerun) minus interviewer-free AUC (paired, same env)",
+  "value": "0.1580",
+  "lo": "0.1027",
+  "hi": "0.2136",
+  "n": 322,
+  "n_spk": 175,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_podorig_minus_noinv_agreement.csv",
+  "two_dp": "0.16 [0.10, 0.21]",
+  "vs_half": "interval excludes zero"
+ },
+ {
+  "id": "kimi_pitt_canon_minus_podorig_agreement",
+  "what": "Kimi-Audio zero-shot Pitt agreement: canonical file minus this pod's rerun of the same original windows (paired, environment drift)",
+  "value": "0.0035",
+  "lo": "-0.0053",
+  "hi": "0.0126",
+  "n": 322,
+  "n_spk": 175,
+  "file": "/workspace/scores/part20/POD4d/kimi_pitt_canon_minus_podorig_agreement.csv",
+  "two_dp": "0.00 [-0.01, 0.01]",
+  "vs_half": "interval includes zero"
+ }
+]
