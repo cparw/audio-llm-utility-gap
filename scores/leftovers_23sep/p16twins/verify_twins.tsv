@@ -1,0 +1,123 @@
+id	check	twin_value	verifier_value	agree_4dp
+3b_all_cos	original == summary_all value_computed	0.0051	0.0051	yes
+3b_conflict_cos	original == summary_all value_computed	-0.0067	-0.0067	yes
+3b_agreement_cos	original == summary_all value_computed	0.0086	0.0086	yes
+SEED14_3b	original == summary_all value_computed	0.0051	0.0051	yes
+3b_conflict_auc_probe	original == summary_all value_computed	0.6145	0.6145	yes
+3b_agreement_auc_probe	original == summary_all value_computed	0.9349	0.9349	yes
+3b_conflict_auc_wo_d	original == summary_all value_computed	0.6196	0.6196	yes
+3b_agreement_auc_wo_d	original == summary_all value_computed	0.9341	0.9341	yes
+3a_pitt_enc_best_stage	original == summary_all value_computed	0.8276	0.8276	yes
+3a_pitt_llm_best_stage	original == summary_all value_computed	0.8634	0.8634	yes
+3a_pitt_ans_best_stage	original == summary_all value_computed	0.8485	0.8485	yes
+3a_pcgita_enc_best_stage	original == summary_all value_computed	0.9133	0.9133	yes
+3a_pcgita_llm_best_stage	original == summary_all value_computed	0.8960	0.8960	yes
+3a_pcgita_ans_best_stage	original == summary_all value_computed	0.8962	0.8962	yes
+M3_pitt_speaker	original == summary_all value_computed	0.6771	0.6771	yes
+M3_pitt_clip_minus_speaker	original == summary_all value_computed	-0.0193	-0.0193	yes
+M3_pcgita_speaker	original == summary_all value_computed	0.5948	0.5948	yes
+M3_pcgita_clip_minus_speaker	original == summary_all value_computed	-0.0313	-0.0313	yes
+M3_neurovoz_speaker	original == summary_all value_computed	0.7948	0.7948	yes
+M3_neurovoz_clip_minus_speaker	original == summary_all value_computed	-0.0997	-0.0997	yes
+M7fix#01 Pitt encoder probe mean of 5	original == summary_all value_computed	0.7706	0.7706	yes
+M7fix#02 Pitt paired probe minus zero-shot	original == summary_all value_computed	+0.1128	+0.1128	yes
+M7_pitt_probe_rep5	original == summary_all value_computed	0.7917	0.7917	yes
+M7_pitt_gap_rep5	original == summary_all value_computed	0.1339	0.1339	yes
+POD4_4b_resolved	original == summary_all value_computed	468	468	yes
+POD4_4b_invwin	original == summary_all value_computed	158	158	yes
+POD4_4b_invshare	original == summary_all value_computed	0.0200	0.0200	yes
+POD4_4b_parshare	original == summary_all value_computed	0.5871	0.5871	yes
+POD4_4b_pardur	original == summary_all value_computed	17.61	17.61	yes
+POD4_4b_under10s	original == summary_all value_computed	68	68	yes
+M9.FILES	original == summary_all value_computed	307	307	yes
+M9.SWEEPMIN	original == summary_all value_computed	0.8662	0.8662	yes
+M5_all_auc_without_d	original == summary_all value_computed	0.8327	0.8327	yes
+M5_all_auc_without_d_Xproj	original == summary_all value_computed	0.8223	0.8223	yes
+M5_conflict_refit_auc_without_d	original == summary_all value_computed	0.6869	0.6869	yes
+M5_agreement_refit_auc_without_d	original == summary_all value_computed	0.9346	0.9346	yes
+M5_conflict_restricted_auc_without_d	original == summary_all value_computed	0.6326	0.6326	yes
+M5_conflict_restricted_auc_without_d_Xproj	original == summary_all value_computed	0.6180	0.6180	yes
+M5_agreement_restricted_auc_without_d	original == summary_all value_computed	0.9070	0.9070	yes
+M5_agreement_restricted_auc_without_d_Xproj	original == summary_all value_computed	0.8988	0.8988	yes
+M5_paired_auc_without_d_conflict_minus_agreement	original == summary_all value_computed	-0.2745	-0.2745	yes
+M5_all_randfloor	original == summary_all value_computed	0.0124	0.0124	yes
+M5_conflict_refit_randfloor	original == summary_all value_computed	0.0123	0.0123	yes
+M5_agreement_refit_randfloor	original == summary_all value_computed	0.0126	0.0126	yes
+MEDAIC_full_llm_nested_NOCI	original == summary_all value_computed	0.6853	0.6853	yes
+MEDAIC_full_llm_minus_answer_POINT	original == summary_all value_computed	-0.1432	-0.1432	yes
+MEDAIC_full_enc_nested_NOCI	original == summary_all value_computed	0.5930	0.5930	yes
+MEDAIC_full_enc_minus_answer_POINT	original == summary_all value_computed	-0.2355	-0.2355	yes
+MEDAIC_full_ans_nested_NOCI	original == summary_all value_computed	0.7542	0.7542	yes
+MEDAIC_full_ans_minus_answer_POINT	original == summary_all value_computed	-0.0743	-0.0743	yes
+MEDAIC_full_proj_nested_NOCI	original == summary_all value_computed	0.5293	0.5293	yes
+MEDAIC_full_proj_minus_answer_POINT	original == summary_all value_computed	-0.2992	-0.2992	yes
+P16.POD2.L5	original == summary_all value_computed	4.13;4.07;4.05;4.03;4.00	4.13;4.07;4.05;4.03;4.00	yes
+P16.POD2.L6	original == summary_all value_computed	21.013	21.013	yes
+3b_all_auc_d	original == summary_all value_computed	0.7656	0.7656	yes
+3b_all_auc_probe	original == summary_all value_computed	0.8307	0.8307	yes
+3b_all_auc_wo_d	original == summary_all value_computed	0.8305	0.8305	yes
+3b_conflict_auc_d	original == summary_all value_computed	0.6029	0.6029	yes
+3b_agreement_auc_d	original == summary_all value_computed	0.8264	0.8264	yes
+M3_pitt_clip	original == summary_all value_computed	0.6578	0.6578	yes
+M3_pcgita_clip	original == summary_all value_computed	0.5635	0.5635	yes
+M3_neurovoz_clip	original == summary_all value_computed	0.6951	0.6951	yes
+3b_all_auc_probe	roc_auc_score on saved per-clip scores	0.8307	0.8306857807051529	yes
+3b_all_auc_wo_d	roc_auc_score on saved per-clip scores	0.8305	0.8305114296784192	yes
+3b_all_auc_d	roc_auc_score on saved per-clip scores	0.7656	0.765633475397133	yes
+3b_all_cos	cosine from saved directions	0.0051	0.005108757390506466	yes
+3b_conflict_auc_probe	roc_auc_score on saved per-clip scores	0.6145	0.6145214521452146	yes
+3b_conflict_auc_probe	CI re-derived (roc_auc_score)	[0.5021, 0.7246]	[0.5021, 0.7246]	yes
+3b_conflict_auc_wo_d	roc_auc_score on saved per-clip scores	0.6196	0.6195819581958196	yes
+3b_conflict_auc_wo_d	CI re-derived (roc_auc_score)	[0.5094, 0.7283]	[0.5094, 0.7283]	yes
+3b_conflict_auc_d	roc_auc_score on saved per-clip scores	0.6029	0.6028602860286028	yes
+3b_conflict_cos	cosine from saved directions	-0.0067	-0.006677144409980067	yes
+3b_agreement_auc_probe	roc_auc_score on saved per-clip scores	0.9349	0.9348768747264988	yes
+3b_agreement_auc_probe	CI re-derived (roc_auc_score)	[0.9034, 0.9614]	[0.9034, 0.9614]	yes
+3b_agreement_auc_wo_d	roc_auc_score on saved per-clip scores	0.9341	0.9340812348331146	yes
+3b_agreement_auc_wo_d	CI re-derived (roc_auc_score)	[0.9021, 0.9604]	[0.9021, 0.9604]	yes
+3b_agreement_auc_d	roc_auc_score on saved per-clip scores	0.8264	0.8264311572582248	yes
+3b_agreement_cos	cosine from saved directions	0.0086	0.008638132128692199	yes
+3a_pitt_enc_best_stage	mean of 5 roc_auc_score on saved best-stage OOF	0.8276	0.8275765207283998	yes
+3a_pitt_enc_best_stage	CI re-derived (roc_auc_score)	[0.7765, 0.8760]	[0.7765, 0.8760]	yes
+3a_pitt_enc_best_stage	best stage equals POD3 best stage	30	30	yes
+3a_pitt_llm_best_stage	mean of 5 roc_auc_score on saved best-stage OOF	0.8634	0.8633630375823325	yes
+3a_pitt_llm_best_stage	CI re-derived (roc_auc_score)	[0.8179, 0.9062]	[0.8179, 0.9062]	yes
+3a_pitt_llm_best_stage	best stage equals POD3 best stage	13	13	yes
+3a_pitt_ans_best_stage	mean of 5 roc_auc_score on saved best-stage OOF	0.8485	0.8484734598992638	yes
+3a_pitt_ans_best_stage	CI re-derived (roc_auc_score)	[0.8069, 0.8882]	[0.8069, 0.8882]	yes
+3a_pitt_ans_best_stage	best stage equals POD3 best stage	26	26	yes
+3a_pcgita_enc_best_stage	mean of 5 roc_auc_score on saved best-stage OOF	0.9133	0.9133170247933883	yes
+3a_pcgita_enc_best_stage	CI re-derived (roc_auc_score)	[0.8519, 0.9604]	[0.8519, 0.9604]	yes
+3a_pcgita_enc_best_stage	best stage equals POD3 best stage	14	14	yes
+3a_pcgita_llm_best_stage	mean of 5 roc_auc_score on saved best-stage OOF	0.8960	0.8959702479338842	yes
+3a_pcgita_llm_best_stage	CI re-derived (roc_auc_score)	[0.8341, 0.9463]	[0.8341, 0.9463]	yes
+3a_pcgita_llm_best_stage	best stage equals POD3 best stage	14	14	yes
+3a_pcgita_ans_best_stage	mean of 5 roc_auc_score on saved best-stage OOF	0.8962	0.8962105785123967	yes
+3a_pcgita_ans_best_stage	CI re-derived (roc_auc_score)	[0.8327, 0.9452]	[0.8327, 0.9452]	yes
+3a_pcgita_ans_best_stage	best stage equals POD3 best stage	15	15	yes
+M7fix#01 Pitt encoder probe mean of 5	roc_auc_score	0.7706	0.7705695466873305	yes
+M7fix#02 Pitt paired probe minus zero-shot	roc_auc_score	+0.1128	0.11280123982952339	yes
+M7fix#02 Pitt paired probe minus zero-shot	paired CI re-derived	[0.0455, 0.1768]	[0.0455, 0.1768]	yes
+M7_pitt_probe_rep5	roc_auc_score	0.7917	0.7916892677256877	yes
+M7_pitt_gap_rep5	roc_auc_score	0.1339	0.13392096086788063	yes
+M3_pitt_speaker	roc_auc_score	0.6771	0.6770833333333333	yes
+M3_pitt_clip_minus_speaker	roc_auc_score	-0.0193	-0.019315026475526187	yes
+M3_pcgita_speaker	roc_auc_score	0.5948	0.5948	yes
+M3_pcgita_clip_minus_speaker	roc_auc_score	-0.0313	-0.03132231404958685	yes
+M3_neurovoz_speaker	roc_auc_score	0.7948	0.7947552447552447	yes
+M3_neurovoz_clip_minus_speaker	roc_auc_score	-0.0997	-0.09967374937898155	yes
+M5_all_auc_without_d	roc_auc_score	0.8327	0.8326811313444402	yes
+M5_all_auc_without_d_Xproj	roc_auc_score	0.8223	0.8223363037582332	yes
+M5_conflict_refit_auc_without_d	roc_auc_score	0.6869	0.6869086908690869	yes
+M5_agreement_refit_auc_without_d	roc_auc_score	0.9346	0.9346381827584834	yes
+M5_conflict_restricted_auc_without_d	roc_auc_score	0.6326	0.6325632563256325	yes
+M5_conflict_restricted_auc_without_d_Xproj	roc_auc_score	0.6180	0.618041804180418	yes
+M5_agreement_restricted_auc_without_d	roc_auc_score	0.9070	0.9070294784580498	yes
+M5_agreement_restricted_auc_without_d_Xproj	roc_auc_score	0.8988	0.8987548235668537	yes
+M5_paired_auc_without_d_conflict_minus_agreement	roc_auc_score	-0.2745	-0.27446622213241734	yes
+POD4_4b_resolved	count	468	468	yes
+POD4_4b_invwin	count	158	158	yes
+POD4_4b_invshare	mean	0.0200	0.019971866096866096	yes
+POD4_4b_parshare	mean	0.5871	0.5871166666666666	yes
+POD4_4b_pardur	mean (2 dp)	17.61	17.61	yes
+POD4_4b_under10s	count	68	68	yes
