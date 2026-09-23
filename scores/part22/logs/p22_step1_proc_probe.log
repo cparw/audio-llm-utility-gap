@@ -1,0 +1,69 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+transformers 5.17.0 <local scratch dir>/venv22/lib/python3.10/site-packages/transformers/__init__.py | torch 2.11.0
+feature_extractor class: transformers.models.whisper.feature_extraction_whisper.WhisperFeatureExtractor
+  fe.chunk_length = 300
+  fe.sampling_rate = 16000
+  fe.n_samples = 4800000
+  fe.nb_max_frames = 30000
+  fe.hop_length = 160
+  fe.n_fft = 400
+  fe.feature_size = 128
+  fe.padding_side = 'right'
+  fe.padding_value = 0.0
+  fe.return_attention_mask = True
+  fe.dither = 0.0
+tokenizer.init_kwargs keys that are also AudioKwargs keys: []
+merged audio_kwargs for the paper call (before __call__ line 143 forces padding): {'sampling_rate': 16000, 'padding': True, 'return_attention_mask': True, 'return_tensors': 'pt'}
+audio token <|AUDIO|> 151646
+A_paper_call                                     dur   200.00s -> feat [1, 128, 30000] mask_frames  20000 audio_tok   5000 seq 5048
+B_flat_truncation_False                          dur   200.00s -> feat [1, 128, 30000] mask_frames  20000 audio_tok   5000 seq 5048
+C_audio_kwargs_truncation_False                  dur   200.00s -> feat [1, 128, 30000] mask_frames  20000 audio_tok   5000 seq 5048
+D_audio_kwargs_max_length_900s                   dur   200.00s -> feat [1, 128, 90000] mask_frames  20000 audio_tok   5000 seq 5048
+E_audio_kwargs_trunc_False_and_max_length_900s   dur   200.00s -> feat [1, 128, 90000] mask_frames  20000 audio_tok   5000 seq 5048
+A_paper_call                                     dur   299.99s -> feat [1, 128, 30000] mask_frames  29999 audio_tok   7500 seq 7548
+B_flat_truncation_False                          dur   299.99s -> feat [1, 128, 30000] mask_frames  29999 audio_tok   7500 seq 7548
+C_audio_kwargs_truncation_False                  dur   299.99s -> feat [1, 128, 30000] mask_frames  29999 audio_tok   7500 seq 7548
+D_audio_kwargs_max_length_900s                   dur   299.99s -> feat [1, 128, 90000] mask_frames  29999 audio_tok   7500 seq 7548
+E_audio_kwargs_trunc_False_and_max_length_900s   dur   299.99s -> feat [1, 128, 90000] mask_frames  29999 audio_tok   7500 seq 7548
+A_paper_call                                     dur   300.00s -> feat [1, 128, 30000] mask_frames  30000 audio_tok   7500 seq 7548
+B_flat_truncation_False                          dur   300.00s -> feat [1, 128, 30000] mask_frames  30000 audio_tok   7500 seq 7548
+C_audio_kwargs_truncation_False                  dur   300.00s -> feat [1, 128, 30000] mask_frames  30000 audio_tok   7500 seq 7548
+D_audio_kwargs_max_length_900s                   dur   300.00s -> feat [1, 128, 90000] mask_frames  30000 audio_tok   7500 seq 7548
+E_audio_kwargs_trunc_False_and_max_length_900s   dur   300.00s -> feat [1, 128, 90000] mask_frames  30000 audio_tok   7500 seq 7548
+A_paper_call                                     dur   300.01s -> feat [1, 128, 30000] mask_frames  30000 audio_tok   7500 seq 7548
+B_flat_truncation_False                          dur   300.01s -> feat [1, 128, 30001] mask_frames  30001 audio_tok   7500 seq 7548
+C_audio_kwargs_truncation_False                  dur   300.01s -> feat [1, 128, 30001] mask_frames  30001 audio_tok   7500 seq 7548
+D_audio_kwargs_max_length_900s                   dur   300.01s -> feat [1, 128, 90000] mask_frames  30001 audio_tok   7500 seq 7548
+E_audio_kwargs_trunc_False_and_max_length_900s   dur   300.01s -> feat [1, 128, 90000] mask_frames  30001 audio_tok   7500 seq 7548
+A_paper_call                                     dur   600.00s -> feat [1, 128, 30000] mask_frames  30000 audio_tok   7500 seq 7548
+B_flat_truncation_False                          dur   600.00s -> feat [1, 128, 60000] mask_frames  60000 audio_tok  15000 seq 15048
+C_audio_kwargs_truncation_False                  dur   600.00s -> feat [1, 128, 60000] mask_frames  60000 audio_tok  15000 seq 15048
+D_audio_kwargs_max_length_900s                   dur   600.00s -> feat [1, 128, 90000] mask_frames  60000 audio_tok  15000 seq 15048
+E_audio_kwargs_trunc_False_and_max_length_900s   dur   600.00s -> feat [1, 128, 90000] mask_frames  60000 audio_tok  15000 seq 15048
+A_paper_call                                     dur   900.00s -> feat [1, 128, 30000] mask_frames  30000 audio_tok   7500 seq 7548
+B_flat_truncation_False                          dur   900.00s -> feat [1, 128, 90000] mask_frames  90000 audio_tok  22500 seq 22548
+C_audio_kwargs_truncation_False                  dur   900.00s -> feat [1, 128, 90000] mask_frames  90000 audio_tok  22500 seq 22548
+D_audio_kwargs_max_length_900s                   dur   900.00s -> feat [1, 128, 90000] mask_frames  90000 audio_tok  22500 seq 22548
+E_audio_kwargs_trunc_False_and_max_length_900s   dur   900.00s -> feat [1, 128, 90000] mask_frames  90000 audio_tok  22500 seq 22548
+F_override_fe_n_samples_900s                     dur   200.00s -> feat [1, 128, 90000] mask_frames  20000 audio_tok   5000 seq 5048
+F_override_fe_n_samples_900s                     dur   900.00s -> feat [1, 128, 90000] mask_frames  90000 audio_tok  22500 seq 22548
+formula frames 20000 -> after conv 10000 -> audio tokens 5000
+formula frames 29999 -> after conv 15000 -> audio tokens 7500
+formula frames 30000 -> after conv 15000 -> audio tokens 7500
+formula frames 60000 -> after conv 30000 -> audio tokens 15000
+formula frames 90000 -> after conv 45000 -> audio tokens 22500
+Exception ignored in atexit callback: <function dump_compile_times at 0x12d5e1750>
+Traceback (most recent call last):
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 910, in dump_compile_times
+    log.info(compile_times(repr="str", aggregate=True))
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 896, in compile_times
+    out += tabulate(rows, headers=("Function", "Runtimes (s)"))
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 246, in tabulate
+    return tabulate.tabulate(rows, headers=headers)
+AttributeError: module 'tabulate' has no attribute 'tabulate'

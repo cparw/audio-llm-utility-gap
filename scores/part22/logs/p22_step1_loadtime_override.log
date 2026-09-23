@@ -1,0 +1,21 @@
+[transformers] Image processor Qwen2VLImageProcessor: kwargs ['chunk_length'] were applied for backward compatibility. To avoid this warning, add them to valid_kwargs: create a custom TypedDict extending ImagesKwargs with these keys and set it as the `valid_kwargs` class attribute.
+[transformers] Image processor Qwen2VLVideoProcessor: kwargs ['chunk_length'] were applied for backward compatibility. To avoid this warning, add them to valid_kwargs: create a custom TypedDict extending ImagesKwargs with these keys and set it as the `valid_kwargs` class attribute.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+transformers 5.17.0 | after from_pretrained(chunk_length=900): {'chunk_length': 900, 'n_samples': 14400000, 'nb_max_frames': 90000, 'sampling_rate': 16000}
+dur 200.0s feat [1, 128, 90000] mask 20000 audio_tok 5000
+dur 900.0s feat [1, 128, 90000] mask 90000 audio_tok 22500
+Exception ignored in atexit callback: <function dump_compile_times at 0x10e3541f0>
+Traceback (most recent call last):
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 910, in dump_compile_times
+    log.info(compile_times(repr="str", aggregate=True))
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 896, in compile_times
+    out += tabulate(rows, headers=("Function", "Runtimes (s)"))
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 246, in tabulate
+    return tabulate.tabulate(rows, headers=headers)
+AttributeError: module 'tabulate' has no attribute 'tabulate'

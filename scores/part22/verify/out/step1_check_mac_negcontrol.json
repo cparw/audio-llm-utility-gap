@@ -1,0 +1,1627 @@
+{
+ "summary": {
+  "n_refs": 31,
+  "ok": 5,
+  "mismatch": 25,
+  "skipped": 1,
+  "missing": 0
+ },
+ "refs": [
+  {
+   "ref": "edaic_rerun/part16/POD4B/scripts_recovered/extract_probe_layers.py:76-86",
+   "n_quoted": 11,
+   "expected_n": 11,
+   "file": "<local data dir>/edaic_rerun/part16/POD4B/scripts_recovered/extract_probe_layers.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "edaic_rerun/part16/EDAICFULL/extract_full.py:73-77",
+   "n_quoted": 5,
+   "expected_n": 5,
+   "file": "<local data dir>/edaic_rerun/part16/EDAICFULL/extract_full.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:104-111",
+   "n_quoted": 8,
+   "expected_n": 8,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 104,
+     "quoted": "@auto_docstring",
+     "actual": ""
+    },
+    {
+     "line": 105,
+     "quoted": "class Qwen2_5OmniProcessor(ProcessorMixin):",
+     "actual": "@auto_docstring"
+    },
+    {
+     "line": 106,
+     "quoted": "    valid_processor_kwargs = Qwen2_5OmniProcessorKwargs",
+     "actual": "class Qwen2_5OmniProcessor(ProcessorMixin):"
+    },
+    {
+     "line": 107,
+     "quoted": "",
+     "actual": "    def __init__("
+    },
+    {
+     "line": 108,
+     "quoted": "    def __init__(",
+     "actual": "        self, image_processor=None, video_processor=None, feature_extractor=None, tokenizer=None, chat_template=None"
+    },
+    {
+     "line": 109,
+     "quoted": "        self, image_processor=None, video_processor=None, feature_extractor=None, tokenizer=None, chat_template=None",
+     "actual": "    ):"
+    },
+    {
+     "line": 110,
+     "quoted": "    ):",
+     "actual": "        super().__init__(image_processor, video_processor, feature_extractor, tokenizer, chat_template=chat_template)"
+    },
+    {
+     "line": 111,
+     "quoted": "        super().__init__(image_processor, video_processor, feature_extractor, tokenizer, chat_template=chat_template)",
+     "actual": "        self.image_token = self.tokenizer.image_token"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/processing_utils.py:1865-1879",
+   "n_quoted": 15,
+   "expected_n": 15,
+   "file": "<local python site-packages>/transformers/processing_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 1865,
+     "quoted": "            elif is_primary:",
+     "actual": "            # everything internally. The below line is to keep BC for that and be able to work with model that have"
+    },
+    {
+     "line": 1866,
+     "quoted": "                # Primary non-tokenizer sub-processor: load via Auto class",
+     "actual": "            # special tokens in the template (consistent with tokenizers). We dont want to raise warning, it will flood command line"
+    },
+    {
+     "line": 1867,
+     "quoted": "                auto_processor_class = MODALITY_TO_AUTOPROCESSOR_MAPPING[sub_processor_type]",
+     "actual": "            # without actionable solution for users"
+    },
+    {
+     "line": 1868,
+     "quoted": "                # For backward compatibility, check if sub-processor class name is hardcoded as an attribute of the processor class.",
+     "actual": "            single_prompt = prompt[0] if is_batched else prompt"
+    },
+    {
+     "line": 1869,
+     "quoted": "                if hasattr(cls, sub_processor_type + \"_class\"):",
+     "actual": "            if self.tokenizer.bos_token is not None and single_prompt.startswith(self.tokenizer.bos_token):"
+    },
+    {
+     "line": 1870,
+     "quoted": "                    sub_processor_class_name = getattr(cls, sub_processor_type + \"_class\")",
+     "actual": "                processor_kwargs[\"add_special_tokens\"] = False"
+    },
+    {
+     "line": 1871,
+     "quoted": "                    logger.warning_once(",
+     "actual": ""
+    },
+    {
+     "line": 1872,
+     "quoted": "                        f\"`{cls.__name__}` defines `{sub_processor_type}_class = '{sub_processor_class_name}'`, \"",
+     "actual": "            # Always sample frames by default unless explicitly set to `False` by users. If users do not pass `num_frames`/`fps`"
+    },
+    {
+     "line": 1873,
+     "quoted": "                        f\"which is deprecated. Register the correct mapping in `{auto_processor_class.__name__}` instead.\",",
+     "actual": "            # sampling should not done for BC."
+    },
+    {
+     "line": 1874,
+     "quoted": "                    )",
+     "actual": "            if \"do_sample_frames\" not in processor_kwargs and ("
+    },
+    {
+     "line": 1875,
+     "quoted": "                    auto_processor_class = cls.get_possibly_dynamic_module(sub_processor_class_name)",
+     "actual": "                processor_kwargs.get(\"fps\") is not None or processor_kwargs.get(\"num_frames\") is not None"
+    },
+    {
+     "line": 1876,
+     "quoted": "                sub_processor = auto_processor_class.from_pretrained(",
+     "actual": "            ):"
+    },
+    {
+     "line": 1877,
+     "quoted": "                    pretrained_model_name_or_path, subfolder=subfolder, **kwargs",
+     "actual": "                processor_kwargs[\"do_sample_frames\"] = True"
+    },
+    {
+     "line": 1878,
+     "quoted": "                )",
+     "actual": ""
+    },
+    {
+     "line": 1879,
+     "quoted": "                args.append(sub_processor)",
+     "actual": "            # Set only is user passes a non-None value. Otherwise wa want to use each processor's own defaults"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/auto/feature_extraction_auto.py:63-63",
+   "n_quoted": 1,
+   "expected_n": 1,
+   "file": "<local python site-packages>/transformers/models/auto/feature_extraction_auto.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 63,
+     "quoted": "        (\"qwen2_5_omni\", \"WhisperFeatureExtractor\"),",
+     "actual": "        (\"parakeet_ctc\", \"ParakeetFeatureExtractor\"),"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "src/hf/preprocessor_config.json:1-31",
+   "n_quoted": 31,
+   "expected_n": 31,
+   "status": "SKIPPED (no root mapping)"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:69-94",
+   "n_quoted": 26,
+   "expected_n": 26,
+   "file": "<local python site-packages>/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/feature_extraction_utils.py:576-576",
+   "n_quoted": 1,
+   "expected_n": 1,
+   "file": "<local python site-packages>/transformers/feature_extraction_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/feature_extraction_utils.py:274-284",
+   "n_quoted": 11,
+   "expected_n": 11,
+   "file": "<local python site-packages>/transformers/feature_extraction_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:79-101",
+   "n_quoted": 23,
+   "expected_n": 23,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 79,
+     "quoted": "class Qwen2_5OmniProcessorKwargs(ProcessingKwargs, total=False):",
+     "actual": ""
+    },
+    {
+     "line": 80,
+     "quoted": "    videos_kwargs: Qwen2_5_OmniVideosKwargs",
+     "actual": "class Qwen2_5OmniProcessorKwargs(ProcessingKwargs, total=False):"
+    },
+    {
+     "line": 81,
+     "quoted": "",
+     "actual": "    videos_kwargs: Qwen2_5_OmniVideosKwargs"
+    },
+    {
+     "line": 82,
+     "quoted": "    _defaults = {",
+     "actual": ""
+    },
+    {
+     "line": 83,
+     "quoted": "        \"text_kwargs\": {",
+     "actual": "    _defaults = {"
+    },
+    {
+     "line": 84,
+     "quoted": "            \"padding\": False,",
+     "actual": "        \"text_kwargs\": {"
+    },
+    {
+     "line": 85,
+     "quoted": "            \"padding_side\": \"left\",",
+     "actual": "            \"padding\": False,"
+    },
+    {
+     "line": 86,
+     "quoted": "        },",
+     "actual": "            \"padding_side\": \"left\","
+    },
+    {
+     "line": 87,
+     "quoted": "        \"videos_kwargs\": {",
+     "actual": "        },"
+    },
+    {
+     "line": 88,
+     "quoted": "            \"seconds_per_chunk\": 2.0,",
+     "actual": "        \"videos_kwargs\": {"
+    },
+    {
+     "line": 89,
+     "quoted": "            \"position_id_per_seconds\": 25,",
+     "actual": "            \"seconds_per_chunk\": 2.0,"
+    },
+    {
+     "line": 90,
+     "quoted": "            \"use_audio_in_video\": False,",
+     "actual": "            \"position_id_per_seconds\": 25,"
+    },
+    {
+     "line": 91,
+     "quoted": "            \"size\": {",
+     "actual": "            \"use_audio_in_video\": False,"
+    },
+    {
+     "line": 92,
+     "quoted": "                \"shortest_edge\": 128 * 28 * 28,",
+     "actual": "            \"size\": {"
+    },
+    {
+     "line": 93,
+     "quoted": "                \"longest_edge\": 768 * 28 * 28,",
+     "actual": "                \"shortest_edge\": 128 * 28 * 28,"
+    },
+    {
+     "line": 94,
+     "quoted": "            },",
+     "actual": "                \"longest_edge\": 768 * 28 * 28,"
+    },
+    {
+     "line": 95,
+     "quoted": "        },",
+     "actual": "            },"
+    },
+    {
+     "line": 96,
+     "quoted": "        \"audio_kwargs\": {",
+     "actual": "        },"
+    },
+    {
+     "line": 97,
+     "quoted": "            \"sampling_rate\": 16000,",
+     "actual": "        \"audio_kwargs\": {"
+    },
+    {
+     "line": 98,
+     "quoted": "            \"padding\": \"max_length\",",
+     "actual": "            \"sampling_rate\": 16000,"
+    },
+    {
+     "line": 99,
+     "quoted": "            \"return_attention_mask\": True,",
+     "actual": "            \"padding\": \"max_length\","
+    },
+    {
+     "line": 100,
+     "quoted": "        },",
+     "actual": "            \"return_attention_mask\": True,"
+    },
+    {
+     "line": 101,
+     "quoted": "    }",
+     "actual": "        },"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:132-152",
+   "n_quoted": 21,
+   "expected_n": 21,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 132,
+     "quoted": "        output_kwargs = self._merge_kwargs(",
+     "actual": "            Qwen2_5OmniProcessorKwargs,"
+    },
+    {
+     "line": 133,
+     "quoted": "            Qwen2_5OmniProcessorKwargs,",
+     "actual": "            tokenizer_init_kwargs=self.tokenizer.init_kwargs,"
+    },
+    {
+     "line": 134,
+     "quoted": "            tokenizer_init_kwargs=self.tokenizer.init_kwargs,",
+     "actual": "            **kwargs,"
+    },
+    {
+     "line": 135,
+     "quoted": "            **kwargs,",
+     "actual": "        )"
+    },
+    {
+     "line": 136,
+     "quoted": "        )",
+     "actual": ""
+    },
+    {
+     "line": 137,
+     "quoted": "",
+     "actual": "        seconds_per_chunk = output_kwargs[\"videos_kwargs\"].pop(\"seconds_per_chunk\")"
+    },
+    {
+     "line": 138,
+     "quoted": "        seconds_per_chunk = output_kwargs[\"videos_kwargs\"].pop(\"seconds_per_chunk\")",
+     "actual": "        position_id_per_seconds = output_kwargs[\"videos_kwargs\"].pop(\"position_id_per_seconds\")"
+    },
+    {
+     "line": 139,
+     "quoted": "        position_id_per_seconds = output_kwargs[\"videos_kwargs\"].pop(\"position_id_per_seconds\")",
+     "actual": "        use_audio_in_video = output_kwargs[\"videos_kwargs\"].pop(\"use_audio_in_video\")"
+    },
+    {
+     "line": 140,
+     "quoted": "        use_audio_in_video = output_kwargs[\"videos_kwargs\"].pop(\"use_audio_in_video\")",
+     "actual": ""
+    },
+    {
+     "line": 141,
+     "quoted": "",
+     "actual": "        if audio is not None:"
+    },
+    {
+     "line": 142,
+     "quoted": "        if audio is not None:",
+     "actual": "            output_kwargs[\"audio_kwargs\"][\"padding\"] = \"max_length\"  # Support \"max_length\" padding only here"
+    },
+    {
+     "line": 143,
+     "quoted": "            output_kwargs[\"audio_kwargs\"][\"padding\"] = \"max_length\"  # Support \"max_length\" padding only here",
+     "actual": "            audio_inputs = self.feature_extractor(audio, **output_kwargs[\"audio_kwargs\"])"
+    },
+    {
+     "line": 144,
+     "quoted": "            audio_inputs = self.feature_extractor(audio, **output_kwargs[\"audio_kwargs\"])",
+     "actual": "            audio_inputs[\"feature_attention_mask\"] = audio_inputs.pop("
+    },
+    {
+     "line": 145,
+     "quoted": "            audio_inputs[\"feature_attention_mask\"] = audio_inputs.pop(",
+     "actual": "                \"attention_mask\""
+    },
+    {
+     "line": 146,
+     "quoted": "                \"attention_mask\"",
+     "actual": "            )  # rename feature_attention_mask to prevent conflicts later on"
+    },
+    {
+     "line": 147,
+     "quoted": "            )  # rename feature_attention_mask to prevent conflicts later on",
+     "actual": "            audio_inputs[\"input_features\"] = audio_inputs.pop("
+    },
+    {
+     "line": 148,
+     "quoted": "            audio_inputs[\"input_features\"] = audio_inputs.pop(",
+     "actual": "                \"input_features\""
+    },
+    {
+     "line": 149,
+     "quoted": "                \"input_features\"",
+     "actual": "            )  # rename input_features to prevent conflicts later on"
+    },
+    {
+     "line": 150,
+     "quoted": "            )  # rename input_features to prevent conflicts later on",
+     "actual": "            input_lengths = (audio_inputs[\"feature_attention_mask\"].sum(-1) - 1) // 2 + 1"
+    },
+    {
+     "line": 151,
+     "quoted": "            input_lengths = (audio_inputs[\"feature_attention_mask\"].sum(-1) - 1) // 2 + 1",
+     "actual": "            audio_lengths = iter((input_lengths - 2) // 2 + 1)"
+    },
+    {
+     "line": 152,
+     "quoted": "            audio_lengths = iter((input_lengths - 2) // 2 + 1)",
+     "actual": "        else:"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/processing_utils.py:1637-1658",
+   "n_quoted": 22,
+   "expected_n": 22,
+   "file": "<local python site-packages>/transformers/processing_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 1637,
+     "quoted": "            for modality_key in modality_valid_kwargs:",
+     "actual": "    def validate_init_kwargs(processor_config, valid_kwargs):"
+    },
+    {
+     "line": 1638,
+     "quoted": "                # check if we received a structured kwarg dict or not to handle it correctly",
+     "actual": "        kwargs_from_config = set(processor_config.keys())"
+    },
+    {
+     "line": 1639,
+     "quoted": "                if modality in kwargs:",
+     "actual": "        valid_kwargs_set = set(valid_kwargs)"
+    },
+    {
+     "line": 1640,
+     "quoted": "                    kwarg_value = kwargs[modality].pop(modality_key, \"__empty__\")",
+     "actual": ""
+    },
+    {
+     "line": 1641,
+     "quoted": "                    # check if this key was passed as a flat kwarg.",
+     "actual": "        unused_keys = kwargs_from_config - valid_kwargs_set"
+    },
+    {
+     "line": 1642,
+     "quoted": "                    if kwarg_value != \"__empty__\" and modality_key in non_modality_kwargs:",
+     "actual": "        valid_keys = kwargs_from_config & valid_kwargs_set"
+    },
+    {
+     "line": 1643,
+     "quoted": "                        raise ValueError(",
+     "actual": ""
+    },
+    {
+     "line": 1644,
+     "quoted": "                            f\"Keyword argument {modality_key} was passed two times:\\n\"",
+     "actual": "        unused_kwargs = {k: processor_config[k] for k in unused_keys} if unused_keys else {}"
+    },
+    {
+     "line": 1645,
+     "quoted": "                            f\"in a dictionary for {modality} and as a **kwarg.\"",
+     "actual": "        valid_kwargs = {k: processor_config[k] for k in valid_keys} if valid_keys else {}"
+    },
+    {
+     "line": 1646,
+     "quoted": "                        )",
+     "actual": ""
+    },
+    {
+     "line": 1647,
+     "quoted": "                    # fall back to the flat kwarg when the modality dict is present but doesn't carry this key",
+     "actual": "        return unused_kwargs, valid_kwargs"
+    },
+    {
+     "line": 1648,
+     "quoted": "                    if kwarg_value == \"__empty__\" and modality_key in non_modality_kwargs:",
+     "actual": ""
+    },
+    {
+     "line": 1649,
+     "quoted": "                        kwarg_value = kwargs[modality_key]",
+     "actual": "    def create_mm_token_type_ids(self, input_ids: list) -> list[list[int]]:"
+    },
+    {
+     "line": 1650,
+     "quoted": "                elif modality_key in kwargs:",
+     "actual": "        # We have to iterate for each list separately because inputs"
+    },
+    {
+     "line": 1651,
+     "quoted": "                    # we get a modality_key instead of popping it because modality-specific processors",
+     "actual": "        # might be non-padded lists and we can't cast numpy on that!"
+    },
+    {
+     "line": 1652,
+     "quoted": "                    # can have overlapping kwargs",
+     "actual": "        # Then cast numpy as each input for faster indexing"
+    },
+    {
+     "line": 1653,
+     "quoted": "                    kwarg_value = kwargs.get(modality_key, \"__empty__\")",
+     "actual": "        mm_token_type_ids = []"
+    },
+    {
+     "line": 1654,
+     "quoted": "                else:",
+     "actual": "        for tokenizer_input in input_ids:"
+    },
+    {
+     "line": 1655,
+     "quoted": "                    kwarg_value = \"__empty__\"",
+     "actual": "            tokenizer_input = np.array(tokenizer_input)"
+    },
+    {
+     "line": 1656,
+     "quoted": "                if not isinstance(kwarg_value, str) or kwarg_value != \"__empty__\":",
+     "actual": "            mm_token_types = np.zeros_like(tokenizer_input)"
+    },
+    {
+     "line": 1657,
+     "quoted": "                    output_kwarg[modality_key] = kwarg_value",
+     "actual": "            mm_token_types[np.isin(tokenizer_input, self.image_ids)] = 1"
+    },
+    {
+     "line": 1658,
+     "quoted": "                    used_keys.add(modality_key)",
+     "actual": "            mm_token_types[np.isin(tokenizer_input, self.video_ids)] = 2"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/processing_utils.py:426-435",
+   "n_quoted": 10,
+   "expected_n": 10,
+   "file": "<local python site-packages>/transformers/processing_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 426,
+     "quoted": "    sampling_rate: Annotated[int | None, positive_int()]",
+     "actual": "        1) Additional typed keys and that this model requires to process inputs."
+    },
+    {
+     "line": 427,
+     "quoted": "    raw_speech: Union[\"np.ndarray\", list[float], list[\"np.ndarray\"], list[list[float]]] | None",
+     "actual": "        2) Default values for existing keys under a `_defaults` attribute."
+    },
+    {
+     "line": 428,
+     "quoted": "    padding: Annotated[bool | str | PaddingStrategy | None, padding_validator()]",
+     "actual": "    New keys have to be defined as follows to ensure type hinting is done correctly."
+    },
+    {
+     "line": 429,
+     "quoted": "    max_length: Annotated[int | None, positive_int()]",
+     "actual": ""
+    },
+    {
+     "line": 430,
+     "quoted": "    truncation: Annotated[bool | str | TruncationStrategy | None, truncation_validator()]",
+     "actual": "    ```python"
+    },
+    {
+     "line": 431,
+     "quoted": "    pad_to_multiple_of: Annotated[int | None, positive_int()]",
+     "actual": "    # adding a new image kwarg for this model"
+    },
+    {
+     "line": 432,
+     "quoted": "    return_attention_mask: bool | None",
+     "actual": "    class ModelImagesKwargs(ImagesKwargs, total=False):"
+    },
+    {
+     "line": 433,
+     "quoted": "    device: Annotated[Union[str, \"torch.device\"] | None, device_validator()]",
+     "actual": "        new_image_kwarg: Optional[bool]"
+    },
+    {
+     "line": 434,
+     "quoted": "    return_tensors: Annotated[str | TensorType | None, tensor_type_validator()]",
+     "actual": ""
+    },
+    {
+     "line": 435,
+     "quoted": "    load_audio_backend: str | None",
+     "actual": "    class ModelProcessorKwargs(ProcessingKwargs, total=False):"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:193-206",
+   "n_quoted": 14,
+   "expected_n": 14,
+   "file": "<local python site-packages>/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 193,
+     "quoted": "    def __call__(",
+     "actual": "        pad_to_multiple_of: int | None = None,"
+    },
+    {
+     "line": 194,
+     "quoted": "        self,",
+     "actual": "        return_tensors: str | TensorType | None = None,"
+    },
+    {
+     "line": 195,
+     "quoted": "        raw_speech: np.ndarray | list[float] | list[np.ndarray] | list[list[float]],",
+     "actual": "        return_attention_mask: bool | None = None,"
+    },
+    {
+     "line": 196,
+     "quoted": "        truncation: bool = True,",
+     "actual": "        padding: str | None = \"max_length\","
+    },
+    {
+     "line": 197,
+     "quoted": "        pad_to_multiple_of: int | None = None,",
+     "actual": "        max_length: int | None = None,"
+    },
+    {
+     "line": 198,
+     "quoted": "        return_tensors: str | TensorType | None = None,",
+     "actual": "        sampling_rate: int | None = None,"
+    },
+    {
+     "line": 199,
+     "quoted": "        return_attention_mask: bool | None = None,",
+     "actual": "        do_normalize: bool | None = None,"
+    },
+    {
+     "line": 200,
+     "quoted": "        padding: str | None = \"max_length\",",
+     "actual": "        device: str | None = \"cpu\","
+    },
+    {
+     "line": 201,
+     "quoted": "        max_length: int | None = None,",
+     "actual": "        **kwargs,"
+    },
+    {
+     "line": 202,
+     "quoted": "        sampling_rate: int | None = None,",
+     "actual": "    ) -> BatchFeature:"
+    },
+    {
+     "line": 203,
+     "quoted": "        do_normalize: bool | None = None,",
+     "actual": "        \"\"\"Main method to featurize and prepare for the model one or several sequence(s). Implementation uses PyTorch"
+    },
+    {
+     "line": 204,
+     "quoted": "        device: str | None = \"cpu\",",
+     "actual": "        for the STFT computation if available, otherwise a slower NumPy based one."
+    },
+    {
+     "line": 205,
+     "quoted": "        **kwargs,",
+     "actual": ""
+    },
+    {
+     "line": 206,
+     "quoted": "    ) -> BatchFeature:",
+     "actual": "        Args:"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:300-307",
+   "n_quoted": 8,
+   "expected_n": 8,
+   "file": "<local python site-packages>/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 300,
+     "quoted": "        padded_inputs = self.pad(",
+     "actual": "            truncation=truncation,"
+    },
+    {
+     "line": 301,
+     "quoted": "            batched_speech,",
+     "actual": "            pad_to_multiple_of=pad_to_multiple_of,"
+    },
+    {
+     "line": 302,
+     "quoted": "            padding=padding,",
+     "actual": "            return_attention_mask=return_attention_mask or do_normalize,"
+    },
+    {
+     "line": 303,
+     "quoted": "            max_length=max_length if max_length else self.n_samples,",
+     "actual": "        )"
+    },
+    {
+     "line": 304,
+     "quoted": "            truncation=truncation,",
+     "actual": ""
+    },
+    {
+     "line": 305,
+     "quoted": "            pad_to_multiple_of=pad_to_multiple_of,",
+     "actual": "        # zero-mean and unit-variance normalization"
+    },
+    {
+     "line": 306,
+     "quoted": "            return_attention_mask=return_attention_mask or do_normalize,",
+     "actual": "        if do_normalize:"
+    },
+    {
+     "line": 307,
+     "quoted": "        )",
+     "actual": "            padded_inputs[\"input_features\"] = self.zero_mean_unit_var_norm("
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/feature_extraction_sequence_utils.py:187-197",
+   "n_quoted": 11,
+   "expected_n": 11,
+   "file": "<local python site-packages>/transformers/feature_extraction_sequence_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 187,
+     "quoted": "        truncated_inputs = []",
+     "actual": "            # truncation"
+    },
+    {
+     "line": 188,
+     "quoted": "        for i in range(batch_size):",
+     "actual": "            inputs_slice = self._truncate("
+    },
+    {
+     "line": 189,
+     "quoted": "            inputs = {k: v[i] for k, v in processed_features.items()}",
+     "actual": "                inputs,"
+    },
+    {
+     "line": 190,
+     "quoted": "            # truncation",
+     "actual": "                max_length=max_length,"
+    },
+    {
+     "line": 191,
+     "quoted": "            inputs_slice = self._truncate(",
+     "actual": "                pad_to_multiple_of=pad_to_multiple_of,"
+    },
+    {
+     "line": 192,
+     "quoted": "                inputs,",
+     "actual": "                truncation=truncation,"
+    },
+    {
+     "line": 193,
+     "quoted": "                max_length=max_length,",
+     "actual": "            )"
+    },
+    {
+     "line": 194,
+     "quoted": "                pad_to_multiple_of=pad_to_multiple_of,",
+     "actual": "            truncated_inputs.append(inputs_slice)"
+    },
+    {
+     "line": 195,
+     "quoted": "                truncation=truncation,",
+     "actual": ""
+    },
+    {
+     "line": 196,
+     "quoted": "            )",
+     "actual": "        if padding_strategy == PaddingStrategy.LONGEST:"
+    },
+    {
+     "line": 197,
+     "quoted": "            truncated_inputs.append(inputs_slice)",
+     "actual": "            # make sure that `max_length` cannot be longer than the longest truncated length"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/feature_extraction_sequence_utils.py:319-337",
+   "n_quoted": 19,
+   "expected_n": 19,
+   "file": "<local python site-packages>/transformers/feature_extraction_sequence_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 319,
+     "quoted": "        if not truncation:",
+     "actual": "            raise ValueError(\"When setting ``truncation=True``, make sure that ``max_length`` is defined.\")"
+    },
+    {
+     "line": 320,
+     "quoted": "            return processed_features",
+     "actual": ""
+    },
+    {
+     "line": 321,
+     "quoted": "        elif truncation and max_length is None:",
+     "actual": "        required_input = processed_features[self.model_input_names[0]]"
+    },
+    {
+     "line": 322,
+     "quoted": "            raise ValueError(\"When setting ``truncation=True``, make sure that ``max_length`` is defined.\")",
+     "actual": ""
+    },
+    {
+     "line": 323,
+     "quoted": "",
+     "actual": "        # find `max_length` that fits `pad_to_multiple_of`"
+    },
+    {
+     "line": 324,
+     "quoted": "        required_input = processed_features[self.model_input_names[0]]",
+     "actual": "        if max_length is not None and pad_to_multiple_of is not None and (max_length % pad_to_multiple_of != 0):"
+    },
+    {
+     "line": 325,
+     "quoted": "",
+     "actual": "            max_length = ((max_length // pad_to_multiple_of) + 1) * pad_to_multiple_of"
+    },
+    {
+     "line": 326,
+     "quoted": "        # find `max_length` that fits `pad_to_multiple_of`",
+     "actual": ""
+    },
+    {
+     "line": 327,
+     "quoted": "        if max_length is not None and pad_to_multiple_of is not None and (max_length % pad_to_multiple_of != 0):",
+     "actual": "        needs_to_be_truncated = len(required_input) > max_length"
+    },
+    {
+     "line": 328,
+     "quoted": "            max_length = ((max_length // pad_to_multiple_of) + 1) * pad_to_multiple_of",
+     "actual": ""
+    },
+    {
+     "line": 329,
+     "quoted": "",
+     "actual": "        if needs_to_be_truncated:"
+    },
+    {
+     "line": 330,
+     "quoted": "        needs_to_be_truncated = len(required_input) > max_length",
+     "actual": "            processed_features[self.model_input_names[0]] = processed_features[self.model_input_names[0]][:max_length]"
+    },
+    {
+     "line": 331,
+     "quoted": "",
+     "actual": "            if \"attention_mask\" in processed_features:"
+    },
+    {
+     "line": 332,
+     "quoted": "        if needs_to_be_truncated:",
+     "actual": "                processed_features[\"attention_mask\"] = processed_features[\"attention_mask\"][:max_length]"
+    },
+    {
+     "line": 333,
+     "quoted": "            processed_features[self.model_input_names[0]] = processed_features[self.model_input_names[0]][:max_length]",
+     "actual": ""
+    },
+    {
+     "line": 334,
+     "quoted": "            if \"attention_mask\" in processed_features:",
+     "actual": "        return processed_features"
+    },
+    {
+     "line": 335,
+     "quoted": "                processed_features[\"attention_mask\"] = processed_features[\"attention_mask\"][:max_length]",
+     "actual": ""
+    },
+    {
+     "line": 336,
+     "quoted": "",
+     "actual": "    def _get_padding_strategies(self, padding=False, max_length=None):"
+    },
+    {
+     "line": 337,
+     "quoted": "        return processed_features",
+     "actual": "        \"\"\""
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:319-341",
+   "n_quoted": 23,
+   "expected_n": 23,
+   "file": "<local python site-packages>/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 319,
+     "quoted": "        input_features = padded_inputs.get(\"input_features\").transpose(2, 0, 1)",
+     "actual": "        )"
+    },
+    {
+     "line": 320,
+     "quoted": "",
+     "actual": "        input_features = extract_fbank_features(input_features[0], device)"
+    },
+    {
+     "line": 321,
+     "quoted": "        extract_fbank_features = (",
+     "actual": ""
+    },
+    {
+     "line": 322,
+     "quoted": "            self._torch_extract_fbank_features if is_torch_available() else self._np_extract_fbank_features",
+     "actual": "        if isinstance(input_features[0], list):"
+    },
+    {
+     "line": 323,
+     "quoted": "        )",
+     "actual": "            padded_inputs[\"input_features\"] = [np.asarray(feature, dtype=np.float32) for feature in input_features]"
+    },
+    {
+     "line": 324,
+     "quoted": "        input_features = extract_fbank_features(input_features[0], device)",
+     "actual": ""
+    },
+    {
+     "line": 325,
+     "quoted": "",
+     "actual": "        else:"
+    },
+    {
+     "line": 326,
+     "quoted": "        if isinstance(input_features[0], list):",
+     "actual": "            padded_inputs[\"input_features\"] = input_features"
+    },
+    {
+     "line": 327,
+     "quoted": "            padded_inputs[\"input_features\"] = [np.asarray(feature, dtype=np.float32) for feature in input_features]",
+     "actual": ""
+    },
+    {
+     "line": 328,
+     "quoted": "",
+     "actual": "        if return_attention_mask:"
+    },
+    {
+     "line": 329,
+     "quoted": "        else:",
+     "actual": "            # rescale from sample (48000) to feature (3000)"
+    },
+    {
+     "line": 330,
+     "quoted": "            padded_inputs[\"input_features\"] = input_features",
+     "actual": "            rescaled_attention_mask = padded_inputs[\"attention_mask\"][:, :: self.hop_length]"
+    },
+    {
+     "line": 332,
+     "quoted": "        if return_attention_mask:",
+     "actual": "            # The STFT computation produces L//hop_length + 1 frames, but we skip the last frame (see `_torch_extract_fbank_features`)."
+    },
+    {
+     "line": 333,
+     "quoted": "            # rescale from sample (48000) to feature (3000)",
+     "actual": "            # This means we need to trim the rescaled attention mask to match the actual number of frames (L//hop_length) when the input length"
+    },
+    {
+     "line": 334,
+     "quoted": "            rescaled_attention_mask = padded_inputs[\"attention_mask\"][:, :: self.hop_length]",
+     "actual": "            # is not perfectly divisible by the hop length."
+    },
+    {
+     "line": 335,
+     "quoted": "",
+     "actual": "            if padded_inputs[\"attention_mask\"].shape[1] % self.hop_length != 0:"
+    },
+    {
+     "line": 336,
+     "quoted": "            # The STFT computation produces L//hop_length + 1 frames, but we skip the last frame (see `_torch_extract_fbank_features`).",
+     "actual": "                rescaled_attention_mask = rescaled_attention_mask[:, :-1]"
+    },
+    {
+     "line": 337,
+     "quoted": "            # This means we need to trim the rescaled attention mask to match the actual number of frames (L//hop_length) when the input length",
+     "actual": "            padded_inputs[\"attention_mask\"] = rescaled_attention_mask"
+    },
+    {
+     "line": 338,
+     "quoted": "            # is not perfectly divisible by the hop length.",
+     "actual": ""
+    },
+    {
+     "line": 339,
+     "quoted": "            if padded_inputs[\"attention_mask\"].shape[1] % self.hop_length != 0:",
+     "actual": "        if return_tensors is not None:"
+    },
+    {
+     "line": 340,
+     "quoted": "                rescaled_attention_mask = rescaled_attention_mask[:, :-1]",
+     "actual": "            padded_inputs = padded_inputs.convert_to_tensors(return_tensors)"
+    },
+    {
+     "line": 341,
+     "quoted": "            padded_inputs[\"attention_mask\"] = rescaled_attention_mask",
+     "actual": ""
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:151-152",
+   "n_quoted": 2,
+   "expected_n": 2,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 151,
+     "quoted": "            input_lengths = (audio_inputs[\"feature_attention_mask\"].sum(-1) - 1) // 2 + 1",
+     "actual": "            audio_lengths = iter((input_lengths - 2) // 2 + 1)"
+    },
+    {
+     "line": 152,
+     "quoted": "            audio_lengths = iter((input_lengths - 2) // 2 + 1)",
+     "actual": "        else:"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:225-227",
+   "n_quoted": 3,
+   "expected_n": 3,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 225,
+     "quoted": "            for _, special_token in positions:",
+     "actual": "                    sample = sample.replace(self.audio_token, \"<|audio_placeholder|>\" * next(audio_lengths), 1)"
+    },
+    {
+     "line": 226,
+     "quoted": "                if special_token == self.audio_token:",
+     "actual": "                elif special_token == self.image_token:"
+    },
+    {
+     "line": 227,
+     "quoted": "                    sample = sample.replace(self.audio_token, \"<|audio_placeholder|>\" * next(audio_lengths), 1)",
+     "actual": "                    image_seq_length = next(image_grid_thw).prod() // merge_length_image"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:921-927",
+   "n_quoted": 7,
+   "expected_n": 7,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 921,
+     "quoted": "    def _get_feat_extract_output_lengths(self, input_lengths: torch.LongTensor):",
+     "actual": "        self.config = config"
+    },
+    {
+     "line": 922,
+     "quoted": "        \"\"\"",
+     "actual": "        self.attention_dropout = 0.0"
+    },
+    {
+     "line": 923,
+     "quoted": "        Computes the output length of the convolutional layers and the output length of the audio encoder",
+     "actual": "        self.is_causal = False"
+    },
+    {
+     "line": 924,
+     "quoted": "        \"\"\"",
+     "actual": ""
+    },
+    {
+     "line": 925,
+     "quoted": "        input_lengths = (input_lengths - 1) // 2 + 1",
+     "actual": "    def forward("
+    },
+    {
+     "line": 926,
+     "quoted": "        output_lengths = (input_lengths - 2) // 2 + 1",
+     "actual": "        self,"
+    },
+    {
+     "line": 927,
+     "quoted": "        return input_lengths, output_lengths",
+     "actual": "        hidden_states: torch.Tensor,"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:1787-1788",
+   "n_quoted": 2,
+   "expected_n": 2,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 1787,
+     "quoted": "        if audio_outputs.last_hidden_state.shape[0] != sum(audio_output_lengths.tolist()):",
+     "actual": "        return audio_outputs"
+    },
+    {
+     "line": 1788,
+     "quoted": "            raise ValueError(\"length of audio_features should match audio_output_lengths\")",
+     "actual": ""
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:159-165",
+   "n_quoted": 7,
+   "expected_n": 7,
+   "file": "<local python site-packages>/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 159,
+     "quoted": "        log_spec = torch.clamp(mel_spec, min=1e-10).log10()",
+     "actual": "        else:"
+    },
+    {
+     "line": 160,
+     "quoted": "        if waveform.dim() == 2:",
+     "actual": "            log_spec = torch.maximum(log_spec, log_spec.max() - 8.0)"
+    },
+    {
+     "line": 161,
+     "quoted": "            max_val = log_spec.max(dim=2, keepdim=True)[0].max(dim=1, keepdim=True)[0]",
+     "actual": "        log_spec = (log_spec + 4.0) / 4.0"
+    },
+    {
+     "line": 162,
+     "quoted": "            log_spec = torch.maximum(log_spec, max_val - 8.0)",
+     "actual": "        if device != \"cpu\":"
+    },
+    {
+     "line": 163,
+     "quoted": "        else:",
+     "actual": "            log_spec = log_spec.detach().cpu()"
+    },
+    {
+     "line": 164,
+     "quoted": "            log_spec = torch.maximum(log_spec, log_spec.max() - 8.0)",
+     "actual": "        return log_spec.numpy()"
+    },
+    {
+     "line": 165,
+     "quoted": "        log_spec = (log_spec + 4.0) / 4.0",
+     "actual": ""
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:754-762",
+   "n_quoted": 9,
+   "expected_n": 9,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 754,
+     "quoted": "    chunk_num = torch.ceil(feature_lens / (n_window * 2)).long()",
+     "actual": "        # Initialize weights and apply final processing"
+    },
+    {
+     "line": 755,
+     "quoted": "    chunk_lengths = torch.full((chunk_num.sum(),), n_window * 2, dtype=torch.long, device=feature_lens.device)",
+     "actual": "        self.post_init()"
+    },
+    {
+     "line": 756,
+     "quoted": "    tail_chunk_index = F.pad(chunk_num, (1, 0), value=-1).cumsum(0)[1:]",
+     "actual": ""
+    },
+    {
+     "line": 757,
+     "quoted": "    chunk_lengths[tail_chunk_index] = feature_lens % (n_window * 2)",
+     "actual": "    def _freeze_parameters(self):"
+    },
+    {
+     "line": 758,
+     "quoted": "    chunk_lengths = torch.where(chunk_lengths == 0, n_window * 2, chunk_lengths)",
+     "actual": "        for param in self.parameters():"
+    },
+    {
+     "line": 759,
+     "quoted": "",
+     "actual": "            param.requires_grad = False"
+    },
+    {
+     "line": 760,
+     "quoted": "    chunk_list = input_features.T.split(chunk_lengths.tolist(), dim=0)",
+     "actual": "        self._requires_grad = False"
+    },
+    {
+     "line": 761,
+     "quoted": "    padded_feature = nn.utils.rnn.pad_sequence(chunk_list, batch_first=True).transpose(1, 2)",
+     "actual": ""
+    },
+    {
+     "line": 762,
+     "quoted": "    return padded_feature, chunk_lengths",
+     "actual": "    def get_input_embeddings(self) -> nn.Module:"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:780-781",
+   "n_quoted": 2,
+   "expected_n": 2,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 780,
+     "quoted": "    after_conv1 = (chunk_lengths - 1) // 2 + 1",
+     "actual": "            device=inputs_tensor.device,"
+    },
+    {
+     "line": 781,
+     "quoted": "    return F.pad(after_conv1.cumsum(0), (1, 0), value=0).to(torch.int32)",
+     "actual": "            dtype=inputs_tensor.dtype,"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:633-652",
+   "n_quoted": 20,
+   "expected_n": 20,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 633,
+     "quoted": "            # Other implementations: Process each chunk separately",
+     "actual": "            cu_seq_lens_q=cu_seqlens,  # pass cu seq lens for FA2"
+    },
+    {
+     "line": 634,
+     "quoted": "            lengths = cu_seqlens[1:] - cu_seqlens[:-1]",
+     "actual": "            cu_seq_lens_k=cu_seqlens,"
+    },
+    {
+     "line": 635,
+     "quoted": "            splits = [",
+     "actual": "            max_length_q=max_seqlen,"
+    },
+    {
+     "line": 636,
+     "quoted": "                torch.split(tensor, lengths.tolist(), dim=2) for tensor in (query_states, key_states, value_states)",
+     "actual": "            max_length_k=max_seqlen,"
+    },
+    {
+     "line": 637,
+     "quoted": "            ]",
+     "actual": "            is_causal=False,"
+    },
+    {
+     "line": 638,
+     "quoted": "            attn_outputs = [",
+     "actual": "            **kwargs,"
+    },
+    {
+     "line": 639,
+     "quoted": "                attention_interface(",
+     "actual": "        )"
+    },
+    {
+     "line": 640,
+     "quoted": "                    self,",
+     "actual": ""
+    },
+    {
+     "line": 641,
+     "quoted": "                    q,",
+     "actual": "        attn_output = attn_output.reshape(seq_length, -1).contiguous()"
+    },
+    {
+     "line": 642,
+     "quoted": "                    k,",
+     "actual": "        attn_output = self.out_proj(attn_output)"
+    },
+    {
+     "line": 643,
+     "quoted": "                    v,",
+     "actual": ""
+    },
+    {
+     "line": 644,
+     "quoted": "                    attention_mask=None,",
+     "actual": "        return attn_output"
+    },
+    {
+     "line": 645,
+     "quoted": "                    scaling=self.scaling,",
+     "actual": ""
+    },
+    {
+     "line": 646,
+     "quoted": "                    dropout=0.0 if not self.training else self.attention_dropout,",
+     "actual": ""
+    },
+    {
+     "line": 647,
+     "quoted": "                    is_causal=False,",
+     "actual": "class Qwen2_5OmniAudioEncoderLayer(GradientCheckpointingLayer):"
+    },
+    {
+     "line": 648,
+     "quoted": "                    **kwargs,",
+     "actual": "    def __init__(self, config: Qwen2_5OmniAudioEncoderConfig):"
+    },
+    {
+     "line": 649,
+     "quoted": "                )[0]",
+     "actual": "        super().__init__()"
+    },
+    {
+     "line": 650,
+     "quoted": "                for q, k, v in zip(*splits)",
+     "actual": "        self.embed_dim = config.d_model"
+    },
+    {
+     "line": 651,
+     "quoted": "            ]",
+     "actual": "        self.self_attn = Qwen2_5OmniAudioAttention(config)"
+    },
+    {
+     "line": 652,
+     "quoted": "            attn_output = torch.cat(attn_outputs, dim=1)",
+     "actual": "        self.self_attn_layer_norm = nn.LayerNorm(self.embed_dim)"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:846-851",
+   "n_quoted": 6,
+   "expected_n": 6,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 846,
+     "quoted": "        self.max_source_positions = config.max_source_positions",
+     "actual": "        \"\"\""
+    },
+    {
+     "line": 847,
+     "quoted": "        self.embed_scale = math.sqrt(embed_dim) if config.scale_embedding else 1.0",
+     "actual": "        max_len = tensor_len.max()"
+    },
+    {
+     "line": 848,
+     "quoted": "        self.n_window = config.n_window",
+     "actual": "        dim = tensor_list[0].shape[0]"
+    },
+    {
+     "line": 849,
+     "quoted": "        self.conv1 = nn.Conv1d(self.num_mel_bins, embed_dim, kernel_size=3, padding=1)",
+     "actual": "        padded_tensor = torch.full("
+    },
+    {
+     "line": 850,
+     "quoted": "        self.conv2 = nn.Conv1d(embed_dim, embed_dim, kernel_size=3, stride=2, padding=1)",
+     "actual": "            size=(len(tensor_list), dim, max_len),"
+    },
+    {
+     "line": 851,
+     "quoted": "        self.positional_embedding = SinusoidsPositionEmbedding(self.max_source_positions, embed_dim)",
+     "actual": "            fill_value=padding_value,"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:899-903",
+   "n_quoted": 5,
+   "expected_n": 5,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 899,
+     "quoted": "        padded_embed = nn.functional.gelu(self.conv1(padded_feature)) * padded_mask",
+     "actual": "    tensor = tensor.float()"
+    },
+    {
+     "line": 900,
+     "quoted": "        padded_embed = nn.functional.gelu(self.conv2(padded_embed)).transpose(1, 2)",
+     "actual": "    cos = freqs.cos()"
+    },
+    {
+     "line": 901,
+     "quoted": "        padded_embed = padded_embed + self.positional_embedding.positional_embedding[",
+     "actual": "    sin = freqs.sin()"
+    },
+    {
+     "line": 902,
+     "quoted": "            : padded_embed.shape[1], :",
+     "actual": "    cos = cos.unsqueeze(1).repeat(1, 1, 2).unsqueeze(0).float()"
+    },
+    {
+     "line": 903,
+     "quoted": "        ].unsqueeze(0).to(padded_embed.dtype)",
+     "actual": "    sin = sin.unsqueeze(1).repeat(1, 1, 2).unsqueeze(0).float()"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:294-294",
+   "n_quoted": 1,
+   "expected_n": 1,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 294,
+     "quoted": "        if input_ids is not None and (image_grid_thw is not None or video_grid_thw is not None):",
+     "actual": "                input_ids.shape[1],"
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:497-504",
+   "n_quoted": 8,
+   "expected_n": 8,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 497,
+     "quoted": "        else:",
+     "actual": "            return position_ids, mrope_position_deltas"
+    },
+    {
+     "line": 498,
+     "quoted": "            position_ids = attention_mask.long().cumsum(-1) - 1",
+     "actual": ""
+    },
+    {
+     "line": 499,
+     "quoted": "            position_ids.masked_fill_(attention_mask == 0, 1)",
+     "actual": ""
+    },
+    {
+     "line": 500,
+     "quoted": "            position_ids = position_ids.unsqueeze(0).expand(3, -1, -1).to(attention_mask.device)",
+     "actual": "############################"
+    },
+    {
+     "line": 501,
+     "quoted": "            max_position_ids = position_ids.max(0, keepdim=False)[0].max(-1, keepdim=True)[0]",
+     "actual": "#      Start Thinker       #"
+    },
+    {
+     "line": 502,
+     "quoted": "            mrope_position_deltas = max_position_ids + 1 - torch.sum(attention_mask, dim=-1, keepdim=True)",
+     "actual": "############################"
+    },
+    {
+     "line": 504,
+     "quoted": "            return position_ids, mrope_position_deltas",
+     "actual": ""
+    }
+   ],
+   "status": "MISMATCH"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:1318-1335",
+   "n_quoted": 18,
+   "expected_n": 18,
+   "file": "<local python site-packages>/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [
+    {
+     "line": 1318,
+     "quoted": "class Qwen2_5OmniRotaryEmbedding(nn.Module):",
+     "actual": "    ) -> tuple[\"torch.Tensor\", float]:"
+    },
+    {
+     "line": 1319,
+     "quoted": "    @deprecate_kwarg(\"device\", version=\"5.18\")",
+     "actual": "        \"\"\""
+    },
+    {
+     "line": 1320,
+     "quoted": "    def __init__(self, config: Qwen2_5OmniConfig, device=None):",
+     "actual": "        Computes the inverse frequencies according to the original RoPE implementation"
+    },
+    {
+     "line": 1321,
+     "quoted": "        super().__init__()",
+     "actual": "        Args:"
+    },
+    {
+     "line": 1322,
+     "quoted": "        self.max_seq_len_cached = config.max_position_embeddings",
+     "actual": "            config ([`~transformers.PreTrainedConfig`]):"
+    },
+    {
+     "line": 1323,
+     "quoted": "        self.original_max_seq_len = config.max_position_embeddings",
+     "actual": "                The model configuration."
+    },
+    {
+     "line": 1324,
+     "quoted": "",
+     "actual": "            device (`torch.device`):"
+    },
+    {
+     "line": 1325,
+     "quoted": "        self.config = config",
+     "actual": "                The device to use for initialization of the inverse frequencies."
+    },
+    {
+     "line": 1326,
+     "quoted": "",
+     "actual": "            seq_len (`int`, *optional*):"
+    },
+    {
+     "line": 1327,
+     "quoted": "        self.rope_type = self.config.rope_parameters[\"rope_type\"]",
+     "actual": "                The current sequence length. Unused for this type of RoPE."
+    },
+    {
+     "line": 1328,
+     "quoted": "        rope_init_fn: Callable = self.compute_default_rope_parameters",
+     "actual": "        Returns:"
+    },
+    {
+     "line": 1329,
+     "quoted": "        if self.rope_type != \"default\":",
+     "actual": "            Tuple of (`torch.Tensor`, `float`), containing the inverse frequencies for the RoPE embeddings and the"
+    },
+    {
+     "line": 1330,
+     "quoted": "            rope_init_fn = ROPE_INIT_FUNCTIONS[self.rope_type]",
+     "actual": "            post-processing scaling factor applied to the computed cos/sin (unused in this type of RoPE)."
+    },
+    {
+     "line": 1331,
+     "quoted": "        inv_freq, self.attention_scaling = rope_init_fn(self.config, device)",
+     "actual": "        \"\"\""
+    },
+    {
+     "line": 1332,
+     "quoted": "",
+     "actual": "        base = config.rope_parameters[\"rope_theta\"]"
+    },
+    {
+     "line": 1333,
+     "quoted": "        self.inv_freq = nn.Buffer(inv_freq, persistent=False)",
+     "actual": "        dim = getattr(config, \"head_dim\", None) or config.hidden_size // config.num_attention_heads"
+    },
+    {
+     "line": 1334,
+     "quoted": "        self.original_inv_freq = nn.Buffer(inv_freq.clone(), persistent=False)",
+     "actual": ""
+    },
+    {
+     "line": 1335,
+     "quoted": "        self.mrope_section = config.rope_parameters.get(\"mrope_section\", [16, 24, 24])",
+     "actual": "        attention_factor = 1.0  # Unused in this type of RoPE"
+    }
+   ],
+   "status": "MISMATCH"
+  }
+ ]
+}

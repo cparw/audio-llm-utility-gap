@@ -1,0 +1,284 @@
+{
+ "summary": {
+  "n_refs": 31,
+  "ok": 29,
+  "mismatch": 0,
+  "skipped": 2,
+  "missing": 0
+ },
+ "refs": [
+  {
+   "ref": "edaic_rerun/part16/POD4B/scripts_recovered/extract_probe_layers.py:76-86",
+   "n_quoted": 11,
+   "expected_n": 11,
+   "status": "SKIPPED (no root mapping)"
+  },
+  {
+   "ref": "edaic_rerun/part16/EDAICFULL/extract_full.py:73-77",
+   "n_quoted": 5,
+   "expected_n": 5,
+   "status": "SKIPPED (no root mapping)"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:104-111",
+   "n_quoted": 8,
+   "expected_n": 8,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/processing_utils.py:1865-1879",
+   "n_quoted": 15,
+   "expected_n": 15,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/processing_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/auto/feature_extraction_auto.py:63-63",
+   "n_quoted": 1,
+   "expected_n": 1,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/auto/feature_extraction_auto.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "src/hf/preprocessor_config.json:1-31",
+   "n_quoted": 31,
+   "expected_n": 31,
+   "file": "/workspace/hf/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/preprocessor_config.json",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:69-94",
+   "n_quoted": 26,
+   "expected_n": 26,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/feature_extraction_utils.py:576-576",
+   "n_quoted": 1,
+   "expected_n": 1,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/feature_extraction_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/feature_extraction_utils.py:274-284",
+   "n_quoted": 11,
+   "expected_n": 11,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/feature_extraction_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:79-101",
+   "n_quoted": 23,
+   "expected_n": 23,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:132-152",
+   "n_quoted": 21,
+   "expected_n": 21,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/processing_utils.py:1637-1658",
+   "n_quoted": 22,
+   "expected_n": 22,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/processing_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/processing_utils.py:426-435",
+   "n_quoted": 10,
+   "expected_n": 10,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/processing_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:193-206",
+   "n_quoted": 14,
+   "expected_n": 14,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:300-307",
+   "n_quoted": 8,
+   "expected_n": 8,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/feature_extraction_sequence_utils.py:187-197",
+   "n_quoted": 11,
+   "expected_n": 11,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/feature_extraction_sequence_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/feature_extraction_sequence_utils.py:319-337",
+   "n_quoted": 19,
+   "expected_n": 19,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/feature_extraction_sequence_utils.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:319-341",
+   "n_quoted": 23,
+   "expected_n": 23,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:151-152",
+   "n_quoted": 2,
+   "expected_n": 2,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py:225-227",
+   "n_quoted": 3,
+   "expected_n": 3,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:921-927",
+   "n_quoted": 7,
+   "expected_n": 7,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:1787-1788",
+   "n_quoted": 2,
+   "expected_n": 2,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/whisper/feature_extraction_whisper.py:159-165",
+   "n_quoted": 7,
+   "expected_n": 7,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/whisper/feature_extraction_whisper.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:754-762",
+   "n_quoted": 9,
+   "expected_n": 9,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:780-781",
+   "n_quoted": 2,
+   "expected_n": 2,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:633-652",
+   "n_quoted": 20,
+   "expected_n": 20,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:846-851",
+   "n_quoted": 6,
+   "expected_n": 6,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:899-903",
+   "n_quoted": 5,
+   "expected_n": 5,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:294-294",
+   "n_quoted": 1,
+   "expected_n": 1,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:497-504",
+   "n_quoted": 8,
+   "expected_n": 8,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  },
+  {
+   "ref": "transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py:1318-1335",
+   "n_quoted": 18,
+   "expected_n": 18,
+   "file": "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+   "line_numbers_contiguous": true,
+   "mismatches": [],
+   "status": "OK"
+  }
+ ]
+}

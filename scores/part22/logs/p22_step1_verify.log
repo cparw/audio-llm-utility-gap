@@ -1,0 +1,5 @@
+quote check: 31 blocks, 350 lines, mismatches 0 []
+re-derived tokens: {'300s_cap': 7500, '900s_nocap': 22500, '600s_nocap': 15000} expect 7500 / 22500 / 15000: True
+probe json: tokens == formula(mask_frames) and seq == tok+48 for all 32 rows: True
+probe 900 s paper call -> 7500 | truncation off -> 22500
+per-clip csv: formula match 275/275; win_dur>300: 217 all 7500: True; capped==1: 89; max tok 7500
