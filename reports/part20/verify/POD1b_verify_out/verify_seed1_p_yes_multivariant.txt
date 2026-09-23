@@ -1,0 +1,72 @@
+overall	overall OOF AUC	0.738396 trap 0.738396	[0.6854, 0.7903]	n=468 spk=228 degenerate=0
+conflict_poolall	conflict arm OOF AUC (pool all)	0.545875 trap 0.545875	[0.4372, 0.6514]	n=146 spk=228 degenerate=0
+conflict_poolarm	conflict arm OOF AUC (pool arm)	0.545875 trap 0.545875	[0.4411, 0.6500]	n=146 spk=100 degenerate=0
+agreement_poolall	agreement arm OOF AUC (pool all)	0.816764 trap 0.816764	[0.7630, 0.8652]	n=322 spk=228 degenerate=0
+agreement_poolarm	agreement arm OOF AUC (pool arm)	0.816764 trap 0.816764	[0.7649, 0.8650]	n=322 spk=175 degenerate=0
+paired_conf_minus_agr	paired conflict minus agreement (pool all)	-0.270890	[-0.3839, -0.1562]	n=468 spk=228 degenerate=0
+paired_vs_orig_overall	paired this seed minus original, overall	-0.028884	[-0.0787, 0.0236]	n=468 spk=228 degenerate=0
+paired_vs_orig_conflict	paired this seed minus original, conflict arm (pool all)	0.026953	[-0.0692, 0.1228]	n=146 spk=228 degenerate=0
+paired_vs_orig_agreement	paired this seed minus original, agreement arm (pool all)	-0.042547	[-0.0934, 0.0080]	n=322 spk=228 degenerate=0
+fold 0: n=94 within-fold AUC 0.786848 mass min 0.997 median 0.999 below0.5 0
+fold 1: n=94 within-fold AUC 0.777724 mass min 0.997 median 0.999 below0.5 0
+fold 2: n=94 within-fold AUC 0.767014 mass min 0.994 median 0.999 below0.5 0
+fold 3: n=93 within-fold AUC 0.826998 mass min 0.995 median 0.999 below0.5 0
+fold 4: n=93 within-fold AUC 0.578664 mass min 2e-06 median 2.3e-06 below0.5 93
+{
+ "n": 468,
+ "md5": "6ed602b74bc5d5e4e1bbc203b812605e",
+ "nan_scores": 0,
+ "score_min_max": [
+  0.013230161410480324,
+  0.9981915992732289
+ ],
+ "prompts": [
+  "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+ ],
+ "prompt_verbatim_ok": true,
+ "n_spk": 228,
+ "n_pos": 290,
+ "n_neg": 178,
+ "arm_counts": {
+  "agreement": 322,
+  "conflict": 146
+ },
+ "arm_label_counts": {
+  "agreement": {
+   "pos": 189,
+   "neg": 133
+  },
+  "conflict": {
+   "pos": 101,
+   "neg": 45
+  }
+ },
+ "arm_spk": {
+  "agreement": 175,
+  "conflict": 100
+ },
+ "arm_from_prefix_agrees": true,
+ "fold_file": "folds/pitt_groupkfold5_pod.csv",
+ "fold_file_md5": "6c611f6822a29cc422bf90ffc03f3535",
+ "fold_file_same_clips": true,
+ "fold_file_speaker_mismatch": 0,
+ "fold_col_mismatch_vs_file": 0,
+ "sidecar_prompt_ok": true,
+ "sidecar_n": 468,
+ "sidecar_n_speakers": 228,
+ "orig_same_clips": true,
+ "orig_speaker_mismatch": 0,
+ "orig_label_mismatch": 0,
+ "orig_arm_mismatch": 0,
+ "identical_scores_to_orig": 0,
+ "max_abs_diff_vs_orig": 0.8426210119903986,
+ "pearson_vs_orig": 0.6265356591380937,
+ "state_folds_done": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "state_oof_max_abs_diff_vs_csv": 0.3501241472835377
+}
