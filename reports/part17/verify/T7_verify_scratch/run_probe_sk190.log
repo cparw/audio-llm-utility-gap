@@ -1,0 +1,24 @@
+=== probe llm ===
+  probe llm rep 0: AUC_mw 0.691968 trap 0.691968 picks [15, 15, 28, 17, 16] pod [15, 15, 28, 17, 16]  t=10s
+  probe llm rep 1: AUC_mw 0.698202 trap 0.698202 picks [23, 14, 15, 28, 28] pod [23, 18, 15, 28, 28]  t=13s
+  probe llm rep 2: AUC_mw 0.689358 trap 0.689358 picks [15, 17, 14, 15, 28] pod [15, 17, 14, 15, 28]  t=17s
+  probe llm rep 3: AUC_mw 0.705452 trap 0.705452 picks [14, 14, 16, 28, 14] pod [14, 14, 16, 28, 14]  t=20s
+  probe llm rep 4: AUC_mw 0.707409 trap 0.707409 picks [14, 23, 28, 28, 23] pod [14, 23, 28, 28, 23]  t=23s
+=== probe enc ===
+  probe enc rep 0: AUC_mw 0.596274 trap 0.596274 picks [24, 24, 8, 25, 8] pod [24, 24, 8, 25, 8]  t=3s
+  probe enc rep 1: AUC_mw 0.582862 trap 0.582862 picks [21, 1, 19, 2, 25] pod [21, 1, 19, 2, 25]  t=5s
+  probe enc rep 2: AUC_mw 0.596781 trap 0.596781 picks [25, 8, 25, 2, 16] pod [25, 8, 25, 2, 16]  t=7s
+  probe enc rep 3: AUC_mw 0.560606 trap 0.560606 picks [2, 19, 8, 25, 25] pod [2, 19, 8, 25, 25]  t=10s
+  probe enc rep 4: AUC_mw 0.605916 trap 0.605916 picks [24, 19, 25, 19, 28] pod [24, 19, 25, 19, 28]  t=12s
+=== probe ans ===
+  probe ans rep 0: AUC_mw 0.756416 trap 0.756416 picks [28, 28, 27, 28, 28] pod [28, 28, 27, 28, 28]  t=4s
+  probe ans rep 1: AUC_mw 0.730028 trap 0.730028 picks [28, 18, 20, 18, 27] pod [28, 18, 20, 18, 27]  t=8s
+  probe ans rep 2: AUC_mw 0.741482 trap 0.741482 picks [28, 28, 28, 26, 19] pod [28, 28, 28, 26, 19]  t=11s
+  probe ans rep 3: AUC_mw 0.722053 trap 0.722053 picks [27, 17, 21, 27, 20] pod [27, 17, 21, 27, 20]  t=15s
+  probe ans rep 4: AUC_mw 0.768160 trap 0.768160 picks [28, 27, 27, 28, 28] pod [28, 27, 27, 28, 28]  t=19s
+=== probe proj ===
+  probe proj rep 0: AUC_mw 0.550602 trap 0.550602 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=0s
+  probe proj rep 1: AUC_mw 0.561766 trap 0.561766 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=0s
+  probe proj rep 2: AUC_mw 0.579310 trap 0.579310 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=1s
+  probe proj rep 3: AUC_mw 0.565318 trap 0.565318 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=1s
+  probe proj rep 4: AUC_mw 0.547194 trap 0.547194 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=1s

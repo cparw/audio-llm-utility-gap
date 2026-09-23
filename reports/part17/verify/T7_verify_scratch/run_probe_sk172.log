@@ -1,0 +1,18 @@
+=== probe llm ===
+  probe llm rep 0: AUC_mw 0.691533 trap 0.691533 picks [15, 15, 28, 17, 16] pod [15, 15, 28, 17, 16]  t=9s
+  probe llm rep 1: AUC_mw 0.697695 trap 0.697695 picks [23, 14, 15, 28, 28] pod [23, 18, 15, 28, 28]  t=14s
+  probe llm rep 2: AUC_mw 0.688705 trap 0.688705 picks [15, 17, 14, 15, 28] pod [15, 17, 14, 15, 28]  t=17s
+  probe llm rep 3: AUC_mw 0.705669 trap 0.705669 picks [14, 14, 16, 28, 14] pod [14, 14, 16, 28, 14]  t=22s
+  probe llm rep 4: AUC_mw 0.707192 trap 0.707192 picks [14, 23, 28, 28, 23] pod [14, 23, 28, 28, 23]  t=28s
+=== probe enc ===
+  probe enc rep 0: AUC_mw 0.596274 trap 0.596274 picks [24, 24, 8, 25, 8] pod [24, 24, 8, 25, 8]  t=3s
+  probe enc rep 1: AUC_mw 0.582645 trap 0.582645 picks [21, 1, 19, 2, 25] pod [21, 1, 19, 2, 25]  t=6s
+  probe enc rep 2: AUC_mw 0.596636 trap 0.596636 picks [25, 8, 25, 2, 16] pod [25, 8, 25, 2, 16]  t=9s
+  probe enc rep 3: AUC_mw 0.560969 trap 0.560969 picks [2, 19, 8, 25, 25] pod [2, 19, 8, 25, 25]  t=12s
+  probe enc rep 4: AUC_mw 0.606061 trap 0.606061 picks [24, 19, 25, 19, 28] pod [24, 19, 25, 19, 28]  t=14s
+=== probe ans ===
+  probe ans rep 0: AUC_mw 0.728288 trap 0.728288 picks [28, 19, 27, 28, 28] pod [28, 28, 27, 28, 28]  t=6s
+  probe ans rep 1: AUC_mw 0.730390 trap 0.730390 picks [28, 18, 20, 18, 27] pod [28, 18, 20, 18, 27]  t=13s
+  probe ans rep 2: AUC_mw 0.741989 trap 0.741989 picks [28, 28, 28, 26, 19] pod [28, 28, 28, 26, 19]  t=21s
+  probe ans rep 3: AUC_mw 0.722633 trap 0.722633 picks [27, 17, 21, 27, 20] pod [27, 17, 21, 27, 20]  t=27s
+  probe ans rep 4: AUC_mw 0.766565 trap 0.766565 picks [28, 27, 27, 28, 28] pod [28, 27, 27, 28, 28]  t=34s
