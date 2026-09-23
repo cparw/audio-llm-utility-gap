@@ -1,0 +1,43 @@
+{
+ "prompts": [
+  "Based only on how this person's voice sounds, does this speaker show signs of dementia? Answer with one word, Yes or No."
+ ],
+ "overall": {
+  "value": 0.6473459899263851,
+  "trap": 0.6473459899263851,
+  "lo": 0.5930816598448937,
+  "hi": 0.7038541675093988,
+  "n": 468,
+  "n_spk": 228,
+  "n_pos": 290,
+  "draws": 2000
+ },
+ "conflict": {
+  "value": 0.561936193619362,
+  "trap": 0.5619361936193619,
+  "lo": 0.45349288306335483,
+  "hi": 0.666964565825979,
+  "n": 146,
+  "n_spk": 100,
+  "n_pos": 101,
+  "draws": 2000,
+  "lo_B": 0.44999964976183804,
+  "hi_B": 0.6815421656795814,
+  "draws_B": 2000,
+  "n_spk_cohort": 228
+ },
+ "agreement": {
+  "value": 0.6841309623264511,
+  "trap": 0.6841309623264511,
+  "lo": 0.6231153582558957,
+  "hi": 0.746966306813165,
+  "n": 322,
+  "n_spk": 175,
+  "n_pos": 189,
+  "draws": 2000,
+  "lo_B": 0.6226713837263063,
+  "hi_B": 0.7440038901703174,
+  "draws_B": 2000,
+  "n_spk_cohort": 228
+ }
+}
