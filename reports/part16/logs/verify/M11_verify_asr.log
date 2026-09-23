@@ -1,0 +1,234 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/1259 [00:00<?, ?it/s]Loading weights:  44%|████▍     | 556/1259 [00:00<00:00, 5558.89it/s]Loading weights:  88%|████████▊ | 1112/1259 [00:00<00:00, 5218.09it/s]Loading weights: 100%|██████████| 1259/1259 [00:00<00:00, 4913.81it/s]
+The following generation flags are not valid and may be ignored: ['output_scores']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+A custom logits processor of type <class 'transformers.generation.logits_process.SuppressTokensLogitsProcessor'> has been passed to `.generate()`, but it was also created in `.generate()`, given its parameterization. The custom <class 'transformers.generation.logits_process.SuppressTokensLogitsProcessor'> will take precedence. Please check the docstring of <class 'transformers.generation.logits_process.SuppressTokensLogitsProcessor'> to see related `.generate()` flags.
+A custom logits processor of type <class 'transformers.generation.logits_process.SuppressTokensAtBeginLogitsProcessor'> has been passed to `.generate()`, but it was also created in `.generate()`, given its parameterization. The custom <class 'transformers.generation.logits_process.SuppressTokensAtBeginLogitsProcessor'> will take precedence. Please check the docstring of <class 'transformers.generation.logits_process.SuppressTokensAtBeginLogitsProcessor'> to see related `.generate()` flags.
+  large_v3 ID00_hc_0_0_0.wav    1w lp=-0.9637
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID01_hc_0_0_0.wav   59w lp=-0.0669
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID02_pd_2_0_0.wav   51w lp=-0.0341
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID03_hc_0_0_0.wav   70w lp=-0.1263
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID04_pd_2_0_1.wav   97w lp=-0.0762
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID05_hc_0_0_0.wav   88w lp=-0.0863
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID06_pd_3_1_1.wav   79w lp=-0.0292
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID07_pd_2_0_0.wav   71w lp=-0.0566
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID08_hc_0_0_0.wav   81w lp=-0.0286
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID09_hc_0_0_0.wav   81w lp=-0.0474
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID10_hc_0_0_0.wav   87w lp=-0.0667
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID11_hc_0_0_0.wav    9w lp=-0.2077
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID12_hc_0_0_0.wav   75w lp=-0.0702
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID13_pd_3_2_2.wav   16w lp=-0.2533
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID14_hc_0_0_0.wav   63w lp=-0.1339
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID15_hc_0_0_0.wav   51w lp=-0.0193
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID16_pd_2_0_0.wav   76w lp=-0.0746
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID17_pd_2_1_0.wav   59w lp=-0.0739
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID18_pd_4_3_3.wav   30w lp=-0.1514
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID19_hc_0_0_0.wav   24w lp=-0.2190
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID20_pd_3_0_1.wav   81w lp=-0.0604
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID21_hc_0_0_0.wav  104w lp=-0.0436
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID22_hc_0_0_0.wav   71w lp=-0.0421
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID23_hc_0_0_0.wav   54w lp=-0.0726
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID24_pd_2_0_0.wav  103w lp=-0.0421
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID25_hc_0_0_0.wav   45w lp=-0.0332
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID26_hc_0_0_0.wav    8w lp=-0.2021
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID27_pd_4_1_1.wav   46w lp=-0.0768
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID28_hc_0_0_0.wav    8w lp=-0.0834
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID29_pd_3_1_2.wav   32w lp=-0.2290
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID30_pd_2_1_1.wav    9w lp=-0.1344
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID31_hc_0_1_1.wav   45w lp=-0.0884
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID32_pd_3_1_1.wav   59w lp=-0.1559
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID33_pd_3_2_2.wav   35w lp=-0.2821
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID34_pd_2_0_0.wav   87w lp=-0.0345
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID35_hc_0_0_0.wav   55w lp=-0.1285
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  large_v3 ID36_hc_0_0_0.wav   67w lp=-0.1181
+[large_v3] done in 2.55 min
+Loading weights:   0%|          | 0/947 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 646/947 [00:00<00:00, 6437.54it/s]Loading weights: 100%|██████████| 947/947 [00:00<00:00, 6348.29it/s]
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID00_hc_0_0_0.wav    1w lp=-1.1437
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID01_hc_0_0_0.wav   59w lp=-0.0594
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID02_pd_2_0_0.wav   56w lp=-0.0763
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID03_hc_0_0_0.wav   70w lp=-0.1063
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID04_pd_2_0_1.wav   14w lp=-0.1804
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID05_hc_0_0_0.wav   89w lp=-0.1028
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID06_pd_3_1_1.wav   79w lp=-0.0700
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID07_pd_2_0_0.wav   79w lp=-0.0921
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID08_hc_0_0_0.wav   81w lp=-0.0713
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID09_hc_0_0_0.wav   92w lp=-0.0997
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID10_hc_0_0_0.wav   87w lp=-0.1102
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID11_hc_0_0_0.wav   67w lp=-0.0944
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID12_hc_0_0_0.wav   75w lp=-0.0818
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID13_pd_3_2_2.wav   31w lp=-0.2588
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID14_hc_0_0_0.wav   64w lp=-0.1323
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID15_hc_0_0_0.wav   57w lp=-0.0547
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID16_pd_2_0_0.wav   76w lp=-0.0719
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID17_pd_2_1_0.wav   59w lp=-0.1451
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID18_pd_4_3_3.wav   31w lp=-0.2143
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID19_hc_0_0_0.wav    9w lp=-0.5859
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID20_pd_3_0_1.wav   81w lp=-0.0862
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID21_hc_0_0_0.wav   97w lp=-0.0804
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID22_hc_0_0_0.wav   71w lp=-0.1025
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID23_hc_0_0_0.wav   54w lp=-0.0893
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID24_pd_2_0_0.wav  103w lp=-0.0676
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID25_hc_0_0_0.wav   59w lp=-0.1105
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID26_hc_0_0_0.wav    1w lp=-0.5216
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID27_pd_4_1_1.wav   63w lp=-0.1395
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID28_hc_0_0_0.wav    8w lp=-0.3415
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID29_pd_3_1_2.wav   28w lp=-0.2375
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID30_pd_2_1_1.wav    1w lp=-0.9099
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID31_hc_0_1_1.wav   59w lp=-0.0898
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID32_pd_3_1_1.wav   65w lp=-0.1972
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID33_pd_3_2_2.wav   37w lp=-0.2532
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID34_pd_2_0_0.wav    1w lp=-0.5052
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID35_hc_0_0_0.wav   55w lp=-0.1001
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID36_hc_0_0_0.wav   15w lp=-0.3644
+[medium] done in 1.15 min
+wrote <local data dir>/Desktop/release/edaic_rerun/part16/verify/M11_verify_asr_mine.json
+Exception ignored in atexit callback: <function dump_compile_times at 0x1136929e0>
+Traceback (most recent call last):
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 910, in dump_compile_times
+    log.info(compile_times(repr="str", aggregate=True))
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 896, in compile_times
+    out += tabulate(rows, headers=("Function", "Runtimes (s)"))
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 246, in tabulate
+    return tabulate.tabulate(rows, headers=headers)
+AttributeError: module 'tabulate' has no attribute 'tabulate'
+ecedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID09_hc_0_0_0.wav   92w lp=-0.0997
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID10_hc_0_0_0.wav   87w lp=-0.1102
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID11_hc_0_0_0.wav   67w lp=-0.0944
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID12_hc_0_0_0.wav   75w lp=-0.0818
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID13_pd_3_2_2.wav   31w lp=-0.2588
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID14_hc_0_0_0.wav   64w lp=-0.1323
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID15_hc_0_0_0.wav   57w lp=-0.0547
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID16_pd_2_0_0.wav   76w lp=-0.0719
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID17_pd_2_1_0.wav   59w lp=-0.1451
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID18_pd_4_3_3.wav   31w lp=-0.2143
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID19_hc_0_0_0.wav    9w lp=-0.5859
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID20_pd_3_0_1.wav   81w lp=-0.0862
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID21_hc_0_0_0.wav   97w lp=-0.0804
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID22_hc_0_0_0.wav   71w lp=-0.1025
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID23_hc_0_0_0.wav   54w lp=-0.0893
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID24_pd_2_0_0.wav  103w lp=-0.0676
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID25_hc_0_0_0.wav   59w lp=-0.1105
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID26_hc_0_0_0.wav    1w lp=-0.5216
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID27_pd_4_1_1.wav   63w lp=-0.1395
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID28_hc_0_0_0.wav    8w lp=-0.3415
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID29_pd_3_1_2.wav   28w lp=-0.2375
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID30_pd_2_1_1.wav    1w lp=-0.9099
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID31_hc_0_1_1.wav   59w lp=-0.0898
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID32_pd_3_1_1.wav   65w lp=-0.1972
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID33_pd_3_2_2.wav   37w lp=-0.2532
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID34_pd_2_0_0.wav    1w lp=-0.5052
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID35_hc_0_0_0.wav   55w lp=-0.1001
+Both `max_new_tokens` (=440) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  medium ID36_hc_0_0_0.wav   15w lp=-0.3644
+[medium] done in 1.15 min
+wrote <local data dir>/Desktop/release/edaic_rerun/part16/verify/M11_verify_asr_mine.json
+Exception ignored in atexit callback: <function dump_compile_times at 0x1307928c0>
+Traceback (most recent call last):
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 910, in dump_compile_times
+    log.info(compile_times(repr="str", aggregate=True))
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 896, in compile_times
+    out += tabulate(rows, headers=("Function", "Runtimes (s)"))
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 246, in tabulate
+    return tabulate.tabulate(rows, headers=headers)
+AttributeError: module 'tabulate' has no attribute 'tabulate'
