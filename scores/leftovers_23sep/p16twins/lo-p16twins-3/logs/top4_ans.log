@@ -1,0 +1,3 @@
+pcgita anstop4 X (1100, 4, 2048) float32 n=1100 pos=550 spk=100 sklearn 1.9.1 numpy 2.1.2 scipy 1.18.1
+fits done 1s
+BEST pcgita anstop4 stage 0 mean 0.896211 [0.832709,0.945194] per_repeat [0.908, 0.8902, 0.8885, 0.8869, 0.9075] 3s

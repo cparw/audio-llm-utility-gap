@@ -1,0 +1,3 @@
+pcgita llmtop4 X (1100, 4, 2048) float32 n=1100 pos=550 spk=100 sklearn 1.9.1 numpy 2.1.2 scipy 1.18.1
+fits done 1s
+BEST pcgita llmtop4 stage 1 mean 0.895970 [0.834128,0.946298] per_repeat [0.895, 0.8883, 0.9001, 0.88, 0.9165] 2s
