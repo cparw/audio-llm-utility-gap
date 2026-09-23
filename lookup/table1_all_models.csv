@@ -1,0 +1,43 @@
+model,dataset,probe,answer,text,n
+Qwen2-Audio,Pitt,0.7846,0.6173,,468.0
+Qwen2-Audio,ADReSSo,0.8537,0.6649,,237.0
+Qwen2-Audio,ADReSS-2020,0.8315,0.6824,,156.0
+Qwen2-Audio,PC-GITA,0.9097,0.5369,,1100.0
+Qwen2-Audio,NeuroVoz,0.9324,0.5519,,1270.0
+Qwen2-Audio,MDVR-KCL,0.7714,0.5923,,37.0
+Qwen2-Audio,E-DAIC,0.5673,0.6464,,275.0
+Qwen2.5-Omni,Pitt,0.7706,0.6578,0.6629,468.0
+Qwen2.5-Omni,ADReSSo,0.8752,0.615,0.5542,237.0
+Qwen2.5-Omni,ADReSS-2020,0.8043,0.6241,0.7538,156.0
+Qwen2.5-Omni,PC-GITA,0.8941,0.5635,0.5246,1100.0
+Qwen2.5-Omni,NeuroVoz,0.9213,0.6951,0.5371,1270.0
+Qwen2.5-Omni,MDVR-KCL,0.7506,0.7143,0.7619,37.0
+Qwen2.5-Omni,E-DAIC,0.5966,0.662,0.6613,275.0
+Qwen3-Omni-30B-A3B,Pitt,0.8289,0.7619,0.6256,468.0
+Qwen3-Omni-30B-A3B,ADReSSo,0.875,0.7774,0.6042,237.0
+Qwen3-Omni-30B-A3B,ADReSS-2020,0.8445,0.7097,0.5896,156.0
+Qwen3-Omni-30B-A3B,PC-GITA,0.8969,0.5967,0.5264,1100.0
+Qwen3-Omni-30B-A3B,NeuroVoz,0.9372,0.6393,0.5656,1270.0
+Qwen3-Omni-30B-A3B,MDVR-KCL,0.7661,0.7738,0.4673,37.0
+Qwen3-Omni-30B-A3B,E-DAIC,0.5828,0.629,0.6348,275.0
+Kimi-Audio,Pitt,0.8374,0.718,,468.0
+Kimi-Audio,ADReSSo,,,,
+Kimi-Audio,ADReSS-2020,,,,
+Kimi-Audio,PC-GITA,0.8715,0.6147,,1100.0
+Kimi-Audio,NeuroVoz,,,,
+Kimi-Audio,MDVR-KCL,,,,
+Kimi-Audio,E-DAIC,0.484,0.6293,,275.0
+Audio Flamingo 2,Pitt,,0.5724,,468.0
+Audio Flamingo 2,ADReSSo,,0.5911,,237.0
+Audio Flamingo 2,ADReSS-2020,,0.6179,,156.0
+Audio Flamingo 2,PC-GITA,,0.5771,,1100.0
+Audio Flamingo 2,NeuroVoz,,0.5792,,1270.0
+Audio Flamingo 2,MDVR-KCL,,0.8185,,37.0
+Audio Flamingo 2,E-DAIC,,0.5602,,275.0
+Audio Flamingo 3,Pitt,,0.5885,,468.0
+Audio Flamingo 3,ADReSSo,,0.5451,,237.0
+Audio Flamingo 3,ADReSS-2020,,0.4929,,156.0
+Audio Flamingo 3,PC-GITA,,0.5508,,1100.0
+Audio Flamingo 3,NeuroVoz,,0.6006,,1270.0
+Audio Flamingo 3,MDVR-KCL,,0.6339,,37.0
+Audio Flamingo 3,E-DAIC,,0.5975,,275.0

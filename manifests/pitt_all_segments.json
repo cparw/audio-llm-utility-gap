@@ -1,0 +1,17 @@
+{
+ "part": "13",
+ "rule": "same merge as build_ad_conflict.py: consecutive *PAR: to >=30.0 s, nw>=20",
+ "kept": "ALL tertiles",
+ "n_segments": 708,
+ "n_speakers": 266,
+ "oof_auc_text_only": 0.699,
+ "tertile_lo": 0.4854,
+ "tertile_hi": 0.6879,
+ "counts": {
+  "DROPPED": 240,
+  "agreement": 322,
+  "conflict": 146
+ },
+ "source_glob": "/Volumes/G-Drive Pro/DementiaBank/transcripts/*/cookie/*.cha (552 files)",
+ "AFFECTED": "D12 tertile selection"
+}

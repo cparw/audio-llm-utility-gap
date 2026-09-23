@@ -1,0 +1,157 @@
+MANIFEST — every file in this release, what it is, and where it came from
+Built 2026-09-22 from the authors' run directories. Sizes in bytes.
+
+EXCLUSION CHECK, run before publishing:
+  audio files (.wav .mp3 .flac .m4a .ogg) present: 0
+  CHAT transcripts (.cha) present: 0
+  transcript folders present: 0
+  released CSVs scanned for a speech column: 59 of 59, 0 hits
+  columns dropped on copy: text, sev (participant speech / restricted score)
+                           age, sex, mmse, dx (restricted clinical metadata)
+
+path                                                                     bytes  origin / transformation
+--------------------------------------------------------------------------------------------------------------------------------------------
+DISCREPANCIES.md                                                         12669  generated for this release
+README.md                                                                24617  generated for this release
+lookup/bootstrap_cis.csv                                                  4771  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/bootstrap/bootstrap_cis.csv
+lookup/master_lookup.csv                                                 30264  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv
+lookup/new_results_edaic_windows.csv                                      4067  generated for this release
+lookup/new_results_pitt_all708.csv                                         742  generated for this release
+lookup/table1_all_models.csv                                              1819  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/master/table1_all_models.csv
+lookup/table1_omni25.csv                                                  2019  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/master/table1_omni25.csv
+manifests/edaic_paradox_manifest_390.csv                                 94633  columns dropped: sev, text — E-DAIC conflict/agreement rows  <- /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/results/health/paradox/manifest.csv
+manifests/edaic_windows_full.csv                                         11179  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.csv
+manifests/edaic_windows_full.json                                          368  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.json
+manifests/edaic_windows_mid30.csv                                        10875  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_mid30.csv
+manifests/edaic_windows_mid30.json                                         369  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_mid30.json
+manifests/edaic_windows_mid300.csv                                       11136  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_mid300.csv
+manifests/edaic_windows_mid300.json                                        374  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_mid300.json
+manifests/mf_pitt_all.csv                                                93940  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/mf_pitt_all.csv
+manifests/part7_heard_window.csv                                         16968  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part7_heard_window.csv
+manifests/pitt_all_segments.csv                                          75825  columns dropped: dx, mmse, age, sex, text — Pitt all-708 segment list, every tertile kept  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all_segments.csv
+manifests/pitt_all_segments.json                                           446  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all_segments.json
+manifests/pitt_conflict_manifest_468.csv                                 68606  columns dropped: dx, mmse, age, sex, text — the paper Pitt 468; inv_ms_in_window is a known artefact, see D4  <- /Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv
+manifests/confounds/clip_features.csv                                   815703  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/confounds/clip_features.csv
+manifests/confounds/clip_manifest.csv                                   468173  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/confounds/clip_manifest.csv
+manifests/confounds/confound_auc.csv                                      4755  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/confounds/confound_auc.csv
+manifests/part1e/ad2020_to_pitt.csv                                      11448  columns dropped: age, sex, mmse — speaker crosswalk  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/ad2020_to_pitt.csv
+manifests/part1e/ad2020_validation.csv                                   19242  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/ad2020_validation.csv
+manifests/part1e/adresso_accepted.csv                                    20576  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/adresso_accepted.csv
+manifests/part1e/adresso_unmatched_vs_0extra.csv                          1967  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/adresso_unmatched_vs_0extra.csv
+manifests/part1e/adresso_xcorr.csv                                       20346  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/adresso_xcorr.csv
+manifests/part1e/fp.csv                                                2860561  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/fp.csv
+manifests/part1e/overlap_ad2020_adresso.csv                               1809  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/overlap_ad2020_adresso.csv
+manifests/part1e/xcorr_to_pitt.csv                                       29435  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/xcorr_to_pitt.csv
+prompts/prompts.json                                                      2132  generated for this release
+reports/EDAIC_REPORT.txt                                                  1485  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/EDAIC_REPORT.txt
+scores/edaic_windows/af3_full.csv                                        54816  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/af3_full.csv
+scores/edaic_windows/af3_full.json                                         362  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/af3_full.json
+scores/edaic_windows/af3_mid30.csv                                       55055  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/af3_mid30.csv
+scores/edaic_windows/af3_mid30.json                                        361  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/af3_mid30.json
+scores/edaic_windows/af3_mid300.csv                                      55383  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/af3_mid300.csv
+scores/edaic_windows/af3_mid300.json                                       364  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/af3_mid300.json
+scores/edaic_windows/kimi_mid300_zeroshot.json                             520  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/kimi_mid300_zeroshot.json
+scores/edaic_windows/kimi_mid300_zeroshot_scores.csv                     48955  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/kimi_mid300_zeroshot_scores.csv
+scores/edaic_windows/kimi_mid30_zeroshot.json                              519  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/kimi_mid30_zeroshot.json
+scores/edaic_windows/kimi_mid30_zeroshot_scores.csv                      48945  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/kimi_mid30_zeroshot_scores.csv
+scores/edaic_windows/o25_full_ans_perlayer.csv                            1767  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_ans_perlayer.csv
+scores/edaic_windows/o25_full_encoder_perlayer.csv                        1990  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv
+scores/edaic_windows/o25_full_llm_perlayer.csv                            1819  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_llm_perlayer.csv
+scores/edaic_windows/o25_full_nested_repeats.json                          571  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_nested_repeats.json
+scores/edaic_windows/o25_full_proj_perlayer.csv                             93  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_proj_perlayer.csv
+scores/edaic_windows/o25_full_zeroshot.json                                439  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot.json
+scores/edaic_windows/o25_full_zeroshot_scores.csv                        49102  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv
+scores/edaic_windows/o25_mid300_ans_perlayer.csv                          1776  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_ans_perlayer.csv
+scores/edaic_windows/o25_mid300_encoder_perlayer.csv                      1999  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_encoder_perlayer.csv
+scores/edaic_windows/o25_mid300_llm_perlayer.csv                          1819  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_llm_perlayer.csv
+scores/edaic_windows/o25_mid300_nested_repeats.json                        574  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_nested_repeats.json
+scores/edaic_windows/o25_mid300_proj_perlayer.csv                           94  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_proj_perlayer.csv
+scores/edaic_windows/o25_mid300_zeroshot.json                              441  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_zeroshot.json
+scores/edaic_windows/o25_mid300_zeroshot_scores.csv                      49100  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_zeroshot_scores.csv
+scores/edaic_windows/o25_mid30_ans_perlayer.csv                           1768  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_ans_perlayer.csv
+scores/edaic_windows/o25_mid30_encoder_perlayer.csv                       1995  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_encoder_perlayer.csv
+scores/edaic_windows/o25_mid30_llm_perlayer.csv                           1818  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_llm_perlayer.csv
+scores/edaic_windows/o25_mid30_nested_repeats.json                         569  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_nested_repeats.json
+scores/edaic_windows/o25_mid30_proj_perlayer.csv                            93  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_proj_perlayer.csv
+scores/edaic_windows/o25_mid30_zeroshot.json                               440  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_zeroshot.json
+scores/edaic_windows/o25_mid30_zeroshot_scores.csv                       49098  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_zeroshot_scores.csv
+scores/edaic_windows/q2a_full_zeroshot.json                                444  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q2a_full_zeroshot.json
+scores/edaic_windows/q2a_full_zeroshot_scores.csv                        48937  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q2a_full_zeroshot_scores.csv
+scores/edaic_windows/q2a_mid300_zeroshot.json                              448  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q2a_mid300_zeroshot.json
+scores/edaic_windows/q2a_mid300_zeroshot_scores.csv                      48944  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q2a_mid300_zeroshot_scores.csv
+scores/edaic_windows/q2a_mid30_zeroshot.json                               446  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q2a_mid30_zeroshot.json
+scores/edaic_windows/q2a_mid30_zeroshot_scores.csv                       48945  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q2a_mid30_zeroshot_scores.csv
+scores/edaic_windows/q3o_full_zeroshot.json                                451  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q3o_full_zeroshot.json
+scores/edaic_windows/q3o_full_zeroshot_scores.csv                        49165  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q3o_full_zeroshot_scores.csv
+scores/edaic_windows/q3o_mid300_zeroshot.json                              453  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q3o_mid300_zeroshot.json
+scores/edaic_windows/q3o_mid300_zeroshot_scores.csv                      49203  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q3o_mid300_zeroshot_scores.csv
+scores/edaic_windows/q3o_mid30_zeroshot.json                               452  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q3o_mid30_zeroshot.json
+scores/edaic_windows/q3o_mid30_zeroshot_scores.csv                       49121  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/q3o_mid30_zeroshot_scores.csv
+scores/edaic_windows/sft_full_oof.csv                                    50029  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_full_oof.csv
+scores/edaic_windows/sft_full_sft.json                                     461  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_full_sft.json
+scores/edaic_windows/sft_full_state.json                                  5751  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_full_state.json
+scores/edaic_windows/sft_mid300_oof.csv                                  50594  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_mid300_oof.csv
+scores/edaic_windows/sft_mid300_sft.json                                   463  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_mid300_sft.json
+scores/edaic_windows/sft_mid300_state.json                                5766  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_mid300_state.json
+scores/edaic_windows/sft_mid30_oof.csv                                   50306  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_mid30_oof.csv
+scores/edaic_windows/sft_mid30_sft.json                                    462  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_mid30_sft.json
+scores/edaic_windows/sft_mid30_state.json                                 5753  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_mid30_state.json
+scores/part10/pitt_enc_nested5_oof.npz                                   23520  copied verbatim — authoritative Pitt encoder probe out-of-fold scores  <- /Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/pitt_enc_nested5_oof.npz
+scores/pitt_all/o25_pitt_all_ans_perlayer.csv                             1776  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_ans_perlayer.csv
+scores/pitt_all/o25_pitt_all_encoder_perlayer.csv                         2016  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_encoder_perlayer.csv
+scores/pitt_all/o25_pitt_all_llm_perlayer.csv                             1828  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_llm_perlayer.csv
+scores/pitt_all/o25_pitt_all_nested_repeats.json                           572  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_nested_repeats.json
+scores/pitt_all/o25_pitt_all_proj_perlayer.csv                              93  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_proj_perlayer.csv
+scores/pitt_all/o25_pitt_all_zeroshot.json                                 425  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_zeroshot.json
+scores/pitt_all/o25_pitt_all_zeroshot_scores.csv                        129962  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_zeroshot_scores.csv
+scores/pitt_all/sft_pitt_all_state.json                                   7899  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/sft_pitt_all_state.json
+scripts/audit_1a1c/ad_offsets.json                                        7559  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/ad_offsets.json
+scripts/audit_1a1c/adoff.py                                               1486  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/adoff.py
+scripts/audit_1a1c/cha.py                                                 2526  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/cha.py
+scripts/audit_1a1c/dur.py                                                 2738  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/dur.py
+scripts/audit_1a1c/inv.py                                                 1320  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/inv.py
+scripts/audit_1a1c/kcl_offsets.json                                       1383  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/kcl_offsets.json
+scripts/audit_1a1c/kcloff.py                                              1348  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/kcloff.py
+scripts/audit_1a1c/part1a.py                                              4760  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/part1a.py
+scripts/audit_1a1c/report.py                                             21917  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/report.py
+scripts/audit_1a1c/report1c.py                                           18016  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/report1c.py
+scripts/confounds/analyze.py                                              1783  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/confounds/analyze.py
+scripts/confounds/build_manifest.py                                       2382  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/confounds/build_manifest.py
+scripts/confounds/extract_features.py                                     2854  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/confounds/extract_features.py
+scripts/confounds/make_report.py                                          7899  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/confounds/make_report.py
+scripts/core/build_manifests.py                                           3460  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/build_manifests.py
+scripts/core/curves_from_states.py                                        2117  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/curves_from_states.py
+scripts/core/extract_probe_layers.py                                      6449  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/extract_probe_layers.py
+scripts/core/extract_probe_layers_promptoverride.py                       7581  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/extract_probe_layers_promptoverride.py
+scripts/core/kimi_probe.py                                                5540  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/kimi_probe.py
+scripts/core/make_fig1_omni.py                                            5053  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/make_fig1_omni.py
+scripts/core/mkman2.py                                                    1015  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/mkman2.py
+scripts/core/nested_probe_local.py                                        2278  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/nested_probe_local.py
+scripts/core/nested_repeats_all.py                                        2454  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/nested_repeats_all.py
+scripts/core/omni_ablation.py                                             6762  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/omni_ablation.py
+scripts/core/omni_prompt_variants.py                                      3116  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/omni_prompt_variants.py
+scripts/core/omni_transfer.py                                             4355  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/omni_transfer.py
+scripts/core/part10_readout_direction.py                                 19803  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/part10_readout_direction.py
+scripts/core/part10_readout_direction_v2.py                              31383  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/part10_readout_direction_v2.py
+scripts/core/part11_pitt_speaker_level.py                                 8263  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/part11_pitt_speaker_level.py
+scripts/core/part12_pitt_agematched.py                                   14256  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/part12_pitt_agematched.py
+scripts/core/rater_agreement.py                                          10039  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/rater_agreement.py
+scripts/core/sft_projector.py                                             6734  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/scripts/sft_projector.py
+scripts/core/text_score.py                                                4018  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/podD2_final/text_score.py
+scripts/part1e/build_sets.py                                              1839  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/build_sets.py
+scripts/part1e/cha_match2.py                                              2203  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/cha_match2.py
+scripts/part1e/dupes2.py                                                  2350  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/dupes2.py
+scripts/part1e/final_analysis.py                                          5397  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/final_analysis.py
+scripts/part1e/fingerprint.py                                             1793  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/fingerprint.py
+scripts/part1e/lib_cha.py                                                 1317  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/lib_cha.py
+scripts/part1e/lib_fp.py                                                  2372  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/lib_fp.py
+scripts/part1e/xcorr_adresso.py                                           2343  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/xcorr_adresso.py
+scripts/part1e/xcorr_extra.py                                             1803  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part1e_supporting/xcorr_extra.py
+scripts/upstream/build_ad_conflict.py                                     5231  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/scripts/dementiabank/build_ad_conflict.py
+scripts/upstream/build_pitt_manifest.py                                   2620  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/scripts/dementiabank/build_pitt_manifest.py
+scripts/upstream/cut_segments.py                                          1299  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/scripts/dementiabank/cut_segments.py
+scripts/upstream/make_fig1.py                                             5404  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/paper1_final/make_fig1.py
+scripts/upstream/px_build.py                                             14999  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/scripts/audiollm/px_build.py
+scripts/upstream/validate_ad_conflict.py                                  3736  copied verbatim  <- /Users/chaitanyaparwatkar/Desktop/af2_run/speech-health/scripts/dementiabank/validate_ad_conflict.py
+--------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                  6068002

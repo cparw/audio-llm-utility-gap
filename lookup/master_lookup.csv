@@ -1,0 +1,179 @@
+model,dataset,stream,auc,n,estimator,source
+Audio Flamingo 2,adress2020,zero shot answer,0.6179,156,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_adress2020.csv
+Audio Flamingo 2,adresso,zero shot answer,0.5911,237,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_adresso237.csv
+Audio Flamingo 2,edaic,zero shot answer,0.5602,275,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_edaic275.csv
+Audio Flamingo 2,edaic_conflict,zero shot answer,0.5363,390,"zero shot, 30 s window, voice prompt, 390 manifest rows",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/af2/af2_edaic_conflict_30s.csv
+Audio Flamingo 2,kcl,zero shot answer,0.8185,37,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_kcl37.csv
+Audio Flamingo 2,neurovoz,zero shot answer,0.5792,1270,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_neurovoz1270.csv
+Audio Flamingo 2,pcgita,zero shot answer,0.5771,1100,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_pcgita1100.csv
+Audio Flamingo 2,pitt,zero shot answer,0.5724,468,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_pitt468.csv
+Audio Flamingo 3,adress2020,zero shot answer,0.4929,156,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/af3_new/af3_adress2020.json
+Audio Flamingo 3,adresso,zero shot answer,0.5451,237,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/af3_new/af3_adresso.json
+Audio Flamingo 3,edaic,zero shot answer,0.5975,275,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/af3_edaic.json
+Audio Flamingo 3,edaic_conflict,zero shot answer,0.641,390,"zero shot, 30 s window, 390 conflict-manifest rows",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/af3_edaic_conflict.json
+Audio Flamingo 3,kcl,zero shot answer,0.6339,37,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/af3_kcl.json
+Audio Flamingo 3,neurovoz,zero shot answer,0.6006,1270,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/af3_new/af3_neurovoz.json
+Audio Flamingo 3,pcgita,zero shot answer,0.5508,1100,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/af3_pcgita.json
+Audio Flamingo 3,pitt,zero shot answer,0.5885,468,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/af3_pitt.json
+Kimi-Audio,adress2020,LM probe,0.92,156,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_adress2020_nested_repeats.json
+Kimi-Audio,adress2020,answer-state probe,0.8812,156,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_adress2020_nested_repeats.json
+Kimi-Audio,adress2020,zero shot answer,0.7053,156,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_adress2020_zeroshot.json
+Kimi-Audio,adresso,LM probe,0.8993,237,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_adresso_nested_repeats.json
+Kimi-Audio,adresso,answer-state probe,0.8651,237,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_adresso_nested_repeats.json
+Kimi-Audio,adresso,zero shot answer,0.7531,237,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_adresso_zeroshot.json
+Kimi-Audio,edaic,LM probe,0.484,275,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_edaic_nested_repeats.json
+Kimi-Audio,edaic,answer-state probe,0.4916,275,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_edaic_nested_repeats.json
+Kimi-Audio,edaic,zero shot answer,0.6293,275,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_edaic_zeroshot.json
+Kimi-Audio,edaic_conflict,zero shot answer,0.6899,390,"zero shot, 30 s window, voice prompt, 390 manifest rows",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/kimi/kimi_edaic_conflict_zeroshot_scores.csv
+Kimi-Audio,kcl,LM probe,0.731,37,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_kcl_nested_repeats.json
+Kimi-Audio,kcl,answer-state probe,0.7292,37,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_kcl_nested_repeats.json
+Kimi-Audio,kcl,zero shot answer,0.7113,37,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_kcl_zeroshot.json
+Kimi-Audio,neurovoz,LM probe,0.9334,1270,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_neurovoz_nested_repeats.json
+Kimi-Audio,neurovoz,answer-state probe,0.9195,1270,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_neurovoz_nested_repeats.json
+Kimi-Audio,neurovoz,zero shot answer,0.6204,1270,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/kimi_new/kimi_neurovoz_zeroshot.json
+Kimi-Audio,pcgita,LM probe,0.8715,1100,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pcgita_nested_repeats.json
+Kimi-Audio,pcgita,answer-state probe,0.8616,1100,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pcgita_nested_repeats.json
+Kimi-Audio,pcgita,zero shot answer,0.6147,1100,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pcgita_zeroshot.json
+Kimi-Audio,pitt,LM probe,0.8374,468,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pitt_nested_repeats.json
+Kimi-Audio,pitt,answer-state probe,0.7975,468,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pitt_nested_repeats.json
+Kimi-Audio,pitt,zero shot answer,0.718,468,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pitt_zeroshot.json
+Qwen2-Audio,adress2020,LM probe,0.8884,156,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_adress2020_nested_repeats.json
+Qwen2-Audio,adress2020,answer-state probe,0.8695,156,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_adress2020_nested_repeats.json
+Qwen2-Audio,adress2020,encoder probe,0.8315,156,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_adress2020_nested_repeats.json
+Qwen2-Audio,adress2020,transcript only,0.7383,156,"text only, per-clip file recomputed",/Volumes/G-Drive Pro/paper1_local_runs/qwen2audio_adress2020_text.csv
+Qwen2-Audio,adress2020,zero shot answer,0.6824,156,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/probe2/adress2020_zeroshot_scores.csv
+Qwen2-Audio,adresso,LM probe,0.8923,237,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_adresso_nested_repeats.json
+Qwen2-Audio,adresso,answer-state probe,0.819,237,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_adresso_nested_repeats.json
+Qwen2-Audio,adresso,encoder probe,0.8537,237,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_adresso_nested_repeats.json
+Qwen2-Audio,adresso,transcript only,0.6825,237,"text only, per-clip file recomputed",/Volumes/G-Drive Pro/paper1_local_runs/qwen2audio_adresso_text.csv
+Qwen2-Audio,adresso,zero shot answer,0.6649,237,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/probe2/adresso_zeroshot_scores.csv
+Qwen2-Audio,conflict,transcript only,0.6171,390,"text only, per-clip file recomputed",/Volumes/G-Drive Pro/paper1_local_runs/qwen2audio_conflict_text.csv
+Qwen2-Audio,edaic,LM probe,0.5224,275,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_edaic_nested_repeats.json
+Qwen2-Audio,edaic,answer-state probe,0.5958,275,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_edaic_nested_repeats.json
+Qwen2-Audio,edaic,encoder probe,0.5673,275,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_edaic_nested_repeats.json
+Qwen2-Audio,edaic,transcript only,0.6116,275,"text only, per-clip file recomputed (30 s transcript, matched to the 30 s audio window)",/Volumes/G-Drive Pro/paper1_local_runs/qwen2audio_edaic30_text.csv
+Qwen2-Audio,edaic,zero shot answer,0.6464,275,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/probe2/edaic_zeroshot_scores.csv
+Qwen2-Audio,edaic30,transcript only,0.6116,275,"text only, per-clip file recomputed",/Volumes/G-Drive Pro/paper1_local_runs/qwen2audio_edaic30_text.csv
+Qwen2-Audio,edaic_conflict,LM probe,0.5878,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q2a_edaic_conflict_nested_repeats.json
+Qwen2-Audio,edaic_conflict,answer-state probe,0.5749,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q2a_edaic_conflict_nested_repeats.json
+Qwen2-Audio,edaic_conflict,encoder probe,0.5563,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q2a_edaic_conflict_nested_repeats.json
+Qwen2-Audio,edaic_conflict,projector probe,0.5084,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q2a_edaic_conflict_nested_repeats.json
+Qwen2-Audio,edaic_conflict,zero shot answer,0.6568,390,"zero shot, 30 s window, 390 conflict-manifest rows",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q2a_edaic_conflict_zeroshot.json
+Qwen2-Audio,edaicfull,transcript only,0.72,275,"text only, per-clip file recomputed",/Volumes/G-Drive Pro/paper1_local_runs/qwen2audio_edaicfull_text.csv
+Qwen2-Audio,kcl,LM probe,0.625,37,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_kcl_nested_repeats.json
+Qwen2-Audio,kcl,answer-state probe,0.7702,37,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_kcl_nested_repeats.json
+Qwen2-Audio,kcl,encoder probe,0.7714,37,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_kcl_nested_repeats.json
+Qwen2-Audio,kcl,zero shot answer,0.5923,37,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/probe2/kcl_zeroshot_scores.csv
+Qwen2-Audio,neurovoz,LM probe,0.8904,1270,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_neurovoz_nested_repeats.json
+Qwen2-Audio,neurovoz,answer-state probe,0.8808,1270,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_neurovoz_nested_repeats.json
+Qwen2-Audio,neurovoz,encoder probe,0.9324,1270,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_neurovoz_nested_repeats.json
+Qwen2-Audio,neurovoz,zero shot answer,0.5519,1270,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/probe2/neurovoz_zeroshot_scores.csv
+Qwen2-Audio,pcgita,LM probe,0.8309,1100,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_pcgita_nested_repeats.json
+Qwen2-Audio,pcgita,answer-state probe,0.8448,1100,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_pcgita_nested_repeats.json
+Qwen2-Audio,pcgita,encoder probe,0.9097,1100,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_pcgita_nested_repeats.json
+Qwen2-Audio,pcgita,zero shot answer,0.5369,1100,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/probe2/pcgita_zeroshot_scores.csv
+Qwen2-Audio,pitt,LM probe,0.838,468,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_pitt_nested_repeats.json
+Qwen2-Audio,pitt,answer-state probe,0.8253,468,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_pitt_nested_repeats.json
+Qwen2-Audio,pitt,encoder probe,0.7846,468,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/q2a_pitt_nested_repeats.json
+Qwen2-Audio,pitt,transcript only,0.6762,468,"text only, per-clip file recomputed",/Volumes/G-Drive Pro/paper1_local_runs/qwen2audio_pitt_text.csv
+Qwen2-Audio,pitt,zero shot answer,0.6173,468,zero shot,/Volumes/G-Drive Pro/paper1_local_runs/probe2/pitt_zeroshot_scores.csv
+Qwen2.5-Omni,adress2020,LM probe,0.8511,156,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adress2020_nested_repeats.json
+Qwen2.5-Omni,adress2020,answer-state probe,0.8217,156,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adress2020_nested_repeats.json
+Qwen2.5-Omni,adress2020,encoder probe,0.8043,156,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adress2020_nested_repeats.json
+Qwen2.5-Omni,adress2020,projector probe,0.8097,156,single split nested,/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adress2020_nested_repeats.json
+Qwen2.5-Omni,adress2020,transcript only,0.7538,156,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_adress2020_text.json
+Qwen2.5-Omni,adress2020,zero shot answer,0.6241,156,"zero shot, 30 s window",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adress2020_zeroshot.json
+Qwen2.5-Omni,adresso,LM probe,0.9048,237,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adresso_nested_repeats.json
+Qwen2.5-Omni,adresso,answer-state probe,0.8593,237,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adresso_nested_repeats.json
+Qwen2.5-Omni,adresso,encoder probe,0.8752,237,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adresso_nested_repeats.json
+Qwen2.5-Omni,adresso,projector probe,0.8612,237,single split nested,/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adresso_nested_repeats.json
+Qwen2.5-Omni,adresso,transcript only,0.5542,237,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_adresso_text.json
+Qwen2.5-Omni,adresso,zero shot answer,0.615,237,"zero shot, 30 s window",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_adresso_zeroshot.json
+Qwen2.5-Omni,conflict,transcript only,0.6131,390,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_conflict_text.json
+Qwen2.5-Omni,edaic,LM probe,0.4939,275,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_edaic_nested_repeats.json
+Qwen2.5-Omni,edaic,answer-state probe,0.6146,275,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_edaic_nested_repeats.json
+Qwen2.5-Omni,edaic,encoder probe,0.5966,275,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_edaic_nested_repeats.json
+Qwen2.5-Omni,edaic,projector probe,0.5041,275,single split nested,/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_edaic_nested_repeats.json
+Qwen2.5-Omni,edaic,transcript only,0.6613,275,"text only, one documented prompt (30 s transcript, matched to the 30 s audio window)",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaic30_text.json
+Qwen2.5-Omni,edaic,zero shot answer,0.662,275,"zero shot, 30 s window",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_edaic_zeroshot.json
+Qwen2.5-Omni,edaic30,transcript only,0.6613,275,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaic30_text.json
+Qwen2.5-Omni,edaic_conflict,LM probe,0.5966,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/o25_edaic_conflict_nested_repeats.json
+Qwen2.5-Omni,edaic_conflict,answer-state probe,0.6623,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/o25_edaic_conflict_nested_repeats.json
+Qwen2.5-Omni,edaic_conflict,encoder probe,0.5566,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/o25_edaic_conflict_nested_repeats.json
+Qwen2.5-Omni,edaic_conflict,projector probe,0.5038,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/o25_edaic_conflict_nested_repeats.json
+Qwen2.5-Omni,edaic_conflict,zero shot answer,0.6204,390,"zero shot, 30 s window, 390 conflict-manifest rows",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/o25_edaic_conflict_zeroshot.json
+Qwen2.5-Omni,edaicfull,transcript only,0.823,275,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaicfull_text.json
+Qwen2.5-Omni,kcl,LM probe,0.622,37,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_kcl_nested_repeats.json
+Qwen2.5-Omni,kcl,answer-state probe,0.5833,37,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_kcl_nested_repeats.json
+Qwen2.5-Omni,kcl,encoder probe,0.7506,37,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_kcl_nested_repeats.json
+Qwen2.5-Omni,kcl,projector probe,0.6548,37,single split nested,/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_kcl_nested_repeats.json
+Qwen2.5-Omni,kcl,transcript only,0.7619,37,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_kcl_text.json
+Qwen2.5-Omni,kcl,zero shot answer,0.7143,37,"zero shot, 30 s window",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_kcl_zeroshot.json
+Qwen2.5-Omni,neurovoz,LM probe,0.9264,1270,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_neurovoz_nested_repeats.json
+Qwen2.5-Omni,neurovoz,answer-state probe,0.8895,1270,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_neurovoz_nested_repeats.json
+Qwen2.5-Omni,neurovoz,encoder probe,0.9213,1270,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_neurovoz_nested_repeats.json
+Qwen2.5-Omni,neurovoz,projector probe,0.9092,1270,single split nested,/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_neurovoz_nested_repeats.json
+Qwen2.5-Omni,neurovoz,transcript only,0.5371,1270,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_neurovoz_text.json
+Qwen2.5-Omni,neurovoz,zero shot answer,0.6951,1270,"zero shot, 30 s window",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_neurovoz_zeroshot.json
+Qwen2.5-Omni,pcgita,LM probe,0.8616,1100,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pcgita_nested_repeats.json
+Qwen2.5-Omni,pcgita,answer-state probe,0.8502,1100,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pcgita_nested_repeats.json
+Qwen2.5-Omni,pcgita,encoder probe,0.8941,1100,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pcgita_nested_repeats.json
+Qwen2.5-Omni,pcgita,projector probe,0.8685,1100,single split nested,/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pcgita_nested_repeats.json
+Qwen2.5-Omni,pcgita,transcript only,0.5246,1100,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pcgita_text.json
+Qwen2.5-Omni,pcgita,zero shot answer,0.5635,1100,"zero shot, 30 s window",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pcgita_zeroshot.json
+Qwen2.5-Omni,pitt,LM probe,0.8032,468,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pitt_nested_repeats.json
+Qwen2.5-Omni,pitt,answer-state probe,0.7636,468,"five split nested, mean of 5 repeats",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pitt_nested_repeats.json
+Qwen2.5-Omni,pitt,encoder probe,0.7706,468,"five split nested, mean of 5 repeats (part10 re-run)",/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/pitt_enc_nested5_oof.npz [SUPERSEDES omni_final/omni_pitt_nested_repeats.json 0.7761 and single-split 0.7969]
+Qwen2.5-Omni,pitt,projector probe,0.7507,468,single split nested,/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pitt_nested_repeats.json
+Qwen2.5-Omni,pitt,transcript only,0.6629,468,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pitt_text.json
+Qwen2.5-Omni,pitt,zero shot answer,0.6578,468,"zero shot, 30 s window",/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pitt_zeroshot.json
+Qwen3-Omni-30B-A3B,adress2020,LM probe,0.883,156,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adress2020_nested_repeats.json
+Qwen3-Omni-30B-A3B,adress2020,answer-state probe,0.8973,156,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adress2020_nested_repeats.json
+Qwen3-Omni-30B-A3B,adress2020,encoder probe,0.8445,156,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adress2020_nested_repeats.json
+Qwen3-Omni-30B-A3B,adress2020,projector probe,0.8149,156,single split nested,/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adress2020_nested_repeats.json
+Qwen3-Omni-30B-A3B,adress2020,transcript only,0.5896,156,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_adress2020_text.json
+Qwen3-Omni-30B-A3B,adress2020,zero shot answer,0.7097,156,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adress2020_zeroshot.json
+Qwen3-Omni-30B-A3B,adresso,LM probe,0.9068,237,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adresso_nested_repeats.json
+Qwen3-Omni-30B-A3B,adresso,answer-state probe,0.8724,237,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adresso_nested_repeats.json
+Qwen3-Omni-30B-A3B,adresso,encoder probe,0.875,237,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adresso_nested_repeats.json
+Qwen3-Omni-30B-A3B,adresso,projector probe,0.845,237,single split nested,/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adresso_nested_repeats.json
+Qwen3-Omni-30B-A3B,adresso,transcript only,0.6042,237,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_adresso_text.json
+Qwen3-Omni-30B-A3B,adresso,zero shot answer,0.7774,237,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_adresso_zeroshot.json
+Qwen3-Omni-30B-A3B,conflict,transcript only,0.5911,390,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_conflict_text.json
+Qwen3-Omni-30B-A3B,edaic,LM probe,0.5442,275,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_edaic_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic,answer-state probe,0.5317,275,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_edaic_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic,encoder probe,0.5828,275,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_edaic_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic,projector probe,0.5232,275,single split nested,/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_edaic_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic,transcript only,0.6348,275,"text only, one documented prompt (30 s transcript, matched to the 30 s audio window)",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_edaic30_text.json
+Qwen3-Omni-30B-A3B,edaic,zero shot answer,0.629,275,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_edaic_zeroshot.json
+Qwen3-Omni-30B-A3B,edaic30,transcript only,0.6348,275,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_edaic30_text.json
+Qwen3-Omni-30B-A3B,edaic_conflict,LM probe,0.6024,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q3o_edaic_conflict_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic_conflict,answer-state probe,0.5961,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q3o_edaic_conflict_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic_conflict,encoder probe,0.5139,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q3o_edaic_conflict_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic_conflict,projector probe,0.566,390,"nested, 390 conflict-manifest rows, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q3o_edaic_conflict_nested_repeats.json
+Qwen3-Omni-30B-A3B,edaic_conflict,zero shot answer,0.6294,390,"zero shot, 30 s window, 390 conflict-manifest rows",/Users/chaitanyaparwatkar/Desktop/release/edaic_conflict_new/q3o_edaic_conflict_zeroshot.json
+Qwen3-Omni-30B-A3B,edaicfull,transcript only,0.8465,275,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_edaicfull_text.json
+Qwen3-Omni-30B-A3B,kcl,LM probe,0.7131,37,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_kcl_nested_repeats.json
+Qwen3-Omni-30B-A3B,kcl,answer-state probe,0.6911,37,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_kcl_nested_repeats.json
+Qwen3-Omni-30B-A3B,kcl,encoder probe,0.7661,37,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_kcl_nested_repeats.json
+Qwen3-Omni-30B-A3B,kcl,projector probe,0.8095,37,single split nested,/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_kcl_nested_repeats.json
+Qwen3-Omni-30B-A3B,kcl,transcript only,0.4673,37,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_kcl_text.json
+Qwen3-Omni-30B-A3B,kcl,zero shot answer,0.7738,37,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_kcl_zeroshot.json
+Qwen3-Omni-30B-A3B,neurovoz,LM probe,0.9359,1270,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_neurovoz_nested_repeats.json
+Qwen3-Omni-30B-A3B,neurovoz,answer-state probe,0.9447,1270,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_neurovoz_nested_repeats.json
+Qwen3-Omni-30B-A3B,neurovoz,encoder probe,0.9372,1270,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_neurovoz_nested_repeats.json
+Qwen3-Omni-30B-A3B,neurovoz,projector probe,0.9362,1270,single split nested,/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_neurovoz_nested_repeats.json
+Qwen3-Omni-30B-A3B,neurovoz,transcript only,0.5656,1270,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_neurovoz_text.json
+Qwen3-Omni-30B-A3B,neurovoz,zero shot answer,0.6393,1270,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_neurovoz_zeroshot.json
+Qwen3-Omni-30B-A3B,pcgita,LM probe,0.8807,1100,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_pcgita_nested_repeats.json
+Qwen3-Omni-30B-A3B,pcgita,answer-state probe,0.8807,1100,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_pcgita_nested_repeats.json
+Qwen3-Omni-30B-A3B,pcgita,encoder probe,0.8969,1100,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_pcgita_nested_repeats.json
+Qwen3-Omni-30B-A3B,pcgita,projector probe,0.8862,1100,single split nested,/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_pcgita_nested_repeats.json
+Qwen3-Omni-30B-A3B,pcgita,transcript only,0.5264,1100,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_pcgita_text.json
+Qwen3-Omni-30B-A3B,pcgita,zero shot answer,0.5967,1100,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_pcgita_zeroshot.json
+Qwen3-Omni-30B-A3B,pitt,LM probe,0.8477,468,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_pitt_nested_repeats.json
+Qwen3-Omni-30B-A3B,pitt,answer-state probe,0.8268,468,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_pitt_nested_repeats.json
+Qwen3-Omni-30B-A3B,pitt,encoder probe,0.8289,468,"five split nested, mean of 5 repeats",/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_pitt_nested_repeats.json
+Qwen3-Omni-30B-A3B,pitt,projector probe,0.7619,468,single split nested,/Users/chaitanyaparwatkar/Desktop/release/overnight2/final/q3o_pitt_nested_repeats.json
+Qwen3-Omni-30B-A3B,pitt,transcript only,0.6256,468,"text only, one documented prompt",/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_pitt_text.json
+Qwen3-Omni-30B-A3B,pitt,zero shot answer,0.7619,468,"zero shot, 30 s window",/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot.json

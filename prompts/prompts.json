@@ -1,0 +1,66 @@
+{
+ "note": "Every prompt string used by a scored run in this release, with the sidecars that record it. A prompt is the complete instruction sent with the clip or transcript; no participant speech is in any prompt.",
+ "prompts": [
+  {
+   "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+   "used_by": [
+    "af3_full.json",
+    "af3_mid30.json",
+    "af3_mid300.json",
+    "kimi_mid300_zeroshot.json",
+    "kimi_mid30_zeroshot.json",
+    "o25_full_zeroshot.json",
+    "o25_mid300_zeroshot.json",
+    "o25_mid30_zeroshot.json",
+    "q2a_full_zeroshot.json",
+    "q2a_mid300_zeroshot.json",
+    "q2a_mid30_zeroshot.json",
+    "q3o_full_zeroshot.json",
+    "q3o_mid300_zeroshot.json",
+    "q3o_mid30_zeroshot.json",
+    "sft_full_sft.json",
+    "sft_mid300_sft.json",
+    "sft_mid30_sft.json"
+   ]
+  },
+  {
+   "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+   "used_by": [
+    "o25_pitt_all_zeroshot.json"
+   ]
+  },
+  {
+   "prompt": "Based only on this transcript of what the person said, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+   "used_by": [
+    "o25_kcl_text.json",
+    "o25_neurovoz_text.json",
+    "o25_pcgita_text.json",
+    "q3o_kcl_text.json",
+    "q3o_neurovoz_text.json",
+    "q3o_pcgita_text.json"
+   ]
+  },
+  {
+   "prompt": "Based only on this transcript of what the person said, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+   "used_by": [
+    "o25_adress2020_text.json",
+    "o25_adresso_text.json",
+    "o25_pitt_text.json",
+    "q3o_adress2020_text.json",
+    "q3o_adresso_text.json",
+    "q3o_pitt_text.json"
+   ]
+  },
+  {
+   "prompt": "Based only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No.",
+   "used_by": [
+    "o25_conflict_text.json",
+    "o25_edaic30_text.json",
+    "o25_edaicfull_text.json",
+    "q3o_conflict_text.json",
+    "q3o_edaic30_text.json",
+    "q3o_edaicfull_text.json"
+   ]
+  }
+ ]
+}
