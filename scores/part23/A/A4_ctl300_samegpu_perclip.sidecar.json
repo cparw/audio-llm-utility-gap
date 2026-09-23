@@ -1,0 +1,410 @@
+{
+ "result_file": "scores/part23/A/A4_ctl300_samegpu_perclip.csv",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "bootstrap": {
+  "n_draws": 2000,
+  "seed": "numpy default_rng(0), fresh per cell",
+  "unit": "speaker (one clip per speaker)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "draw_code": "rng.choice(len(uspk), size=len(uspk), replace=True)"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "dtype": "bfloat16",
+ "auc": "rank formula (probe_boot.py auc_rank)",
+ "sources": {
+  "/workspace/p23a/ctl300/ctl300_zeroshot_scores.csv": {
+   "sha256_first1MB": "7269eb0912eb91d67f5ecc022c425e519468d0cca625e0faba61c48b3b7c4c7c",
+   "bytes": 55424
+  },
+  "/workspace/p23a/ctl300/extract_full.py": {
+   "sha256_first1MB": "b9262a04547b719a98593718a9f5016d3d355c0c43df5f5935a579fabc8dc949",
+   "bytes": 5444
+  },
+  "/workspace/p23a/A_extract_perclip.csv": {
+   "sha256_first1MB": "c3610f3e71fb28f4271d05ed81bf4d9ed356d7d4c1df640a8529c6bfad9bed65",
+   "bytes": 62515
+  },
+  "/workspace/p23a/p23a_probe.py": {
+   "sha256_first1MB": "786baec4ef397d77c04bd4e0a3a86c24b25e632789633c85bcbdbab256cf824d",
+   "bytes": 7734
+  },
+  "/workspace/p23a/probe_ctl300/enc_rep0.npz": {
+   "sha256_first1MB": "35047f483e417448b19c6ee936661117c616f59d95d7e015c9a847eac2901f00",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe_ctl300/enc_rep1.npz": {
+   "sha256_first1MB": "3b8617077103377917862b2fe7164b6513b040e878e5d1a4300838185497ac34",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe_ctl300/enc_rep2.npz": {
+   "sha256_first1MB": "1f8375620120c813f5f0613342d195f26ada4be5642e32778bf4f8a1768e7066",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe_ctl300/enc_rep3.npz": {
+   "sha256_first1MB": "2f4326428d79118621fc26f33a5ac45a4e353f2fe77ba03ef4b7f1f3a2847753",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe_ctl300/enc_rep4.npz": {
+   "sha256_first1MB": "ba22557a20f1efcf4b4ad48fc6b33449b74edc9450dc4ceda7c7e702db35b89e",
+   "bytes": 6964
+  },
+  "/workspace/p23a/probe_ctl300/proj_rep0.npz": {
+   "sha256_first1MB": "4672f9c754fa7c358d1ff66653b4aef23d8cac9fb4f95569d49952fcde1b1d62",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe_ctl300/proj_rep1.npz": {
+   "sha256_first1MB": "b18cd8cb67518ffc8d451d6fd3a3fd4856429429086e4162e67890ec5ebaf566",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe_ctl300/proj_rep2.npz": {
+   "sha256_first1MB": "2b635081fed7158d965888d216fe6e23ab15ecc9b1cc8fa7d9ebecc0238ac363",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe_ctl300/proj_rep3.npz": {
+   "sha256_first1MB": "23c4aa2f294aef419e1f5da7e0fbb32d148bb7eb8d951cf5886225e195b1aa9e",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe_ctl300/proj_rep4.npz": {
+   "sha256_first1MB": "a359aea8cb34a338d9fa92fb42257d1b56d019b0452b87ff92da8bcf2e7bb791",
+   "bytes": 5724
+  },
+  "/workspace/p23a/probe_ctl300/llm_rep0.npz": {
+   "sha256_first1MB": "28ea87ee04fd5899e366d17c2ce7a507275abf0f4efd996a5591486bf272ede3",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/llm_rep1.npz": {
+   "sha256_first1MB": "b58aee166df9b4c03e9b0eade3002a03d66566eab11fb27e617019de7bc066b6",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/llm_rep2.npz": {
+   "sha256_first1MB": "b74870c94f7d363cdcd1750c1e3132507ab81ddef356ea03e9ef8d7e9a0fbe8c",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/llm_rep3.npz": {
+   "sha256_first1MB": "9328df7753a576f1515b28e4e1cc58fcfc98ea8ce59c9797db87549b108ab5d6",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/llm_rep4.npz": {
+   "sha256_first1MB": "5f1d5a863c163935713aa77e75b474fe4fb30a3e7c6dc891e0e958ec823e8033",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/ans_rep0.npz": {
+   "sha256_first1MB": "27266e745c66bc2226f1d8f4b93c554357e805b69849df2f7bf9b3947cbe4b47",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/ans_rep1.npz": {
+   "sha256_first1MB": "0dbb7a143c03572f3058d085e9027d548eb472af5eb61fd45fc61e383ebd46c6",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/ans_rep2.npz": {
+   "sha256_first1MB": "47658bcc7cf5f872695fec6866726023f5d8862418f56dc2ad6e270c52317e4a",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/ans_rep3.npz": {
+   "sha256_first1MB": "70df6cb6000f5a42d1eb743221c7509fe2f6658a49fff9263cc525f2e9b0e922",
+   "bytes": 6844
+  },
+  "/workspace/p23a/probe_ctl300/ans_rep4.npz": {
+   "sha256_first1MB": "890681b48ff6e396c997e2ff2c6a46f42ca7880d8c2c58ecd1d7d22d1e2b6a4c",
+   "bytes": 6844
+  }
+ },
+ "command": "cd /workspace/p23a && python3 p23a_report.py ctl",
+ "library_versions": {
+  "python": "3.12.3",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "pandas": "3.0.6",
+  "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+  "extract_transformers": "5.17.0",
+  "extract_torch": "2.8.0+cu128",
+  "extract_numpy": "2.1.2",
+  "extract_librosa": "1.0.0",
+  "extract_python": "3.12.3",
+  "extract_cuda": "12.8",
+  "extract_gpu": "NVIDIA H100 NVL",
+  "extract_attn": "sdpa"
+ },
+ "results": {
+  "zero_shot_ctl300_samegpu": 0.8278961867478614,
+  "ci": [
+   0.7700288686076833,
+   0.8820798217871485
+  ],
+  "whole_minus_ctl300": 0.008699434536755146,
+  "ci_whole_minus_ctl300": [
+   -0.03251116409952608,
+   0.05101313260462821
+  ],
+  "ctl300_vs_T7b_max_abs_p_yes": 0.030517096671204114,
+  "ctl300_vs_T7b_pearson": 0.9998226925779435,
+  "ctl300_n_at_7500_tok": 217,
+  "streams": {
+   "enc": {
+    "ctl300_per_repeat": [
+     0.596128751631144,
+     0.5815571987820791,
+     0.5959112657677251,
+     0.5600260983036103,
+     0.6146875453095548
+    ],
+    "ctl300_layers": [
+     [
+      24,
+      24,
+      8,
+      25,
+      8
+     ],
+     [
+      21,
+      1,
+      19,
+      2,
+      25
+     ],
+     [
+      25,
+      8,
+      25,
+      2,
+      16
+     ],
+     [
+      2,
+      19,
+      8,
+      25,
+      25
+     ],
+     [
+      24,
+      19,
+      25,
+      19,
+      24
+     ]
+    ],
+    "ctl300_meanof5": 0.5896621719588226,
+    "ci": [
+     0.5275926782336137,
+     0.6543171264050812
+    ],
+    "ctl300_minus_ctl300_answer": -0.23823401478903872,
+    "ci_minus_answer": [
+     -0.3166293333333334,
+     -0.15641594022789762
+    ],
+    "whole_meanof5": 0.5981151225170365,
+    "whole_minus_ctl300": 0.008452950558213823,
+    "ci_whole_minus_ctl300": [
+     -0.02638321958781588,
+     0.04643777942344855
+    ]
+   },
+   "proj": {
+    "ctl300_per_repeat": [
+     0.5511816731912426,
+     0.5625634333768305,
+     0.5808322459040163,
+     0.56589821661592,
+     0.5484268522546034
+    ],
+    "ctl300_layers": [
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    "ctl300_meanof5": 0.5617804842685226,
+    "ci": [
+     0.4882349765089278,
+     0.6352503446146969
+    ],
+    "ctl300_minus_ctl300_answer": -0.2661157024793388,
+    "ci_minus_answer": [
+     -0.3491111316365627,
+     -0.18016037194995083
+    ],
+    "whole_meanof5": 0.5865593736407134,
+    "whole_minus_ctl300": 0.02477888937219086,
+    "ci_whole_minus_ctl300": [
+     -0.018628277232936953,
+     0.07066492022652905
+    ]
+   },
+   "llm": {
+    "ctl300_per_repeat": [
+     0.690807597506162,
+     0.7030593011454256,
+     0.68928519646223,
+     0.7049441786283892,
+     0.7129186602870813
+    ],
+    "ctl300_layers": [
+     [
+      15,
+      15,
+      28,
+      17,
+      16
+     ],
+     [
+      23,
+      18,
+      15,
+      28,
+      28
+     ],
+     [
+      15,
+      17,
+      15,
+      15,
+      17
+     ],
+     [
+      14,
+      14,
+      16,
+      28,
+      14
+     ],
+     [
+      14,
+      15,
+      28,
+      28,
+      23
+     ]
+    ],
+    "ctl300_meanof5": 0.7002029868058576,
+    "ci": [
+     0.6210950720969699,
+     0.7731060359741732
+    ],
+    "ctl300_minus_ctl300_answer": -0.1276931999420038,
+    "ci_minus_answer": [
+     -0.2012251703639263,
+     -0.061188242971887484
+    ],
+    "whole_meanof5": 0.7437146585471944,
+    "whole_minus_ctl300": 0.043511671741336855,
+    "ci_whole_minus_ctl300": [
+     0.0003177309673265712,
+     0.0932429136766915
+    ]
+   },
+   "ans": {
+    "ctl300_per_repeat": [
+     0.7599681020733652,
+     0.7360446570972887,
+     0.739089459185153,
+     0.7161084529505582,
+     0.7747571407858489
+    ],
+    "ctl300_layers": [
+     [
+      28,
+      28,
+      27,
+      28,
+      28
+     ],
+     [
+      28,
+      28,
+      20,
+      18,
+      28
+     ],
+     [
+      28,
+      28,
+      28,
+      26,
+      19
+     ],
+     [
+      28,
+      16,
+      21,
+      27,
+      20
+     ],
+     [
+      28,
+      28,
+      27,
+      28,
+      28
+     ]
+    ],
+    "ctl300_meanof5": 0.7451935624184427,
+    "ci": [
+     0.6825652532303501,
+     0.805899926478815
+    ],
+    "ctl300_minus_ctl300_answer": -0.08270262432941866,
+    "ci_minus_answer": [
+     -0.13136443902284822,
+     -0.03559496124031002
+    ],
+    "whole_meanof5": 0.8359141655792375,
+    "whole_minus_ctl300": 0.09072060316079478,
+    "ci_whole_minus_ctl300": [
+     0.04798272916501821,
+     0.13484654731457793
+    ]
+   }
+  }
+ },
+ "written_utc": "2026-09-23T14:26:02Z",
+ "note": "EXTRA, not requested: same-GPU 300 s control so that whole-vs-300 s differences are not mixed with the H100 NVL vs H200 numeric difference",
+ "extract_command": "cd /workspace/p23a/ctl300 && HF_HOME=/workspace/hf WINDOW_S=0 python3 extract_full.py /workspace/p23a/ctl300/mf_all275_p23a.csv /workspace/p23a/ctl300/ctl300 mdd",
+ "probe_commands": [
+  "cd /workspace/p23a && CTL300=1 python3 p23a_probe.py probe enc",
+  "cd /workspace/p23a && CTL300=1 python3 p23a_probe.py probe proj",
+  "cd /workspace/p23a && CTL300=1 python3 p23a_probe.py probe llm",
+  "cd /workspace/p23a && CTL300=1 python3 p23a_probe.py probe ans"
+ ]
+}

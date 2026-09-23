@@ -1,0 +1,7 @@
+enc: (275, 32, 1280) float32  n 275 n_spk 275 pos 66
+  enc repeat 0: AUC 0.5961  layers [24, 24, 8, 25, 8]  22s
+  enc repeat 1: AUC 0.5816  layers [21, 1, 19, 2, 25]  30s
+  enc repeat 2: AUC 0.5959  layers [25, 8, 25, 2, 16]  38s
+  enc repeat 3: AUC 0.5600  layers [2, 19, 8, 25, 25]  46s
+  enc repeat 4: AUC 0.6147  layers [24, 19, 25, 19, 24]  53s
+enc DONE per_repeat [0.5961, 0.5816, 0.5959, 0.56, 0.6147] mean-of-5 0.5897

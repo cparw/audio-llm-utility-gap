@@ -1,0 +1,20 @@
+{
+ "gate_n": 10,
+ "gate_max_abs_diff": 0.02165065158820792,
+ "gate_n_exact": 0,
+ "gate_n_le_1e4": 5,
+ "short_clips_lt_300s_n": 58,
+ "short_clips_max_abs_diff_vs_300s_reference": 0.030517096671204114,
+ "short_clips_n_le_1e4": 28,
+ "gpu_this_pod": "NVIDIA H100 NVL",
+ "gpu_part22": "NVIDIA H200 (lifted_all275.meta.json)",
+ "script": "extract_full.py copied unmodified from edaic_rerun/part16/EDAICFULL (sha256 b9262a04547b719a98593718a9f5016d3d355c0c43df5f5935a579fabc8dc949)",
+ "command": "cd /workspace/p23a/gate && HF_HOME=/workspace/hf WINDOW_S=0 python3 extract_full.py /workspace/p23a/ref/mf_gate10_p23a.csv /workspace/p23a/gate/gate mdd",
+ "sources": {
+  "/workspace/p23a/gate/gate_zeroshot_scores.csv": "7763c04d015dff50783c2c07d15a12e7e2f0ab91726034bbd1b435594681cd49",
+  "/workspace/p23a/ref/gate_zeroshot_scores.csv": "34741c976b02f38cfcf038e3cbe4b4252f8051a05f9aef9a7e4df7faf5faf744",
+  "/workspace/p23a/gate/extract_full.py": "b9262a04547b719a98593718a9f5016d3d355c0c43df5f5935a579fabc8dc949",
+  "/workspace/p23a/A_extract_perclip.csv": "c3610f3e71fb28f4271d05ed81bf4d9ed356d7d4c1df640a8529c6bfad9bed65"
+ },
+ "written_utc": "2026-09-23T14:20:04Z"
+}

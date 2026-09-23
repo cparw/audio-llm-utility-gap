@@ -1,0 +1,7 @@
+proj: (275, 1, 3584) float32  n 275 n_spk 275 pos 66
+  proj repeat 0: AUC 0.5512  layers [0, 0, 0, 0, 0]  3s
+  proj repeat 1: AUC 0.5626  layers [0, 0, 0, 0, 0]  7s
+  proj repeat 2: AUC 0.5808  layers [0, 0, 0, 0, 0]  10s
+  proj repeat 3: AUC 0.5659  layers [0, 0, 0, 0, 0]  12s
+  proj repeat 4: AUC 0.5484  layers [0, 0, 0, 0, 0]  15s
+proj DONE per_repeat [0.5512, 0.5626, 0.5808, 0.5659, 0.5484] mean-of-5 0.5618
