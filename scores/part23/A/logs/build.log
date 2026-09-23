@@ -1,0 +1,7 @@
+downloads ok: 275
+built 275 / 275   failures 0
+stitched vs src_dur_s : max|d| 0.0000  n within 0.05s 275/275
+window   vs win_dur_s : max|d| 0.0001  n within 0.05s 275/275
+native sr != windows_full.csv sr : 0
+worst stitch: [{'pid': '300', 'ok': 1, 'native_sr': 16000, 'ch': 1, 'raw_s': 648.5, 'stitched_s': 759.8001, 'src_dur_s': 759.8001, 'd_stitch': 0.0, 'win_s': 759.8001, 'win_dur_s': 759.8001, 'd_win': -0.0, 'capped': 0, 'sr_expected': 16000}, {'pid': '301', 'ok': 1, 'native_sr': 16000, 'ch': 1, 'raw_s': 823.9, 'stitched_s': 1321.6999, 'src_dur_s': 1321.6999, 'd_stitch': 0.0, 'win_s': 900.0, 'win_dur_s': 900.0, 'd_win': 0.0, 'capped': 1, 'sr_expected': 16000}, {'pid': '302', 'ok': 1, 'native_sr': 16000, 'ch': 1, 'raw_s': 758.8, 'stitched_s': 974.3, 'src_dur_s': 974.3, 'd_stitch': 0.0, 'win_s': 900.0, 'win_dur_s': 900.0001, 'd_win': -0.0001, 'capped': 1, 'sr_expected': 16000}]
+worst window: [{'pid': '302', 'ok': 1, 'native_sr': 16000, 'ch': 1, 'raw_s': 758.8, 'stitched_s': 974.3, 'src_dur_s': 974.3, 'd_stitch': 0.0, 'win_s': 900.0, 'win_dur_s': 900.0001, 'd_win': -0.0001, 'capped': 1, 'sr_expected': 16000}, {'pid': '319', 'ok': 1, 'native_sr': 16000, 'ch': 1, 'raw_s': 679.7, 'stitched_s': 910.9, 'src_dur_s': 910.9, 'd_stitch': 0.0, 'win_s': 900.0, 'win_dur_s': 900.0001, 'd_win': -0.0001, 'capped': 1, 'sr_expected': 16000}, {'pid': '351', 'ok': 1, 'native_sr': 16000, 'ch': 1, 'raw_s': 769.6, 'stitched_s': 1167.8, 'src_dur_s': 1167.8, 'd_stitch': 0.0, 'win_s': 900.0, 'win_dur_s': 900.0001, 'd_win': -0.0001, 'capped': 1, 'sr_expected': 16000}]
