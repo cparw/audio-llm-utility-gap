@@ -1,0 +1,16 @@
+gain E-DAIC 30 s: -0.0537 [-0.1221, 0.0152] n=275 spk=275 draws=2000
+gain E-DAIC full (variants): -0.1863 [-0.2696, -0.1098] n=275 spk=275 draws=2000
+gain pitt: 0.1095 [0.0454, 0.1728] n=468 spk=228 draws=2000
+gain adresso: 0.2096 [0.1294, 0.2867] n=237 spk=237 draws=2000
+gain adress2020: 0.1443 [0.0490, 0.2370] n=156 spk=156 draws=2000
+orig_set values: {'agreement': 322, 'DROPPED': 240, 'conflict': 146} tertile: {'middle': 240, 'low': 234, 'high': 234}
+rate raw 708 0.303
+rate alone 708 (1-AUC): 0.6970 [0.6417, 0.7495] n=708 spk=265 draws=2000
+AF3 Pitt part3 agreement: 0.5822 [0.5080, 0.6528] n=322 spk=175 draws=2000
+AF3 Pitt part3 conflict: 0.6169 [0.5188, 0.7209] n=146 spk=100 draws=2000
+AF3 Pitt part10 agreement: 0.5855 [0.5144, 0.6554] n=322 spk=175 draws=2000
+AF3 Pitt part10 conflict: 0.6075 [0.5063, 0.7129] n=146 spk=100 draws=2000
+--- speaker = grp + spk
+rate alone 708 (1-AUC): 0.6970 [0.6407, 0.7495] n=708 spk=266 draws=2000
+kept raw 0.2918
+rate alone 468 (1-AUC): 0.7082 [0.6387, 0.7688] n=468 spk=228 draws=2000
