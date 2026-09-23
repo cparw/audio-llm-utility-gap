@@ -1,0 +1,44 @@
+{
+ "what": "independent verification of PART24 item 1 (FT24_values.tsv) plus fold, coverage, seed rule and zero-shot checks",
+ "result_file": "FT24_VERIFIED.tsv",
+ "script": [
+  "scripts/part24/verify/verify_ft24_indep.py",
+  "f17dd3f54001d67887f9dfc17c6012db280330822e25f1bdb5d04fe046342313"
+ ],
+ "command": "/usr/local/bin/python3 scripts/part24/verify/verify_ft24_indep.py",
+ "inputs": {
+  "scores/part24/FT/FT24_values.tsv": "b59c758f8e4a1eac2f5ba0886eedb6ccb9ab04b655727cfacc96c442e0c4f95d",
+  "scores/part24/FT/FT24_whole_seed0_perclip.csv": "cbf1a85fd6ef62b9edcd4150587735baaf356fc4167ac830913a7ad5f35df2f6",
+  "scores/part24/FT/FT24_whole_seed1all_perclip.csv": "9429cd536eb9648247faeb450a1695236f73f2819d72cacc580a46b626f61175",
+  "folds/edaic_groupkfold5_pod.csv": "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff",
+  "manifests/part24/mf_whole.csv": "85aed9407a29130d025304f9a76e69b808cdac7e0195fc4495beeb7ce7eda728",
+  "<local data dir>/part23/A/A2_edaic_whole_zeroshot_perclip.csv": "e13f360198811ff3061a222d9d9862aadc7a5de730f4e793f59b1139094e0e30",
+  "scores/part24/pods/p24-ft0/FT_whole_s0_fold0_oof.csv": "a1f0494b0c2ba8ae73d1ef1360136498ba1a333562a97175a1f6f0de3aa32525",
+  "scores/part24/pods/p24-ft1/FT_whole_s0_fold1_oof.csv": "991e56ca0312ec111b6aed4413cf163af1864af35f01c1849104390fd3af9ff7",
+  "scores/part24/pods/p24-ft2/FT_whole_s0_fold2_oof.csv": "5d03a3eed6bded787d4610be8e4572d12451acd6779a8f2adcdffb60280c7629",
+  "scores/part24/pods/p24-ft3/FT_whole_s0_fold3_oof.csv": "04d075333d6da27842f2fbe0ec9e7a6a71d6970ce7f29f23c621742b2614f1aa",
+  "scores/part24/pods/p24-ft4/FT_whole_s0_fold4_oof.csv": "10c7102c8afdeea5a2907061cf494fbd880bbad476f2315600c294c22e12e3b8",
+  "scores/part24/pods/p24s1-ft0/FT_whole_s1_fold0_oof.csv": "39bc6c8e9b07d8d9794282e9474dadeb2bffc2a0a0d22950b3bf41b5e7430807",
+  "scores/part24/pods/p24s1-ft1/FT_whole_s1_fold1_oof.csv": "0269207fc3fbd4cae08554e0af66e54b5ff58326f0087b1b0658e12b6a5fcd67",
+  "scores/part24/pods/p24s1-ft2/FT_whole_s1_fold2_oof.csv": "e1be591eb9401e8082c22e4933e1746179c6603b8a6d3095c193d8bc51bf3598",
+  "scores/part24/pods/p24s1-ft3/FT_whole_s1_fold3_oof.csv": "3cb7574668387e8302f0531a0e44951017f182504469938d41fba01c27aa9686",
+  "scores/part24/pods/p24s1-ft4/FT_whole_s1_fold4_oof.csv": "52909e3f0850d428fed49bed20753865ebb205939fcc069e98c2f46a08759e0d"
+ },
+ "auc_rule": "sklearn.metrics.roc_auc_score on p_yes (FT) and p_yes_whole (zero shot, np.float64 wrapper stripped)",
+ "bootstrap_rule": "2000 draws; fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over speakers in ascending pid order (same as string order here); one clip = one speaker; draws with one class skipped; np.percentile 2.5 and 97.5; paired = FT and zero shot on the same idx",
+ "tolerance_abs": 1e-09,
+ "max_abs_diff_claimed_vs_recomputed": 0.0,
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "rows": 41,
+ "rows_verified_yes": 41,
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "collect_code_opened": false,
+ "date_utc": "2026-09-23T22:51:01+00:00"
+}
