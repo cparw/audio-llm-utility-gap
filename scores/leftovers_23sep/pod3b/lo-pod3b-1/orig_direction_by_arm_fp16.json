@@ -1,0 +1,116 @@
+{
+ "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "states": "/workspace/out/q3o_pitt_states.npz",
+ "manifest": "/workspace/mf_pitt468.csv",
+ "lm_head": "/workspace/out/q3o_lm_head.npy",
+ "direction": "mass-weighted Yes minus No lm_head rows, recomputed within each arm",
+ "folds": "GroupKFold(5) by speaker, scaler fit inside the training fold",
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 0,
+  "unit": "speaker",
+  "paired": true
+ },
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "auc": "rank formula, ties averaged",
+ "date": "2026-09-23T22:18:02",
+ "arms": [
+  {
+   "arm": "all",
+   "n": 468,
+   "n_speakers": 228,
+   "n_positive": 290,
+   "cosine_w_d": 0.0051,
+   "cosine_random_mean_abs": 0.0177,
+   "cosine_random_ci": [
+    0.0008,
+    0.0498
+   ],
+   "auc_probe_oof": 0.8307,
+   "auc_probe_ci": [
+    0.7833,
+    0.8741
+   ],
+   "auc_d": 0.7656,
+   "auc_d_ci": [
+    0.7088,
+    0.8179
+   ],
+   "auc_probe_without_d": 0.8305,
+   "auc_probe_without_d_ci": [
+    0.7826,
+    0.8737
+   ],
+   "boot_usable_draws": 2000
+  },
+  {
+   "arm": "conflict",
+   "n": 146,
+   "n_speakers": 100,
+   "n_positive": 101,
+   "cosine_w_d": -0.0067,
+   "cosine_random_mean_abs": 0.0177,
+   "cosine_random_ci": [
+    0.0008,
+    0.0516
+   ],
+   "auc_probe_oof": 0.6145,
+   "auc_probe_ci": [
+    0.5021,
+    0.7246
+   ],
+   "auc_d": 0.6029,
+   "auc_d_ci": [
+    0.4965,
+    0.7025
+   ],
+   "auc_probe_without_d": 0.6196,
+   "auc_probe_without_d_ci": [
+    0.5094,
+    0.7283
+   ],
+   "boot_usable_draws": 2000
+  },
+  {
+   "arm": "agreement",
+   "n": 322,
+   "n_speakers": 175,
+   "n_positive": 189,
+   "cosine_w_d": 0.0086,
+   "cosine_random_mean_abs": 0.0172,
+   "cosine_random_ci": [
+    0.0007,
+    0.048
+   ],
+   "auc_probe_oof": 0.9349,
+   "auc_probe_ci": [
+    0.9034,
+    0.9614
+   ],
+   "auc_d": 0.8264,
+   "auc_d_ci": [
+    0.7741,
+    0.8731
+   ],
+   "auc_probe_without_d": 0.9341,
+   "auc_probe_without_d_ci": [
+    0.9021,
+    0.9604
+   ],
+   "boot_usable_draws": 2000
+  }
+ ]
+}

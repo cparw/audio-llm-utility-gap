@@ -1,0 +1,25 @@
++ python3 -c '
+import numpy as np
+W=np.load('\''/workspace/lmh/q3o_lm_head.npy'\'')
+np.save('\''/workspace/lmh/q3o_lm_head_fp16.npy'\'', W.astype(np.float16))   # rescore_probe.py line 22: W.astype(np.float16)
+print('\''fp16 dump'\'', W.shape)
+'
++ ln -sf /workspace/q3o_pitt_states.npz /workspace/out/q3o_pitt_states.npz
++ for V in fp16 bf16exact
++ '[' fp16 = fp16 ']'
++ ln -sf /workspace/lmh/q3o_lm_head_fp16.npy /workspace/out/q3o_lm_head.npy
++ python3 direction_by_arm.py
++ mv out/readout_direction_q3o_by_arm.json out/orig_direction_by_arm_fp16.json
++ mv out/readout_direction_q3o_by_arm.csv out/orig_direction_by_arm_fp16.csv
++ for V in fp16 bf16exact
++ '[' bf16exact = fp16 ']'
++ ln -sf /workspace/lmh/q3o_lm_head.npy /workspace/out/q3o_lm_head.npy
++ python3 direction_by_arm.py
++ mv out/readout_direction_q3o_by_arm.json out/orig_direction_by_arm_bf16exact.json
++ mv out/readout_direction_q3o_by_arm.csv out/orig_direction_by_arm_bf16exact.csv
++ rm -f /workspace/out/q3o_lm_head.npy /workspace/out/q3o_pitt_states.npz
++ python3 pod3b_primary.py /workspace/lmh/q3o_lm_head_fp16.npy fp16
++ wait
++ python3 pod3b_primary.py /workspace/lmh/q3o_lm_head.npy bf16exact
++ sha256sum out/lmh_fetch.json out/orig_direction_by_arm_bf16exact.csv out/orig_direction_by_arm_bf16exact.json out/orig_direction_by_arm_fp16.csv out/orig_direction_by_arm_fp16.json out/pod3b_primary_bf16exact.json out/pod3b_primary_bf16exact_perclip.csv out/pod3b_primary_bf16exact_vectors.npz out/pod3b_primary_fp16.json out/pod3b_primary_fp16_perclip.csv out/pod3b_primary_fp16_vectors.npz
++ touch ALL_DONE
