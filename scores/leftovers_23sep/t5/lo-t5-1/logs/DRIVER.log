@@ -1,0 +1,17 @@
+22:17:46 START pod lo-t5-1 mode main variants full jobs pitt_encproj host d0f4420d74b6
+22:18:40 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                              AMD EPYC 7713 64-Core Processor'] Haswell
+22:18:54 pitt_encproj exact script rc 0 | enc: 32 points, best auc_oof 0.8083 at 27, last 0.7905;proj: 1 points, best auc_oof 0.7670 at 0, last 0.7670;
+22:18:56 pitt_encproj foldcheck rc 0
+22:19:15 pitt_encproj variant podfile rc 0
+22:19:30 pitt_encproj variant macfile rc 0
+22:19:45 pitt_encproj variant podfile_f64 rc 0
+22:22:24 pitt_encproj variant podfile_thr8 rc 0
+22:22:39 pitt_encproj variant podfile_ctHaswell rc 0
+22:22:49 pitt_encproj variant podfile_ctSkylakeX rc 1
+22:23:03 pitt_encproj variant podfile_ctZen rc 0
+22:23:17 pitt_encproj variant podfile_ctSapphireRapids rc 0
+22:23:30 pitt_encproj variant podfile_ctSandybridge rc 0
+22:23:46 pitt_encproj variant podfile_ctPrescott rc 0
+22:23:49 pitt_encproj same-pod verifier refit rc 0
+22:23:49 ALL DONE

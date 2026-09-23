@@ -1,0 +1,14 @@
+{
+ "job": "pitt_encproj",
+ "tag": "podfile_thr8",
+ "fold_file": "folds/pitt_groupkfold5_pod.csv",
+ "dtype": "f32",
+ "n_jobs": 4,
+ "env": {
+  "OMP_NUM_THREADS": "8",
+  "OPENBLAS_NUM_THREADS": "8",
+  "MKL_NUM_THREADS": "8",
+  "OPENBLAS_CORETYPE": null
+ },
+ "seconds": 157.1
+}

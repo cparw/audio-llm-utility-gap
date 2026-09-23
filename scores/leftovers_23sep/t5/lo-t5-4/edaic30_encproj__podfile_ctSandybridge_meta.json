@@ -1,0 +1,14 @@
+{
+ "job": "edaic30_encproj",
+ "tag": "podfile_ctSandybridge",
+ "fold_file": "folds/edaic_groupkfold5_pod.csv",
+ "dtype": "f32",
+ "n_jobs": 254,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": "Sandybridge"
+ },
+ "seconds": 7.2
+}

@@ -1,0 +1,9 @@
+22:21:07 START pod lo-t5-3 mode main variants basic jobs pitt_ans host 6eb02246ae91
+22:21:29 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                              AMD EPYC 7713 64-Core Processor'] Haswell
+22:21:41 pitt_ans exact script rc 0 | ans: 29 points, best auc_oof 0.7954 at 27, last 0.7849;
+22:21:43 pitt_ans foldcheck rc 0
+22:21:53 pitt_ans variant podfile rc 0
+22:22:04 pitt_ans variant macfile rc 0
+22:22:08 pitt_ans same-pod verifier refit rc 0
+22:22:08 ALL DONE
