@@ -1,0 +1,37 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   3%|▎         | 85/2447 [00:00<00:02, 845.30it/s]Loading weights:   7%|▋         | 181/2447 [00:00<00:02, 911.90it/s]Loading weights:  11%|█         | 273/2447 [00:00<00:02, 732.51it/s]Loading weights:  16%|█▌        | 395/2447 [00:00<00:02, 898.22it/s]Loading weights:  20%|██        | 490/2447 [00:00<00:02, 810.36it/s]Loading weights:  26%|██▌       | 638/2447 [00:00<00:01, 992.89it/s]Loading weights:  30%|███       | 743/2447 [00:00<00:01, 962.28it/s]Loading weights:  34%|███▍      | 843/2447 [00:00<00:01, 863.14it/s]Loading weights:  38%|███▊      | 933/2447 [00:01<00:01, 800.38it/s]Loading weights:  42%|████▏     | 1016/2447 [00:01<00:01, 759.38it/s]Loading weights:  45%|████▍     | 1094/2447 [00:01<00:01, 722.75it/s]Loading weights:  48%|████▊     | 1168/2447 [00:01<00:01, 709.39it/s]Loading weights:  51%|█████     | 1246/2447 [00:01<00:01, 720.73it/s]Loading weights:  55%|█████▍    | 1339/2447 [00:01<00:01, 768.83it/s]Loading weights:  59%|█████▉    | 1444/2447 [00:01<00:01, 846.50it/s]Loading weights:  63%|██████▎   | 1532/2447 [00:01<00:01, 853.47it/s]Loading weights:  69%|██████▉   | 1686/2447 [00:01<00:00, 1049.61it/s]Loading weights:  76%|███████▌  | 1854/2447 [00:02<00:00, 1223.86it/s]Loading weights:  87%|████████▋ | 2130/2447 [00:02<00:00, 1634.08it/s]Loading weights:  94%|█████████▎| 2294/2447 [00:02<00:00, 1336.36it/s]Loading weights: 100%|█████████▉| 2436/2447 [00:02<00:00, 1139.68it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 968.20it/s] 
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B | 468 clips, 228 speakers | YES 7414 NO 2308 YES_V [9454, 7414, 9693, 9834, 14004, 14080] NO_V [2753, 2308, 2152, 902, 8996, 5664] | weights uniform | folds [4, 3] | proj Linear 4591104
+fold 4 WEIGHT TABLE (train n=375, mean weight 1.000000):
+   label 0 conflict  n= 42 weight=1.000000 total=42.000
+   label 0 agreement n=107 weight=1.000000 total=107.000
+   label 1 conflict  n= 66 weight=1.000000 total=66.000
+   label 1 agreement n=160 weight=1.000000 total=160.000
+fold 4 epoch 0 ce 0.6113 weighted 0.6113 steps 375 3.2 min peak 21.0 GB
+fold 4 epoch 1 ce 0.3734 weighted 0.3734 steps 375 6.1 min peak 21.0 GB
+fold 4 epoch 2 ce 0.1456 weighted 0.1456 steps 375 8.2 min peak 21.0 GB
+/workspace/scores/part20/POD1/balanced_ft_pitt.py:126: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "peak_gb": torch.cuda.max_memory_allocated() / 1e9, "date": datetime.datetime.utcnow().isoformat()},
+fold 4 eval done n_test 93 8.5 min
+fold 3 WEIGHT TABLE (train n=375, mean weight 1.000000):
+   label 0 conflict  n= 36 weight=1.000000 total=36.000
+   label 0 agreement n=106 weight=1.000000 total=106.000
+   label 1 conflict  n= 82 weight=1.000000 total=82.000
+   label 1 agreement n=151 weight=1.000000 total=151.000
+fold 3 epoch 0 ce 0.6037 weighted 0.6037 steps 375 10.0 min peak 21.0 GB
+fold 3 epoch 1 ce 0.3775 weighted 0.3775 steps 375 11.8 min peak 21.0 GB
+fold 3 epoch 2 ce 0.2126 weighted 0.2126 steps 375 13.4 min peak 21.0 GB
+fold 3 eval done n_test 93 13.6 min
+PROCESS DONE folds [4, 3] 13.6 min
