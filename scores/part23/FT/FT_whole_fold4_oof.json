@@ -1,0 +1,125 @@
+{
+ "what": "Qwen2.5-Omni projector fine-tune, E-DAIC, WHOLE window (truncation lifted), outer fold 4",
+ "result_file": "FT_whole_fold4_oof.csv",
+ "fold": 4,
+ "mode": "whole",
+ "fold_auc_two_logit_p_yes": 0.8304263565891473,
+ "n": 55,
+ "n_speakers": 55,
+ "n_pos": 12,
+ "n_train": 220,
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "hf_snapshot": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "seed": "training order np.random.RandomState(fold*10+epoch).permutation(train indices); no other RNG",
+ "recipe": "p15/sft_projector.py Omni branch: thinker.audio_tower.proj only (float32), encoder+LM frozen bf16, AdamW lr 1e-4, 3 epochs, 1 clip/update, CE over ' Yes'/' No' logits at last position",
+ "changes_from_recipe": [
+  "removed x = x[:16000*30] (the recipe heard only the first 30 s)",
+  "processor truncation=False",
+  "folds read from saved fold file",
+  "one outer fold per process",
+  "extra eval columns p_yes_rule, answer_mass, audio_tok",
+  "checkpoint every epoch and every 55 steps"
+ ],
+ "gradient_checkpointing_frozen_lm": true,
+ "probe_longest_clip": {
+  "pid": "301",
+  "dur_s": 900.0,
+  "audio_tok": 22500,
+  "peak_alloc_gb_no_gc": 128.45,
+  "s": 5.1,
+  "peak_alloc_gb_gc": 39.45,
+  "s_gc": 3.98
+ },
+ "proj20": {
+  "mean_step_s": 2.259,
+  "mean_dur_s_20": 533.6,
+  "mean_dur_s_train": 592.9,
+  "proj_train_min_len_weighted": 27.6,
+  "proj_train_min_mean": 24.9,
+  "proj_eval_min": 0.8,
+  "peak_alloc_gb_so_far": 39.79
+ },
+ "yes_id": 7414,
+ "no_id": 2308,
+ "rule_ids": [
+  [
+   7414,
+   9454,
+   9693,
+   9834,
+   14004,
+   14080
+  ],
+  [
+   902,
+   2152,
+   2308,
+   2753,
+   5664,
+   8996
+  ]
+ ],
+ "audio_token_id": 151646,
+ "feature_extractor_n_samples": 4800000,
+ "attn_implementation": "sdpa",
+ "losses_per_epoch": {
+  "0": 0.4647277250356803,
+  "1": 0.24969131486617369,
+  "2": 0.14056851413227955
+ },
+ "train_minutes": 27.43,
+ "eval_minutes": 0.89,
+ "wall_minutes_this_process": 28.9,
+ "restarts_from_checkpoint": 0,
+ "peak_alloc_gb_train": 39.79,
+ "peak_reserved_gb_train": 41.23,
+ "peak_alloc_gb_eval": 23.7,
+ "audio_tok_test": {
+  "min": 1648,
+  "max": 22500
+ },
+ "audio_tok_train_steps_max": 22500,
+ "sources": {
+  "manifest": [
+   "/workspace/p23/mf_whole.csv",
+   "85aed9407a29130d025304f9a76e69b808cdac7e0195fc4495beeb7ce7eda728"
+  ],
+  "fold_file": [
+   "/workspace/p23/edaic_groupkfold5_pod.csv",
+   "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff"
+  ],
+  "script": [
+   "/workspace/sft_whole.py",
+   "0b3386e37aec25031f924c278a0f4607833a477db3323bdd76c1b5141b8c8550"
+  ],
+  "cut_windows_sha256_of_list": "d5b5a5e7dff0926cd0df376173e5611567ec26d73e498e62d0b6efad1696e96e",
+  "windows_full.csv": [
+   "/workspace/edaicfull/windows_full.csv",
+   "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017"
+  ],
+  "build_windows.py": [
+   "/workspace/build_windows.py",
+   "a8f2597678459494b18902538678c9a156ab09d5855f2f62e90f249205488c84"
+  ]
+ },
+ "command": "python3 /workspace/sft_whole.py /workspace/p23/mf_whole.csv /workspace/p23/edaic_groupkfold5_pod.csv 4 whole /workspace/out",
+ "env": {
+  "GC": "auto",
+  "GC_LIMIT_GB": 128.0,
+  "CK": 55
+ },
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "transformers": "5.17.0",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "gpu": "NVIDIA H200"
+ },
+ "host": "0b106a6d2907",
+ "date_utc": "2026-09-23T14:51:32Z"
+}

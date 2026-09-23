@@ -1,0 +1,34 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 1420/2447 [00:00<00:00, 14170.82it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 13178.58it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B | tf 5.17.0 torch 2.8.0+cu128 | 275 clips 275 spk | fold 1 train 220 test 55 | mode whole | recipe ids yes 7414 no 2308 | rule ids [7414, 9454, 9693, 9834, 14004, 14080] [902, 2152, 2308, 2753, 5664, 8996] | audio tok 151646 | fe n_samples 4800000 chunk_length 300 | attn sdpa
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+PROBE longest train clip {'pid': '301', 'dur_s': 900.0, 'audio_tok': 22500, 'peak_alloc_gb_no_gc': 128.45, 's': 4.21, 'peak_alloc_gb_gc': 39.45, 's_gc': 3.92} -> gradient checkpointing ON
+PROJ20 whole_fold1 {'mean_step_s': 2.458, 'mean_dur_s_20': 599.2, 'mean_dur_s_train': 576.8, 'proj_train_min_len_weighted': np.float64(26.0), 'proj_train_min_mean': np.float64(27.0), 'proj_eval_min': np.float64(0.7), 'peak_alloc_gb_so_far': 39.79}
+whole_fold1 ep 0 step 55/220 loss_avg 0.4862 last_tok 21177 3.58s peak 39.8 GB 2.6 min
+whole_fold1 ep 0 step 110/220 loss_avg 0.4344 last_tok 5107 0.65s peak 39.8 GB 4.6 min
+whole_fold1 ep 0 step 165/220 loss_avg 0.4302 last_tok 17865 2.81s peak 39.8 GB 6.7 min
+fold 1 epoch 0 loss 0.4182 8.8 min  EPOCH_CKPT
+whole_fold1 ep 1 step 55/220 loss_avg 0.2020 last_tok 7455 0.98s peak 39.8 GB 10.9 min
+whole_fold1 ep 1 step 110/220 loss_avg 0.1970 last_tok 22500 3.90s peak 39.8 GB 13.4 min
+whole_fold1 ep 1 step 165/220 loss_avg 0.2214 last_tok 22500 3.89s peak 39.8 GB 15.4 min
+fold 1 epoch 1 loss 0.2474 17.3 min  EPOCH_CKPT
+whole_fold1 ep 2 step 55/220 loss_avg 0.0889 last_tok 16407 2.54s peak 39.8 GB 19.4 min
+whole_fold1 ep 2 step 110/220 loss_avg 0.1229 last_tok 22500 3.89s peak 39.8 GB 21.5 min
+whole_fold1 ep 2 step 165/220 loss_avg 0.1021 last_tok 7810 1.02s peak 39.8 GB 23.7 min
+fold 1 epoch 2 loss 0.1037 25.8 min  EPOCH_CKPT
+/workspace/sft_whole.py:222: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "host": platform.node(), "date_utc": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"}
+RESULT whole_fold1 fold AUC 0.8592 n=55 train 25.52 min eval 0.99 min peak 39.79 GB gc True
