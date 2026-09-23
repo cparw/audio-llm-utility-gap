@@ -1,0 +1,30 @@
+[
+ {
+  "id": "B_encprobe_mean5_nvfull_samepod",
+  "what": "Qwen2.5-Omni encoder nested probe, mean of five, FULL NeuroVoz 1270 re-extracted on the same pod/code (check against paper 0.9213)",
+  "value_computed": "0.9218",
+  "value_verified": "0.9218",
+  "lo": "0.8841",
+  "hi": "0.9525",
+  "n": 1270,
+  "n_spk": 107,
+  "file": "scores/part20/POD6/B_neurovoz_full_check/B_encprobe_nested5_nvfull_samepod_oof.csv",
+  "two_dp": "0.92 [0.88, 0.95]",
+  "vs_half": "above",
+  "agree_4dp": "yes"
+ },
+ {
+  "id": "B_encprobe_single_nvfull_samepod",
+  "what": "Qwen2.5-Omni encoder nested probe, single pod split, FULL NeuroVoz 1270 same pod (check against paper 0.9160)",
+  "value_computed": "0.9166",
+  "value_verified": "0.9166",
+  "lo": "0.8722",
+  "hi": "0.9516",
+  "n": 1270,
+  "n_spk": 107,
+  "file": "scores/part20/POD6/B_neurovoz_full_check/B_encprobe_nested5_nvfull_samepod_oof.csv",
+  "two_dp": "0.92 [0.87, 0.95]",
+  "vs_half": "above",
+  "agree_4dp": "yes"
+ }
+]
