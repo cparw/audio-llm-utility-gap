@@ -1,0 +1,552 @@
+{
+ "task": "m7m11 (a): M7 non-Pitt gaps on the mean-of-five probe convention",
+ "datasets": {
+  "adresso": {
+   "n": 237,
+   "n_speakers": 237,
+   "n_pos": 122,
+   "per_repeat_auc_table1": [
+    0.8722,
+    0.8665,
+    0.8825,
+    0.874,
+    0.881
+   ],
+   "mean5_table1": 0.8752,
+   "mean_of_rounded_repeats": 0.87524,
+   "zeroshot_auc": 0.6150392017106201,
+   "single_split_auc": 0.8898788310762652,
+   "gap_exact": 0.2601607982893799,
+   "gap_bounds_from_4dp_rounding": [
+    0.2601107982893799,
+    0.2602107982893799
+   ],
+   "gap_using_mean_of_rounded_repeats": 0.2602007982893799,
+   "single_split_paired_ci": [
+    0.1919968661120173,
+    0.3525638738224378
+   ],
+   "shift": -0.01467883107626522,
+   "approx_ci": [
+    0.17731803503575208,
+    0.3378850427461726
+   ],
+   "usable_draws": 2000,
+   "probe_mean5_single_shifted_ci": [
+    0.8314928183020143,
+    0.9174545313548508
+   ],
+   "zeroshot_ci": [
+    0.5432332651905852,
+    0.6889640923339981
+   ],
+   "old_part16_M7_row": {
+    "probe": 0.8899,
+    "zeroshot": 0.615,
+    "gap": 0.2748,
+    "lo": 0.192,
+    "hi": 0.3526
+   },
+   "old_row_reproduced_4dp": true,
+   "table1_outer_split_files": [
+    "<local data dir>/release/folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ]
+  },
+  "adress2020": {
+   "n": 156,
+   "n_speakers": 156,
+   "n_pos": 78,
+   "per_repeat_auc_table1": [
+    0.8161,
+    0.7936,
+    0.8051,
+    0.8062,
+    0.8005
+   ],
+   "mean5_table1": 0.8043,
+   "mean_of_rounded_repeats": 0.8043,
+   "zeroshot_auc": 0.6240959894806049,
+   "single_split_auc": 0.7878040762656148,
+   "gap_exact": 0.18020401051939516,
+   "gap_bounds_from_4dp_rounding": [
+    0.18015401051939517,
+    0.18025401051939516
+   ],
+   "gap_using_mean_of_rounded_repeats": 0.18020401051939505,
+   "single_split_paired_ci": [
+    0.055715354190963955,
+    0.26927930993807797
+   ],
+   "shift": 0.016495923734385243,
+   "approx_ci": [
+    0.0722112779253492,
+    0.2857752336724632
+   ],
+   "usable_draws": 2000,
+   "probe_mean5_single_shifted_ci": [
+    0.7312786883188294,
+    0.8681940057631599
+   ],
+   "zeroshot_ci": [
+    0.5348478618421052,
+    0.7148052262172812
+   ],
+   "old_part16_M7_row": {
+    "probe": 0.7878,
+    "zeroshot": 0.6241,
+    "gap": 0.1637,
+    "lo": 0.0557,
+    "hi": 0.2693
+   },
+   "old_row_reproduced_4dp": true,
+   "table1_outer_split_files": [
+    "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ]
+  },
+  "pcgita": {
+   "n": 1100,
+   "n_speakers": 100,
+   "n_pos": 550,
+   "per_repeat_auc_table1": [
+    0.8882,
+    0.89,
+    0.8926,
+    0.8954,
+    0.9044
+   ],
+   "mean5_table1": 0.8941,
+   "mean_of_rounded_repeats": 0.89412,
+   "zeroshot_auc": 0.5634776859504133,
+   "single_split_auc": 0.9088644628099174,
+   "gap_exact": 0.33062231404958675,
+   "gap_bounds_from_4dp_rounding": [
+    0.33057231404958676,
+    0.33067231404958675
+   ],
+   "gap_using_mean_of_rounded_repeats": 0.33064231404958677,
+   "single_split_paired_ci": [
+    0.26363164315908616,
+    0.42747673948462256
+   ],
+   "shift": -0.014764462809917389,
+   "approx_ci": [
+    0.24886718034916877,
+    0.41271227667470517
+   ],
+   "usable_draws": 2000,
+   "probe_mean5_single_shifted_ci": [
+    0.8330326144404042,
+    0.9415689695459973
+   ],
+   "zeroshot_ci": [
+    0.49306400723091104,
+    0.6330859923977538
+   ],
+   "old_part16_M7_row": {
+    "probe": 0.9089,
+    "zeroshot": 0.5635,
+    "gap": 0.3454,
+    "lo": 0.2636,
+    "hi": 0.4275
+   },
+   "old_row_reproduced_4dp": true,
+   "table1_outer_split_files": [
+    "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0.csv",
+    "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed1.csv",
+    "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed2.csv",
+    "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed3.csv",
+    "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed4.csv"
+   ]
+  },
+  "neurovoz": {
+   "n": 1270,
+   "n_speakers": 107,
+   "n_pos": 621,
+   "per_repeat_auc_table1": [
+    0.9275,
+    0.9154,
+    0.928,
+    0.9124,
+    0.9232
+   ],
+   "mean5_table1": 0.9213,
+   "mean_of_rounded_repeats": 0.9213,
+   "zeroshot_auc": 0.6950814953762633,
+   "single_split_auc": 0.9159725478811699,
+   "gap_exact": 0.22621850462373672,
+   "gap_bounds_from_4dp_rounding": [
+    0.22616850462373672,
+    0.2262685046237367
+   ],
+   "gap_using_mean_of_rounded_repeats": 0.22621850462373683,
+   "single_split_paired_ci": [
+    0.16602827601395415,
+    0.2782598094974332
+   ],
+   "shift": 0.005327452118830123,
+   "approx_ci": [
+    0.17135572813278427,
+    0.2835872616162633
+   ],
+   "usable_draws": 2000,
+   "probe_mean5_single_shifted_ci": [
+    0.8766045461319831,
+    0.9565985669220135
+   ],
+   "zeroshot_ci": [
+    0.6355883997757804,
+    0.7518676424825447
+   ],
+   "old_part16_M7_row": {
+    "probe": 0.916,
+    "zeroshot": 0.6951,
+    "gap": 0.2209,
+    "lo": 0.166,
+    "hi": 0.2783
+   },
+   "old_row_reproduced_4dp": true,
+   "table1_outer_split_files": [
+    "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ]
+  },
+  "kcl": {
+   "n": 37,
+   "n_speakers": 37,
+   "n_pos": 16,
+   "per_repeat_auc_table1": [
+    0.744,
+    0.8304,
+    0.7768,
+    0.625,
+    0.7768
+   ],
+   "mean5_table1": 0.7506,
+   "mean_of_rounded_repeats": 0.7506,
+   "zeroshot_auc": 0.7142857142857143,
+   "single_split_auc": 0.7767857142857143,
+   "gap_exact": 0.03631428571428574,
+   "gap_bounds_from_4dp_rounding": [
+    0.03626428571428574,
+    0.036364285714285745
+   ],
+   "gap_using_mean_of_rounded_repeats": 0.03631428571428574,
+   "single_split_paired_ci": [
+    -0.18129984051036677,
+    0.2900227272727272
+   ],
+   "shift": -0.026185714285714257,
+   "approx_ci": [
+    -0.20748555479608102,
+    0.26383701298701295
+   ],
+   "usable_draws": 2000,
+   "probe_mean5_single_shifted_ci": [
+    0.5732285823253788,
+    0.9003049274255156
+   ],
+   "zeroshot_ci": [
+    0.5209790209790209,
+    0.8809565434565434
+   ],
+   "old_part16_M7_row": {
+    "probe": 0.7768,
+    "zeroshot": 0.7143,
+    "gap": 0.0625,
+    "lo": -0.1813,
+    "hi": 0.29
+   },
+   "old_row_reproduced_4dp": true,
+   "table1_outer_split_files": [
+    "<local data dir>/release/folds/kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "<local data dir>/release/folds/kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "<local data dir>/release/folds/kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "<local data dir>/release/folds/kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "<local data dir>/release/folds/kcl_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ]
+  }
+ },
+ "validation": {
+  "pitt_part10": {
+   "n": 468,
+   "n_speakers": 228,
+   "per_repeat": [
+    0.7598024021697016,
+    0.7724719101123596,
+    0.7458930647036033,
+    0.7903332041844247,
+    0.7843471522665634
+   ],
+   "mean5": 0.7705695466873305,
+   "zeroshot": 0.6577683068578071,
+   "gap": 0.11280123982952339,
+   "exact_ci": [
+    0.04550149479611408,
+    0.1768100605302147
+   ],
+   "usable": 2000,
+   "note": "Table 1 Pitt encoder value 0.7706; exact row must equal part16 M7 fix +0.1128 [0.0455, 0.1768]",
+   "source": "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz",
+   "proxies": {
+    "repeat0": {
+     "proxy_auc": 0.7598024021697016,
+     "shifted_ci": [
+      0.04026047077375107,
+      0.18243389347527647
+     ],
+     "lo_err": -0.005241024022363011,
+     "hi_err": 0.005623832945061774,
+     "width_exact": 0.1313085657341006,
+     "width_shifted": 0.1421734227015254
+    },
+    "repeat1": {
+     "proxy_auc": 0.7724719101123596,
+     "shifted_ci": [
+      0.03968869115087475,
+      0.18050398269336726
+     ],
+     "lo_err": -0.0058128036452393325,
+     "hi_err": 0.003693922163152563,
+     "width_exact": 0.1313085657341006,
+     "width_shifted": 0.1408152915424925
+    },
+    "repeat2": {
+     "proxy_auc": 0.7458930647036033,
+     "shifted_ci": [
+      0.04208557145651934,
+      0.18326575602497097
+     ],
+     "lo_err": -0.0034159233395947425,
+     "hi_err": 0.006455695494756275,
+     "width_exact": 0.1313085657341006,
+     "width_shifted": 0.14118018456845163
+    },
+    "repeat3": {
+     "proxy_auc": 0.7903332041844247,
+     "shifted_ci": [
+      0.037983533374136604,
+      0.1852006224901584
+     ],
+     "lo_err": -0.007517961421977477,
+     "hi_err": 0.008390561959943699,
+     "width_exact": 0.1313085657341006,
+     "width_shifted": 0.1472170891160218
+    },
+    "repeat4": {
+     "proxy_auc": 0.7843471522665634,
+     "shifted_ci": [
+      0.04638356096303377,
+      0.1798127392045023
+     ],
+     "lo_err": 0.0008820661669196872,
+     "hi_err": 0.0030026786742876066,
+     "width_exact": 0.1313085657341006,
+     "width_shifted": 0.13342917824146855
+    }
+   },
+   "max_endpoint_error": 0.008390561959943699
+  },
+  "edaic300_T7b": {
+   "n": 275,
+   "n_speakers": 275,
+   "per_repeat": [
+    0.5964187327823691,
+    0.5825721328113672,
+    0.5962012469189503,
+    0.5607510511816732,
+    0.6059881107727998
+   ],
+   "mean5": 0.588386254893432,
+   "zeroshot": 0.8277511961722488,
+   "gap": -0.2393649412788168,
+   "exact_ci": [
+    -0.3188292697258822,
+    -0.15723986914309845
+   ],
+   "usable": 2000,
+   "note": "exact row must equal master_lookup row 224: -0.2394 [-0.3188, -0.1572]",
+   "source": "<local data dir>/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+   "proxies": {
+    "repeat0": {
+     "proxy_auc": 0.5964187327823691,
+     "shifted_ci": [
+      -0.3290100525972987,
+      -0.1405319862873601
+     ],
+     "lo_err": -0.010180782871416494,
+     "hi_err": 0.01670788285573835,
+     "width_exact": 0.16158940058278376,
+     "width_shifted": 0.1884780663099386
+    },
+    "repeat1": {
+     "proxy_auc": 0.5825721328113672,
+     "shifted_ci": [
+      -0.33194184733648724,
+      -0.14338103850079648
+     ],
+     "lo_err": -0.013112577610605025,
+     "hi_err": 0.013858830642301978,
+     "width_exact": 0.16158940058278376,
+     "width_shifted": 0.18856080883569076
+    },
+    "repeat2": {
+     "proxy_auc": 0.5962012469189503,
+     "shifted_ci": [
+      -0.33170109423125055,
+      -0.14126954399878225
+     ],
+     "lo_err": -0.012871824505368334,
+     "hi_err": 0.015970325144316205,
+     "width_exact": 0.16158940058278376,
+     "width_shifted": 0.1904315502324683
+    },
+    "repeat3": {
+     "proxy_auc": 0.5607510511816732,
+     "shifted_ci": [
+      -0.3279978969861475,
+      -0.15235704435025674
+     ],
+     "lo_err": -0.009168627260265294,
+     "hi_err": 0.004882824792841717,
+     "width_exact": 0.16158940058278376,
+     "width_shifted": 0.17564085263589077
+    },
+    "repeat4": {
+     "proxy_auc": 0.6059881107727998,
+     "shifted_ci": [
+      -0.3243420566349117,
+      -0.15476183375959598
+     ],
+     "lo_err": -0.00551278690902951,
+     "hi_err": 0.0024780353835024693,
+     "width_exact": 0.16158940058278376,
+     "width_shifted": 0.16958022287531574
+    }
+   },
+   "max_endpoint_error": 0.01670788285573835
+  },
+  "neurovoz_pod6_reextract": {
+   "n": 1270,
+   "n_speakers": 107,
+   "per_repeat": [
+    0.9287234913616638,
+    0.915833600063519,
+    0.9252907359023792,
+    0.9129355455810872,
+    0.926244761543214
+   ],
+   "mean5": 0.9218056268903727,
+   "zeroshot": 0.6950814953762633,
+   "gap": 0.22672413151410942,
+   "exact_ci": [
+    0.17421111833708722,
+    0.2850649649145644
+   ],
+   "usable": 2000,
+   "note": "re-extracted states (not Table 1 states), Table 1 outer splits; per-repeat 0.9287/0.9158/0.9253/0.9129/0.9262 vs Table 1 0.9275/0.9154/0.928/0.9124/0.9232",
+   "source": "<local data dir>/release/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_enc_nested5_oof.csv",
+   "proxies": {
+    "single": {
+     "proxy_auc": 0.9166474372811882,
+     "shifted_ci": [
+      0.17232712678745254,
+      0.28412185589339517
+     ],
+     "lo_err": -0.0018839915496346726,
+     "hi_err": -0.0009431090211692306,
+     "width_exact": 0.11085384657747718,
+     "width_shifted": 0.11179472910594263
+    }
+   },
+   "max_endpoint_error": 0.0018839915496346726
+  },
+  "adress2020_pod4b_reextract": {
+   "n": 156,
+   "n_speakers": 156,
+   "per_repeat": [
+    0.811801446416831,
+    0.7943786982248521,
+    0.7993096646942801,
+    0.806870479947403,
+    0.799474030243261
+   ],
+   "mean5": 0.8023668639053255,
+   "zeroshot": 0.6240959894806049,
+   "gap": 0.17827087442472067,
+   "exact_ci": [
+    0.0750032959789057,
+    0.27704811507936505
+   ],
+   "usable": 2000,
+   "note": "re-extracted states (PART 16 POD4B orig), refit on Linux CPU pod lo-m7m11-1 with sklearn 1.9.1; outer folds equal the Table 1 seed files {'seed0': 156, 'seed1': 156, 'seed2': 156, 'seed3': 156, 'seed4': 156}",
+   "source": "scores/leftovers_23sep/m7m11/lo-m7m11-1/adress2020_pod4b_enc_rep5_oof.csv",
+   "proxies": {
+    "single": {
+     "proxy_auc": 0.7958579881656804,
+     "shifted_ci": [
+      0.07498409689576063,
+      0.2823236200670476
+     ],
+     "lo_err": -1.9199083145071683e-05,
+     "hi_err": 0.005275504987682533,
+     "width_exact": 0.20204481910045935,
+     "width_shifted": 0.20733952317128695
+    }
+   },
+   "max_endpoint_error": 0.005275504987682533
+  }
+ },
+ "inputs_sha256": {
+  "<local data dir>/release/omni_final/omni_adresso_nested_repeats.json": "9f84041e55dd991114a08951a21bcd4de26c2953a130e12ebe99085b8fb7840b",
+  "<local data dir>/release/omni_final/omni_adresso_enc_nested_oof.csv": "447010a74fe175e03a565ee647ff34a2e6fed447a2e8849defdfd8b5e9e118e5",
+  "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+  "<local data dir>/release/omni_final/omni_adress2020_nested_repeats.json": "ec1b12cba4c005ec7cfe809d3d59061f6f0de92a9f5960bdefa09cea234d4b55",
+  "<local data dir>/release/omni_final/omni_adress2020_enc_nested_oof.csv": "7c26b3f361fc88b3134532c4210c275b4c89248398ffa06e523f137c812c9a9e",
+  "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+  "<local data dir>/release/omni_final/omni_pcgita_nested_repeats.json": "d527536a84934e0a78a78e3fc3b44437819f1d41c89fc1d1f95573b65529995e",
+  "<local data dir>/release/omni_final/omni_pcgita_enc_nested_oof.csv": "d8413f410f91d92ba278266d5dafe0096beba7bce8b908c22c4419058982c67e",
+  "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+  "<local data dir>/release/omni_final/omni_neurovoz_nested_repeats.json": "06df58214a53c7b082af4be22fe0cf38f38097daa383243b8e352a596efe68a7",
+  "<local data dir>/release/omni_final/omni_neurovoz_enc_nested_oof.csv": "1a1c2cac8ee13e34fe89a8ae5fd668dfc648dfc28feb70581ab9670434418e2d",
+  "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+  "<local data dir>/release/omni_final/omni_kcl_nested_repeats.json": "9ebe61ce4336e9fa7d4c2a54a989881ad1575e25d4660e87d57064ba076e0da5",
+  "<local data dir>/release/omni_final/omni_kcl_enc_nested_oof.csv": "d3f6e287eb55faf86a36a4481e7c82a5fef90ee3d5329d0a442fc4a78e86e24a",
+  "<local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e",
+  "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47",
+  "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+  "<local data dir>/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv": "4ec65125609317c9d119a7eb03cd3d4090fec86ff362c458f5bcc8b171c6393e",
+  "<local data dir>/release/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_enc_nested5_oof.csv": "a067955838fbd814bef8261c4c8db3e765c57ed2e64a3c58e8f64c175384e59b",
+  "scores/leftovers_23sep/m7m11/lo-m7m11-1/adress2020_pod4b_enc_rep5_oof.csv": "7de7e071063766b67e06829b155cda44b9403a203edde3e1c6c4e9e7b0292bbd",
+  "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/out/p16_adress2020_orig_enc_nested_oof.csv": "02bb05dea1e8b349e46461aec583afac1690afb6fca5d59c2b9ddba23f7908b1"
+ },
+ "adress2020_pod4b_fold_match_vs_table1_seed_files": {
+  "seed0": 156,
+  "seed1": 156,
+  "seed2": 156,
+  "seed3": 156,
+  "seed4": 156
+ },
+ "command": "/usr/local/bin/python3 'scripts/leftovers_23sep/m7m11/m7_meanof5_gaps.py'",
+ "env": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "pandas": "2.3.3",
+  "machine": "arm64"
+ },
+ "bootstrap": "2000 draws; fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over np.unique(speaker.astype(str)); rows of the drawn speakers concatenated; AUC by rank (scipy rankdata, ties averaged); percentiles 2.5/97.5; paired = same idx; draws with one class only are dropped (count in usable_draws)",
+ "approximation": "approx_ci = single-split paired percentile interval shifted by (Table 1 mean of five minus single-split AUC)",
+ "why_not_exact": "per-repeat per-clip OOF for adresso, adress2020, pcgita, neurovoz, kcl never saved (only json per-repeat AUCs); Table 1 Omni states only on pod gv9jvm57b21mcz (omni-final, 18 Sep), which no longer exists in GET /v1/pods; no omni_<ds>_states.npz for these five on the Mac release tree, G-Drive paper work, or in any session transcript",
+ "out_csv": "scores/leftovers_23sep/m7m11/m7_meanof5_gaps.csv"
+}

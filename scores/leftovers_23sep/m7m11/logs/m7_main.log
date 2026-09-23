@@ -1,0 +1,10 @@
+adresso     n=  237 spk= 237 mean5 0.8752 zs 0.6150 GAP +0.2602 approx[+0.1773,+0.3379] | single 0.8899 gap +0.2748 [+0.1920,+0.3526] usable 2000/2000 | old row reproduced True
+adress2020  n=  156 spk= 156 mean5 0.8043 zs 0.6241 GAP +0.1802 approx[+0.0722,+0.2858] | single 0.7878 gap +0.1637 [+0.0557,+0.2693] usable 2000/2000 | old row reproduced True
+pcgita      n= 1100 spk= 100 mean5 0.8941 zs 0.5635 GAP +0.3306 approx[+0.2489,+0.4127] | single 0.9089 gap +0.3454 [+0.2636,+0.4275] usable 2000/2000 | old row reproduced True
+neurovoz    n= 1270 spk= 107 mean5 0.9213 zs 0.6951 GAP +0.2262 approx[+0.1714,+0.2836] | single 0.9160 gap +0.2209 [+0.1660,+0.2783] usable 2000/2000 | old row reproduced True
+kcl         n=   37 spk=  37 mean5 0.7506 zs 0.7143 GAP +0.0363 approx[-0.2075,+0.2638] | single 0.7768 gap +0.0625 [-0.1813,+0.2900] usable 2000/2000 | old row reproduced True
+VAL pitt_part10            n=  468 mean5 0.7706 zs 0.6578 gap +0.1128 exact[+0.0455,+0.1768] repeat0:[+0.0403,+0.1824] repeat1:[+0.0397,+0.1805] repeat2:[+0.0421,+0.1833] repeat3:[+0.0380,+0.1852] repeat4:[+0.0464,+0.1798]  max endpoint err 0.0084
+VAL edaic300_T7b           n=  275 mean5 0.5884 zs 0.8278 gap -0.2394 exact[-0.3188,-0.1572] repeat0:[-0.3290,-0.1405] repeat1:[-0.3319,-0.1434] repeat2:[-0.3317,-0.1413] repeat3:[-0.3280,-0.1524] repeat4:[-0.3243,-0.1548]  max endpoint err 0.0167
+VAL neurovoz_pod6_reextract n= 1270 mean5 0.9218 zs 0.6951 gap +0.2267 exact[+0.1742,+0.2851] single:[+0.1723,+0.2841]  max endpoint err 0.0019
+VAL adress2020_pod4b_reextract n=  156 mean5 0.8024 zs 0.6241 gap +0.1783 exact[+0.0750,+0.2770] single:[+0.0750,+0.2823]  max endpoint err 0.0053
+wrote scores/leftovers_23sep/m7m11/m7_meanof5_gaps.csv
