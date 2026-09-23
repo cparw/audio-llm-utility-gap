@@ -1,0 +1,24 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   1%|▏         | 35/2447 [00:00<00:11, 206.41it/s]Loading weights:   2%|▏         | 56/2447 [00:00<00:11, 206.08it/s]Loading weights:   4%|▍         | 110/2447 [00:00<00:06, 335.84it/s]Loading weights:  14%|█▍        | 350/2447 [00:00<00:01, 1075.80it/s]Loading weights:  22%|██▏       | 538/2447 [00:00<00:01, 1346.72it/s]Loading weights:  28%|██▊       | 680/2447 [00:00<00:01, 1347.54it/s]Loading weights:  34%|███▎      | 820/2447 [00:00<00:01, 1065.94it/s]Loading weights:  38%|███▊      | 939/2447 [00:00<00:01, 1084.59it/s]Loading weights:  43%|████▎     | 1056/2447 [00:01<00:01, 1098.92it/s]Loading weights:  49%|████▊     | 1190/2447 [00:01<00:01, 1164.16it/s]Loading weights:  54%|█████▎    | 1312/2447 [00:01<00:00, 1170.65it/s]Loading weights:  59%|█████▊    | 1433/2447 [00:01<00:02, 489.22it/s] Loading weights:  66%|██████▌   | 1619/2447 [00:01<00:01, 687.26it/s]Loading weights:  81%|████████▏ | 1992/2447 [00:02<00:00, 1207.79it/s]Loading weights:  89%|████████▉ | 2188/2447 [00:02<00:00, 1350.02it/s]Loading weights:  97%|█████████▋| 2383/2447 [00:02<00:00, 1479.59it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 1032.44it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+rule ids yes [7414, 9454, 9693, 9834, 14004, 14080] no [902, 2152, 2308, 2753, 5664, 8996] | forms {'Yes': [9454], ' Yes': [7414], 'yes': [9693], ' yes': [9834], 'YES': [14004], ' YES': [14080], 'No': [2753], ' No': [2308], 'no': [2152], ' no': [902], 'NO': [8996], ' NO': [5664]} | legacy yes [7414, 9454, 9693, 9834, 14004] no [902, 2152, 2308, 2753, 8996]
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 146s | enc 32 +proj | llm stages 29 | audio token 151646
+1/25 conflict_Con_015-0_67805.wav p_yes 0.408 mass 0.996 186s
+CHECKPOINT chunk 0 saved 277s
+/root/p20/scripts/extract_p20.py:107: RuntimeWarning: invalid value encountered in scalar divide
+  r = rankdata(s); n1 = int(y.sum()); n0 = len(y) - n1; return float((r[y == 1].sum() - n1 * (n1 + 1) / 2) / (n1 * n0))
+RESULT zero-shot n=25 AUC=nan 278s
+STATES {'enc': [25, 32, 1280], 'proj': [25, 1, 3584], 'llm': [25, 29, 3584], 'ans': [25, 29, 3584]}
+EXTRACT DONE
