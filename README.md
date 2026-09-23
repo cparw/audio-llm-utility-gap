@@ -16,6 +16,7 @@ own claims. Those are not hidden here. Read [DISCREPANCIES.md](DISCREPANCIES.md)
 
 **In:** every script that produced a number, the manifests and segment lists, the per-clip score
 files with their sidecar JSON, the prompt strings, the probe out-of-fold scores, and the audit.
+The GroupKFold(5) speaker fold assignments behind the probes are released in [`folds/`](folds/), one file per dataset and split, and `folds/README.md` says which run used which.
 
 **Out, deliberately:**
 
