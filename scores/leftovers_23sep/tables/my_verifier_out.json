@@ -1,0 +1,359 @@
+{
+ "env": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "machine": "arm64"
+ },
+ "T7b_n": {
+  "n": 275,
+  "n_spk": 275,
+  "n_pos": 66
+ },
+ "T7b_zeroshot_answer": {
+  "value": 0.827751,
+  "value_4dp": 0.8278,
+  "lo": 0.7703,
+  "hi": 0.8822,
+  "draws": 2000
+ },
+ "T7b_llm_meanof5": {
+  "value": 0.700101,
+  "value_4dp": 0.7001,
+  "lo": 0.6231,
+  "hi": 0.7727,
+  "draws": 2000,
+  "per_repeat": [
+   0.6918,
+   0.7062,
+   0.6893,
+   0.7055,
+   0.7078
+  ]
+ },
+ "T7b_llm_meanof5_minus_answer": {
+  "value": -0.12765,
+  "value_4dp": -0.1276,
+  "lo": -0.1993,
+  "hi": -0.0629,
+  "draws": 2000
+ },
+ "T7b_enc_meanof5": {
+  "value": 0.588386,
+  "value_4dp": 0.5884,
+  "lo": 0.5268,
+  "hi": 0.6523,
+  "draws": 2000,
+  "per_repeat": [
+   0.5964,
+   0.5826,
+   0.5962,
+   0.5608,
+   0.606
+  ]
+ },
+ "T7b_enc_meanof5_minus_answer": {
+  "value": -0.239365,
+  "value_4dp": -0.2394,
+  "lo": -0.3188,
+  "hi": -0.1572,
+  "draws": 2000
+ },
+ "T7b_ans_meanof5": {
+  "value": 0.743483,
+  "value_4dp": 0.7435,
+  "lo": 0.6793,
+  "hi": 0.8065,
+  "draws": 2000,
+  "per_repeat": [
+   0.755,
+   0.7302,
+   0.7418,
+   0.7225,
+   0.7679
+  ]
+ },
+ "T7b_ans_meanof5_minus_answer": {
+  "value": -0.084269,
+  "value_4dp": -0.0843,
+  "lo": -0.1339,
+  "hi": -0.037,
+  "draws": 2000
+ },
+ "T7b_proj_meanof5": {
+  "value": 0.560998,
+  "value_4dp": 0.561,
+  "lo": 0.4871,
+  "hi": 0.6339,
+  "draws": 2000,
+  "per_repeat": [
+   0.551,
+   0.5618,
+   0.5795,
+   0.5653,
+   0.5474
+  ]
+ },
+ "T7b_proj_meanof5_minus_answer": {
+  "value": -0.266754,
+  "value_4dp": -0.2668,
+  "lo": -0.3494,
+  "hi": -0.1809,
+  "draws": 2000
+ },
+ "P23_A_n": {
+  "n": 275,
+  "n_spk": 275,
+  "n_pos": 66,
+  "max_abs_pyes_A2_vs_A3": 0.0
+ },
+ "P23_A_300s_equals_T7b_maxabs": 1.1102230246251565e-16,
+ "P23_zs_whole": {
+  "value": 0.836596,
+  "value_4dp": 0.8366,
+  "lo": 0.7786,
+  "hi": 0.8866,
+  "draws": 2000
+ },
+ "P23_zs_300s": {
+  "value": 0.827751,
+  "value_4dp": 0.8278,
+  "lo": 0.7703,
+  "hi": 0.8822,
+  "draws": 2000
+ },
+ "P23_zs_whole_minus_300s": {
+  "value": 0.008844,
+  "value_4dp": 0.0088,
+  "lo": -0.032,
+  "hi": 0.051,
+  "draws": 2000
+ },
+ "P23_enc_meanof5_whole": {
+  "value": 0.598115,
+  "value_4dp": 0.5981,
+  "lo": 0.5267,
+  "hi": 0.6672,
+  "draws": 2000,
+  "per_repeat": [
+   0.5723,
+   0.6088,
+   0.6083,
+   0.5802,
+   0.621
+  ]
+ },
+ "P23_enc_meanof5_whole_minus_zs_whole": {
+  "value": -0.23848,
+  "value_4dp": -0.2385,
+  "lo": -0.3244,
+  "hi": -0.1505,
+  "draws": 2000
+ },
+ "P23_proj_meanof5_whole": {
+  "value": 0.586559,
+  "value_4dp": 0.5866,
+  "lo": 0.5166,
+  "hi": 0.6585,
+  "draws": 2000,
+  "per_repeat": [
+   0.5702,
+   0.6073,
+   0.5994,
+   0.5967,
+   0.5592
+  ]
+ },
+ "P23_proj_meanof5_whole_minus_zs_whole": {
+  "value": -0.250036,
+  "value_4dp": -0.25,
+  "lo": -0.3339,
+  "hi": -0.1623,
+  "draws": 2000
+ },
+ "P23_llm_meanof5_whole": {
+  "value": 0.743715,
+  "value_4dp": 0.7437,
+  "lo": 0.6752,
+  "hi": 0.8097,
+  "draws": 2000,
+  "per_repeat": [
+   0.7456,
+   0.7438,
+   0.7481,
+   0.7375,
+   0.7436
+  ]
+ },
+ "P23_llm_meanof5_whole_minus_zs_whole": {
+  "value": -0.092881,
+  "value_4dp": -0.0929,
+  "lo": -0.1609,
+  "hi": -0.0257,
+  "draws": 2000
+ },
+ "P23_ans_meanof5_whole": {
+  "value": 0.835914,
+  "value_4dp": 0.8359,
+  "lo": 0.7819,
+  "hi": 0.8832,
+  "draws": 2000,
+  "per_repeat": [
+   0.833,
+   0.8557,
+   0.8235,
+   0.832,
+   0.8352
+  ]
+ },
+ "P23_ans_meanof5_whole_minus_zs_whole": {
+  "value": -0.000681,
+  "value_4dp": -0.0007,
+  "lo": -0.0455,
+  "hi": 0.0436,
+  "draws": 2000
+ },
+ "P23_ft_whole_pooled": {
+  "value": 0.793062,
+  "value_4dp": 0.7931,
+  "lo": 0.7263,
+  "hi": 0.8536,
+  "draws": 2000,
+  "per_fold": {
+   "0": 0.9079,
+   "1": 0.8592,
+   "2": 0.8117,
+   "3": 0.4302,
+   "4": 0.8304
+  },
+  "files": 5
+ },
+ "P23_ft_whole_minus_zs_whole": {
+  "value": -0.043533,
+  "value_4dp": -0.0435,
+  "lo": -0.0939,
+  "hi": 0.0027,
+  "draws": 2000
+ },
+ "P23_ft_ctrl300_pooled": {
+  "value": 0.814956,
+  "value_4dp": 0.815,
+  "lo": 0.7465,
+  "hi": 0.8776,
+  "draws": 2000,
+  "per_fold": {
+   "0": 0.9758,
+   "1": 0.8233,
+   "2": 0.8358,
+   "3": 0.7442,
+   "4": 0.8043
+  },
+  "files": 5
+ },
+ "P23_ft_ctrl300_minus_zs_whole": {
+  "value": -0.02164,
+  "value_4dp": -0.0216,
+  "lo": -0.0759,
+  "hi": 0.0289,
+  "draws": 2000
+ },
+ "P23_ft_ctrl300_minus_zs_300s": {
+  "value": -0.012795,
+  "value_4dp": -0.0128,
+  "lo": -0.0483,
+  "hi": 0.0214,
+  "draws": 2000
+ },
+ "P23_ft_whole_minus_ctrl300": {
+  "value": -0.021894,
+  "value_4dp": -0.0219,
+  "lo": -0.0783,
+  "hi": 0.0356,
+  "draws": 2000
+ },
+ "P23_ft_whole_fold3": {
+  "n": 55,
+  "median_answer_mass": 1.0713833603404057e-05,
+  "n_mass_below_0_01": 55,
+  "other_folds_min_median_mass": 0.9947534874081612
+ },
+ "P23_trunc": {
+  "n": 275,
+  "q3o_cut": 0,
+  "af3_cut": 136,
+  "windows_over_600s": 136,
+  "windows_over_900_0001s": 0,
+  "q3o_audio_tokens_max": 11700
+ },
+ "P23_tokens": {
+  "n": 275,
+  "cols": [
+   "pid",
+   "win_dur_s",
+   "capped",
+   "audio_tok_expected_from_formula",
+   "audio_tok_observed",
+   "seq_len",
+   "fit_in_32k",
+   "wave_samples",
+   "audio_tok_formula_on_nsamples_floor160",
+   "mel_frames_cover_whole_wave",
+   "src_dur_s",
+   "stitched_s_rebuilt"
+  ],
+  "n_at_22500": {
+   "audio_tok_expected_from_formula": 89,
+   "audio_tok_observed": 89,
+   "audio_tok_formula_on_nsamples_floor160": 89,
+   "audio_tok_part22_lifted": 89
+  }
+ },
+ "sftfull_csv": {
+  "rows": 966,
+  "speakers": 138,
+  "unique_ids": 794
+ },
+ "P22_S1": {
+  "chunk_length": 300,
+  "n_samples": 4800000,
+  "tok_300s_default": [
+   4907,
+   4957,
+   5107,
+   7500
+  ],
+  "tok_900s_trunc_off": [
+   22500
+  ],
+  "all_default_cols": [
+   "pid",
+   "mode",
+   "p_yes_rule",
+   "mass_rule",
+   "p_yes_paper",
+   "mass_paper",
+   "n_audio_tok",
+   "seq_len",
+   "dur_in_s",
+   "sec",
+   "wav_sha256_1MB",
+   "error"
+  ],
+  "all_default_n": 275,
+  "gt300_n": 0,
+  "gt300_at_7500": 0,
+  "formula_match": null,
+  "capped900": 89,
+  "windows_full_n": 275,
+  "tf_version_in_config_md": [
+   "5.17.0",
+   "5.196.17",
+   "5.5.4"
+  ],
+  "trunc_default_line": [
+   "Processor-level audio defaults: no `truncation`, no `max_length`:",
+   "Merged audio kwargs for the paper call, printed by the probe (`_merge_kwargs` with the paper's arguments): `{'sampling_rate': 16000, 'padding': True, 'return_at",
+   "196          truncation: bool = True,"
+  ]
+ }
+}
