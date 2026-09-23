@@ -1,0 +1,37 @@
+cut_overall	cut overall zero-shot AUC	0.598102 trap 0.598102	[0.5345, 0.6617]	n=468 spk=228 degenerate=0
+cut_conflict_poolall	cut conflict arm zero-shot AUC (pool all)	0.697250 trap 0.697250	[0.5922, 0.7922]	n=146 spk=228 degenerate=0
+cut_conflict_poolarm	cut conflict arm zero-shot AUC (pool arm)	0.697250 trap 0.697250	[0.5905, 0.7946]	n=146 spk=100 degenerate=0
+cut_agreement_poolall	cut agreement arm zero-shot AUC (pool all)	0.561205 trap 0.561205	[0.4852, 0.6364]	n=322 spk=228 degenerate=0
+cut_agreement_poolarm	cut agreement arm zero-shot AUC (pool arm)	0.561205 trap 0.561205	[0.4860, 0.6364]	n=322 spk=175 degenerate=0
+orig_overall	orig overall zero-shot AUC	0.718036 trap 0.718036	[0.6585, 0.7742]	n=468 spk=228 degenerate=0
+orig_conflict_poolall	orig conflict arm zero-shot AUC (pool all)	0.719692 trap 0.719692	[0.6153, 0.8159]	n=146 spk=228 degenerate=0
+orig_conflict_poolarm	orig conflict arm zero-shot AUC (pool arm)	0.719692 trap 0.719692	[0.6201, 0.8147]	n=146 spk=100 degenerate=0
+orig_agreement_poolall	orig agreement arm zero-shot AUC (pool all)	0.722680 trap 0.722680	[0.6519, 0.7875]	n=322 spk=228 degenerate=0
+orig_agreement_poolarm	orig agreement arm zero-shot AUC (pool arm)	0.722680 trap 0.722680	[0.6560, 0.7896]	n=322 spk=175 degenerate=0
+paired_overall	paired original minus interviewer-free, overall	0.119934	[0.0718, 0.1665]	n=468 spk=228 degenerate=0
+paired_conflict_poolall	paired original minus interviewer-free, conflict arm (pool all)	0.022442	[-0.0502, 0.0949]	n=146 spk=228 degenerate=0
+paired_conflict_poolarm	paired original minus interviewer-free, conflict arm (pool arm)	0.022442	[-0.0495, 0.0996]	n=146 spk=100 degenerate=0
+paired_agreement_poolall	paired original minus interviewer-free, agreement arm (pool all)	0.161475	[0.1063, 0.2192]	n=322 spk=228 degenerate=0
+paired_agreement_poolarm	paired original minus interviewer-free, agreement arm (pool arm)	0.161475	[0.1068, 0.2168]	n=322 spk=175 degenerate=0
+{
+ "n_cut": 468,
+ "n_orig": 468,
+ "same_clip_set": true,
+ "missing_in_cut": [],
+ "extra_in_cut": [],
+ "speaker_mismatch": 0,
+ "label_mismatch": 0,
+ "cut_prompts": [
+  "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+ ],
+ "nan_scores_cut": 0,
+ "n_spk": 228,
+ "arm_counts": {
+  "agreement": 322,
+  "conflict": 146
+ },
+ "arm_spk": {
+  "agreement": 175,
+  "conflict": 100
+ }
+}

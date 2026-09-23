@@ -1,0 +1,193 @@
+{
+ "cut_file": "/workspace/scores/part20/POD4d/kimi_pitt_noinv468_scores.csv",
+ "orig_file": "/workspace/scores/part20/POD4d/kimi_pitt_orig468_pod_scores.csv",
+ "checks": {
+  "n_cut": 468,
+  "n_orig": 468,
+  "same_clip_set": true,
+  "missing_in_cut": [],
+  "extra_in_cut": [],
+  "speaker_mismatch": 0,
+  "label_mismatch": 0,
+  "cut_prompts": [
+   "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+  ],
+  "nan_scores_cut": 0,
+  "n_spk": 228,
+  "arm_counts": {
+   "agreement": 322,
+   "conflict": 146
+  },
+  "arm_spk": {
+   "agreement": 175,
+   "conflict": 100
+  }
+ },
+ "cells": [
+  {
+   "id": "cut_overall",
+   "what": "cut overall zero-shot AUC",
+   "value": 0.5981015110422317,
+   "trap": 0.5981015110422316,
+   "lo": 0.5344707609174294,
+   "hi": 0.6616998727639681,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "cut_conflict_poolall",
+   "what": "cut conflict arm zero-shot AUC (pool all)",
+   "value": 0.6972497249724973,
+   "trap": 0.6972497249724972,
+   "lo": 0.5922016368624626,
+   "hi": 0.7922161976664378,
+   "n": 146,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "cut_conflict_poolarm",
+   "what": "cut conflict arm zero-shot AUC (pool arm)",
+   "value": 0.6972497249724973,
+   "trap": 0.6972497249724972,
+   "lo": 0.5905156180679831,
+   "hi": 0.7945774807898867,
+   "n": 146,
+   "n_spk": 100,
+   "degenerate": 0
+  },
+  {
+   "id": "cut_agreement_poolall",
+   "what": "cut agreement arm zero-shot AUC (pool all)",
+   "value": 0.5612045987985838,
+   "trap": 0.5612045987985838,
+   "lo": 0.48515495471913006,
+   "hi": 0.6364058798063095,
+   "n": 322,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "cut_agreement_poolarm",
+   "what": "cut agreement arm zero-shot AUC (pool arm)",
+   "value": 0.5612045987985838,
+   "trap": 0.5612045987985838,
+   "lo": 0.48603341193143956,
+   "hi": 0.6363690581939626,
+   "n": 322,
+   "n_spk": 175,
+   "degenerate": 0
+  },
+  {
+   "id": "orig_overall",
+   "what": "orig overall zero-shot AUC",
+   "value": 0.7151685393258427,
+   "trap": 0.7151685393258427,
+   "lo": 0.655303134658999,
+   "hi": 0.7730017719695951,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "orig_conflict_poolall",
+   "what": "orig conflict arm zero-shot AUC (pool all)",
+   "value": 0.7216721672167217,
+   "trap": 0.7216721672167217,
+   "lo": 0.6209656367405104,
+   "hi": 0.8169473248169499,
+   "n": 146,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "orig_conflict_poolarm",
+   "what": "orig conflict arm zero-shot AUC (pool arm)",
+   "value": 0.7216721672167217,
+   "trap": 0.7216721672167217,
+   "lo": 0.6215033994792607,
+   "hi": 0.8152618440770764,
+   "n": 146,
+   "n_spk": 100,
+   "degenerate": 0
+  },
+  {
+   "id": "orig_agreement_poolall",
+   "what": "orig agreement arm zero-shot AUC (pool all)",
+   "value": 0.7192186816246967,
+   "trap": 0.7192186816246967,
+   "lo": 0.6501502881911699,
+   "hi": 0.7859442681525419,
+   "n": 322,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "orig_agreement_poolarm",
+   "what": "orig agreement arm zero-shot AUC (pool arm)",
+   "value": 0.7192186816246967,
+   "trap": 0.7192186816246967,
+   "lo": 0.6528181859956461,
+   "hi": 0.7867169638853319,
+   "n": 322,
+   "n_spk": 175,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_overall",
+   "what": "paired original minus interviewer-free, overall",
+   "value": 0.11706702828361093,
+   "trap": null,
+   "lo": 0.06920438841969792,
+   "hi": 0.1650069309288332,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_conflict_poolall",
+   "what": "paired original minus interviewer-free, conflict arm (pool all)",
+   "value": 0.024422442244224407,
+   "trap": null,
+   "lo": -0.04837834553075197,
+   "hi": 0.09879080968219611,
+   "n": 146,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_conflict_poolarm",
+   "what": "paired original minus interviewer-free, conflict arm (pool arm)",
+   "value": 0.024422442244224407,
+   "trap": null,
+   "lo": -0.05169632925472746,
+   "hi": 0.1020264500079909,
+   "n": 146,
+   "n_spk": 100,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_agreement_poolall",
+   "what": "paired original minus interviewer-free, agreement arm (pool all)",
+   "value": 0.15801408282611296,
+   "trap": null,
+   "lo": 0.10258199640109704,
+   "hi": 0.21588477425167882,
+   "n": 322,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_agreement_poolarm",
+   "what": "paired original minus interviewer-free, agreement arm (pool arm)",
+   "value": 0.15801408282611296,
+   "trap": null,
+   "lo": 0.10271583561797554,
+   "hi": 0.21358393566604167,
+   "n": 322,
+   "n_spk": 175,
+   "degenerate": 0
+  }
+ ]
+}
