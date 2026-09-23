@@ -45,7 +45,7 @@ number of splits or repeats. Only one version per cell is authoritative. The rul
 | cell | authoritative value | file | superseded values |
 |---|---|---|---|
 | Qwen2.5-Omni, Pitt, encoder probe | **0.7706** | `scores/part10/pitt_enc_nested5_oof.npz` | 0.7761, 0.7969 |
-| Qwen2.5-Omni, Pitt, answer probe | **0.7709** | see the note below | 0.7843, 0.7960 |
+| Qwen2.5-Omni, Pitt, answer probe | **0.7709** | `lookup/readout_direction.csv` (row pitt, col auc_probe) | 0.7843, 0.7960 |
 
 `0.7706` is the mean of the five per-seed AUCs held in `scores/part10/pitt_enc_nested5_oof.npz`.
 Recomputed from that file with the rank statistic, the five seeds are
@@ -58,13 +58,13 @@ The speaker-bootstrap interval is 0.7324 to 0.8480, `lookup/bootstrap_cis.csv` r
 at layer 27 and `0.7843` is its last-layer value; neither is a whole-probe estimate. All four are
 **superseded** and should not be quoted.
 
-> **Unresolved, stated plainly.** The rule for this release names the Pitt answer probe as 0.7709.
-> That value does not appear in any file on the machine this release was built from. The closest
-> on-disk figure for the Qwen2.5-Omni Pitt answer-state probe is **0.7636**
-> (`lookup/master_lookup.csv`, five split nested, mean of 5 repeats,
-> source `omni_final/omni_pitt_nested_repeats.json`). Until the file behind 0.7709 is produced, the
-> number that can be reproduced from what is published here is 0.7636. This gap is recorded rather
-> than papered over.
+> **Pitt answer probe provenance.** The rule for this release names the Pitt answer probe as
+> **0.7709**. Its source is `lookup/readout_direction.csv`, row `dataset=pitt`, column `auc_probe`
+> (also `readout_direction.json`, field `supersedes.authoritative_value`). Definition: out-of-fold AUC
+> of a LogisticRegression probe on `ans[:, -1, :]`, the final language-model stage at the first answer
+> position, GroupKFold(5) by speaker, StandardScaler fit inside the training fold only.
+> The separate value **0.7636** in `lookup/master_lookup.csv` is the nested *answer-stream* probe mean,
+> a different estimator over all stages, not this cell. Both are correct for what they measure.
 
 ---
 
