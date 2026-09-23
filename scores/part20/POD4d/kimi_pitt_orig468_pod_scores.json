@@ -1,0 +1,22 @@
+{
+ "id": "kimi_pitt_orig468_pod_scores",
+ "what": "per-clip Kimi-Audio zero-shot scores",
+ "n": 468,
+ "n_speakers": 228,
+ "seed": null,
+ "model_id": "moonshotai/Kimi-Audio-7B-Instruct",
+ "model_snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+ "dtype": "bfloat16",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the first answer position; p_yes = rule-3 set (Yes/ Yes/yes/ yes/YES/ YES vs No/ No/no/ no/NO/ NO, all single tokens: yes ids [7414,9454,9693,9834,14004,14080], no ids [902,2152,2308,2753,5664,8996]); p_yes_ref = the reference kimi_probe.py set without the leading-space all-caps forms",
+ "audio": "librosa.load 16 kHz, first 30 s, written to temp wav, fed as in <local data dir>/scratch/p15/kimi_probe.py",
+ "command": "cd /workspace && /opt/kimienv/bin/python /workspace/scores/part20/POD4d/scripts/kimi_zs.py /workspace/scores/part20/POD4d/mf_orig468.csv /workspace/scores/part20/POD4d/kimi_pitt_orig468_pod_scores.csv",
+ "manifest": "/workspace/scores/part20/POD4d/mf_orig468.csv",
+ "sources": [
+  {
+   "path": "/workspace/scores/part20/POD4d/mf_orig468.csv",
+   "sha256_first_1MB": "4d74babc9642252ae1d9b27ea34cd711f705f4c3589a9e829b7ba110a0d93f1a"
+  }
+ ],
+ "clip_sha256": "per row, column wav_sha256; manifest sha256 verified for all 468 on the pod before scoring"
+}
