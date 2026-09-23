@@ -1,0 +1,110 @@
+[
+ {
+  "id": "P22_S1_tf_version",
+  "what": "transformers version of the paper E-DAIC scoring run (podA SETUP3.log:15); 3 live Part 20 pods also 5.17.0 [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "5.17.0",
+  "value_verified": "5.17.0",
+  "lo": "",
+  "hi": "",
+  "n": "1",
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_chunk_length",
+  "what": "Qwen2.5-Omni WhisperFeatureExtractor chunk_length s (Hub preprocessor_config.json:2; loaded object fe.chunk_length) [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "300",
+  "value_verified": "300",
+  "lo": "",
+  "hi": "",
+  "n": "",
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_n_samples",
+  "what": "feature extractor n_samples = audio cap in 16 kHz samples (feature_extraction_whisper.py:91; loaded object) [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "4800000",
+  "value_verified": "4800000",
+  "lo": "",
+  "hi": "",
+  "n": "",
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_trunc_default",
+  "what": "WhisperFeatureExtractor.__call__ truncation default (feature_extraction_whisper.py:196); Omni processor passes none [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "True",
+  "value_verified": "True",
+  "lo": "",
+  "hi": "",
+  "n": "",
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_tok_300s",
+  "what": "audio tokens at the 300 s cap: code formula processing_qwen2_5_omni.py:151-152 vs measured 5.17.0 processor [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "7500",
+  "value_verified": "7500",
+  "lo": "",
+  "hi": "",
+  "n": "",
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_proc_probe.json ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_tok_900s_off",
+  "what": "audio tokens for 900 s with audio_kwargs truncation False: code formula vs measured 5.17.0 processor [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "22500",
+  "value_verified": "22500",
+  "lo": "",
+  "hi": "",
+  "n": "",
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_proc_probe.json ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_formula_match",
+  "what": "E-DAIC full windows whose logged n_audio_tok equals the code formula on win_dur_s (of 275) [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "275",
+  "value_verified": "275",
+  "lo": "",
+  "hi": "",
+  "n": "275",
+  "n_spk": "275",
+  "file": "edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_gt300_at_7500",
+  "what": "E-DAIC full windows longer than 300 s that received exactly 7500 audio tokens (of 217) [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "217",
+  "value_verified": "217",
+  "lo": "",
+  "hi": "",
+  "n": "217",
+  "n_spk": "217",
+  "file": "edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_S1_capped900",
+  "what": "E-DAIC full windows capped at 900 s (windows_full.csv capped==1, of 275) [value restored by the PART 22 verifier from P22_step1_processor_config.sidecar.json results after a rows-file schema clash] [value re-derived by the pod job from the cited source after it blanked this row by mistake; not yet verified]",
+  "value_computed": "89",
+  "value_verified": "89",
+  "lo": "",
+  "hi": "",
+  "n": "275",
+  "n_spk": "275",
+  "file": "edaic_rerun/variants/windows_full.csv ; verify/out/tokens_mine.json, step1_check_pod.json, all_default.csv",
+  "agree_4dp": "True"
+ }
+]
