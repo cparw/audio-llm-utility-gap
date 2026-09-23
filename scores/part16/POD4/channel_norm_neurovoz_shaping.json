@@ -1,0 +1,18 @@
+{
+ "tag": "nv",
+ "n": 1270,
+ "target_lufs": -23.0,
+ "noise_floor_target_db": -0.27735085929453945,
+ "tilt_target_db_per_khz": -1.7974786794363733,
+ "quiet_frame_def": "frame RMS at or below the file's 10th percentile; 25 ms window, 10 ms hop",
+ "speech_frame_def": "frame RMS above the file's median",
+ "band_hz": [
+  100.0,
+  7800.0
+ ],
+ "nfft": 512,
+ "residual_nf_mean": 1.2163896607824622,
+ "residual_nf_sd": 2.109006993466641,
+ "residual_tilt_mean": -0.021300872137549436,
+ "residual_tilt_sd": 0.19164405179022875
+}
