@@ -1,0 +1,26 @@
+text elements 20  min 9.0 pt  max 10.0 pt
+    9.0 pt  '0'
+    9.0 pt  '0'
+    9.0 pt  '0.5'
+    9.0 pt  '0.6'
+    9.0 pt  '0.7'
+    9.0 pt  '0.8'
+    9.0 pt  '0.9'
+    9.0 pt  '1.0'
+    9.0 pt  '14'
+    9.0 pt  '16'
+    9.0 pt  '28'
+    9.0 pt  'E-DAIC'
+    9.0 pt  'PC-GITA'
+    9.0 pt  'Pitt'
+    9.0 pt  'audio encoder'
+    9.0 pt  'language model'
+    9.0 pt  'probe'
+    9.0 pt  'zero-shot answer'
+   10.0 pt  'AUC'
+   10.0 pt  'layer'
+variant whole  E-DAIC window whole interview (PART 23, 900 s cap on 89 of 275)
+  PC-GITA  curve min 0.8394  max 0.9234  answer line 0.5635
+  Pitt     curve min 0.6517  max 0.8396  answer line 0.6578
+  E-DAIC   curve min 0.5593  max 0.7753  answer line 0.8366
+wrote checks/final_2325Z/figure/fig1_gap_whole.pdf
