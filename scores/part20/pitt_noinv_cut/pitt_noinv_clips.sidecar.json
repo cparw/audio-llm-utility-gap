@@ -1,0 +1,77 @@
+{
+ "part": "Part 20: Pitt interviewer-free cut (Part 16 POD4 arm B, PAR-only), built once on the Mac for all pods",
+ "built_utc": "2026-09-23T12:15:20Z",
+ "command": "cd <local data dir>/release/scores/part20/pitt_noinv_cut && /usr/local/bin/python3 src/build_pitt_noinv.py ; COPYFILE_DISABLE=1 tar --no-mac-metadata -czf pitt_noinv_clips.tgz clips manifest.csv",
+ "logic": "per window: heard span = first min(end_ms-start_ms, 30000) ms of the segment wav; merged timed *PAR intervals from the CHAT file clipped to that span, as offsets into the segment wav; concatenated with a 5 ms raised-cosine fade in and out on each piece (pieces under 10 ms kept unfaded, as in cut_arms.py); 16 kHz mono PCM_16. Parser parse_cha/merge/clip_to/total loaded verbatim from part16/POD4/cha_overlap.py.",
+ "sources": {
+  "window_manifest": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+  "window_manifest_sha256": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "segment_wavs": "<local data dir>/DementiaBank/segments/<orig_clip_id> (the 30 s window wavs; source_segments.sha256 lists all 468)",
+  "segment_list_sha256": "21cb3d341f4a009f76679ed88c3671e2a9c55dc53e342d4138912409b682d4ae",
+  "chat": "<local data dir>/DementiaBank/transcripts/{Control,Dementia}/cookie/<session>.cha (source_cha.sha256 lists all 351)",
+  "chat_list_sha256": "f65429d54c1b88664e58ae69c63b28fc85b645c9d2a1dca30ac85cba9cfee5bc",
+  "folds": "folds/pitt_groupkfold5_pod.csv",
+  "folds_sha256": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406",
+  "reference_scripts": {
+   "cha_overlap.py": "febc5352dda7fe20477ddb81c2cdb4ce489cda1da037b53d295319983a399519",
+   "make_intervals.py": "0e0b2e14861038470558bc44a5850b6a20fdc8037479cc4ef755168e54b478eb",
+   "cut_arms.py": "feb9779b504f2ee94dd5828b7a65952fc8453f2c8f48373c56318924c24fce0a"
+  },
+  "reference_cut_report": "<local data dir>/release/edaic_rerun/part16/POD4/cut_report.json",
+  "reference_cut_report_sha256": "2be327ac13b0c25d754bc3a68933d78a2f1af75a7aa8d836773b630fb4a0f8c7"
+ },
+ "build_script": "src/build_pitt_noinv.py",
+ "build_script_sha256": "66364a84692af6e8455107548e2820882d4135c0451f9cc5ab469b602c4d4e53",
+ "outputs": {
+  "tgz": "pitt_noinv_clips.tgz",
+  "tgz_sha256": "b995bd9afe8a45b1c08472f7333c5855767d60de23307a7881b5f000c73d8a07",
+  "tgz_bytes": 179449388,
+  "tgz_contents": "clips/noinv_<orig_clip_id> x468 + manifest.csv",
+  "manifest_sha256": "408685cde24d07a285aa5ba17d4a6e039a1668566abfa992853e4f0c19966069",
+  "under10_list": "windows_under10s.csv"
+ },
+ "counts": {
+  "n_windows": 468,
+  "resolved_to_chat": 468,
+  "unresolved": 0,
+  "n_speakers": 228,
+  "label_0": 178,
+  "label_1": 290,
+  "conflict": 146,
+  "agreement": 322,
+  "empty_clips": 0,
+  "mean_par_s": 17.6135,
+  "median_par_s": 18.548,
+  "min_par_s": 0.681,
+  "max_par_s": 29.235,
+  "under_10s": 68,
+  "under_5s": 19,
+  "windows_with_timed_inv": 158,
+  "inv_intervals_removed": 287,
+  "mean_par_share": 0.5871
+ },
+ "reproduction_check": {
+  "reported": {
+   "resolved": 468,
+   "mean_par_s": 17.61,
+   "under_10s": 68,
+   "with_inv": 158,
+   "mean_par_share": 0.5871
+  },
+  "per_clip_vs_POD4_cut_report": "468/468 identical duration (max abs diff 0.000 s), identical n_par and inv_ms",
+  "match": true
+ },
+ "manifest_columns": {
+  "clip": "noinv_<orig_clip_id>",
+  "orig_clip_id": "clip_id in pitt_groupkfold5_pod.csv (1:1, 468/468)",
+  "spk": "speaker_id from the fold file",
+  "arm": "B_paronly_noinv",
+  "dur_par_s": "written clip duration",
+  "n_inv_utts_removed": "merged timed *INV intervals overlapping the heard 30 s span (cha_overlap n_inv_utt)",
+  "sha256": "of the clip wav"
+ },
+ "notes": [
+  "dur_par_s equals the CHAT PAR ms inside the span for every clip (no clip hit the segment end).",
+  "Untimed *INV speech is not visible to this cut; only timed CHAT intervals are removed, same as POD4."
+ ]
+}
