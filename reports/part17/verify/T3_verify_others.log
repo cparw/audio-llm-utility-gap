@@ -1,0 +1,54 @@
+(a) 50 participant-grouped partitions, GroupKFold(5, shuffle=True, random_state=s), s=0..49
+  all_probe      median 0.8112 [0.7850, 0.8304]
+  conflict_perp  median 0.6095 [0.5749, 0.6593]
+  paired_perp    median -0.2724 [-0.3020, -0.2247]
+
+(b) Qwen2.5-Omni-7B, recomputed from overnight2/part10/o25_pitt_states.npz + omni25_readout.pt
+  n=468 n_spk=228 conflict=146 (100 spk) agreement=322 (175 spk)
+  p_yes check: max|mine - saved p_yes| 0.0245
+  cos -0.0109  floor vs d (1000 dirs, rng(0), 3584 dims) 0.0135
+  all       probe  0.7709 [0.7210, 0.8224] draws 2000
+  all       along  0.6608 [0.6071, 0.7164] draws 2000
+  all       perp   0.7662 [0.7173, 0.8156] draws 2000
+  all       keep   0.7650 [0.7163, 0.8146] draws 2000
+  conflict  probe  0.5272 [0.4229, 0.6354] draws 2000
+  conflict  along  0.5325 [0.4241, 0.6432] draws 2000
+  conflict  perp   0.5305 [0.4269, 0.6392] draws 2000
+  conflict  keep   0.5296 [0.4260, 0.6369] draws 2000
+  agreement probe  0.8672 [0.8261, 0.9064] draws 2000
+  agreement along  0.7098 [0.6491, 0.7685] draws 2000
+  agreement perp   0.8615 [0.8220, 0.8999] draws 2000
+  agreement keep   0.8611 [0.8212, 0.8998] draws 2000
+  paired    probe  -0.3400 [-0.4447, -0.2264]
+  paired    along  -0.1773 [-0.3005, -0.0408]
+  paired    perp   -0.3310 [-0.4401, -0.2146]
+  paired    keep   -0.3315 [-0.4409, -0.2182]
+
+(c) Qwen3-Omni-30B, AUCs recomputed from part16/pod_sync/q3o_perp_cols.npz (per clip)
+  n=468 n_spk=228 conflict=146 (100 spk) agreement=322 (175 spk); names equal Q2A order: True
+  q3o speaker labels for participant 172: [np.str_('Control172'), np.str_('Dementia172')]
+  all       probe       0.8307 [0.7833, 0.8741] draws 2000
+  all       along       0.7656 [0.7088, 0.8179] draws 2000
+  all       perp        0.8276 [0.7795, 0.8696] draws 2000
+  all       perp_trainz 0.8305 [0.7826, 0.8737] draws 2000
+  all       perp_raw    0.8298 [0.7815, 0.8732] draws 2000
+  conflict  probe       0.6394 [0.5323, 0.7418] draws 2000
+  conflict  along       0.6029 [0.4965, 0.7025] draws 2000
+  conflict  perp        0.6532 [0.5483, 0.7527] draws 2000
+  conflict  perp_trainz 0.6453 [0.5380, 0.7479] draws 2000
+  conflict  perp_raw    0.6425 [0.5359, 0.7446] draws 2000
+  agreement probe       0.9032 [0.8626, 0.9374] draws 2000
+  agreement along       0.8264 [0.7741, 0.8731] draws 2000
+  agreement perp        0.8937 [0.8522, 0.9312] draws 2000
+  agreement perp_trainz 0.9008 [0.8598, 0.9361] draws 2000
+  agreement perp_raw    0.9009 [0.8599, 0.9359] draws 2000
+
+(d) main job per-clip csv and summary csv vs my scores
+  T3_q2a_direction.csv rows 468; unique spk 228; conflict 146; names match npz order True
+  oof_probe      max|main - mine| = 4.97e-11
+  proj_d         max|main - mine| = 8.87e-10
+  perp_z         max|main - mine| = 4.98e-10
+  keep_z         max|main - mine| = 4.94e-10
+  nested_oof     max|main - mine| = 4.97e-11
+  nested_perp_z  max|main - mine| = 4.95e-10
+  fold column identical: True; nested_layer identical: True

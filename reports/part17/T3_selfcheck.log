@@ -1,0 +1,24 @@
+[1] summary AUCs/intervals re-derived from per-clip csv (pairwise MW + weighted bootstrap): 93/93 identical at 4 dp
+[2] max|X.d12 - proj_d column| = 7.492e-08
+[2] re-derived vs per-clip columns, max|diff|: oof 4.972e-11  perp_z 7.733e-10  keep_z 4.940e-10  fold mismatches 0  cos 0.0145
+[3] participants carrying two npz speaker ids: [np.str_('172')]; main-run folds: {'172': {'Control172': [1], 'Dementia172': [3]}}
+[3] grouped by participant (227 groups) all probe: 0.8273 [0.7803, 0.8715] n=468
+[3] grouped by participant (227 groups) all perp_z: 0.8200 [0.7736, 0.8635] n=468
+[3] grouped by participant (227 groups) all proj_d: 0.6174 [0.5535, 0.6772] n=468
+[3] grouped by participant (100 groups) conflict probe: 0.6631 [0.5543, 0.7606] n=146
+[3] grouped by participant (100 groups) conflict perp_z: 0.6607 [0.5518, 0.7607] n=146
+[3] grouped by participant (100 groups) conflict proj_d: 0.4136 [0.3005, 0.5400] n=146
+[3] grouped by participant (175 groups) agreement probe: 0.8918 [0.8523, 0.9298] n=322
+[3] grouped by participant (175 groups) agreement perp_z: 0.8838 [0.8435, 0.9222] n=322
+[3] grouped by participant (175 groups) agreement proj_d: 0.6984 [0.6330, 0.7572] n=322
+[3] grouped by participant, paired conflict-agreement perp_z: -0.2230 [-0.3304, -0.1192]; cos 0.0146
+[3] per-clip scores of the participant-grouped run: scores/part17/T3_selfcheck_participant_grouped.csv
+[4] 50 random participant partitions, all_probe: median 0.8112, 2.5-97.5% [0.7850, 0.8304], min 0.7689, max 0.8362
+[4] 50 random participant partitions, all_perp_z: median 0.8085, 2.5-97.5% [0.7840, 0.8301], min 0.7706, max 0.8345
+[4] 50 random participant partitions, conflict_probe: median 0.6064, 2.5-97.5% [0.5699, 0.6493], min 0.5692, max 0.6719
+[4] 50 random participant partitions, conflict_perp_z: median 0.6095, 2.5-97.5% [0.5749, 0.6593], min 0.5696, max 0.6796
+[4] 50 random participant partitions, agreement_probe: median 0.8856, 2.5-97.5% [0.8630, 0.9086], min 0.8492, max 0.9105
+[4] 50 random participant partitions, agreement_perp_z: median 0.8810, 2.5-97.5% [0.8549, 0.9047], min 0.8489, max 0.9053
+[4] 50 random participant partitions, paired_perp_z: median -0.2724, 2.5-97.5% [-0.3020, -0.2247], min -0.3051, max -0.1962
+[4] per-partition AUCs: scores/part17/T3_selfcheck_partitions.csv
+wrote scores/part17/T3_selfcheck.json  runtime 11.8s
