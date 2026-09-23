@@ -1,0 +1,25 @@
+id	what	value	lo	hi	n	n_spk	file
+M7_pitt_probe	Qwen2.5-Omni nested encoder probe AUC, pitt	0.7969	0.7412	0.8512	468	228	<local data dir>/Desktop/release/omni_final/omni_pitt_enc_nested_oof.csv
+M7_pitt_zeroshot	Qwen2.5-Omni zero-shot audio answer AUC, pitt	0.6578	0.6033	0.7125	468	228	<local data dir>/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv
+M7_pitt_gap	paired probe minus zero-shot AUC, pitt	0.1391	0.0680	0.2084	468	228	scores/part16/M/M7_perclip/pitt.csv
+M7_adresso_probe	Qwen2.5-Omni nested encoder probe AUC, adresso	0.8899	0.8462	0.9321	237	237	<local data dir>/Desktop/release/omni_final/omni_adresso_enc_nested_oof.csv
+M7_adresso_zeroshot	Qwen2.5-Omni zero-shot audio answer AUC, adresso	0.6150	0.5432	0.6890	237	237	<local data dir>/Desktop/release/omni_final/omni_adresso_zeroshot_scores.csv
+M7_adresso_gap	paired probe minus zero-shot AUC, adresso	0.2748	0.1920	0.3526	237	237	scores/part16/M/M7_perclip/adresso.csv
+M7_adress2020_probe	Qwen2.5-Omni nested encoder probe AUC, adress2020	0.7878	0.7148	0.8517	156	156	<local data dir>/Desktop/release/omni_final/omni_adress2020_enc_nested_oof.csv
+M7_adress2020_zeroshot	Qwen2.5-Omni zero-shot audio answer AUC, adress2020	0.6241	0.5348	0.7148	156	156	<local data dir>/Desktop/release/omni_final/omni_adress2020_zeroshot_scores.csv
+M7_adress2020_gap	paired probe minus zero-shot AUC, adress2020	0.1637	0.0557	0.2693	156	156	scores/part16/M/M7_perclip/adress2020.csv
+M7_pcgita_probe	Qwen2.5-Omni nested encoder probe AUC, pcgita	0.9089	0.8478	0.9563	1100	100	<local data dir>/Desktop/release/omni_final/omni_pcgita_enc_nested_oof.csv
+M7_pcgita_zeroshot	Qwen2.5-Omni zero-shot audio answer AUC, pcgita	0.5635	0.4931	0.6331	1100	100	<local data dir>/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv
+M7_pcgita_gap	paired probe minus zero-shot AUC, pcgita	0.3454	0.2636	0.4275	1100	100	scores/part16/M/M7_perclip/pcgita.csv
+M7_neurovoz_probe	Qwen2.5-Omni nested encoder probe AUC, neurovoz	0.9160	0.8713	0.9513	1270	107	<local data dir>/Desktop/release/omni_final/omni_neurovoz_enc_nested_oof.csv
+M7_neurovoz_zeroshot	Qwen2.5-Omni zero-shot audio answer AUC, neurovoz	0.6951	0.6356	0.7519	1270	107	<local data dir>/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv
+M7_neurovoz_gap	paired probe minus zero-shot AUC, neurovoz	0.2209	0.1660	0.2783	1270	107	scores/part16/M/M7_perclip/neurovoz.csv
+M7_kcl_probe	Qwen2.5-Omni nested encoder probe AUC, kcl	0.7768	0.5994	0.9265	37	37	<local data dir>/Desktop/release/omni_final/omni_kcl_enc_nested_oof.csv
+M7_kcl_zeroshot	Qwen2.5-Omni zero-shot audio answer AUC, kcl	0.7143	0.5210	0.8810	37	37	<local data dir>/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv
+M7_kcl_gap	paired probe minus zero-shot AUC, kcl	0.0625	-0.1813	0.2900	37	37	scores/part16/M/M7_perclip/kcl.csv
+M7_edaic_probe	Qwen2.5-Omni nested encoder probe AUC, edaic	0.6324	0.5520	0.7104	275	275	<local data dir>/Desktop/release/omni_final/omni_edaic_enc_nested_oof.csv
+M7_edaic_zeroshot	Qwen2.5-Omni zero-shot audio answer AUC, edaic	0.6620	0.5831	0.7315	275	275	<local data dir>/Desktop/release/omni_final/omni_edaic_zeroshot_scores.csv
+M7_edaic_gap	paired probe minus zero-shot AUC, edaic	-0.0297	-0.1291	0.0752	275	275	scores/part16/M/M7_perclip/edaic.csv
+M7_mean_gap	mean paired probe minus zero-shot AUC across 7 datasets	0.1681			3543		scores/part16/M/M7_gap_per_dataset.csv
+M7_pitt_probe_rep5	Qwen2.5-Omni encoder probe AUC, pitt, mean of 5-repeat OOF probs (supplement)	0.7917	0.7324	0.8480	468	228	scores/part10/pitt_enc_nested5_oof.npz
+M7_pitt_gap_rep5	paired probe minus zero-shot AUC, pitt, 5-repeat OOF (supplement)	0.1339	0.0641	0.2019	468	228	scores/part16/M/M7_perclip/pitt_rep5mean.csv

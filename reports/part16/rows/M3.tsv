@@ -1,0 +1,10 @@
+id	what	value	lo	hi	n	n_spk	file
+M3_pitt_clip	Omni zero shot pitt clip-level AUC	0.6578	0.6033	0.7125	468	228	<local data dir>/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv
+M3_pitt_speaker	Omni zero shot pitt speaker-level AUC (mean p_yes)	0.6771	0.6096	0.7494	228	228	scores/part16/M/M3_speaker_level.csv
+M3_pitt_clip_minus_speaker	Omni zero shot pitt paired clip minus speaker AUC	-0.0193	-0.0565	0.0172	468	228	scores/part16/M/M3_speaker_level.csv
+M3_pcgita_clip	Omni zero shot pcgita clip-level AUC	0.5635	0.4931	0.6331	1100	100	<local data dir>/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv
+M3_pcgita_speaker	Omni zero shot pcgita speaker-level AUC (mean p_yes)	0.5948	0.4778	0.7089	100	100	scores/part16/M/M3_speaker_level.csv
+M3_pcgita_clip_minus_speaker	Omni zero shot pcgita paired clip minus speaker AUC	-0.0313	-0.0820	0.0179	1100	100	scores/part16/M/M3_speaker_level.csv
+M3_neurovoz_clip	Omni zero shot neurovoz clip-level AUC	0.6951	0.6356	0.7519	1270	107	<local data dir>/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv
+M3_neurovoz_speaker	Omni zero shot neurovoz speaker-level AUC (mean p_yes)	0.7948	0.7045	0.8733	107	107	scores/part16/M/M3_speaker_level.csv
+M3_neurovoz_clip_minus_speaker	Omni zero shot neurovoz paired clip minus speaker AUC	-0.0997	-0.1325	-0.0613	1270	107	scores/part16/M/M3_speaker_level.csv
