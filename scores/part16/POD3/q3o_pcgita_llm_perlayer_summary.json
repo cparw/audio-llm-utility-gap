@@ -1,0 +1,84 @@
+{
+ "states": "/workspace/out/q3o_pcgita_states.npz",
+ "repeats": 5,
+ "bootstrap_draws": 2000,
+ "bootstrap_seed": 0,
+ "bootstrap_unit": "speaker",
+ "folds": "GroupKFold(5) by speaker (outer), GroupKFold(4) by speaker (inner layer choice); speaker order permuted per repeat with numpy.random.default_rng(seed)",
+ "fold_file": "NONE FOUND - no saved fold assignment exists for these clips.",
+ "auc": "rank formula, ties averaged, recomputed from the per-clip out-of-fold scores",
+ "date": "2026-09-23T08:04:09",
+ "streams": {
+  "llm": {
+   "n_points": 49,
+   "repeats": 5,
+   "n": 1100,
+   "n_speakers": 100,
+   "pooling": "mean over the AUDIO TOKEN positions of the thinker hidden state",
+   "best_stage": 14,
+   "best_stage_name": "thinker_layer_14",
+   "best_stage_auc_mean": 0.896,
+   "best_stage_ci": [
+    0.8341,
+    0.9463
+   ],
+   "best_stage_per_repeat": [
+    0.895,
+    0.8883,
+    0.9001,
+    0.88,
+    0.9165
+   ],
+   "nested_auc_mean": 0.8772,
+   "nested_ci": [
+    0.8117,
+    0.9309
+   ],
+   "nested_boot_draws": 2000,
+   "nested_per_repeat": [
+    0.8614,
+    0.8758,
+    0.8795,
+    0.8756,
+    0.8937
+   ],
+   "nested_chosen_layers": [
+    [
+     14,
+     15,
+     1,
+     0,
+     44
+    ],
+    [
+     19,
+     14,
+     14,
+     32,
+     18
+    ],
+    [
+     14,
+     15,
+     19,
+     1,
+     19
+    ],
+    [
+     14,
+     14,
+     1,
+     18,
+     14
+    ],
+    [
+     14,
+     0,
+     21,
+     14,
+     12
+    ]
+   ]
+  }
+ }
+}

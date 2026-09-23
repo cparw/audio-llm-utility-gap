@@ -1,0 +1,126 @@
++ cd /workspace
++ for S in enc proj llm
++ python3 -u perlayer_stream.py /workspace/out/q3o_pcgita_states.npz /workspace/out/q3o_pcgitaFAST enc 5
+loaded /workspace/out/q3o_pcgita_states.npz stream=enc n=1100 pos=550 n_spk=100 njobs=248
+per-layer: 32 stages x 5 repeats, parallel over layers
+per-layer fits done 31s
+per-layer bootstrap done 33s
+  enc stage  0 auc_mean 0.8395 [0.7697,0.9003] per_repeat [0.855, 0.8477, 0.821, 0.83, 0.844]
+  enc stage  1 auc_mean 0.8493 [0.7816,0.9076] per_repeat [0.8678, 0.859, 0.8281, 0.8392, 0.8524]
+  enc stage  2 auc_mean 0.8481 [0.7793,0.9071] per_repeat [0.8662, 0.8593, 0.8271, 0.8408, 0.8471]
+  enc stage  3 auc_mean 0.8620 [0.7934,0.9198] per_repeat [0.874, 0.8694, 0.8444, 0.8583, 0.8641]
+  enc stage  4 auc_mean 0.8753 [0.8082,0.9299] per_repeat [0.8859, 0.8744, 0.8659, 0.8746, 0.8755]
+  enc stage  5 auc_mean 0.8764 [0.8093,0.9302] per_repeat [0.886, 0.8758, 0.8617, 0.8833, 0.8753]
+  enc stage  6 auc_mean 0.8782 [0.8098,0.9324] per_repeat [0.8824, 0.8804, 0.86, 0.8914, 0.8766]
+  enc stage  7 auc_mean 0.8888 [0.8230,0.9416] per_repeat [0.8927, 0.8857, 0.8737, 0.8984, 0.8935]
+  enc stage  8 auc_mean 0.8962 [0.8304,0.9477] per_repeat [0.9004, 0.8976, 0.8827, 0.898, 0.9023]
+  enc stage  9 auc_mean 0.8933 [0.8250,0.9471] per_repeat [0.8978, 0.8935, 0.8782, 0.894, 0.9033]
+  enc stage 10 auc_mean 0.8955 [0.8283,0.9488] per_repeat [0.8984, 0.8986, 0.8765, 0.8949, 0.9092]
+  enc stage 11 auc_mean 0.8931 [0.8274,0.9461] per_repeat [0.9026, 0.8923, 0.8725, 0.8853, 0.9126]
+  enc stage 12 auc_mean 0.9032 [0.8395,0.9545] per_repeat [0.9145, 0.8968, 0.88, 0.9014, 0.9233]
+  enc stage 13 auc_mean 0.9122 [0.8518,0.9587] per_repeat [0.9253, 0.9022, 0.8852, 0.9149, 0.9333]
+  enc stage 14 auc_mean 0.9133 [0.8519,0.9604] per_repeat [0.9252, 0.9015, 0.8898, 0.9204, 0.9296]
+  enc stage 15 auc_mean 0.9100 [0.8482,0.9557] per_repeat [0.9262, 0.8936, 0.891, 0.9161, 0.9231]
+  enc stage 16 auc_mean 0.9093 [0.8474,0.9557] per_repeat [0.924, 0.8936, 0.8895, 0.9147, 0.9247]
+  enc stage 17 auc_mean 0.9022 [0.8398,0.9505] per_repeat [0.9146, 0.8886, 0.8806, 0.909, 0.918]
+  enc stage 18 auc_mean 0.9007 [0.8391,0.9493] per_repeat [0.9106, 0.8874, 0.881, 0.9074, 0.9169]
+  enc stage 19 auc_mean 0.9047 [0.8423,0.9518] per_repeat [0.9098, 0.8932, 0.8884, 0.9102, 0.9221]
+  enc stage 20 auc_mean 0.9013 [0.8366,0.9500] per_repeat [0.8998, 0.8893, 0.8874, 0.9081, 0.9219]
+  enc stage 21 auc_mean 0.9020 [0.8375,0.9516] per_repeat [0.8979, 0.8904, 0.8924, 0.9084, 0.9207]
+  enc stage 22 auc_mean 0.8955 [0.8296,0.9466] per_repeat [0.8891, 0.8834, 0.8915, 0.8974, 0.9159]
+  enc stage 23 auc_mean 0.8964 [0.8294,0.9474] per_repeat [0.8896, 0.8902, 0.8894, 0.8965, 0.9163]
+  enc stage 24 auc_mean 0.8932 [0.8273,0.9428] per_repeat [0.8862, 0.8877, 0.8851, 0.8941, 0.9129]
+  enc stage 25 auc_mean 0.8890 [0.8221,0.9396] per_repeat [0.8801, 0.8878, 0.8774, 0.8921, 0.9076]
+  enc stage 26 auc_mean 0.8862 [0.8190,0.9380] per_repeat [0.8777, 0.8856, 0.8752, 0.8858, 0.9067]
+  enc stage 27 auc_mean 0.8817 [0.8132,0.9352] per_repeat [0.8724, 0.8788, 0.8694, 0.8844, 0.9033]
+  enc stage 28 auc_mean 0.8815 [0.8143,0.9353] per_repeat [0.8748, 0.8784, 0.8689, 0.8815, 0.9038]
+  enc stage 29 auc_mean 0.8816 [0.8158,0.9347] per_repeat [0.8748, 0.8804, 0.8718, 0.8777, 0.9034]
+  enc stage 30 auc_mean 0.8752 [0.8074,0.9308] per_repeat [0.8728, 0.8733, 0.8672, 0.869, 0.8938]
+  enc stage 31 auc_mean 0.8721 [0.8017,0.9284] per_repeat [0.8734, 0.8698, 0.8608, 0.8622, 0.8944]
+  nested repeat 0 auc 0.9223 chosen [14, 14, 15, 14, 15]  91s
+  nested repeat 1 auc 0.8697 chosen [14, 14, 14, 6, 23]  125s
+  nested repeat 2 auc 0.8742 chosen [16, 23, 16, 15, 15]  163s
+  nested repeat 3 auc 0.8988 chosen [14, 14, 21, 17, 8]  200s
+  nested repeat 4 auc 0.9196 chosen [14, 10, 13, 13, 15]  240s
+  >>> enc: NESTED 0.8969 [0.8322,0.9454] | BEST STAGE 14 (audio_encoder_layer_14) 0.9133 [0.8519,0.9604]
+DONE 241s
++ echo 'STREAM_enc_RC 0'
+STREAM_enc_RC 0
++ for S in enc proj llm
++ python3 -u perlayer_stream.py /workspace/out/q3o_pcgita_states.npz /workspace/out/q3o_pcgitaFAST proj 5
+loaded /workspace/out/q3o_pcgita_states.npz stream=proj n=1100 pos=550 n_spk=100 njobs=248
+per-layer: 1 stages x 1 repeats, parallel over layers
+per-layer fits done 0s
+per-layer bootstrap done 1s
+  proj stage  0 auc_mean 0.8872 [0.8156,0.9431] per_repeat [0.8872]
+  nested repeat 0 auc 0.8872 chosen [0, 0, 0, 0, 0]  1s
+  >>> proj: NESTED 0.8872 [0.8156,0.9431] | BEST STAGE 0 (projected_audio_input) 0.8872 [0.8156,0.9431]
+DONE 1s
++ echo 'STREAM_proj_RC 0'
+STREAM_proj_RC 0
++ for S in enc proj llm
++ python3 -u perlayer_stream.py /workspace/out/q3o_pcgita_states.npz /workspace/out/q3o_pcgitaFAST llm 5
+loaded /workspace/out/q3o_pcgita_states.npz stream=llm n=1100 pos=550 n_spk=100 njobs=248
+per-layer: 49 stages x 5 repeats, parallel over layers
+per-layer fits done 28s
+per-layer bootstrap done 31s
+  llm stage  0 auc_mean 0.8815 [0.8121,0.9367] per_repeat [0.8872, 0.8793, 0.8786, 0.8645, 0.8982]
+  llm stage  1 auc_mean 0.8832 [0.8169,0.9375] per_repeat [0.8845, 0.8744, 0.8809, 0.873, 0.9032]
+  llm stage  2 auc_mean 0.8831 [0.8186,0.9371] per_repeat [0.8821, 0.8735, 0.8839, 0.8732, 0.9029]
+  llm stage  3 auc_mean 0.8789 [0.8131,0.9333] per_repeat [0.8803, 0.8665, 0.8814, 0.8682, 0.8983]
+  llm stage  4 auc_mean 0.8675 [0.8003,0.9244] per_repeat [0.8701, 0.8542, 0.8716, 0.8548, 0.8866]
+  llm stage  5 auc_mean 0.8710 [0.8038,0.9279] per_repeat [0.8729, 0.8583, 0.873, 0.8617, 0.889]
+  llm stage  6 auc_mean 0.8732 [0.8090,0.9285] per_repeat [0.8755, 0.8622, 0.8739, 0.8618, 0.8929]
+  llm stage  7 auc_mean 0.8783 [0.8143,0.9322] per_repeat [0.8845, 0.8693, 0.8771, 0.8635, 0.8969]
+  llm stage  8 auc_mean 0.8861 [0.8248,0.9381] per_repeat [0.8889, 0.879, 0.8856, 0.8716, 0.9052]
+  llm stage  9 auc_mean 0.8845 [0.8217,0.9369] per_repeat [0.8873, 0.8778, 0.884, 0.8691, 0.9042]
+  llm stage 10 auc_mean 0.8855 [0.8228,0.9362] per_repeat [0.8869, 0.8796, 0.8879, 0.8688, 0.9041]
+  llm stage 11 auc_mean 0.8848 [0.8229,0.9366] per_repeat [0.886, 0.8788, 0.8851, 0.869, 0.905]
+  llm stage 12 auc_mean 0.8870 [0.8247,0.9383] per_repeat [0.8866, 0.8756, 0.8903, 0.8737, 0.9087]
+  llm stage 13 auc_mean 0.8912 [0.8284,0.9428] per_repeat [0.8907, 0.881, 0.896, 0.8777, 0.9108]
+  llm stage 14 auc_mean 0.8960 [0.8341,0.9463] per_repeat [0.895, 0.8883, 0.9001, 0.88, 0.9165]
+  llm stage 15 auc_mean 0.8898 [0.8273,0.9405] per_repeat [0.8869, 0.883, 0.8957, 0.873, 0.9104]
+  llm stage 16 auc_mean 0.8889 [0.8269,0.9397] per_repeat [0.8863, 0.8818, 0.8942, 0.8738, 0.9083]
+  llm stage 17 auc_mean 0.8879 [0.8261,0.9386] per_repeat [0.8875, 0.8797, 0.8937, 0.8709, 0.9077]
+  llm stage 18 auc_mean 0.8890 [0.8281,0.9393] per_repeat [0.8888, 0.8832, 0.8943, 0.8729, 0.9061]
+  llm stage 19 auc_mean 0.8925 [0.8313,0.9410] per_repeat [0.8918, 0.8872, 0.8972, 0.8784, 0.9079]
+  llm stage 20 auc_mean 0.8890 [0.8266,0.9381] per_repeat [0.8876, 0.8851, 0.8941, 0.8734, 0.9048]
+  llm stage 21 auc_mean 0.8856 [0.8223,0.9358] per_repeat [0.8847, 0.8822, 0.8908, 0.8688, 0.9013]
+  llm stage 22 auc_mean 0.8836 [0.8202,0.9349] per_repeat [0.8833, 0.8787, 0.8885, 0.8675, 0.9002]
+  llm stage 23 auc_mean 0.8805 [0.8167,0.9326] per_repeat [0.8783, 0.8773, 0.8862, 0.8629, 0.8977]
+  llm stage 24 auc_mean 0.8828 [0.8200,0.9342] per_repeat [0.8811, 0.8789, 0.8902, 0.8652, 0.8988]
+  llm stage 25 auc_mean 0.8799 [0.8182,0.9316] per_repeat [0.8786, 0.8771, 0.8858, 0.8623, 0.8956]
+  llm stage 26 auc_mean 0.8838 [0.8230,0.9344] per_repeat [0.8821, 0.8832, 0.889, 0.8676, 0.897]
+  llm stage 27 auc_mean 0.8808 [0.8188,0.9321] per_repeat [0.8809, 0.8802, 0.886, 0.8636, 0.8932]
+  llm stage 28 auc_mean 0.8761 [0.8119,0.9285] per_repeat [0.877, 0.8736, 0.8815, 0.8587, 0.8897]
+  llm stage 29 auc_mean 0.8723 [0.8074,0.9257] per_repeat [0.8716, 0.8676, 0.8797, 0.857, 0.8857]
+  llm stage 30 auc_mean 0.8779 [0.8141,0.9304] per_repeat [0.8782, 0.8716, 0.885, 0.8629, 0.8919]
+  llm stage 31 auc_mean 0.8805 [0.8192,0.9326] per_repeat [0.8821, 0.876, 0.8887, 0.8626, 0.8929]
+  llm stage 32 auc_mean 0.8771 [0.8153,0.9295] per_repeat [0.8773, 0.8763, 0.8877, 0.8561, 0.888]
+  llm stage 33 auc_mean 0.8739 [0.8102,0.9271] per_repeat [0.8714, 0.8701, 0.8874, 0.854, 0.8865]
+  llm stage 34 auc_mean 0.8718 [0.8076,0.9262] per_repeat [0.8712, 0.8675, 0.8857, 0.8511, 0.8837]
+  llm stage 35 auc_mean 0.8759 [0.8127,0.9284] per_repeat [0.874, 0.872, 0.8888, 0.8577, 0.8868]
+  llm stage 36 auc_mean 0.8701 [0.8062,0.9242] per_repeat [0.8662, 0.8685, 0.8817, 0.8543, 0.8799]
+  llm stage 37 auc_mean 0.8695 [0.8054,0.9238] per_repeat [0.8622, 0.8684, 0.8819, 0.8545, 0.8805]
+  llm stage 38 auc_mean 0.8695 [0.8040,0.9240] per_repeat [0.8619, 0.8655, 0.883, 0.8572, 0.88]
+  llm stage 39 auc_mean 0.8725 [0.8098,0.9262] per_repeat [0.8659, 0.8694, 0.8826, 0.8594, 0.8854]
+  llm stage 40 auc_mean 0.8691 [0.8057,0.9222] per_repeat [0.8613, 0.8662, 0.8788, 0.8571, 0.8824]
+  llm stage 41 auc_mean 0.8712 [0.8092,0.9240] per_repeat [0.8691, 0.8682, 0.8783, 0.8581, 0.8821]
+  llm stage 42 auc_mean 0.8653 [0.8027,0.9197] per_repeat [0.8626, 0.8618, 0.8692, 0.8536, 0.8796]
+  llm stage 43 auc_mean 0.8604 [0.7986,0.9149] per_repeat [0.8575, 0.8532, 0.8703, 0.8463, 0.8745]
+  llm stage 44 auc_mean 0.8539 [0.7883,0.9100] per_repeat [0.8525, 0.851, 0.8657, 0.8354, 0.8649]
+  llm stage 45 auc_mean 0.8568 [0.7916,0.9113] per_repeat [0.8551, 0.852, 0.8633, 0.8448, 0.8687]
+  llm stage 46 auc_mean 0.8523 [0.7872,0.9075] per_repeat [0.8492, 0.8482, 0.8594, 0.8407, 0.8638]
+  llm stage 47 auc_mean 0.8487 [0.7819,0.9042] per_repeat [0.8419, 0.8454, 0.8518, 0.8404, 0.8642]
+  llm stage 48 auc_mean 0.8506 [0.7861,0.9053] per_repeat [0.8465, 0.8465, 0.8558, 0.8364, 0.8678]
+  nested repeat 0 auc 0.8614 chosen [14, 15, 1, 0, 44]  92s
+  nested repeat 1 auc 0.8758 chosen [19, 14, 14, 32, 18]  118s
+  nested repeat 2 auc 0.8795 chosen [14, 15, 19, 1, 19]  151s
+  nested repeat 3 auc 0.8756 chosen [14, 14, 1, 18, 14]  180s
+  nested repeat 4 auc 0.8937 chosen [14, 0, 21, 14, 12]  226s
+  >>> llm: NESTED 0.8772 [0.8117,0.9309] | BEST STAGE 14 (thinker_layer_14) 0.8960 [0.8341,0.9463]
+DONE 227s
++ echo 'STREAM_llm_RC 0'
+STREAM_llm_RC 0
++ echo FAST_ALL_DONE
+FAST_ALL_DONE
