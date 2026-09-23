@@ -1,0 +1,324 @@
+{
+ "what": "Qwen2.5-Omni projector fine-tune, E-DAIC whole interview (275 windows, processor cap lifted), seed 0 on all 5 outer folds, out of fold",
+ "result_file": "FT24_whole_seed0_perclip.csv",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "columns": {
+  "p_yes": "two-logit softmax over ' Yes'(7414) and ' No'(2308) at the answer position, element 0 (recipe)",
+  "answer_mass": "P(Yes set)+P(No set), full-vocabulary softmax, Yes {7414,9454,9693,9834,14004} No {902,2152,2308,2753,8996}",
+  "audio_tok": "count of audio placeholder tokens in the test input"
+ },
+ "model_id": [
+  "Qwen/Qwen2.5-Omni-7B"
+ ],
+ "hf_snapshot": [
+  "ae9e1690543ffd5c0221dc27f79834d0294cba00"
+ ],
+ "seeds_by_fold": {
+  "0": 0,
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0
+ },
+ "folds": [
+  {
+   "fold": 0,
+   "seed": 0,
+   "pod": "p24-ft0",
+   "pod_id": "3618ku76chod7p",
+   "command": "python3 /workspace/sft_whole24.py /workspace/p23/mf_whole.csv /workspace/p23/edaic_groupkfold5_pod.csv 0 0 /workspace/out",
+   "gpu": "NVIDIA H200",
+   "versions": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "transformers": "5.17.0",
+    "numpy": "2.1.2",
+    "librosa": "1.0.0",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0",
+    "huggingface_hub": "1.32.0",
+    "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA H200"
+   },
+   "env": {
+    "GC": "on",
+    "GC_LIMIT_GB": 128.0,
+    "CK": 55,
+    "EPOCHS_OVERRIDE": null,
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+    "OMP_NUM_THREADS": "8",
+    "RUNPOD_POD_ID": null
+   },
+   "hf_snapshot": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+   "median_answer_mass": 0.9938538074493408,
+   "pod_fold_auc_p_yes": 0.9166666666666667,
+   "losses_per_epoch": {
+    "0": 0.47744869067841633,
+    "1": 0.3316358809655702,
+    "2": 0.20460486241023648
+   },
+   "train_minutes": 26.45,
+   "restarts_from_checkpoint": 0,
+   "order_sha256_per_epoch": [
+    "e7c30aef176bdecd53b23f5489f4df1afa3d7cd5d4b6a96a456af4c3b8982df2",
+    "d65bb1d1f961023c5fa6095777ecf94d7ae9d0cc859c8316acb93de99435575d",
+    "f814c0142b65fabc021adf72804566a0fed59696ea5ae8b73b9792c076199714"
+   ],
+   "script_sha256": "ad2cf8c901d291cd44b7fc6e20206987518f12aa36111d88937435e00b04fef1",
+   "cut_windows_sha256_of_list": "d5b5a5e7dff0926cd0df376173e5611567ec26d73e498e62d0b6efad1696e96e",
+   "source_csv": "scores/part24/pods/p24-ft0/FT_whole_s0_fold0_oof.csv",
+   "source_csv_sha256": "a1f0494b0c2ba8ae73d1ef1360136498ba1a333562a97175a1f6f0de3aa32525",
+   "source_sidecar": "scores/part24/pods/p24-ft0/FT_whole_s0_fold0_oof.sidecar.json",
+   "source_sidecar_sha256": "df2d10b59a5589eb9c54afdcfb25ce0501af96d6b1a8baa5c949637679812d28"
+  },
+  {
+   "fold": 1,
+   "seed": 0,
+   "pod": "p24-ft1",
+   "pod_id": "fkuoeiypta2jzl",
+   "command": "python3 /workspace/sft_whole24.py /workspace/p23/mf_whole.csv /workspace/p23/edaic_groupkfold5_pod.csv 1 0 /workspace/out",
+   "gpu": "NVIDIA H200",
+   "versions": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "transformers": "5.17.0",
+    "numpy": "2.1.2",
+    "librosa": "1.0.0",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0",
+    "huggingface_hub": "1.32.0",
+    "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA H200"
+   },
+   "env": {
+    "GC": "on",
+    "GC_LIMIT_GB": 128.0,
+    "CK": 55,
+    "EPOCHS_OVERRIDE": null,
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+    "OMP_NUM_THREADS": "8",
+    "RUNPOD_POD_ID": null
+   },
+   "hf_snapshot": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+   "median_answer_mass": 0.9934326112270355,
+   "pod_fold_auc_p_yes": 0.8624999999999999,
+   "losses_per_epoch": {
+    "0": 0.4510967884805392,
+    "1": 0.3366043328857896,
+    "2": 0.3223201616328548
+   },
+   "train_minutes": 25.68,
+   "restarts_from_checkpoint": 0,
+   "order_sha256_per_epoch": [
+    "4f86d4ccf3c51af1d20a6c497212c43ec7b166869061ad5e06e55ec717d87c92",
+    "3f7f5715aa1f22bbd1d0cffbb73b98fdab5f148323925367f22bd83031cfa804",
+    "c4b0d847d5e67e648ccd9f8a95f7f44e104475b82c15a9066f651c4e02631bda"
+   ],
+   "script_sha256": "ad2cf8c901d291cd44b7fc6e20206987518f12aa36111d88937435e00b04fef1",
+   "cut_windows_sha256_of_list": "d5b5a5e7dff0926cd0df376173e5611567ec26d73e498e62d0b6efad1696e96e",
+   "source_csv": "scores/part24/pods/p24-ft1/FT_whole_s0_fold1_oof.csv",
+   "source_csv_sha256": "991e56ca0312ec111b6aed4413cf163af1864af35f01c1849104390fd3af9ff7",
+   "source_sidecar": "scores/part24/pods/p24-ft1/FT_whole_s0_fold1_oof.sidecar.json",
+   "source_sidecar_sha256": "94d317a77a66fc4400924dac5dd23c2d22577727e8241f70018e37108c317ecd"
+  },
+  {
+   "fold": 2,
+   "seed": 0,
+   "pod": "p24-ft2",
+   "pod_id": "l1lwmbluen6qjq",
+   "command": "python3 /workspace/sft_whole24.py /workspace/p23/mf_whole.csv /workspace/p23/edaic_groupkfold5_pod.csv 2 0 /workspace/out",
+   "gpu": "NVIDIA H200",
+   "versions": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "transformers": "5.17.0",
+    "numpy": "2.1.2",
+    "librosa": "1.0.0",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0",
+    "huggingface_hub": "1.32.0",
+    "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA H200"
+   },
+   "env": {
+    "GC": "on",
+    "GC_LIMIT_GB": 128.0,
+    "CK": 55,
+    "EPOCHS_OVERRIDE": null,
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+    "OMP_NUM_THREADS": "8",
+    "RUNPOD_POD_ID": null
+   },
+   "hf_snapshot": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+   "median_answer_mass": 0.9971539359539747,
+   "pod_fold_auc_p_yes": 0.8416666666666667,
+   "losses_per_epoch": {
+    "0": 0.43252034461633726,
+    "1": 0.27458297474394466,
+    "2": 0.15124614944639192
+   },
+   "train_minutes": 26.14,
+   "restarts_from_checkpoint": 0,
+   "order_sha256_per_epoch": [
+    "685a84327ca2ccae5471116600a59dc6b07d8f5596579108efc5c0c3e0d495e3",
+    "7e309743dc98d6b35f5e70590ecbb804f6714de33187fb2ed4bdcdb63682b395",
+    "ca0b856d5f9c3e9433b333813aee843e32ae34b599355b3a6479326ae203015c"
+   ],
+   "script_sha256": "ad2cf8c901d291cd44b7fc6e20206987518f12aa36111d88937435e00b04fef1",
+   "cut_windows_sha256_of_list": "d5b5a5e7dff0926cd0df376173e5611567ec26d73e498e62d0b6efad1696e96e",
+   "source_csv": "scores/part24/pods/p24-ft2/FT_whole_s0_fold2_oof.csv",
+   "source_csv_sha256": "5d03a3eed6bded787d4610be8e4572d12451acd6779a8f2adcdffb60280c7629",
+   "source_sidecar": "scores/part24/pods/p24-ft2/FT_whole_s0_fold2_oof.sidecar.json",
+   "source_sidecar_sha256": "9e9ba9c39d906b3e39936c9053a0004dd3c960abd085a3c654f5b38184411cea"
+  },
+  {
+   "fold": 3,
+   "seed": 0,
+   "pod": "p24-ft3",
+   "pod_id": "5iinqcibkgbj3z",
+   "command": "python3 /workspace/sft_whole24.py /workspace/p23/mf_whole.csv /workspace/p23/edaic_groupkfold5_pod.csv 3 0 /workspace/out",
+   "gpu": "NVIDIA H200",
+   "versions": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "transformers": "5.17.0",
+    "numpy": "2.1.2",
+    "librosa": "1.0.0",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0",
+    "huggingface_hub": "1.32.0",
+    "platform": "Linux-6.8.0-79-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA H200"
+   },
+   "env": {
+    "GC": "on",
+    "GC_LIMIT_GB": 128.0,
+    "CK": 55,
+    "EPOCHS_OVERRIDE": null,
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+    "OMP_NUM_THREADS": "8",
+    "RUNPOD_POD_ID": null
+   },
+   "hf_snapshot": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+   "median_answer_mass": 0.9979457128793001,
+   "pod_fold_auc_p_yes": 0.8372093023255813,
+   "losses_per_epoch": {
+    "0": 0.4529604425145821,
+    "1": 0.29982478810601276,
+    "2": 0.149053120915778
+   },
+   "train_minutes": 26.51,
+   "restarts_from_checkpoint": 0,
+   "order_sha256_per_epoch": [
+    "114d236501d7ab9be947a6891d96e8c897af825b74dba407f94db5abf150281b",
+    "55c8523e618237a2fe2a205f6e3211c10ec24a07ff60beba15c4a530898cd84b",
+    "f2cb18e7813a77af8ace3a478b2eaefe3553f52eca6a4d4ff1002ea17a196dfb"
+   ],
+   "script_sha256": "ad2cf8c901d291cd44b7fc6e20206987518f12aa36111d88937435e00b04fef1",
+   "cut_windows_sha256_of_list": "d5b5a5e7dff0926cd0df376173e5611567ec26d73e498e62d0b6efad1696e96e",
+   "source_csv": "scores/part24/pods/p24-ft3/FT_whole_s0_fold3_oof.csv",
+   "source_csv_sha256": "04d075333d6da27842f2fbe0ec9e7a6a71d6970ce7f29f23c621742b2614f1aa",
+   "source_sidecar": "scores/part24/pods/p24-ft3/FT_whole_s0_fold3_oof.sidecar.json",
+   "source_sidecar_sha256": "d709371f608c8e29522e8bd08b0d27bd3a226e9d2871856d88bcaae139a2850d"
+  },
+  {
+   "fold": 4,
+   "seed": 0,
+   "pod": "p24-ft4",
+   "pod_id": "mwyd25eea437yq",
+   "command": "python3 /workspace/sft_whole24.py /workspace/p23/mf_whole.csv /workspace/p23/edaic_groupkfold5_pod.csv 4 0 /workspace/out",
+   "gpu": "NVIDIA H200",
+   "versions": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "transformers": "5.17.0",
+    "numpy": "2.1.2",
+    "librosa": "1.0.0",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0",
+    "huggingface_hub": "1.32.0",
+    "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA H200"
+   },
+   "env": {
+    "GC": "on",
+    "GC_LIMIT_GB": 128.0,
+    "CK": 55,
+    "EPOCHS_OVERRIDE": null,
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+    "OMP_NUM_THREADS": "8",
+    "RUNPOD_POD_ID": null
+   },
+   "hf_snapshot": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+   "median_answer_mass": 0.997003898024559,
+   "pod_fold_auc_p_yes": 0.8585271317829457,
+   "losses_per_epoch": {
+    "0": 0.4436038457492197,
+    "1": 0.2760023339143531,
+    "2": 0.15006623823957688
+   },
+   "train_minutes": 27.56,
+   "restarts_from_checkpoint": 0,
+   "order_sha256_per_epoch": [
+    "754944c422d67eebced5e8765b21e01b2f474bf865bbb1ce872d3bc1cbdc42c5",
+    "3970bdb1db60ad82963b91b220354977553c5eb5c4bebd0746ba1d2a33f6bf4e",
+    "95f35d315422ccec4aad90002a3abe67dd0af6b7947dc7b3d44143e05a41f323"
+   ],
+   "script_sha256": "ad2cf8c901d291cd44b7fc6e20206987518f12aa36111d88937435e00b04fef1",
+   "cut_windows_sha256_of_list": "d5b5a5e7dff0926cd0df376173e5611567ec26d73e498e62d0b6efad1696e96e",
+   "source_csv": "scores/part24/pods/p24-ft4/FT_whole_s0_fold4_oof.csv",
+   "source_csv_sha256": "10c7102c8afdeea5a2907061cf494fbd880bbad476f2315600c294c22e12e3b8",
+   "source_sidecar": "scores/part24/pods/p24-ft4/FT_whole_s0_fold4_oof.sidecar.json",
+   "source_sidecar_sha256": "9d00d19230a439521e7cf9e26424119c07e4266ca682bceb8760975b1c9c558e"
+  }
+ ],
+ "auc_rule": "sklearn.metrics.roc_auc_score on p_yes",
+ "bootstrap_rule": "2000 draws; each cell a fresh numpy default_rng(0); idx = rng.choice(N, size=N, replace=True) over speakers (speakers in sorted string order; E-DAIC: one clip = one speaker); 2.5 and 97.5 percentiles (numpy default linear); draws with a single class are skipped and counted; paired = both terms use the same idx",
+ "fold_file": [
+  "folds/edaic_groupkfold5_pod.csv",
+  "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff"
+ ],
+ "manifest": [
+  "manifests/part24/mf_whole.csv",
+  "85aed9407a29130d025304f9a76e69b808cdac7e0195fc4495beeb7ce7eda728"
+ ],
+ "built_by": [
+  "scripts/part24/FT/build_ft24.py",
+  "4476e4f481090ed19c3c2acf3d7043d81da8030e3cafb4bb9cb237393c1db69e"
+ ],
+ "build_command": "/usr/local/bin/python3 scripts/part24/FT/build_ft24.py",
+ "build_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "date_utc": "2026-09-23T22:44:39+00:00",
+ "seed": 0,
+ "seed_rule_folds_triggered": [],
+ "mass_rule": "a fold is rerun with seed 1 when its seed 0 median answer_mass over its 55 test clips is < 0.5",
+ "mass_check_files": {
+  "0": "fold 0 seed 0 median_answer_mass 0.9938538074493408 n 55\ndecision no_rerun",
+  "1": "fold 1 seed 0 median_answer_mass 0.9934326112270355 n 55\ndecision no_rerun",
+  "2": "fold 2 seed 0 median_answer_mass 0.9971539359539747 n 55\ndecision no_rerun",
+  "3": "fold 3 seed 0 median_answer_mass 0.9979457128793001 n 55\ndecision no_rerun",
+  "4": "fold 4 seed 0 median_answer_mass 0.997003898024559 n 55\ndecision no_rerun"
+ }
+}

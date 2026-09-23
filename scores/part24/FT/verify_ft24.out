@@ -1,0 +1,29 @@
+seed 0 median answer_mass by fold: {0: 0.9939, 1: 0.9934, 2: 0.9972, 3: 0.9979, 4: 0.997} -> mass rule folds: []
+FT24_whole_seed0_perclip.csv: rows 275 match raw pod rows cell for cell: True; sidecar n/n_speakers ok: True
+FT24_whole_seed1all_perclip.csv: rows 275 match raw pod rows cell for cell: True; sidecar n/n_speakers ok: True
+VERIFIED seed0_pooled_oof_auc: claimed 0.8589 [0.805, 0.9029] n=275 | recomputed 0.8589 [0.805, 0.9029] n=275
+VERIFIED seed0_ft_minus_zs_whole_paired: claimed 0.0223 [-0.0064, 0.0547] n=275 | recomputed 0.0223 [-0.0064, 0.0547] n=275
+VERIFIED seed0_fold0_auc: claimed 0.9167 [0.8267, 0.9783] n=55 | recomputed 0.9167 [0.8267, 0.9783] n=55
+VERIFIED seed0_fold0_median_answer_mass: claimed 0.9939 [None, None] n=55 | recomputed 0.9939 [None, None] n=55
+VERIFIED seed0_fold1_auc: claimed 0.8625 [0.7334, 0.9613] n=55 | recomputed 0.8625 [0.7334, 0.9613] n=55
+VERIFIED seed0_fold1_median_answer_mass: claimed 0.9934 [None, None] n=55 | recomputed 0.9934 [None, None] n=55
+VERIFIED seed0_fold2_auc: claimed 0.8417 [0.6955, 0.9556] n=55 | recomputed 0.8417 [0.6955, 0.9556] n=55
+VERIFIED seed0_fold2_median_answer_mass: claimed 0.9972 [None, None] n=55 | recomputed 0.9972 [None, None] n=55
+VERIFIED seed0_fold3_auc: claimed 0.8372 [0.6955, 0.9464] n=55 | recomputed 0.8372 [0.6955, 0.9464] n=55
+VERIFIED seed0_fold3_median_answer_mass: claimed 0.9979 [None, None] n=55 | recomputed 0.9979 [None, None] n=55
+VERIFIED seed0_fold4_auc: claimed 0.8585 [0.7112, 0.9671] n=55 | recomputed 0.8585 [0.7112, 0.9671] n=55
+VERIFIED seed0_fold4_median_answer_mass: claimed 0.997 [None, None] n=55 | recomputed 0.997 [None, None] n=55
+VERIFIED ref_zs_whole_auc: claimed 0.8366 [0.7786, 0.8866] n=275 | recomputed 0.8366 [0.7786, 0.8866] n=275
+VERIFIED extra_seed1all_pooled_oof_auc: claimed 0.8184 [0.7496, 0.8758] n=275 | recomputed 0.8184 [0.7496, 0.8758] n=275
+VERIFIED extra_seed1all_ft_minus_zs_whole_paired: claimed -0.0182 [-0.0519, 0.0139] n=275 | recomputed -0.0182 [-0.0519, 0.0139] n=275
+VERIFIED extra_seed1all_fold0_auc: claimed 0.9225 [0.8333, 0.9822] n=55 | recomputed 0.9225 [0.8333, 0.9822] n=55
+VERIFIED extra_seed1all_fold0_median_answer_mass: claimed 0.9946 [None, None] n=55 | recomputed 0.9946 [None, None] n=55
+VERIFIED extra_seed1all_fold1_auc: claimed 0.8117 [0.662, 0.9288] n=55 | recomputed 0.8117 [0.662, 0.9288] n=55
+VERIFIED extra_seed1all_fold1_median_answer_mass: claimed 0.9947 [None, None] n=55 | recomputed 0.9947 [None, None] n=55
+VERIFIED extra_seed1all_fold2_auc: claimed 0.84 [0.6866, 0.9686] n=55 | recomputed 0.84 [0.6866, 0.9686] n=55
+VERIFIED extra_seed1all_fold2_median_answer_mass: claimed 0.9963 [None, None] n=55 | recomputed 0.9963 [None, None] n=55
+VERIFIED extra_seed1all_fold3_auc: claimed 0.8421 [0.7003, 0.9453] n=55 | recomputed 0.8421 [0.7003, 0.9453] n=55
+VERIFIED extra_seed1all_fold3_median_answer_mass: claimed 0.9962 [None, None] n=55 | recomputed 0.9962 [None, None] n=55
+VERIFIED extra_seed1all_fold4_auc: claimed 0.8353 [0.6547, 0.9643] n=55 | recomputed 0.8353 [0.6547, 0.9643] n=55
+VERIFIED extra_seed1all_fold4_median_answer_mass: claimed 0.996 [None, None] n=55 | recomputed 0.996 [None, None] n=55
+RESULT ALL VERIFIED

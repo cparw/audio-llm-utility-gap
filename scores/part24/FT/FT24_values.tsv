@@ -1,0 +1,26 @@
+id	value	lo	hi	n	file
+seed0_pooled_oof_auc	0.8588879222850515	0.8049822386544874	0.9028700329483457	275	FT24_whole_seed0_perclip.csv
+seed0_ft_minus_zs_whole_paired	0.022292301000435	-0.0063755012224089355	0.054672203811101744	275	FT24_whole_seed0_perclip.csv ; A2_edaic_whole_zeroshot_perclip.csv
+seed0_fold0_auc	0.9166666666666667	0.8266656346749226	0.9782608695652174	55	FT24_whole_seed0_perclip.csv
+seed0_fold0_median_answer_mass	0.9938538074493408			55	FT24_whole_seed0_perclip.csv
+seed0_fold1_auc	0.8624999999999999	0.7334168118466898	0.9613035161432995	55	FT24_whole_seed0_perclip.csv
+seed0_fold1_median_answer_mass	0.9934326112270355			55	FT24_whole_seed0_perclip.csv
+seed0_fold2_auc	0.8416666666666667	0.6954583333333333	0.9555560394889664	55	FT24_whole_seed0_perclip.csv
+seed0_fold2_median_answer_mass	0.9971539359539747			55	FT24_whole_seed0_perclip.csv
+seed0_fold3_auc	0.8372093023255813	0.6955220385674932	0.9464345238095238	55	FT24_whole_seed0_perclip.csv
+seed0_fold3_median_answer_mass	0.9979457128793001			55	FT24_whole_seed0_perclip.csv
+seed0_fold4_auc	0.8585271317829457	0.7112278973669037	0.9670594545957917	55	FT24_whole_seed0_perclip.csv
+seed0_fold4_median_answer_mass	0.997003898024559			55	FT24_whole_seed0_perclip.csv
+ref_zs_whole_auc	0.8365956212846165	0.7785777395969262	0.886634568107391	275	A2_edaic_whole_zeroshot_perclip.csv
+extra_seed1all_pooled_oof_auc	0.8183630564013339	0.7496418164976183	0.8757892026693909	275	FT24_whole_seed1all_perclip.csv
+extra_seed1all_ft_minus_zs_whole_paired	-0.01823256488328262	-0.05185012131535606	0.013896457721323927	275	FT24_whole_seed1all_perclip.csv ; A2_edaic_whole_zeroshot_perclip.csv
+extra_seed1all_fold0_auc	0.9224806201550387	0.8333333333333334	0.9822280701754387	55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold0_median_answer_mass	0.9945899248123169			55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold1_auc	0.8116666666666668	0.6620168576342357	0.9287949776401789	55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold1_median_answer_mass	0.994668036699295			55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold2_auc	0.8400000000000001	0.6866487603305786	0.9686466988296255	55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold2_median_answer_mass	0.9962901696562767			55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold3_auc	0.8420542635658915	0.7003447530270998	0.945256191319503	55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold3_median_answer_mass	0.9962337575852871			55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold4_auc	0.8352713178294574	0.6547193877551021	0.9642896825396825	55	FT24_whole_seed1all_perclip.csv
+extra_seed1all_fold4_median_answer_mass	0.9959627240896225			55	FT24_whole_seed1all_perclip.csv
