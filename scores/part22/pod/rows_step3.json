@@ -1,0 +1,152 @@
+[
+ {
+  "id": "P22_auc_default_all275",
+  "what": "E-DAIC zero-shot AUC, default processor (300 s cut), all275",
+  "value": "0.8278",
+  "lo": "0.7703",
+  "hi": "0.8822",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_lifted_all275",
+  "what": "E-DAIC zero-shot AUC, truncation=False (whole window), all275",
+  "value": "0.8379",
+  "lo": "0.7805",
+  "hi": "0.8876",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_diff_all275",
+  "what": "paired AUC lifted minus default, all275",
+  "value": "0.0101",
+  "lo": "-0.0309",
+  "hi": "0.0518",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_lifted_all275_ruleids",
+  "what": "as P22_auc_lifted_all275, rule Yes/No id set",
+  "value": "0.8379",
+  "lo": "0.7805",
+  "hi": "0.8876",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_default_long217",
+  "what": "E-DAIC zero-shot AUC, default processor (300 s cut), long217",
+  "value": "0.8380",
+  "lo": "0.7758",
+  "hi": "0.8930",
+  "n": 217,
+  "n_spk": 217,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_lifted_long217",
+  "what": "E-DAIC zero-shot AUC, truncation=False (whole window), long217",
+  "value": "0.8571",
+  "lo": "0.8028",
+  "hi": "0.9062",
+  "n": 217,
+  "n_spk": 217,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_diff_long217",
+  "what": "paired AUC lifted minus default, long217",
+  "value": "0.0192",
+  "lo": "-0.0309",
+  "hi": "0.0703",
+  "n": 217,
+  "n_spk": 217,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_lifted_long217_ruleids",
+  "what": "as P22_auc_lifted_long217, rule Yes/No id set",
+  "value": "0.8571",
+  "lo": "0.8028",
+  "hi": "0.9062",
+  "n": 217,
+  "n_spk": 217,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_default_capped89",
+  "what": "E-DAIC zero-shot AUC, default processor (300 s cut), capped89",
+  "value": "0.8169",
+  "lo": "0.6985",
+  "hi": "0.9161",
+  "n": 89,
+  "n_spk": 89,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_lifted_capped89",
+  "what": "E-DAIC zero-shot AUC, truncation=False (whole window), capped89",
+  "value": "0.8552",
+  "lo": "0.7513",
+  "hi": "0.9414",
+  "n": 89,
+  "n_spk": 89,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_diff_capped89",
+  "what": "paired AUC lifted minus default, capped89",
+  "value": "0.0383",
+  "lo": "-0.0424",
+  "hi": "0.1360",
+  "n": 89,
+  "n_spk": 89,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_auc_lifted_capped89_ruleids",
+  "what": "as P22_auc_lifted_capped89, rule Yes/No id set",
+  "value": "0.8552",
+  "lo": "0.7513",
+  "hi": "0.9414",
+  "n": 89,
+  "n_spk": 89,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_short58_maxdiff",
+  "what": "max |p_yes lifted - default| on the 58 windows <= 300 s",
+  "value": "0.00e+00",
+  "lo": "",
+  "hi": "",
+  "n": 58,
+  "n_spk": 58,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_lift_tok_max",
+  "what": "max audio tokens with truncation=False (900 s window)",
+  "value": "22500",
+  "lo": "",
+  "hi": "",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ },
+ {
+  "id": "P22_default_tok_max",
+  "what": "max audio tokens with the default processor",
+  "value": "7500",
+  "lo": "",
+  "hi": "",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json"
+ }
+]

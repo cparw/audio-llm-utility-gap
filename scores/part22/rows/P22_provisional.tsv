@@ -1,0 +1,43 @@
+id	what	value	lo	hi	n	n_spk	file
+P22_gate_maxdiff	validation gate: max |p_yes pod - reference| over 10 windows, unmodified extract_full.py	0			10	10	scores/part22/p22_validation_gate.json
+P22_s2_305_tok_full	pid 305 (900.0 s window) audio tokens, default processor, full window	7500			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_305_tok_cut300	pid 305 audio tokens, default processor, first 300 s	7500			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_305_pyes_full	pid 305 p_yes, full window	0.577618			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_305_pyes_cut300	pid 305 p_yes, first 300 s	0.577618			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_305_verdict	pid 305 verdict	TRUNCATION PROVEN			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_679_tok_full	pid 679 (900.0 s window) audio tokens, default processor, full window	7500			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_679_tok_cut300	pid 679 audio tokens, default processor, first 300 s	7500			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_679_pyes_full	pid 679 p_yes, full window	0.233910			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_679_pyes_cut300	pid 679 p_yes, first 300 s	0.233910			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_679_verdict	pid 679 verdict	TRUNCATION PROVEN			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_466_tok_full	pid 466 (900.0 s window) audio tokens, default processor, full window	7500			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_466_tok_cut300	pid 466 audio tokens, default processor, first 300 s	7500			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_466_pyes_full	pid 466 p_yes, full window	0.706315			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_466_pyes_cut300	pid 466 p_yes, first 300 s	0.706315			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_466_verdict	pid 466 verdict	TRUNCATION PROVEN			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_705_tok_full	pid 705 (198.3 s window) audio tokens, default processor, full window	4957			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_705_tok_cut300	pid 705 audio tokens, default processor, first 300 s	4957			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_705_pyes_full	pid 705 p_yes, full window	0.960447			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_705_pyes_cut300	pid 705 p_yes, first 300 s	0.960447			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_705_verdict	pid 705 verdict	CONTROL: window shorter than 300 s, full and 300 s cut are the same input			1	1	scores/part22/p22_step2_truncation_proof.json
+P22_s2_overall	step 2 overall verdict (3 longest windows)	TRUNCATION PROVEN			3	3	scores/part22/p22_step2_truncation_proof.json
+P22_s3_probe_tok_default	pid 305 900 s window audio tokens, default processor	7500			1	1	scores/part22/p22_step3_probe.json
+P22_s3_probe_tok_lifted	pid 305 900 s window audio tokens, truncation=False	22500			1	1	scores/part22/p22_step3_probe.json
+P22_s3_probe_model_ran	model forward ran on the 22,500-token input	True			1	1	scores/part22/p22_step3_probe.json
+P22_s3_probe_pyes_lifted	pid 305 p_yes, truncation=False	0.173336			1	1	scores/part22/p22_step3_probe.json
+P22_s3_probe_peak_gib	pid 305 peak GPU memory GiB, truncation=False	27.63			1	1	scores/part22/p22_step3_probe.json
+P22_auc_default_all275	E-DAIC zero-shot AUC, default processor (300 s cut), all275	0.8278	0.7703	0.8822	275	275	scores/part22/edaic_lifted_auc.json
+P22_auc_lifted_all275	E-DAIC zero-shot AUC, truncation=False (whole window), all275	0.8379	0.7805	0.8876	275	275	scores/part22/edaic_lifted_auc.json
+P22_auc_diff_all275	paired AUC lifted minus default, all275	0.0101	-0.0309	0.0518	275	275	scores/part22/edaic_lifted_auc.json
+P22_auc_lifted_all275_ruleids	as P22_auc_lifted_all275, rule Yes/No id set	0.8379	0.7805	0.8876	275	275	scores/part22/edaic_lifted_auc.json
+P22_auc_default_long217	E-DAIC zero-shot AUC, default processor (300 s cut), long217	0.8380	0.7758	0.8930	217	217	scores/part22/edaic_lifted_auc.json
+P22_auc_lifted_long217	E-DAIC zero-shot AUC, truncation=False (whole window), long217	0.8571	0.8028	0.9062	217	217	scores/part22/edaic_lifted_auc.json
+P22_auc_diff_long217	paired AUC lifted minus default, long217	0.0192	-0.0309	0.0703	217	217	scores/part22/edaic_lifted_auc.json
+P22_auc_lifted_long217_ruleids	as P22_auc_lifted_long217, rule Yes/No id set	0.8571	0.8028	0.9062	217	217	scores/part22/edaic_lifted_auc.json
+P22_auc_default_capped89	E-DAIC zero-shot AUC, default processor (300 s cut), capped89	0.8169	0.6985	0.9161	89	89	scores/part22/edaic_lifted_auc.json
+P22_auc_lifted_capped89	E-DAIC zero-shot AUC, truncation=False (whole window), capped89	0.8552	0.7513	0.9414	89	89	scores/part22/edaic_lifted_auc.json
+P22_auc_diff_capped89	paired AUC lifted minus default, capped89	0.0383	-0.0424	0.1360	89	89	scores/part22/edaic_lifted_auc.json
+P22_auc_lifted_capped89_ruleids	as P22_auc_lifted_capped89, rule Yes/No id set	0.8552	0.7513	0.9414	89	89	scores/part22/edaic_lifted_auc.json
+P22_short58_maxdiff	max |p_yes lifted - default| on the 58 windows <= 300 s	0.00e+00			58	58	scores/part22/edaic_lifted_auc.json
+P22_lift_tok_max	max audio tokens with truncation=False (900 s window)	22500			275	275	scores/part22/edaic_lifted_auc.json
+P22_default_tok_max	max audio tokens with the default processor	7500			275	275	scores/part22/edaic_lifted_auc.json

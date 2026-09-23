@@ -1,0 +1,36 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1331.02it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 1408/2447 [00:00<00:00, 14075.78it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 13767.02it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 12s | transformers 5.17.0 torch 2.8.0+cu128
+feature_extractor WhisperFeatureExtractor chunk_length 300 sampling_rate 16000 n_samples 4800000 nb_max_frames 30000 hop 160
+rule yes [7414, 9454, 9693, 9834, 14004, 14080] rule no [902, 2152, 2308, 2753, 5664, 8996] multi-token excluded []
+audio token 151646 | yes [7414, 9454, 9693, 9834, 14004] | no [902, 2152, 2308, 2753, 8996] | max_position_embeddings 32768 | attn sdpa
+1/275 pid 300 dur 760s def tok 7500 p 0.0901 | lift tok 18995 seq 19043 p 0.0675 peak 25.7GiB 5.1s tot 17s
+2/275 pid 301 dur 900s def tok 7500 p 0.0602 | lift tok 22500 seq 22548 p 0.0447 peak 27.6GiB 3.6s tot 20s
+3/275 pid 302 dur 900s def tok 7500 p 0.7435 | lift tok 22500 seq 22548 p 0.6518 peak 27.6GiB 3.8s tot 24s
+25/275 pid 324 dur 276s def tok 6893 p 0.0397 | lift tok 6893 seq 6941 p 0.0397 peak 19.2GiB 1.3s tot 78s
+50/275 pid 350 dur 900s def tok 7500 p 0.9197 | lift tok 22500 seq 22548 p 0.9650 peak 27.6GiB 3.5s tot 137s
+75/275 pid 375 dur 177s def tok 4427 p 0.0331 | lift tok 4427 seq 4475 p 0.0331 peak 17.9GiB 1.0s tot 208s
+100/275 pid 402 dur 463s def tok 7500 p 0.8268 | lift tok 11575 seq 11623 p 0.7663 peak 21.7GiB 1.8s tot 268s
+125/275 pid 427 dur 358s def tok 7500 p 0.0602 | lift tok 8940 seq 8988 p 0.1331 peak 20.3GiB 1.6s tot 355s
+150/275 pid 452 dur 900s def tok 7500 p 0.4082 | lift tok 22500 seq 22548 p 0.1261 peak 27.6GiB 3.7s tot 411s
+175/275 pid 478 dur 900s def tok 7500 p 0.2691 | lift tok 22500 seq 22548 p 0.2339 peak 27.6GiB 3.1s tot 475s
+200/275 pid 612 dur 286s def tok 7162 p 0.0638 | lift tok 7162 seq 7210 p 0.0638 peak 19.4GiB 1.3s tot 526s
+225/275 pid 650 dur 418s def tok 7500 p 0.1483 | lift tok 10462 seq 10510 p 0.1132 peak 21.1GiB 1.9s tot 569s
+250/275 pid 683 dur 900s def tok 7500 p 0.6515 | lift tok 22500 seq 22548 p 0.8996 peak 27.6GiB 4.2s tot 626s
+275/275 pid 718 dur 777s def tok 7500 p 0.0504 | lift tok 19415 seq 19463 p 0.0397 peak 26.0GiB 2.1s tot 679s
+ALL3 DONE 678.7562482357025
