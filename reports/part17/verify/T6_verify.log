@@ -1,0 +1,75 @@
+source <local data dir>/release/overnight2/text_new/o25_pitt_text.csv md5=c5b37ecc5c7de852caa87ec7a5b16e21
+source <local data dir>/paper work/paper1_local_runs/omni_pitt_text.csv md5=d7e186163ac2481c1f66fb989ff2ae27
+source <local data dir>/DementiaBank/pitt_conflict_manifest.csv md5=6890d484fd3104f10fe737ef51d14a88
+source <local data dir>/paper work/paper1_local_runs/pitt_manifest.csv md5=d0d7ff13544b5b669908440b35097342
+source <local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv md5=85c2911eb50c18373a14965b66453297
+manifest rows=468 unique keys=468 set={'agreement': 322, 'conflict': 146} label={1: 290, 0: 178}
+S20 rows=468 unique keys=468 speakers=228 labels={1: 290, 0: 178} p_yes NaN=0
+S20 distinct prompts=1: 'Based only on this transcript of what the person said, does this speaker show signs of dementia? Answer with one word, Yes or No.'
+S15 rows=468 unique keys=468 cols=['id', 'speaker', 'label', 'set', 'p_yes', 'mass', 'key'] NaN=0
+AUD rows=468 unique keys=468 NaN=0
+join rows=468 arms={'agreement': 322, 'conflict': 146}
+  check labels all agree (man,s20,s15,aud,man2): 468/468
+  check s20 speaker_id == manifest grp+spk: 468/468
+  check s20 speaker_id == s15 speaker: 468/468
+  check s20 speaker_id == audio speaker: 468/468
+  check s20 speaker_id == pitt_manifest speaker: 468/468
+  check manifest arm == s15 set: 468/468
+  check manifest arm == pitt_manifest set: 468/468
+  check grp consistent with label: 468/468
+bare spk numbers in both groups: ['172']; n speaker_id=228 n bare spk=227
+arm conflict: n=146 speakers=100 labels={1: 101, 0: 45}
+arm agreement: n=322 speakers=175 labels={1: 189, 0: 133}
+POINT s20_all: MW=0.662902 TRAP=0.662902 agree4dp=True
+POINT s20_conflict: MW=0.555996 TRAP=0.555996 agree4dp=True
+POINT s20_agreement: MW=0.707761 TRAP=0.707761 agree4dp=True
+POINT s15_all: MW=0.697462 TRAP=0.697462 agree4dp=True
+POINT s15_conflict: MW=0.455006 TRAP=0.455006 agree4dp=True
+POINT s15_agreement: MW=0.798663 TRAP=0.798663 agree4dp=True
+POINT aud_all: MW=0.657768 TRAP=0.657768 agree4dp=True
+POINT aud_conflict: MW=0.532233 TRAP=0.532233 agree4dp=True
+POINT aud_agreement: MW=0.705375 TRAP=0.705375 agree4dp=True
+  sklearn s20_all=0.662902
+  sklearn s20_conflict=0.555996
+  sklearn s20_agreement=0.707761
+  sklearn s15_all=0.697462
+  sklearn s15_conflict=0.455006
+  sklearn s15_agreement=0.798663
+  sklearn aud_all=0.657768
+  sklearn aud_conflict=0.532233
+  sklearn aud_agreement=0.705375
+CELL s20_all468	0.6629 [0.5983, 0.7245]	n=468 n_speakers=228 nan_draws=0
+CELL s20_conflict	0.5560 [0.4516, 0.6680]	n=146 n_speakers=100 nan_draws=0
+CELL s20_agreement	0.7078 [0.6381, 0.7696]	n=322 n_speakers=175 nan_draws=0
+CELL s20_conflict_minus_agreement	-0.1518 [-0.2665, -0.0271]	n=468 n_speakers=228 nan_draws=0
+CELL aud_all468	0.6578 [0.6033, 0.7125]	n=468 n_speakers=228 nan_draws=0
+CELL aud_conflict	0.5322 [0.4216, 0.6447]	n=146 n_speakers=100 nan_draws=0
+CELL aud_agreement	0.7054 [0.6431, 0.7658]	n=322 n_speakers=175 nan_draws=0
+CELL aud_conflict_minus_agreement	-0.1731 [-0.2958, -0.0392]	n=468 n_speakers=228 nan_draws=0
+CELL s20_text_minus_audio_all468	0.0051 [-0.0657, 0.0694]	n=468 n_speakers=228 nan_draws=0
+CELL s20_text_minus_audio_conflict	0.0238 [-0.1147, 0.1577]	n=146 n_speakers=100 nan_draws=0
+CELL s20_text_minus_audio_agreement	0.0024 [-0.0824, 0.0779]	n=322 n_speakers=175 nan_draws=0
+CELL s20_gap_text_minus_gap_audio	0.0214 [-0.1413, 0.1806]	n=468 n_speakers=228 nan_draws=0
+CELL s15_all468	0.6975 [0.6369, 0.7549]	n=468 n_speakers=228 nan_draws=0
+CELL s15_conflict	0.4550 [0.3412, 0.5718]	n=146 n_speakers=100 nan_draws=0
+CELL s15_agreement	0.7987 [0.7392, 0.8535]	n=322 n_speakers=175 nan_draws=0
+CELL s15_conflict_minus_agreement	-0.3437 [-0.4556, -0.2209]	n=468 n_speakers=228 nan_draws=0
+CELL s15_text_minus_audio_all468	0.0397 [-0.0302, 0.1070]	n=468 n_speakers=228 nan_draws=0
+CELL s15_text_minus_audio_conflict	-0.0772 [-0.2360, 0.0680]	n=146 n_speakers=100 nan_draws=0
+CELL s15_text_minus_audio_agreement	0.0933 [0.0157, 0.1637]	n=322 n_speakers=175 nan_draws=0
+CELL s20_minus_s15_all468	-0.0346 [-0.0757, 0.0003]	n=468 n_speakers=228 nan_draws=0
+CELL s20_minus_s15_conflict	0.1010 [0.0270, 0.1766]	n=146 n_speakers=100 nan_draws=0
+CELL s20_minus_s15_agreement	-0.0909 [-0.1345, -0.0518]	n=322 n_speakers=175 nan_draws=0
+CELL s20_minus_s15_armgap	0.1919 [0.1104, 0.2800]	n=468 n_speakers=228 nan_draws=0
+CELL SENS227_s20_conflict	0.5560 [0.4485, 0.6723]	n=146 n_speakers=100 nan_draws=0
+CELL SENS227_s20_agreement	0.7078 [0.6373, 0.7673]	n=322 n_speakers=175 nan_draws=0
+CELL SENS227_s20_conflict_minus_agreement	-0.1518 [-0.2697, -0.0275]	n=468 n_speakers=227 nan_draws=0
+ratio gap_text/gap_audio: s15=1.9848 s20=0.8765
+run-to-run: pearson=0.7640 spearman=0.7876 max_abs_diff=0.6147 at conflict_Dem_368-0_5232.wav (s20=0.7433 s15=0.1285) mean_abs_diff=0.3019 n_gt_0.1=460
+mean p_yes s20=0.4010 s15=0.0991; median mass s20=0.9966 s15=0.9519
+Table1 check: s20 all AUC 0.6629 -> 2dp 0.66; s15 all AUC 0.6975
+table1_omni25.csv Pitt row: [{'text': 0.6629, 'text_source': '<local data dir>/release/overnight2/text_new/o25_pitt_text.json'}]
+o25_pitt_text.json: {'model': 'Qwen/Qwen2.5-Omni-7B', 'prompt': 'Based only on this transcript of what the person said, does this speaker show signs of dementia? Answer with one word, Yes or No.', 'condition': 'ad', 'transcripts': '/workspace/text/pitt_text.csv', 'n': 468, 'auc': 0.6629, 'median_mass': 0.9966, 'script': '/workspace/text_score.py', 'date': '2026-09-20'}
+CELL s15_gap_text_minus_gap_audio	-0.1705 [-0.3440, -0.0049]	n=468 n_speakers=228 nan_draws=0
+T6.tsv interval rows compared: 24, field disagreements=0
+task per-clip csv rows=468 matched=468; max|p20 diff|=0.00e+00 max|p15 diff|=0.00e+00 max|aud diff|=0.00e+00 label eq=468 arm eq=468 spk eq=468

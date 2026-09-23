@@ -1,0 +1,329 @@
+{
+ "checks": {
+  "labels all agree (man,s20,s15,aud,man2)": 468,
+  "s20 speaker_id == manifest grp+spk": 468,
+  "s20 speaker_id == s15 speaker": 468,
+  "s20 speaker_id == audio speaker": 468,
+  "s20 speaker_id == pitt_manifest speaker": 468,
+  "manifest arm == s15 set": 468,
+  "manifest arm == pitt_manifest set": 468,
+  "grp consistent with label": 468
+ },
+ "cells": [
+  {
+   "id": "s20_all468",
+   "value": 0.6629,
+   "lo": 0.5983,
+   "hi": 0.7245,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/overnight2/text_new/o25_pitt_text.csv"
+  },
+  {
+   "id": "s20_conflict",
+   "value": 0.556,
+   "lo": 0.4516,
+   "hi": 0.668,
+   "n": 146,
+   "n_speakers": 100,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/overnight2/text_new/o25_pitt_text.csv"
+  },
+  {
+   "id": "s20_agreement",
+   "value": 0.7078,
+   "lo": 0.6381,
+   "hi": 0.7696,
+   "n": 322,
+   "n_speakers": 175,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/overnight2/text_new/o25_pitt_text.csv"
+  },
+  {
+   "id": "s20_conflict_minus_agreement",
+   "value": -0.1518,
+   "lo": -0.2665,
+   "hi": -0.0271,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/overnight2/text_new/o25_pitt_text.csv"
+  },
+  {
+   "id": "aud_all468",
+   "value": 0.6578,
+   "lo": 0.6033,
+   "hi": 0.7125,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv"
+  },
+  {
+   "id": "aud_conflict",
+   "value": 0.5322,
+   "lo": 0.4216,
+   "hi": 0.6447,
+   "n": 146,
+   "n_speakers": 100,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv"
+  },
+  {
+   "id": "aud_agreement",
+   "value": 0.7054,
+   "lo": 0.6431,
+   "hi": 0.7658,
+   "n": 322,
+   "n_speakers": 175,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv"
+  },
+  {
+   "id": "aud_conflict_minus_agreement",
+   "value": -0.1731,
+   "lo": -0.2958,
+   "hi": -0.0392,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv"
+  },
+  {
+   "id": "s20_text_minus_audio_all468",
+   "value": 0.0051,
+   "lo": -0.0657,
+   "hi": 0.0694,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s20_text_minus_audio_conflict",
+   "value": 0.0238,
+   "lo": -0.1147,
+   "hi": 0.1577,
+   "n": 146,
+   "n_speakers": 100,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s20_text_minus_audio_agreement",
+   "value": 0.0024,
+   "lo": -0.0824,
+   "hi": 0.0779,
+   "n": 322,
+   "n_speakers": 175,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s20_gap_text_minus_gap_audio",
+   "value": 0.0214,
+   "lo": -0.1413,
+   "hi": 0.1806,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s15_all468",
+   "value": 0.6975,
+   "lo": 0.6369,
+   "hi": 0.7549,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": "<local data dir>/paper work/paper1_local_runs/omni_pitt_text.csv"
+  },
+  {
+   "id": "s15_conflict",
+   "value": 0.455,
+   "lo": 0.3412,
+   "hi": 0.5718,
+   "n": 146,
+   "n_speakers": 100,
+   "nan_draws": 0,
+   "file": "<local data dir>/paper work/paper1_local_runs/omni_pitt_text.csv"
+  },
+  {
+   "id": "s15_agreement",
+   "value": 0.7987,
+   "lo": 0.7392,
+   "hi": 0.8535,
+   "n": 322,
+   "n_speakers": 175,
+   "nan_draws": 0,
+   "file": "<local data dir>/paper work/paper1_local_runs/omni_pitt_text.csv"
+  },
+  {
+   "id": "s15_conflict_minus_agreement",
+   "value": -0.3437,
+   "lo": -0.4556,
+   "hi": -0.2209,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": "<local data dir>/paper work/paper1_local_runs/omni_pitt_text.csv"
+  },
+  {
+   "id": "s15_text_minus_audio_all468",
+   "value": 0.0397,
+   "lo": -0.0302,
+   "hi": 0.107,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s15_text_minus_audio_conflict",
+   "value": -0.0772,
+   "lo": -0.236,
+   "hi": 0.068,
+   "n": 146,
+   "n_speakers": 100,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s15_text_minus_audio_agreement",
+   "value": 0.0933,
+   "lo": 0.0157,
+   "hi": 0.1637,
+   "n": 322,
+   "n_speakers": 175,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s20_minus_s15_all468",
+   "value": -0.0346,
+   "lo": -0.0757,
+   "hi": 0.0003,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s20_minus_s15_conflict",
+   "value": 0.101,
+   "lo": 0.027,
+   "hi": 0.1766,
+   "n": 146,
+   "n_speakers": 100,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s20_minus_s15_agreement",
+   "value": -0.0909,
+   "lo": -0.1345,
+   "hi": -0.0518,
+   "n": 322,
+   "n_speakers": 175,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "s20_minus_s15_armgap",
+   "value": 0.1919,
+   "lo": 0.1104,
+   "hi": 0.28,
+   "n": 468,
+   "n_speakers": 228,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "SENS227_s20_conflict",
+   "value": 0.556,
+   "lo": 0.4485,
+   "hi": 0.6723,
+   "n": 146,
+   "n_speakers": 100,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "SENS227_s20_agreement",
+   "value": 0.7078,
+   "lo": 0.6373,
+   "hi": 0.7673,
+   "n": 322,
+   "n_speakers": 175,
+   "nan_draws": 0,
+   "file": ""
+  },
+  {
+   "id": "SENS227_s20_conflict_minus_agreement",
+   "value": -0.1518,
+   "lo": -0.2697,
+   "hi": -0.0275,
+   "n": 468,
+   "n_speakers": 227,
+   "nan_draws": 0,
+   "file": ""
+  }
+ ],
+ "points": {
+  "s20_all": {
+   "mw": 0.662901975978303,
+   "trap": 0.662901975978303,
+   "agree4dp": 1.0
+  },
+  "s20_conflict": {
+   "mw": 0.555995599559956,
+   "trap": 0.555995599559956,
+   "agree4dp": 1.0
+  },
+  "s20_agreement": {
+   "mw": 0.7077614671599634,
+   "trap": 0.7077614671599635,
+   "agree4dp": 1.0
+  },
+  "s15_all": {
+   "mw": 0.6974622239442076,
+   "trap": 0.6974622239442076,
+   "agree4dp": 1.0
+  },
+  "s15_conflict": {
+   "mw": 0.455005500550055,
+   "trap": 0.455005500550055,
+   "agree4dp": 1.0
+  },
+  "s15_agreement": {
+   "mw": 0.7986633249791144,
+   "trap": 0.7986633249791144,
+   "agree4dp": 1.0
+  },
+  "aud_all": {
+   "mw": 0.6577683068578071,
+   "trap": 0.6577683068578071,
+   "agree4dp": 1.0
+  },
+  "aud_conflict": {
+   "mw": 0.5322332233223322,
+   "trap": 0.5322332233223322,
+   "agree4dp": 1.0
+  },
+  "aud_agreement": {
+   "mw": 0.7053745474798107,
+   "trap": 0.7053745474798107,
+   "agree4dp": 1.0
+  }
+ },
+ "run_to_run": {
+  "pearson": 0.7640428334457864,
+  "spearman": 0.7876013958023609,
+  "max_abs_diff": 0.6147191253562249,
+  "max_clip": "conflict_Dem_368-0_5232.wav",
+  "mean_abs_diff": 0.3019059357754469,
+  "n_gt_01": 460
+ }
+}
