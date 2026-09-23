@@ -1,0 +1,33 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  17%|█▋        | 418/2447 [00:00<00:00, 4159.41it/s]Loading weights:  34%|███▍      | 834/2447 [00:00<00:00, 3868.38it/s]Loading weights:  50%|████▉     | 1223/2447 [00:00<00:00, 3335.83it/s]Loading weights:  65%|██████▍   | 1589/2447 [00:00<00:00, 3408.88it/s]Loading weights:  79%|███████▉  | 1935/2447 [00:00<00:00, 2836.92it/s]Loading weights:  91%|█████████▏| 2233/2447 [00:00<00:00, 2735.06it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 2995.01it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B | tf 5.17.0 torch 2.8.0+cu128 | 275 clips 275 spk | fold 4 train 220 test 55 | mode ctrl300 | recipe ids yes 7414 no 2308 | rule ids [7414, 9454, 9693, 9834, 14004, 14080] [902, 2152, 2308, 2753, 5664, 8996] | audio tok 151646 | fe n_samples 4800000 chunk_length 300 | attn sdpa
+PROBE longest train clip {'pid': '301', 'dur_s': 900.0, 'audio_tok': 7500, 'peak_alloc_gb_no_gc': 53.26, 's': 2.65} -> gradient checkpointing OFF
+PROJ20 ctrl300_fold4 {'mean_step_s': 0.913, 'mean_dur_s_20': 533.6, 'mean_dur_s_train': 592.9, 'proj_train_min_len_weighted': np.float64(11.2), 'proj_train_min_mean': np.float64(10.0), 'proj_eval_min': np.float64(0.3), 'peak_alloc_gb_so_far': 53.33}
+ctrl300_fold4 ep 0 step 55/220 loss_avg 0.4164 last_tok 4187 0.58s peak 53.3 GB 1.2 min
+ctrl300_fold4 ep 0 step 110/220 loss_avg 0.5005 last_tok 7500 1.05s peak 53.3 GB 2.1 min
+ctrl300_fold4 ep 0 step 165/220 loss_avg 0.4679 last_tok 7500 1.06s peak 53.3 GB 2.9 min
+fold 4 epoch 0 loss 0.4587 3.7 min  EPOCH_CKPT
+ctrl300_fold4 ep 1 step 55/220 loss_avg 0.2768 last_tok 7500 1.04s peak 53.3 GB 4.5 min
+ctrl300_fold4 ep 1 step 110/220 loss_avg 0.1918 last_tok 7500 1.08s peak 53.3 GB 5.4 min
+ctrl300_fold4 ep 1 step 165/220 loss_avg 0.2251 last_tok 7500 0.92s peak 53.3 GB 6.2 min
+fold 4 epoch 1 loss 0.2226 7.1 min  EPOCH_CKPT
+ctrl300_fold4 ep 2 step 55/220 loss_avg 0.1717 last_tok 7500 1.02s peak 53.3 GB 8.0 min
+ctrl300_fold4 ep 2 step 110/220 loss_avg 0.1612 last_tok 7500 0.85s peak 53.3 GB 8.8 min
+ctrl300_fold4 ep 2 step 165/220 loss_avg 0.1250 last_tok 7500 0.92s peak 53.3 GB 9.6 min
+fold 4 epoch 2 loss 0.1050 10.5 min  EPOCH_CKPT
+/workspace/sft_whole.py:222: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "host": platform.node(), "date_utc": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"}
+RESULT ctrl300_fold4 fold AUC 0.8043 n=55 train 10.14 min eval 0.47 min peak 53.33 GB gc False
