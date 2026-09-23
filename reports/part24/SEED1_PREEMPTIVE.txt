@@ -1,0 +1,63 @@
+PART24 item 1: seed 1 run pre-emptively on separate pods
+Written 2026-09-23 (UTC ~22:02). Whole-interview projector fine-tune of Qwen2.5-Omni on E-DAIC, 275 windows.
+
+Why
+The p24-ft pods run seed 0 on their fold, and only after that do they rerun seed 1, and only if the fold's
+median Yes+No answer mass is below 0.5. So any seed 1 result would come at least one full fold run late.
+To save time, seed 1 now runs for every fold right away, on 5 separate pods, in parallel with seed 0.
+
+Design
+1. Seed 0: pods p24-ft0..p24-ft4, fold k on p24-ft{k}, unchanged. Driver run_fold24.sh.
+2. Seed 1: pods p24s1-ft0..p24s1-ft4, fold k on p24s1-ft{k}. Same GPU (NVIDIA H200), same image
+   (runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404), same setup (setup.sh: model download, E-DAIC fetch, pip),
+   same smoke gate (smoke24.sh), same window build and fold check, same sft_whole24.py (sha256 ad2cf8c9...),
+   same env (GC=on, CK=55, 3 epochs, AdamW 1e-4, one clip per update, CE on the Yes/No logits, only
+   thinker.audio_tower.proj trained). Driver run_fold24_s1.sh: run_fold24.sh with seed 0 and the mass rule removed.
+   It runs ONLY seed 1 on fold k, with no mass rule.
+   Outputs keep the seed 1 names the driver uses: out/FT_whole_s1_fold{k}_oof.csv, out/FT_whole_s1_fold{k}_oof.sidecar.json,
+   out/FT_whole_s1_fold{k}.RESULT. The sidecar has an extra field "note": "seed 1 run pre-emptively on a separate pod,
+   in parallel with seed 0, to save time; same scripts and seed rule". p_yes, answer_mass and audio_tok for every test
+   clip are in the oof csv and were also printed to the pod logs.
+3. The seed rule is unchanged. The reported result uses seed 1 only for folds whose seed 0 median answer mass is
+   below 0.5 (the value in out/MASS_CHECK_fold{k}.txt on the p24-ft pod). For the other folds, the seed 1 result
+   from the p24s1 pod is kept and labelled extra. It is not used in the reported number.
+4. Where a p24-ft pod also reruns seed 1 on the pod itself (its fold's seed 0 median mass < 0.5), that fold has two
+   seed 1 runs: the p24-ft run and the p24s1 run. Same script, same seed, same data, so the two are a reproducibility
+   check. They are expected to agree closely. They may not be bit identical (different GPU hosts, bf16 kernels).
+
+Pods (rented 2026-09-23 ~21:58 UTC, $4.59/h each)
+p24s1-ft0 upxh3jpyejobaj fold 0
+p24s1-ft1 m247ew61mba847 fold 1
+p24s1-ft2 k103oyzyuaq1q5 fold 2
+p24s1-ft3 qorrblzhksj9cx fold 3
+p24s1-ft4 ur0k9hkng1o6ic fold 4
+
+Shutdown
+watchdog24.sh re-reads its pod list on every loop, so the 5 p24s1 lines were appended to that list (the 5 p24-ft
+lines were not touched). The same watchdog pulls each p24s1 pod into a tar file plus an extracted folder
+when /workspace/ALL_DONE exists, checks the file count and the result file sha256, and then deletes the pod.
+On-pod backstop: guard24.sh (the PART24 guard) stops the pod if ALL_DONE is older than 30 min, or idle 40 min, or after 5 h.
+
+Files
+scripts/part24/pod/                    stage scripts, the same on every pod (sha256 checked against the pod and the stage list)
+scripts/part24/pod/run_fold24_s1.sh    seed 1 driver
+scripts/part24/pod/launch24_s1.sh      upload and start script
+scores/part24/pods/p24s1-ft{k}/        per fold outputs pulled from each pod (after the run)
+The pod create requests and responses, the upload sha lists and the launch log stay on the authors' machine.
+
+Outcome (added 2026-09-23 ~22:50 UTC; numbers read from the pulled files, NOT yet independently verified)
+Seed 0 (p24-ft pods, out/MASS_CHECK_fold{k}.txt): median answer mass fold 0..4 = 0.9939, 0.9934, 0.9972, 0.9979, 0.9970.
+All are >= 0.5, so the seed rule reran seed 1 on no fold. The p24-ft pods ran seed 0 only.
+So all 5 seed 1 results below are labelled EXTRA and are not used in the reported number, and no fold has a second
+seed 1 run, so there is no reproducibility pair.
+Seed 1 (p24s1 pods), fold AUC on p_yes (two-logit), AUC on p_yes_set, median answer mass, n=55 each:
+  fold 0  0.9225  0.9167  0.9946
+  fold 1  0.8117  0.7950  0.9947
+  fold 2  0.8400  0.8350  0.9963
+  fold 3  0.8421  0.8217  0.9962
+  fold 4  0.8353  0.8566  0.9960
+All 5: one attempt, 0 checkpoint restarts, sft_whole24.py sha256 ad2cf8c9... (unchanged), CUT_SHA identical to PART23,
+fold check 275/275, smoke OK. On folds 1 and 4 the smoke started in the same second the driver passed the smoke gate
+(pip finished after the fetch), so smoke ran beside the start of the seed 1 run. Smoke passed and wrote only to smoke_out.
+This race is in the original run_fold24.sh too.
+Pulls: 54 files each, count and result sha256 matched. All 5 pods deleted (HTTP 204, REST 404 after).

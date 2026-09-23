@@ -1,0 +1,34 @@
+{
+ "what": "sidecar for FT24_values.tsv",
+ "bootstrap_rule": "2000 draws; each cell a fresh numpy default_rng(0); idx = rng.choice(N, size=N, replace=True) over speakers (speakers in sorted string order; E-DAIC: one clip = one speaker); 2.5 and 97.5 percentiles (numpy default linear); draws with a single class are skipped and counted; paired = both terms use the same idx",
+ "auc_rule": "sklearn.metrics.roc_auc_score",
+ "usable_draws": {
+  "seed0_pooled_oof_auc": 2000,
+  "seed0_ft_minus_zs_whole_paired": 2000,
+  "seed0_fold0_auc": 2000,
+  "seed0_fold1_auc": 2000,
+  "seed0_fold2_auc": 2000,
+  "seed0_fold3_auc": 2000,
+  "seed0_fold4_auc": 2000,
+  "ref_zs_whole_auc": 2000,
+  "extra_seed1all_pooled_oof_auc": 2000,
+  "extra_seed1all_ft_minus_zs_whole_paired": 2000,
+  "extra_seed1all_fold0_auc": 2000,
+  "extra_seed1all_fold1_auc": 2000,
+  "extra_seed1all_fold2_auc": 2000,
+  "extra_seed1all_fold3_auc": 2000,
+  "extra_seed1all_fold4_auc": 2000
+ },
+ "zero_shot_file": [
+  "<local data dir>/part23/pull/p23-a-probes/p23a/out/A2_edaic_whole_zeroshot_perclip.csv",
+  "e13f360198811ff3061a222d9d9862aadc7a5de730f4e793f59b1139094e0e30"
+ ],
+ "zero_shot_column": "p_yes_whole (np.float64(...) wrappers stripped)",
+ "seed_rule_folds_triggered": [],
+ "seed1_repro_max_abs_p_yes_diff_onpod_vs_preemptive": {},
+ "built_by": [
+  "scripts/part24/FT/build_ft24.py",
+  "4476e4f481090ed19c3c2acf3d7043d81da8030e3cafb4bb9cb237393c1db69e"
+ ],
+ "date_utc": "2026-09-23T22:44:57+00:00"
+}
