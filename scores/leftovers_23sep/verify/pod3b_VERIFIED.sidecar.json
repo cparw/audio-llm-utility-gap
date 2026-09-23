@@ -1,0 +1,128 @@
+{
+ "task": "independent verifier for leftovers_23sep pod3b",
+ "values_file": "pod3b_VERIFIED.tsv (17 ids, 17 yes)",
+ "independence": "own code only (scripts/vf_*.py, mac/vf_*.py); none of the pod3b scripts were run or imported. Definitions taken from the original POD3 direction_by_arm.py (md5 c46cf7dba5959dcee2cf29808bf3243e) and the tie-order partition rule described in pod3b's sidecar. Own lm_head route (parallel HTTP range reads, own bf16 parse), own softmax (scipy logsumexp), own AUC (sklearn roc_auc_score), own fold builder (stable greedy rule, asserted equal to sklearn 1.9.1 GroupKFold on all 3 arms), own bootstrap. Shared by definition: StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced').",
+ "inputs": {
+  "states": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_pitt_states.npz md5 6e741712b3635ce4c364d03e758638ca (ans[:,-1,:], sha256 of float32 X bytes eab5dd4b...aa803f)",
+  "pod3_per_clip": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz md5 83eb2852fd97a69ce7b7d131a30de119",
+  "manifest": "<local data dir>/release_from_mac/session_scratch/p16/mf_pitt468_pod.csv md5 49bed3e3336c1725c2d9af879cb739b0 (set column equals clip name prefix on 468/468)",
+  "lm_head": {
+   "repo": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+   "rev": "26291f793822fb6be9555850f06dfe95f2d7e695",
+   "shard": "model-00013-of-00015.safetensors",
+   "tensor": "thinker.lm_head.weight",
+   "dtype": "BF16",
+   "shape": [
+    152064,
+    2048
+   ],
+   "data_offsets": [
+    1531734528,
+    2154588672
+   ],
+   "header_len": 366744,
+   "sha256_bf16_bytes": "ef1c824486f6f733cb2479d50b43ca4b4dba940f310b377c89a038be5955210b",
+   "nbytes": 622854144
+  }
+ },
+ "bootstrap": "2000 draws, fresh default_rng(0) per cell, idx=rng.choice(N,size=N,replace=True) over np.unique speaker ids, 2.5/97.5 percentiles, paired",
+ "env_pod": {
+  "python": "3.12.3",
+  "sklearn": "1.9.1",
+  "numpy": "2.1.2",
+  "scipy": "1.18.1",
+  "machine": "x86_64"
+ },
+ "env_pod_sk172": {
+  "sklearn": "1.7.2",
+  "file": "/opt/sk172/sklearn/__init__.py",
+  "numpy": "2.1.2"
+ },
+ "cpu_pod_main": "model name\t: AMD EPYC 7713P 64-Core Processor",
+ "env_mac": "1.7.2 sklearn / numpy 2.2.6 / arm64",
+ "notes": [
+  "All 17 ids reproduce at 4 dp, including every bootstrap interval.",
+  "Only nuance: the task's pod OOF matches POD3's saved OOF to 5.8e-8 (checked from its perclip file). My own Linux refit matches POD3 to 1.6e-6, and matches the Mac fit to 6e-8. So the 6e-8 agreement is specific to the task's pod run; it does not change any AUC (identical to 16 digits).",
+  "sklearn 1.7.2 GroupKFold on Linux x86 (AMD EPYC 7713P, no AVX-512) gave the same folds as the task's lo-pod3b-2 on all 3 arms. The value could differ on other CPUs because that version uses an unstable sort.",
+  "Stable-sort change checked two ways: tagged GitHub source of sklearn/model_selection/_split.py (1.7.2 and 1.8.0 np.argsort(n_samples_per_group); 1.9.0 and 1.9.1 kind='stable') and GitHub PR 28464 record (title 'GroupKFold: Use stable sort to produce consistent splits across installs', merged 2026-04-06)."
+ ],
+ "pods": [
+  {
+   "name": "vf-pod3b-1",
+   "id": "kqzalkqq615j8x",
+   "role": "main: lm_head, cosines, floor, probe, auc_d, without-d, CIs, Mac-fold refit, sklearn 1.7.2 Linux folds",
+   "created_utc": "22:58:12",
+   "deleted_utc": "23:03:42 manual"
+  },
+  {
+   "name": "vf-pod3b-2",
+   "id": "sjytpez7o8qrpw",
+   "role": "spread all 200",
+   "created_utc": "22:58:12",
+   "deleted_utc": "23:03:14 manual"
+  },
+  {
+   "name": "vf-pod3b-3",
+   "id": "0nwhf31il7ubyb",
+   "role": "spread conflict 200",
+   "created_utc": "22:58:12",
+   "deleted_utc": "23:02:41 manual"
+  },
+  {
+   "name": "vf-pod3b-4",
+   "id": "hdmleubtb57i7n",
+   "role": "spread agreement 200",
+   "created_utc": "22:58:12",
+   "deleted_utc": "23:02:25 manual"
+  }
+ ],
+ "pods_all_404_after": true,
+ "cost_estimate_usd": 0.31,
+ "cost_note": "4 CPU pods at $0.96/h, about 19 pod-minutes from creation to deletion; not from billing",
+ "watchdog": "watchdog_vf.sh (part24/watchdog24.sh with this pods.txt and pull dir, GPU forced 0, sha check on out/*.csv and out/*.json); tested once, run detached, exited on its own at 23:04:25Z after all 4 pods were gone",
+ "files": {
+  "pod3b_vf/pods.txt": "5ec0355eb2043708f4890596da681da1bfcf863f405e4cf690fe541cd741b5de",
+  "pod3b_vf/manual_actions.log": "d556b3df14d6270575ca78a118dfb1a313ab55145b737ca21b66941cbb67fddf",
+  "pod3b_vf/watchdog_vf.sh": "54c726294c703853df6b468548a7246dbb32c79aaf29c9d06f9474a66892f33a",
+  "pod3b_vf/watchdog_vf.log": "5e4d1f304ce8ebcceac5725c119cc632fe274c16ad8302520fd2955c3755e4fb",
+  "pod3b_vf/watchdog_test_once.log": "2c96c433d23e823248a23585a0e013aa65f6f3a7d4e1ebbd9802cb4d38392df3",
+  "pod3b_vf/mac/vf_prep.py": "96993219fe6f95cbf022470908da3152f2264623b53fe22c00a533dcddd4c018",
+  "pod3b_vf/mac/vf_prep.json": "50d0fe65016d05a3236f6aaef5a4b553e34b36f52d1fc7573b8a3aa30cd7a04c",
+  "pod3b_vf/mac/vf_inputs.npz": "384e80e21a07a10b0a13eadf79fae940cad2a4c35b308e9a365f3a5123e62335",
+  "pod3b_vf/mac/vf_mac_diag.py": "875e17f8eefdfda182343862c7d64931bf6fdb72947a374da8edbfcc1913e601",
+  "pod3b_vf/mac/vf_mac_diag.json": "f24e8491c99e865fc1ba5ffa37fb81ec45d76613517e3d91a186cd4bcfac46da",
+  "pod3b_vf/mac/pull_delete.sh": "431a2f4d5878cd4274107ed82b285c039eb698c0c837b7725510977665da23e2",
+  "pod3b_vf/scripts/vf_lmh.py": "a27715d6ad6ea45733aa346c881804fbea6ddeaf1a64981bfd5d79624f290f2a",
+  "pod3b_vf/scripts/vf_common.py": "c259784cc63ca60e778a1c5ea4a7b6b65c4f9b574a37c051dc064d1124675c03",
+  "pod3b_vf/scripts/vf_main.py": "d83b12b69923c0cb8301d475e8641d5610cb3fbb97fa1b7472ae5d1aaff5f448",
+  "pod3b_vf/scripts/vf_spread.py": "e12299f7a94c36196697da3653acb1be93f340227600cec86cd2a6c0c5489313",
+  "pod3b_vf/pull/vf-pod3b-1/out/SHA256SUMS.txt": "98d8e9d979d37e5ac12590c4c2169e06ad26730949e2deae1d299cb7ae6b1ec2",
+  "pod3b_vf/pull/vf-pod3b-1/out/lmh_meta.json": "8bc51f3e12ca9b87efcfc0c9d3210c3ff792ca6a3f84a13abbaea5ce18f01851",
+  "pod3b_vf/pull/vf-pod3b-1/out/lscpu.txt": "7cde39ef146165ebfc491d25c97403076439bc4503c9df27afb821bc10693ee0",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_W_yesno_rows.npy": "9b5a2df588f470737bcb65ffbe341bb52eb28591f58e19d7615868d221d8bc8c",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_agreement_d_fp16.npy": "0d478a080f14d665ccc1dc6da30e32b4ed7704dd1b147d8f9be84b452cdde894",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_agreement_w.npy": "195da60e6ea06594b456e9e5995f56002a61bb5ab093c290c2c6c23f1d93d569",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_all_d_fp16.npy": "266edca931f833fef52f5edec7f000bad820f4dbe4df93a40fa64bf852414c5c",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_all_w.npy": "d683666e569aa2f0d36b51d67dce33c9e61474a5fd255c43ec7bc5c2e0f5dbd8",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_conflict_d_fp16.npy": "295c31751f3ca44419c932eb4b48b050e04ffe16e4cb58105e296a38f666ea86",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_conflict_w.npy": "b76ae3fea23d445338dca0b2a7483abcf9e241addc20cfd44a3106326f83e87f",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_main.json": "d112adc4605916f4f3514cc01c2fcb8aab62a1ab9e16767f515c5d4dfcd28373",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_main_perclip.csv": "c6ba0d6a43c58d9284b7423cc7df2c3b0e6e8c2c65f604f306b6448606b680b5",
+  "pod3b_vf/pull/vf-pod3b-1/out/vf_sk172_linux_folds.json": "dc318f09207dc61bf2f587157ff728953dd1164a0940e234e878a9be3571802e",
+  "pod3b_vf/pull/vf-pod3b-2/out/SHA256SUMS.txt": "6f944366dd603e6313d389e5a6f36b24341ebb3eefa1beb15a4b79bbf313b6ad",
+  "pod3b_vf/pull/vf-pod3b-2/out/lmh_meta.json": "8bc51f3e12ca9b87efcfc0c9d3210c3ff792ca6a3f84a13abbaea5ce18f01851",
+  "pod3b_vf/pull/vf-pod3b-2/out/lscpu.txt": "89e5a8f100c1bf985c6bfd279cd9afab70f067c27acff3d932f8b6acf867e792",
+  "pod3b_vf/pull/vf-pod3b-2/out/vf_spread_all_0_200.csv": "ccb7b13a16a4b167b4a2af290aa341659d94858f8aba90a1e0a1a642137801b6",
+  "pod3b_vf/pull/vf-pod3b-2/out/vf_spread_all_0_200.json": "6027a6d7cc3c5f41d842581a848934f6d81d8f949e0af7609e6b6215eb7bd458",
+  "pod3b_vf/pull/vf-pod3b-3/out/SHA256SUMS.txt": "1bc76287f1002fe1bfeaecdc939c6051dbbf40e0f10d65d6abc514c4c9e23118",
+  "pod3b_vf/pull/vf-pod3b-3/out/lmh_meta.json": "8bc51f3e12ca9b87efcfc0c9d3210c3ff792ca6a3f84a13abbaea5ce18f01851",
+  "pod3b_vf/pull/vf-pod3b-3/out/lscpu.txt": "89e5a8f100c1bf985c6bfd279cd9afab70f067c27acff3d932f8b6acf867e792",
+  "pod3b_vf/pull/vf-pod3b-3/out/vf_spread_conflict_0_200.csv": "658acd839889948adb9ace30f09cd27ec3373a320df4c7e6aaaae55df7903eb8",
+  "pod3b_vf/pull/vf-pod3b-3/out/vf_spread_conflict_0_200.json": "21754073a569a4902de4881bb536b94eb2aebdfc5a043989efd5515a626053af",
+  "pod3b_vf/pull/vf-pod3b-4/out/SHA256SUMS.txt": "0a39a7e35252625d494388c2a8dad37bf75b36cb01fa751351d674034c63f040",
+  "pod3b_vf/pull/vf-pod3b-4/out/lmh_meta.json": "8bc51f3e12ca9b87efcfc0c9d3210c3ff792ca6a3f84a13abbaea5ce18f01851",
+  "pod3b_vf/pull/vf-pod3b-4/out/lscpu.txt": "9d3f86aaaf2b1e52171bb739fb2dfb2b42a6f3c6e9fb56850c4d36f31edc55d7",
+  "pod3b_vf/pull/vf-pod3b-4/out/vf_spread_agreement_0_200.csv": "2a03222f52d5933956d464bf90aaeb5eb59d2e5e3deed094fcb909825dccb5bd",
+  "pod3b_vf/pull/vf-pod3b-4/out/vf_spread_agreement_0_200.json": "4f52e27fd1e34becdb54149a10c3ed4cd441109e67792f15f39a1a711df1ecb7"
+ }
+}

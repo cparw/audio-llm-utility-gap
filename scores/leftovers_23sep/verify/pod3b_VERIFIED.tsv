@@ -1,0 +1,18 @@
+id	claimed	recomputed	verified
+3b_all_cosine	0.0051 (0.005109)	0.0051 (0.005109); lm_head fp16-rounded as POD3 dumped it; own range read of shard 13	yes
+3b_all_cosine_bf16exact	0.0051 (0.005109); differs from fp16 by <1e-9	0.0051 (0.005109); fp16 minus bf16 = 1.8e-10	yes
+3b_conflict_cosine / 3b_agreement_cosine	-0.0067 / 0.0086 (-0.006677 / 0.008638)	-0.0067 / 0.0086 (-0.006677 / 0.008638)	yes
+3b_all_cosine_random_floor	0.0177 [0.0008, 0.0498]	0.0177 (0.017666) [0.0008, 0.0498]	yes
+3b_all_auc_probe_oof	0.8307 [0.7833, 0.8741]; OOF within 6e-8 of POD3	0.8307 (0.830686) [0.7833, 0.8741]; task OOF file vs POD3 q3o_perp_cols 5.8e-08; my own Linux refit vs POD3 1.6e-06 (same AUC to 16 digits)	yes
+3b_all_auc_d	0.7656 [0.7088, 0.8179]	0.7656 (0.765633) [0.7088, 0.8179]; X.d vs POD3 proj_d 1.4e-06	yes
+3b_all_auc_probe_without_d	0.8305 [0.7826, 0.8737] train z / 0.8276 [0.7795, 0.8696] held-out z	0.8305 [0.7826, 0.8737] / 0.8276 [0.7795, 0.8696]	yes
+3b_conflict_auc_probe_oof / 3b_agreement_auc_probe_oof	0.6145 [0.5021, 0.7246] / 0.9349 [0.9034, 0.9614]	0.6145 [0.5021, 0.7246] / 0.9349 [0.9034, 0.9614]	yes
+3b_conflict/agreement_auc_probe_without_d_trainz	0.6196 [0.5094, 0.7283] / 0.9341 [0.9021, 0.9604]; held-out z 0.6158 / 0.9326	0.6196 [0.5094, 0.7283] / 0.9341 [0.9021, 0.9604]; held-out z 0.6158 / 0.9326	yes
+refit_all_macfolds_linuxfit	0.7864 [0.7335, 0.8359]; conflict 0.5520, agreement 0.9314	0.7864 (0.786362) [0.7335, 0.8359]; conflict 0.5520, agreement 0.9314; Mac folds rebuilt with my own sklearn 1.7.2 call equal mac_folds.npz on all 3 arms	yes
+mac_all_macfit_linuxfolds	0.8307; Mac OOF within 1.7e-6 of the pod's	0.8307 (0.830686); Mac OOF vs task pod OOF 1.6e-06, vs POD3 saved OOF 1.7e-06; conflict 0.6145, agreement 0.9349	yes
+folds_all_speakers_new_foldmates	228 of 228; 8 distinct clip counts; sklearn 1.9.0 made the GroupKFold sort stable (PR 28464)	228 of 228 (conflict 100 of 100, agreement 175 of 175); 8 distinct counts (1,2,3,4,5,6,7,9), 112 single-clip speakers; my stable-rule fold builder equals sklearn 1.9.1 GroupKFold on all 3 arms; tagged source: 1.7.2 and 1.8.0 use np.argsort(n_samples_per_group), 1.9.0 and 1.9.1 add kind='stable'; GitHub PR 28464 'GroupKFold: Use stable sort...' merged 2026-04-06	yes
+refit_all_sk172rule_on_linux	0.7973	0.7973 (0.797346); real sklearn 1.7.2 GroupKFold on Linux x86 (AMD EPYC 7713P, numpy 2.1.2); its folds equal the task's lo-pod3b-2 folds and differ from both the Mac folds and the 1.9.1 folds; conflict 0.6213, agreement 0.9259	yes
+spread_all_auc_mean	0.8033 (sd 0.0122; range 0.7713 to 0.8414) [0.7786, 0.8244]; 2 of 200 reach 0.8307; 17 of 200 at or below 0.7864	0.8033 (sd 0.0122; range 0.7713 to 0.8414) [0.7786, 0.8244]; 2 of 200 at or above 0.8307; 17 of 200 at or below 0.7864	yes
+spread_all_cosine_range	0.0023 to 0.0090; none above 0.0498	0.0023 to 0.0090; 0 of 200 above 0.0498	yes
+spread_all_wo_mean	0.8061 (train z) / 0.7998 (held-out z); mean change -0.0029 / +0.0034	0.8061 / 0.7998; probe minus without-d mean -0.0029 / +0.0034	yes
+lmh_sha256_bf16	ef1c824486f6f733cb2479d50b43ca4b4dba940f310b377c89a038be5955210b; X.d matches POD3 proj_d to 1.4e-6	ef1c824486f6f733cb2479d50b43ca4b4dba940f310b377c89a038be5955210b (own range read, rev 26291f79, shard 13, offsets [1531734528, 2154588672]); X.d vs POD3 proj_d 1.4e-06; my 10 Yes/No rows equal the task's saved W_yes/W_no after fp16 rounding	yes
