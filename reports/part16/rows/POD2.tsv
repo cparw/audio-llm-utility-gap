@@ -1,0 +1,25 @@
+id	what	value	lo	hi	n	n_spk	file
+P16.POD2.V1	Qwen2.5-Omni Pitt projector-FT OOF AUC (recomputed from paper file, rank formula)	0.7673	0.7086	0.8231	468	228	<local data dir>/Desktop/release/omni_final/omnisft_pitt_oof.csv
+P16.POD2.V2	Qwen2.5-Omni Pitt zero-shot AUC (recomputed from paper file, rank formula)	0.6578	0.6033	0.7125	468	228	<local data dir>/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv
+P16.POD2.V3	projector-FT conflict-arm AUC (recomputed)	0.5189	0.4151	0.6300	146	100	<local data dir>/Desktop/release/omni_final/omnisft_pitt_oof.csv
+P16.POD2.V4	projector-FT agreement-arm AUC (recomputed)	0.8593	0.8063	0.9069	322	175	<local data dir>/Desktop/release/omni_final/omnisft_pitt_oof.csv
+P16.POD2.V5	projector-FT paired conflict-minus-agreement	-0.3404	-0.4468	-0.2262	468	228	<local data dir>/Desktop/release/omni_final/omnisft_pitt_oof.csv
+P16.POD2.X1	PRE-EXISTING LoRA(r8,qkvo) Pitt OOF AUC, recomputed from file	0.8202	0.7690	0.8679	468	228	<local data dir>/Desktop/release/omni_final/abl_pitt_oof.csv
+P16.POD2.X2	PRE-EXISTING LoRA conflict-arm AUC, recomputed	0.5884	0.4680	0.7093	146	100	<local data dir>/Desktop/release/omni_final/abl_pitt_oof.csv
+P16.POD2.X3	PRE-EXISTING LoRA agreement-arm AUC, recomputed	0.9011	0.8592	0.9386	322	175	<local data dir>/Desktop/release/omni_final/abl_pitt_oof.csv
+P16.POD2.X4	PRE-EXISTING LoRA paired conflict-minus-agreement	-0.3126	-0.4294	-0.1911	468	228	<local data dir>/Desktop/release/omni_final/abl_pitt_oof.csv
+P16.POD2.P1	LoRA r8 a16 d0.05 on q,k,v,o of all 28 LM layers: trainable params	5046272			468	228	scores/part16/POD2/lora_pitt_params.json
+P16.POD2.P2	LoRA trainable as % of full Qwen2.5-Omni-7B (10732225408 params)	0.04702			468	228	scores/part16/POD2/lora_pitt_params.json
+P16.POD2.P3	projector-only (thinker.audio_tower.proj) trainable params	4591104			468	228	scores/part16/POD2/lora_pitt_params.json
+P16.POD2.P4	projector trainable as % of full Qwen2.5-Omni-7B	0.042779			468	228	scores/part16/POD2/lora_pitt_params.json
+P16.POD2.L1	POD2 fresh LoRA(r8,a16,d0.05,qkvo all 28 LM layers) Qwen2.5-Omni Pitt OOF AUC	0.8250	0.7735	0.8729	468	228	scores/part16/POD2/lora_pitt_oof.csv
+P16.POD2.L2	POD2 fresh LoRA OOF AUC, conflict arm	0.5520	0.4348	0.6833	146	100	scores/part16/POD2/lora_pitt_oof.csv
+P16.POD2.L3	POD2 fresh LoRA OOF AUC, agreement arm	0.9199	0.8846	0.9513	322	175	scores/part16/POD2/lora_pitt_oof.csv
+P16.POD2.L4	POD2 fresh LoRA paired conflict-minus-agreement	-0.3679	-0.4861	-0.2433	468	228	scores/part16/POD2/lora_pitt_oof.csv
+P16.POD2.L5	POD2 LoRA training wall-clock, min per fold (0..4)	4.13;4.07;4.05;4.03;4.00			468	228	scores/part16/POD2/lora_pitt_lora.json
+P16.POD2.L6	POD2 LoRA peak GPU memory allocated, GB	21.013			468	228	scores/part16/POD2/lora_pitt_lora.json
+P16.POD2.L7	POD2 fresh LoRA OOF AUC using the paper multi-variant p_yes (Yes/yes/YES vs No/no/NO, bare+leading-space)	0.8220	0.7702	0.8711	468	228	scores/part16/POD2/lora_pitt_oof.csv
+P16.POD2.L8	POD2 fresh LoRA median answer_mass at the first answer position	0.998774			468	228	scores/part16/POD2/lora_pitt_oof.csv
+P16.POD2.D1	paired delta: LoRA OOF AUC minus projector-FT OOF AUC (same 468 clips, same speakers)	0.0577	0.0154	0.1044	468	228	scores/part16/POD2/lora_pitt_oof.csv + omni_final/omnisft_pitt_oof.csv
+P16.POD2.D2	paired delta: LoRA OOF AUC minus zero-shot AUC	0.1672	0.1071	0.2264	468	228	scores/part16/POD2/lora_pitt_oof.csv + omni_final/omni_pitt_zeroshot_scores.csv
+P16.POD2.D3	paired delta: projector-FT AUC minus zero-shot AUC (both read-only paper files)	0.1095	0.0454	0.1728	468	228	omni_final/omnisft_pitt_oof.csv + omni_final/omni_pitt_zeroshot_scores.csv

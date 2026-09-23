@@ -1,0 +1,47 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 2122.84it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 291/2447 [00:00<00:00, 2881.43it/s]Loading weights:  24%|██▎       | 580/2447 [00:00<00:01, 1212.34it/s]Loading weights:  31%|███       | 750/2447 [00:00<00:01, 1043.34it/s]Loading weights:  40%|████      | 989/2447 [00:00<00:01, 1344.76it/s]Loading weights:  79%|███████▉  | 1935/2447 [00:00<00:00, 3314.25it/s]Loading weights:  98%|█████████▊| 2387/2447 [00:01<00:00, 2466.77it/s]Loading weights: 100%|██████████| 2447/2447 [00:01<00:00, 2101.74it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+LM layers 28 | LoRA target modules 112 | prefix model.layers
+PARAMCOUNTS {"model_id": "Qwen/Qwen2.5-Omni-7B", "total_params_full_model": 10732225408, "total_params_thinker_audio_plus_lm": 8255263744, "lora_trainable_params": 5046272, "lora_pct_of_full_model": 0.04702, "lora_pct_of_thinker": 0.061128, "projector_trainable_params": 4591104, "projector_module": "Linear", "projector_pct_of_full_model": 0.042779, "projector_pct_of_thinker": 0.055614, "lm_layers": 28, "lora_target_modules": 112, "rank": 8, "alpha": 16, "dropout": 0.05}
+YES=7414 NO=2308 YES_SET=[7414, 9454, 9693, 9834, 14004, 14080] NO_SET=[902, 2152, 2308, 2753, 5664, 8996]
+468 clips, 228 speakers, folds loaded from /workspace/p16/pitt468_folds.csv
+PROBE 50 steps: 0.232 s/step -> projected 23.6 min for all 5 folds (3 ep x 374 clips + 94 eval each)
+fold 0 epoch 0 loss 0.5891 1.3 min
+fold 0 epoch 1 loss 0.3937 2.6 min
+fold 0 epoch 2 loss 0.2958 3.8 min
+fold 0 done 4.13 min, 1122 steps, peak 21.011 GB, total 4.1 min
+PROBE 50 steps: 0.209 s/step -> projected 21.1 min for all 5 folds (3 ep x 374 clips + 94 eval each)
+fold 1 epoch 0 loss 0.6164 5.4 min
+fold 1 epoch 1 loss 0.4621 6.7 min
+fold 1 epoch 2 loss 0.3087 8.0 min
+fold 1 done 4.07 min, 1122 steps, peak 21.013 GB, total 8.2 min
+PROBE 50 steps: 0.200 s/step -> projected 20.3 min for all 5 folds (3 ep x 374 clips + 94 eval each)
+fold 2 epoch 0 loss 0.6706 9.5 min
+fold 2 epoch 1 loss 0.4492 10.7 min
+fold 2 epoch 2 loss 0.3247 12.0 min
+fold 2 done 4.05 min, 1122 steps, peak 21.013 GB, total 12.3 min
+PROBE 50 steps: 0.203 s/step -> projected 20.6 min for all 5 folds (3 ep x 375 clips + 93 eval each)
+fold 3 epoch 0 loss 0.6048 13.5 min
+fold 3 epoch 1 loss 0.4546 14.8 min
+fold 3 epoch 2 loss 0.3281 16.1 min
+fold 3 done 4.03 min, 1125 steps, peak 21.013 GB, total 16.3 min
+PROBE 50 steps: 0.203 s/step -> projected 20.6 min for all 5 folds (3 ep x 375 clips + 93 eval each)
+fold 4 epoch 0 loss 0.6098 17.6 min
+fold 4 epoch 1 loss 0.4502 18.8 min
+fold 4 epoch 2 loss 0.3277 20.1 min
+fold 4 done 4.0 min, 1125 steps, peak 21.013 GB, total 20.3 min
+WROTE lora_pitt_oof.csv  total 20.3 min
