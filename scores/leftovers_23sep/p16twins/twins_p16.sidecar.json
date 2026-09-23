@@ -1,0 +1,151 @@
+{
+ "task": "p16twins: independent twins for the PART 16 values the 23 Sep audit (status_audit_23sep/audit_p16.md item 6) found with no twin (25) or flagged verified while the twin disagrees (14), plus the M7 Pitt gap twin and the POD4 4b descriptives twins; the other values the audit twinned only in its own recompute (M3 4, M7 rep5 2, M7 fix 2, M9 sweep min 1) are also saved",
+ "date_utc": "2026-09-23T22:36:10Z",
+ "outputs": {
+  "per_value_tsv": "scores/leftovers_23sep/p16twins/twins_p16.tsv",
+  "verifier_tsv": "scores/leftovers_23sep/p16twins/verify_twins.tsv",
+  "M7_gap_twin": "scores/leftovers_23sep/p16twins/M7_pitt_gap_twin.tsv",
+  "M7_gap_twin_perclip": "scores/leftovers_23sep/p16twins/M7_pitt_gap_twin_perclip.csv",
+  "POD4_4b_descriptives_twin": "scores/leftovers_23sep/p16twins/POD4_4b_descriptives_twin.tsv",
+  "pod_pulls": "<local data dir>/leftovers_23sep/p16twins/pull/",
+  "mac_outputs": "<local data dir>/leftovers_23sep/p16twins/mac/",
+  "scripts": "scripts/leftovers_23sep/p16twins/"
+ },
+ "summary": {
+  "rows": 64,
+  "value_match_4dp": 64,
+  "rows_with_ci": 40,
+  "ci_match_4dp": 40,
+  "kinds": {
+   "extra": 10,
+   "log twin (second record, not a recompute)": 10,
+   "recompute": 44
+  },
+  "verifier_checks": 122,
+  "verifier_agree": 122
+ },
+ "columns": {
+  "id": "PART 16 fragment row id",
+  "original": "value in the PART 16 fragment row (rows/*.tsv; SEED14 from SEED_ROWS.md)",
+  "recomputed": "this run's independent value, 4 dp (2 dp for pardur, integers for counts)",
+  "match_4dp": "yes when both print the same at that precision",
+  "file": "where the recomputed value is saved",
+  "original_ci / recomputed_ci / ci_match_4dp": "2.5 and 97.5 percentile speaker bootstrap bounds",
+  "kind": "recompute, log twin (a second record, not a recompute), or extra (already twinned; kept as a pipeline check)",
+  "audit_item": "the audit item the row closes",
+  "how": "what was computed",
+  "recomputed_full": "unrounded value"
+ },
+ "bootstrap": "2000 draws; a fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over the sorted unique speaker ids; 2.5 and 97.5 percentiles; paired = the same idx for both quantities; draws with one class are skipped (none were)",
+ "auc": "tie-averaged rank formula (scipy rankdata); the verifier recomputes with sklearn.metrics.roc_auc_score",
+ "independence": "all twin code written for this run (scripts/twin_*.py, twin_mac_perclip.py); none of the PART 16 scripts were imported or copied. The verifier (scripts/verify_twins.py) is separate code with a different AUC routine; it also re-reads every original from summary_all.csv",
+ "environments": {
+  "pods": "7 RunPod CPU pods lo-p16twins-1..7 (32 vCPU, cpu3c, $0.96/h each), image runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404, Python 3.12.3, scikit-learn 1.9.1, numpy 2.1.2, scipy 1.18.1; pod 3 CPU AMD EPYC 9965 (OpenBLAS SkylakeX AVX512 kernel). All deleted 22:20 to 22:34 UTC (pod_deletions.log, watchdog.log); total about 153 pod-minutes, about $2.45",
+  "mac": "/usr/local/bin/python3 3.10.2, scikit-learn 1.7.2, numpy 2.2.6, scipy 1.15.3 (used for per-clip recomputes and for the M5 refit, since M5 itself ran on this Mac)"
+ },
+ "lm_heads": {
+  "Qwen3-Omni-30B-A3B-Instruct": {
+   "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+   "revision": "26291f793822fb6be9555850f06dfe95f2d7e695",
+   "key": "thinker.lm_head.weight",
+   "shard": "model-00013-of-00015.safetensors",
+   "dtype": "BF16",
+   "shape": [
+    152064,
+    2048
+   ],
+   "sha256_raw_bf16": "ef1c824486f6f733cb2479d50b43ca4b4dba940f310b377c89a038be5955210b",
+   "seconds": 18.5
+  },
+  "Qwen2-Audio-7B-Instruct": "language_model.lm_head.weight, revision 0a095220c30b7b31434169c3086508ef3ea5bf0a (same snapshot the M5 run used); pod copy fetched by HTTP range read, Mac copy read from the cached shard model-00005-of-00005.safetensors"
+ },
+ "inputs_sha256_first_1MB": {
+  "q3o_pitt_states": {
+   "path": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pitt_states.npz",
+   "sha256_first_1MB": "002e7d6bebbef99a9d07d7dcd3e58e78c66b19fdf149410305c7a9236631a2a3"
+  },
+  "q3o_pcgita_states": {
+   "path": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz",
+   "sha256_first_1MB": "3fb154784cc0fcf88094b32dcf16e162a1ffa23989aeb33d40abc84f7bcce7d0"
+  },
+  "q2a_pitt_states_M5": {
+   "path": "<local data dir>/paper1_local_runs/probe2/pitt_states.npz",
+   "sha256_first_1MB": "5d8272dc673cdbded7c0a84207d5306ffdd30b6d1fee6a99b549b05d7087494c"
+  },
+  "pitt_conflict_manifest_set_column_only": {
+   "path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256_first_1MB": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  },
+  "M5_perclip": {
+   "path": "<local data dir>/release/edaic_rerun/part16/M5_readout_direction_q2a.csv",
+   "sha256_first_1MB": "8ee00228e0c161da64b51a56f68efe1c6e5d87485b587faa16edd145f699a613"
+  },
+  "M7_part10_oof": {
+   "path": "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz",
+   "sha256_first_1MB": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47"
+  },
+  "omni_pitt_zeroshot": {
+   "path": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "sha256_first_1MB": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+  },
+  "omni_pcgita_zeroshot": {
+   "path": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+   "sha256_first_1MB": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3"
+  },
+  "omni_neurovoz_zeroshot": {
+   "path": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "sha256_first_1MB": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082"
+  },
+  "POD4_cha_overlap": {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD4/cha_overlap_468.csv",
+   "sha256_first_1MB": "1f3835d72ce554f01ec4edfb7b5de432cf8af796ef8326dd09b8188c2d0ca0d1"
+  },
+  "POD4_cut_report": {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD4/cut_report.json",
+   "sha256_first_1MB": "2be327ac13b0c25d754bc3a68933d78a2f1af75a7aa8d836773b630fb4a0f8c7"
+  },
+  "M9_inventory": {
+   "path": "<local data dir>/release/edaic_rerun/part16/M9_inventory.csv",
+   "sha256_first_1MB": "5a169b05e59f16fb51b9a80deefdc594236c8f85d5ad4c47a7db64f3276ae934"
+  },
+  "MEDAIC_pod_log": {
+   "path": "<local data dir>/release/edaic_rerun/logs/podA/o25_full_rep.log",
+   "sha256_first_1MB": "0ac462bb43e91f4e5264b037f4861216785692aa3ad236d7e38fb0c22e7f6355"
+  },
+  "MEDAIC_json": {
+   "path": "<local data dir>/release/edaic_rerun/variants/o25_full_nested_repeats.json",
+   "sha256_first_1MB": "b46207780762fa28b9ac67298cf1fd426df121d3b28786941cad3080e0aee4b9"
+  },
+  "MEDAIC_full_answer_perclip": {
+   "path": "<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv",
+   "sha256_first_1MB": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590"
+  },
+  "POD2_lora_log": {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD2/lora.log",
+   "sha256_first_1MB": "0e168c9e37ba6df2cccc21465e5b533ccf383ff5d403b7073a87da07d2d78481"
+  }
+ },
+ "methods": {
+  "POD3 3b direction (cosines, by-arm probe, by-arm without-d)": "Linux pod refit from q3o_pitt_states.npz ans[:, -1, :] (float64) and the thinker lm_head fetched from the HF hub. Direction = unit(W[YES]^T wy - W[NO]^T wn), wy / wn = mean softmax mass of each id over the cell's clips, ids YES 7414 9454 9693 9834 14004, NO 902 2152 2308 2753 8996. Probe: GroupKFold(5) by speaker, StandardScaler on the training fold, LogisticRegression(max_iter=2000, class_weight=balanced); probe direction = unit(mean fold coef / scale). Without-d as shipped: fold coef minus its d component, held-out projection standardised with the TRAINING fold. Arms from the clip-name prefix (146 conflict / 322 agreement)",
+  "POD3 best stage": "per stage: 5 repeats of GroupKFold(5) on speaker ids permuted with default_rng(repeat), StandardScaler + LogisticRegression(max_iter=2000, class_weight=balanced), OOF AUC per repeat, stage value = mean of the 5; best = argmax; CI = bootstrap of the mean over repeats",
+  "M5 (12 rows)": "the 9 AUC rows recomputed from the per-clip columns of M5_readout_direction_q2a.csv; the 3 random-floor rows by a Mac refit of the probe direction (sklearn 1.7.2, the M5 environment) and 2000 unit normals from a fresh default_rng(0). A Mac refit of the whole M5 pipeline also reproduces every AUC row",
+  "M3": "speaker AUC on mean p_yes per speaker, paired clip minus speaker bootstrap",
+  "M7": "Pitt: mean of the 5 per-repeat AUCs of the part10 nested OOF minus the zero-shot AUC; rep5 = AUC of the mean probability",
+  "POD4 4b descriptives": "recounted from cha_overlap_468.csv and cut_report.json",
+  "M9 FILES / SWEEPMIN": "reopened all 608 inventory files (old G-Drive prefix remapped), re-read each header, counted mass-bearing files (307; 0 missing; 0 disagree with the stored flag); minimum over mass-bearing files of the median mass",
+  "MEDAIC json aggregates (8)": "LOG TWIN ONLY. Per-repeat AUCs read from the pod run log edaic_rerun/logs/podA/o25_full_rep.log (identical to the json list), mean recomputed; the minus-answer points subtract the answer AUC recomputed from o25_full_zeroshot_scores.csv (0.828476). No per-clip OOF and no states exist for this original full-window run, so the probe side cannot be refit",
+  "POD2 L5 / L6": "LOG TWIN ONLY. Per-fold minutes and peak GPU GB read from POD2/lora.log (a second record beside lora_pitt_lora.json); wall-clock time and GPU memory cannot be recomputed without rerunning the GPU training"
+ },
+ "findings": [
+  "Every one of the 39 audit values (25 with no twin, 14 flagged verified with a disagreeing twin) now has a saved twin that agrees at 4 dp, and every interval that exists agrees at 4 dp. 10 of the 39 (MEDAIC 8, POD2 L5 and L6) are log twins, not recomputes.",
+  "Cause of the old disagreements. scikit-learn GroupKFold assigns different folds in 1.7.2 (Mac) and 1.9.1 (pods) for the same speaker groups (fold index md5s differ; files mac/q3o_folds_mac.txt, pull/lo-p16twins-1/out/q3o_folds_pod.txt, m5_folds_pod.txt). On identical folds the logistic fits agree (|coef| 2.207710 on both). So the Mac partF refit of POD3 3b (0.7864 vs 0.8307) and the Mac verifier's by-arm 0.5520 / 0.9314 were fold-assignment artefacts: the Linux pod refit gives 0.8307, 0.6145 and 0.9349 exactly.",
+  "The reverse holds for M5, which ran on the Mac: the Mac refit reproduces every M5 row, while a Linux sklearn 1.9.1 refit gives probe 0.8044 (not 0.8223), cos 0.0134 (not 0.0145), floor 0.0123 [0.0005, 0.0341]. M5 numbers are tied to sklearn 1.7.2 folds. The M5 verifier disagreed on the 12 rows because it used a different estimator (held-out-fold standardisation, and its own floor), not because the shipped numbers are wrong.",
+  "PC-GITA per-stage refits depend on the OpenBLAS kernel at the 1e-4 level: on an AVX512 kernel (SkylakeX, AMD EPYC 9965) all 32 encoder stages x 5 repeats match POD3 exactly; with AVX2 kernels (Haswell, Zen, and the pods 5 to 7 host) 36 of 160 per-repeat cells differ by up to 0.0004, and llm / ans means by up to 0.0002 (llm best stage 0.8961 instead of 0.8960). The table uses the AVX512 runs; best stages never change. Pitt matches on every kernel tried.",
+  "Stale caveats that remain: MEDAIC 0.6853 / 0.5930 / 0.7542 / 0.5293 cannot be refit (no states), and they are superseded by PART 17 T7b anyway. POD2 wall-clock and GPU memory are run records only."
+ ],
+ "commands": {
+  "pods": "python3 twin_direction.py; python3 twin_perlayer.py <ds> <stream>; python3 twin_perlayer_tag.py pcgita <stream> <tag> (with OPENBLAS_CORETYPE=...); python3 twin_m5.py ...; python3 fetch_lmhead*.py",
+  "mac": "/usr/local/bin/python3 scripts/twin_mac_perclip.py mac/twin_mac_perclip.json; /usr/local/bin/python3 scripts/twin_m5.py <q2a states> <manifest> <shard> mac/twin_m5_mac.json; /usr/local/bin/python3 scripts/assemble.py; /usr/local/bin/python3 scripts/verify_twins.py"
+ },
+ "not_written": "nothing under any omni_final folder; no Overleaf tex touched; no git push; the pitt manifest's clinical columns were not copied (only segment_path, set, label went to the pod)"
+}

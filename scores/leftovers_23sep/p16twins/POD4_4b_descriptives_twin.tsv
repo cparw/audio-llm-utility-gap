@@ -1,0 +1,7 @@
+id	original	recomputed	match_4dp	file	original_ci	recomputed_ci	ci_match_4dp	how
+POD4_4b_resolved	468	468	yes	<local data dir>/release/edaic_rerun/part16/POD4/cha_overlap_468.csv				rows resolved to CHAT timings
+POD4_4b_invwin	158	158	yes	<local data dir>/release/edaic_rerun/part16/POD4/cha_overlap_468.csv				windows with inv_ms_win > 0
+POD4_4b_invshare	0.0200	0.0200	yes	<local data dir>/release/edaic_rerun/part16/POD4/cha_overlap_468.csv				mean inv_ms_win / win_span_ms
+POD4_4b_parshare	0.5871	0.5871	yes	<local data dir>/release/edaic_rerun/part16/POD4/cha_overlap_468.csv				mean par_ms_win / win_span_ms
+POD4_4b_pardur	17.61	17.61	yes	<local data dir>/release/edaic_rerun/part16/POD4/cut_report.json				mean par_s over 468 ok cuts
+POD4_4b_under10s	68	68	yes	<local data dir>/release/edaic_rerun/part16/POD4/cut_report.json				cuts with par_s < 10 s

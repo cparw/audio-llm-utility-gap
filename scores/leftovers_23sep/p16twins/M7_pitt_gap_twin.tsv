@@ -1,0 +1,5 @@
+id	original	recomputed	match_4dp	file	original_ci	recomputed_ci	ci_match_4dp	how
+M7fix#01 Pitt encoder probe mean of 5	0.7706	0.7706	yes	<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz	[0.7157, 0.8220]	[0.7157, 0.8220]	yes	mean of per-repeat AUCs [0.7598, 0.7725, 0.7459, 0.7903, 0.7843], speaker bootstrap of the mean
+M7fix#02 Pitt paired probe minus zero-shot	+0.1128	+0.1128	yes	<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz + <local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv	[0.0455, 0.1768]	[0.0455, 0.1768]	yes	(mean of 5 per-repeat AUCs) minus zero-shot AUC 0.6578, paired speaker bootstrap
+M7_pitt_probe_rep5	0.7917	0.7917	yes	<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz	[0.7324, 0.8480]	[0.7324, 0.8480]	yes	AUC of the mean of the 5 OOF probabilities
+M7_pitt_gap_rep5	0.1339	0.1339	yes	<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz + <local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv	[0.0641, 0.2019]	[0.0641, 0.2019]	yes	AUC(mean prob) minus zero-shot, paired speaker bootstrap
