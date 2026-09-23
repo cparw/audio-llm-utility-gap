@@ -1,0 +1,8 @@
+PASTE	ft966 conflict AUC	0.5932 [0.5087, 0.6831] n=483 n_spk=138 file=scores/part20/POD3/p14_ft966_oof.csv	|	0.59 [0.51, 0.68] above 0.5
+PASTE	ft966 agreement AUC (483 rows)	0.6228 [0.5222, 0.7238] n=483 n_spk=138 file=scores/part20/POD3/p14_ft966_oof.csv	|	0.62 [0.52, 0.72] above 0.5
+PASTE	ft966 agreement AUC (311 distinct)	0.6686 [0.5727, 0.7586] n=311 n_spk=138 file=scores/part20/POD3/p14_ft966_oof.csv	|	0.67 [0.57, 0.76] above 0.5
+PASTE	ft966 paired conflict minus agreement (483 rows)	-0.0296 [-0.1124, 0.0491] n=966 n_spk=138 file=scores/part20/POD3/p14_ft966_oof.csv	|	-0.03 [-0.11, 0.05] interval includes zero
+PASTE	ft966 paired conflict minus agreement (311 distinct)	-0.0754 [-0.1513, 0.0010] n=794 n_spk=138 file=scores/part20/POD3/p14_ft966_oof.csv	|	-0.08 [-0.15, 0.00] interval includes zero
+reeval max|diff| paper p_yes 0.0 rule3-literal AUCs {'conflict': 0.5932, 'agreement483': 0.6228, 'agreement311': 0.6686} max|p6-p| 8.9406621195387e-07
+dup_maxdiff 0.0 median mass 0.9979091514833272 min mass 0.9490212500095367 p_yes_sft AUCs {'conflict': 0.5985, 'agreement483': 0.6193, 'agreement311': 0.6642}
+STATS_OK

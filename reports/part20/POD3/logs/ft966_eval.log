@@ -1,0 +1,35 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  22%|██▏       | 539/2447 [00:00<00:00, 5388.58it/s]Loading weights:  67%|██████▋   | 1645/2447 [00:00<00:00, 8721.48it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 8430.99it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+REEVAL fold 0 n 194 max|diff| vs training eval 0.0 1.1 min
+REEVAL fold 1 n 194 max|diff| vs training eval 0.0 2.1 min
+REEVAL fold 2 n 194 max|diff| vs training eval 0.0 3.0 min
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   4%|▍         | 92/2447 [00:00<00:02, 919.29it/s]Loading weights:   8%|▊         | 194/2447 [00:00<00:02, 967.12it/s]Loading weights:  12%|█▏        | 291/2447 [00:00<00:02, 868.43it/s]Loading weights:  16%|█▌        | 388/2447 [00:00<00:02, 905.03it/s]Loading weights:  21%|██        | 508/2447 [00:00<00:01, 983.46it/s]Loading weights:  26%|██▌       | 626/2447 [00:00<00:01, 1045.19it/s]Loading weights:  31%|███       | 752/2447 [00:00<00:01, 1092.85it/s]Loading weights:  35%|███▌      | 862/2447 [00:00<00:01, 996.50it/s] Loading weights:  39%|███▉      | 964/2447 [00:00<00:01, 956.57it/s]Loading weights:  43%|████▎     | 1061/2447 [00:01<00:01, 898.45it/s]Loading weights:  47%|████▋     | 1152/2447 [00:01<00:01, 886.82it/s]Loading weights:  51%|█████     | 1242/2447 [00:01<00:01, 886.94it/s]Loading weights:  55%|█████▍    | 1343/2447 [00:01<00:01, 910.97it/s]Loading weights:  59%|█████▉    | 1441/2447 [00:01<00:01, 929.49it/s]Loading weights:  63%|██████▎   | 1538/2447 [00:01<00:00, 928.22it/s]Loading weights:  68%|██████▊   | 1661/2447 [00:01<00:00, 1002.71it/s]Loading weights:  74%|███████▍  | 1812/2447 [00:01<00:00, 1144.76it/s]Loading weights:  84%|████████▍ | 2065/2447 [00:01<00:00, 1532.39it/s]Loading weights:  91%|█████████ | 2219/2447 [00:02<00:00, 1335.80it/s]Loading weights:  96%|█████████▋| 2358/2447 [00:02<00:00, 1165.90it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 1043.93it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+REEVAL fold 3 n 192 max|diff| vs training eval 0.0 1.2 min
+REEVAL fold 4 n 192 max|diff| vs training eval 0.0 2.6 min

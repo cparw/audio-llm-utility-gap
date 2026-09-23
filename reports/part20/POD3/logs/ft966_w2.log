@@ -1,0 +1,45 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  38%|███▊      | 940/2447 [00:00<00:00, 9389.24it/s]Loading weights:  77%|███████▋  | 1879/2447 [00:00<00:00, 8127.97it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 7995.22it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+FOLD 2 train 772 test 194 | yes [7414, 9454, 9693, 9834, 14004] no [902, 2152, 2308, 2753, 8996] sft [7414,2308] | ' YES'/' NO' enc {' YES': [14080], ' NO': [5664]} | 8s
+fold 2 ep 0 step 0/772 run_loss 0.0437 0.2 min
+fold 2 ep 0 step 100/772 run_loss 0.6670 0.7 min
+fold 2 ep 0 step 200/772 run_loss 0.6956 1.2 min
+fold 2 ep 0 step 300/772 run_loss 0.6390 1.7 min
+fold 2 ep 0 step 400/772 run_loss 0.6256 2.3 min
+fold 2 ep 0 step 500/772 run_loss 0.5856 2.8 min
+fold 2 ep 0 step 600/772 run_loss 0.5777 3.3 min
+fold 2 ep 0 step 700/772 run_loss 0.5727 3.9 min
+fold 2 epoch 0 loss 0.5642 CKPT 4.3 min
+fold 2 ep 1 step 0/772 run_loss 0.3869 4.3 min
+fold 2 ep 1 step 100/772 run_loss 0.2475 4.8 min
+fold 2 ep 1 step 200/772 run_loss 0.2799 5.3 min
+fold 2 ep 1 step 300/772 run_loss 0.2811 5.8 min
+fold 2 ep 1 step 400/772 run_loss 0.2945 6.4 min
+fold 2 ep 1 step 500/772 run_loss 0.2974 6.9 min
+fold 2 ep 1 step 600/772 run_loss 0.3030 7.4 min
+fold 2 ep 1 step 700/772 run_loss 0.2971 8.0 min
+fold 2 epoch 1 loss 0.2946 CKPT 8.4 min
+fold 2 ep 2 step 0/772 run_loss 0.0133 8.4 min
+fold 2 ep 2 step 100/772 run_loss 0.1216 8.9 min
+fold 2 ep 2 step 200/772 run_loss 0.1416 9.4 min
+fold 2 ep 2 step 300/772 run_loss 0.1419 10.0 min
+fold 2 ep 2 step 400/772 run_loss 0.1210 10.5 min
+fold 2 ep 2 step 500/772 run_loss 0.1114 11.0 min
+fold 2 ep 2 step 600/772 run_loss 0.1010 11.5 min
+fold 2 ep 2 step 700/772 run_loss 0.1070 12.1 min
+fold 2 epoch 2 loss 0.1019 CKPT 12.4 min
+FOLD_DONE 2 13.0 min
+W2_END
