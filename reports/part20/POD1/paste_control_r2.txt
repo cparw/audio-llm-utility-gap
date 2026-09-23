@@ -1,0 +1,11 @@
+CONTROL standard recipe rerun on POD1 repeat 2 AUC all: 0.7734 [0.7172, 0.8286] n=468 n_spk=228 file=scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv | 0.77 [0.72, 0.83] above 0.5 | beside standard 0.7673 [0.7086, 0.8231]
+CONTROL standard recipe rerun on POD1 repeat 2 AUC conflict: 0.4490 [0.3385, 0.5682] n=146 n_spk=100 file=scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv | 0.45 [0.34, 0.57] interval includes 0.5 (point below 0.5) | beside standard 0.5189 [0.4151, 0.6300]
+CONTROL standard recipe rerun on POD1 repeat 2 AUC agreement: 0.8967 [0.8592, 0.9322] n=322 n_spk=175 file=scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv | 0.90 [0.86, 0.93] above 0.5 | beside standard 0.8593 [0.8063, 0.9069]
+PAIRED CONTROL standard recipe rerun on POD1 repeat 2 minus standard conflict: -0.0700 [-0.1678, +0.0142] n=146 n_spk=100 file=scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv | -0.07 [-0.17, +0.01] interval includes zero
+PAIRED CONTROL standard recipe rerun on POD1 repeat 2 minus standard all: +0.0061 [-0.0337, +0.0493] n=468 n_spk=228 file=scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv | +0.01 [-0.03, +0.05] interval includes zero
+PAIRED CONTROL standard recipe rerun on POD1 repeat 2 minus standard agreement: +0.0374 [+0.0025, +0.0786] n=322 n_spk=175 file=scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv | +0.04 [+0.00, +0.08] interval excludes zero (above 0)
+CONTROL standard recipe rerun on POD1 repeat 2 AUC all (rule-3 multivariant p_yes): 0.7739 [0.7190, 0.8290] n=468 n_spk=228 | 0.77 [0.72, 0.83] above 0.5
+CONTROL standard recipe rerun on POD1 repeat 2 AUC conflict (rule-3 multivariant p_yes): 0.4455 [0.3343, 0.5641] n=146 n_spk=100 | 0.45 [0.33, 0.56] interval includes 0.5 (point below 0.5)
+CONTROL standard recipe rerun on POD1 repeat 2 AUC agreement (rule-3 multivariant p_yes): 0.8972 [0.8600, 0.9319] n=322 n_spk=175 | 0.90 [0.86, 0.93] above 0.5
+GAP conflict minus agreement: CONTROL standard recipe rerun on POD1 repeat 2 -0.4477 [-0.5558, -0.3351]; standard -0.3404 [-0.4468, -0.2262]; change -0.1073 [-0.1967, -0.0137] interval excludes zero (below 0)
+answer_mass median 0.9992 min 0.9965

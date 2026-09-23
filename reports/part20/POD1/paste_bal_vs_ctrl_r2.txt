@@ -1,0 +1,11 @@
+balanced fine-tune repeat 2 AUC all: 0.7360 [0.6726, 0.7966] n=468 n_spk=228 file=scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv | 0.74 [0.67, 0.80] above 0.5 | beside POD1 standard rerun repeat 2 0.7734 [0.7172, 0.8286]
+balanced fine-tune repeat 2 AUC conflict: 0.4810 [0.3775, 0.5991] n=146 n_spk=100 file=scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv | 0.48 [0.38, 0.60] interval includes 0.5 (point below 0.5) | beside POD1 standard rerun repeat 2 0.4490 [0.3385, 0.5682]
+balanced fine-tune repeat 2 AUC agreement: 0.8379 [0.7847, 0.8894] n=322 n_spk=175 file=scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv | 0.84 [0.78, 0.89] above 0.5 | beside POD1 standard rerun repeat 2 0.8967 [0.8592, 0.9322]
+PAIRED balanced fine-tune repeat 2 minus POD1 standard rerun repeat 2 conflict: +0.0320 [-0.0564, +0.1211] n=146 n_spk=100 file=scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv | +0.03 [-0.06, +0.12] interval includes zero
+PAIRED balanced fine-tune repeat 2 minus POD1 standard rerun repeat 2 all: -0.0374 [-0.0760, -0.0012] n=468 n_spk=228 file=scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv | -0.04 [-0.08, -0.00] interval excludes zero (below 0)
+PAIRED balanced fine-tune repeat 2 minus POD1 standard rerun repeat 2 agreement: -0.0588 [-0.1016, -0.0204] n=322 n_spk=175 file=scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv | -0.06 [-0.10, -0.02] interval excludes zero (below 0)
+balanced fine-tune repeat 2 AUC all (rule-3 multivariant p_yes): 0.7381 [0.6765, 0.7971] n=468 n_spk=228 | 0.74 [0.68, 0.80] above 0.5
+balanced fine-tune repeat 2 AUC conflict (rule-3 multivariant p_yes): 0.4825 [0.3766, 0.5990] n=146 n_spk=100 | 0.48 [0.38, 0.60] interval includes 0.5 (point below 0.5)
+balanced fine-tune repeat 2 AUC agreement (rule-3 multivariant p_yes): 0.8405 [0.7897, 0.8909] n=322 n_spk=175 | 0.84 [0.79, 0.89] above 0.5
+GAP conflict minus agreement: balanced fine-tune repeat 2 -0.3569 [-0.4633, -0.2380]; POD1 standard rerun repeat 2 -0.4477 [-0.5558, -0.3351]; change +0.0908 [-0.0041, +0.1885] interval includes zero
+answer_mass median 0.9990 min 0.9949

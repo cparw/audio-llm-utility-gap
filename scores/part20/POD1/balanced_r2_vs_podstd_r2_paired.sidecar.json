@@ -1,0 +1,434 @@
+{
+ "result": "PART20 POD1 balanced REPEAT 2 PAIRED against standard-recipe REPEAT 2 on the same pod",
+ "score_columns_note": "p_yes = this run; std_p_yes = the reference run (STD_CSV); results keys: balanced = this run, standard = reference",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "n_conflict": 146,
+ "n_agreement": 322,
+ "seed_bootstrap": 0,
+ "recipe": "sft_projector.py: projector (thinker.audio_tower.proj) only, float32 forward, encoder + LM frozen bf16, AdamW lr 1e-4, 3 epochs, one clip per update, order RandomState(fold*10+ep).permutation(train_idx), CE over [' Yes',' No'] at logits[0,-1]",
+ "only_change": "per-clip loss weight: within each training fold and label y, w = (N_y/2)/N_{y,arm}, rescaled to mean 1 over the fold",
+ "weight_tables": {
+  "fold0": [
+   {
+    "label": 0,
+    "arm": "conflict",
+    "n": 32,
+    "weight": 2.078125,
+    "total_weight": 66.5
+   },
+   {
+    "label": 0,
+    "arm": "agreement",
+    "n": 101,
+    "weight": 0.6584158415841584,
+    "total_weight": 66.5
+   },
+   {
+    "label": 1,
+    "arm": "conflict",
+    "n": 86,
+    "weight": 1.4011627906976745,
+    "total_weight": 120.49999999999994
+   },
+   {
+    "label": 1,
+    "arm": "agreement",
+    "n": 155,
+    "weight": 0.7774193548387097,
+    "total_weight": 120.5
+   }
+  ],
+  "fold1": [
+   {
+    "label": 0,
+    "arm": "conflict",
+    "n": 37,
+    "weight": 1.9324324324324325,
+    "total_weight": 71.50000000000001
+   },
+   {
+    "label": 0,
+    "arm": "agreement",
+    "n": 106,
+    "weight": 0.6745283018867925,
+    "total_weight": 71.5
+   },
+   {
+    "label": 1,
+    "arm": "conflict",
+    "n": 83,
+    "weight": 1.391566265060241,
+    "total_weight": 115.5
+   },
+   {
+    "label": 1,
+    "arm": "agreement",
+    "n": 148,
+    "weight": 0.7804054054054054,
+    "total_weight": 115.49999999999999
+   }
+  ],
+  "fold2": [
+   {
+    "label": 0,
+    "arm": "conflict",
+    "n": 33,
+    "weight": 2.196969696969697,
+    "total_weight": 72.5
+   },
+   {
+    "label": 0,
+    "arm": "agreement",
+    "n": 112,
+    "weight": 0.6473214285714286,
+    "total_weight": 72.50000000000001
+   },
+   {
+    "label": 1,
+    "arm": "conflict",
+    "n": 87,
+    "weight": 1.3160919540229885,
+    "total_weight": 114.50000000000004
+   },
+   {
+    "label": 1,
+    "arm": "agreement",
+    "n": 142,
+    "weight": 0.8063380281690141,
+    "total_weight": 114.50000000000001
+   }
+  ],
+  "fold3": [
+   {
+    "label": 0,
+    "arm": "conflict",
+    "n": 36,
+    "weight": 1.9722222222222219,
+    "total_weight": 71.00000000000001
+   },
+   {
+    "label": 0,
+    "arm": "agreement",
+    "n": 106,
+    "weight": 0.6698113207547168,
+    "total_weight": 71.0
+   },
+   {
+    "label": 1,
+    "arm": "conflict",
+    "n": 82,
+    "weight": 1.4207317073170729,
+    "total_weight": 116.49999999999996
+   },
+   {
+    "label": 1,
+    "arm": "agreement",
+    "n": 151,
+    "weight": 0.7715231788079469,
+    "total_weight": 116.49999999999997
+   }
+  ],
+  "fold4": [
+   {
+    "label": 0,
+    "arm": "conflict",
+    "n": 42,
+    "weight": 1.7738095238095237,
+    "total_weight": 74.49999999999999
+   },
+   {
+    "label": 0,
+    "arm": "agreement",
+    "n": 107,
+    "weight": 0.6962616822429907,
+    "total_weight": 74.5
+   },
+   {
+    "label": 1,
+    "arm": "conflict",
+    "n": 66,
+    "weight": 1.7121212121212122,
+    "total_weight": 113.00000000000003
+   },
+   {
+    "label": 1,
+    "arm": "agreement",
+    "n": 160,
+    "weight": 0.70625,
+    "total_weight": 112.99999999999999
+   }
+  ]
+ },
+ "losses": {
+  "fold0": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6112054015664174,
+    "mean_weighted_loss": 0.6377278410974033,
+    "steps": 374
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.3528964222971609,
+    "mean_weighted_loss": 0.3658229230634151,
+    "steps": 374
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.1703627986726376,
+    "mean_weighted_loss": 0.15861235256555845,
+    "steps": 374
+   }
+  ],
+  "fold1": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6165386571245078,
+    "mean_weighted_loss": 0.6431618750214896,
+    "steps": 374
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.4080793579273364,
+    "mean_weighted_loss": 0.41651054484680056,
+    "steps": 374
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.2014058922955338,
+    "mean_weighted_loss": 0.19804010857743296,
+    "steps": 374
+   }
+  ],
+  "fold2": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6511030145148862,
+    "mean_weighted_loss": 0.6788217314733143,
+    "steps": 374
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.4549104828526948,
+    "mean_weighted_loss": 0.46526234185841076,
+    "steps": 374
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.1746170850433932,
+    "mean_weighted_loss": 0.16192430540291158,
+    "steps": 374
+   }
+  ],
+  "fold3": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6240554231405259,
+    "mean_weighted_loss": 0.659955087552468,
+    "steps": 375
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.41841957240800065,
+    "mean_weighted_loss": 0.4182306201557318,
+    "steps": 375
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.2046200366690755,
+    "mean_weighted_loss": 0.20115230496103564,
+    "steps": 375
+   }
+  ],
+  "fold4": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6380941611925761,
+    "mean_weighted_loss": 0.6631477009753386,
+    "steps": 375
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.4210277548978726,
+    "mean_weighted_loss": 0.429407996426026,
+    "steps": 375
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.25591735913045704,
+    "mean_weighted_loss": 0.2481162319108844,
+    "steps": 375
+   }
+  ]
+ },
+ "p_yes_definition": "PRIMARY p_yes = softmax over the two logits [' Yes',' No'] at the first answer position (the recipe's own scoring, identical to the standard file's p_yes, so the paired difference is like for like). p_yes_multi = rule-3 multivariant (single-token Yes/yes/YES vs No/no/NO, bare + leading space); answer_mass = that total from full softmax.",
+ "answer_mass_median": 0.9990080501884222,
+ "answer_mass_min": 0.9949175119400024,
+ "stats": "AUC scipy rankdata ties averaged; bootstrap 2000, default_rng(0) fresh per cell, speakers of that cell resampled with replacement, percentile 2.5/97.5; paired diff = one speaker draw per replicate, both runs scored on it",
+ "results": {
+  "all": {
+   "n": 468,
+   "n_speakers": 228,
+   "balanced": 0.7359938008523828,
+   "balanced_ci": [
+    0.672640883751461,
+    0.7966293585249349
+   ],
+   "standard": 0.7734017822549399,
+   "standard_ci": [
+    0.7172221480103085,
+    0.8285715091570159
+   ],
+   "diff_bal_minus_std": -0.03740798140255719,
+   "diff_ci": [
+    -0.0760464098769224,
+    -0.0011995000292447306
+   ],
+   "usable_draws": 2000,
+   "usable_diff_draws": 2000,
+   "balanced_multivariant": 0.7380860131731887,
+   "balanced_multivariant_ci": [
+    0.6764872720706554,
+    0.7971229098385239
+   ]
+  },
+  "conflict": {
+   "n": 146,
+   "n_speakers": 100,
+   "balanced": 0.48096809680968095,
+   "balanced_ci": [
+    0.37745388744167385,
+    0.5990624581827914
+   ],
+   "standard": 0.448954895489549,
+   "standard_ci": [
+    0.33846219811716916,
+    0.5682059270516717
+   ],
+   "diff_bal_minus_std": 0.03201320132013197,
+   "diff_ci": [
+    -0.05644402403974187,
+    0.12106097655643527
+   ],
+   "usable_draws": 2000,
+   "usable_diff_draws": 2000,
+   "balanced_multivariant": 0.48250825082508253,
+   "balanced_multivariant_ci": [
+    0.3765507132639707,
+    0.5990234205384282
+   ]
+  },
+  "agreement": {
+   "n": 322,
+   "n_speakers": 175,
+   "balanced": 0.8379082627202928,
+   "balanced_ci": [
+    0.7847118794943627,
+    0.8893770458136312
+   ],
+   "standard": 0.8966861598440545,
+   "standard_ci": [
+    0.8591671700234118,
+    0.9321591602128683
+   ],
+   "diff_bal_minus_std": -0.05877789712376169,
+   "diff_ci": [
+    -0.10155001495782094,
+    -0.020384024461474727
+   ],
+   "usable_draws": 2000,
+   "usable_diff_draws": 2000,
+   "balanced_multivariant": 0.8405139833711263,
+   "balanced_multivariant_ci": [
+    0.7897043637308983,
+    0.8909412623580597
+   ]
+  }
+ },
+ "extra_conflict_minus_agreement_gap": {
+  "balanced_gap": -0.3569401659106119,
+  "balanced_gap_ci": [
+   -0.4633489438803319,
+   -0.23799557150229772
+  ],
+  "standard_gap": -0.44773126435450555,
+  "standard_gap_ci": [
+   -0.5557741669166465,
+   -0.3350636849805511
+  ],
+  "gap_change": 0.09079109844389366,
+  "gap_change_ci": [
+   -0.004100612457275266,
+   0.18846692861069056
+  ]
+ },
+ "sources_absolute": {
+  "manifest": "<local data dir>/release/scores/part20/POD1/mf_pitt468_p20.csv",
+  "folds": "folds/pitt_groupkfold5_pod.csv",
+  "conflict_manifest": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+  "standard_per_clip": "scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv",
+  "training_script": "scripts/part20/POD1/balanced_ft_pitt.py",
+  "stats_script": "scripts/part20/POD1/stats_p20.py",
+  "recipe_reference": "<local data dir>/scratch/p15/sft_projector.py",
+  "fold0_json": "scores/part20/POD1/balanced_r2_folds/balanced_fold0.json",
+  "fold1_json": "scores/part20/POD1/balanced_r2_folds/balanced_fold1.json",
+  "fold2_json": "scores/part20/POD1/balanced_r2_folds/balanced_fold2.json",
+  "fold3_json": "scores/part20/POD1/balanced_r2_folds/balanced_fold3.json",
+  "fold4_json": "scores/part20/POD1/balanced_r2_folds/balanced_fold4.json",
+  "launch.sh": "scripts/part20/POD1/launch.sh",
+  "launch_r2.sh": "scripts/part20/POD1/launch_r2.sh"
+ },
+ "sha256_first_1MB": {
+  "manifest": "3394706e7b0ba5c59268a06af5c76810d1de6af5aab94d9018022f0cf231b69d",
+  "folds": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406",
+  "conflict_manifest": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "standard_per_clip": "7853a66aa5de2e6613006f9f86ef45c8fdbe0528429424f1f304a45bd5cbe105",
+  "training_script": "99ad1cce557f990bddef2e8ee163af83d263df1ee4750664498b5409a663c059",
+  "stats_script": "53f2327aa517b56a6d70d76ef69b9d903f88d84845fbdd03446480e2014bb93f",
+  "recipe_reference": "d2672fd08c0649661a27caab90459aa8e623e5bc84a698b384b059371ae9e771",
+  "fold0_json": "c982c6ec63ed6e6159774b1438063b811759bfec38f223b57767f6666b65fa4d",
+  "fold1_json": "5d046dac5515f2dc15d380f402017c8b5c88fd33ad0a368fa3c208cafa7a7bc8",
+  "fold2_json": "180d8236f4db55a1e623bdf6c7a59fa56859c6da1b03fad34240852be656d0d6",
+  "fold3_json": "acd6d8a3bd3d80e0120a29abaf3ff2556406f975aeae6727a7d73141d97ae4e2",
+  "fold4_json": "5d5ef8e2669342738a394cf6dfa73cf209be3d3eb3891fda7c6c79f92feb1910",
+  "launch.sh": "9678b9c8fa5a0cf575282257322f7e219456f0665dacf8f1398ce45c4b031d0e",
+  "launch_r2.sh": "fcb031e4ee5b8e09279cc8f0c6194b7a7654129641448f3d83e9a327ba3eb646"
+ },
+ "command_pod": "python3 balanced_ft_pitt.py mf_pitt468_p20.csv pitt_groupkfold5_pod.csv <outdir> balanced balanced <foldlist>",
+ "command_stats": "python3 scripts/part20/POD1/stats_p20.py scores/part20/POD1/balanced_r2_folds balanced scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv",
+ "per_clip_csv": "scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv",
+ "date": "2026-09-23T13:13:22.290847Z",
+ "command_pod_exact": {
+  "balanced_r2_folds": [
+   "cd /workspace/scores/part20/POD1 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 OMP_NUM_THREADS=8 python3 /workspace/scores/part20/POD1/balanced_ft_pitt.py /workspace/scores/part20/POD1/mf_pitt468_p20.csv /workspace/scores/part20/POD1/pitt_groupkfold5_pod.csv /workspace/scores/part20/POD1/balanced_r2_folds balanced balanced 0,1,2",
+   "cd /workspace/scores/part20/POD1 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 OMP_NUM_THREADS=8 python3 /workspace/scores/part20/POD1/balanced_ft_pitt.py /workspace/scores/part20/POD1/mf_pitt468_p20.csv /workspace/scores/part20/POD1/pitt_groupkfold5_pod.csv /workspace/scores/part20/POD1/balanced_r2_folds balanced balanced 3,4"
+  ],
+  "reference_run_control_r2_folds": [
+   "cd /workspace/scores/part20/POD1 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 OMP_NUM_THREADS=8 python3 /workspace/scores/part20/POD1/balanced_ft_pitt.py /workspace/scores/part20/POD1/mf_pitt468_p20.csv /workspace/scores/part20/POD1/pitt_groupkfold5_pod.csv /workspace/scores/part20/POD1/control_r2_folds uniform uniform 0,1,2",
+   "cd /workspace/scores/part20/POD1 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 OMP_NUM_THREADS=8 python3 /workspace/scores/part20/POD1/balanced_ft_pitt.py /workspace/scores/part20/POD1/mf_pitt468_p20.csv /workspace/scores/part20/POD1/pitt_groupkfold5_pod.csv /workspace/scores/part20/POD1/control_r2_folds uniform uniform 3,4"
+  ]
+ },
+ "command_stats_exact": "cd scores/part20/POD1 && RESULT_TITLE='<the result field>' /usr/local/bin/python3 scripts/part20/POD1/stats_p20.py scores/part20/POD1/balanced_r2_folds balanced scores/part20/POD1/balanced_r2_vs_podstd_r2_paired.csv scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv",
+ "pod": {
+  "id": "x9oiqepu2mmpqk",
+  "gpu": "NVIDIA H100 NVL 94GB",
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.17.0",
+  "sklearn": "1.9.1",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "model_snapshot": "/workspace/hf/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00"
+ },
+ "audio": {
+  "mac_source": "<local data dir>/DementiaBank/segments (468 wav, 516863704 bytes)",
+  "pod_path": "/workspace/data/pitt468 -> /workspace/data/segments",
+  "md5_check": "md5 of all 468 wav identical Mac vs pod"
+ },
+ "stats_bootstrap_seed": 0,
+ "training_order_seed": "numpy RandomState(fold*10+epoch) as in sft_projector.py; torch.manual_seed(1000+fold) (thinker has no dropout)"
+}
