@@ -1,0 +1,14 @@
+id	what	value	lo	hi	n	n_spk	file	two_dp	vs_half
+q3o_transcript_conflict483	Qwen3-Omni transcript AUC, conflict483	0.2243	0.1757	0.2742	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.22 [0.18, 0.27]	below 0.5
+q3o_transcript_agreement483	Qwen3-Omni transcript AUC, agreement483	0.9470	0.9131	0.9757	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.95 [0.91, 0.98]	above 0.5
+q3o_transcript_agreement311	Qwen3-Omni transcript AUC, agreement311	0.9523	0.9249	0.9750	311	138	scores/part20/POD3c/p14_q3o_text.csv	0.95 [0.92, 0.97]	above 0.5
+q3o_audio_conflict483	Qwen3-Omni audio AUC, conflict483	0.3008	0.2454	0.3641	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.30 [0.25, 0.36]	below 0.5
+q3o_audio_agreement483	Qwen3-Omni audio AUC, agreement483	0.9638	0.9336	0.9864	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.96 [0.93, 0.99]	above 0.5
+q3o_audio_agreement311	Qwen3-Omni audio AUC, agreement311	0.9727	0.9507	0.9904	311	138	scores/part20/POD3c/p14_q3o_text.csv	0.97 [0.95, 0.99]	above 0.5
+q3o_transcript_conf_minus_agree483	Qwen3-Omni transcript, conflict483 minus agreement483 (paired)	-0.7227	-0.7803	-0.6620	966	138	scores/part20/POD3c/p14_q3o_text.csv	-0.72 [-0.78, -0.66]	interval excludes zero
+q3o_transcript_conf_minus_agree311	Qwen3-Omni transcript, conflict483 minus agreement311 (paired)	-0.7280	-0.7805	-0.6731	794	138	scores/part20/POD3c/p14_q3o_text.csv	-0.73 [-0.78, -0.67]	interval excludes zero
+q3o_audio_conf_minus_agree483	Qwen3-Omni audio, conflict483 minus agreement483 (paired)	-0.6630	-0.7192	-0.6030	966	138	scores/part20/POD3c/p14_q3o_text.csv	-0.66 [-0.72, -0.60]	interval excludes zero
+q3o_audio_conf_minus_agree311	Qwen3-Omni audio, conflict483 minus agreement311 (paired)	-0.6719	-0.7266	-0.6105	794	138	scores/part20/POD3c/p14_q3o_text.csv	-0.67 [-0.73, -0.61]	interval excludes zero
+q3o_text_minus_audio_conflict483	Qwen3-Omni transcript minus audio AUC, conflict483 (paired)	-0.0765	-0.1286	-0.0296	483	138	scores/part20/POD3c/p14_q3o_text.csv	-0.08 [-0.13, -0.03]	interval excludes zero
+q3o_text_minus_audio_agreement483	Qwen3-Omni transcript minus audio AUC, agreement483 (paired)	-0.0168	-0.0399	0.0039	483	138	scores/part20/POD3c/p14_q3o_text.csv	-0.02 [-0.04, 0.00]	interval includes zero
+q3o_text_minus_audio_agreement311	Qwen3-Omni transcript minus audio AUC, agreement311 (paired)	-0.0204	-0.0402	-0.0034	311	138	scores/part20/POD3c/p14_q3o_text.csv	-0.02 [-0.04, -0.00]	interval excludes zero

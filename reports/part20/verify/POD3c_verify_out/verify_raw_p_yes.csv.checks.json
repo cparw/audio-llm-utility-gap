@@ -1,0 +1,189 @@
+{
+ "text_rows": 966,
+ "text_distinct_ids": 794,
+ "audio_rows": 966,
+ "input_rows": 966,
+ "text_max_repeat_diff": 0.0,
+ "audio_max_repeat_diff": 0.0,
+ "text_ids_missing_vs_input": 0,
+ "text_ids_extra_vs_input": 0,
+ "audio_ids_missing_vs_input": 0,
+ "text_label_mismatch_vs_input": 0,
+ "text_speaker_mismatch_vs_input": 0,
+ "audio_label_mismatch_vs_input": 0,
+ "text_prompts_in_csv": [
+  "Based only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No."
+ ],
+ "text_median_mass": 0.9998937719501556,
+ "text_min_mass": 0.9968624413013458,
+ "rows_with_nan_text": 0,
+ "rows_with_nan_audio": 0,
+ "n_speakers_966": 138,
+ "conflict_rows": 483,
+ "conflict_distinct": 483,
+ "conflict_pos_rows": 205,
+ "conflict_neg_rows": 278,
+ "conflict_n_spk": 138,
+ "agreement_rows": 483,
+ "agreement_distinct": 311,
+ "agreement_pos_rows": 205,
+ "agreement_neg_rows": 278,
+ "agreement_n_spk": 138,
+ "agreement_distinct_pos": 104,
+ "agreement_distinct_neg": 207,
+ "agreement_distinct_n_spk": 138,
+ "validation_n": 25,
+ "validation_max_absdiff": 0.02659463994813771,
+ "validation_rows": [
+  {
+   "id": "conflict_301_c000010",
+   "p": 0.2451079897705744,
+   "ref": 0.2451135600961688,
+   "absdiff": 5.570325594395076e-06
+  },
+  {
+   "id": "conflict_301_c000015",
+   "p": 0.5312244915929245,
+   "ref": 0.5312295420677513,
+   "absdiff": 5.050474826795437e-06
+  },
+  {
+   "id": "conflict_302_c000036",
+   "p": 0.1067094710194549,
+   "ref": 0.1128201805840918,
+   "absdiff": 0.006110709564636899
+  },
+  {
+   "id": "conflict_302_c000040",
+   "p": 0.4844228592283702,
+   "ref": 0.484434611061824,
+   "absdiff": 1.1751833453810256e-05
+  },
+  {
+   "id": "conflict_303_c000064",
+   "p": 0.6654496578424468,
+   "ref": 0.6654552730556557,
+   "absdiff": 5.615213208853831e-06
+  },
+  {
+   "id": "conflict_306_c000146",
+   "p": 0.5775533985220929,
+   "ref": 0.5775598887904018,
+   "absdiff": 6.4902683089007596e-06
+  },
+  {
+   "id": "conflict_306_c000148",
+   "p": 0.422527300998878,
+   "ref": 0.4225347259500517,
+   "absdiff": 7.424951173728989e-06
+  },
+  {
+   "id": "conflict_306_c000149",
+   "p": 0.6077079543519012,
+   "ref": 0.6077167300299177,
+   "absdiff": 8.775678016492705e-06
+  },
+  {
+   "id": "conflict_307_c000157",
+   "p": 0.7773183167510854,
+   "ref": 0.7773229486603649,
+   "absdiff": 4.631909279462221e-06
+  },
+  {
+   "id": "conflict_307_c000159",
+   "p": 0.437876766350451,
+   "ref": 0.4378887903159464,
+   "absdiff": 1.2023965495433497e-05
+  },
+  {
+   "id": "conflict_307_c000162",
+   "p": 0.201846379597423,
+   "ref": 0.2121123568194191,
+   "absdiff": 0.010265977221996098
+  },
+  {
+   "id": "conflict_307_c000176",
+   "p": 0.4688639399396614,
+   "ref": 0.4688717888819614,
+   "absdiff": 7.848942299992778e-06
+  },
+  {
+   "id": "conflict_308_c000181",
+   "p": 0.0059120477067684,
+   "ref": 0.0066945294845747,
+   "absdiff": 0.0007824817778063001
+  },
+  {
+   "id": "conflict_308_c000182",
+   "p": 0.0229806984035152,
+   "ref": 0.0229820335974848,
+   "absdiff": 1.3351939695989412e-06
+  },
+  {
+   "id": "conflict_308_c000185",
+   "p": 0.1561285935082423,
+   "ref": 0.1561349245465419,
+   "absdiff": 6.331038299611791e-06
+  },
+  {
+   "id": "conflict_308_c000186",
+   "p": 0.3208439833243616,
+   "ref": 0.2942493433762239,
+   "absdiff": 0.02659463994813771
+  },
+  {
+   "id": "conflict_308_c000187",
+   "p": 0.0311475042655704,
+   "ref": 0.0293184583178062,
+   "absdiff": 0.0018290459477641983
+  },
+  {
+   "id": "conflict_311_c000251",
+   "p": 0.0851075872337496,
+   "ref": 0.0851099797988181,
+   "absdiff": 2.3925650684958333e-06
+  },
+  {
+   "id": "conflict_312_c000260",
+   "p": 0.3486749411826514,
+   "ref": 0.3346304522328624,
+   "absdiff": 0.014044488949788991
+  },
+  {
+   "id": "conflict_314_c000291",
+   "p": 0.1067097852772832,
+   "ref": 0.1067152660846023,
+   "absdiff": 5.48080731910261e-06
+  },
+  {
+   "id": "conflict_314_c000293",
+   "p": 0.2568571123279028,
+   "ref": 0.2568639373107563,
+   "absdiff": 6.824982853481654e-06
+  },
+  {
+   "id": "conflict_314_c000296",
+   "p": 0.0566575737009083,
+   "ref": 0.0566606303634087,
+   "absdiff": 3.05666250040304e-06
+  },
+  {
+   "id": "conflict_314_c000312",
+   "p": 0.4688271674616561,
+   "ref": 0.4688403306331291,
+   "absdiff": 1.316317147298518e-05
+  },
+  {
+   "id": "conflict_314_c000325",
+   "p": 0.1733083466468599,
+   "ref": 0.1733134710241166,
+   "absdiff": 5.1243772566933465e-06
+  },
+  {
+   "id": "conflict_315_c000333",
+   "p": 0.2451047072964862,
+   "ref": 0.2451109011742276,
+   "absdiff": 6.193877741395015e-06
+  }
+ ]
+}
