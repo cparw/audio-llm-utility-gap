@@ -1,0 +1,31 @@
+{
+ "python": "3.10.2 (v3.10.2:a58ebcc701, Jan 13 2022, 14:50:16) [Clang 13.0.0 (clang-1300.0.29.30)]",
+ "executable": "/usr/local/bin/python3",
+ "machine": "arm64",
+ "numpy": "2.2.6",
+ "scipy": "1.15.3",
+ "sklearn": "1.7.2",
+ "joblib": "1.5.3",
+ "threadpoolctl": "3.6.0",
+ "os_cpu_count": 16,
+ "env": {
+  "OMP_NUM_THREADS": null,
+  "OPENBLAS_NUM_THREADS": null,
+  "MKL_NUM_THREADS": null,
+  "OPENBLAS_CORETYPE": null
+ },
+ "pandas": "2.3.3",
+ "threadpool_info": [
+  {
+   "user_api": "openmp",
+   "internal_api": "openmp",
+   "num_threads": 16,
+   "prefix": "libomp",
+   "filepath": "<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/.dylibs/libomp.dylib",
+   "version": null
+  }
+ ],
+ "numpy_show_runtime": "[{'numpy_version': '2.2.6',\n  'python': '3.10.2 (v3.10.2:a58ebcc701, Jan 13 2022, 14:50:16) [Clang 13.0.0 '\n            '(clang-1300.0.29.30)]',\n  'uname': uname_result(system='Darwin', node='MacBook-Pro.local', release='25.5.0', version='Darwin Kernel Version 25.5.0: Mon Apr 27 20:41:15 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T6041', machine='arm64')},\n {'simd_extensions': {'baseline': ['NEON', 'NEON_FP16', 'NEON_VFPV4', 'ASIMD'],\n                      'found': ['ASIMDHP'],\n                      'not_found': ['ASIMDFHM']}},\n {'filepath': '<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/.dylibs/libomp.dylib',\n  'internal_api': 'openmp',\n  'num_threads': 16,\n  'prefix': 'libomp',\n  'user_api': 'openmp',\n  'version': None}]\n",
+ "lscpu": "FileNotFoundError(2, 'No such file or directory')",
+ "cpu_flags_simd": "FileNotFoundError(2, 'No such file or directory')"
+}

@@ -1,0 +1,14 @@
+{
+ "job": "pitt_encproj",
+ "tag": "mac_macfile",
+ "fold_file": "<local data dir>/release/folds/pitt_groupkfold5_mac.csv",
+ "dtype": "f32",
+ "n_jobs": 10,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": null
+ },
+ "seconds": 2.4
+}

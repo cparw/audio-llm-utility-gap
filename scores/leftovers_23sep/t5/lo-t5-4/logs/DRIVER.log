@@ -1,0 +1,18 @@
+22:16:43 START pod lo-t5-4 mode main variants full jobs edaic30_encproj host f123c0720bb4
+22:16:58 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                              AMD EPYC 7713 64-Core Processor'] None
+22:17:09 edaic30_encproj exact script rc 0 | enc: 32 points, best auc_oof 0.6687 at 1, last 0.4815;proj: 1 points, best auc_oof 0.5186 at 0, last 0.5186;
+22:17:11 edaic30_encproj foldcheck rc 0
+22:17:21 edaic30_encproj variant podfile rc 0
+22:17:31 edaic30_encproj variant macfile rc 0
+22:17:42 edaic30_encproj variant podfile_f64 rc 0
+22:17:54 edaic30_encproj variant podfile_thr8 rc 0
+22:18:04 edaic30_encproj variant podfile_ctHaswell rc 0
+22:18:12 edaic30_encproj variant podfile_ctSkylakeX rc 1
+22:18:21 edaic30_encproj variant podfile_ctZen rc 0
+22:18:31 edaic30_encproj variant podfile_ctSapphireRapids rc 0
+22:18:41 edaic30_encproj variant podfile_ctSandybridge rc 0
+22:18:51 edaic30_encproj variant podfile_ctPrescott rc 0
+22:26:25 driver stopped after the driver file was replaced mid run (Mac side edit); finishing by hand: same-pod verifier refit then ALL DONE
+22:26:27 edaic30_encproj same-pod verifier refit rc 0
+22:26:27 ALL DONE
