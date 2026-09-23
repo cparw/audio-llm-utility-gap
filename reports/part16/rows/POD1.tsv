@@ -1,0 +1,35 @@
+1a_o25_text_conflict_auc	text-prompt conflict-arm AUC, o25	0.1498	0.1131	0.1887	483	138	scores/part16/POD1/p14_o25_1a_joined.csv
+1a_o25_text_agreement_auc	text-prompt agreement-arm AUC, o25	0.9596	0.9306	0.9823	483	138	scores/part16/POD1/p14_o25_1a_joined.csv
+1a_o25_pearson_text_audio	Pearson r transcript p_yes vs audio p_yes, o25	0.8442			966	138	scores/part16/POD1/p14_o25_1a_joined.csv
+1a_o25_same_decision	share text decision == audio decision at 0.5, o25	0.8634			966	138	scores/part16/POD1/p14_o25_1a_joined.csv
+1a_q2a_text_conflict_auc	text-prompt conflict-arm AUC, q2a	0.2359	0.1851	0.2886	483	138	scores/part16/POD1/p14_q2a_1a_joined.csv
+1a_q2a_text_agreement_auc	text-prompt agreement-arm AUC, q2a	0.9081	0.8515	0.9547	483	138	scores/part16/POD1/p14_q2a_1a_joined.csv
+1a_q2a_pearson_text_audio	Pearson r transcript p_yes vs audio p_yes, q2a	0.5155			966	138	scores/part16/POD1/p14_q2a_1a_joined.csv
+1a_q2a_same_decision	share text decision == audio decision at 0.5, q2a	0.7122			966	138	scores/part16/POD1/p14_q2a_1a_joined.csv
+1f_share_yesno_all	share first generated word is Yes/No, all clips	1.0000			966	138	scores/part16/POD1/p14_o25_greedy.csv
+1f_agree_gen_logit_all	agreement generated word vs logit decision, Yes/No clips	0.9865			966	138	scores/part16/POD1/p14_o25_greedy.csv
+1f_share_yesno_conflict	share first generated word is Yes/No, conflict arm	1.0000			483	138	scores/part16/POD1/p14_o25_greedy.csv
+1f_agree_gen_logit_conflict	agreement generated word vs logit decision, conflict arm	0.9917			483	138	scores/part16/POD1/p14_o25_greedy.csv
+1f_share_yesno_agreement	share first generated word is Yes/No, agreement arm	1.0000			483	138	scores/part16/POD1/p14_o25_greedy.csv
+1f_agree_gen_logit_agreement	agreement generated word vs logit decision, agreement arm	0.9814			483	138	scores/part16/POD1/p14_o25_greedy.csv
+VALIDATION_conflict_auc	pipeline validation, rebuilt 0.70 set, original wording (reproduces Table 2 audio) conflict arm AUC	0.2218	0.1829	0.2632	483	138	scores/part16/POD1/p14_thr070_check.csv
+VALIDATION_agreement_auc	pipeline validation, rebuilt 0.70 set, original wording (reproduces Table 2 audio) agreement arm AUC	0.9482	0.9039	0.9828	483	138	scores/part16/POD1/p14_thr070_check.csv
+1d_conflict_auc	1d PHQ-8>=10 cutoff rebuild, Omni audio conflict arm AUC	0.1759	0.1448	0.2095	924	237	scores/part16/POD1/p14_phq10_omni.csv
+1d_agreement_auc	1d PHQ-8>=10 cutoff rebuild, Omni audio agreement arm AUC	0.9311	0.9028	0.9568	924	237	scores/part16/POD1/p14_phq10_omni.csv
+1e060_conflict_auc	1e sentiment threshold 0.60, Omni audio conflict arm AUC	0.2619	0.2188	0.3075	646	147	scores/part16/POD1/p14_thr060_omni.csv
+1e060_agreement_auc	1e sentiment threshold 0.60, Omni audio agreement arm AUC	0.9406	0.9026	0.9711	646	147	scores/part16/POD1/p14_thr060_omni.csv
+1e080_conflict_auc	1e sentiment threshold 0.80, Omni audio conflict arm AUC	0.1936	0.1501	0.2438	281	104	scores/part16/POD1/p14_thr080_omni.csv
+1e080_agreement_auc	1e sentiment threshold 0.80, Omni audio agreement arm AUC	0.9594	0.9190	0.9895	281	104	scores/part16/POD1/p14_thr080_omni.csv
+1b_p2_conflict_auc	1b prompt wording 2, Omni audio conflict arm AUC	0.3439	0.2900	0.3979	483	138	scores/part16/POD1/p14_o25_audio_p2.csv
+1b_p2_agreement_auc	1b prompt wording 2, Omni audio agreement arm AUC	0.9119	0.8505	0.9594	483	138	scores/part16/POD1/p14_o25_audio_p2.csv
+1b_p3_conflict_auc	1b prompt wording 3, Omni audio conflict arm AUC	0.2392	0.1940	0.2865	483	138	scores/part16/POD1/p14_o25_audio_p3.csv
+1b_p3_agreement_auc	1b prompt wording 3, Omni audio agreement arm AUC	0.9442	0.8926	0.9821	483	138	scores/part16/POD1/p14_o25_audio_p3.csv
+1b_p2_conflict_delta	1b wording 2 conflict AUC change vs original wording	0.1221			483	138	scores/part16/POD1/p14_o25_audio_p2.csv
+1b_p2_agreement_delta	1b wording 2 agreement AUC change vs original wording	-0.0363			483	138	scores/part16/POD1/p14_o25_audio_p2.csv
+1b_p3_conflict_delta	1b wording 3 conflict AUC change vs original wording	0.0174			483	138	scores/part16/POD1/p14_o25_audio_p3.csv
+1b_p3_agreement_delta	1b wording 3 agreement AUC change vs original wording	-0.0040			483	138	scores/part16/POD1/p14_o25_audio_p3.csv
+1b_max_abs_change	1b maximum absolute AUC change across both wordings and both arms	0.1221			966	138	scores/part16/POD1/p14_o25_audio_p2.csv
+1c_conflict_auc	1c sft_full projector RETRAIN, out-of-fold by speaker, Omni audio conflict arm AUC	0.2283	0.1650	0.2980	483	138	scores/part16/POD1/p14_o25_sftfull.csv
+1c_agreement_auc	1c sft_full projector RETRAIN, out-of-fold by speaker, Omni audio agreement arm AUC	0.7930	0.7062	0.8669	483	138	scores/part16/POD1/p14_o25_sftfull.csv
+1c_edaic_oof_auc_retrain	1c RETRAIN E-DAIC out-of-fold AUC (original sft_full was 0.6421; input audio differs)	0.5315			275	275	scores/part16/POD1/sft1c_edaic_oof.csv
+1e_conflict_auc_range	1e conflict AUC range across sentiment 0.60/0.70/0.80	0.0683			0	0	scores/part16/POD1/p14_thr060_omni.csv

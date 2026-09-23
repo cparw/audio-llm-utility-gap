@@ -1,0 +1,65 @@
+id,what,primary,verify,agree,n,n_spk
+VALIDATION_conflict_auc,"0.70 rebuild, original wording (=Table 2 audio) conflict AUC",0.2218,0.2218,True,483,138
+VALIDATION_conflict_lo,"0.70 rebuild, original wording (=Table 2 audio) conflict CI lo",0.1829,0.1829,True,483,138
+VALIDATION_conflict_hi,"0.70 rebuild, original wording (=Table 2 audio) conflict CI hi",0.2632,0.2632,True,483,138
+VALIDATION_agreement_auc,"0.70 rebuild, original wording (=Table 2 audio) agreement AUC",0.9482,0.9482,True,483,138
+VALIDATION_agreement_lo,"0.70 rebuild, original wording (=Table 2 audio) agreement CI lo",0.9039,0.9039,True,483,138
+VALIDATION_agreement_hi,"0.70 rebuild, original wording (=Table 2 audio) agreement CI hi",0.9828,0.9828,True,483,138
+1d_conflict_auc,PHQ-8>=10 cutoff conflict AUC,0.1759,0.1759,True,924,237
+1d_conflict_lo,PHQ-8>=10 cutoff conflict CI lo,0.1448,0.1448,True,924,237
+1d_conflict_hi,PHQ-8>=10 cutoff conflict CI hi,0.2095,0.2095,True,924,237
+1d_agreement_auc,PHQ-8>=10 cutoff agreement AUC,0.9311,0.9311,True,924,237
+1d_agreement_lo,PHQ-8>=10 cutoff agreement CI lo,0.9028,0.9028,True,924,237
+1d_agreement_hi,PHQ-8>=10 cutoff agreement CI hi,0.9568,0.9568,True,924,237
+1e060_conflict_auc,sentiment 0.60 conflict AUC,0.2619,0.2619,True,646,147
+1e060_conflict_lo,sentiment 0.60 conflict CI lo,0.2188,0.2188,True,646,147
+1e060_conflict_hi,sentiment 0.60 conflict CI hi,0.3075,0.3075,True,646,147
+1e060_agreement_auc,sentiment 0.60 agreement AUC,0.9406,0.9406,True,646,147
+1e060_agreement_lo,sentiment 0.60 agreement CI lo,0.9026,0.9026,True,646,147
+1e060_agreement_hi,sentiment 0.60 agreement CI hi,0.9711,0.9711,True,646,147
+1e080_conflict_auc,sentiment 0.80 conflict AUC,0.1936,0.1936,True,281,104
+1e080_conflict_lo,sentiment 0.80 conflict CI lo,0.1501,0.1501,True,281,104
+1e080_conflict_hi,sentiment 0.80 conflict CI hi,0.2438,0.2438,True,281,104
+1e080_agreement_auc,sentiment 0.80 agreement AUC,0.9594,0.9594,True,281,104
+1e080_agreement_lo,sentiment 0.80 agreement CI lo,0.9190,0.9190,True,281,104
+1e080_agreement_hi,sentiment 0.80 agreement CI hi,0.9895,0.9895,True,281,104
+1b_p2_conflict_auc,prompt wording 2 conflict AUC,0.3439,0.3439,True,483,138
+1b_p2_conflict_lo,prompt wording 2 conflict CI lo,0.2900,0.2900,True,483,138
+1b_p2_conflict_hi,prompt wording 2 conflict CI hi,0.3979,0.3979,True,483,138
+1b_p2_agreement_auc,prompt wording 2 agreement AUC,0.9119,0.9119,True,483,138
+1b_p2_agreement_lo,prompt wording 2 agreement CI lo,0.8505,0.8505,True,483,138
+1b_p2_agreement_hi,prompt wording 2 agreement CI hi,0.9594,0.9594,True,483,138
+1b_p3_conflict_auc,prompt wording 3 conflict AUC,0.2392,0.2392,True,483,138
+1b_p3_conflict_lo,prompt wording 3 conflict CI lo,0.1940,0.1940,True,483,138
+1b_p3_conflict_hi,prompt wording 3 conflict CI hi,0.2865,0.2865,True,483,138
+1b_p3_agreement_auc,prompt wording 3 agreement AUC,0.9442,0.9442,True,483,138
+1b_p3_agreement_lo,prompt wording 3 agreement CI lo,0.8926,0.8926,True,483,138
+1b_p3_agreement_hi,prompt wording 3 agreement CI hi,0.9821,0.9821,True,483,138
+1c_conflict_auc,"sft_full retrain, OOF by speaker conflict AUC",0.2283,0.2283,True,483,138
+1c_conflict_lo,"sft_full retrain, OOF by speaker conflict CI lo",0.1650,0.1650,True,483,138
+1c_conflict_hi,"sft_full retrain, OOF by speaker conflict CI hi",0.2980,0.2980,True,483,138
+1c_agreement_auc,"sft_full retrain, OOF by speaker agreement AUC",0.7930,0.7930,True,483,138
+1c_agreement_lo,"sft_full retrain, OOF by speaker agreement CI lo",0.7062,0.7062,True,483,138
+1c_agreement_hi,"sft_full retrain, OOF by speaker agreement CI hi",0.8669,0.8669,True,483,138
+1a_o25_text_conflict_auc,1a o25 text conflict AUC,0.1498,0.1498,True,483,138
+1a_o25_text_conflict_lo,1a o25 text conflict CI lo,0.1131,0.1131,True,483,138
+1a_o25_text_conflict_hi,1a o25 text conflict CI hi,0.1887,0.1887,True,483,138
+1a_o25_text_agreement_auc,1a o25 text agreement AUC,0.9596,0.9596,True,483,138
+1a_o25_text_agreement_lo,1a o25 text agreement CI lo,0.9306,0.9306,True,483,138
+1a_o25_text_agreement_hi,1a o25 text agreement CI hi,0.9823,0.9823,True,483,138
+1a_o25_pearson,1a o25 Pearson r text vs audio,0.8442,0.8442,True,966,138
+1a_o25_same_decision,1a o25 same-decision share,0.8634,0.8634,True,966,138
+1a_q2a_text_conflict_auc,1a q2a text conflict AUC,0.2359,0.2359,True,483,138
+1a_q2a_text_conflict_lo,1a q2a text conflict CI lo,0.1851,0.1851,True,483,138
+1a_q2a_text_conflict_hi,1a q2a text conflict CI hi,0.2886,0.2886,True,483,138
+1a_q2a_text_agreement_auc,1a q2a text agreement AUC,0.9081,0.9081,True,483,138
+1a_q2a_text_agreement_lo,1a q2a text agreement CI lo,0.8515,0.8515,True,483,138
+1a_q2a_text_agreement_hi,1a q2a text agreement CI hi,0.9547,0.9547,True,483,138
+1a_q2a_pearson,1a q2a Pearson r text vs audio,0.5155,0.5155,True,966,138
+1a_q2a_same_decision,1a q2a same-decision share,0.7122,0.7122,True,966,138
+1f_share_yesno_all,1f share first word Yes/No,1.0000,1.0000,True,966,138
+1f_agree_gen_logit_all,1f agreement generated vs logit,0.9865,0.9865,True,966,138
+1f_share_yesno_conflict,1f share Yes/No conflict,1.0000,1.0000,True,483,138
+1f_agree_gen_logit_conflict,1f agreement conflict,0.9917,0.9917,True,483,138
+1f_share_yesno_agreement,1f share Yes/No agreement,1.0000,1.0000,True,483,138
+1f_agree_gen_logit_agreement,1f agreement agreement,0.9814,0.9814,True,483,138

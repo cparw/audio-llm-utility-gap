@@ -1,0 +1,1738 @@
+[
+ {
+  "what": "VALIDATION(0.70 rebuild) n rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) n speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) conflict AUC",
+  "original_value": "0.2218",
+  "recomputed_value": "0.2218",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.221776"
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) conflict arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) agreement AUC",
+  "original_value": "0.9482",
+  "recomputed_value": "0.9482",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.948166"
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) agreement arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) conflict CI lo",
+  "original_value": "0.1829",
+  "recomputed_value": "0.1829",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) conflict CI hi",
+  "original_value": "0.2632",
+  "recomputed_value": "0.2632",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) agreement CI lo",
+  "original_value": "0.9039",
+  "recomputed_value": "0.9039",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) agreement CI hi",
+  "original_value": "0.9828",
+  "recomputed_value": "0.9828",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "VALIDATION(0.70 rebuild) pooled AUC",
+  "original_value": "0.6343",
+  "recomputed_value": "0.6343",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 n rows",
+  "original_value": "1848.0000",
+  "recomputed_value": "1848.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 n speakers",
+  "original_value": "237.0000",
+  "recomputed_value": "237.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 conflict AUC",
+  "original_value": "0.1759",
+  "recomputed_value": "0.1759",
+  "agrees_to_4dp": true,
+  "note": "n_arm=924 pos=426 trapz=0.175915"
+ },
+ {
+  "what": "1d PHQ8>=10 conflict arm n",
+  "original_value": "924.0000",
+  "recomputed_value": "924.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 agreement AUC",
+  "original_value": "0.9311",
+  "recomputed_value": "0.9311",
+  "agrees_to_4dp": true,
+  "note": "n_arm=924 pos=426 trapz=0.931062"
+ },
+ {
+  "what": "1d PHQ8>=10 agreement arm n",
+  "original_value": "924.0000",
+  "recomputed_value": "924.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 conflict CI lo",
+  "original_value": "0.1448",
+  "recomputed_value": "0.1448",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 conflict CI hi",
+  "original_value": "0.2095",
+  "recomputed_value": "0.2095",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 agreement CI lo",
+  "original_value": "0.9028",
+  "recomputed_value": "0.9028",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 agreement CI hi",
+  "original_value": "0.9568",
+  "recomputed_value": "0.9568",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d PHQ8>=10 pooled AUC",
+  "original_value": "0.5790",
+  "recomputed_value": "0.5790",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 n rows",
+  "original_value": "1292.0000",
+  "recomputed_value": "1292.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 n speakers",
+  "original_value": "147.0000",
+  "recomputed_value": "147.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 conflict AUC",
+  "original_value": "0.2619",
+  "recomputed_value": "0.2619",
+  "agrees_to_4dp": true,
+  "note": "n_arm=646 pos=247 trapz=0.261890"
+ },
+ {
+  "what": "1e sentiment 0.60 conflict arm n",
+  "original_value": "646.0000",
+  "recomputed_value": "646.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 agreement AUC",
+  "original_value": "0.9406",
+  "recomputed_value": "0.9406",
+  "agrees_to_4dp": true,
+  "note": "n_arm=646 pos=247 trapz=0.940590"
+ },
+ {
+  "what": "1e sentiment 0.60 agreement arm n",
+  "original_value": "646.0000",
+  "recomputed_value": "646.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 conflict CI lo",
+  "original_value": "0.2188",
+  "recomputed_value": "0.2188",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 conflict CI hi",
+  "original_value": "0.3075",
+  "recomputed_value": "0.3075",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 agreement CI lo",
+  "original_value": "0.9026",
+  "recomputed_value": "0.9026",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 agreement CI hi",
+  "original_value": "0.9711",
+  "recomputed_value": "0.9711",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.60 pooled AUC",
+  "original_value": "0.6438",
+  "recomputed_value": "0.6438",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 n rows",
+  "original_value": "562.0000",
+  "recomputed_value": "562.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 n speakers",
+  "original_value": "104.0000",
+  "recomputed_value": "104.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 conflict AUC",
+  "original_value": "0.1936",
+  "recomputed_value": "0.1936",
+  "agrees_to_4dp": true,
+  "note": "n_arm=281 pos=150 trapz=0.193639"
+ },
+ {
+  "what": "1e sentiment 0.80 conflict arm n",
+  "original_value": "281.0000",
+  "recomputed_value": "281.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 agreement AUC",
+  "original_value": "0.9594",
+  "recomputed_value": "0.9594",
+  "agrees_to_4dp": true,
+  "note": "n_arm=281 pos=150 trapz=0.959389"
+ },
+ {
+  "what": "1e sentiment 0.80 agreement arm n",
+  "original_value": "281.0000",
+  "recomputed_value": "281.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 conflict CI lo",
+  "original_value": "0.1501",
+  "recomputed_value": "0.1501",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 conflict CI hi",
+  "original_value": "0.2438",
+  "recomputed_value": "0.2438",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 agreement CI lo",
+  "original_value": "0.9190",
+  "recomputed_value": "0.9190",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 agreement CI hi",
+  "original_value": "0.9895",
+  "recomputed_value": "0.9895",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e sentiment 0.80 pooled AUC",
+  "original_value": "0.6235",
+  "recomputed_value": "0.6235",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 n rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 n speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 conflict AUC",
+  "original_value": "0.3439",
+  "recomputed_value": "0.3439",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.343902"
+ },
+ {
+  "what": "1b wording 2 conflict arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 agreement AUC",
+  "original_value": "0.9119",
+  "recomputed_value": "0.9119",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.911897"
+ },
+ {
+  "what": "1b wording 2 agreement arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 conflict CI lo",
+  "original_value": "0.2900",
+  "recomputed_value": "0.2900",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 conflict CI hi",
+  "original_value": "0.3979",
+  "recomputed_value": "0.3979",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 agreement CI lo",
+  "original_value": "0.8505",
+  "recomputed_value": "0.8505",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 agreement CI hi",
+  "original_value": "0.9594",
+  "recomputed_value": "0.9594",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 2 pooled AUC",
+  "original_value": "0.6626",
+  "recomputed_value": "0.6626",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 n rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 n speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 conflict AUC",
+  "original_value": "0.2392",
+  "recomputed_value": "0.2392",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.239165"
+ },
+ {
+  "what": "1b wording 3 conflict arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 agreement AUC",
+  "original_value": "0.9442",
+  "recomputed_value": "0.9442",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.944183"
+ },
+ {
+  "what": "1b wording 3 agreement arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 conflict CI lo",
+  "original_value": "0.1940",
+  "recomputed_value": "0.1940",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 conflict CI hi",
+  "original_value": "0.2865",
+  "recomputed_value": "0.2865",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 agreement CI lo",
+  "original_value": "0.8926",
+  "recomputed_value": "0.8926",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 agreement CI hi",
+  "original_value": "0.9821",
+  "recomputed_value": "0.9821",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b wording 3 pooled AUC",
+  "original_value": "0.6384",
+  "recomputed_value": "0.6384",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN n rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN n speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN conflict AUC",
+  "original_value": "0.2283",
+  "recomputed_value": "0.2283",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.228251"
+ },
+ {
+  "what": "1c sft_full RETRAIN conflict arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN agreement AUC",
+  "original_value": "0.7930",
+  "recomputed_value": "0.7930",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.792964"
+ },
+ {
+  "what": "1c sft_full RETRAIN agreement arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN conflict CI lo",
+  "original_value": "0.1650",
+  "recomputed_value": "0.1650",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN conflict CI hi",
+  "original_value": "0.2980",
+  "recomputed_value": "0.2980",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN agreement CI lo",
+  "original_value": "0.7062",
+  "recomputed_value": "0.7062",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN agreement CI hi",
+  "original_value": "0.8669",
+  "recomputed_value": "0.8669",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c sft_full RETRAIN pooled AUC",
+  "original_value": "0.5193",
+  "recomputed_value": "0.5193",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 n rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 n speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 conflict AUC",
+  "original_value": "0.1498",
+  "recomputed_value": "0.1498",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.149781"
+ },
+ {
+  "what": "1a o25 conflict arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 agreement AUC",
+  "original_value": "0.9596",
+  "recomputed_value": "0.9596",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.959624"
+ },
+ {
+  "what": "1a o25 agreement arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 conflict CI lo",
+  "original_value": "0.1131",
+  "recomputed_value": "0.1131",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 conflict CI hi",
+  "original_value": "0.1887",
+  "recomputed_value": "0.1887",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 agreement CI lo",
+  "original_value": "0.9306",
+  "recomputed_value": "0.9306",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 agreement CI hi",
+  "original_value": "0.9823",
+  "recomputed_value": "0.9823",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 pooled AUC",
+  "original_value": "0.6077",
+  "recomputed_value": "0.6077",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 Pearson r text vs audio",
+  "original_value": "0.8442",
+  "recomputed_value": "0.8442",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 same-decision share @0.5",
+  "original_value": "0.8634",
+  "recomputed_value": "0.8634",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a n rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a n speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a conflict AUC",
+  "original_value": "0.2359",
+  "recomputed_value": "0.2359",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.235883"
+ },
+ {
+  "what": "1a q2a conflict arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a agreement AUC",
+  "original_value": "0.9081",
+  "recomputed_value": "0.9081",
+  "agrees_to_4dp": true,
+  "note": "n_arm=483 pos=205 trapz=0.908124"
+ },
+ {
+  "what": "1a q2a agreement arm n",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a conflict CI lo",
+  "original_value": "0.1851",
+  "recomputed_value": "0.1851",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a conflict CI hi",
+  "original_value": "0.2886",
+  "recomputed_value": "0.2886",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a agreement CI lo",
+  "original_value": "0.8515",
+  "recomputed_value": "0.8515",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a agreement CI hi",
+  "original_value": "0.9547",
+  "recomputed_value": "0.9547",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a usable paired draws",
+  "original_value": "2000.0000",
+  "recomputed_value": "2000.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a pooled AUC",
+  "original_value": "0.5995",
+  "recomputed_value": "0.5995",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a Pearson r text vs audio",
+  "original_value": "0.5155",
+  "recomputed_value": "0.5155",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a q2a same-decision share @0.5",
+  "original_value": "0.7122",
+  "recomputed_value": "0.7122",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f n rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f n speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f share first word Yes/No (all)",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": "966/966"
+ },
+ {
+  "what": "1f agreement gen vs logit (all)",
+  "original_value": "0.9865",
+  "recomputed_value": "0.9865",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f share Yes/No [conflict]",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f agreement gen vs logit [conflict]",
+  "original_value": "0.9917",
+  "recomputed_value": "0.9917",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f share Yes/No [agreement]",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f agreement gen vs logit [agreement]",
+  "original_value": "0.9814",
+  "recomputed_value": "0.9814",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f first-word count 'no'",
+  "original_value": "730.0000",
+  "recomputed_value": "730.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f first-word count 'yes'",
+  "original_value": "236.0000",
+  "recomputed_value": "236.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f n distinct first words",
+  "original_value": "2.0000",
+  "recomputed_value": "2.0000",
+  "agrees_to_4dp": true,
+  "note": "['no', 'yes']"
+ },
+ {
+  "what": "1f logit_decision == (p_yes>0.5)",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f row order greedy==manifest==part14",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f max|greedy p_yes - part14 p_yes| < 1e-9",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": "actual 5.000e-11"
+ },
+ {
+  "what": "baseline gap (agreement - conflict)",
+  "original_value": "0.7264",
+  "recomputed_value": "0.7264",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1d gap (agreement - conflict)",
+  "original_value": "0.7551",
+  "recomputed_value": "0.7551",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1e conflict AUC range over 0.60/0.70/0.80",
+  "original_value": "0.0683",
+  "recomputed_value": "0.0683",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b w2 conflict delta vs w1",
+  "original_value": "0.1221",
+  "recomputed_value": "0.1221",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b w2 agreement delta vs w1",
+  "original_value": "-0.0363",
+  "recomputed_value": "-0.0363",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b w3 conflict delta vs w1",
+  "original_value": "0.0174",
+  "recomputed_value": "0.0174",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b w3 agreement delta vs w1",
+  "original_value": "-0.0040",
+  "recomputed_value": "-0.0040",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1b max abs AUC change any wording/arm",
+  "original_value": "0.1221",
+  "recomputed_value": "0.1221",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c OOF n rows",
+  "original_value": "275.0000",
+  "recomputed_value": "275.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c OOF n speakers",
+  "original_value": "275.0000",
+  "recomputed_value": "275.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c E-DAIC OOF AUC (retrain)",
+  "original_value": "0.5315",
+  "recomputed_value": "0.5315",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_thr070_check.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_thr070_check.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_phq10_omni.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_phq10_omni.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_thr060_omni.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_thr060_omni.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_thr080_omni.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_thr080_omni.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_audio_p2.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_audio_p2.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_audio_p3.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_audio_p3.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_greedy.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_greedy.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_sftfull.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar p14_o25_sftfull.json required keys",
+  "original_value": "all",
+  "recomputed_value": "missing:['n']",
+  "agrees_to_4dp": false,
+  "note": "absent optional: ['clip_list', 'command', 'device', 'yes_ids', 'no_ids']"
+ },
+ {
+  "what": "sidecar full_zs_check.json prompt verbatim",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sidecar full_zs_check.json required keys",
+  "original_value": "all",
+  "recomputed_value": "all",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr070_check.csv prompt column verbatim+unique",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_phq10_omni.csv prompt column verbatim+unique",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr060_omni.csv prompt column verbatim+unique",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr080_omni.csv prompt column verbatim+unique",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_o25_audio_p2.csv prompt column verbatim+unique",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_o25_audio_p3.csv prompt column verbatim+unique",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_o25_sftfull.csv prompt column verbatim+unique",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "part14 p14_o25_zeroshot.json prompt == P1",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "part14 p14_q2a_zeroshot.json prompt == P1",
+  "original_value": "match",
+  "recomputed_value": "match",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "0.70 rebuild row order == part14 manifest",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "0.70 rebuild reproduces part14 p_yes (<1e-9)",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": "max|delta| 5.000e-11"
+ },
+ {
+  "what": "part14 published pooled Omni audio AUC",
+  "original_value": "0.6343",
+  "recomputed_value": "0.6343",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "part14 manifest rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "part14 manifest unique seg_uid",
+  "original_value": "794.0000",
+  "recomputed_value": "794.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "part14 manifest unique key (966 rows)",
+  "original_value": "794.0000",
+  "recomputed_value": "794.0000",
+  "agrees_to_4dp": true,
+  "note": "clip reuse: agreement arm 483 rows over 311 distinct segments"
+ },
+ {
+  "what": "conflict arm distinct segments",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "agreement arm distinct segments",
+  "original_value": "311.0000",
+  "recomputed_value": "311.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "segments shared across arms",
+  "original_value": "0.0000",
+  "recomputed_value": "0.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sftfull sidecar n_scored_part14 == unique ids",
+  "original_value": "794.0000",
+  "recomputed_value": "794.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "mf_p14_pod.csv rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "mf_p14_pod ids == manifest keys (order)",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "mf_p14_pod unique basenames",
+  "original_value": "794.0000",
+  "recomputed_value": "794.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "speakers in sentiment source",
+  "original_value": "275.0000",
+  "recomputed_value": "275.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "speakers with PHQ8>=10 but released y=0",
+  "original_value": "20.0000",
+  "recomputed_value": "20.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_phq10_build.json n_pairs",
+  "original_value": "924.0000",
+  "recomputed_value": "924.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_phq10_build.json n_rows",
+  "original_value": "1848.0000",
+  "recomputed_value": "1848.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_phq10_build.json n_speakers",
+  "original_value": "237.0000",
+  "recomputed_value": "237.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr060_build.json n_pairs",
+  "original_value": "646.0000",
+  "recomputed_value": "646.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr060_build.json n_rows",
+  "original_value": "1292.0000",
+  "recomputed_value": "1292.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr060_build.json n_speakers",
+  "original_value": "147.0000",
+  "recomputed_value": "147.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr080_build.json n_pairs",
+  "original_value": "281.0000",
+  "recomputed_value": "281.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr080_build.json n_rows",
+  "original_value": "562.0000",
+  "recomputed_value": "562.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr080_build.json n_speakers",
+  "original_value": "104.0000",
+  "recomputed_value": "104.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr070_check_build.json n_pairs",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr070_check_build.json n_rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "p14_thr070_check_build.json n_speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rows/POD1.tsv line count",
+  "original_value": "35.0000",
+  "recomputed_value": "35.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "eligible segments (speech_s>=5,nw>=25,span>=8)",
+  "original_value": "5523.0000",
+  "recomputed_value": "5523.0000",
+  "agrees_to_4dp": true,
+  "note": "self-consistent gate"
+ },
+ {
+  "what": "clearly_positive == (p_pos>=0.70) exactly",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "clearly_negative == (p_neg>=0.70) exactly",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1d phq10 n_pairs",
+  "original_value": "924.0000",
+  "recomputed_value": "924.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1d phq10 unmatched",
+  "original_value": "24.0000",
+  "recomputed_value": "24.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1d phq10 n_rows",
+  "original_value": "1848.0000",
+  "recomputed_value": "1848.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1d phq10 n_speakers",
+  "original_value": "237.0000",
+  "recomputed_value": "237.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1d phq10 n_positive_rows",
+  "original_value": "852.0000",
+  "recomputed_value": "852.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1d phq10 seg_uid list identical",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.60 n_pairs",
+  "original_value": "646.0000",
+  "recomputed_value": "646.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.60 unmatched",
+  "original_value": "0.0000",
+  "recomputed_value": "0.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.60 n_rows",
+  "original_value": "1292.0000",
+  "recomputed_value": "1292.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.60 n_speakers",
+  "original_value": "147.0000",
+  "recomputed_value": "147.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.60 n_positive_rows",
+  "original_value": "494.0000",
+  "recomputed_value": "494.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.60 seg_uid list identical",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.80 n_pairs",
+  "original_value": "281.0000",
+  "recomputed_value": "281.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.80 unmatched",
+  "original_value": "16.0000",
+  "recomputed_value": "16.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.80 n_rows",
+  "original_value": "562.0000",
+  "recomputed_value": "562.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.80 n_speakers",
+  "original_value": "104.0000",
+  "recomputed_value": "104.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.80 n_positive_rows",
+  "original_value": "300.0000",
+  "recomputed_value": "300.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 1e 0.80 seg_uid list identical",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 0.70 check n_pairs",
+  "original_value": "483.0000",
+  "recomputed_value": "483.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 0.70 check unmatched",
+  "original_value": "5.0000",
+  "recomputed_value": "5.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 0.70 check n_rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 0.70 check n_speakers",
+  "original_value": "138.0000",
+  "recomputed_value": "138.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 0.70 check n_positive_rows",
+  "original_value": "410.0000",
+  "recomputed_value": "410.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "rebuild 0.70 check seg_uid list identical",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "0.70 rebuild rows == released manifest rows",
+  "original_value": "966.0000",
+  "recomputed_value": "966.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "0.70 rebuild (set,seg_uid) set == released",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "0.70 rebuild row-for-row identical to released",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c full_zs_check.csv n merged",
+  "original_value": "275.0000",
+  "recomputed_value": "275.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c full_zs_check.csv max|dp_yes|",
+  "original_value": "0.9105",
+  "recomputed_value": "0.9105",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c full_zs_check.csv mean|dp_yes|",
+  "original_value": "0.2755",
+  "recomputed_value": "0.2755",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c full_zs_check.csv Pearson r new vs orig",
+  "original_value": "0.0795",
+  "recomputed_value": "0.0795",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c fullraw_zs.csv n merged",
+  "original_value": "20.0000",
+  "recomputed_value": "20.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c fullraw_zs.csv max|dp_yes|",
+  "original_value": "0.8271",
+  "recomputed_value": "0.8271",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c fullraw_zs.csv mean|dp_yes|",
+  "original_value": "0.2852",
+  "recomputed_value": "0.2852",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1c fullraw_zs.csv Pearson r new vs orig",
+  "original_value": "0.5150",
+  "recomputed_value": "0.5150",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sft_projector.py exists",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sft_projector.py contains torch.save",
+  "original_value": "0.0000",
+  "recomputed_value": "0.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "sft_projector.py contains safetensors",
+  "original_value": "0.0000",
+  "recomputed_value": "0.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "omni_prompt_variants.py exists",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "P2 wording derivable verbatim (mdd)",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "P3 wording derivable verbatim (mdd)",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "DISCREPANCIES entry: POD1 / Part16 1a \u2014 Part 14 clip reuse",
+  "original_value": "present",
+  "recomputed_value": "present",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "DISCREPANCIES entry: POD1 / Part16 1d \u2014 E-DAIC released binary la",
+  "original_value": "present",
+  "recomputed_value": "present",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "DISCREPANCIES entry: POD1 / Part16 1c \u2014 sft_full per-fold checkpo",
+  "original_value": "present",
+  "recomputed_value": "present",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "cross-run p_yes identical to 0.70 run [1d phq10]",
+  "original_value": "0.0000",
+  "recomputed_value": "0.0000",
+  "agrees_to_4dp": true,
+  "note": "794 shared segments"
+ },
+ {
+  "what": "cross-run p_yes identical to 0.70 run [1e 0.60]",
+  "original_value": "0.0000",
+  "recomputed_value": "0.0000",
+  "agrees_to_4dp": true,
+  "note": "761 shared segments"
+ },
+ {
+  "what": "cross-run p_yes identical to 0.70 run [1e 0.80]",
+  "original_value": "0.0000",
+  "recomputed_value": "0.0000",
+  "agrees_to_4dp": true,
+  "note": "432 shared segments"
+ },
+ {
+  "what": "1f n disagreements",
+  "original_value": "13.0000",
+  "recomputed_value": "13.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1f max |p_yes - 0.5| among disagreements < 0.001",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": "max 0.00046"
+ },
+ {
+  "what": "part15 1a sidecar unique_segments",
+  "original_value": "794.0000",
+  "recomputed_value": "794.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "part15 1a sidecar claims dedup",
+  "original_value": "1.0000",
+  "recomputed_value": "1.0000",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 agreement AUC as published (with repeats)",
+  "original_value": "0.9596",
+  "recomputed_value": "0.9596",
+  "agrees_to_4dp": true,
+  "note": ""
+ },
+ {
+  "what": "1a o25 agreement AUC actually de-duplicated",
+  "original_value": "0.9620",
+  "recomputed_value": "0.9620",
+  "agrees_to_4dp": true,
+  "note": "n 483 -> 311; sidecar note says 483 unique, truth is 311"
+ }
+]
