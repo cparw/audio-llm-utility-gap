@@ -1,0 +1,22 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+{"rule_yes": [7414, 9454, 9693, 9834, 14004, 14080], "rule_no": [902, 2152, 2308, 2753, 5664, 8996], "paper_yes": [7414, 9454, 9693, 9834, 14004], "paper_no": [902, 2152, 2308, 2753, 8996], "multi_token": []}
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1243.13it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  56%|█████▋    | 1379/2447 [00:00<00:00, 13748.25it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 13446.33it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+305 default 0.5776176021594804 0.9939588904380798 0.57761773638239 0.993956595659256 7500 7548 300.0 3.98 
+679 default 0.2339099197779088 0.9941835701465607 0.2339097994971158 0.9941807687282562 7500 7548 300.0 1.75 
+466 default 0.7063143131426817 0.9940379858016968 0.7063145754890745 0.9940349161624908 7500 7548 300.0 1.32 
+705 default 0.9604465583812126 0.9983520545065403 0.9604466103607565 0.9983506351709366 4957 5005 198.3 0.84 
