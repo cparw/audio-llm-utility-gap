@@ -1,0 +1,33 @@
+{
+ "result": "PART 24 item 2 verifier",
+ "command": "<local data dir>/part24/fig/venv/bin/python scripts/part24/fig/verify_fig1_whole.py",
+ "seed": null,
+ "gpu": null,
+ "bootstrap_rule": "none (figure checks)",
+ "n": 275,
+ "n_speakers": 275,
+ "model_id": "Qwen/Qwen2.5-Omni-7B (curves only)",
+ "library_versions": {
+  "python": "3.14.6",
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "sklearn": "1.9.1",
+  "pymupdf": "1.28.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O"
+ },
+ "inputs": [
+  "<local data dir>/part23/pull/p23-a-probes/p23a/out/o25_whole_encoder_perlayer.csv",
+  "<local data dir>/part23/pull/p23-a-probes/p23a/out/o25_whole_llm_perlayer.csv",
+  "<local data dir>/part23/verify/curves_linux191_pid.csv",
+  "<local data dir>/part23/pull/p23-a-probes/p23a/out/A2_edaic_whole_zeroshot_perclip.csv",
+  "<local data dir>/release/overnight/curves/omni/pcgita_encoder.csv",
+  "<local data dir>/release/overnight/curves/omni/pcgita_llm.csv",
+  "<local data dir>/release/overnight/curves/omni/pitt_encoder.csv",
+  "<local data dir>/release/overnight/curves/omni/pitt_llm.csv",
+  "<local data dir>/paper1_submission_23sep/zip/figures/fig1_gap.pdf"
+ ],
+ "outputs": [
+  "scores/part24/fig/verify_fig1_whole_perlayer.csv",
+  "scores/part24/fig/verify_fig1_whole.out"
+ ]
+}

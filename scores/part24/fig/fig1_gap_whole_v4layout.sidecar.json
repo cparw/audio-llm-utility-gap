@@ -1,0 +1,73 @@
+{
+ "result": "Figure 1, whole interview version, layout v4",
+ "written_utc": "2026-09-23T21:46:17Z",
+ "command": "/usr/local/bin/python3 scripts/make_fig1_whole.py v4 figures/part24/fig1_gap_whole_v4layout.pdf",
+ "script": "scripts/make_fig1_whole.py",
+ "script_sha256": "aaec628e8245e5fc479ead9783692c2acb3791e564ef88929d59bf49de22b983",
+ "outputs": {
+  "pdf": "figures/part24/fig1_gap_whole_v4layout.pdf",
+  "png_200dpi": "figures/part24/fig1_gap_whole_v4layout.png",
+  "plotted_csv": "scores/part24/fig/fig1_gap_whole_v4layout_plotted.csv"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B (curves only; no model run here)",
+ "seed": null,
+ "gpu": null,
+ "bootstrap_rule": "none (figure; no intervals drawn)",
+ "edaic_n": 275,
+ "edaic_n_speakers": 275,
+ "edaic_column": "auc_oof (GroupKFold(5) by speaker, pooled OOF, from the pod)",
+ "sources": {
+  "PC-GITA": {
+   "encoder": "<local data dir>/release/overnight/curves/omni/pcgita_encoder.csv",
+   "encoder_sha256": "e1bfa76d3bdc3e2ab621aa571ce469f210c6f0dc04cef3d11113474af11c47a8",
+   "llm": "<local data dir>/release/overnight/curves/omni/pcgita_llm.csv",
+   "llm_sha256": "f9732d576fcfd391f4991c5b72df3dd61bbdc748054f78914e38d0026d0ce084",
+   "column": "auc"
+  },
+  "Pitt": {
+   "encoder": "<local data dir>/release/overnight/curves/omni/pitt_encoder.csv",
+   "encoder_sha256": "fa06f84fd856a1b2fe78069ec5ccbd1a81aa95574fb7817800d09d506a28c685",
+   "llm": "<local data dir>/release/overnight/curves/omni/pitt_llm.csv",
+   "llm_sha256": "e2773b5278383615b6d280ab4a4fc92e464f28f10c654de18509b82c45009cdb",
+   "column": "auc"
+  },
+  "E-DAIC": {
+   "encoder": "<local data dir>/part23/pull/p23-a-probes/p23a/out/o25_whole_encoder_perlayer.csv",
+   "encoder_sha256": "80b11fb36ce0c43f42b94d5bf5a9991e0b7eadcc4e4080cde2a611ee76f82322",
+   "llm": "<local data dir>/part23/pull/p23-a-probes/p23a/out/o25_whole_llm_perlayer.csv",
+   "llm_sha256": "e4eeddbc614f2265e9519c80f81fcb569a6608759d3f86bdf6776dedebd76b2c",
+   "column": "auc_oof"
+  }
+ },
+ "answer_lines": {
+  "PC-GITA": 0.5635,
+  "Pitt": 0.6578,
+  "E-DAIC": 0.8366
+ },
+ "answer_sources": {
+  "PC-GITA": "release/master/master_lookup.csv, Qwen2.5-Omni zero shot answer (unchanged)",
+  "Pitt": "release/master/master_lookup.csv, Qwen2.5-Omni zero shot answer (unchanged)",
+  "E-DAIC": "part23 A2_edaic_whole_zeroshot_perclip.csv, roc_auc_score(label, p_yes_whole); part23/verify/PART23_VERIFIED.tsv row 1_whole"
+ },
+ "fig_size_in": [
+  3.385827,
+  2.0
+ ],
+ "font": {
+  "family": [
+   "STIXGeneral"
+  ],
+  "mathtext": "stix",
+  "pdf_fonttype": 42,
+  "matplotlib_text_min_pt": 9.0,
+  "matplotlib_text_max_pt": 10.0,
+  "n_text": 20
+ },
+ "text_outside_figure": [],
+ "library_versions": {
+  "python": "3.10.2",
+  "matplotlib": "3.10.7",
+  "numpy": "2.2.6",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ }
+}
