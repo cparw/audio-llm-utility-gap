@@ -1,0 +1,22 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "RETRAIN": true,
+ "why_retrain": "sft_projector.py never saved per-fold model checkpoints; only _state.json (oof scores) and _oof.csv",
+ "train_clip_list": "/workspace/mf_full_rebuilt.csv (order recovered from sft_full_oof.csv)",
+ "score_clip_list": "/workspace/mf_p14_pod.csv",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "n": 966,
+ "epochs": 3,
+ "lr": 0.0001,
+ "trained": "projector only (thinker.audio_tower.proj), fp32 params, rest frozen",
+ "folds": 5,
+ "fold_rule": "sklearn GroupKFold(n_splits=5) grouped by speaker over mf_full_rebuilt.csv row order",
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "n_train": 275,
+ "n_scored_part14": 794,
+ "edaic_oof_auc_retrain": 0.5315,
+ "edaic_oof_auc_original_sft_full": 0.6421,
+ "minutes": 14.2,
+ "date": "2026-09-23"
+}
