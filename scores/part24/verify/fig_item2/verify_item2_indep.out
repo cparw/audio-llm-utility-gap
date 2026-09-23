@@ -1,0 +1,70 @@
+PART 24 item 2 independent verifier (pass 2) 2026-09-23T22:56:23Z
+env python 3.12.13 pymupdf 1.28.2 numpy 2.5.3 pandas 3.0.6 sklearn 1.9.1
+[whole] fig1_gap_whole.pdf page 243.78 x 187.20 pt
+[whole]   PyMuPDF span size min 9.0000 max 9.0000 over 28 spans, 157 glyphs
+[whole]   raw content stream Tf x cm scale: min 9.0000 max 9.0000 over 29 text objects (BT count 29)
+[whole]   spans under 9 pt: none
+[whole]   span fonts: ['STIXGeneral-Italic', 'STIXGeneral-Regular']
+[whole]   font objects in file: [(17, '/CIDFontType2', '/CZRBLR+STIXGeneral-Regular'), (18, '/Type0', '/CZRBLR+STIXGeneral-Regular'), (24, '/CIDFontType2', '/FTXWZA+STIXGeneral-Italic'), (25, '/Type0', '/FTXWZA+STIXGeneral-Italic')]
+[whole]   font programs: {'/CZRBLR+STIXGeneral-Regular': ['FontFile2'], '/FTXWZA+STIXGeneral-Italic': ['FontFile2']}
+[whole]   filled black outline paths (text drawn as curves): 0
+[whole_v4layout] fig1_gap_whole_v4layout.pdf page 243.78 x 144.00 pt
+[whole_v4layout]   PyMuPDF span size min 9.0000 max 10.0000 over 20 spans, 96 glyphs
+[whole_v4layout]   raw content stream Tf x cm scale: min 9.0000 max 10.0000 over 20 text objects (BT count 20)
+[whole_v4layout]   spans under 9 pt: none
+[whole_v4layout]   span fonts: ['STIXGeneral-Regular']
+[whole_v4layout]   font objects in file: [(17, '/CIDFontType2', '/CZRBLR+STIXGeneral-Regular'), (18, '/Type0', '/CZRBLR+STIXGeneral-Regular')]
+[whole_v4layout]   font programs: {'/CZRBLR+STIXGeneral-Regular': ['FontFile2']}
+[whole_v4layout]   filled black outline paths (text drawn as curves): 0
+[current_overleaf] fig1_gap.pdf page 244.08 x 187.20 pt
+[current_overleaf]   PyMuPDF span size min 7.5000 max 9.0000 over 28 spans, 157 glyphs
+[current_overleaf]   raw content stream Tf x cm scale: min 7.5000 max 9.0000 over 29 text objects (BT count 29)
+[current_overleaf]   spans under 9 pt: [(8.5, '0.56', 'STIXGeneral-Regular'), (8.5, 'PC-GITA (PD)', 'STIXGeneral-Regular'), (8.5, '0.66', 'STIXGeneral-Regular'), (8.5, 'Pitt (AD)', 'STIXGeneral-Regular'), (8.5, '0.83', 'STIXGeneral-Regular'), (7.5, 'proj.', 'STIXGeneral-Italic'), (7.5, 'chance', 'STIXGeneral-Regular'), (8.5, 'E-DAIC (MDD)', 'STIXGeneral-Regular')]
+[current_overleaf]   span fonts: ['STIXGeneral-Italic', 'STIXGeneral-Regular']
+[current_overleaf]   font objects in file: [(17, '/CIDFontType2', '/CZRBLR+STIXGeneral-Regular'), (18, '/Type0', '/CZRBLR+STIXGeneral-Regular'), (24, '/CIDFontType2', '/FTXWZA+STIXGeneral-Italic'), (25, '/Type0', '/FTXWZA+STIXGeneral-Italic')]
+[current_overleaf]   font programs: {'/CZRBLR+STIXGeneral-Regular': ['FontFile2'], '/FTXWZA+STIXGeneral-Italic': ['FontFile2']}
+[current_overleaf]   filled black outline paths (text drawn as curves): 0
+[whole] columnwidth 86.0 mm = 243.780 pt; figure width 243.780 pt; scale 1.00000; smallest text in the compiled paper 9.000 pt
+[current_overleaf] columnwidth 86.0 mm = 243.780 pt; figure width 244.080 pt; scale 0.99877; smallest text in the compiled paper 7.491 pt
+[pod encoder] sha256 of the 4 copies (disk out, disk probe, tar out, tar probe) all equal: True 80b11fb36ce0c43f
+[pod encoder] figure sidecar sha256 matches pod file: True
+[pod encoder] n 32 key layer auc_oof min 0.5593 max 0.6875 peak at 19
+[pod llm] sha256 of the 4 copies (disk out, disk probe, tar out, tar probe) all equal: True e4eeddbc614f2265
+[pod llm] figure sidecar sha256 matches pod file: True
+[pod llm] n 29 key stage auc_oof min 0.6094 max 0.7753 peak at 28
+[csv fig1_gap_whole_plotted.csv] E-DAIC encoder: n 32 (pod n 32), same layers True, max |plotted - pod auc_oof| = 0 at layer 0; vs pod auc_mean max diff 0.0159 (sanity: the column choice matters)
+[csv fig1_gap_whole_plotted.csv] E-DAIC llm: n 29 (pod n 29), same layers True, max |plotted - pod auc_oof| = 0 at layer 0; vs pod auc_mean max diff 0.0169 (sanity: the column choice matters)
+[csv fig1_gap_whole_v4layout_plotted.csv] E-DAIC encoder: n 32 (pod n 32), same layers True, max |plotted - pod auc_oof| = 0 at layer 0; vs pod auc_mean max diff 0.0159 (sanity: the column choice matters)
+[csv fig1_gap_whole_v4layout_plotted.csv] E-DAIC llm: n 29 (pod n 29), same layers True, max |plotted - pod auc_oof| = 0 at layer 0; vs pod auc_mean max diff 0.0169 (sanity: the column choice matters)
+[mirror PC-GITA encoder] sha256 matches figure sidecar: True
+[mirror PC-GITA llm] sha256 matches figure sidecar: True
+[mirror Pitt encoder] sha256 matches figure sidecar: True
+[mirror Pitt llm] sha256 matches figure sidecar: True
+[answer] E-DAIC whole zero shot roc_auc_score(label, p_yes_whole) = 0.836596 -> 0.8366; n 275, speakers 275, positives 66
+[whole pdf] axes clip boxes (top to bottom): 3; y ticks 9; x ticks 18
+[whole pdf] panel labels found: ['E-DAIC', 'PC-GITA', 'Pitt']
+[whole pdf] x tick positions [31.660674, 79.803298, 124.937008, 133.96375, 176.088546, 218.213341]; x tick labels in order [0, 16, 31, 0, 14, 28]
+[whole pdf] PC-GITA: y ticks [(0.5, 141.7845), (0.7, 160.3095), (0.9, 178.8345)], label offset spread 0.00e+00, linear fit residual 3.33e-16
+[whole pdf] PC-GITA encoder: n 32 (ref n 32), layers 0..31 max |layer - int| 7.1e-15, max |pdf - source| = 5.26e-09 at layer 1
+[whole pdf] PC-GITA llm: n 29 (ref n 29), layers 0..28 max |layer - int| 2.0e-07, max |pdf - source| = 5.26e-09 at layer 13
+[whole pdf] PC-GITA answer line dash [ 0.96 1.44 ] at AUC 0.563500 (expected 0.5635) diff 5.4e-09
+[whole pdf] Pitt: y ticks [(0.5, 92.8785), (0.7, 111.4035), (0.9, 129.9285)], label offset spread 1.42e-14, linear fit residual 6.66e-16
+[whole pdf] Pitt encoder: n 32 (ref n 32), layers 0..31 max |layer - int| 7.1e-15, max |pdf - source| = 5.38e-09 at layer 18
+[whole pdf] Pitt llm: n 29 (ref n 29), layers 0..28 max |layer - int| 2.0e-07, max |pdf - source| = 5.26e-09 at layer 23
+[whole pdf] Pitt answer line dash [ 0.96 1.44 ] at AUC 0.657800 (expected 0.6578) diff 5.6e-16
+[whole pdf] E-DAIC: y ticks [(0.5, 43.9725), (0.7, 62.4975), (0.9, 81.0225)], label offset spread 0.00e+00, linear fit residual 3.33e-16
+[whole pdf] E-DAIC encoder: n 32 (ref n 32), layers 0..31 max |layer - int| 7.1e-15, max |pdf - source| = 4.91e-09 at layer 24
+[whole pdf] E-DAIC llm: n 29 (ref n 29), layers 0..28 max |layer - int| 2.0e-07, max |pdf - source| = 5.09e-09 at layer 10
+[whole pdf] E-DAIC answer line dash [ 0.96 1.44 ] at AUC 0.836600 (expected 0.8366) diff 2.2e-16
+[linux191] file sha256 268e141fac9e594c, rows 61, env 1.9.1 2.1.2 1.18.1 x86_64
+[linux191] encoder: n 32 (pod n 32), max |recomputed - pod file| = 0.000580 at stage 8 (pod 0.5824, recompute 0.5830); equal at 4 dp 4/32; mean |diff| 0.000191; file's own pod column vs pod file max 0.0e+00; own absdiff column consistent True
+[linux191] encoder: that largest gap is 0.054 pt on the printed panel
+[linux191] llm: n 29 (pod n 29), max |recomputed - pod file| = 0.002030 at stage 22 (pod 0.7093, recompute 0.7113); equal at 4 dp 6/29; mean |diff| 0.000460; file's own pod column vs pod file max 0.0e+00; own absdiff column consistent True
+[linux191] llm: that largest gap is 0.188 pt on the printed panel
+[fig1_gap.pdf] zip/figures: md5 bbefb559a5768dcb07d11ed5d440da18 sha256 3e3d60718405a457 size 16467 mtime 2026-09-23T13:34:38
+[fig1_gap.pdf] overleaf.zip entry figures/fig1_gap.pdf: md5 bbefb559a5768dcb07d11ed5d440da18 size 16467 zip date (2026, 9, 23, 13, 34, 38); identical to zip/figures file True
+[tex] overleaf.zip AudioLLMHealthUtilityGap.tex identical to zip/ tex True, to Desktop tex True; includegraphics lines: [b'includegraphics[width=\\columnwidth]{fig1_gap.pdf}']
+[fig1_gap.pdf] zip/ tex mtime 2026-09-23T13:34:38, Desktop tex mtime 2026-09-23T06:38:06
+[fig1_gap.pdf] earliest file in part24/fig 2026-09-23T14:44:55; fig1_gap.pdf mtime is before it: True
+[fig1_gap.pdf] Desktop paper1_final copy: md5 456ca061e9ac4c5d59715f045693617f mtime 2026-09-22T22:25:13 (older v4 output; not the Overleaf file)
+[fig1_gap_whole.pdf] zip/figures copy md5 e05e5188fc39554024e8d5ef3cb31020 identical to part24/fig copy True; differs from fig1_gap.pdf True

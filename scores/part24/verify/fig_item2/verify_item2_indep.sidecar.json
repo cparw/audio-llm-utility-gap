@@ -1,0 +1,18 @@
+{
+ "written_utc": "2026-09-23T22:56:23Z",
+ "command": "<local data dir>/part24/verify/fig_item2/venv/bin/python verify_item2_indep.py",
+ "script_sha256": "a3a52973418e7b13f66a110e3010206f660f994bc5aa5e99d01ffd64ae24e8aa",
+ "seed": null,
+ "gpu": null,
+ "bootstrap_rule": "none (figure checks)",
+ "n": 275,
+ "n_speakers": 275,
+ "library_versions": {
+  "python": "3.12.13",
+  "pymupdf": "1.28.2",
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "sklearn": "1.9.1",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ }
+}
