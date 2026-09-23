@@ -1,0 +1,51 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/root/p20/scripts/pod_manifest_noinv.csv",
+ "fold_file": "/workspace/p20/work/pitt_groupkfold5_pod.csv",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "epochs": 3,
+ "lr": 0.0001,
+ "trained": "projector only (thinker.audio_tower.proj)",
+ "p_yes": "recipe: softmax over the ' Yes' and ' No' logits",
+ "yes_id": 7414,
+ "no_id": 2308,
+ "rule_ids": [
+  [
+   7414,
+   9454,
+   9693,
+   9834,
+   14004,
+   14080
+  ],
+  [
+   902,
+   2152,
+   2308,
+   2753,
+   5664,
+   8996
+  ]
+ ],
+ "losses": {
+  "0_0": 0.5837714723386069,
+  "0_1": 0.2821007497075766,
+  "0_2": 0.10977438386009239,
+  "1_0": 0.6093486696282492,
+  "1_1": 0.3588719041370612,
+  "1_2": 0.13435095739687847,
+  "2_0": 0.6124285363597187,
+  "2_1": 0.3398056280883876,
+  "2_2": 0.12240085444963453,
+  "3_0": 0.6130068723062674,
+  "3_1": 0.33044616419821976,
+  "3_2": 0.18624961660491923,
+  "4_0": 0.6091731236875058,
+  "4_1": 0.3276369521742066,
+  "4_2": 0.1398046007833133
+ },
+ "minutes": 19.5,
+ "date": "2026-09-23"
+}

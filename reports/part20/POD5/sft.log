@@ -1,0 +1,142 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  49%|████▉     | 1207/2447 [00:00<00:00, 12008.29it/s]Loading weights:  98%|█████████▊| 2408/2447 [00:00<00:00, 10370.75it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 10638.59it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B | 468 clips, 228 speakers | recipe ids yes 7414 no 2308 | rule ids [7414, 9454, 9693, 9834, 14004, 14080] [902, 2152, 2308, 2753, 5664, 8996] | fold sizes [94, 94, 94, 93, 93]
+  fold 0 epoch 0 step 50/374 0.6 min
+  fold 0 epoch 0 step 100/374 1.0 min
+  fold 0 epoch 0 step 150/374 1.3 min
+  fold 0 epoch 0 step 200/374 1.6 min
+  fold 0 epoch 0 step 250/374 1.8 min
+  fold 0 epoch 0 step 300/374 1.9 min
+  fold 0 epoch 0 step 350/374 2.1 min
+fold 0 epoch 0 loss 0.5838 2.2 min
+  fold 0 epoch 1 step 50/374 2.3 min
+  fold 0 epoch 1 step 100/374 2.5 min
+  fold 0 epoch 1 step 150/374 2.6 min
+  fold 0 epoch 1 step 200/374 2.8 min
+  fold 0 epoch 1 step 250/374 3.0 min
+  fold 0 epoch 1 step 300/374 3.1 min
+  fold 0 epoch 1 step 350/374 3.3 min
+fold 0 epoch 1 loss 0.2821 3.3 min
+  fold 0 epoch 2 step 50/374 3.5 min
+  fold 0 epoch 2 step 100/374 3.7 min
+  fold 0 epoch 2 step 150/374 3.8 min
+  fold 0 epoch 2 step 200/374 4.0 min
+  fold 0 epoch 2 step 250/374 4.2 min
+  fold 0 epoch 2 step 300/374 4.3 min
+  fold 0 epoch 2 step 350/374 4.5 min
+fold 0 epoch 2 loss 0.1098 4.6 min
+fold 0 eval done 4.8 min
+  fold 1 epoch 0 step 50/374 5.0 min
+  fold 1 epoch 0 step 100/374 5.1 min
+  fold 1 epoch 0 step 150/374 5.3 min
+  fold 1 epoch 0 step 200/374 5.4 min
+  fold 1 epoch 0 step 250/374 5.6 min
+  fold 1 epoch 0 step 300/374 5.7 min
+  fold 1 epoch 0 step 350/374 5.9 min
+fold 1 epoch 0 loss 0.6093 5.9 min
+  fold 1 epoch 1 step 50/374 6.1 min
+  fold 1 epoch 1 step 100/374 6.2 min
+  fold 1 epoch 1 step 150/374 6.4 min
+  fold 1 epoch 1 step 200/374 6.6 min
+  fold 1 epoch 1 step 250/374 6.7 min
+  fold 1 epoch 1 step 300/374 6.9 min
+  fold 1 epoch 1 step 350/374 7.0 min
+fold 1 epoch 1 loss 0.3589 7.1 min
+  fold 1 epoch 2 step 50/374 7.2 min
+  fold 1 epoch 2 step 100/374 7.4 min
+  fold 1 epoch 2 step 150/374 7.5 min
+  fold 1 epoch 2 step 200/374 7.7 min
+  fold 1 epoch 2 step 250/374 7.8 min
+  fold 1 epoch 2 step 300/374 8.0 min
+  fold 1 epoch 2 step 350/374 8.2 min
+fold 1 epoch 2 loss 0.1344 8.3 min
+fold 1 eval done 8.5 min
+  fold 2 epoch 0 step 50/374 8.6 min
+  fold 2 epoch 0 step 100/374 8.8 min
+  fold 2 epoch 0 step 150/374 8.9 min
+  fold 2 epoch 0 step 200/374 9.1 min
+  fold 2 epoch 0 step 250/374 9.2 min
+  fold 2 epoch 0 step 300/374 9.4 min
+  fold 2 epoch 0 step 350/374 9.6 min
+fold 2 epoch 0 loss 0.6124 9.6 min
+  fold 2 epoch 1 step 50/374 9.8 min
+  fold 2 epoch 1 step 100/374 9.9 min
+  fold 2 epoch 1 step 150/374 10.1 min
+  fold 2 epoch 1 step 200/374 10.2 min
+  fold 2 epoch 1 step 250/374 10.4 min
+  fold 2 epoch 1 step 300/374 10.5 min
+  fold 2 epoch 1 step 350/374 10.7 min
+fold 2 epoch 1 loss 0.3398 10.8 min
+  fold 2 epoch 2 step 50/374 10.9 min
+  fold 2 epoch 2 step 100/374 11.1 min
+  fold 2 epoch 2 step 150/374 11.2 min
+  fold 2 epoch 2 step 200/374 11.4 min
+  fold 2 epoch 2 step 250/374 11.5 min
+  fold 2 epoch 2 step 300/374 11.7 min
+  fold 2 epoch 2 step 350/374 11.8 min
+fold 2 epoch 2 loss 0.1224 11.9 min
+fold 2 eval done 12.1 min
+  fold 3 epoch 0 step 50/375 12.3 min
+  fold 3 epoch 0 step 100/375 12.4 min
+  fold 3 epoch 0 step 150/375 12.6 min
+  fold 3 epoch 0 step 200/375 12.7 min
+  fold 3 epoch 0 step 250/375 12.9 min
+  fold 3 epoch 0 step 300/375 13.0 min
+  fold 3 epoch 0 step 350/375 13.2 min
+fold 3 epoch 0 loss 0.6130 13.3 min
+  fold 3 epoch 1 step 50/375 13.4 min
+  fold 3 epoch 1 step 100/375 13.6 min
+  fold 3 epoch 1 step 150/375 13.8 min
+  fold 3 epoch 1 step 200/375 13.9 min
+  fold 3 epoch 1 step 250/375 14.1 min
+  fold 3 epoch 1 step 300/375 14.3 min
+  fold 3 epoch 1 step 350/375 14.4 min
+fold 3 epoch 1 loss 0.3304 14.5 min
+  fold 3 epoch 2 step 50/375 14.7 min
+  fold 3 epoch 2 step 100/375 14.8 min
+  fold 3 epoch 2 step 150/375 15.0 min
+  fold 3 epoch 2 step 200/375 15.1 min
+  fold 3 epoch 2 step 250/375 15.3 min
+  fold 3 epoch 2 step 300/375 15.4 min
+  fold 3 epoch 2 step 350/375 15.6 min
+fold 3 epoch 2 loss 0.1862 15.7 min
+fold 3 eval done 15.9 min
+  fold 4 epoch 0 step 50/375 16.1 min
+  fold 4 epoch 0 step 100/375 16.2 min
+  fold 4 epoch 0 step 150/375 16.4 min
+  fold 4 epoch 0 step 200/375 16.5 min
+  fold 4 epoch 0 step 250/375 16.7 min
+  fold 4 epoch 0 step 300/375 16.8 min
+  fold 4 epoch 0 step 350/375 17.0 min
+fold 4 epoch 0 loss 0.6092 17.0 min
+  fold 4 epoch 1 step 50/375 17.2 min
+  fold 4 epoch 1 step 100/375 17.3 min
+  fold 4 epoch 1 step 150/375 17.5 min
+  fold 4 epoch 1 step 200/375 17.6 min
+  fold 4 epoch 1 step 250/375 17.8 min
+  fold 4 epoch 1 step 300/375 17.9 min
+  fold 4 epoch 1 step 350/375 18.1 min
+fold 4 epoch 1 loss 0.3276 18.2 min
+  fold 4 epoch 2 step 50/375 18.3 min
+  fold 4 epoch 2 step 100/375 18.5 min
+  fold 4 epoch 2 step 150/375 18.6 min
+  fold 4 epoch 2 step 200/375 18.8 min
+  fold 4 epoch 2 step 250/375 18.9 min
+  fold 4 epoch 2 step 300/375 19.1 min
+  fold 4 epoch 2 step 350/375 19.2 min
+fold 4 epoch 2 loss 0.1398 19.3 min
+fold 4 eval done 19.5 min
+SFT DONE
