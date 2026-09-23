@@ -1,0 +1,67 @@
+id	what	POD4_value	VERIFIER_value	agree_4dp	POD4_lo	POD4_hi	VERIFIER_lo	VERIFIER_hi	ci_agree	note
+POD4_4b_pub_zs	Pitt published zero-shot	0.6578	0.6578	YES	0.6033	0.7125	0.6033	0.7125	YES	n=468 draws=2000
+POD4_4b_pub_enc	Pitt published encoder probe	0.7969	0.7969	YES	0.7412	0.8512	0.7412	0.8512	YES	n=468 draws=2000
+POD4_4b_A_zs	arm A original cut zero-shot	0.6497	0.6497	YES	0.5959	0.7056	0.5959	0.7056	YES	n=468 draws=2000
+POD4_4b_A_enc	arm A original cut encoder	0.7949	0.7949	YES	0.7431	0.8446	0.7431	0.8446	YES	n=468 draws=2000
+POD4_4b_B_zs	arm B interviewer removed zs	0.723	0.723	YES	0.6664	0.7753	0.6664	0.7753	YES	n=468 draws=2000
+POD4_4b_B_enc	arm B interviewer removed enc	0.7497	0.7497	YES	0.694	0.8035	0.694	0.8035	YES	n=468 draws=2000
+POD4_4b_C_zs	arm C duration-matched zs	0.6145	0.6145	YES	0.5582	0.6683	0.5582	0.6683	YES	n=468 draws=2000
+POD4_4b_C_enc	arm C duration-matched enc	0.798	0.798	YES	0.7448	0.8489	0.7448	0.8489	YES	n=468 draws=2000
+POD4_4b_A_zs_conf	arm A zs conflict	0.5298	0.5298	YES	0.4189	0.6386	0.4189	0.6386	YES	n=146 spk=100 draws=2000
+POD4_4b_A_enc_conf	arm A enc conflict	0.6161	0.6161	YES	0.506	0.7281	0.506	0.7281	YES	n=146 spk=100 draws=2000
+POD4_4b_A_zs_agr	arm A zs agreement	0.6952	0.6952	YES	0.6327	0.756	0.6327	0.756	YES	n=322 spk=175 draws=2000
+POD4_4b_A_enc_agr	arm A enc agreement	0.8674	0.8674	YES	0.8201	0.9096	0.8201	0.9096	YES	n=322 spk=175 draws=2000
+POD4_4b_B_zs_conf	arm B zs conflict	0.5408	0.5408	YES	0.4245	0.6622	0.4245	0.6622	YES	n=146 spk=100 draws=2000
+POD4_4b_B_enc_conf	arm B enc conflict	0.6295	0.6295	YES	0.5111	0.7345	0.5111	0.7345	YES	n=146 spk=100 draws=2000
+POD4_4b_B_zs_agr	arm B zs agreement	0.8007	0.8007	YES	0.75	0.8501	0.75	0.8501	YES	n=322 spk=175 draws=2000
+POD4_4b_B_enc_agr	arm B enc agreement	0.8037	0.8037	YES	0.7452	0.8539	0.7452	0.8539	YES	n=322 spk=175 draws=2000
+POD4_4b_pd_zs_AB	zs A->B	0.0732	0.0732	YES	0.0312	0.1165	0.0312	0.1165	YES	draws=2000
+POD4_4b_pd_zs_CB	zs C->B	0.1084	0.1084	YES	0.0638	0.155	0.0638	0.155	YES	draws=2000
+POD4_4b_pd_enc_AB	enc A->B	-0.0452	-0.0452	YES	-0.0857	-0.0083	-0.0857	-0.0083	YES	draws=2000
+POD4_4b_pd_enc_CB	enc C->B	-0.0483	-0.0483	YES	-0.0907	-0.0062	-0.0907	-0.0062	YES	draws=2000
+POD4_4b_pd_zs_AC	zs A->C	-0.0352	-0.0352	YES	-0.0729	-0.0001	-0.0729	-0.0001	YES	draws=2000
+POD4_4b_pd_enc_AC	enc A->C	0.0032	0.0032	YES	-0.0367	0.0394	-0.0367	0.0394	YES	draws=2000
+POD4_4b_invcue	INV ms alone predicts dementia	0.6427	0.6427	YES	None	None	None	None	YES	raw AUC, direction-free=0.6427
+POD4_4b_durcue	participant duration alone, direction-free	0.6648	0.6648	YES	None	None	None	None	YES	raw=0.3352
+POD4_4b_gap_orig	gap on the original cut	0.1452	0.1451	NO	None	None	None	None	YES	
+POD4_4b_gap_free	gap interviewer-free	0.0267	0.0268	NO	None	None	None	None	YES	
+nv_noise_floor_before	noise_floor alone before, direction-free	0.541	0.541	YES	0.4731	0.6049	0.4731	0.6049	YES	raw=0.4590 draws=2000
+nv_noise_floor_after	noise_floor alone after, direction-free	0.5407	0.5407	YES	0.4594	0.6191	0.4594	0.6191	YES	raw=0.5407 draws=2000
+nv_snr_before	snr alone before, direction-free	0.5432	0.5432	YES	0.464	0.6216	0.464	0.6216	YES	raw=0.4568 draws=2000
+nv_snr_after	snr alone after, direction-free	0.5305	0.5305	YES	0.4498	0.608	0.4498	0.608	YES	raw=0.4695 draws=2000
+nv_centroid_before	centroid alone before, direction-free	0.7782	0.7782	YES	0.7109	0.8396	0.7109	0.8396	YES	raw=0.2218 draws=2000
+nv_centroid_after	centroid alone after, direction-free	0.5603	0.5603	YES	0.5051	0.6188	0.5051	0.6188	YES	raw=0.4397 draws=2000
+nv_rolloff_before	rolloff alone before, direction-free	0.8005	0.8005	YES	0.737	0.8574	0.737	0.8574	YES	raw=0.1995 draws=2000
+nv_rolloff_after	rolloff alone after, direction-free	0.5938	0.5938	YES	0.5438	0.6448	0.5438	0.6448	YES	raw=0.4062 draws=2000
+nv_tilt_before	tilt alone before, direction-free	0.702	0.702	YES	0.6451	0.7552	0.6451	0.7552	YES	raw=0.2980 draws=2000
+nv_tilt_after	tilt alone after, direction-free	0.5808	0.5808	YES	0.5369	0.6259	0.5369	0.6259	YES	raw=0.4192 draws=2000
+nv_5f_before	five features together before	0.7977	0.7977	YES	0.7248	0.8611	0.7248	0.8611	YES	draws=2000
+nv_5f_after	five features together after	0.6025	0.6025	YES	0.5479	0.658	0.5479	0.658	YES	draws=2000
+nv_5f_before_REFIT_intcode	five features before, MY OWN refit (groups=intcode)	0.7977	0.7977	YES	None	None	None	None	YES	max|mine-stored|=1.006e-13 corr=1.000000
+nv_5f_after_REFIT_intcode	five features after, MY OWN refit (groups=intcode)	0.6025	0.6025	YES	None	None	None	None	YES	max|mine-stored|=6.384e-14 corr=1.000000
+nv_zs_before	nv_zs_before	0.7108	0.7108	YES	0.6523	0.7671	0.6523	0.7671	YES	draws=2000
+nv_zs_after	nv_zs_after	0.6991	0.6991	YES	0.6348	0.7598	0.6348	0.7598	YES	draws=2000
+nv_enc_before	nv_enc_before	0.9233	0.9233	YES	0.88	0.9573	0.88	0.9573	YES	draws=2000
+nv_enc_after	nv_enc_after	0.8924	0.8924	YES	0.8481	0.9323	0.8481	0.9323	YES	draws=2000
+nv_pd_zs	nv_pd_zs	-0.0117	-0.0117	YES	-0.0332	0.0098	-0.0332	0.0098	YES	draws=2000
+nv_pd_enc	nv_pd_enc	-0.0308	-0.0308	YES	-0.0608	-0.0012	-0.0608	-0.0012	YES	draws=2000
+pg_noise_floor_before	noise_floor alone before, direction-free	0.6627	0.6627	YES	0.5885	0.7362	0.5885	0.7362	YES	raw=0.6627 draws=2000
+pg_noise_floor_after	noise_floor alone after, direction-free	0.5734	0.5734	YES	0.5113	0.6341	0.5113	0.6341	YES	raw=0.5734 draws=2000
+pg_snr_before	snr alone before, direction-free	0.5873	0.5873	YES	0.5261	0.6464	0.5261	0.6464	YES	raw=0.4127 draws=2000
+pg_snr_after	snr alone after, direction-free	0.5735	0.5735	YES	0.5158	0.6286	0.5158	0.6286	YES	raw=0.4265 draws=2000
+pg_centroid_before	centroid alone before, direction-free	0.5539	0.5539	YES	0.4997	0.6104	0.4997	0.6104	YES	raw=0.4461 draws=2000
+pg_centroid_after	centroid alone after, direction-free	0.5591	0.5591	YES	0.5029	0.6136	0.5029	0.6136	YES	raw=0.4409 draws=2000
+pg_rolloff_before	rolloff alone before, direction-free	0.5533	0.5533	YES	0.5	0.6081	0.5	0.6081	YES	raw=0.4467 draws=2000
+pg_rolloff_after	rolloff alone after, direction-free	0.5657	0.5657	YES	0.5102	0.6189	0.5102	0.6189	YES	raw=0.4343 draws=2000
+pg_tilt_before	tilt alone before, direction-free	0.561	0.561	YES	0.5048	0.6194	0.5048	0.6194	YES	raw=0.4390 draws=2000
+pg_tilt_after	tilt alone after, direction-free	0.5526	0.5526	YES	0.4987	0.603	0.4987	0.603	YES	raw=0.4474 draws=2000
+pg_5f_before	five features together before	0.6657	0.6657	YES	0.5851	0.7452	0.5851	0.7452	YES	draws=2000
+pg_5f_after	five features together after	0.559	0.559	YES	0.4922	0.6213	0.4922	0.6213	YES	draws=2000
+pg_5f_before_REFIT_intcode	five features before, MY OWN refit (groups=intcode)	0.6657	0.6657	YES	None	None	None	None	YES	max|mine-stored|=5.551e-16 corr=1.000000
+pg_5f_after_REFIT_intcode	five features after, MY OWN refit (groups=intcode)	0.559	0.559	YES	None	None	None	None	YES	max|mine-stored|=8.527e-14 corr=1.000000
+pg_zs_before	pg_zs_before	0.5728	0.5728	YES	0.5002	0.644	0.5002	0.644	YES	draws=2000
+pg_zs_after	pg_zs_after	0.5674	0.5674	YES	0.5054	0.6304	0.5054	0.6304	YES	draws=2000
+pg_enc_before	pg_enc_before	0.8959	0.8959	YES	0.8339	0.9448	0.8339	0.9448	YES	draws=2000
+pg_enc_after	pg_enc_after	0.8298	0.8298	YES	0.7546	0.8968	0.7546	0.8968	YES	draws=2000
+pg_pd_zs	pg_pd_zs	-0.0054	-0.0054	YES	-0.0437	0.0357	-0.0437	0.0357	YES	draws=2000
+pg_pd_enc	pg_pd_enc	-0.0661	-0.0661	YES	-0.1181	-0.018	-0.1181	-0.018	YES	draws=2000
