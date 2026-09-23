@@ -1,0 +1,6 @@
+id	what	value	lo	hi	n	n_spk	file	two_dp	vs_half
+P20_POD3_ft966_conflict	Qwen2.5-Omni projector FT on 966 Part14 clips (OOF by speaker), conflict AUC	0.5932	0.5087	0.6831	483	138	scores/part20/POD3/p14_ft966_oof.csv	0.59 [0.51, 0.68]	above 0.5
+P20_POD3_ft966_agree483	same FT, agreement AUC on 483 rows	0.6228	0.5222	0.7238	483	138	scores/part20/POD3/p14_ft966_oof.csv	0.62 [0.52, 0.72]	above 0.5
+P20_POD3_ft966_agree311	same FT, agreement AUC on 311 distinct segments (paper convention)	0.6686	0.5727	0.7586	311	138	scores/part20/POD3/p14_ft966_oof.csv	0.67 [0.57, 0.76]	above 0.5
+P20_POD3_ft966_diff483	same FT, paired conflict minus agreement (483 rows)	-0.0296	-0.1124	0.0491	966	138	scores/part20/POD3/p14_ft966_oof.csv	-0.03 [-0.11, 0.05]	interval includes zero
+P20_POD3_ft966_diff311	same FT, paired conflict minus agreement (311 distinct)	-0.0754	-0.1513	0.0010	794	138	scores/part20/POD3/p14_ft966_oof.csv	-0.08 [-0.15, 0.00]	interval includes zero
