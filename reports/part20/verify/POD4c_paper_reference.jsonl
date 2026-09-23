@@ -1,0 +1,12 @@
+== <local data dir>/release/overnight2/part3/af3_pitt.csv
+{"arm": "overall", "value": 0.588512, "trap": 0.588512, "lo": 0.528469, "hi": 0.648947, "n": 468, "n_spk": 228, "draws": 2000, "n_pos": 290, "n_neg": 178}
+{"arm": "conflict", "value": 0.616942, "trap": 0.616942, "lo": 0.518757, "hi": 0.720865, "n": 146, "n_spk": 100, "draws": 2000, "n_pos": 101, "n_neg": 45}
+{"arm": "agreement", "value": 0.582209, "trap": 0.582209, "lo": 0.508005, "hi": 0.652847, "n": 322, "n_spk": 175, "draws": 2000, "n_pos": 189, "n_neg": 133}
+== <local data dir>/release/overnight2/final/af3_pitt.csv
+{"arm": "overall", "value": 0.589365, "trap": 0.589365, "lo": 0.530164, "hi": 0.647612, "n": 468, "n_spk": 228, "draws": 2000, "n_pos": 290, "n_neg": 178}
+{"arm": "conflict", "value": 0.607481, "trap": 0.607481, "lo": 0.506311, "hi": 0.712871, "n": 146, "n_spk": 100, "draws": 2000, "n_pos": 101, "n_neg": 45}
+{"arm": "agreement", "value": 0.585472, "trap": 0.585472, "lo": 0.514402, "hi": 0.655419, "n": 322, "n_spk": 175, "draws": 2000, "n_pos": 189, "n_neg": 133}
+== <local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv
+{"arm": "overall", "value": 0.572356, "trap": 0.572356, "lo": 0.506551, "hi": 0.642424, "n": 468, "n_spk": 228, "draws": 2000, "n_pos": 290, "n_neg": 178}
+{"arm": "conflict", "value": 0.631023, "trap": 0.631023, "lo": 0.533585, "hi": 0.725997, "n": 146, "n_spk": 100, "draws": 2000, "n_pos": 101, "n_neg": 45}
+{"arm": "agreement", "value": 0.554442, "trap": 0.554442, "lo": 0.476015, "hi": 0.629642, "n": 322, "n_spk": 175, "draws": 2000, "n_pos": 189, "n_neg": 133}
