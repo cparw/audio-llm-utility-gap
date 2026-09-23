@@ -1,0 +1,24 @@
+header ['path', 'orig_clip_id', 'speaker', 'label', 'set', 'fold', 'p_yes_noinv', 'p_yes_rule', 'answer_mass_rule', 'prompt', 'p_yes_original_paper']
+noinv col ['p_yes_noinv'] paper col ['p_yes_original_paper']
+basic {'n': 468, 'n_spk': 228, 'n_pos': 290, 'arms': {'conflict': 146, 'agreement': 322}, 'unique_clips': 468, 'ok': True} | fold mismatches vs release pod file 0 missing 0 | fold vs raw 0 | noinv col vs raw 1.11e-16 | paper col vs omni_final 1.11e-16 | labels/spk/set match paper True | prompts {'Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.'}
+cells ['POD5_sft_overall', 'POD5_sft_paper_overall', 'POD5_sft_diff_overall', 'POD5_sft_conflict', 'POD5_sft_paper_conflict', 'POD5_sft_diff_conflict', 'POD5_sft_agreement', 'POD5_sft_paper_agreement', 'POD5_sft_diff_agreement', 'POD5_sft_rulepyes_overall']
+AGREE POD5_sft_overall: computed 0.7912 [0.7404, 0.8423] n=468/228 | verified 0.7912 [0.7404, 0.8423] n=468/228
+PASTE POD5_sft_overall | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, interviewer-free, overall | 0.7912 [0.7404, 0.8423] | n=468 n_spk=228 | scores/part20/POD5/POD5_sft_noinv.csv | 0.79 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_paper_overall: computed 0.7673 [0.7086, 0.8231] n=468/228 | verified 0.7673 [0.7086, 0.8231] n=468/228
+PASTE POD5_sft_paper_overall | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paper 468 windows, overall | 0.7673 [0.7086, 0.8231] | n=468 n_spk=228 | scores/part20/POD5/POD5_sft_noinv.csv | 0.77 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_diff_overall: computed -0.0239 [-0.0744, 0.0270] n=468/228 | verified -0.0239 [-0.0744, 0.0270] n=468/228
+PASTE POD5_sft_diff_overall | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paired paper minus interviewer-free, overall | -0.0239 [-0.0744, 0.0270] | n=468 n_spk=228 | scores/part20/POD5/POD5_sft_noinv.csv | -0.02 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_conflict: computed 0.5639 [0.4609, 0.6685] n=146/100 | verified 0.5639 [0.4609, 0.6685] n=146/100
+PASTE POD5_sft_conflict | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, interviewer-free, conflict | 0.5639 [0.4609, 0.6685] | n=146 n_spk=100 | scores/part20/POD5/POD5_sft_noinv.csv | 0.56 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_paper_conflict: computed 0.5189 [0.4151, 0.6300] n=146/100 | verified 0.5189 [0.4151, 0.6300] n=146/100
+PASTE POD5_sft_paper_conflict | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paper 468 windows, conflict | 0.5189 [0.4151, 0.6300] | n=146 n_spk=100 | scores/part20/POD5/POD5_sft_noinv.csv | 0.52 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_diff_conflict: computed -0.0450 [-0.1345, 0.0550] n=146/100 | verified -0.0450 [-0.1345, 0.0550] n=146/100
+PASTE POD5_sft_diff_conflict | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paired paper minus interviewer-free, conflict | -0.0450 [-0.1345, 0.0550] | n=146 n_spk=100 | scores/part20/POD5/POD5_sft_noinv.csv | -0.04 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_agreement: computed 0.8813 [0.8363, 0.9193] n=322/175 | verified 0.8813 [0.8363, 0.9193] n=322/175
+PASTE POD5_sft_agreement | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, interviewer-free, agreement | 0.8813 [0.8363, 0.9193] | n=322 n_spk=175 | scores/part20/POD5/POD5_sft_noinv.csv | 0.88 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_paper_agreement: computed 0.8593 [0.8063, 0.9069] n=322/175 | verified 0.8593 [0.8063, 0.9069] n=322/175
+PASTE POD5_sft_paper_agreement | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paper 468 windows, agreement | 0.8593 [0.8063, 0.9069] | n=322 n_spk=175 | scores/part20/POD5/POD5_sft_noinv.csv | 0.86 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_diff_agreement: computed -0.0219 [-0.0743, 0.0307] n=322/175 | verified -0.0219 [-0.0743, 0.0307] n=322/175
+PASTE POD5_sft_diff_agreement | Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paired paper minus interviewer-free, agreement | -0.0219 [-0.0743, 0.0307] | n=322 n_spk=175 | scores/part20/POD5/POD5_sft_noinv.csv | -0.02 | VERIFIED (agree 4dp: yes)
+AGREE POD5_sft_rulepyes_overall: computed 0.7882 [0.7357, 0.8393] n=468/228 | verified 0.7882 [0.7357, 0.8393] n=468/228
+PASTE POD5_sft_rulepyes_overall | projector fine-tune, interviewer-free, overall, part20-rule p_yes (12 single-token variants, full softmax) instead of the recipe's 2-logit p_yes | 0.7882 [0.7357, 0.8393] | n=468 n_spk=228 | scores/part20/POD5/POD5_sft_noinv.csv | 0.79 | VERIFIED (agree 4dp: yes)
