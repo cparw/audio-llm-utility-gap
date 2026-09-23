@@ -1,0 +1,32 @@
+work dir: <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617
+tex: <local data dir>/paper1_final/AudioLLMHealthUtilityGap.tex (2026-09-23 06:38)  baseline: <local data dir>/release/edaic_rerun/part17/part12_prep/pasted_tex_dryrun.tex
+wrote 151 rows to <local data dir>/release/edaic_rerun/part17/part12_prep/handcheck_values.csv
+  o25_pitt_text.json auc field = 0.6629 (date 2026-09-20)
+  omnisft_pitt_sft.json auc_oof 0.7673 arms {'agreement': 0.8593, 'conflict': 0.5189}
+value_index: 1649 rows -> <local data dir>/release/edaic_rerun/part17/part12_prep/value_index.csv ; status {'current': 1476, 'CONTESTED': 98, 'SUPERSEDED': 36, 'ALT': 39} ; rewritten 97 ; missing files 25
+  master/SUPERSEDED.csv present: 8 rows, columns ['file', 'superseded_by', 'reason', 'decided_on']
+  SUPERSEDED.csv row 2 kimi_pitt_zeroshot_scores.csv: superseded values [0.6964, 0.7014, 0.7078], scoped=False, index rows marked 5
+  SUPERSEDED.csv row 3 af2_pitt_audio.csv: superseded values [0.4895, 0.5273, 0.6691], scoped=False, index rows marked 9
+  SUPERSEDED.csv row 4 omni_pitt_enc_nested_oof.csv: superseded values [0.7969], scoped=True, index rows marked 3
+  SUPERSEDED.csv row 5 o25_full_nested_repeats.json: superseded values [0.593, 0.6853], scoped=True, index rows marked 4
+  SUPERSEDED.csv row 6 readout_direction_q3o_by_arm.csv: superseded values [0.6145, 0.9349], scoped=False, index rows marked 2
+  SUPERSEDED.csv row 7 q3o_pitt_nested_repeats.json: superseded values [0.8289], scoped=True, index rows marked 1
+  SUPERSEDED.csv row 8 q3o_pcgita_nested_repeats.json: superseded values [0.8969], scoped=True, index rows marked 1
+  SUPERSEDED.csv row 9 abl_pitt_both.json: superseded values [0.7872], scoped=False, index rows marked 1
+  SUPERSEDED.csv marked 26 index rows
+<local data dir>/paper1_final/AudioLLMHealthUtilityGap.tex: 278 numeric items (175 live, 103 commented), 1 red spans -> <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617/numbers.csv
+diff_tex: AudioLLMHealthUtilityGap.tex vs pasted_tex_dryrun.tex -> <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617/added_vs_baseline.csv ; units same 108, edited 34, added 29
+diff_tex: AudioLLMHealthUtilityGap.tex vs AudioLLMHealthUtilityGap.tex -> <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617/added_vs_sep14.csv ; units same 171, edited 0, added 0
+match_tex: 175 rows -> <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617/matches.csv ; {('added_23sep', 'MATCH'): 30, ('other', 'MATCH'): 83, ('added_23sep', 'MISMATCH'): 16, ('other', 'UNMATCHED'): 11, ('added_23sep', 'UNMATCHED'): 32, ('other', 'MISMATCH'): 3}
+red_span_check: 10 rows -> <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617/red_spans.csv ; {'MATCH': 7, 'MISMATCH': 1, 'UNMATCHED': 2}
+paper_vs_omni: scores/part24/part12/final_runs/AudioLLMHealthUtilityGap_20260923_145617/paper_vs_omni.csv
+tex: <local data dir>/paper1_final/AudioLLMHealthUtilityGap.tex
+added basis: sentences in AudioLLMHealthUtilityGap.tex not in pasted_tex_dryrun.tex
+
+group         MATCH  MISMATCH  UNMATCHED   (of UNMATCHED: method/design constants)
+red               7         1          1   (0)
+added_23sep      28        16         32   (7)
+other            78         3         10   (9)
+
+MISMATCH rows:
+done: scores/part24/part12/final_runs/AudioLLMHealthUtilityGap_20260923_145617/paper_vs_omni.csv ; summary <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617/summary.txt ; red spans <local data dir>/release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_145617/red_spans.csv

@@ -1,0 +1,23 @@
+{
+ "result": "PART 24 item 4 final check",
+ "run_folder": "<local data dir>/part24/part12/final_runs/AudioLLMHealthUtilityGap_20260923_145617",
+ "tex": "<local data dir>/paper1_final/AudioLLMHealthUtilityGap.tex",
+ "tex_sha256": "1e17f74389f274a86a956ee99ae9eef49649f6d6ba6ab1542c7e835eacf2436d",
+ "pdf": "<local data dir>/paper1_submission_23sep/paper_29.pdf",
+ "pdf_sha256": "0b1ada4c90e33f155a16989719124dae65ea6b13ae8425d476f29c769c374408",
+ "part12_exit": "0",
+ "pdf_state": "present",
+ "pdf_pages": "5",
+ "command": "final_check.sh <local data dir>/paper1_final/AudioLLMHealthUtilityGap.tex <local data dir>/paper1_submission_23sep/paper_29.pdf",
+ "seed": "none (no sampling here; Part 12 reads saved values)",
+ "gpu": "none (Mac CPU)",
+ "model_id": "none",
+ "n": "see paper_vs_omni.csv",
+ "n_speakers": "n/a",
+ "bootstrap": "n/a (Part 12 compares saved values)",
+ "versions": {
+  "python": "3.10.2",
+  "pdftotext": "pdftotext version 26.04.0"
+ },
+ "date": "2026-09-23T14:56:22"
+}
