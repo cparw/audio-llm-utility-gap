@@ -1,0 +1,11 @@
+CONTROL standard recipe rerun on POD1 AUC all: 0.7720 [0.7166, 0.8280] n=468 n_spk=228 file=scores/part20/POD1/standard_rerun_ft_pitt_oof.csv | 0.77 [0.72, 0.83] above 0.5 | beside standard 0.7673 [0.7086, 0.8231]
+CONTROL standard recipe rerun on POD1 AUC conflict: 0.4697 [0.3613, 0.5906] n=146 n_spk=100 file=scores/part20/POD1/standard_rerun_ft_pitt_oof.csv | 0.47 [0.36, 0.59] interval includes 0.5 (point below 0.5) | beside standard 0.5189 [0.4151, 0.6300]
+CONTROL standard recipe rerun on POD1 AUC agreement: 0.8895 [0.8456, 0.9286] n=322 n_spk=175 file=scores/part20/POD1/standard_rerun_ft_pitt_oof.csv | 0.89 [0.85, 0.93] above 0.5 | beside standard 0.8593 [0.8063, 0.9069]
+PAIRED CONTROL standard recipe rerun on POD1 minus standard conflict: -0.0492 [-0.1526, +0.0537] n=146 n_spk=100 file=scores/part20/POD1/standard_rerun_ft_pitt_oof.csv | -0.05 [-0.15, +0.05] interval includes zero
+PAIRED CONTROL standard recipe rerun on POD1 minus standard all: +0.0047 [-0.0349, +0.0460] n=468 n_spk=228 file=scores/part20/POD1/standard_rerun_ft_pitt_oof.csv | +0.00 [-0.03, +0.05] interval includes zero
+PAIRED CONTROL standard recipe rerun on POD1 minus standard agreement: +0.0302 [-0.0022, +0.0679] n=322 n_spk=175 file=scores/part20/POD1/standard_rerun_ft_pitt_oof.csv | +0.03 [-0.00, +0.07] interval includes zero
+CONTROL standard recipe rerun on POD1 AUC all (rule-3 multivariant p_yes): 0.7724 [0.7166, 0.8285] n=468 n_spk=228 | 0.77 [0.72, 0.83] above 0.5
+CONTROL standard recipe rerun on POD1 AUC conflict (rule-3 multivariant p_yes): 0.4726 [0.3635, 0.5924] n=146 n_spk=100 | 0.47 [0.36, 0.59] interval includes 0.5 (point below 0.5)
+CONTROL standard recipe rerun on POD1 AUC agreement (rule-3 multivariant p_yes): 0.8896 [0.8455, 0.9290] n=322 n_spk=175 | 0.89 [0.85, 0.93] above 0.5
+GAP conflict minus agreement: CONTROL standard recipe rerun on POD1 -0.4197 [-0.5321, -0.2948]; standard -0.3404 [-0.4468, -0.2262]; change -0.0793 [-0.1895, +0.0331] interval includes zero
+answer_mass median 0.9992 min 0.9952

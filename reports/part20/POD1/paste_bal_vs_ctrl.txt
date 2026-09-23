@@ -1,0 +1,11 @@
+balanced fine-tune AUC all: 0.7301 [0.6656, 0.7905] n=468 n_spk=228 file=scores/part20/POD1/balanced_vs_podstd_paired.csv | 0.73 [0.67, 0.79] above 0.5 | beside POD1 standard rerun 0.7720 [0.7166, 0.8280]
+balanced fine-tune AUC conflict: 0.4693 [0.3686, 0.5854] n=146 n_spk=100 file=scores/part20/POD1/balanced_vs_podstd_paired.csv | 0.47 [0.37, 0.59] interval includes 0.5 (point below 0.5) | beside POD1 standard rerun 0.4697 [0.3613, 0.5906]
+balanced fine-tune AUC agreement: 0.8279 [0.7732, 0.8792] n=322 n_spk=175 file=scores/part20/POD1/balanced_vs_podstd_paired.csv | 0.83 [0.77, 0.88] above 0.5 | beside POD1 standard rerun 0.8895 [0.8456, 0.9286]
+PAIRED balanced fine-tune minus POD1 standard rerun conflict: -0.0004 [-0.0742, +0.0757] n=146 n_spk=100 file=scores/part20/POD1/balanced_vs_podstd_paired.csv | -0.00 [-0.07, +0.08] interval includes zero
+PAIRED balanced fine-tune minus POD1 standard rerun all: -0.0420 [-0.0803, -0.0028] n=468 n_spk=228 file=scores/part20/POD1/balanced_vs_podstd_paired.csv | -0.04 [-0.08, -0.00] interval excludes zero (below 0)
+PAIRED balanced fine-tune minus POD1 standard rerun agreement: -0.0615 [-0.1005, -0.0234] n=322 n_spk=175 file=scores/part20/POD1/balanced_vs_podstd_paired.csv | -0.06 [-0.10, -0.02] interval excludes zero (below 0)
+balanced fine-tune AUC all (rule-3 multivariant p_yes): 0.7407 [0.6761, 0.7994] n=468 n_spk=228 | 0.74 [0.68, 0.80] above 0.5
+balanced fine-tune AUC conflict (rule-3 multivariant p_yes): 0.4671 [0.3641, 0.5818] n=146 n_spk=100 | 0.47 [0.36, 0.58] interval includes 0.5 (point below 0.5)
+balanced fine-tune AUC agreement (rule-3 multivariant p_yes): 0.8433 [0.7925, 0.8924] n=322 n_spk=175 | 0.84 [0.79, 0.89] above 0.5
+GAP conflict minus agreement: balanced fine-tune -0.3586 [-0.4671, -0.2461]; POD1 standard rerun -0.4197 [-0.5321, -0.2948]; change +0.0611 [-0.0181, +0.1433] interval includes zero
+answer_mass median 0.9988 min 0.0000
