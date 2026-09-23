@@ -1,0 +1,41 @@
+468 clips, 228 speakers, folds loaded from /workspace/p20/pitt_groupkfold5_pod.csv; fold sizes [94, 94, 94, 93, 93]; my folds [0, 3]
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   9%|▉         | 232/2447 [00:00<00:00, 2318.69it/s]Loading weights:  19%|█▉        | 464/2447 [00:00<00:01, 1362.03it/s]Loading weights:  25%|██▌       | 622/2447 [00:00<00:01, 1102.33it/s]Loading weights:  33%|███▎      | 806/2447 [00:00<00:01, 1264.58it/s]Loading weights:  39%|███▊      | 947/2447 [00:00<00:01, 1037.24it/s]Loading weights:  43%|████▎     | 1063/2447 [00:00<00:01, 998.26it/s]Loading weights:  48%|████▊     | 1171/2447 [00:01<00:01, 938.92it/s]Loading weights:  52%|█████▏    | 1276/2447 [00:01<00:01, 961.17it/s]Loading weights:  56%|█████▌    | 1376/2447 [00:01<00:01, 969.24it/s]Loading weights:  61%|██████    | 1488/2447 [00:01<00:00, 1001.44it/s]Loading weights:  66%|██████▌   | 1608/2447 [00:01<00:00, 1044.57it/s]Loading weights:  74%|███████▍  | 1821/2447 [00:01<00:00, 1344.19it/s]Loading weights:  86%|████████▋ | 2115/2447 [00:01<00:00, 1785.11it/s]Loading weights:  94%|█████████▍| 2299/2447 [00:01<00:00, 1485.24it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 1220.89it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+PARAMCOUNTS {"model_id": "Qwen/Qwen2.5-Omni-7B", "total_params_full_model": 10732225408, "total_params_thinker_audio_plus_lm": 8255263744, "lora_trainable_params": 5046272, "lora_pct_of_full_model": 0.04702, "lora_pct_of_thinker": 0.061128, "lm_layers": 28, "lora_target_modules": 112, "rank": 8, "alpha": 16, "dropout": 0.05}
+YES=7414 NO=2308 YES_SET=[7414, 9454, 9693, 9834, 14004, 14080] NO_SET=[902, 2152, 2308, 2753, 5664, 8996]
+WEIGHTS fold 0 (train n=374, rescale x1.000000):
+  label=0 arm=conflict  N_y=133 N_ya= 32 w_raw=2.078125 w=2.078125 total=66.500
+  label=0 arm=agreement N_y=133 N_ya=101 w_raw=0.658416 w=0.658416 total=66.500
+  label=1 arm=conflict  N_y=241 N_ya= 86 w_raw=1.401163 w=1.401163 total=120.500
+  label=1 arm=agreement N_y=241 N_ya=155 w_raw=0.777419 w=0.777419 total=120.500
+PROBE fold 0 50 steps: 0.794 s/step -> ~16.1 min this fold
+fold 0 epoch 0 ce 0.6624 wce 0.6801 4.3 min
+fold 0 epoch 1 ce 0.4892 wce 0.5102 6.8 min
+fold 0 epoch 2 ce 0.3801 wce 0.4151 9.3 min
+/workspace/p20/balanced_lora_pitt.py:147: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "finished_utc": datetime.datetime.utcnow().isoformat()}, open(ck + ".tmp", "w"), indent=1)
+fold 0 done 11.94 min, 1122 steps, peak 21.01 GB
+WEIGHTS fold 3 (train n=375, rescale x1.000000):
+  label=0 arm=conflict  N_y=142 N_ya= 36 w_raw=1.972222 w=1.972222 total=71.000
+  label=0 arm=agreement N_y=142 N_ya=106 w_raw=0.669811 w=0.669811 total=71.000
+  label=1 arm=conflict  N_y=233 N_ya= 82 w_raw=1.420732 w=1.420732 total=116.500
+  label=1 arm=agreement N_y=233 N_ya=151 w_raw=0.771523 w=0.771523 total=116.500
+PROBE fold 3 50 steps: 0.275 s/step -> ~5.6 min this fold
+fold 3 epoch 0 ce 0.6391 wce 0.6684 13.6 min
+fold 3 epoch 1 ce 0.5303 wce 0.5715 15.3 min
+fold 3 epoch 2 ce 0.3964 wce 0.3999 16.9 min
+fold 3 done 5.19 min, 1125 steps, peak 21.01 GB
+ALLMYFOLDS_DONE [0, 3] 17.1 min
