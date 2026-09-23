@@ -1,0 +1,24 @@
+id	what	value	lo	hi	n	n_spk	file
+MEDAIC_full_answer	Omni zero-shot answer AUC, full window	0.8285	0.7708	0.8827	275	275	edaic_rerun/variants/o25_full_zeroshot_scores.csv
+MEDAIC_full_sft	projector fine-tune OOF AUC, full window	0.6421	0.5593	0.7188	275	275	edaic_rerun/variants/sft_full_oof.csv
+MEDAIC_full_sft_minus_answer	PAIRED projector fine-tune OOF minus answer, full window (excl0=True)	-0.1863	-0.2696	-0.1098	275	275	edaic_rerun/variants/sft_full_oof.csv
+MEDAIC_full_text	transcript-only readout AUC, full window	0.8230	0.7651	0.8705	275	275	overnight2/text_new/o25_edaicfull_text.csv
+MEDAIC_full_text_minus_answer	PAIRED transcript-only readout minus answer, full window (excl0=False)	-0.0055	-0.0566	0.0431	275	275	overnight2/text_new/o25_edaicfull_text.csv
+MEDAIC_full_llm_nested_NOCI	LM probe nested mean, full window (json aggregate, NOT recomputed, no per-clip file)	0.6853			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_full_llm_minus_answer_POINT	POINT-ONLY LM probe minus answer, full window (no interval possible)	-0.1432			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_full_enc_nested_NOCI	encoder probe nested mean, full window (json aggregate, NOT recomputed, no per-clip file)	0.5930			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_full_enc_minus_answer_POINT	POINT-ONLY encoder probe minus answer, full window (no interval possible)	-0.2355			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_full_ans_nested_NOCI	answer-state probe nested mean, full window (json aggregate, NOT recomputed, no per-clip file)	0.7542			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_full_ans_minus_answer_POINT	POINT-ONLY answer-state probe minus answer, full window (no interval possible)	-0.0743			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_full_proj_nested_NOCI	projector probe nested mean, full window (json aggregate, NOT recomputed, no per-clip file)	0.5293			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_full_proj_minus_answer_POINT	POINT-ONLY projector probe minus answer, full window (no interval possible)	-0.2992			275	275	edaic_rerun/variants/o25_full_nested_repeats.json
+MEDAIC_w30_enc	encoder probe nested OOF AUC, 30 s window	0.6324	0.5520	0.7104	275	275	omni_final/omni_edaic_enc_nested_oof.csv
+MEDAIC_w30_enc_minus_answer	PAIRED encoder probe minus answer, 30 s window (excl0=False)	-0.0297	-0.1291	0.0752	275	275	omni_final/omni_edaic_enc_nested_oof.csv
+MEDAIC_w30_llm	LM probe nested OOF AUC, 30 s window	0.5065	0.4221	0.5856	275	275	omni_final/omni_edaic_llm_nested_oof.csv
+MEDAIC_w30_llm_minus_answer	PAIRED LM probe minus answer, 30 s window (excl0=True)	-0.1555	-0.2536	-0.0577	275	275	omni_final/omni_edaic_llm_nested_oof.csv
+MEDAIC_w30_ans	answer-state probe nested OOF AUC, 30 s window	0.6401	0.5581	0.7185	275	275	omni_final/omni_edaic_ans_nested_oof.csv
+MEDAIC_w30_ans_minus_answer	PAIRED answer-state probe minus answer, 30 s window (excl0=False)	-0.0219	-0.1053	0.0663	275	275	omni_final/omni_edaic_ans_nested_oof.csv
+MEDAIC_w30_proj	projector probe nested OOF AUC, 30 s window	0.5182	0.4411	0.5999	275	275	omni_final/omni_edaic_proj_nested_oof.csv
+MEDAIC_w30_proj_minus_answer	PAIRED projector probe minus answer, 30 s window (excl0=True)	-0.1438	-0.2490	-0.0320	275	275	omni_final/omni_edaic_proj_nested_oof.csv
+MEDAIC_w30_answer	Omni zero-shot answer AUC, 30 s window	0.6620	0.5831	0.7315	275	275	omni_final/omni_edaic_zeroshot_scores.csv
+MEDAIC_answer_full_minus_30s	PAIRED answer AUC full minus 30 s, same 275 speakers (excl0=True)	0.1664	0.0848	0.2492	275	275	o25_full_zeroshot_scores.csv + omni_edaic_zeroshot_scores.csv

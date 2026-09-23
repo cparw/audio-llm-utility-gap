@@ -1,0 +1,77 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1239.38it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  42%|████▏     | 1026/2447 [00:00<00:00, 10257.15it/s]Loading weights:  86%|████████▌ | 2099/2447 [00:00<00:00, 10510.97it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 10318.67it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 10s on cuda
+STAGES enc 32 (+1 proj) | llm stages 29 | max_position_embeddings 32768
+audio token 151646 | yes [7414, 9454, 9693, 9834, 14004] | no [902, 2152, 2308, 2753, 8996] | WINDOW_S 0.0
+1/275 300.wav p_yes 0.090 mass 0.996 dur 760s aud_tok 7500 seq 7548 fit 1 1.8s  tot 11s
+6/275 305.wav p_yes 0.578 mass 0.994 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 15s
+11/275 310.wav p_yes 0.133 mass 0.995 dur 298s aud_tok 7445 seq 7493 fit 1 0.7s  tot 19s
+16/275 315.wav p_yes 0.156 mass 0.996 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 23s
+21/275 320.wav p_yes 0.393 mass 0.995 dur 249s aud_tok 6227 seq 6275 fit 1 0.6s  tot 26s
+26/275 325.wav p_yes 0.852 mass 0.996 dur 528s aud_tok 7500 seq 7548 fit 1 0.7s  tot 29s
+31/275 330.wav p_yes 0.637 mass 0.996 dur 182s aud_tok 4540 seq 4588 fit 1 0.5s  tot 32s
+36/275 335.wav p_yes 0.090 mass 0.994 dur 453s aud_tok 7500 seq 7548 fit 1 0.7s  tot 36s
+41/275 340.wav p_yes 0.076 mass 0.997 dur 204s aud_tok 5107 seq 5155 fit 1 0.5s  tot 39s
+46/275 346.wav p_yes 0.980 mass 0.999 dur 699s aud_tok 7500 seq 7548 fit 1 0.7s  tot 43s
+51/275 351.wav p_yes 0.936 mass 0.997 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 47s
+56/275 356.wav p_yes 0.133 mass 0.995 dur 591s aud_tok 7500 seq 7548 fit 1 0.7s  tot 50s
+61/275 361.wav p_yes 0.035 mass 0.997 dur 398s aud_tok 7500 seq 7548 fit 1 0.7s  tot 53s
+66/275 366.wav p_yes 0.064 mass 0.995 dur 847s aud_tok 7500 seq 7548 fit 1 0.8s  tot 58s
+71/275 371.wav p_yes 0.887 mass 0.998 dur 310s aud_tok 7500 seq 7548 fit 1 0.7s  tot 62s
+76/275 376.wav p_yes 0.965 mass 0.998 dur 616s aud_tok 7500 seq 7548 fit 1 0.7s  tot 65s
+81/275 381.wav p_yes 0.827 mass 0.997 dur 501s aud_tok 7500 seq 7548 fit 1 0.7s  tot 69s
+86/275 386.wav p_yes 0.777 mass 0.998 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 72s
+91/275 391.wav p_yes 0.778 mass 0.997 dur 247s aud_tok 6172 seq 6220 fit 1 0.6s  tot 75s
+96/275 397.wav p_yes 0.826 mass 0.997 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 79s
+101/275 403.wav p_yes 0.028 mass 0.997 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 83s
+106/275 408.wav p_yes 0.035 mass 0.997 dur 373s aud_tok 7500 seq 7548 fit 1 0.7s  tot 86s
+111/275 413.wav p_yes 0.085 mass 0.995 dur 596s aud_tok 7500 seq 7548 fit 1 0.8s  tot 90s
+116/275 418.wav p_yes 0.081 mass 0.995 dur 607s aud_tok 7500 seq 7548 fit 1 0.7s  tot 94s
+121/275 423.wav p_yes 0.141 mass 0.994 dur 479s aud_tok 7500 seq 7548 fit 1 0.7s  tot 98s
+126/275 428.wav p_yes 0.090 mass 0.997 dur 259s aud_tok 6475 seq 6523 fit 1 0.7s  tot 101s
+131/275 433.wav p_yes 0.064 mass 0.997 dur 341s aud_tok 7500 seq 7548 fit 1 0.7s  tot 105s
+136/275 438.wav p_yes 0.547 mass 0.993 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 109s
+141/275 443.wav p_yes 0.173 mass 0.996 dur 193s aud_tok 4835 seq 4883 fit 1 0.7s  tot 113s
+146/275 448.wav p_yes 0.234 mass 0.994 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 117s
+151/275 453.wav p_yes 0.101 mass 0.993 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 122s
+156/275 458.wav p_yes 0.068 mass 0.995 dur 580s aud_tok 7500 seq 7548 fit 1 0.8s  tot 126s
+161/275 464.wav p_yes 0.033 mass 0.996 dur 659s aud_tok 7500 seq 7548 fit 1 0.8s  tot 130s
+166/275 469.wav p_yes 0.042 mass 0.996 dur 639s aud_tok 7500 seq 7548 fit 1 0.8s  tot 134s
+171/275 474.wav p_yes 0.068 mass 0.995 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 137s
+176/275 479.wav p_yes 0.269 mass 0.995 dur 256s aud_tok 6400 seq 6448 fit 1 0.6s  tot 141s
+181/275 484.wav p_yes 0.080 mass 0.996 dur 574s aud_tok 7500 seq 7548 fit 1 0.9s  tot 145s
+186/275 489.wav p_yes 0.085 mass 0.997 dur 843s aud_tok 7500 seq 7548 fit 1 0.8s  tot 149s
+191/275 601.wav p_yes 0.101 mass 0.997 dur 140s aud_tok 3487 seq 3535 fit 1 0.5s  tot 152s
+196/275 606.wav p_yes 0.113 mass 0.995 dur 66s aud_tok 1648 seq 1696 fit 1 0.3s  tot 156s
+201/275 615.wav p_yes 0.042 mass 0.997 dur 573s aud_tok 7500 seq 7548 fit 1 0.7s  tot 159s
+206/275 622.wav p_yes 0.042 mass 0.998 dur 320s aud_tok 7500 seq 7548 fit 1 0.7s  tot 163s
+211/275 627.wav p_yes 0.107 mass 0.996 dur 572s aud_tok 7500 seq 7548 fit 1 0.8s  tot 167s
+216/275 633.wav p_yes 0.040 mass 0.996 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 171s
+221/275 638.wav p_yes 0.731 mass 0.997 dur 89s aud_tok 2215 seq 2263 fit 1 0.3s  tot 174s
+226/275 651.wav p_yes 0.064 mass 0.997 dur 74s aud_tok 1862 seq 1910 fit 1 0.4s  tot 177s
+231/275 656.wav p_yes 0.042 mass 0.997 dur 312s aud_tok 7500 seq 7548 fit 1 0.6s  tot 180s
+236/275 661.wav p_yes 0.608 mass 0.994 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 184s
+241/275 667.wav p_yes 0.532 mass 0.994 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 188s
+246/275 677.wav p_yes 0.852 mass 0.996 dur 372s aud_tok 7500 seq 7548 fit 1 0.7s  tot 191s
+251/275 684.wav p_yes 0.915 mass 0.997 dur 322s aud_tok 7500 seq 7548 fit 1 0.7s  tot 195s
+256/275 692.wav p_yes 0.257 mass 0.995 dur 146s aud_tok 3662 seq 3710 fit 1 0.5s  tot 198s
+261/275 698.wav p_yes 0.096 mass 0.995 dur 865s aud_tok 7500 seq 7548 fit 1 0.8s  tot 202s
+266/275 707.wav p_yes 0.133 mass 0.995 dur 311s aud_tok 7500 seq 7548 fit 1 0.7s  tot 205s
+271/275 713.wav p_yes 0.971 mass 0.999 dur 900s aud_tok 7500 seq 7548 fit 1 0.8s  tot 209s
+275/275 718.wav p_yes 0.050 mass 0.995 dur 777s aud_tok 7500 seq 7548 fit 1 0.8s  tot 212s
+EXTRACTION DONE 212.3275225162506

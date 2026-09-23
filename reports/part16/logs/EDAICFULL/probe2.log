@@ -1,0 +1,53 @@
+n clips 275  n speakers 275  positives 66
+  enc: (275, 32, 1280)
+  proj: (275, 1, 3584)
+  llm: (275, 29, 3584)
+  ans: (275, 29, 3584)
+--- stage enc ---
+  enc repeat 0: AUC 0.5964  layers [24, 24, 8, 25, 8]
+  enc repeat 1: AUC 0.5826  layers [21, 1, 19, 2, 25]
+  enc repeat 2: AUC 0.5962  layers [25, 8, 25, 2, 16]
+  enc repeat 3: AUC 0.5608  layers [2, 19, 8, 25, 25]
+  enc repeat 4: AUC 0.6060  layers [24, 19, 25, 19, 28]
+--- stage proj ---
+  proj repeat 0: AUC 0.5510  layers [0, 0, 0, 0, 0]
+  proj repeat 1: AUC 0.5618  layers [0, 0, 0, 0, 0]
+  proj repeat 2: AUC 0.5795  layers [0, 0, 0, 0, 0]
+  proj repeat 3: AUC 0.5653  layers [0, 0, 0, 0, 0]
+  proj repeat 4: AUC 0.5474  layers [0, 0, 0, 0, 0]
+--- stage llm ---
+  llm repeat 0: AUC 0.6918  layers [15, 15, 28, 17, 16]
+  llm repeat 1: AUC 0.7062  layers [23, 18, 15, 28, 28]
+  llm repeat 2: AUC 0.6893  layers [15, 17, 14, 15, 28]
+  llm repeat 3: AUC 0.7055  layers [14, 14, 16, 28, 14]
+  llm repeat 4: AUC 0.7078  layers [14, 23, 28, 28, 23]
+--- stage ans ---
+  ans repeat 0: AUC 0.7550  layers [28, 28, 27, 28, 28]
+  ans repeat 1: AUC 0.7302  layers [28, 18, 20, 18, 27]
+  ans repeat 2: AUC 0.7418  layers [28, 28, 28, 26, 19]
+  ans repeat 3: AUC 0.7225  layers [27, 17, 21, 27, 20]
+  ans repeat 4: AUC 0.7679  layers [28, 27, 27, 28, 28]
+
+=== SINGLE-ARM AUCs with 2000-draw speaker bootstrap ===
+edaic_full_zeroshot_answer         Qwen2.5-Omni zero-shot answer AUC              0.8278 [0.7703, 0.8822]
+edaic_full_probe_enc               encoder probe AUC (per-clip OOF averaged over repeats) 0.5916 [0.5110, 0.6706]
+edaic_full_probe_proj              projector probe AUC (per-clip OOF averaged over repeats) 0.5631 [0.4790, 0.6478]
+edaic_full_probe_llm               LM probe AUC (per-clip OOF averaged over repeats) 0.7088 [0.6232, 0.7874]
+edaic_full_probe_ans               answer-state probe AUC (per-clip OOF averaged over repeats) 0.7748 [0.7041, 0.8387]
+
+=== PAIRED probe - answer, 2000-draw speaker bootstrap ===
+edaic_full_gap_llm_minus_answer    LM probe minus zero-shot answer (paired)       -0.1190 [-0.1995, -0.0478]
+                                   excludes zero:                                 yes   usable draws 2000/2000
+edaic_full_gap_enc_minus_answer    encoder probe minus zero-shot answer (paired)  -0.2361 [-0.3272, -0.1394]
+                                   excludes zero:                                 yes   usable draws 2000/2000
+edaic_full_gap_ans_minus_answer    answer-state probe minus zero-shot answer (paired) -0.0530 [-0.1046, -0.0049]
+                                   excludes zero:                                 yes   usable draws 2000/2000
+edaic_full_gap_proj_minus_answer   projector probe minus zero-shot answer (paired) -0.2646 [-0.3575, -0.1667]
+                                   excludes zero:                                 yes   usable draws 2000/2000
+
+=== NESTED PROBE, BOTH CONVENTIONS ===
+enc   mean-of-5-repeat-AUCs 0.5884   AUC-of-mean-OOF 0.5916   per_repeat [0.5964, 0.5826, 0.5962, 0.5608, 0.606]
+proj  mean-of-5-repeat-AUCs 0.5610   AUC-of-mean-OOF 0.5631   per_repeat [0.551, 0.5618, 0.5795, 0.5653, 0.5474]
+llm   mean-of-5-repeat-AUCs 0.7001   AUC-of-mean-OOF 0.7088   per_repeat [0.6918, 0.7062, 0.6893, 0.7055, 0.7078]
+ans   mean-of-5-repeat-AUCs 0.7435   AUC-of-mean-OOF 0.7748   per_repeat [0.755, 0.7302, 0.7418, 0.7225, 0.7679]
+DONE
