@@ -1,0 +1,30 @@
+model,dataset,window,stream,auc,n,estimator,file
+Qwen2.5-Omni,edaic,mid30,zero shot answer,0.7205,275,"zero shot, single prompt",scores/edaic_windows/o25_mid30_zeroshot_scores.csv
+Qwen2.5-Omni,edaic,mid300,zero shot answer,0.8122,275,"zero shot, single prompt",scores/edaic_windows/o25_mid300_zeroshot_scores.csv
+Qwen2.5-Omni,edaic,full,zero shot answer,0.8285,275,"zero shot, single prompt",scores/edaic_windows/o25_full_zeroshot_scores.csv
+Qwen2-Audio,edaic,mid30,zero shot answer,0.6891,275,"zero shot, single prompt",scores/edaic_windows/q2a_mid30_zeroshot_scores.csv
+Qwen2-Audio,edaic,mid300,zero shot answer,0.6332,275,"zero shot, single prompt",scores/edaic_windows/q2a_mid300_zeroshot_scores.csv
+Qwen2-Audio,edaic,full,zero shot answer,0.6330,275,"zero shot, single prompt",scores/edaic_windows/q2a_full_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,edaic,mid30,zero shot answer,0.7153,275,"zero shot, single prompt",scores/edaic_windows/q3o_mid30_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,edaic,mid300,zero shot answer,0.8217,275,"zero shot, single prompt",scores/edaic_windows/q3o_mid300_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,edaic,full,zero shot answer,0.8741,275,"zero shot, single prompt",scores/edaic_windows/q3o_full_zeroshot_scores.csv
+Kimi-Audio,edaic,mid30,zero shot answer,0.6664,275,"zero shot, single prompt",scores/edaic_windows/kimi_mid30_zeroshot_scores.csv
+Kimi-Audio,edaic,mid300,zero shot answer,0.6581,275,"zero shot, single prompt",scores/edaic_windows/kimi_mid300_zeroshot_scores.csv
+Audio Flamingo 3,edaic,mid30,zero shot answer,0.6949,275,"zero shot, single prompt",scores/edaic_windows/af3_mid30.csv
+Audio Flamingo 3,edaic,mid300,zero shot answer,0.8374,275,"zero shot, single prompt",scores/edaic_windows/af3_mid300.csv
+Audio Flamingo 3,edaic,full,zero shot answer,0.8565,275,"zero shot, single prompt",scores/edaic_windows/af3_full.csv
+Qwen2.5-Omni,edaic,mid30,encoder probe,0.5770,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid30_nested_repeats.json
+Qwen2.5-Omni,edaic,mid30,projector probe,0.4380,275,"1 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid30_nested_repeats.json
+Qwen2.5-Omni,edaic,mid30,LM probe,0.6249,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid30_nested_repeats.json
+Qwen2.5-Omni,edaic,mid30,answer-state probe,0.6593,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid30_nested_repeats.json
+Qwen2.5-Omni,edaic,mid30,"projector fine-tune, answer",0.6669,275,"projector only, 5 speaker-disjoint folds, out-of-fold",scores/edaic_windows/sft_mid30_oof.csv
+Qwen2.5-Omni,edaic,mid300,encoder probe,0.6168,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid300_nested_repeats.json
+Qwen2.5-Omni,edaic,mid300,projector probe,0.5703,275,"1 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid300_nested_repeats.json
+Qwen2.5-Omni,edaic,mid300,LM probe,0.6351,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid300_nested_repeats.json
+Qwen2.5-Omni,edaic,mid300,answer-state probe,0.7065,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_mid300_nested_repeats.json
+Qwen2.5-Omni,edaic,mid300,"projector fine-tune, answer",0.6595,275,"projector only, 5 speaker-disjoint folds, out-of-fold",scores/edaic_windows/sft_mid300_oof.csv
+Qwen2.5-Omni,edaic,full,encoder probe,0.5930,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_full_nested_repeats.json
+Qwen2.5-Omni,edaic,full,projector probe,0.5293,275,"1 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_full_nested_repeats.json
+Qwen2.5-Omni,edaic,full,LM probe,0.6853,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_full_nested_repeats.json
+Qwen2.5-Omni,edaic,full,answer-state probe,0.7542,275,"5 repeat nested, mean of per-repeat AUC",scores/edaic_windows/o25_full_nested_repeats.json
+Qwen2.5-Omni,edaic,full,"projector fine-tune, answer",0.6421,275,"projector only, 5 speaker-disjoint folds, out-of-fold",scores/edaic_windows/sft_full_oof.csv

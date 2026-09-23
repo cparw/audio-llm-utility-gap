@@ -1,0 +1,16 @@
+{
+ "checkpoint": "Qwen/Qwen2-Audio-7B-Instruct",
+ "clip_list": "/workspace/mf_full.csv",
+ "condition": "mdd",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "n": 275,
+ "n_positive": 66,
+ "auc": 0.633,
+ "median_mass": 0.997,
+ "window_seconds": 0.0,
+ "dtype": "float16",
+ "device": "cuda",
+ "encoder_layers": 32,
+ "llm_stages": 33,
+ "date": "2026-09-23"
+}

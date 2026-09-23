@@ -1,0 +1,6 @@
+model,dataset,stream,auc,n,estimator,file
+Qwen2.5-Omni,pitt_all_708,zero shot answer,0.6695,708,"zero shot, single prompt",scores/pitt_all/o25_pitt_all_zeroshot_scores.csv
+Qwen2.5-Omni,pitt_all_708,encoder probe,0.7968,708,"5 repeat nested, mean of per-repeat AUC",scores/pitt_all/o25_pitt_all_nested_repeats.json
+Qwen2.5-Omni,pitt_all_708,projector probe,0.7632,708,"1 repeat nested, mean of per-repeat AUC",scores/pitt_all/o25_pitt_all_nested_repeats.json
+Qwen2.5-Omni,pitt_all_708,LM probe,0.8125,708,"5 repeat nested, mean of per-repeat AUC",scores/pitt_all/o25_pitt_all_nested_repeats.json
+Qwen2.5-Omni,pitt_all_708,answer-state probe,0.7744,708,"5 repeat nested, mean of per-repeat AUC",scores/pitt_all/o25_pitt_all_nested_repeats.json

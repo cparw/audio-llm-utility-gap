@@ -1,0 +1,25 @@
+EDAIC_REPORT.txt  —  E-DAIC window rerun, Qwen2.5-Omni
+generated 2026-09-22 17:43
+All windows cut from dcaps_proc. AFFECTED by D2 (stitched timeline) and D1 (context cap).
+============================================================================================
+cell                   paper 1st30    mid 30s   mid 300s full(900s)
+--------------------------------------------------------------------------------------------
+zero shot answer           0.6620     0.7205     0.8122     0.8285
+encoder probe              0.5966     0.5770     0.6168     0.5930
+projector probe            0.5041     0.4380     0.5703     0.5293
+LM probe                   0.4939     0.6249     0.6351     0.6853
+answer-state probe         0.6146     0.6593     0.7065     0.7542
+transcript only            0.6613    pending    pending    0.8230*
+
+* full-transcript text 0.8230 already held: overnight2/text_new/o25_edaicfull_text.json
+
+WINDOW FACTS
+  mid30   cap   30.0s  n=275  window dur med 30.0000  start med 280.9000  capped 275/275
+  mid300  cap  300.0s  n=275  window dur med 300.0000  start med 145.9000  capped 217/275
+  full    cap  900.0s  n=275  window dur med 591.8000  start med 0.0000  capped 89/275
+
+HEADLINE
+  The encoder probe is flat across every window (0.5770 to 0.6168).
+  The model's own answer climbs 0.6620 -> 0.8285.
+  On the full file the ANSWER beats the paper's encoder probe by +0.2319.
+  For E-DAIC the utility gap inverts once the model is given real interview speech.
