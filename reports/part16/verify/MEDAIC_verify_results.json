@@ -1,0 +1,157 @@
+{
+ "MEDAIC_full_answer": {
+  "value": 0.8284761490503117,
+  "lo": 0.7707812285181902,
+  "hi": 0.8826819124751349,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_full_sft": {
+  "value": 0.6421270117442366,
+  "lo": 0.5592715701233514,
+  "hi": 0.718823673235058,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_full_text": {
+  "value": 0.8229665071770335,
+  "lo": 0.76508364174201,
+  "hi": 0.8705168517854525,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_full_sft_minus_answer": {
+  "value": -0.18634913730607516,
+  "lo": -0.2696246520146521,
+  "hi": -0.10979770518702958,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275,
+  "excludes_zero": true
+ },
+ "MEDAIC_full_text_minus_answer": {
+  "value": -0.005509641873278293,
+  "lo": -0.05661138257001805,
+  "hi": 0.04308549035009889,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275,
+  "excludes_zero": false
+ },
+ "MEDAIC_w30_enc": {
+  "value": 0.6323763955342903,
+  "lo": 0.5519837767165812,
+  "hi": 0.7103799793457998,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_w30_llm": {
+  "value": 0.5065245759025664,
+  "lo": 0.42206683976679865,
+  "hi": 0.5855810359480962,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_w30_ans": {
+  "value": 0.6401333913295636,
+  "lo": 0.5580532292384353,
+  "hi": 0.7184794329770693,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_w30_proj": {
+  "value": 0.5181963172393794,
+  "lo": 0.44108960709294415,
+  "hi": 0.599873542716871,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_w30_answer": {
+  "value": 0.662026968247064,
+  "lo": 0.5831034055337068,
+  "hi": 0.7314586558773856,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275
+ },
+ "MEDAIC_w30_enc_minus_answer": {
+  "value": -0.029650572712773715,
+  "lo": -0.1291025641025641,
+  "hi": 0.07517440946085353,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275,
+  "excludes_zero": false
+ },
+ "MEDAIC_w30_llm_minus_answer": {
+  "value": -0.1555023923444976,
+  "lo": -0.25361683136807145,
+  "hi": -0.05768008474576279,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275,
+  "excludes_zero": true
+ },
+ "MEDAIC_w30_ans_minus_answer": {
+  "value": -0.02189357691750038,
+  "lo": -0.10534391746852809,
+  "hi": 0.06633391543266633,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275,
+  "excludes_zero": false
+ },
+ "MEDAIC_w30_proj_minus_answer": {
+  "value": -0.14383065100768455,
+  "lo": -0.2489514016063883,
+  "hi": -0.03201489241373715,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275,
+  "excludes_zero": true
+ },
+ "MEDAIC_answer_full_minus_30s": {
+  "value": 0.16644918080324778,
+  "lo": 0.08482552676000724,
+  "hi": 0.24920099286972242,
+  "usable": 2000,
+  "total": 2000,
+  "n": 275,
+  "excludes_zero": true
+ },
+ "json_enc_mean": {
+  "value": 0.593,
+  "recomputed": 0.593
+ },
+ "json_proj_mean": {
+  "value": 0.5293,
+  "recomputed": 0.5293
+ },
+ "json_llm_mean": {
+  "value": 0.6853,
+  "recomputed": 0.6853
+ },
+ "json_ans_mean": {
+  "value": 0.7542,
+  "recomputed": 0.7542
+ },
+ "point_llm_minus_answer": {
+  "value": -0.1432
+ },
+ "point_enc_minus_answer": {
+  "value": -0.2355
+ },
+ "point_ans_minus_answer": {
+  "value": -0.0743
+ },
+ "point_proj_minus_answer": {
+  "value": -0.2992
+ }
+}
