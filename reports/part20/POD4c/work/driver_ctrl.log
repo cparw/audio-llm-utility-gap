@@ -1,0 +1,4 @@
+ctrl start 12:45:47
+af2 orig30 exit 0 13:16:17
+analyze ctrl exit 0 13:16:23
+CTRL_DONE 13:16:23

@@ -1,0 +1,11 @@
+/workspace/analyze_ctrl.py:109: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "date_utc": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")}
+PASTE af2_orig30_all: 0.5456 [0.4765, 0.6158] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af2_orig30_all.csv | 0.55 above 0.5
+PASTE af2_diff_orig30_minus_noinv_all: 0.0800 [0.0341, 0.1301] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af2_diff_orig30_minus_noinv_all.csv | 0.08 interval excludes zero
+PASTE af2_diff_origfull_minus_orig30_all: 0.0268 [-0.0054, 0.0611] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af2_diff_origfull_minus_orig30_all.csv | 0.03 interval includes zero
+PASTE af2_orig30_conflict: 0.5835 [0.4730, 0.6913] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af2_orig30_conflict.csv | 0.58 above 0.5
+PASTE af2_diff_orig30_minus_noinv_conflict: -0.0642 [-0.1466, 0.0201] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af2_diff_orig30_minus_noinv_conflict.csv | -0.06 interval includes zero
+PASTE af2_diff_origfull_minus_orig30_conflict: 0.0475 [-0.0065, 0.1099] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af2_diff_origfull_minus_orig30_conflict.csv | 0.05 interval includes zero
+PASTE af2_orig30_agreement: 0.5337 [0.4574, 0.6116] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af2_orig30_agreement.csv | 0.53 above 0.5
+PASTE af2_diff_orig30_minus_noinv_agreement: 0.1371 [0.0781, 0.1927] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af2_diff_orig30_minus_noinv_agreement.csv | 0.14 interval excludes zero
+PASTE af2_diff_origfull_minus_orig30_agreement: 0.0208 [-0.0179, 0.0613] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af2_diff_origfull_minus_orig30_agreement.csv | 0.02 interval includes zero
