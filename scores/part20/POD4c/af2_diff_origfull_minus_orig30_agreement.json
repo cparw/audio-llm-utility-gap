@@ -1,0 +1,61 @@
+{
+ "id": "af2_diff_origfull_minus_orig30_agreement",
+ "what": "AF2 paired AUC difference, original full window (af2_pitt468.csv) minus original first 30 s, agreement",
+ "value": 0.0208,
+ "ci95": [
+  -0.0179,
+  0.0613
+ ],
+ "n": 322,
+ "n_speakers": 175,
+ "bootstrap": {
+  "draws": 2000,
+  "usable_draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0) fresh per cell",
+  "unit": "speaker (with replacement)",
+  "percentile": [
+   2.5,
+   97.5
+  ],
+  "paired": true
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "model_id": "nvidia/audio-flamingo-2 (snapshot 3a7f4aea17e72c7367940affea6749069a7095fc) + Qwen/Qwen2.5-3B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "python3 analyze_ctrl.py af2 work/af2_noinv468.csv work/af2_orig30_468.csv",
+ "sources": [
+  {
+   "pod_path": "/workspace/work/af2_orig30_468.csv",
+   "mac_path": "(pod-produced; synced to <local data dir>/release/scores/part20/POD4c/work/)",
+   "sha256_first_1MB": "25789a399928967fe0ec9fd4115c4e09a04f5867a1607d4429d94fec2b738d60"
+  },
+  {
+   "pod_path": "/workspace/orig30/orig_hashes.csv",
+   "mac_path": "manifests/part20/POD4c/orig_hashes.csv (originals: <local data dir>/Desktop/clips_for_af3/pitt468/, FLAC-transported, int16 sample sha256 checked)",
+   "sha256_first_1MB": "0fe11eba08530d0d1d0d1502ae3899a413d45ac5e14d4ca9a42761bcd77ad34e"
+  },
+  {
+   "pod_path": "/workspace/refs/pitt_conflict_manifest.csv",
+   "mac_path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256_first_1MB": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  },
+  {
+   "pod_path": "/workspace/refs/af2_pitt468.csv",
+   "mac_path": "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv",
+   "sha256_first_1MB": "f70f37696cd46110933d452037a038253c13c0c1b0ec09a86c06832ba4787e25"
+  }
+ ],
+ "per_clip_csv": "/workspace/scores/part20/POD4c/af2_diff_origfull_minus_orig30_agreement.csv",
+ "two_dp": "0.02",
+ "verdict": "interval includes zero",
+ "scoring_command": "interviewer-free: cd /workspace && HF_HOME=/workspace/hf /workspace/af2venv/bin/python af2_zs.py cut/score_manifest.csv work/af2_noinv468.csv ; original first 30 s: cd /workspace && HF_HOME=/workspace/hf WINDOW_S=30 /workspace/af2venv/bin/python af2_zs_win.py orig30/score_manifest.csv work/af2_orig30_468.csv",
+ "scoring_env": "POD4c H200, venv /workspace/af2venv (--system-site-packages: python 3.12.3, torch 2.8.0+cu128) + transformers 4.46.3 / tokenizers 0.20.3, the same software as the 20 Sep pod run that wrote af2_pitt468.csv; lab AF2Adapter + official NVIDIA af2_code from ~/Desktop/af2_run; AF2_CODE_DIR=/workspace/af2code/af2/af2_code, AF2_CKPT_DIR=nvidia/audio-flamingo-2 snapshot 3a7f4aea; fp32; no cut (AF2 10 s window grid, max 12)",
+ "scoring_script_sha256": "d4dd044acf187e6eb04900e724436196e493877b00684bf38b8d0f43cfc45ffb",
+ "scoring_script": "/workspace/af2_zs_win.py",
+ "date_utc": "2026-09-23T13:16:23Z",
+ "arm": "agreement",
+ "auc_full": 0.5544,
+ "auc_orig30": 0.5337,
+ "direction": "full window minus first 30 s"
+}
