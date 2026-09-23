@@ -1,0 +1,2 @@
+sklearn 1.9.1 fold test-index md5 ['d3176418', 'e3132355', '3c5c4342', '4bcba0b6', 'ec09fa0a']
+fixed-fold fit |coef| 2.207710 n_iter 57
