@@ -1,0 +1,503 @@
+{
+ "sources": {
+  "pitt": {
+   "file": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256": "e65e69c8d83d785599d63ed767a1e242b73f4bde6997f3daeae5cd6aca3992b4",
+   "keys": {
+    "enc": [
+     [
+      468,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      468,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      468,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      468,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      468
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      468
+     ],
+     "<U11"
+    ],
+    "p_yes": [
+     [
+      468
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      468
+     ],
+     "<U30"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "zeroshot_sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 8.326672684688674e-17,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "same_run",
+   "n": 468
+  },
+  "edaic30": {
+   "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+   "sha256": "996ac37dd4fb24ae0d2563694ea29222d25a215fedd9df92b1ec9beec77aae2f",
+   "keys": {
+    "enc": [
+     [
+      275,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      275,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      275
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv",
+   "zeroshot_sha256": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 9.71445146547012e-17,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "same_run",
+   "n": 275
+  },
+  "adress2020": {
+   "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+   "sha256": "669e745eae2c98de9db33486f7c6ff1d05627a22c2a6b5992ce7dee8ce3c2501",
+   "keys": {
+    "enc": [
+     [
+      156,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      156,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      156,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      156,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      156
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      156
+     ],
+     "<U4"
+    ],
+    "p_yes": [
+     [
+      156
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      156
+     ],
+     "<U8"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "zeroshot_sha256": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 0.03836380753010504,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "other_extraction",
+   "n": 156
+  },
+  "neurovoz": {
+   "file": "<local data dir>/release_from_mac/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_states.npz",
+   "sha256": "812a627198bd5ee2335592f6000208ea704217fca636d671c2a68f2d0a41664a",
+   "keys": {
+    "enc": [
+     [
+      1270,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      1270,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      1270,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      1270,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      1270
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      1270
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      1270
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      1270
+     ],
+     "<U21"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "zeroshot_sha256": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 0.04680777214932552,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "other_extraction",
+   "n": 1270
+  },
+  "edaicfull": {
+   "file": "<local data dir>/release_from_mac/edaic_rerun/part17/T7_scratch/shards",
+   "n_shards": 275,
+   "order_file": "<local data dir>/release/edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv",
+   "order_sha256": "9ec70d6cf53de8933489927f2610ae4abd48bff75646cddde370bc2b0c589d68",
+   "keys": {
+    "enc": [
+     [
+      275,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      275,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      275
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv",
+   "zeroshot_sha256": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 0.030250470877691393,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "other_extraction",
+   "n": 275
+  }
+ },
+ "jobs": {
+  "pitt_encproj": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/pitt_encproj_states.npz",
+   "sha256": "b501627f247dc5349bfe42a77dfe2195687e418ef82bb2b28c533d4a127f1762",
+   "keys": [
+    "enc",
+    "proj"
+   ],
+   "array_sha256": {
+    "enc": "facec46379f74f9ebfb7946215364ad057f77748e68c4f71264b1d1e944c0097",
+    "proj": "14b4ece0320a1b731178840129450d7fae7a0b77e2deef444e214f6885f680e5",
+    "label": "02488e14397dcdad674eabf0ad180018dac87f1ea16dd16517bc1942376b9162",
+    "spk": "efaf08a58664d47760ee7e6a2c8649bdf82c9722b7de7f62c278df35035ad795",
+    "p_yes": "1612a1f83abeb57c23cc63f897d2612715be6dadf86ae0ae4fd9a502c4c1d5c3",
+    "name": "8c4bd22bf64a3ba9545fa0edbddd903c70a5e0137ecb822bb11a552983b1a736"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "pitt_llm": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/pitt_llm_states.npz",
+   "sha256": "405d9a1108a9ea489b937c0692918fe1d202801ff84b33e0b827700794cf641c",
+   "keys": [
+    "llm"
+   ],
+   "array_sha256": {
+    "llm": "165a381278a34ef91fbfadb4d1ef5d9b8930219883c9bdcd64f6f6f2a9b5e0d1",
+    "label": "02488e14397dcdad674eabf0ad180018dac87f1ea16dd16517bc1942376b9162",
+    "spk": "efaf08a58664d47760ee7e6a2c8649bdf82c9722b7de7f62c278df35035ad795",
+    "p_yes": "1612a1f83abeb57c23cc63f897d2612715be6dadf86ae0ae4fd9a502c4c1d5c3",
+    "name": "8c4bd22bf64a3ba9545fa0edbddd903c70a5e0137ecb822bb11a552983b1a736"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "pitt_ans": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/pitt_ans_states.npz",
+   "sha256": "dbbdd93768a3356ceca8ca53dcbddd94407de3696148df17f451e6b4f4292ff4",
+   "keys": [
+    "ans"
+   ],
+   "array_sha256": {
+    "ans": "4e894427862b6e5b97c75c1b771ffbb7bc2e559fba9966bfa14faa46fe3ec78c",
+    "label": "02488e14397dcdad674eabf0ad180018dac87f1ea16dd16517bc1942376b9162",
+    "spk": "efaf08a58664d47760ee7e6a2c8649bdf82c9722b7de7f62c278df35035ad795",
+    "p_yes": "1612a1f83abeb57c23cc63f897d2612715be6dadf86ae0ae4fd9a502c4c1d5c3",
+    "name": "8c4bd22bf64a3ba9545fa0edbddd903c70a5e0137ecb822bb11a552983b1a736"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "edaic30_encproj": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/edaic30_encproj_states.npz",
+   "sha256": "a4961d1badb849899e78580e6006f60798a209f1ba9c0fe42273d99ba37bd76b",
+   "keys": [
+    "enc",
+    "proj"
+   ],
+   "array_sha256": {
+    "enc": "12ecbbdd128e02624db3e031384be57accb70bbaed4422645a5db41a910def59",
+    "proj": "68cae631693850811918098dc9d8bc3c1f5dc7458673ad7b1425ed9e21d949ca",
+    "label": "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac",
+    "spk": "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa",
+    "p_yes": "fd5cda6faa4f8cff39127c23afe92126874ce69282fbc13120c60e7d51463233",
+    "name": "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "edaic30_llm": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/edaic30_llm_states.npz",
+   "sha256": "bd05eacb0d45065027e940130b132b11dc5a7bc8a69c3074e6d9c929e8c6f67e",
+   "keys": [
+    "llm"
+   ],
+   "array_sha256": {
+    "llm": "daa6e9676427388f10233245e3003da850504e9ed36955ca4234133bcfd5413c",
+    "label": "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac",
+    "spk": "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa",
+    "p_yes": "fd5cda6faa4f8cff39127c23afe92126874ce69282fbc13120c60e7d51463233",
+    "name": "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "edaic30_ans": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/edaic30_ans_states.npz",
+   "sha256": "31b7edf621c9eb8126a7f3436c7ccfa9f1f58ef4cd8ce4c637dc49639b2f6f5c",
+   "keys": [
+    "ans"
+   ],
+   "array_sha256": {
+    "ans": "6e9174b5c11f9f6904e75834ea3fd45009d0d77cd0dbc41b8a58da6f49f5f097",
+    "label": "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac",
+    "spk": "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa",
+    "p_yes": "fd5cda6faa4f8cff39127c23afe92126874ce69282fbc13120c60e7d51463233",
+    "name": "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "adress2020_encproj": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/adress2020_encproj_states.npz",
+   "sha256": "c6f8f8af5a5216d80cb17e91467f4b729a27ce58f72e79d4b292883923defa78",
+   "keys": [
+    "enc",
+    "proj"
+   ],
+   "array_sha256": {
+    "enc": "6d0ab6357b3a713380a51a955908e9a2b65efc247b3e30d494713332be8357f7",
+    "proj": "4c7ad426279fb05a16cf4552f44e58436b5f42dabdbde9fbd7d783a7177d64bb",
+    "label": "43e3856be3ac16f960074b62f339ab47b449fca5164647f04258adfe1052fdfa",
+    "spk": "0f2f9011a34cd1958c1ab459e73b562b26118e8d28c5a3c4125d619264e7d6c0",
+    "p_yes": "7024ea9aac8bb89445982125e5b20d7ff53dde8f010404fe661546204c3d61cf",
+    "name": "1f57d590abf1159f7510035e9d98f48d36b95b5e79424a84ef83ca9c6d7fd067"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "neurovoz_encproj": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/neurovoz_encproj_states.npz",
+   "sha256": "fbd9253242d94677c9aad5d434de3d1f7fb890dbd05a3180a32df0e3e51e8b17",
+   "keys": [
+    "enc",
+    "proj"
+   ],
+   "array_sha256": {
+    "enc": "055c19140fc33acb080e9369a124c713983917a7be9afd26e5adb53798ba19f4",
+    "proj": "225d428001dc38657c60a4cd0cc06e26141d642bdf5dda72a67ea5649c8c9b19",
+    "label": "bdf3bea1e81f018d40616d616ac35e515f97eb65b2339a9175cae29a320f09f5",
+    "spk": "54a68165b01f61005e67f22f7a02372af7ebe0efc5fdf890ebe86ae4c3f57bb2",
+    "p_yes": "a1576f498b7d9ea359ee02dc9620d8f00aa7306846f33a7e24eee1ba34140ec4",
+    "name": "0e1a611b53067abb4aac8579f42e3eaf9d9928386654717fe30c44da1dd46328"
+   },
+   "byte_identical_to_source_arrays": true
+  },
+  "edaicfull_encproj": {
+   "file": "<local data dir>/leftovers_23sep/t5/inputs/edaicfull_encproj_states.npz",
+   "sha256": "68c00138fa9e157b6291ba5c68b7955edb8f842419f654d8d281bd8c73da3341",
+   "keys": [
+    "enc",
+    "proj"
+   ],
+   "array_sha256": {
+    "enc": "a9913f3ad5b2d63c24d25851f0faf6616e44be47f1409cf665aa534e7cb3ef8b",
+    "proj": "bc4b41d637a03445de56e91ce3918c4ad2e0a3486aa15aff01f0ed8023680154",
+    "label": "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac",
+    "spk": "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa",
+    "p_yes": "8d32a0b38268e299fe3ff7c44a958d66704dc2a04df847d8e3785c14fa1ccd15",
+    "name": "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   },
+   "byte_identical_to_source_arrays": true
+  }
+ }
+}

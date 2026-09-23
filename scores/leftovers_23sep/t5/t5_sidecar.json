@@ -1,0 +1,707 @@
+{
+ "task": "leftovers_23sep t5: refit of the Qwen2.5-Omni per-layer probe curves (T5 omitted-dataset curves) on Linux CPU pods",
+ "date": "2026-09-23T22:40:35Z",
+ "command": "/usr/local/bin/python3 scripts/leftovers_23sep/t5/t5_analyze.py",
+ "closes": "STATUS_LEDGER section 5 DONE_UNVERIFIED item 1 and section 1 spot check 8 (P17 T5 curve values); audit_p17 item 5 caveat",
+ "script_that_made_the_saved_curves": "<local data dir>/release/scripts/curves_from_states.py",
+ "script_sha256": "b0b19890c9ce5665854d6ad60b32a1a21cc87362086d823d53242e242b864898",
+ "script_note": "byte identical to the heredoc run on the H200 pod gv9jvm57b21mcz on 18 Sep (4 copies in release/c_conversation.txt lines 240964, 249629, 258264, 266899) and to release_public/scripts/core/curves_from_states.py; the pod ran it via run_all_omni.sh with OMP_NUM_THREADS=1",
+ "saved_curves": {
+  "pitt_enc": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_encoder_perlayer.csv",
+   "sha256": "1e4a885cc2ddff92622ca3b94298f7f8ac5538fa955fd0f7fe93cbe5c2aafb18"
+  },
+  "pitt_proj": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_proj_perlayer.csv",
+   "sha256": "592d3db3a27e57fd7f3b6429826aafb026871fed71db47cb80de66441ce4343d"
+  },
+  "pitt_llm": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_llm_perlayer.csv",
+   "sha256": "4300f8d3869276687d98fd6d4116598cb73610009139269cf924e4ddc79cab24"
+  },
+  "pitt_ans": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_ans_perlayer.csv",
+   "sha256": "ca0dd2575907aa53ecedc52ab35b43b25856815090abc5eebf0125623ce254c2"
+  },
+  "edaic30_enc": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv",
+   "sha256": "aa45ad8a6a030ed70538b113f9a38d6fa1d810c466c42183a8f0fe0b0bc4dafd"
+  },
+  "edaic30_proj": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_proj_perlayer.csv",
+   "sha256": "a2035a1bd51860bbbc6eaa460233067ee9ba1bccf5942c66ecebbda7c66c3458"
+  },
+  "edaic30_llm": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_llm_perlayer.csv",
+   "sha256": "a453d88a88334729094be7fb1d5dd775431dcbaac3d43c8db52239caa931bf95"
+  },
+  "edaic30_ans": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_ans_perlayer.csv",
+   "sha256": "fb7a767939b4ba6a34756523c5af4c77bd0935dbf598f1bf80844b76379f5bcc"
+  },
+  "adress2020_enc": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_encoder_perlayer.csv",
+   "sha256": "e56202f096162382cdc1a0a5d4451bbb7676e5b3f3649d1b5676b8b9f3b29752"
+  },
+  "adress2020_proj": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_proj_perlayer.csv",
+   "sha256": "f6cd9d1928ce9d2a571dd2a03a16cb8411e8f39a24747c7c96de503927ca6bd7"
+  },
+  "adress2020_llm": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_llm_perlayer.csv",
+   "sha256": "77ec34eb94b808736bebc336caebb884952c377f80a580200201212a4532c547"
+  },
+  "adress2020_ans": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_ans_perlayer.csv",
+   "sha256": "90f6b6fc4740213123712dea05506eadf22819f67cc636eb290ab77243604034"
+  },
+  "neurovoz_enc": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_encoder_perlayer.csv",
+   "sha256": "126fa3cee99739a5c875ebf2d35fcbe9eebb048db7ac5cb98ad27d046f9b0e55"
+  },
+  "neurovoz_proj": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_proj_perlayer.csv",
+   "sha256": "8e27c321fed1afe68b9d62509198392d307ad6fa87c27f8cf30ced0fa55c8894"
+  },
+  "neurovoz_llm": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_llm_perlayer.csv",
+   "sha256": "7cb0b860d7c7c5aae1da2dfc33670da9555d84243326efda11019b632cad1d23"
+  },
+  "neurovoz_ans": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_ans_perlayer.csv",
+   "sha256": "d547a72980e0f7e3245f340ad2fc6da2686824e9a06b39db84b35e44241df5fc"
+  },
+  "edaicfull_enc": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv",
+   "sha256": "adbbb86b58d2d0bba56c1467a6a9ccd0206c1c1219d4fc69f2116ecc8b53fc3b"
+  },
+  "edaicfull_proj": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_proj_perlayer.csv",
+   "sha256": "13df004f06c9dccec923455248d9997578ffc556956c3756a5a20720b58081c0"
+  },
+  "edaicfull_llm": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_llm_perlayer.csv",
+   "sha256": "1e235070dd4e81e17625fcfc37444afe895230301bb089167841fe44b4fc8f52"
+  },
+  "edaicfull_ans": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_ans_perlayer.csv",
+   "sha256": "23b319d4aa57e67716ab1974073ae70b706c1cf3cd0ef38ca7a709a743312ea2"
+  }
+ },
+ "states": {
+  "pitt": {
+   "file": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256": "e65e69c8d83d785599d63ed767a1e242b73f4bde6997f3daeae5cd6aca3992b4",
+   "keys": {
+    "enc": [
+     [
+      468,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      468,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      468,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      468,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      468
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      468
+     ],
+     "<U11"
+    ],
+    "p_yes": [
+     [
+      468
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      468
+     ],
+     "<U30"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "zeroshot_sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 8.326672684688674e-17,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "same_run",
+   "n": 468
+  },
+  "edaic30": {
+   "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+   "sha256": "996ac37dd4fb24ae0d2563694ea29222d25a215fedd9df92b1ec9beec77aae2f",
+   "keys": {
+    "enc": [
+     [
+      275,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      275,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      275
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv",
+   "zeroshot_sha256": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 9.71445146547012e-17,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "same_run",
+   "n": 275
+  },
+  "adress2020": {
+   "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+   "sha256": "669e745eae2c98de9db33486f7c6ff1d05627a22c2a6b5992ce7dee8ce3c2501",
+   "keys": {
+    "enc": [
+     [
+      156,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      156,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      156,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      156,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      156
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      156
+     ],
+     "<U4"
+    ],
+    "p_yes": [
+     [
+      156
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      156
+     ],
+     "<U8"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "zeroshot_sha256": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 0.03836380753010504,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "other_extraction",
+   "n": 156
+  },
+  "neurovoz": {
+   "file": "<local data dir>/release_from_mac/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_states.npz",
+   "sha256": "812a627198bd5ee2335592f6000208ea704217fca636d671c2a68f2d0a41664a",
+   "keys": {
+    "enc": [
+     [
+      1270,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      1270,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      1270,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      1270,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      1270
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      1270
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      1270
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      1270
+     ],
+     "<U21"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "zeroshot_sha256": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 0.04680777214932552,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "other_extraction",
+   "n": 1270
+  },
+  "edaicfull": {
+   "file": "<local data dir>/release_from_mac/edaic_rerun/part17/T7_scratch/shards",
+   "n_shards": 275,
+   "order_file": "<local data dir>/release/edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv",
+   "order_sha256": "9ec70d6cf53de8933489927f2610ae4abd48bff75646cddde370bc2b0c589d68",
+   "keys": {
+    "enc": [
+     [
+      275,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "proj": [
+     [
+      275,
+      1,
+      3584
+     ],
+     "float32"
+    ],
+    "llm": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "ans": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      275
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7"
+    ]
+   },
+   "zeroshot_file": "<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv",
+   "zeroshot_sha256": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+   "clip_order_equals_zeroshot": true,
+   "max_abs_p_yes_diff_vs_zeroshot": 0.030250470877691393,
+   "speaker_equal": true,
+   "label_equal": true,
+   "states_class": "other_extraction",
+   "n": 275
+  }
+ },
+ "inputs_manifest": "scores/leftovers_23sep/t5/inputs_manifest.json",
+ "fold_files": {
+  "<local data dir>/release/folds/adress2020_groupkfold5_mac.csv": "71982b814aaf451a45dd6a3728dd6b90200c4fad9e6370a69e8c26265c0031f6",
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod.csv": "f88e8566d034a2ce947f17ff61a5ae11109c4a2abfbe655980cdbd1d857d7067",
+  "<local data dir>/release/folds/edaic_groupkfold5_mac.csv": "165f9bb80fd3d355ece22d75695e576f84bdfdd15fea4f2ede798b192fe0c6a8",
+  "<local data dir>/release/folds/edaic_groupkfold5_pod.csv": "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff",
+  "<local data dir>/release/folds/neurovoz_groupkfold5_mac.csv": "4306469a61362d3c89b484b4da6ed6274275f9584b96e65d594fb76b98bee67b",
+  "<local data dir>/release/folds/neurovoz_groupkfold5_pod.csv": "10e609c186df31e34ae1e318e78031289a4055a73055b41b1175ca66baf602ad",
+  "<local data dir>/release/folds/pitt_groupkfold5_mac.csv": "b6e2416288fd59208dc7efbac643509ba20c46561e73ec3670f89ca48e7111c9",
+  "<local data dir>/release/folds/pitt_groupkfold5_pod.csv": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406"
+ },
+ "answers_recomputed": {
+  "pitt": 0.6577683068578071,
+  "edaic_first30": 0.662026968247064,
+  "adress2020": 0.6240959894806049,
+  "neurovoz": 0.6950814953762633,
+  "edaic_full": 0.8284761490503117
+ },
+ "pods": [
+  [
+   "lo-t5-1",
+   "7ys573qi80lviz",
+   "38.80.152.147",
+   "40631",
+   "0.96"
+  ],
+  [
+   "lo-t5-2",
+   "9gqcxi3h0fq9hk",
+   "157.157.221.29",
+   "37083",
+   "0.96"
+  ],
+  [
+   "lo-t5-3",
+   "pvcliyv6xeld26",
+   "38.80.152.147",
+   "37251",
+   "0.96"
+  ],
+  [
+   "lo-t5-4",
+   "aajzqs43hbk06f",
+   "38.80.152.147",
+   "41635",
+   "0.96"
+  ],
+  [
+   "lo-t5-5",
+   "xr9oobyvspbhr2",
+   "157.157.221.177",
+   "35067",
+   "0.96"
+  ],
+  [
+   "lo-t5-6",
+   "y5se2r4jlk5poi",
+   "157.157.221.177",
+   "34220",
+   "0.96"
+  ],
+  [
+   "lo-t5-7",
+   "fapg5svhu49st0",
+   "213.192.2.103",
+   "41741",
+   "0.96"
+  ],
+  [
+   "lo-t5-8",
+   "4m49yjp16bn92r",
+   "213.173.105.68",
+   "15352",
+   "0.96"
+  ],
+  [
+   "lo-t5-9",
+   "vt2ja1zx01efnn",
+   "213.173.105.80",
+   "40197",
+   "0.96"
+  ],
+  [
+   "lo-t5-10",
+   "qi9dagy6lbu1u7",
+   "213.173.105.80",
+   "55380",
+   "0.96"
+  ],
+  [
+   "#lo-t5-11",
+   "9aqfk9uwp5hniu",
+   "213.173.105.68",
+   "43614",
+   "0.96"
+  ],
+  [
+   "#lo-t5-12",
+   "wo48s7vffxndz9",
+   "213.192.2.73",
+   "40180",
+   "0.96"
+  ],
+  [
+   "lo-t5-13",
+   "g9abhgl3f9xbp6",
+   "213.173.111.99",
+   "13470",
+   "1.12"
+  ]
+ ],
+ "pod_env": {
+  "lo-t5-9": {
+   "cpu": "AMD EPYC 9654 96-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-9/env_lo-t5-9.json"
+  },
+  "lo-t5-1": {
+   "cpu": "AMD EPYC 7713 64-Core Processor",
+   "openblas_arch": "Haswell",
+   "avx512f": false,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-1/env_lo-t5-1.json"
+  },
+  "lo-t5-3": {
+   "cpu": "AMD EPYC 7713 64-Core Processor",
+   "openblas_arch": "Haswell",
+   "avx512f": false,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-3/env_lo-t5-3.json"
+  },
+  "lo-t5-4": {
+   "cpu": "AMD EPYC 7713 64-Core Processor",
+   "openblas_arch": "Haswell",
+   "avx512f": false,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-4/env_lo-t5-4.json"
+  },
+  "lo-t5-5": {
+   "cpu": "AMD EPYC 9965 192-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-5/env_lo-t5-5.json"
+  },
+  "lo-t5-6": {
+   "cpu": "AMD EPYC 9965 192-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-6/env_lo-t5-6.json"
+  },
+  "lo-t5-7": {
+   "cpu": "AMD EPYC 9654 96-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-7/env_lo-t5-7.json"
+  },
+  "lo-t5-13": {
+   "cpu": "AMD EPYC 9575F 64-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-13/env_lo-t5-13.json"
+  },
+  "lo-t5-2": {
+   "cpu": "AMD EPYC 9754 128-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-2/env_lo-t5-2.json"
+  },
+  "lo-t5-8": {
+   "cpu": "AMD EPYC 9655P 96-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-8/env_lo-t5-8.json"
+  },
+  "lo-t5-10": {
+   "cpu": "AMD EPYC 9654 96-Core Processor",
+   "openblas_arch": "SkylakeX",
+   "avx512f": true,
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "python": "3.12.3",
+   "env_file": "scores/leftovers_23sep/t5/lo-t5-10/env_lo-t5-10.json"
+  },
+  "mac": {
+   "cpu": "Apple M4 Max",
+   "openblas_arch": "Accelerate (numpy and scipy build config)",
+   "avx512f": false,
+   "numpy": "2.2.6",
+   "scipy": "1.15.3",
+   "sklearn": "1.7.2",
+   "python": "3.10.2",
+   "env_file": "scores/leftovers_23sep/t5/mac_diag/env_mac.json"
+  }
+ },
+ "p17_verifier_mac_refit_reproduced_by_mac_macfile_run_maxabs": {
+  "pitt": 1.1102230246251565e-16,
+  "edaic_first30": 1.1102230246251565e-16
+ },
+ "outputs": [
+  "scores/leftovers_23sep/t5/t5_values.tsv",
+  "scores/leftovers_23sep/t5/t5_runs.csv",
+  "scores/leftovers_23sep/t5/t5_perlayer.csv",
+  "scores/leftovers_23sep/t5/t5_sidecar.json"
+ ],
+ "rules": "4 dp match: the two values formatted with 4 decimals are the same string. Max |diff| over layers on auc_oof (pooled out-of-fold AUC, the column Figure 1 plots).",
+ "groupkfold_source": {
+  "sklearn 1.9.1 on the pods (inspect.getsource, GroupKFold._iter_test_indices)": "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]",
+  "sklearn 1.7.2 on the Mac (same call)": "indices = np.argsort(n_samples_per_group)[::-1]",
+  "numpy default argsort equals stable argsort on the speaker clip counts": "False on the Mac and False on every pod, so the tie order comes from the sklearn version, not from numpy or the CPU"
+ },
+ "findings": [
+  "With the pod fold order and one BLAS thread, the unchanged curves_from_states.py reproduces every saved Pitt and E-DAIC first-30 s curve (encoder, projector, LM, answer) with max |diff| 0 on AVX-512 AMD EPYC hosts where OpenBLAS picks SkylakeX kernels (Zen 4 9654, 9754, 9655P; Zen 5 9965, 9575F).",
+  "The P17 Mac refit (0/32 at 4 dp) used sklearn 1.7.2, whose GroupKFold tie order differs from sklearn 1.9.1; the Mac-order refit reproduces the P17 verifier's curve to 1.1e-16 and gives the audit's 0.0534 and 0.0877.",
+  "With the right folds the remaining differences come from BLAS arithmetic: Zen 3 (OpenBLAS Haswell kernels) 6.8e-4 and 5.1e-4, Mac Accelerate 5.6e-4 and 8.7e-4, forcing Haswell/Zen/Sandybridge/Prescott kernels on an AVX-512 host 4.8e-4 to 6.8e-4, float64 features 4.7e-4 and 1.1e-3, 8 BLAS threads 5.6e-4 on Pitt (0 on E-DAIC).",
+  "ADReSS-2020, NeuroVoz and E-DAIC full have only states from a different extraction on disk (p_yes differs by up to 0.038, 0.047, 0.030); their refits differ by 2.9e-3, 1.1e-3, 3.0e-3, and the layer counts above the answer are unchanged (32, 32, 0).",
+  "ADReSSo, PC-GITA, MDVR-KCL, E-DAIC middle 300 s and middle 30 s have no matching states on disk, so their curves cannot be refitted."
+ ],
+ "run_notes": [
+  "lo-t5-11 and lo-t5-12 were deleted at 22:17 UTC before use: the Mac upload link (about 2 MB/s shared with other jobs) made separate verifier pods slow, so the independent refit code also ran on each main pod.",
+  "lo-t5-1, lo-t5-3 and lo-t5-4 landed on Zen 3 hosts without AVX-512; their runs are kept as the host-sensitivity rows. The AVX-512 reruns (lo-t5-9, lo-t5-10, lo-t5-13) got their states pod to pod (sha256 checked).",
+  "On lo-t5-4 and lo-t5-7 the driver file was replaced while it ran; bash then stopped with a syntax error after the variants. The same-pod verifier refit and ALL_DONE were run by hand; every result file was already written.",
+  "Pod cost: 13 pods, about 186 pod-minutes at $0.96/h (lo-t5-13 $1.12/h), about $3.05 in total, from create times and watchdog delete times."
+ ]
+}
