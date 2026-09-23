@@ -1,0 +1,23 @@
+2026-09-23 12:33:08.878 | INFO     | kimia_infer.api.kimia:__init__:16 - Loading kimi-audio main model
+2026-09-23 12:33:08.880 | INFO     | kimia_infer.api.kimia:__init__:25 - Looking for resources in /workspace/hf/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b
+2026-09-23 12:33:08.881 | INFO     | kimia_infer.api.kimia:__init__:26 - Loading whisper model
+using normal flash attention
+Loading checkpoint shards:   0%|          | 0/36 [00:00<?, ?it/s]Loading checkpoint shards:  11%|█         | 4/36 [00:00<00:00, 38.86it/s]Loading checkpoint shards:  22%|██▏       | 8/36 [00:00<00:00, 37.49it/s]Loading checkpoint shards:  36%|███▌      | 13/36 [00:00<00:00, 41.75it/s]Loading checkpoint shards:  50%|█████     | 18/36 [00:00<00:00, 41.49it/s]Loading checkpoint shards:  64%|██████▍   | 23/36 [00:00<00:00, 39.09it/s]Loading checkpoint shards:  78%|███████▊  | 28/36 [00:00<00:00, 39.18it/s]Loading checkpoint shards:  89%|████████▉ | 32/36 [00:00<00:00, 39.09it/s]Loading checkpoint shards: 100%|██████████| 36/36 [00:00<00:00, 38.43it/s]Loading checkpoint shards: 100%|██████████| 36/36 [00:00<00:00, 39.14it/s]
+2026-09-23 12:33:17.927 | INFO     | kimia_infer.api.prompt_manager:__init__:20 - Looking for resources in /workspace/hf/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b
+2026-09-23 12:33:17.928 | INFO     | kimia_infer.api.prompt_manager:__init__:21 - Loading whisper model
+2026-09-23 12:33:19.542 | INFO     | kimia_infer.api.prompt_manager:__init__:30 - Loading text tokenizer
+Kimi loaded in 11s from /workspace/hf/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b dtype torch.bfloat16
+TOKENIZATION yes {'Yes': [9454], ' Yes': [7414], 'yes': [9693], ' yes': [9834], 'YES': [14004], ' YES': [14080]} no {'No': [2753], ' No': [2308], 'no': [2152], ' no': [902], 'NO': [8996], ' NO': [5664]}
+ref ids yes [7414, 9454, 9693, 9834, 14004] no [902, 2152, 2308, 2753, 8996] | rule3 ids yes [7414, 9454, 9693, 9834, 14004, 14080] no [902, 2152, 2308, 2753, 5664, 8996]
+1/468 conflict_Con_015-0_67805.wav p_yes 0.4872 mass 0.9953 13s
+51/468 conflict_Dem_010-2_4647.wav p_yes 0.7984 mass 0.9949 21s
+101/468 conflict_Dem_221-2_32438.wav p_yes 0.9445 mass 0.9984 30s
+151/468 agreement_Con_006-4_37223.wav p_yes 0.9133 mass 0.9974 39s
+201/468 agreement_Con_128-1_34057.wav p_yes 0.2384 mass 0.9953 48s
+251/468 agreement_Con_243-0_33988.wav p_yes 0.3100 mass 0.9956 58s
+301/468 agreement_Dem_029-1_30833.wav p_yes 0.7246 mass 0.9928 67s
+351/468 agreement_Dem_157-0_3215.wav p_yes 0.6037 mass 0.9954 77s
+401/468 agreement_Dem_268-0_145775.wav p_yes 0.7378 mass 0.9963 86s
+451/468 agreement_Dem_585-0_35202.wav p_yes 0.9394 mass 0.9986 95s
+468/468 agreement_Dem_714-0_13211.wav p_yes 0.9917 mass 0.9997 97s
+SCORED -> /workspace/scores/part20/POD4d/kimi_pitt_orig468_pod_scores.csv 97s

@@ -1,0 +1,20 @@
+2026-09-23 12:32:42.832 | INFO     | kimia_infer.api.kimia:__init__:16 - Loading kimi-audio main model
+2026-09-23 12:32:42.834 | INFO     | kimia_infer.api.kimia:__init__:25 - Looking for resources in /workspace/hf/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b
+2026-09-23 12:32:42.834 | INFO     | kimia_infer.api.kimia:__init__:26 - Loading whisper model
+using normal flash attention
+Loading checkpoint shards:   0%|          | 0/36 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 5/36 [00:00<00:00, 43.97it/s]Loading checkpoint shards:  28%|██▊       | 10/36 [00:00<00:00, 43.50it/s]Loading checkpoint shards:  42%|████▏     | 15/36 [00:00<00:00, 41.16it/s]Loading checkpoint shards:  56%|█████▌    | 20/36 [00:00<00:00, 41.89it/s]Loading checkpoint shards:  69%|██████▉   | 25/36 [00:00<00:00, 41.90it/s]Loading checkpoint shards:  86%|████████▌ | 31/36 [00:00<00:00, 45.71it/s]Loading checkpoint shards: 100%|██████████| 36/36 [00:00<00:00, 45.82it/s]Loading checkpoint shards: 100%|██████████| 36/36 [00:00<00:00, 44.14it/s]
+2026-09-23 12:32:51.534 | INFO     | kimia_infer.api.prompt_manager:__init__:20 - Looking for resources in /workspace/hf/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b
+2026-09-23 12:32:51.534 | INFO     | kimia_infer.api.prompt_manager:__init__:21 - Loading whisper model
+2026-09-23 12:32:53.155 | INFO     | kimia_infer.api.prompt_manager:__init__:30 - Loading text tokenizer
+GPU NVIDIA H200 torch 2.8.0+cu128 cudnn 91002
+conflict_Con_015-0_67805.wav rep0 0.487195 rep1 0.487195 same_audio_ids True n_tok 404 feat [272763.0625] vs [272763.0625]
+conflict_Con_015-1_4987.wav rep0 0.296416 rep1 0.296416 same_audio_ids True n_tok 404 feat [280776.9375] vs [280776.9375]
+conflict_Con_015-1_60159.wav rep0 0.601611 rep1 0.601611 same_audio_ids True n_tok 404 feat [253592.59375] vs [253592.59375]
+conflict_Con_017-4_6597.wav rep0 0.806140 rep1 0.806140 same_audio_ids True n_tok 404 feat [294133.9375] vs [294133.9375]
+conflict_Con_021-1_38448.wav rep0 0.550618 rep1 0.550618 same_audio_ids True n_tok 404 feat [272034.875] vs [272034.875]
+conflict_Con_034-1_7639.wav rep0 0.802256 rep1 0.802256 same_audio_ids True n_tok 404 feat [249459.53125] vs [249459.53125]
+conflict_Con_034-4_46285.wav rep0 0.934645 rep1 0.934645 same_audio_ids True n_tok 404 feat [269558.15625] vs [269558.15625]
+conflict_Con_042-2_2251.wav rep0 0.330963 rep1 0.330963 same_audio_ids True n_tok 404 feat [278465.25] vs [278465.25]
+conflict_Con_045-0_35325.wav rep0 0.721434 rep1 0.721434 same_audio_ids True n_tok 404 feat [267348.1875] vs [267348.1875]
+conflict_Con_045-2_39349.wav rep0 0.909040 rep1 0.909040 same_audio_ids True n_tok 404 feat [255638.4375] vs [255638.4375]
+DIAG DONE
