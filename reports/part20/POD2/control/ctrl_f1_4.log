@@ -1,0 +1,41 @@
+468 clips, 228 speakers, folds loaded from /workspace/p20/pitt_groupkfold5_pod.csv; fold sizes [94, 94, 94, 93, 93]; my folds [1, 4]
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   4%|▍         | 102/2447 [00:00<00:02, 987.07it/s]Loading weights:   8%|▊         | 201/2447 [00:00<00:02, 941.71it/s]Loading weights:  12%|█▏        | 296/2447 [00:00<00:02, 887.34it/s]Loading weights:  16%|█▌        | 391/2447 [00:00<00:02, 908.47it/s]Loading weights:  21%|██        | 512/2447 [00:00<00:01, 1011.40it/s]Loading weights:  26%|██▌       | 631/2447 [00:00<00:01, 1069.72it/s]Loading weights:  31%|███       | 763/2447 [00:00<00:01, 1149.91it/s]Loading weights:  36%|███▌      | 879/2447 [00:00<00:01, 1006.20it/s]Loading weights:  40%|████      | 983/2447 [00:01<00:01, 827.00it/s] Loading weights:  45%|████▍     | 1091/2447 [00:01<00:01, 884.54it/s]Loading weights:  49%|████▉     | 1193/2447 [00:01<00:01, 915.41it/s]Loading weights:  53%|█████▎    | 1297/2447 [00:01<00:01, 946.90it/s]Loading weights:  57%|█████▋    | 1403/2447 [00:01<00:01, 953.60it/s]Loading weights:  61%|██████▏   | 1503/2447 [00:01<00:00, 963.07it/s]Loading weights:  66%|██████▌   | 1620/2447 [00:01<00:00, 1016.29it/s]Loading weights:  73%|███████▎  | 1779/2447 [00:01<00:00, 1168.39it/s]Loading weights:  82%|████████▏ | 2018/2447 [00:01<00:00, 1516.02it/s]Loading weights:  89%|████████▉ | 2172/2447 [00:01<00:00, 1499.38it/s]Loading weights:  95%|█████████▍| 2324/2447 [00:02<00:00, 1224.98it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 1074.02it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+PARAMCOUNTS {"model_id": "Qwen/Qwen2.5-Omni-7B", "total_params_full_model": 10732225408, "total_params_thinker_audio_plus_lm": 8255263744, "lora_trainable_params": 5046272, "lora_pct_of_full_model": 0.04702, "lora_pct_of_thinker": 0.061128, "lm_layers": 28, "lora_target_modules": 112, "rank": 8, "alpha": 16, "dropout": 0.05}
+YES=7414 NO=2308 YES_SET=[7414, 9454, 9693, 9834, 14004, 14080] NO_SET=[902, 2152, 2308, 2753, 5664, 8996]
+WEIGHTS fold 1 (train n=374, rescale x1.000000):
+  label=0 arm=conflict  N_y=143 N_ya= 37 w_raw=1.932432 w=1.000000 total=37.000
+  label=0 arm=agreement N_y=143 N_ya=106 w_raw=0.674528 w=1.000000 total=106.000
+  label=1 arm=conflict  N_y=231 N_ya= 83 w_raw=1.391566 w=1.000000 total=83.000
+  label=1 arm=agreement N_y=231 N_ya=148 w_raw=0.780405 w=1.000000 total=148.000
+PROBE fold 1 50 steps: 0.823 s/step -> ~16.7 min this fold
+fold 1 epoch 0 ce 0.6124 wce 0.6124 4.7 min
+fold 1 epoch 1 ce 0.4734 wce 0.4734 7.2 min
+fold 1 epoch 2 ce 0.3108 wce 0.3108 9.7 min
+/workspace/p20/uniform_lora_pitt_control.py:148: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "finished_utc": datetime.datetime.utcnow().isoformat()}, open(ck + ".tmp", "w"), indent=1)
+fold 1 done 10.90 min, 1122 steps, peak 21.01 GB
+WEIGHTS fold 4 (train n=375, rescale x1.000000):
+  label=0 arm=conflict  N_y=149 N_ya= 42 w_raw=1.773810 w=1.000000 total=42.000
+  label=0 arm=agreement N_y=149 N_ya=107 w_raw=0.696262 w=1.000000 total=107.000
+  label=1 arm=conflict  N_y=226 N_ya= 66 w_raw=1.712121 w=1.000000 total=66.000
+  label=1 arm=agreement N_y=226 N_ya=160 w_raw=0.706250 w=1.000000 total=160.000
+PROBE fold 4 50 steps: 0.262 s/step -> ~5.3 min this fold
+fold 4 epoch 0 ce 0.6085 wce 0.6085 12.5 min
+fold 4 epoch 1 ce 0.4738 wce 0.4738 14.2 min
+fold 4 epoch 2 ce 0.4691 wce 0.4691 15.9 min
+fold 4 done 5.18 min, 1125 steps, peak 21.01 GB
+ALLMYFOLDS_DONE [1, 4] 16.1 min
