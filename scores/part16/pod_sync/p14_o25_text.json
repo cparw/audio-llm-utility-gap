@@ -1,0 +1,11 @@
+{
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt": "Based only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "condition": "mdd",
+ "transcripts": "/workspace/p14_text_input.csv",
+ "n": 966,
+ "auc": 0.6077,
+ "median_mass": 0.9986,
+ "script": "/workspace/text_score.py",
+ "date": "2026-09-23"
+}
