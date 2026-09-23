@@ -1,0 +1,100 @@
+{
+ "tag": "nv",
+ "n": 1270,
+ "n_speakers": 107,
+ "single": {
+  "before": {
+   "noise_floor": {
+    "auc_raw": 0.459,
+    "auc_dirfree": 0.541,
+    "lo": 0.4731,
+    "hi": 0.6049,
+    "usable_draws": 2000
+   },
+   "snr": {
+    "auc_raw": 0.4568,
+    "auc_dirfree": 0.5432,
+    "lo": 0.464,
+    "hi": 0.6216,
+    "usable_draws": 2000
+   },
+   "centroid": {
+    "auc_raw": 0.2218,
+    "auc_dirfree": 0.7782,
+    "lo": 0.7109,
+    "hi": 0.8396,
+    "usable_draws": 2000
+   },
+   "rolloff": {
+    "auc_raw": 0.1995,
+    "auc_dirfree": 0.8005,
+    "lo": 0.737,
+    "hi": 0.8574,
+    "usable_draws": 2000
+   },
+   "tilt": {
+    "auc_raw": 0.298,
+    "auc_dirfree": 0.702,
+    "lo": 0.6451,
+    "hi": 0.7552,
+    "usable_draws": 2000
+   }
+  },
+  "after": {
+   "noise_floor": {
+    "auc_raw": 0.5407,
+    "auc_dirfree": 0.5407,
+    "lo": 0.4594,
+    "hi": 0.6191,
+    "usable_draws": 2000
+   },
+   "snr": {
+    "auc_raw": 0.4695,
+    "auc_dirfree": 0.5305,
+    "lo": 0.4498,
+    "hi": 0.608,
+    "usable_draws": 2000
+   },
+   "centroid": {
+    "auc_raw": 0.4397,
+    "auc_dirfree": 0.5603,
+    "lo": 0.5051,
+    "hi": 0.6188,
+    "usable_draws": 2000
+   },
+   "rolloff": {
+    "auc_raw": 0.4062,
+    "auc_dirfree": 0.5938,
+    "lo": 0.5438,
+    "hi": 0.6448,
+    "usable_draws": 2000
+   },
+   "tilt": {
+    "auc_raw": 0.4192,
+    "auc_dirfree": 0.5808,
+    "lo": 0.5369,
+    "hi": 0.6259,
+    "usable_draws": 2000
+   }
+  }
+ },
+ "combined": {
+  "before": {
+   "auc": 0.7977,
+   "lo": 0.7248,
+   "hi": 0.8611,
+   "usable_draws": 2000
+  },
+  "after": {
+   "auc": 0.6025,
+   "lo": 0.5479,
+   "hi": 0.658,
+   "usable_draws": 2000
+  }
+ },
+ "acceptance_test": {
+  "threshold": 0.6,
+  "five_feature_auc_after": 0.6025,
+  "passed": false
+ }
+}

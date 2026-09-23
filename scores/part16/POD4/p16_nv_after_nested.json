@@ -1,0 +1,16 @@
+{
+ "enc": {
+  "auc_nested_oof": 0.892442,
+  "chosen_layers": [
+   27,
+   24,
+   23,
+   27,
+   27
+  ],
+  "n": 1270,
+  "n_speakers": 107,
+  "n_points": 32,
+  "fold_source": "GroupKFold(5) by speaker, csv order (no saved fold file found)"
+ }
+}
