@@ -1,0 +1,297 @@
+{
+ "fold_json_vs_release": {
+  "mac_seed0": {
+   "file": "pitt_groupkfold5_mac_seed0.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed0": {
+   "file": "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed1": {
+   "file": "pitt_groupkfold5_mac_seed1.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed1": {
+   "file": "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed2": {
+   "file": "pitt_groupkfold5_mac_seed2.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed2": {
+   "file": "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed3": {
+   "file": "pitt_groupkfold5_mac_seed3.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed3": {
+   "file": "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed4": {
+   "file": "pitt_groupkfold5_mac_seed4.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed4": {
+   "file": "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_single": {
+   "file": "pitt_groupkfold5_pod.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_single": {
+   "file": "pitt_groupkfold5_mac.csv",
+   "mismatch": 0,
+   "n": 468
+  }
+ },
+ "refit": {
+  "enc_mac_seed/mac_seed0": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    23,
+    26,
+    27,
+    25,
+    27
+   ]
+  },
+  "enc_mac_seed/mac_seed1": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    27,
+    31,
+    27,
+    27,
+    21
+   ]
+  },
+  "enc_mac_seed/mac_seed2": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    21,
+    30,
+    26,
+    27,
+    21
+   ]
+  },
+  "enc_mac_seed/mac_seed3": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    27,
+    27,
+    27,
+    10,
+    27
+   ]
+  },
+  "enc_mac_seed/mac_seed4": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    21,
+    28,
+    24,
+    27,
+    25
+   ]
+  },
+  "enc_pod_seed/pod_seed0": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    27,
+    27,
+    27,
+    27,
+    27
+   ]
+  },
+  "enc_pod_seed/pod_seed1": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    26,
+    27,
+    27,
+    27,
+    27
+   ]
+  },
+  "enc_pod_seed/pod_seed2": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    27,
+    21,
+    27,
+    27,
+    10
+   ]
+  },
+  "enc_pod_seed/pod_seed3": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    22,
+    27,
+    27,
+    27,
+    25
+   ]
+  },
+  "enc_pod_seed/pod_seed4": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    14,
+    25,
+    27,
+    21,
+    27
+   ]
+  },
+  "llm_pod_seed/pod_seed0": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    26,
+    10,
+    28,
+    27,
+    11
+   ]
+  },
+  "llm_pod_seed/pod_seed1": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    11,
+    26,
+    28,
+    19,
+    27
+   ]
+  },
+  "llm_pod_seed/pod_seed2": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    28,
+    27,
+    10,
+    18,
+    11
+   ]
+  },
+  "llm_pod_seed/pod_seed3": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    11,
+    27,
+    26,
+    18,
+    8
+   ]
+  },
+  "llm_pod_seed/pod_seed4": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    27,
+    26,
+    27,
+    10,
+    7
+   ]
+  },
+  "ans_pod_seed/pod_seed0": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    22,
+    13,
+    28,
+    16,
+    22
+   ]
+  },
+  "ans_pod_seed/pod_seed1": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    22,
+    27,
+    22,
+    16,
+    22
+   ]
+  },
+  "ans_pod_seed/pod_seed2": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    21,
+    18,
+    22,
+    27,
+    27
+   ]
+  },
+  "ans_pod_seed/pod_seed3": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    22,
+    1,
+    27,
+    27,
+    1
+   ]
+  },
+  "ans_pod_seed/pod_seed4": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    21,
+    5,
+    27,
+    10,
+    1
+   ]
+  },
+  "proj_pod_single/pod_single": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}
