@@ -1,0 +1,42 @@
+check_fold_file_is_part23	PART23 FT sidecars fold_file sha256 1d57d4624adf4f40	PART24 staged + 10 pod copies sha256 1d57d4624adf4f40; all 10 pod sidecars read 1d57d4624adf4f40	yes
+check_fold_assignment_seed0	fold k test set = PART23 fold k (fold file and PART23 FT_whole_fold{k}_oof.csv)	pod files match fold file: True; PART23 oof sets match fold file: True; per-clip fold column matches: True; sizes [55, 55, 55, 55, 55]	yes
+check_fold_assignment_seed1all	fold k test set = PART23 fold k (fold file and PART23 FT_whole_fold{k}_oof.csv)	pod files match fold file: True; PART23 oof sets match fold file: True; per-clip fold column matches: True; sizes [55, 55, 55, 55, 55]	yes
+check_each_clip_once_seed0	275 clips, each once	per-clip csv rows 275 unique 275 max count 1; pod rows 275 unique 275; set == fold file == manifest == zero-shot: True; pod problems 0	yes
+check_each_clip_once_seed1all	275 clips, each once	per-clip csv rows 275 unique 275 max count 1; pod rows 275 unique 275; set == fold file == manifest == zero-shot: True; pod problems 0	yes
+check_perclip_equals_pod_seed0	per-clip csv copied from the 5 pod oof csvs	275/275 rows identical in p_yes, answer_mass, label, audio_tok, fold, seed	yes
+check_perclip_equals_pod_seed1all	per-clip csv copied from the 5 pod oof csvs	275/275 rows identical in p_yes, answer_mass, label, audio_tok, fold, seed	yes
+check_labels	labels agree across manifest, zero-shot csv, both per-clip csvs; n_positive 66	agree: True; n_positive 66; manifest pid==speaker: True	yes
+seed0_pooled_oof_auc	0.8588879222850515 [0.8049822386544874, 0.9028700329483457] n=275 (summary 0.8589 0.8050 0.9029)	0.8588879222850515 [0.8049822386544874, 0.9028700329483457] n=275 usable_draws=2000	yes
+seed0_ft_minus_zs_whole_paired	0.022292301000435 [-0.0063755012224089355, 0.054672203811101744] n=275 (summary 0.0223 -0.0064 0.0547)	0.022292301000435 [-0.0063755012224089355, 0.054672203811101744] n=275 usable_draws=2000	yes
+seed0_fold0_auc	0.9166666666666667 [0.8266656346749226, 0.9782608695652174] n=55 (summary 0.9167 0.8267 0.9783)	0.9166666666666667 [0.8266656346749226, 0.9782608695652174] n=55 usable_draws=2000	yes
+seed0_fold0_median_answer_mass	0.9938538074493408 n=55 (summary 0.9939)	0.9938538074493408 n=55	yes
+seed0_fold1_auc	0.8624999999999999 [0.7334168118466898, 0.9613035161432995] n=55 (summary 0.8625 0.7334 0.9613)	0.8624999999999999 [0.7334168118466898, 0.9613035161432995] n=55 usable_draws=2000	yes
+seed0_fold1_median_answer_mass	0.9934326112270355 n=55 (summary 0.9934)	0.9934326112270355 n=55	yes
+seed0_fold2_auc	0.8416666666666667 [0.6954583333333333, 0.9555560394889664] n=55 (summary 0.8417 0.6955 0.9556)	0.8416666666666667 [0.6954583333333333, 0.9555560394889664] n=55 usable_draws=2000	yes
+seed0_fold2_median_answer_mass	0.9971539359539747 n=55 (summary 0.9972)	0.9971539359539747 n=55	yes
+seed0_fold3_auc	0.8372093023255813 [0.6955220385674932, 0.9464345238095238] n=55 (summary 0.8372 0.6955 0.9464)	0.8372093023255813 [0.6955220385674932, 0.9464345238095238] n=55 usable_draws=2000	yes
+seed0_fold3_median_answer_mass	0.9979457128793001 n=55 (summary 0.9979)	0.9979457128793001 n=55	yes
+seed0_fold4_auc	0.8585271317829457 [0.7112278973669037, 0.9670594545957917] n=55 (summary 0.8585 0.7112 0.9671)	0.8585271317829457 [0.7112278973669037, 0.9670594545957917] n=55 usable_draws=2000	yes
+seed0_fold4_median_answer_mass	0.997003898024559 n=55 (summary 0.9970)	0.997003898024559 n=55	yes
+ref_zs_whole_auc	0.8365956212846165 [0.7785777395969262, 0.886634568107391] n=275 (summary 0.8366 0.7786 0.8866)	0.8365956212846165 [0.7785777395969262, 0.886634568107391] n=275 usable_draws=2000	yes
+extra_seed1all_pooled_oof_auc	0.8183630564013339 [0.7496418164976183, 0.8757892026693909] n=275 (summary 0.8184 0.7496 0.8758)	0.8183630564013339 [0.7496418164976183, 0.8757892026693909] n=275 usable_draws=2000	yes
+extra_seed1all_ft_minus_zs_whole_paired	-0.01823256488328262 [-0.05185012131535606, 0.013896457721323927] n=275 (summary -0.0182 -0.0519 0.0139)	-0.01823256488328262 [-0.05185012131535606, 0.013896457721323927] n=275 usable_draws=2000	yes
+extra_seed1all_fold0_auc	0.9224806201550387 [0.8333333333333334, 0.9822280701754387] n=55 (summary 0.9225)	0.9224806201550387 [0.8333333333333334, 0.9822280701754387] n=55 usable_draws=2000	yes
+extra_seed1all_fold0_median_answer_mass	0.9945899248123169 n=55 (summary 0.9946)	0.9945899248123169 n=55	yes
+extra_seed1all_fold1_auc	0.8116666666666668 [0.6620168576342357, 0.9287949776401789] n=55 (summary 0.8117)	0.8116666666666668 [0.6620168576342357, 0.9287949776401789] n=55 usable_draws=2000	yes
+extra_seed1all_fold1_median_answer_mass	0.994668036699295 n=55 (summary 0.9947)	0.994668036699295 n=55	yes
+extra_seed1all_fold2_auc	0.8400000000000001 [0.6866487603305786, 0.9686466988296255] n=55 (summary 0.8400)	0.8400000000000001 [0.6866487603305786, 0.9686466988296255] n=55 usable_draws=2000	yes
+extra_seed1all_fold2_median_answer_mass	0.9962901696562767 n=55 (summary 0.9963)	0.9962901696562767 n=55	yes
+extra_seed1all_fold3_auc	0.8420542635658915 [0.7003447530270998, 0.945256191319503] n=55 (summary 0.8421)	0.8420542635658915 [0.7003447530270998, 0.945256191319503] n=55 usable_draws=2000	yes
+extra_seed1all_fold3_median_answer_mass	0.9962337575852871 n=55 (summary 0.9962)	0.9962337575852871 n=55	yes
+extra_seed1all_fold4_auc	0.8352713178294574 [0.6547193877551021, 0.9642896825396825] n=55 (summary 0.8353)	0.8352713178294574 [0.6547193877551021, 0.9642896825396825] n=55 usable_draws=2000	yes
+extra_seed1all_fold4_median_answer_mass	0.9959627240896225 n=55 (summary 0.9960)	0.9959627240896225 n=55	yes
+check_seed_rule	no fold triggered (all seed 0 medians > 0.99, rule < 0.5); seed-rule set = seed 0 set; no seedrule csv built	recomputed medians [0.993854, 0.993433, 0.997154, 0.997946, 0.997004] min 0.993433; triggered []; MASS_CHECK files match exactly and say 0:no_rerun 1:no_rerun 2:no_rerun 3:no_rerun 4:no_rerun: True; seed 1 files on p24-ft pods 0; seedrule csv exists False; sidecar seeds_by_fold all 0	yes
+check_seed1all_pod_sidecars	seed 1 pod sidecars: seed 1, median answer mass as recomputed	match: True	yes
+check_pod_RESULT_fold_auc	pod .RESULT auc_p_yes for all 10 runs	all equal recomputed fold AUC: True	yes
+check_zero_shot_reproduces_0.8366	0.8366 (PART23 sidecar 0.8365956212846165 [0.7785777395969262, 0.886634568107391])	0.8365956212846165 [0.7785777395969262, 0.886634568107391] from p_yes_whole of A2_edaic_whole_zeroshot_perclip.csv sha256 e13f360198811ff3	yes
+check_audio_tok_max	largest audio_tok 22500, 89 clips reach it	max 22500, count 89	yes
+check_window_cut_hashes_equal_part23	cut hashes identical to PART23	10 PART24 pod cut lists + 5 PART23 pod cut lists, distinct sha256 1	yes
+check_part23_fold3_median_mass	PART23 fold 3 median mass 0 (summary; 0.0000 at 4 dp)	1.0713833603404055e-05 = 0.0000 at 4 dp; not exactly 0	yes
+check_paired_interval_includes_0	interval includes 0	[-0.0064, 0.0547]	yes
+ROWS 41 YES 41 NO 0 MAXDIFF 0.000e+00
