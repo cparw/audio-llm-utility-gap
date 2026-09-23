@@ -1,0 +1,65 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   9%|▊         | 209/2447 [00:00<00:01, 1977.05it/s]Loading weights:  17%|█▋        | 407/2447 [00:00<00:01, 1312.25it/s]Loading weights:  23%|██▎       | 551/2447 [00:00<00:01, 1294.00it/s]Loading weights:  28%|██▊       | 687/2447 [00:00<00:01, 1139.83it/s]Loading weights:  34%|███▍      | 829/2447 [00:00<00:01, 1219.10it/s]Loading weights:  39%|███▉      | 956/2447 [00:00<00:01, 1066.82it/s]Loading weights:  44%|████▎     | 1068/2447 [00:00<00:01, 982.63it/s]Loading weights:  48%|████▊     | 1170/2447 [00:01<00:01, 986.29it/s]Loading weights:  52%|█████▏    | 1281/2447 [00:01<00:01, 1019.04it/s]Loading weights:  57%|█████▋    | 1389/2447 [00:01<00:01, 1005.31it/s]Loading weights:  62%|██████▏   | 1525/2447 [00:01<00:00, 1087.33it/s]Loading weights:  68%|██████▊   | 1660/2447 [00:01<00:00, 1160.66it/s]Loading weights:  73%|███████▎  | 1778/2447 [00:01<00:00, 787.43it/s] Loading weights:  84%|████████▍ | 2061/2447 [00:01<00:00, 1228.36it/s]Loading weights:  90%|█████████ | 2213/2447 [00:01<00:00, 1192.78it/s]Loading weights:  96%|█████████▌| 2353/2447 [00:02<00:00, 1184.86it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 1121.02it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Traceback (most recent call last):
+  File "/workspace/p20/p20_eval.py", line 44, in <module>
+    lg = net(**inputs_for(rows[i]["path"])).logits[0, -1]; pr = torch.softmax(lg.float(), -1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 939, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1960, in forward
+    audio_features = self.get_audio_features(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 939, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1784, in get_audio_features
+    audio_outputs = self.audio_tower(
+                    ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 1068, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/output_capturing.py", line 286, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 917, in forward
+    hidden_states = self.proj(self.ln_post(hidden_states))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/p20/p20_eval.py", line 17, in _fp32_forward
+    def _fp32_forward(x): return _orig(x.float()).to(DT)
+                                 ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 must have the same dtype, but got Float and BFloat16

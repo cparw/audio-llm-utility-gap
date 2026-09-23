@@ -1,0 +1,15 @@
+segments 794 speakers 138 to do 138
+10/138 speakers 8s fails 0
+20/138 speakers 14s fails 0
+30/138 speakers 22s fails 0
+40/138 speakers 77s fails 0
+50/138 speakers 93s fails 0
+60/138 speakers 112s fails 0
+70/138 speakers 122s fails 0
+80/138 speakers 131s fails 0
+90/138 speakers 138s fails 0
+100/138 speakers 151s fails 0
+110/138 speakers 178s fails 0
+120/138 speakers 196s fails 0
+130/138 speakers 212s fails 0
+DONE speakers ok 138 fails 0 sha-verified clips 794/794 221s
