@@ -1,0 +1,5 @@
+{
+ "o25": "cd /workspace/pod4 && HF_HOME=/workspace/hf python3 score_zs.py Qwen/Qwen2.5-Omni-7B bf16 man_cut.csv,out/o25_noinv_recording.csv,recording | ...  man_orig.csv,out/o25_orig_recording_rerun.csv,recording | ... man_orig.csv,out/o25_orig_voice.csv,voice  (one invocation per job, see run_o25.sh); then python3 finalize.py <name> (calls analyze.py spec_<name>.json)",
+ "q2a": "cd /workspace/pod4 && HF_HOME=/workspace/hf python3 score_zs.py Qwen/Qwen2-Audio-7B-Instruct fp16 man_cut.csv,out/q2a_noinv_recording.csv,recording | ... man_orig.csv,out/q2a_orig_recording_rerun.csv,recording (see run_q2a.sh); then python3 finalize.py <name>",
+ "q2a_bf16": "cd /workspace/pod4 && HF_HOME=/workspace/hf python3 score_zs.py Qwen/Qwen2-Audio-7B-Instruct bf16 man_orig.csv,out/q2a_orig_recording_rerun_bf16.csv,recording man_cut.csv,out/q2a_noinv_recording_bf16.csv,recording (see run_q2a.sh); then python3 finalize.py <name>"
+}
