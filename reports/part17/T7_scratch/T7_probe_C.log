@@ -1,0 +1,45 @@
+n clips 275  n speakers 275  positives 66
+  enc: (275, 32, 1280) float32
+  proj: (275, 1, 3584) float32
+  llm: (275, 29, 3584) float32
+  ans: (275, 29, 3584) float32
+--- stage enc ---
+  enc repeat 0: AUC 0.5963  layers [24, 24, 8, 25, 8]  (3s)
+  enc repeat 1: AUC 0.5826  layers [21, 1, 19, 2, 25]  (6s)
+  enc repeat 2: AUC 0.5967  layers [25, 8, 25, 2, 16]  (8s)
+  enc repeat 3: AUC 0.5610  layers [2, 19, 8, 25, 25]  (10s)
+  enc repeat 4: AUC 0.6061  layers [24, 19, 25, 19, 28]  (13s)
+  saved enc -> scores/part17/T7_scratch/T7_oof_repeats_C_tfarm_sk161_np1264_openblas.npz
+--- stage proj ---
+  proj repeat 0: AUC 0.5514  layers [0, 0, 0, 0, 0]  (0s)
+  proj repeat 1: AUC 0.5618  layers [0, 0, 0, 0, 0]  (1s)
+  proj repeat 2: AUC 0.5792  layers [0, 0, 0, 0, 0]  (1s)
+  proj repeat 3: AUC 0.5651  layers [0, 0, 0, 0, 0]  (2s)
+  proj repeat 4: AUC 0.5473  layers [0, 0, 0, 0, 0]  (2s)
+  saved proj -> scores/part17/T7_scratch/T7_oof_repeats_C_tfarm_sk161_np1264_openblas.npz
+--- stage llm ---
+  llm repeat 0: AUC 0.6915  layers [15, 15, 28, 17, 16]  (7s)
+  llm repeat 1: AUC 0.6977  layers [23, 14, 15, 28, 28]  (13s)
+  llm repeat 2: AUC 0.6887  layers [15, 17, 14, 15, 28]  (27s)
+  llm repeat 3: AUC 0.7057  layers [14, 14, 16, 28, 14]  (38s)
+  llm repeat 4: AUC 0.7072  layers [14, 23, 28, 28, 23]  (50s)
+  saved llm -> scores/part17/T7_scratch/T7_oof_repeats_C_tfarm_sk161_np1264_openblas.npz
+--- stage ans ---
+  ans repeat 0: AUC 0.7283  layers [28, 19, 27, 28, 28]  (12s)
+  ans repeat 1: AUC 0.7304  layers [28, 18, 20, 18, 27]  (32s)
+  ans repeat 2: AUC 0.7418  layers [28, 28, 28, 26, 19]  (45s)
+  ans repeat 3: AUC 0.7226  layers [27, 17, 21, 27, 20]  (55s)
+  ans repeat 4: AUC 0.7666  layers [28, 27, 27, 28, 28]  (75s)
+  saved ans -> scores/part17/T7_scratch/T7_oof_repeats_C_tfarm_sk161_np1264_openblas.npz
+GATE enc: per_repeat match False  layers match True  max|mean OOF - published| 5.91e-03
+     mine [0.5963, 0.5826, 0.5967, 0.561, 0.6061]
+     pub  [0.5964, 0.5826, 0.5962, 0.5608, 0.606]
+GATE proj: per_repeat match False  layers match True  max|mean OOF - published| 4.30e-03
+     mine [0.5514, 0.5618, 0.5792, 0.5651, 0.5473]
+     pub  [0.551, 0.5618, 0.5795, 0.5653, 0.5474]
+GATE llm: per_repeat match False  layers match False  max|mean OOF - published| 1.03e-01
+     mine [0.6915, 0.6977, 0.6887, 0.7057, 0.7072]
+     pub  [0.6918, 0.7062, 0.6893, 0.7055, 0.7078]
+GATE ans: per_repeat match False  layers match False  max|mean OOF - published| 1.97e-01
+     mine [0.7283, 0.7304, 0.7418, 0.7226, 0.7666]
+     pub  [0.755, 0.7302, 0.7418, 0.7225, 0.7679]
