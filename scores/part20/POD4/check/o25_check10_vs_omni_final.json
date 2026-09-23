@@ -1,0 +1,9 @@
+{
+ "check": "10 original windows re-scored with the recording wording vs omni_final/omni_pitt_zeroshot_scores.csv",
+ "n_within_1e3": 6,
+ "n": 10,
+ "max_abs_diff": 0.015248689597195608,
+ "prompt_identical_all": true,
+ "passes_1e3_bar": false,
+ "note": "misses are exactly one bf16 step (1/16) in the Yes-minus-No logit; full 468 rerun in o25_orig_recording_rerun.csv"
+}

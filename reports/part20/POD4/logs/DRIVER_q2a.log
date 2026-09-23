@@ -1,0 +1,6 @@
+q2a rerun start 12:35:41
+q2a noinv start 12:35:56
+q2a rerun start 12:36:54
+fin q2a rerun FAILED
+q2a bf16 start 12:37:08
+q2a ALL DONE 12:38:19
