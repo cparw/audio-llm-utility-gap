@@ -1,0 +1,11 @@
+balanced fine-tune AUC all: 0.7301 [0.6656, 0.7905] n=468 n_spk=228 file=scores/part20/POD1/balanced_ft_pitt_oof.csv | 0.73 [0.67, 0.79] above 0.5 | beside standard 0.7673 [0.7086, 0.8231]
+balanced fine-tune AUC conflict: 0.4693 [0.3686, 0.5854] n=146 n_spk=100 file=scores/part20/POD1/balanced_ft_pitt_oof.csv | 0.47 [0.37, 0.59] interval includes 0.5 (point below 0.5) | beside standard 0.5189 [0.4151, 0.6300]
+balanced fine-tune AUC agreement: 0.8279 [0.7732, 0.8792] n=322 n_spk=175 file=scores/part20/POD1/balanced_ft_pitt_oof.csv | 0.83 [0.77, 0.88] above 0.5 | beside standard 0.8593 [0.8063, 0.9069]
+PAIRED balanced fine-tune minus standard conflict: -0.0496 [-0.1403, +0.0344] n=146 n_spk=100 file=scores/part20/POD1/balanced_ft_pitt_oof.csv | -0.05 [-0.14, +0.03] interval includes zero
+PAIRED balanced fine-tune minus standard all: -0.0372 [-0.0720, -0.0018] n=468 n_spk=228 file=scores/part20/POD1/balanced_ft_pitt_oof.csv | -0.04 [-0.07, -0.00] interval excludes zero (below 0)
+PAIRED balanced fine-tune minus standard agreement: -0.0314 [-0.0659, +0.0023] n=322 n_spk=175 file=scores/part20/POD1/balanced_ft_pitt_oof.csv | -0.03 [-0.07, +0.00] interval includes zero
+balanced fine-tune AUC all (rule-3 multivariant p_yes): 0.7407 [0.6761, 0.7994] n=468 n_spk=228 | 0.74 [0.68, 0.80] above 0.5
+balanced fine-tune AUC conflict (rule-3 multivariant p_yes): 0.4671 [0.3641, 0.5818] n=146 n_spk=100 | 0.47 [0.36, 0.58] interval includes 0.5 (point below 0.5)
+balanced fine-tune AUC agreement (rule-3 multivariant p_yes): 0.8433 [0.7925, 0.8924] n=322 n_spk=175 | 0.84 [0.79, 0.89] above 0.5
+GAP conflict minus agreement: balanced fine-tune -0.3586 [-0.4671, -0.2461]; standard -0.3404 [-0.4468, -0.2262]; change -0.0182 [-0.1116, +0.0756] interval includes zero
+answer_mass median 0.9988 min 0.0000

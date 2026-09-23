@@ -1,0 +1,28 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   5%|▌         | 125/2447 [00:00<00:01, 1228.83it/s]Loading weights:  10%|█         | 248/2447 [00:00<00:02, 974.65it/s] Loading weights:  14%|█▍        | 349/2447 [00:00<00:02, 905.27it/s]Loading weights:  19%|█▉        | 477/2447 [00:00<00:01, 1028.06it/s]Loading weights:  24%|██▍       | 583/2447 [00:00<00:01, 1029.47it/s]Loading weights:  28%|██▊       | 688/2447 [00:00<00:01, 984.07it/s] Loading weights:  32%|███▏      | 788/2447 [00:00<00:01, 972.51it/s]Loading weights:  37%|███▋      | 917/2447 [00:00<00:01, 1049.56it/s]Loading weights:  42%|████▏     | 1023/2447 [00:01<00:01, 957.68it/s]Loading weights:  46%|████▌     | 1121/2447 [00:01<00:01, 928.08it/s]Loading weights:  50%|████▉     | 1215/2447 [00:01<00:01, 911.62it/s]Loading weights:  54%|█████▍    | 1323/2447 [00:01<00:01, 945.96it/s]Loading weights:  59%|█████▉    | 1450/2447 [00:01<00:00, 1033.36it/s]Loading weights:  64%|██████▎   | 1555/2447 [00:01<00:00, 961.69it/s] Loading weights:  69%|██████▊   | 1681/2447 [00:01<00:00, 1043.55it/s]Loading weights:  76%|███████▌  | 1859/2447 [00:01<00:00, 1242.19it/s]Loading weights:  86%|████████▋ | 2112/2447 [00:01<00:00, 1606.85it/s]Loading weights:  93%|█████████▎| 2277/2447 [00:02<00:00, 1247.71it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 1114.94it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B | 468 clips, 228 speakers | YES 7414 NO 2308 YES_V [9454, 7414, 9693, 9834, 14004, 14080] NO_V [2753, 2308, 2152, 902, 8996, 5664] | weights balanced | folds [3] | proj Linear 4591104
+fold 3 WEIGHT TABLE (train n=375, mean weight 1.000000):
+   label 0 conflict  n= 36 weight=1.972222 total=71.000
+   label 0 agreement n=106 weight=0.669811 total=71.000
+   label 1 conflict  n= 82 weight=1.420732 total=116.500
+   label 1 agreement n=151 weight=0.771523 total=116.500
+fold 3 epoch 0 ce 0.6317 weighted 0.6660 steps 375 2.5 min peak 21.0 GB
+fold 3 epoch 1 ce 0.4412 weighted 0.4453 steps 375 3.6 min peak 21.0 GB
+fold 3 epoch 2 ce 0.2588 weighted 0.2440 steps 375 4.3 min peak 21.0 GB
+/workspace/scores/part20/POD1/balanced_ft_pitt.py:126: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "peak_gb": torch.cuda.max_memory_allocated() / 1e9, "date": datetime.datetime.utcnow().isoformat()},
+fold 3 eval done n_test 93 4.5 min
+PROCESS DONE folds [3] 4.5 min

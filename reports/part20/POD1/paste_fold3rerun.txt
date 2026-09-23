@@ -1,0 +1,11 @@
+balanced fine-tune, fold 3 from lone rerun AUC all: 0.7603 [0.6967, 0.8174] n=468 n_spk=228 file=scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv | 0.76 [0.70, 0.82] above 0.5 | beside standard 0.7673 [0.7086, 0.8231]
+balanced fine-tune, fold 3 from lone rerun AUC conflict: 0.5003 [0.3936, 0.6170] n=146 n_spk=100 file=scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv | 0.50 [0.39, 0.62] interval includes 0.5 (point above 0.5) | beside standard 0.5189 [0.4151, 0.6300]
+balanced fine-tune, fold 3 from lone rerun AUC agreement: 0.8573 [0.8063, 0.9053] n=322 n_spk=175 file=scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv | 0.86 [0.81, 0.91] above 0.5 | beside standard 0.8593 [0.8063, 0.9069]
+PAIRED balanced fine-tune, fold 3 from lone rerun minus standard conflict: -0.0186 [-0.1223, +0.0725] n=146 n_spk=100 file=scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv | -0.02 [-0.12, +0.07] interval includes zero
+PAIRED balanced fine-tune, fold 3 from lone rerun minus standard all: -0.0070 [-0.0428, +0.0313] n=468 n_spk=228 file=scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv | -0.01 [-0.04, +0.03] interval includes zero
+PAIRED balanced fine-tune, fold 3 from lone rerun minus standard agreement: -0.0020 [-0.0345, +0.0310] n=322 n_spk=175 file=scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv | -0.00 [-0.03, +0.03] interval includes zero
+balanced fine-tune, fold 3 from lone rerun AUC all (rule-3 multivariant p_yes): 0.7621 [0.7006, 0.8192] n=468 n_spk=228 | 0.76 [0.70, 0.82] above 0.5
+balanced fine-tune, fold 3 from lone rerun AUC conflict (rule-3 multivariant p_yes): 0.4999 [0.3923, 0.6151] n=146 n_spk=100 | 0.50 [0.39, 0.62] interval includes 0.5 (point below 0.5)
+balanced fine-tune, fold 3 from lone rerun AUC agreement (rule-3 multivariant p_yes): 0.8603 [0.8099, 0.9065] n=322 n_spk=175 | 0.86 [0.81, 0.91] above 0.5
+GAP conflict minus agreement: balanced fine-tune, fold 3 from lone rerun -0.3570 [-0.4649, -0.2459]; standard -0.3404 [-0.4468, -0.2262]; change -0.0166 [-0.1143, +0.0879] interval includes zero
+answer_mass median 0.9991 min 0.9948
