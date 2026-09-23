@@ -1,0 +1,2119 @@
+{
+ "results": [
+  {
+   "dataset": "pitt",
+   "condition": "AD",
+   "plotted": "plotted",
+   "n": 468,
+   "n_speakers": 228,
+   "n_pos": 290,
+   "answer_mw": 0.6577683068578071,
+   "answer_trap": 0.6577683068578071,
+   "lo": 0.6033242994024883,
+   "hi": 0.7125368049704085,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": null,
+    "appearance": [
+     0.6002437137274377,
+     0.71274834039715
+    ]
+   },
+   "json_auc": 0.6578,
+   "master": 0.6578,
+   "master_n": 468,
+   "figure_answer": 0.6578,
+   "mirror_diff": 0.0,
+   "above": 31,
+   "above_4dp": 31,
+   "above_fig": 31,
+   "mean_minus_std": 25,
+   "above_ci_hi": 25,
+   "below": [
+    [
+     2,
+     -0.006
+    ]
+   ],
+   "probe_min": 0.6517241379310345,
+   "probe_min_layer": 2,
+   "probe_median": 0.7597249128244866,
+   "probe_max": 0.808330104610616,
+   "probe_max_layer": 27,
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "zeroshot_sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+   "curve_file": "<local data dir>/release/overnight/curves/omni/pitt_encoder.csv",
+   "curve_col": "auc",
+   "curve_sha256": "fa06f84fd856a1b2fe78069ec5ccbd1a81aa95574fb7817800d09d506a28c685",
+   "stat_file": "<local data dir>/release/omni_final/omni_pitt_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "adresso",
+   "condition": "AD",
+   "plotted": "omitted",
+   "n": 237,
+   "n_speakers": 237,
+   "n_pos": 122,
+   "answer_mw": 0.6150392017106201,
+   "answer_trap": 0.6150392017106201,
+   "lo": 0.5432332651905852,
+   "hi": 0.6889640923339981,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": null,
+    "appearance": [
+     0.5432332651905852,
+     0.6889640923339981
+    ]
+   },
+   "json_auc": 0.615,
+   "master": 0.615,
+   "master_n": 237,
+   "figure_answer": null,
+   "mirror_diff": 0.0,
+   "above": 32,
+   "above_4dp": 32,
+   "above_fig": null,
+   "mean_minus_std": 32,
+   "above_ci_hi": 32,
+   "below": [],
+   "probe_min": 0.7413043478260868,
+   "probe_min_layer": 0,
+   "probe_median": 0.8604062722736991,
+   "probe_max": 0.9029935851746257,
+   "probe_max_layer": 27,
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv",
+   "zeroshot_sha256": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+   "curve_file": "<local data dir>/release/omni_final/omni_adresso_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "ea4724eaf581dd1b4a2894910aea1619dd1ca5c0d8dfaad76291edbbb1711bf8",
+   "stat_file": "<local data dir>/release/omni_final/omni_adresso_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "adress2020",
+   "condition": "AD",
+   "plotted": "omitted",
+   "n": 156,
+   "n_speakers": 156,
+   "n_pos": 78,
+   "answer_mw": 0.6240959894806049,
+   "answer_trap": 0.624095989480605,
+   "lo": 0.5348478618421052,
+   "hi": 0.7148052262172812,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": null,
+    "appearance": [
+     0.5348478618421052,
+     0.7148052262172812
+    ]
+   },
+   "json_auc": 0.6241,
+   "master": 0.6241,
+   "master_n": 156,
+   "figure_answer": null,
+   "mirror_diff": 0.0,
+   "above": 32,
+   "above_4dp": 32,
+   "above_fig": null,
+   "mean_minus_std": 26,
+   "above_ci_hi": 24,
+   "below": [],
+   "probe_min": 0.6502301117685733,
+   "probe_min_layer": 2,
+   "probe_median": 0.7855029585798816,
+   "probe_max": 0.8247863247863249,
+   "probe_max_layer": 25,
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "zeroshot_sha256": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+   "curve_file": "<local data dir>/release/omni_final/omni_adress2020_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "e56202f096162382cdc1a0a5d4451bbb7676e5b3f3649d1b5676b8b9f3b29752",
+   "stat_file": "<local data dir>/release/omni_final/omni_adress2020_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "pcgita",
+   "condition": "PD",
+   "plotted": "plotted",
+   "n": 1100,
+   "n_speakers": 100,
+   "n_pos": 550,
+   "answer_mw": 0.5634776859504133,
+   "answer_trap": 0.5634776859504133,
+   "lo": 0.49306400723091104,
+   "hi": 0.6330859923977538,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": null,
+    "appearance": [
+     0.4946481823263174,
+     0.6320993686730889
+    ]
+   },
+   "json_auc": 0.5635,
+   "master": 0.5635,
+   "master_n": 1100,
+   "figure_answer": 0.5635,
+   "mirror_diff": 1.1102230246251565e-16,
+   "above": 32,
+   "above_4dp": 32,
+   "above_fig": 32,
+   "mean_minus_std": 32,
+   "above_ci_hi": 32,
+   "below": [],
+   "probe_min": 0.871993388429752,
+   "probe_min_layer": 0,
+   "probe_median": 0.9065371900826449,
+   "probe_max": 0.9233619834710745,
+   "probe_max_layer": 6,
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+   "zeroshot_sha256": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+   "curve_file": "<local data dir>/release/overnight/curves/omni/pcgita_encoder.csv",
+   "curve_col": "auc",
+   "curve_sha256": "e1bfa76d3bdc3e2ab621aa571ce469f210c6f0dc04cef3d11113474af11c47a8",
+   "stat_file": "<local data dir>/release/omni_final/omni_pcgita_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "neurovoz",
+   "condition": "PD",
+   "plotted": "omitted",
+   "n": 1270,
+   "n_speakers": 107,
+   "n_pos": 621,
+   "answer_mw": 0.6950814953762633,
+   "answer_trap": 0.6950814953762632,
+   "lo": 0.6355883997757804,
+   "hi": 0.7518676424825447,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": [
+     0.6356826043784033,
+     0.7485387437352095
+    ],
+    "appearance": [
+     0.635719213496192,
+     0.751495943036465
+    ]
+   },
+   "json_auc": 0.6951,
+   "master": 0.6951,
+   "master_n": 1270,
+   "figure_answer": null,
+   "mirror_diff": 0.0,
+   "above": 32,
+   "above_4dp": 32,
+   "above_fig": null,
+   "mean_minus_std": 32,
+   "above_ci_hi": 32,
+   "below": [],
+   "probe_min": 0.8364596592304773,
+   "probe_min_layer": 0,
+   "probe_median": 0.9218474352962194,
+   "probe_max": 0.9335271159147357,
+   "probe_max_layer": 25,
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "zeroshot_sha256": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+   "curve_file": "<local data dir>/release/omni_final/omni_neurovoz_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "126fa3cee99739a5c875ebf2d35fcbe9eebb048db7ac5cb98ad27d046f9b0e55",
+   "stat_file": "<local data dir>/release/omni_final/omni_neurovoz_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "kcl",
+   "condition": "PD",
+   "plotted": "omitted",
+   "n": 37,
+   "n_speakers": 37,
+   "n_pos": 16,
+   "answer_mw": 0.7142857142857143,
+   "answer_trap": 0.7142857142857142,
+   "lo": 0.5209790209790209,
+   "hi": 0.8809565434565434,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": null,
+    "appearance": [
+     0.5209790209790209,
+     0.8809565434565434
+    ]
+   },
+   "json_auc": 0.7143,
+   "master": 0.7143,
+   "master_n": 37,
+   "figure_answer": null,
+   "mirror_diff": 0.0,
+   "above": 32,
+   "above_4dp": 32,
+   "above_fig": null,
+   "mean_minus_std": 15,
+   "above_ci_hi": 0,
+   "below": [],
+   "probe_min": 0.7470238095238095,
+   "probe_min_layer": 0,
+   "probe_median": 0.8020833333333333,
+   "probe_max": 0.8482142857142857,
+   "probe_max_layer": 19,
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv",
+   "zeroshot_sha256": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e",
+   "curve_file": "<local data dir>/release/omni_final/omni_kcl_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "5d728dc086cdf57a1bc4dc21dbeed094cd3ed42977a864a3606ef74a24347944",
+   "stat_file": "<local data dir>/release/omni_final/omni_kcl_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "edaic_full",
+   "condition": "MDD",
+   "plotted": "plotted",
+   "n": 275,
+   "n_speakers": 275,
+   "n_pos": 66,
+   "answer_mw": 0.8284761490503117,
+   "answer_trap": 0.8284761490503117,
+   "lo": 0.7707812285181902,
+   "hi": 0.8826819124751349,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": [
+     0.7707812285181902,
+     0.8826819124751349
+    ],
+    "appearance": [
+     0.7707812285181902,
+     0.8826819124751349
+    ]
+   },
+   "json_auc": 0.8285,
+   "master": 0.8285,
+   "master_n": 275,
+   "figure_answer": 0.8285,
+   "mirror_diff": 0.0,
+   "above": 0,
+   "above_4dp": 0,
+   "above_fig": 0,
+   "mean_minus_std": 0,
+   "above_ci_hi": 0,
+   "below": [
+    [
+     0,
+     -0.2405
+    ],
+    [
+     1,
+     -0.2545
+    ],
+    [
+     2,
+     -0.2021
+    ],
+    [
+     3,
+     -0.2312
+    ],
+    [
+     4,
+     -0.2192
+    ],
+    [
+     5,
+     -0.2203
+    ],
+    [
+     6,
+     -0.2249
+    ],
+    [
+     7,
+     -0.249
+    ],
+    [
+     8,
+     -0.2326
+    ],
+    [
+     9,
+     -0.2123
+    ],
+    [
+     10,
+     -0.1915
+    ],
+    [
+     11,
+     -0.2055
+    ],
+    [
+     12,
+     -0.212
+    ],
+    [
+     13,
+     -0.2015
+    ],
+    [
+     14,
+     -0.2175
+    ],
+    [
+     15,
+     -0.2065
+    ],
+    [
+     16,
+     -0.1841
+    ],
+    [
+     17,
+     -0.1792
+    ],
+    [
+     18,
+     -0.1527
+    ],
+    [
+     19,
+     -0.1389
+    ],
+    [
+     20,
+     -0.1612
+    ],
+    [
+     21,
+     -0.1393
+    ],
+    [
+     22,
+     -0.148
+    ],
+    [
+     23,
+     -0.1558
+    ],
+    [
+     24,
+     -0.1553
+    ],
+    [
+     25,
+     -0.1657
+    ],
+    [
+     26,
+     -0.1932
+    ],
+    [
+     27,
+     -0.2003
+    ],
+    [
+     28,
+     -0.2144
+    ],
+    [
+     29,
+     -0.222
+    ],
+    [
+     30,
+     -0.2601
+    ],
+    [
+     31,
+     -0.2104
+    ]
+   ],
+   "probe_min": 0.5683630564013339,
+   "probe_min_layer": 30,
+   "probe_median": 0.622444541104828,
+   "probe_max": 0.6895751776134552,
+   "probe_max_layer": 19,
+   "zeroshot_file": "<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv",
+   "zeroshot_sha256": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+   "curve_file": "<local data dir>/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "adbbb86b58d2d0bba56c1467a6a9ccd0206c1c1219d4fc69f2116ecc8b53fc3b",
+   "stat_file": "<local data dir>/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "edaic_mid300",
+   "condition": "MDD",
+   "plotted": "variant",
+   "n": 275,
+   "n_speakers": 275,
+   "n_pos": 66,
+   "answer_mw": 0.812164709293896,
+   "answer_trap": 0.812164709293896,
+   "lo": 0.7478914076820238,
+   "hi": 0.8706996855345912,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": [
+     0.7478914076820238,
+     0.8706996855345912
+    ],
+    "appearance": [
+     0.7478914076820238,
+     0.8706996855345912
+    ]
+   },
+   "json_auc": 0.8122,
+   "master": 0.8122,
+   "master_n": 275,
+   "figure_answer": 0.8122,
+   "mirror_diff": 0.0,
+   "above": 0,
+   "above_4dp": 0,
+   "above_fig": 0,
+   "mean_minus_std": 0,
+   "above_ci_hi": 0,
+   "below": [
+    [
+     0,
+     -0.2347
+    ],
+    [
+     1,
+     -0.2459
+    ],
+    [
+     2,
+     -0.2009
+    ],
+    [
+     3,
+     -0.219
+    ],
+    [
+     4,
+     -0.2333
+    ],
+    [
+     5,
+     -0.2279
+    ],
+    [
+     6,
+     -0.2194
+    ],
+    [
+     7,
+     -0.2354
+    ],
+    [
+     8,
+     -0.2363
+    ],
+    [
+     9,
+     -0.2165
+    ],
+    [
+     10,
+     -0.1922
+    ],
+    [
+     11,
+     -0.1984
+    ],
+    [
+     12,
+     -0.194
+    ],
+    [
+     13,
+     -0.1925
+    ],
+    [
+     14,
+     -0.2013
+    ],
+    [
+     15,
+     -0.2037
+    ],
+    [
+     16,
+     -0.1696
+    ],
+    [
+     17,
+     -0.1479
+    ],
+    [
+     18,
+     -0.1414
+    ],
+    [
+     19,
+     -0.1476
+    ],
+    [
+     20,
+     -0.1616
+    ],
+    [
+     21,
+     -0.148
+    ],
+    [
+     22,
+     -0.1282
+    ],
+    [
+     23,
+     -0.1516
+    ],
+    [
+     24,
+     -0.1549
+    ],
+    [
+     25,
+     -0.1506
+    ],
+    [
+     26,
+     -0.2059
+    ],
+    [
+     27,
+     -0.2157
+    ],
+    [
+     28,
+     -0.2104
+    ],
+    [
+     29,
+     -0.2379
+    ],
+    [
+     30,
+     -0.2389
+    ],
+    [
+     31,
+     -0.2312
+    ]
+   ],
+   "probe_min": 0.5662606930549514,
+   "probe_min_layer": 1,
+   "probe_median": 0.6096491228070176,
+   "probe_max": 0.6839205451645644,
+   "probe_max_layer": 22,
+   "zeroshot_file": "<local data dir>/release/edaic_rerun/variants/o25_mid300_zeroshot_scores.csv",
+   "zeroshot_sha256": "4de7f3944fb3d1ea0807074a6d5fefe6e8234bbf2819814ce43279ec9723bd2b",
+   "curve_file": "<local data dir>/release/edaic_rerun/variants/o25_mid300_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "9f22c104ebc280fbcadfb98ed2a52a72152d4119e4cf21c568f8996410e9c782",
+   "stat_file": "<local data dir>/release/edaic_rerun/variants/o25_mid300_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "edaic_mid30",
+   "condition": "MDD",
+   "plotted": "variant",
+   "n": 275,
+   "n_speakers": 275,
+   "n_pos": 66,
+   "answer_mw": 0.720530665506742,
+   "answer_trap": 0.720530665506742,
+   "lo": 0.653114642919395,
+   "hi": 0.7916544301181133,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": [
+     0.653114642919395,
+     0.7916544301181133
+    ],
+    "appearance": [
+     0.653114642919395,
+     0.7916544301181133
+    ]
+   },
+   "json_auc": 0.7205,
+   "master": 0.7205,
+   "master_n": 275,
+   "figure_answer": 0.7205,
+   "mirror_diff": 0.0,
+   "above": 0,
+   "above_4dp": 0,
+   "above_fig": 0,
+   "mean_minus_std": 0,
+   "above_ci_hi": 0,
+   "below": [
+    [
+     0,
+     -0.1211
+    ],
+    [
+     1,
+     -0.0839
+    ],
+    [
+     2,
+     -0.05
+    ],
+    [
+     3,
+     -0.073
+    ],
+    [
+     4,
+     -0.0837
+    ],
+    [
+     5,
+     -0.0879
+    ],
+    [
+     6,
+     -0.1027
+    ],
+    [
+     7,
+     -0.1037
+    ],
+    [
+     8,
+     -0.0937
+    ],
+    [
+     9,
+     -0.1186
+    ],
+    [
+     10,
+     -0.1031
+    ],
+    [
+     11,
+     -0.1331
+    ],
+    [
+     12,
+     -0.1403
+    ],
+    [
+     13,
+     -0.1467
+    ],
+    [
+     14,
+     -0.1358
+    ],
+    [
+     15,
+     -0.1782
+    ],
+    [
+     16,
+     -0.1744
+    ],
+    [
+     17,
+     -0.1687
+    ],
+    [
+     18,
+     -0.1667
+    ],
+    [
+     19,
+     -0.1593
+    ],
+    [
+     20,
+     -0.15
+    ],
+    [
+     21,
+     -0.161
+    ],
+    [
+     22,
+     -0.172
+    ],
+    [
+     23,
+     -0.1938
+    ],
+    [
+     24,
+     -0.1931
+    ],
+    [
+     25,
+     -0.1875
+    ],
+    [
+     26,
+     -0.2008
+    ],
+    [
+     27,
+     -0.189
+    ],
+    [
+     28,
+     -0.1791
+    ],
+    [
+     29,
+     -0.1783
+    ],
+    [
+     30,
+     -0.2009
+    ],
+    [
+     31,
+     -0.1889
+    ]
+   ],
+   "probe_min": 0.5196462229955052,
+   "probe_min_layer": 30,
+   "probe_median": 0.56589821661592,
+   "probe_max": 0.6705089169204002,
+   "probe_max_layer": 2,
+   "zeroshot_file": "<local data dir>/release/edaic_rerun/variants/o25_mid30_zeroshot_scores.csv",
+   "zeroshot_sha256": "54aa019cdcb9508cf5612d0913a06564db2a24912a2c901a1cba2a7cd2bc94ae",
+   "curve_file": "<local data dir>/release/edaic_rerun/variants/o25_mid30_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "df9ae0b8fee704a604b9200794744660472c99a840ca7a9e892de0f9d1cd3b66",
+   "stat_file": "<local data dir>/release/edaic_rerun/variants/o25_mid30_encoder_perlayer.csv"
+  },
+  {
+   "dataset": "edaic_first30",
+   "condition": "MDD",
+   "plotted": "reference",
+   "n": 275,
+   "n_speakers": 275,
+   "n_pos": 66,
+   "answer_mw": 0.662026968247064,
+   "answer_trap": 0.662026968247064,
+   "lo": 0.5831034055337068,
+   "hi": 0.7314586558773856,
+   "usable": 2000,
+   "alt_intervals": {
+    "sorted_num": [
+     0.5831034055337068,
+     0.7314586558773856
+    ],
+    "appearance": [
+     0.5831034055337068,
+     0.7314586558773856
+    ]
+   },
+   "json_auc": 0.662,
+   "master": 0.662,
+   "master_n": 275,
+   "figure_answer": null,
+   "mirror_diff": 0.0,
+   "above": 2,
+   "above_4dp": 2,
+   "above_fig": null,
+   "mean_minus_std": 0,
+   "above_ci_hi": 0,
+   "below": [
+    [
+     2,
+     -0.0072
+    ],
+    [
+     3,
+     -0.0313
+    ],
+    [
+     4,
+     -0.0249
+    ],
+    [
+     5,
+     -0.0017
+    ],
+    [
+     6,
+     -0.0193
+    ],
+    [
+     7,
+     -0.0547
+    ],
+    [
+     8,
+     -0.0372
+    ],
+    [
+     9,
+     -0.0374
+    ],
+    [
+     10,
+     -0.0229
+    ],
+    [
+     11,
+     -0.0662
+    ],
+    [
+     12,
+     -0.0587
+    ],
+    [
+     13,
+     -0.0589
+    ],
+    [
+     14,
+     -0.0684
+    ],
+    [
+     15,
+     -0.0765
+    ],
+    [
+     16,
+     -0.0903
+    ],
+    [
+     17,
+     -0.0887
+    ],
+    [
+     18,
+     -0.09
+    ],
+    [
+     19,
+     -0.1311
+    ],
+    [
+     20,
+     -0.1259
+    ],
+    [
+     21,
+     -0.1224
+    ],
+    [
+     22,
+     -0.1377
+    ],
+    [
+     23,
+     -0.123
+    ],
+    [
+     24,
+     -0.1407
+    ],
+    [
+     25,
+     -0.1178
+    ],
+    [
+     26,
+     -0.1514
+    ],
+    [
+     27,
+     -0.1205
+    ],
+    [
+     28,
+     -0.1477
+    ],
+    [
+     29,
+     -0.1338
+    ],
+    [
+     30,
+     -0.1441
+    ],
+    [
+     31,
+     -0.1806
+    ]
+   ],
+   "probe_min": 0.4814412063215891,
+   "probe_min_layer": 31,
+   "probe_median": 0.5794548354356966,
+   "probe_max": 0.6686240394374365,
+   "probe_max_layer": 1,
+   "zeroshot_file": "<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv",
+   "zeroshot_sha256": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f",
+   "curve_file": "<local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv",
+   "curve_col": "auc_oof",
+   "curve_sha256": "aa45ad8a6a030ed70538b113f9a38d6fa1d810c466c42183a8f0fe0b0bc4dafd",
+   "stat_file": "<local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv"
+  }
+ ],
+ "checks": [
+  {
+   "what": "pitt answer AUC",
+   "original": 0.6578,
+   "mine": 0.6577683068578071,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pitt interval lo",
+   "original": 0.6033,
+   "mine": 0.6033242994024883,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pitt interval hi",
+   "original": 0.7125,
+   "mine": 0.7125368049704085,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pitt layers above",
+   "original": 31,
+   "mine": 31,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pitt mean-std above",
+   "original": 25,
+   "mine": 25,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pitt above CI hi",
+   "original": 25,
+   "mine": 25,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pitt probe min",
+   "original": 0.6517,
+   "mine": 0.6517241379310345,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pitt probe min layer",
+   "original": 2,
+   "mine": 2,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pitt probe median",
+   "original": 0.7597,
+   "mine": 0.7597249128244866,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pitt probe max",
+   "original": 0.8083,
+   "mine": 0.808330104610616,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pitt probe max layer",
+   "original": 27,
+   "mine": 27,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pitt n",
+   "original": 468,
+   "mine": 468,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pitt n_speakers",
+   "original": 228,
+   "mine": 228,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adresso answer AUC",
+   "original": 0.615,
+   "mine": 0.6150392017106201,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adresso interval lo",
+   "original": 0.5432,
+   "mine": 0.5432332651905852,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adresso interval hi",
+   "original": 0.689,
+   "mine": 0.6889640923339981,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adresso layers above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adresso mean-std above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adresso above CI hi",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adresso probe min",
+   "original": 0.7413,
+   "mine": 0.7413043478260868,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adresso probe min layer",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adresso probe median",
+   "original": 0.8604,
+   "mine": 0.8604062722736991,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adresso probe max",
+   "original": 0.903,
+   "mine": 0.9029935851746257,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adresso probe max layer",
+   "original": 27,
+   "mine": 27,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adresso n",
+   "original": 237,
+   "mine": 237,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adresso n_speakers",
+   "original": 237,
+   "mine": 237,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adress2020 answer AUC",
+   "original": 0.6241,
+   "mine": 0.6240959894806049,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adress2020 interval lo",
+   "original": 0.5348,
+   "mine": 0.5348478618421052,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adress2020 interval hi",
+   "original": 0.7148,
+   "mine": 0.7148052262172812,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adress2020 layers above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adress2020 mean-std above",
+   "original": 26,
+   "mine": 26,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adress2020 above CI hi",
+   "original": 24,
+   "mine": 24,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adress2020 probe min",
+   "original": 0.6502,
+   "mine": 0.6502301117685733,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adress2020 probe min layer",
+   "original": 2,
+   "mine": 2,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adress2020 probe median",
+   "original": 0.7855,
+   "mine": 0.7855029585798816,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adress2020 probe max",
+   "original": 0.8248,
+   "mine": 0.8247863247863249,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "adress2020 probe max layer",
+   "original": 25,
+   "mine": 25,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adress2020 n",
+   "original": 156,
+   "mine": 156,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "adress2020 n_speakers",
+   "original": 156,
+   "mine": 156,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pcgita answer AUC",
+   "original": 0.5635,
+   "mine": 0.5634776859504133,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pcgita interval lo",
+   "original": 0.4931,
+   "mine": 0.49306400723091104,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pcgita interval hi",
+   "original": 0.6331,
+   "mine": 0.6330859923977538,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pcgita layers above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pcgita mean-std above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pcgita above CI hi",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pcgita probe min",
+   "original": 0.872,
+   "mine": 0.871993388429752,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pcgita probe min layer",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pcgita probe median",
+   "original": 0.9065,
+   "mine": 0.9065371900826449,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pcgita probe max",
+   "original": 0.9234,
+   "mine": 0.9233619834710745,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "pcgita probe max layer",
+   "original": 6,
+   "mine": 6,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pcgita n",
+   "original": 1100,
+   "mine": 1100,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "pcgita n_speakers",
+   "original": 100,
+   "mine": 100,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "neurovoz answer AUC",
+   "original": 0.6951,
+   "mine": 0.6950814953762633,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "neurovoz interval lo",
+   "original": 0.6356,
+   "mine": 0.6355883997757804,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "neurovoz interval hi",
+   "original": 0.7519,
+   "mine": 0.7518676424825447,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "neurovoz layers above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "neurovoz mean-std above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "neurovoz above CI hi",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "neurovoz probe min",
+   "original": 0.8365,
+   "mine": 0.8364596592304773,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "neurovoz probe min layer",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "neurovoz probe median",
+   "original": 0.9218,
+   "mine": 0.9218474352962194,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "neurovoz probe max",
+   "original": 0.9335,
+   "mine": 0.9335271159147357,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "neurovoz probe max layer",
+   "original": 25,
+   "mine": 25,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "neurovoz n",
+   "original": 1270,
+   "mine": 1270,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "neurovoz n_speakers",
+   "original": 107,
+   "mine": 107,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "kcl answer AUC",
+   "original": 0.7143,
+   "mine": 0.7142857142857143,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "kcl interval lo",
+   "original": 0.521,
+   "mine": 0.5209790209790209,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "kcl interval hi",
+   "original": 0.881,
+   "mine": 0.8809565434565434,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "kcl layers above",
+   "original": 32,
+   "mine": 32,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "kcl mean-std above",
+   "original": 15,
+   "mine": 15,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "kcl above CI hi",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "kcl probe min",
+   "original": 0.747,
+   "mine": 0.7470238095238095,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "kcl probe min layer",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "kcl probe median",
+   "original": 0.8021,
+   "mine": 0.8020833333333333,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "kcl probe max",
+   "original": 0.8482,
+   "mine": 0.8482142857142857,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "kcl probe max layer",
+   "original": 19,
+   "mine": 19,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "kcl n",
+   "original": 37,
+   "mine": 37,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "kcl n_speakers",
+   "original": 37,
+   "mine": 37,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_full answer AUC",
+   "original": 0.8285,
+   "mine": 0.8284761490503117,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_full interval lo",
+   "original": 0.7708,
+   "mine": 0.7707812285181902,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_full interval hi",
+   "original": 0.8827,
+   "mine": 0.8826819124751349,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_full layers above",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_full probe min",
+   "original": 0.5684,
+   "mine": 0.5683630564013339,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_full probe median",
+   "original": 0.6224,
+   "mine": 0.622444541104828,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_full probe max",
+   "original": 0.6896,
+   "mine": 0.6895751776134552,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_full probe max layer",
+   "original": 19,
+   "mine": 19,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_full n",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_full n_speakers",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid300 answer AUC",
+   "original": 0.8122,
+   "mine": 0.812164709293896,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid300 interval lo",
+   "original": 0.7479,
+   "mine": 0.7478914076820238,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid300 interval hi",
+   "original": 0.8707,
+   "mine": 0.8706996855345912,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid300 layers above",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid300 probe max",
+   "original": 0.6839,
+   "mine": 0.6839205451645644,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid300 probe max layer",
+   "original": 22,
+   "mine": 22,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid300 n",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid300 n_speakers",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid30 answer AUC",
+   "original": 0.7205,
+   "mine": 0.720530665506742,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid30 interval lo",
+   "original": 0.6531,
+   "mine": 0.653114642919395,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid30 interval hi",
+   "original": 0.7917,
+   "mine": 0.7916544301181133,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid30 layers above",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid30 probe max",
+   "original": 0.6705,
+   "mine": 0.6705089169204002,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_mid30 probe max layer",
+   "original": 2,
+   "mine": 2,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid30 n",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_mid30 n_speakers",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_first30 answer AUC",
+   "original": 0.662,
+   "mine": 0.662026968247064,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_first30 interval lo",
+   "original": 0.5831,
+   "mine": 0.5831034055337068,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_first30 interval hi",
+   "original": 0.7315,
+   "mine": 0.7314586558773856,
+   "ok": true,
+   "kind": "f"
+  },
+  {
+   "what": "edaic_first30 layers above",
+   "original": 2,
+   "mine": 2,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_first30 mean-std above",
+   "original": 0,
+   "mine": 0,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_first30 n",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  },
+  {
+   "what": "edaic_first30 n_speakers",
+   "original": 275,
+   "mine": 275,
+   "ok": true,
+   "kind": "i"
+  }
+ ],
+ "extra": {
+  "sidecars": {
+   "pitt": "OK",
+   "adresso": "OK",
+   "adress2020": "OK",
+   "pcgita": "OK",
+   "neurovoz": "OK",
+   "kcl": "OK",
+   "edaic_full": "OK",
+   "edaic_mid300": "OK",
+   "edaic_mid30": "OK",
+   "edaic_first30": "OK"
+  },
+  "perclip_counts": {
+   "pitt": 468,
+   "adresso": 237,
+   "adress2020": 156,
+   "pcgita": 1100,
+   "neurovoz": 1270,
+   "kcl": 37,
+   "edaic_full": 275,
+   "edaic_mid300": 275,
+   "edaic_mid30": 275,
+   "edaic_first30": 275
+  },
+  "perclip_value_mismatch": {
+   "pitt": 0,
+   "adresso": 0,
+   "adress2020": 0,
+   "pcgita": 0,
+   "neurovoz": 0,
+   "kcl": 0,
+   "edaic_full": 0,
+   "edaic_mid300": 0,
+   "edaic_mid30": 0,
+   "edaic_first30": 0
+  },
+  "curves_csv_counts": {
+   "pitt": 32,
+   "adresso": 32,
+   "adress2020": 32,
+   "pcgita": 32,
+   "neurovoz": 32,
+   "kcl": 32,
+   "edaic_full": 32,
+   "edaic_mid300": 32,
+   "edaic_mid30": 32,
+   "edaic_first30": 32
+  },
+  "same_clips": {
+   "pitt": [
+    468,
+    468,
+    true
+   ],
+   "adresso": [
+    237,
+    237,
+    true
+   ],
+   "adress2020": [
+    156,
+    156,
+    true
+   ],
+   "pcgita": [
+    1100,
+    1100,
+    true
+   ],
+   "neurovoz": [
+    1270,
+    1270,
+    true
+   ],
+   "kcl": [
+    37,
+    37,
+    true
+   ],
+   "edaic_first30": [
+    275,
+    275,
+    true
+   ],
+   "edaic_full": [
+    "nested_repeats n",
+    null,
+    false
+   ],
+   "edaic_mid300": [
+    "nested_repeats n",
+    null,
+    false
+   ],
+   "edaic_mid30": [
+    "nested_repeats n",
+    null,
+    false
+   ]
+  },
+  "recompute": [
+   {
+    "dataset": "adress2020",
+    "npz": "<local data dir>/release/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+    "matched": false
+   },
+   {
+    "dataset": "pitt",
+    "npz": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+    "matched": true,
+    "max_abs_diff_oof": 0.053409531189461346,
+    "agree4": 0,
+    "above_recomputed": 32,
+    "recomputed_oof": [
+     0.6896551724137931,
+     0.6779930259589306,
+     0.6787872917473847,
+     0.6809569934134057,
+     0.6937621077101899,
+     0.7081170089112747,
+     0.7118752421542038,
+     0.7210189848895777,
+     0.7650910499806277,
+     0.7552305308020147,
+     0.7786904300658659,
+     0.7751646648585819,
+     0.7696822936846184,
+     0.787098024021697,
+     0.7829910887253003,
+     0.7944207671445176,
+     0.7967648198372723,
+     0.7928516079039132,
+     0.7975397132894227,
+     0.7952537776055792,
+     0.7902169701666021,
+     0.8061991476172027,
+     0.7991088725300272,
+     0.8078070515304145,
+     0.8030995738086013,
+     0.8086206896551724,
+     0.8127082526152654,
+     0.8273149941882991,
+     0.8107903913211933,
+     0.7945563734986439,
+     0.7979077876791941,
+     0.8000387446726075
+    ]
+   },
+   {
+    "dataset": "edaic_first30",
+    "npz": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+    "matched": true,
+    "max_abs_diff_oof": 0.08771929824561403,
+    "agree4": 0,
+    "above_recomputed": 0,
+    "recomputed_oof": [
+     0.6386834855734377,
+     0.6309264897781645,
+     0.5974336668116572,
+     0.5854719443236189,
+     0.5845295055821371,
+     0.6357836740611861,
+     0.5950413223140496,
+     0.592431491953023,
+     0.6023633463824851,
+     0.5725677830940988,
+     0.5955487893286936,
+     0.5375525590836595,
+     0.5447295925764826,
+     0.5680005799623025,
+     0.5601710888792228,
+     0.5585761925474844,
+     0.5379875308104973,
+     0.5513991590546614,
+     0.5192837465564738,
+     0.5008699434536755,
+     0.5004349717268377,
+     0.5147890387124837,
+     0.4989125706829056,
+     0.4939828911120777,
+     0.4773814702044367,
+     0.5115992460490069,
+     0.48426852254603453,
+     0.48687835290706105,
+     0.46839205451645644,
+     0.4562128461649993,
+     0.45367551109177906,
+     0.39372190807597507
+    ]
+   }
+  ],
+  "partition_sensitivity": [
+   {
+    "dataset": "pitt",
+    "npz": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+    "n_partitions": 20,
+    "counts": [
+     32,
+     31,
+     29,
+     29,
+     32,
+     31,
+     30,
+     30,
+     28,
+     31,
+     31,
+     31,
+     32,
+     32,
+     32,
+     32,
+     32,
+     29,
+     32,
+     32
+    ],
+    "sd_median": 0.01839198783524365,
+    "max_range": 0.09087562960092987,
+    "layer_min_over_partitions": [
+     0.6365943432777993,
+     0.6268694304533127,
+     0.6348120883378535,
+     0.6369236729949632,
+     0.6685005811700891,
+     0.6685199535063928,
+     0.6677256877179388,
+     0.6943820224719102,
+     0.7203796977915536,
+     0.7118752421542038,
+     0.72644323905463,
+     0.7229949631925611,
+     0.7111972103835723,
+     0.7272181325067804,
+     0.7239442076714452,
+     0.7318481208833786,
+     0.7335528864781092,
+     0.7341534289035258,
+     0.7373304920573421,
+     0.7377179387834173,
+     0.7279930259589307,
+     0.7442076714451763,
+     0.7320612165827198,
+     0.7354901201084851,
+     0.7360712901975979,
+     0.745118171251453,
+     0.7490313831848121,
+     0.7677450600542426,
+     0.751685393258427,
+     0.7398101511042232,
+     0.7470747772181325,
+     0.7340953118946145
+    ]
+   },
+   {
+    "dataset": "edaic_first30",
+    "npz": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+    "n_partitions": 20,
+    "counts": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     2,
+     2,
+     0,
+     0,
+     0,
+     1,
+     4,
+     0
+    ],
+    "sd_median": 0.023471850083280135,
+    "max_range": 0.11584746991445555,
+    "layer_min_over_partitions": [
+     0.6011309264897782,
+     0.6045382050166739,
+     0.577062490938089,
+     0.5539364941278817,
+     0.5656807307525011,
+     0.577787443816152,
+     0.5537190082644629,
+     0.5389299695519791,
+     0.562925909815862,
+     0.5529940553863999,
+     0.5603885747426417,
+     0.5202986805857619,
+     0.5176888502247354,
+     0.5375525590836595,
+     0.5229810062345948,
+     0.5118167319124257,
+     0.5091344062635929,
+     0.5071045382050167,
+     0.5072495287806292,
+     0.48869073510221833,
+     0.4570102943308685,
+     0.4795563288386255,
+     0.4513556618819777,
+     0.46136001159924606,
+     0.4530230535015224,
+     0.48789328693634915,
+     0.47324923879947806,
+     0.4751341162824416,
+     0.4777439466434682,
+     0.4696244744091634,
+     0.4646222995505292,
+     0.4330868493547919
+    ]
+   },
+   {
+    "dataset": "adress2020",
+    "npz": "<local data dir>/release/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+    "n_partitions": 20,
+    "counts": [
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     32,
+     31,
+     32,
+     32,
+     32
+    ],
+    "sd_median": 0.01527074467312203,
+    "max_range": 0.08957922419460873,
+    "layer_min_over_partitions": [
+     0.6329717291255753,
+     0.6155489809335963,
+     0.6296844181459567,
+     0.6467784352399737,
+     0.6513806706114399,
+     0.6293556870479947,
+     0.646285338593031,
+     0.6679815910585142,
+     0.6923076923076923,
+     0.7003616042077581,
+     0.7440828402366864,
+     0.7514792899408284,
+     0.7565746219592373,
+     0.7659434582511505,
+     0.7634779750164365,
+     0.7628205128205128,
+     0.7805719921104537,
+     0.7889546351084813,
+     0.7800788954635108,
+     0.7710387902695595,
+     0.7818869165023011,
+     0.7979947403024326,
+     0.7825443786982249,
+     0.7782708744247205,
+     0.7864891518737672,
+     0.8001314924391848,
+     0.7973372781065089,
+     0.8111439842209073,
+     0.7856673241288626,
+     0.7841880341880342,
+     0.77465483234714,
+     0.757396449704142
+    ]
+   }
+  ],
+  "omni_final_new_files": []
+ },
+ "bootstrap_draws": 2000,
+ "seed": 0,
+ "command": "/usr/local/bin/python3 scripts/part17/verify/T5_verify.py"
+}
