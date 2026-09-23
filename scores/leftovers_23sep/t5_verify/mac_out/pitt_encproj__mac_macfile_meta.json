@@ -1,0 +1,22 @@
+{
+ "npz": "inputs/pitt_encproj.npz",
+ "tag": "pitt_encproj__mac_macfile",
+ "folds": "folds/pitt_groupkfold5_mac.csv",
+ "dtype": "f32",
+ "nproc": 10,
+ "n": 468,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": null,
+  "OPENBLAS_CORETYPE": null
+ },
+ "fold_sizes": [
+  94,
+  94,
+  94,
+  93,
+  93
+ ],
+ "seconds": 3.6
+}

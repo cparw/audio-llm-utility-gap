@@ -1,0 +1,126 @@
+{
+ "src_edaic30": {
+  "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+  "sha256": "996ac37dd4fb24ae0d2563694ea29222d25a215fedd9df92b1ec9beec77aae2f"
+ },
+ "edaic30_encproj": {
+  "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaic30_encproj.npz",
+  "source": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+  "sha256": "e7f5b634748d3e7437e6fd1b2fa3fba904b6ae99e211b4780edd27f9ca57e0b2",
+  "arrays": {
+   "enc": [
+    [
+     275,
+     32,
+     1280
+    ],
+    "float32",
+    "12ecbbdd128e02624db3e031384be57accb70bbaed4422645a5db41a910def59"
+   ],
+   "proj": [
+    [
+     275,
+     1,
+     3584
+    ],
+    "float32",
+    "68cae631693850811918098dc9d8bc3c1f5dc7458673ad7b1425ed9e21d949ca"
+   ],
+   "label": [
+    [
+     275
+    ],
+    "int64",
+    "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+   ],
+   "spk": [
+    [
+     275
+    ],
+    "<U3",
+    "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+   ],
+   "name": [
+    [
+     275
+    ],
+    "<U7",
+    "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   ]
+  }
+ },
+ "edaic30_llm": {
+  "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaic30_llm.npz",
+  "source": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+  "sha256": "fdaf7e19fae9a33ca30d20ed4a38475a45ca370d2502538719383e900569688e",
+  "arrays": {
+   "llm": [
+    [
+     275,
+     29,
+     3584
+    ],
+    "float32",
+    "daa6e9676427388f10233245e3003da850504e9ed36955ca4234133bcfd5413c"
+   ],
+   "label": [
+    [
+     275
+    ],
+    "int64",
+    "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+   ],
+   "spk": [
+    [
+     275
+    ],
+    "<U3",
+    "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+   ],
+   "name": [
+    [
+     275
+    ],
+    "<U7",
+    "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   ]
+  }
+ },
+ "edaic30_ans": {
+  "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaic30_ans.npz",
+  "source": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+  "sha256": "80705fd9930e97140a40b8a28eb401c1dbba51ed948c9bcaf561930832de424e",
+  "arrays": {
+   "ans": [
+    [
+     275,
+     29,
+     3584
+    ],
+    "float32",
+    "6e9174b5c11f9f6904e75834ea3fd45009d0d77cd0dbc41b8a58da6f49f5f097"
+   ],
+   "label": [
+    [
+     275
+    ],
+    "int64",
+    "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+   ],
+   "spk": [
+    [
+     275
+    ],
+    "<U3",
+    "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+   ],
+   "name": [
+    [
+     275
+    ],
+    "<U7",
+    "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   ]
+  }
+ }
+}

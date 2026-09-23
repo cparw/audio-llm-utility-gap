@@ -1,0 +1,52 @@
+{
+ "src_adress2020": {
+  "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+  "sha256": "669e745eae2c98de9db33486f7c6ff1d05627a22c2a6b5992ce7dee8ce3c2501"
+ },
+ "adress2020_encproj": {
+  "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/adress2020_encproj.npz",
+  "source": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+  "sha256": "a92b4ab037ad0899c8d46e6aa82235a5bf0899ff9c6f9360326cbab9e069a40b",
+  "arrays": {
+   "enc": [
+    [
+     156,
+     32,
+     1280
+    ],
+    "float32",
+    "6d0ab6357b3a713380a51a955908e9a2b65efc247b3e30d494713332be8357f7"
+   ],
+   "proj": [
+    [
+     156,
+     1,
+     3584
+    ],
+    "float32",
+    "4c7ad426279fb05a16cf4552f44e58436b5f42dabdbde9fbd7d783a7177d64bb"
+   ],
+   "label": [
+    [
+     156
+    ],
+    "int64",
+    "43e3856be3ac16f960074b62f339ab47b449fca5164647f04258adfe1052fdfa"
+   ],
+   "spk": [
+    [
+     156
+    ],
+    "<U4",
+    "0f2f9011a34cd1958c1ab459e73b562b26118e8d28c5a3c4125d619264e7d6c0"
+   ],
+   "name": [
+    [
+     156
+    ],
+    "<U8",
+    "1f57d590abf1159f7510035e9d98f48d36b95b5e79424a84ef83ca9c6d7fd067"
+   ]
+  }
+ }
+}

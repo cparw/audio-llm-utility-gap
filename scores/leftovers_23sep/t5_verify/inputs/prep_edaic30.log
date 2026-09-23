@@ -1,0 +1,4 @@
+edaic30_encproj {'enc': (275, 32, 1280), 'proj': (275, 1, 3584), 'label': (275,), 'spk': (275,), 'name': (275,)} 16 MB
+edaic30_llm {'llm': (275, 29, 3584), 'label': (275,), 'spk': (275,), 'name': (275,)} 51 MB
+edaic30_ans {'ans': (275, 29, 3584), 'label': (275,), 'spk': (275,), 'name': (275,)} 51 MB
+PREP DONE ['edaic30']

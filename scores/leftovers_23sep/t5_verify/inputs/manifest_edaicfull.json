@@ -1,0 +1,54 @@
+{
+ "src_edaicfull": {
+  "file": "<local data dir>/release_from_mac/edaic_rerun/part17/T7_scratch/shards",
+  "order": "<local data dir>/release/edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv",
+  "order_sha256": "9ec70d6cf53de8933489927f2610ae4abd48bff75646cddde370bc2b0c589d68",
+  "n": 275
+ },
+ "edaicfull_encproj": {
+  "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaicfull_encproj.npz",
+  "source": "<local data dir>/release_from_mac/edaic_rerun/part17/T7_scratch/shards",
+  "sha256": "49a116ccef4d8deffa68064a057693c78bd47f3475a77385b9b3af8be7061d0f",
+  "arrays": {
+   "enc": [
+    [
+     275,
+     32,
+     1280
+    ],
+    "float32",
+    "a9913f3ad5b2d63c24d25851f0faf6616e44be47f1409cf665aa534e7cb3ef8b"
+   ],
+   "proj": [
+    [
+     275,
+     1,
+     3584
+    ],
+    "float32",
+    "bc4b41d637a03445de56e91ce3918c4ad2e0a3486aa15aff01f0ed8023680154"
+   ],
+   "label": [
+    [
+     275
+    ],
+    "int64",
+    "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+   ],
+   "spk": [
+    [
+     275
+    ],
+    "<U3",
+    "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+   ],
+   "name": [
+    [
+     275
+    ],
+    "<U7",
+    "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   ]
+  }
+ }
+}
