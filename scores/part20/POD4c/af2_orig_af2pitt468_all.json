@@ -1,0 +1,52 @@
+{
+ "id": "af2_orig_af2pitt468_all",
+ "what": "AF2 zero-shot AUC, original 468 windows (af2pitt468 file), all (recomputed)",
+ "value": 0.5724,
+ "ci95": [
+  0.5066,
+  0.6424
+ ],
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "usable_draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0) fresh per cell",
+  "unit": "speaker (with replacement)",
+  "percentile": [
+   2.5,
+   97.5
+  ],
+  "paired": false
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "model_id": "nvidia/audio-flamingo-2 (snapshot 3a7f4aea17e72c7367940affea6749069a7095fc) + Qwen/Qwen2.5-3B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "python3 analyze.py af2 work/af2_noinv468.csv",
+ "sources": [
+  {
+   "pod_path": "/workspace/refs/af2_pitt468.csv",
+   "mac_path": "/Volumes/G-Drive Pro/paper work/paper1_local_runs/af2_results/af2_pitt468.csv",
+   "sha256_first_1MB": "f70f37696cd46110933d452037a038253c13c0c1b0ec09a86c06832ba4787e25"
+  },
+  {
+   "pod_path": "/workspace/refs/pitt_conflict_manifest.csv",
+   "mac_path": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256_first_1MB": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ ],
+ "per_clip_csv": "/workspace/scores/part20/POD4c/af2_orig_af2pitt468_all.csv",
+ "two_dp": "0.57",
+ "verdict": "above 0.5",
+ "scoring_command": "cd /workspace && HF_HOME=/workspace/hf /workspace/af2venv/bin/python af2_zs.py cut/score_manifest.csv work/af2_noinv468.csv",
+ "scoring_env": "POD4c H200, venv /workspace/af2venv (--system-site-packages: python 3.12.3, torch 2.8.0+cu128) + transformers 4.46.3 / tokenizers 0.20.3, the same software as the 20 Sep pod run that wrote af2_pitt468.csv; lab AF2Adapter + official NVIDIA af2_code from ~/Desktop/af2_run; AF2_CODE_DIR=/workspace/af2code/af2/af2_code, AF2_CKPT_DIR=nvidia/audio-flamingo-2 snapshot 3a7f4aea; fp32; no cut (AF2 10 s window grid, max 12)",
+ "scoring_script_sha256": "6a55efbcf183d5970da81d4af2ca4ad24079e3c6da2bfc853a3fb0b564fc376e",
+ "scoring_script": "/workspace/af2_zs.py",
+ "date_utc": "2026-09-23T13:03:12Z",
+ "arm": "all",
+ "paper_value_quoted_in_brief": 0.5724,
+ "recomputed_minus_quoted": -0.0,
+ "n_pos": 290,
+ "n_neg": 178
+}

@@ -1,0 +1,69 @@
+{
+ "id": "P20_4b_q3o_diff_orig_samepod_minus_noinv_agreement",
+ "what": "PAIRED Qwen3-Omni zero-shot AUC, original windows re-scored on this pod minus interviewer-free, agreement",
+ "value": -0.0217,
+ "ci95": [
+  -0.0542,
+  0.0097
+ ],
+ "n": 322,
+ "n_speakers": 175,
+ "usable_draws": 2000,
+ "bootstrap": {
+  "draws": 2000,
+  "rng": "numpy.random.default_rng(0) fresh per cell",
+  "unit": "speaker, with replacement",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "paired": true
+ },
+ "auc": "rank formula, scipy.stats.rankdata average ties",
+ "seed": 0,
+ "model_id": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the first answer position over single-token ids of Yes, Yes, yes, yes, YES, YES and No, No, no, no, NO, NO (bare and leading space); bf16",
+ "command": "python3 analyze_noinv.py",
+ "perclip_csv_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/P20_4b_q3o_diff_orig_samepod_minus_noinv_agreement.perclip.csv",
+ "sources": {
+  "samepod": {
+   "pod": "/workspace/scores/part20/POD4b/q3o_pitt_orig468_samepod_zeroshot_scores.csv",
+   "mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/q3o_pitt_orig468_samepod_zeroshot_scores.csv",
+   "sha256_first_1MB": "676b31bc89b095de32f97ba226f05ffa26eb56f709face261b9c76df206c9ddd"
+  },
+  "noinv": {
+   "pod": "/workspace/scores/part20/POD4b/q3o_pitt_noinv_zeroshot_scores.csv",
+   "mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/q3o_pitt_noinv_zeroshot_scores.csv",
+   "sha256_first_1MB": "003641a7ef6493ac0d9ac4cfd9ce8f1bef51e6eaf2a99e642ae15a4a14f74cf0"
+  },
+  "folds": {
+   "pod": "/workspace/p20/pitt_groupkfold5_pod.csv",
+   "mac": "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod.csv",
+   "sha256_first_1MB": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406"
+  },
+  "sets": {
+   "pod": "/workspace/p20/pitt_conflict_manifest.csv",
+   "mac": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256_first_1MB": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ },
+ "scoring": {
+  "noinv": {
+   "command": "cd /workspace/p20 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 nohup python3 score_q3o_noinv.py > score.log 2>&1",
+   "script_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/scripts/score_q3o_noinv.py",
+   "audio": "/workspace/p20/noinv/clips (pitt_noinv_clips.tgz sha256 b995bd9afe8a45b1c08472f7333c5855767d60de23307a7881b5f000c73d8a07; 468/468 wav sha256 checked against manifest.csv)"
+  },
+  "samepod": {
+   "command": "cd /workspace/p20 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 python3 score_orig468.py > score_orig.log 2>&1",
+   "script_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/scripts/score_orig468.py",
+   "audio": "/workspace/p20/orig/segments = /Volumes/G-Drive Pro/DementiaBank/segments (468/468 wav sha256 checked against pitt_noinv_cut/source_segments.sha256)"
+  },
+  "reference_files_note": "the shipped (overnight2/q3o_new) and rerun (part16/pod_sync) p_yes were scored by earlier runs with 5+5 ids (no ' YES' 14080 / ' NO' 5664); this pod's files use 6+6 and keep the 5+5 value in p_yes_ref5 (max per-clip difference 4.2e-08 on the interviewer-free clips)",
+  "pod": "RunPod spkhephddpcaom, NVIDIA H200, runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404, transformers 5.17.0, torch 2.8.0+cu128, librosa 1.0.0, numpy 2.1.2, sdpa attention, bf16, thinker only, first 30 s of each clip"
+ },
+ "created_utc": "2026-09-23T12:43:48Z",
+ "auc_original": 0.822135,
+ "auc_noinv": 0.843856,
+ "sign": "original minus interviewer-free"
+}

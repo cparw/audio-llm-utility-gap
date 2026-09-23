@@ -1,0 +1,43 @@
+{
+ "result": "TF-IDF word logistic regression, out of fold, PC-GITA",
+ "auc": 0.6196,
+ "lo": 0.57,
+ "hi": 0.6681,
+ "usable_draws": 2000,
+ "n": 1100,
+ "n_speakers": 100,
+ "n_positive": 550,
+ "seed": "bootstrap numpy.random.default_rng(0), 2000 draws, speakers with replacement",
+ "model": "TfidfVectorizer() fit inside each training fold + LogisticRegression(C=1, class_weight='balanced', max_iter=5000)",
+ "model_id": "none (no neural model)",
+ "prompt": "none (no prompt; transcript text only)",
+ "folds": "/Users/chaitanyaparwatkar/Desktop/release/folds/pcgita_groupkfold5_mac.csv",
+ "fold_note": "single-split _mac file: sklearn GroupKFold(5) as installed on the Mac; the split that reproduces the eGeMAPS baseline",
+ "transcript_source": "/Users/chaitanyaparwatkar/Desktop/release/part4_text/asr/asr_pcgita.csv",
+ "vocab_size_per_fold": [
+  323,
+  311,
+  325,
+  347,
+  337
+ ],
+ "labels_match_paper_transcript_run": "1100/1100 vs /Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pcgita_text.csv",
+ "pitt_text_equals_conflict_manifest": null,
+ "command": "/usr/local/bin/python3 scripts/a_lang_saliency.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/A_language_saliency",
+ "versions": {
+  "python": "3.10.2",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+ },
+ "sources": [
+  "/Users/chaitanyaparwatkar/Desktop/release/part4_text/asr/asr_pcgita.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/pcgita_groupkfold5_mac.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pcgita_text.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/part4_text/asr/asr_pcgita.csv": "d0f9089a1387f7fe4d2f40f73f4a008be1e0714c3f85fe1f6e93df57eb2af659",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/pcgita_groupkfold5_mac.csv": "a5abf1fb41ba4c6c165cb0eb2348791201edef6720f0d563accf919f6ec6dd29",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pcgita_text.csv": "c40b936aeac7210fb728d8b9919ecba15bc233d8ce2a0d9c06d851e48a407e87"
+ }
+}

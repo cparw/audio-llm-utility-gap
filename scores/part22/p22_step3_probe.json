@@ -1,0 +1,101 @@
+{
+ "step": "PART22 step3 probe",
+ "pid": "305",
+ "default": {
+  "wave_samples": 14400000,
+  "wave_s": 900.0,
+  "input_features_shape": [
+   1,
+   128,
+   30000
+  ],
+  "feature_attention_mask_sum": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548,
+  "fit_in_context": 1,
+  "fe_kwargs": {
+   "sampling_rate": 16000,
+   "padding": "max_length",
+   "return_attention_mask": true,
+   "return_tensors": "pt",
+   "_n_samples_in": 14400000
+  },
+  "p_yes": 0.577617711052789,
+  "answer_mass": 0.9939565360546112,
+  "p_yes_rule": 0.5776175768305111,
+  "answer_mass_rule": 0.9939588308334351,
+  "peak_gpu_gib": 19.538,
+  "model_sec": 1.641
+ },
+ "lifted": {
+  "wave_samples": 14400000,
+  "wave_s": 900.0,
+  "input_features_shape": [
+   1,
+   128,
+   90000
+  ],
+  "feature_attention_mask_sum": 90000,
+  "n_audio_tok": 22500,
+  "seq_len": 22548,
+  "fit_in_context": 1,
+  "fe_kwargs": {
+   "sampling_rate": 16000,
+   "padding": "max_length",
+   "return_attention_mask": true,
+   "return_tensors": "pt",
+   "truncation": false,
+   "_n_samples_in": 14400000
+  },
+  "p_yes": 0.17333602924119174,
+  "answer_mass": 0.9959503561258316,
+  "p_yes_rule": 0.17333608509280538,
+  "answer_mass_rule": 0.9959524422883987,
+  "peak_gpu_gib": 27.63,
+  "model_sec": 2.275
+ },
+ "lifted_call_verbatim": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True, truncation=False)",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "libs": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "python": "3.12.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA H200"
+ },
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "rule_yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004,
+  14080
+ ],
+ "rule_no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  5664,
+  8996
+ ],
+ "command": "python3 /workspace/p22/p22_run.py probe3",
+ "model_ran": true
+}

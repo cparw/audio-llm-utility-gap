@@ -1,0 +1,328 @@
+{
+ "step": "PART22 step2",
+ "results": [
+  {
+   "pid": "305",
+   "src_dur_s": 2847.4001,
+   "win_dur_s": 900.0,
+   "capped": 1,
+   "label": 0,
+   "ref_p_yes_answer": 0.577617711052789,
+   "full": {
+    "wave_samples": 14400000,
+    "wave_s": 900.0,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 30000,
+    "n_audio_tok": 7500,
+    "seq_len": 7548,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 14400000
+    },
+    "p_yes": 0.577617711052789,
+    "answer_mass": 0.9939565360546112,
+    "p_yes_rule": 0.5776175768305111,
+    "answer_mass_rule": 0.9939588308334351,
+    "peak_gpu_gib": 19.538,
+    "model_sec": 1.351
+   },
+   "cut300": {
+    "wave_samples": 4800000,
+    "wave_s": 300.0,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 30000,
+    "n_audio_tok": 7500,
+    "seq_len": 7548,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 4800000
+    },
+    "p_yes": 0.577617711052789,
+    "answer_mass": 0.9939565360546112,
+    "p_yes_rule": 0.5776175768305111,
+    "answer_mass_rule": 0.9939588308334351,
+    "peak_gpu_gib": 19.538,
+    "model_sec": 0.499
+   },
+   "identity": {
+    "input_ids_equal": true,
+    "input_features_equal": true,
+    "feature_attention_mask_equal": true
+   },
+   "p_yes_full_6dp": "0.577618",
+   "p_yes_cut300_6dp": "0.577618",
+   "abs_diff_p_yes": 0.0,
+   "verdict": "TRUNCATION PROVEN"
+  },
+  {
+   "pid": "679",
+   "src_dur_s": 2808.3999,
+   "win_dur_s": 900.0,
+   "capped": 1,
+   "label": 0,
+   "ref_p_yes_answer": 0.2339097854731636,
+   "full": {
+    "wave_samples": 14400000,
+    "wave_s": 900.0,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 30000,
+    "n_audio_tok": 7500,
+    "seq_len": 7548,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 14400000
+    },
+    "p_yes": 0.2339097854731636,
+    "answer_mass": 0.994180828332901,
+    "p_yes_rule": 0.23390990575422416,
+    "answer_mass_rule": 0.9941836297512054,
+    "peak_gpu_gib": 19.538,
+    "model_sec": 0.554
+   },
+   "cut300": {
+    "wave_samples": 4800000,
+    "wave_s": 300.0,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 30000,
+    "n_audio_tok": 7500,
+    "seq_len": 7548,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 4800000
+    },
+    "p_yes": 0.2339097854731636,
+    "answer_mass": 0.994180828332901,
+    "p_yes_rule": 0.23390990575422416,
+    "answer_mass_rule": 0.9941836297512054,
+    "peak_gpu_gib": 19.538,
+    "model_sec": 0.605
+   },
+   "identity": {
+    "input_ids_equal": true,
+    "input_features_equal": true,
+    "feature_attention_mask_equal": true
+   },
+   "p_yes_full_6dp": "0.233910",
+   "p_yes_cut300_6dp": "0.233910",
+   "abs_diff_p_yes": 0.0,
+   "verdict": "TRUNCATION PROVEN"
+  },
+  {
+   "pid": "466",
+   "src_dur_s": 2586.1999,
+   "win_dur_s": 900.0,
+   "capped": 1,
+   "label": 0,
+   "ref_p_yes_answer": 0.706314575488364,
+   "full": {
+    "wave_samples": 14400000,
+    "wave_s": 900.0,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 30000,
+    "n_audio_tok": 7500,
+    "seq_len": 7548,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 14400000
+    },
+    "p_yes": 0.706314575488364,
+    "answer_mass": 0.9940349161624908,
+    "p_yes_rule": 0.7063142919666235,
+    "answer_mass_rule": 0.9940380156040192,
+    "peak_gpu_gib": 19.538,
+    "model_sec": 0.489
+   },
+   "cut300": {
+    "wave_samples": 4800000,
+    "wave_s": 300.0,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 30000,
+    "n_audio_tok": 7500,
+    "seq_len": 7548,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 4800000
+    },
+    "p_yes": 0.706314575488364,
+    "answer_mass": 0.9940349161624908,
+    "p_yes_rule": 0.7063142919666235,
+    "answer_mass_rule": 0.9940380156040192,
+    "peak_gpu_gib": 19.538,
+    "model_sec": 0.74
+   },
+   "identity": {
+    "input_ids_equal": true,
+    "input_features_equal": true,
+    "feature_attention_mask_equal": true
+   },
+   "p_yes_full_6dp": "0.706315",
+   "p_yes_cut300_6dp": "0.706315",
+   "abs_diff_p_yes": 0.0,
+   "verdict": "TRUNCATION PROVEN"
+  },
+  {
+   "pid": "705",
+   "src_dur_s": 198.3,
+   "win_dur_s": 198.3,
+   "capped": 0,
+   "label": 1,
+   "ref_p_yes_answer": 0.9604466103597945,
+   "full": {
+    "wave_samples": 3172800,
+    "wave_s": 198.3,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 19830,
+    "n_audio_tok": 4957,
+    "seq_len": 5005,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 3172800
+    },
+    "p_yes": 0.9604466103597945,
+    "answer_mass": 0.9983506351709366,
+    "p_yes_rule": 0.9604465583812126,
+    "answer_mass_rule": 0.9983520545065403,
+    "peak_gpu_gib": 18.171,
+    "model_sec": 0.514
+   },
+   "cut300": {
+    "wave_samples": 3172800,
+    "wave_s": 198.3,
+    "input_features_shape": [
+     1,
+     128,
+     30000
+    ],
+    "feature_attention_mask_sum": 19830,
+    "n_audio_tok": 4957,
+    "seq_len": 5005,
+    "fit_in_context": 1,
+    "fe_kwargs": {
+     "sampling_rate": 16000,
+     "padding": "max_length",
+     "return_attention_mask": true,
+     "return_tensors": "pt",
+     "_n_samples_in": 3172800
+    },
+    "p_yes": 0.9604466103597945,
+    "answer_mass": 0.9983506351709366,
+    "p_yes_rule": 0.9604465583812126,
+    "answer_mass_rule": 0.9983520545065403,
+    "peak_gpu_gib": 18.171,
+    "model_sec": 0.483
+   },
+   "identity": {
+    "input_ids_equal": true,
+    "input_features_equal": true,
+    "feature_attention_mask_equal": true
+   },
+   "p_yes_full_6dp": "0.960447",
+   "p_yes_cut300_6dp": "0.960447",
+   "abs_diff_p_yes": 0.0,
+   "verdict": "CONTROL: window shorter than 300 s, full and 300 s cut are the same input"
+  }
+ ],
+ "overall_verdict": "TRUNCATION PROVEN",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "dtype": "bfloat16",
+ "libs": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "python": "3.12.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA H200"
+ },
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "rule_yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004,
+  14080
+ ],
+ "rule_no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  5664,
+  8996
+ ],
+ "audio_token_id": 151646,
+ "processor_call_verbatim": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True)",
+ "cut_rule": "x300 = x[:300 * 16000]  (x from librosa.load(path, sr=16000))",
+ "command": "python3 /workspace/p22/p22_run.py step2"
+}

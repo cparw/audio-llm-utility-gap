@@ -1,0 +1,43 @@
+{
+ "result": "TF-IDF word logistic regression, out of fold, NeuroVoz",
+ "auc": 0.5814,
+ "lo": 0.5422,
+ "hi": 0.6206,
+ "usable_draws": 2000,
+ "n": 1270,
+ "n_speakers": 107,
+ "n_positive": 621,
+ "seed": "bootstrap numpy.random.default_rng(0), 2000 draws, speakers with replacement",
+ "model": "TfidfVectorizer() fit inside each training fold + LogisticRegression(C=1, class_weight='balanced', max_iter=5000)",
+ "model_id": "none (no neural model)",
+ "prompt": "none (no prompt; transcript text only)",
+ "folds": "/Users/chaitanyaparwatkar/Desktop/release/folds/neurovoz_groupkfold5_mac.csv",
+ "fold_note": "single-split _mac file: sklearn GroupKFold(5) as installed on the Mac; the split that reproduces the eGeMAPS baseline",
+ "transcript_source": "/Users/chaitanyaparwatkar/Desktop/release/part4_text/asr/asr_neurovoz.csv",
+ "vocab_size_per_fold": [
+  180,
+  224,
+  206,
+  229,
+  226
+ ],
+ "labels_match_paper_transcript_run": "1270/1270 vs /Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_neurovoz_text.csv",
+ "pitt_text_equals_conflict_manifest": null,
+ "command": "/usr/local/bin/python3 scripts/a_lang_saliency.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/A_language_saliency",
+ "versions": {
+  "python": "3.10.2",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+ },
+ "sources": [
+  "/Users/chaitanyaparwatkar/Desktop/release/part4_text/asr/asr_neurovoz.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/neurovoz_groupkfold5_mac.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_neurovoz_text.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/part4_text/asr/asr_neurovoz.csv": "f81db76b4de964a02439c79934fbdcdd79f9e22af390e8096de3288ef13a9fb4",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/neurovoz_groupkfold5_mac.csv": "4306469a61362d3c89b484b4da6ed6274275f9584b96e65d594fb76b98bee67b",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_neurovoz_text.csv": "be09eb18ed8c85ecded362e8c026bef9a4bac4bb6b07a0bad87751f9ba85e501"
+ }
+}

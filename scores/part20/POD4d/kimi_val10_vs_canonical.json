@@ -1,0 +1,41 @@
+{
+ "id": "kimi_val10_vs_canonical",
+ "what": "Validation gate: Kimi-Audio zero-shot p_yes on the first 10 original Pitt windows (canonical file order) vs the canonical paper file, tolerance 1e-3",
+ "verdict": "FAIL",
+ "max_abs_diff_val10": 0.07677609011067055,
+ "n_over_1e3_val10": 9,
+ "all468_max_abs_diff": 0.19969113840431885,
+ "all468_median_abs_diff": 0.010275453507375465,
+ "all468_n_over_1e3": 413,
+ "determinism": "same clip scored twice in one process and again in a separate process: identical to the last printed digit (diag.log, val10 vs orig468 max diff 0.0)",
+ "hidden_state_check": "audio-span mean of each LM layer vs overnight2/kimi/kimi_pitt_states.npz: relative error 0.3-0.5% at layer 0, rising to 1.6-3.0% at layer 27 (cosine 0.99999 at layer 0, 0.9996-0.9999 at layer 27). Most consistent with numeric drift across hardware/kernels growing with depth; the canonical run saved no discrete audio token ids, so token-level identity of the input cannot be checked.",
+ "env": {
+  "gpu": "NVIDIA H200",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.51.3",
+  "flash_attn": "2.8.3.post1 prebuilt wheel",
+  "kimi_snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+  "dtype": "bfloat16"
+ },
+ "model_id": "moonshotai/Kimi-Audio-7B-Instruct",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 10,
+ "n_speakers": 6,
+ "seed": null,
+ "command": "cd /workspace && /opt/kimienv/bin/python /workspace/scores/part20/POD4d/scripts/kimi_zs.py /workspace/scores/part20/POD4d/mf_val10.csv /workspace/scores/part20/POD4d/val10_orig_scores.csv",
+ "sources": [
+  {
+   "path": "/workspace/scores/part20/POD4d/canonical_kimi_pitt_zeroshot_scores.csv",
+   "sha256_first_1MB": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365",
+   "byte_copy_of": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv"
+  },
+  {
+   "path": "/workspace/scores/part20/POD4d/val10_orig_scores.csv",
+   "sha256_first_1MB": "538b45ff9482b1f26ddd917fa93ad499fdea74581ac3fb2d98ed5578fa448700"
+  },
+  {
+   "path": "/workspace/scores/part20/POD4d/kimi_pitt_orig468_pod_scores.csv",
+   "sha256_first_1MB": "e9857d4a8337e56da7e3aed734bdbc2c4889e6ad25707dc642ee26278d6630d3"
+  }
+ ]
+}

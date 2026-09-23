@@ -1,0 +1,233 @@
+{
+ "task": "M7 paired probe minus zero-shot, per dataset, Qwen2.5-Omni",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "seed": 0,
+ "n_boot": 2000,
+ "bootstrap": "speaker resampling with replacement, PAIRED (one speaker draw per replicate, both AUCs inside it), percentile 2.5/97.5, rng reseeded per dataset cell",
+ "auc": "recomputed from per-clip scores with the rank (Mann-Whitney) formula, scipy rankdata ties averaged",
+ "folds": "NOT recomputed - the saved nested out-of-fold predictions in omni_final/omni_<ds>_enc_nested_oof.csv were used as-is (they already carry the saved fold assignment baked into the OOF prediction). No GroupKFold was run.",
+ "shell_command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_gap_per_dataset.py",
+ "datasets": {
+  "pitt": {
+   "probe_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_enc_nested_oof.csv",
+   "zeroshot_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "perclip_out": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_perclip/pitt.csv",
+   "sha256_first1mb": {
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_enc_nested_oof.csv": "6102b824a5883cb59bf3c14186fb233ee1e31030bccc5cd94cb8e0cb290bfed6",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+   },
+   "n": 468,
+   "n_speakers": 228,
+   "n_probe_file": 468,
+   "n_zeroshot_file": 468,
+   "lost_from_probe": 0,
+   "lost_from_zeroshot": 0,
+   "label_mismatches": 0,
+   "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+   "probe_auc": 0.796881,
+   "zeroshot_auc": 0.657768,
+   "paired_diff": 0.139113,
+   "diff_ci": [
+    0.068037,
+    0.208421
+   ],
+   "boot_usable": 2000,
+   "boot_total": 2000,
+   "master_lookup_probe": 0.7706,
+   "master_lookup_zeroshot": 0.6578,
+   "master_lookup_probe_estimator": "five split nested, mean of 5 repeats (part10 re-run)",
+   "index_csv_probe": 0.7969,
+   "index_csv_zeroshot": 0.6578
+  },
+  "adresso": {
+   "probe_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adresso_enc_nested_oof.csv",
+   "zeroshot_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adresso_zeroshot_scores.csv",
+   "perclip_out": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_perclip/adresso.csv",
+   "sha256_first1mb": {
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adresso_enc_nested_oof.csv": "447010a74fe175e03a565ee647ff34a2e6fed447a2e8849defdfd8b5e9e118e5",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adresso_zeroshot_scores.csv": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd"
+   },
+   "n": 237,
+   "n_speakers": 237,
+   "n_probe_file": 237,
+   "n_zeroshot_file": 237,
+   "lost_from_probe": 0,
+   "lost_from_zeroshot": 0,
+   "label_mismatches": 0,
+   "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+   "probe_auc": 0.889879,
+   "zeroshot_auc": 0.615039,
+   "paired_diff": 0.27484,
+   "diff_ci": [
+    0.191997,
+    0.352564
+   ],
+   "boot_usable": 2000,
+   "boot_total": 2000,
+   "master_lookup_probe": 0.8752,
+   "master_lookup_zeroshot": 0.615,
+   "master_lookup_probe_estimator": "five split nested, mean of 5 repeats",
+   "index_csv_probe": 0.8899,
+   "index_csv_zeroshot": 0.615
+  },
+  "adress2020": {
+   "probe_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adress2020_enc_nested_oof.csv",
+   "zeroshot_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "perclip_out": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_perclip/adress2020.csv",
+   "sha256_first1mb": {
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adress2020_enc_nested_oof.csv": "7c26b3f361fc88b3134532c4210c275b4c89248398ffa06e523f137c812c9a9e",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adress2020_zeroshot_scores.csv": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543"
+   },
+   "n": 156,
+   "n_speakers": 156,
+   "n_probe_file": 156,
+   "n_zeroshot_file": 156,
+   "lost_from_probe": 0,
+   "lost_from_zeroshot": 0,
+   "label_mismatches": 0,
+   "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+   "probe_auc": 0.787804,
+   "zeroshot_auc": 0.624096,
+   "paired_diff": 0.163708,
+   "diff_ci": [
+    0.055715,
+    0.269279
+   ],
+   "boot_usable": 2000,
+   "boot_total": 2000,
+   "master_lookup_probe": 0.8043,
+   "master_lookup_zeroshot": 0.6241,
+   "master_lookup_probe_estimator": "five split nested, mean of 5 repeats",
+   "index_csv_probe": 0.7878,
+   "index_csv_zeroshot": 0.6241
+  },
+  "pcgita": {
+   "probe_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pcgita_enc_nested_oof.csv",
+   "zeroshot_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+   "perclip_out": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_perclip/pcgita.csv",
+   "sha256_first1mb": {
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pcgita_enc_nested_oof.csv": "d8413f410f91d92ba278266d5dafe0096beba7bce8b908c22c4419058982c67e",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3"
+   },
+   "n": 1100,
+   "n_speakers": 100,
+   "n_probe_file": 1100,
+   "n_zeroshot_file": 1100,
+   "lost_from_probe": 0,
+   "lost_from_zeroshot": 0,
+   "label_mismatches": 0,
+   "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+   "probe_auc": 0.908864,
+   "zeroshot_auc": 0.563478,
+   "paired_diff": 0.345387,
+   "diff_ci": [
+    0.263632,
+    0.427477
+   ],
+   "boot_usable": 2000,
+   "boot_total": 2000,
+   "master_lookup_probe": 0.8941,
+   "master_lookup_zeroshot": 0.5635,
+   "master_lookup_probe_estimator": "five split nested, mean of 5 repeats",
+   "index_csv_probe": 0.9089,
+   "index_csv_zeroshot": 0.5635
+  },
+  "neurovoz": {
+   "probe_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_enc_nested_oof.csv",
+   "zeroshot_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "perclip_out": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_perclip/neurovoz.csv",
+   "sha256_first1mb": {
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_enc_nested_oof.csv": "1a1c2cac8ee13e34fe89a8ae5fd668dfc648dfc28feb70581ab9670434418e2d",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082"
+   },
+   "n": 1270,
+   "n_speakers": 107,
+   "n_probe_file": 1270,
+   "n_zeroshot_file": 1270,
+   "lost_from_probe": 0,
+   "lost_from_zeroshot": 0,
+   "label_mismatches": 0,
+   "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+   "probe_auc": 0.915973,
+   "zeroshot_auc": 0.695081,
+   "paired_diff": 0.220891,
+   "diff_ci": [
+    0.166028,
+    0.27826
+   ],
+   "boot_usable": 2000,
+   "boot_total": 2000,
+   "master_lookup_probe": 0.9213,
+   "master_lookup_zeroshot": 0.6951,
+   "master_lookup_probe_estimator": "five split nested, mean of 5 repeats",
+   "index_csv_probe": 0.916,
+   "index_csv_zeroshot": 0.6951
+  },
+  "kcl": {
+   "probe_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_enc_nested_oof.csv",
+   "zeroshot_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv",
+   "perclip_out": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_perclip/kcl.csv",
+   "sha256_first1mb": {
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_enc_nested_oof.csv": "d3f6e287eb55faf86a36a4481e7c82a5fef90ee3d5329d0a442fc4a78e86e24a",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e"
+   },
+   "n": 37,
+   "n_speakers": 37,
+   "n_probe_file": 37,
+   "n_zeroshot_file": 37,
+   "lost_from_probe": 0,
+   "lost_from_zeroshot": 0,
+   "label_mismatches": 0,
+   "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+   "probe_auc": 0.776786,
+   "zeroshot_auc": 0.714286,
+   "paired_diff": 0.0625,
+   "diff_ci": [
+    -0.1813,
+    0.290023
+   ],
+   "boot_usable": 2000,
+   "boot_total": 2000,
+   "master_lookup_probe": 0.7506,
+   "master_lookup_zeroshot": 0.7143,
+   "master_lookup_probe_estimator": "five split nested, mean of 5 repeats",
+   "index_csv_probe": 0.7768,
+   "index_csv_zeroshot": 0.7143
+  },
+  "edaic": {
+   "probe_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_enc_nested_oof.csv",
+   "zeroshot_file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_zeroshot_scores.csv",
+   "perclip_out": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_perclip/edaic.csv",
+   "sha256_first1mb": {
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_enc_nested_oof.csv": "e5038ff9582d59e698b01fcc96e579876f696bd1a62dcdcf44d881a8e006a84c",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_zeroshot_scores.csv": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f"
+   },
+   "n": 275,
+   "n_speakers": 275,
+   "n_probe_file": 275,
+   "n_zeroshot_file": 275,
+   "lost_from_probe": 0,
+   "lost_from_zeroshot": 0,
+   "label_mismatches": 0,
+   "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+   "probe_auc": 0.632376,
+   "zeroshot_auc": 0.662027,
+   "paired_diff": -0.029651,
+   "diff_ci": [
+    -0.129103,
+    0.075174
+   ],
+   "boot_usable": 2000,
+   "boot_total": 2000,
+   "master_lookup_probe": 0.5966,
+   "master_lookup_zeroshot": 0.662,
+   "master_lookup_probe_estimator": "five split nested, mean of 5 repeats",
+   "index_csv_probe": 0.6324,
+   "index_csv_zeroshot": 0.662
+  }
+ },
+ "mean_paired_diff_across_datasets": 0.1681,
+ "n_datasets_excluding_zero": 5,
+ "n_datasets": 7,
+ "out_csv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_gap_per_dataset.csv"
+}

@@ -1,0 +1,260 @@
+{
+ "result": "POD5_direction_origrerun_check",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/POD5_direction_origrerun_check.csv",
+ "pod_per_clip_csv": "/workspace/scores/part20/POD5/POD5_direction_origrerun_check.csv",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0), fresh per cell",
+  "unit": "speaker, resampled with replacement",
+  "interval": "percentile 2.5/97.5",
+  "paired": "one speaker draw per replicate for both sides"
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "cells": [
+  {
+   "id": "POD5_dir_kept_minus_removed",
+   "what": "matched control minus after-removal (same held-out-fold pooling), paired, interviewer-free",
+   "value": 0.00197597830298335,
+   "lo": -0.00019175932286339125,
+   "hi": 0.004131382147314008,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_orig_cos",
+   "what": "cos, ORIGINAL states rerun on this pod (paper -0.0109)",
+   "value": -0.010850199372951605,
+   "lo": -0.02335975628031877,
+   "hi": 0.009861571240127714,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_orig_probe",
+   "what": "probe AUC, ORIGINAL states rerun (paper 0.7709)",
+   "value": 0.7709414955443626,
+   "lo": 0.7210235536220739,
+   "hi": 0.8223935786435785,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_orig_after_removal",
+   "what": "after-removal AUC, ORIGINAL states rerun (paper 0.7662)",
+   "value": 0.7660984114684231,
+   "lo": 0.7172719805582709,
+   "hi": 0.8155441826648843,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_orig_kept_minus_removed",
+   "what": "matched control minus after-removal, paired, ORIGINAL states rerun",
+   "value": -0.0010654784967066844,
+   "lo": -0.003116535481821761,
+   "hi": 0.0010131161292023596,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_probe_diff",
+   "what": "probe AUC, paired original(rerun) minus interviewer-free",
+   "value": -0.024835335141418113,
+   "lo": -0.060500047598111846,
+   "hi": 0.012719040844903424,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_after_removal_diff",
+   "what": "after-removal AUC, paired original(rerun) minus interviewer-free",
+   "value": -0.010771018984889635,
+   "lo": -0.04730874060150382,
+   "hi": 0.024329424905399903,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  }
+ ],
+ "command": "python3 direction_pod5.py /root/p20/o25_pitt_states.npz /root/p20/omni25_readout.pt /root/p20/o25_pitt_zeroshot_scores.csv pitt_groupkfold5_mac.csv dir_orig orig ; python3 report_dir_extra.py",
+ "sources": [
+  {
+   "path_pod": "/workspace/p20/work/dir_noinv_perclip.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/dir_noinv_perclip.csv",
+   "sha256_first_1MB": "c609cffa7643d52f70e5dd1f507ec814b5745c10d49db2fa2eff4fb65f0a7243"
+  },
+  {
+   "path_pod": "/workspace/p20/work/dir_orig_perclip.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/dir_orig_perclip.csv",
+   "sha256_first_1MB": "96fff62eb5bc44835d540745bf15c375a60ee0e2fa56ecbd058b0ed0068db400"
+  },
+  {
+   "path_pod": "/workspace/p20/work/dir_orig.json",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/dir_orig.json",
+   "sha256_first_1MB": "a85614fc82c5ec04afd8c1a52fddb486d53586a7d39ac414f69b937b09808f0d"
+  },
+  {
+   "path_pod": "/root/p20/o25_pitt_states.npz",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256_first_1MB": "21d5beb3f6b520e54a418afb1d6ac106c88b7c9ce5b831bb465bf005cf8c46e7"
+  },
+  {
+   "path_pod": "/root/p20/omni25_readout.pt",
+   "path_mac": "",
+   "sha256_first_1MB": "1e576d22334b1cd70cba3abcf1287e7501d90726c35ca0f44a7f6d021cf5d576"
+  },
+  {
+   "path_pod": "/root/p20/ref/readout_direction.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/omni/readout_direction.csv",
+   "sha256_first_1MB": "e1faf42dff8b6e8387e3565ae6b90de11df19b3857960a042706092e27cf9ee4"
+  }
+ ],
+ "created_utc": "2026-09-23T12:49:28Z",
+ "orig_rerun_full": {
+  "tag": "orig",
+  "states": "/root/p20/o25_pitt_states.npz",
+  "readout": "/root/p20/omni25_readout.pt",
+  "zeroshot_csv": "/root/p20/o25_pitt_zeroshot_scores.csv",
+  "fold_file": "/workspace/p20/work/pitt_groupkfold5_mac.csv",
+  "n": 468,
+  "n_speakers": 228,
+  "features": "ans[:, -1, :] final LM stage, first answer position",
+  "norm_verdict": "as_saved",
+  "norm_checks": {
+   "as_saved": {
+    "mean_abs_err_vs_stored_p_yes": 0.0057161658473276235,
+    "r": 0.9967632767938391,
+    "auc": 0.6608678806664083
+   },
+   "rmsnorm_applied": {
+    "mean_abs_err_vs_stored_p_yes": 0.15391683339126616,
+    "r": 0.9817238024312158,
+    "auc": 0.6862650135606354
+   }
+  },
+  "yes_ids": [
+   7414,
+   9454,
+   9693,
+   9834,
+   14004
+  ],
+  "no_ids": [
+   902,
+   2152,
+   2308,
+   2753,
+   8996
+  ],
+  "mean_subset_mass": [
+   9.989419981351915e-06,
+   0.34920271421889687,
+   0.0014577933993185532,
+   4.116451936515885e-06,
+   8.017574848221832e-06,
+   9.237686559789365e-06,
+   0.001509281484991647,
+   3.3830317926140756e-05,
+   0.6477158188942698,
+   4.920055127112514e-05
+  ],
+  "auc_zeroshot_from_csv": 0.6577683068578071,
+  "gate": {
+   "d_weighted": {
+    "proj_auc": 0.6608485083301046,
+    "delta": 0.0030802014722974835,
+    "pass": true
+   },
+   "d_plain": {
+    "proj_auc": 0.6766175900813638,
+    "delta": 0.018849283223556723,
+    "pass": false
+   },
+   "d_top": {
+    "proj_auc": 0.6608872530027121,
+    "delta": 0.0031189461449050437,
+    "pass": true
+   }
+  },
+  "direction_used": "d_weighted",
+  "fallback_note": "",
+  "cosine": [
+   -0.010850199372951605,
+   -0.02335975628031877,
+   0.009861571240127714,
+   2000
+  ],
+  "random_floor_mean_abs_cos": 0.01331419548289437,
+  "random_floor_2.5_97.5": [
+   0.0005065297168842431,
+   0.03723588369858363
+  ],
+  "random_floor_n": 2000,
+  "random_floor_seed": 0,
+  "probe_auc": [
+   0.7709414955443626,
+   0.7210235536220739,
+   0.8223935786435785,
+   2000
+  ],
+  "after_removal_auc": [
+   0.7660984114684231,
+   0.7172719805582709,
+   0.8155441826648843,
+   2000
+  ],
+  "probe_minus_after_removal": [
+   0.0048430840759395855,
+   -0.01053326271280546,
+   0.021023178442650815,
+   2000
+  ],
+  "kept_control_auc": [
+   0.7650329329717164,
+   0.7162860726585986,
+   0.8145979556451206,
+   2000
+  ],
+  "auc_d": [
+   0.6608485083301046,
+   0.6071097684174922,
+   0.7163887676607382,
+   2000
+  ],
+  "per_fold_auc_removed": [
+   0.7922136713444998,
+   0.7956377430061641,
+   0.8539130434782609,
+   0.7652916073968705,
+   0.7632558139534884
+  ],
+  "per_fold_auc_kept": [
+   0.7890448166591217,
+   0.7918444760550024,
+   0.8504347826086956,
+   0.7631578947368421,
+   0.7627906976744186
+  ],
+  "arms": {},
+  "legacy_ids_check": {},
+  "format": "each stat = [point, lo2.5, hi97.5, valid_draws]",
+  "bootstrap": {
+   "draws": 2000,
+   "seed": 0,
+   "unit": "speaker"
+  },
+  "seconds": 69
+ },
+ "random_floor_orig": 0.01331419548289437
+}

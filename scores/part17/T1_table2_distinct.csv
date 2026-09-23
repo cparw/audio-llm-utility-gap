@@ -1,0 +1,41 @@
+model,stream,arm,version,value,lo,hi,n_rows,n_segments,n_spk,n_pos,n_neg,usable_draws,source
+Qwen2.5-Omni,audio,conflict,distinct_483,0.2218,0.1829,0.2632,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv
+Qwen2.5-Omni,audio,agreement,OLD_483rows,0.9482,0.9039,0.9828,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv
+Qwen2.5-Omni,audio,agreement,NEW_311distinct,0.9647,0.9376,0.9857,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv
+Qwen2.5-Omni,audio,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.7429,-0.7869,-0.6944,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv
+Qwen2.5-Omni,audio,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.7264,-0.7786,-0.6655,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv
+Qwen2-Audio,audio,conflict,distinct_483,0.228,0.1816,0.2782,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv
+Qwen2-Audio,audio,agreement,OLD_483rows,0.9478,0.9128,0.9762,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv
+Qwen2-Audio,audio,agreement,NEW_311distinct,0.9608,0.9351,0.9814,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv
+Qwen2-Audio,audio,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.7328,-0.778,-0.6837,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv
+Qwen2-Audio,audio,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.7198,-0.7689,-0.6679,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,audio,conflict,distinct_483,0.3008,0.2454,0.3641,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,audio,agreement,OLD_483rows,0.9638,0.9336,0.9864,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,audio,agreement,NEW_311distinct,0.9727,0.9507,0.9904,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,audio,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.6719,-0.7266,-0.6105,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,audio,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.663,-0.7192,-0.603,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv
+Audio Flamingo 2,audio,conflict,distinct_483,0.5286,0.4512,0.6015,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv
+Audio Flamingo 2,audio,agreement,OLD_483rows,0.6083,0.5126,0.6997,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv
+Audio Flamingo 2,audio,agreement,NEW_311distinct,0.6297,0.5451,0.7087,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv
+Audio Flamingo 2,audio,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.1011,-0.1647,-0.0384,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv
+Audio Flamingo 2,audio,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.0797,-0.1488,-0.0104,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv
+Audio Flamingo 3,audio,conflict,distinct_483,0.4235,0.3606,0.488,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv
+Audio Flamingo 3,audio,agreement,OLD_483rows,0.8095,0.7447,0.8696,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv
+Audio Flamingo 3,audio,agreement,NEW_311distinct,0.8425,0.7963,0.8854,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv
+Audio Flamingo 3,audio,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.419,-0.4878,-0.3461,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv
+Audio Flamingo 3,audio,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.386,-0.4675,-0.3018,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv
+Kimi-Audio,audio,conflict,distinct_483,0.5258,0.4501,0.5977,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv
+Kimi-Audio,audio,agreement,OLD_483rows,0.8744,0.8172,0.9223,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv
+Kimi-Audio,audio,agreement,NEW_311distinct,0.8936,0.8479,0.9329,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv
+Kimi-Audio,audio,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.3678,-0.4394,-0.302,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv
+Kimi-Audio,audio,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.3486,-0.4248,-0.2795,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv
+Qwen2.5-Omni,transcript,conflict,distinct_483,0.1498,0.1131,0.1887,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv
+Qwen2.5-Omni,transcript,agreement,OLD_483rows,0.9596,0.9306,0.9823,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv
+Qwen2.5-Omni,transcript,agreement,NEW_311distinct,0.962,0.9345,0.9822,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv
+Qwen2.5-Omni,transcript,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.8123,-0.8536,-0.7692,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv
+Qwen2.5-Omni,transcript,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.8098,-0.8533,-0.7649,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv
+Qwen2-Audio,transcript,conflict,distinct_483,0.2359,0.1851,0.2886,483,483,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv
+Qwen2-Audio,transcript,agreement,OLD_483rows,0.9081,0.8515,0.9547,483,311,138,205,278,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv
+Qwen2-Audio,transcript,agreement,NEW_311distinct,0.9199,0.8791,0.956,311,311,138,104,207,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv
+Qwen2-Audio,transcript,conflict_minus_agreement(SUPPLEMENTARY),NEW_311distinct,-0.684,-0.7516,-0.6161,794,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv
+Qwen2-Audio,transcript,conflict_minus_agreement(SUPPLEMENTARY),OLD_483rows,-0.6722,-0.7449,-0.5903,966,794,138,,,2000,/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv

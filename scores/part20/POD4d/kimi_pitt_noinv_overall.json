@@ -1,0 +1,27 @@
+{
+ "id": "kimi_pitt_noinv_overall",
+ "what": "Kimi-Audio zero-shot Pitt interviewer-free (PAR-only) overall AUC",
+ "value": 0.5981,
+ "lo": 0.5345,
+ "hi": 0.6617,
+ "n": 468,
+ "n_speakers": 228,
+ "usable_draws": 2000,
+ "bootstrap_draws": 2000,
+ "seed": 0,
+ "bootstrap": "speakers resampled with replacement, fresh numpy.random.default_rng(0) per cell, percentile 2.5/97.5",
+ "auc": "rank formula, scipy.stats.rankdata ties averaged",
+ "score_column": "p_yes",
+ "model_id": "moonshotai/Kimi-Audio-7B-Instruct",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "cd /workspace/scores/part20/POD4d && /opt/kimienv/bin/python scripts/analyze.py /workspace/scores/part20/POD4d/kimi_pitt_noinv468_scores.csv /workspace/scores/part20/POD4d/canonical_kimi_pitt_zeroshot_scores.csv /workspace/scores/part20/POD4d p_yes <this command> canon",
+ "per_clip_csv": "/workspace/scores/part20/POD4d/kimi_pitt_noinv_overall.csv",
+ "sources": [
+  {
+   "path": "/workspace/scores/part20/POD4d/kimi_pitt_noinv468_scores.csv",
+   "sha256_first_1MB": "127b827f8e6d0e6b35aa01aa61e676926959b143ad4b91926ce3aec6d2feb008"
+  }
+ ],
+ "mean_answer_mass": 0.9942231997887357,
+ "min_answer_mass": 0.9761765897274017
+}

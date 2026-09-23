@@ -1,0 +1,205 @@
+{
+ "result": "POD5_sft_noinv",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/POD5_sft_noinv.csv",
+ "pod_per_clip_csv": "/workspace/scores/part20/POD5/POD5_sft_noinv.csv",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0), fresh per cell",
+  "unit": "speaker, resampled with replacement",
+  "interval": "percentile 2.5/97.5",
+  "paired": "one speaker draw per replicate for both sides"
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "cells": [
+  {
+   "id": "POD5_sft_overall",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, interviewer-free, overall",
+   "value": 0.7911662146454862,
+   "lo": 0.7403697144297959,
+   "hi": 0.842335260712877,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_sft_paper_overall",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paper 468 windows, overall",
+   "value": 0.7672801239829523,
+   "lo": 0.7086163432415024,
+   "hi": 0.8231036112107747,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_sft_diff_overall",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paired paper minus interviewer-free, overall",
+   "value": -0.023886090662533888,
+   "lo": -0.07442841793329656,
+   "hi": 0.026999319279835985,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_sft_conflict",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, interviewer-free, conflict",
+   "value": 0.563916391639164,
+   "lo": 0.460867426831848,
+   "hi": 0.6685052549657512,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_sft_paper_conflict",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paper 468 windows, conflict",
+   "value": 0.5189218921892189,
+   "lo": 0.41506175011633817,
+   "hi": 0.6300319602272727,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_sft_diff_conflict",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paired paper minus interviewer-free, conflict",
+   "value": -0.04499449944994505,
+   "lo": -0.13447872280780437,
+   "hi": 0.055025862068965425,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_sft_agreement",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, interviewer-free, agreement",
+   "value": 0.8812507459124,
+   "lo": 0.8363008387767413,
+   "hi": 0.9193046979786654,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_sft_paper_agreement",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paper 468 windows, agreement",
+   "value": 0.8593109758523292,
+   "lo": 0.8062665114307612,
+   "hi": 0.9069469899808266,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_sft_diff_agreement",
+   "what": "Qwen2.5-Omni projector fine-tune (sft_projector.py recipe), out of fold, pitt_groupkfold5_pod.csv, paired paper minus interviewer-free, agreement",
+   "value": -0.021939770060070862,
+   "lo": -0.0743384470140442,
+   "hi": 0.030666180837171427,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_sft_rulepyes_overall",
+   "what": "projector fine-tune, interviewer-free, overall, part20-rule p_yes (12 single-token variants, full softmax) instead of the recipe's 2-logit p_yes",
+   "value": 0.788221619527315,
+   "lo": 0.7357295797906801,
+   "hi": 0.8393009822598224,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  }
+ ],
+ "command": "OMP_NUM_THREADS=4 python3 sft_p20.py pod_manifest_noinv.csv omnisft_noinv_pitt pitt_groupkfold5_pod.csv",
+ "sources": [
+  {
+   "path_pod": "/workspace/p20/work/omnisft_noinv_pitt_oof.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/omnisft_noinv_pitt_oof.csv",
+   "sha256_first_1MB": "801e9171c131292c8cd51f723cfe0b47ff438255123243e15eb2cf78e07640dc"
+  },
+  {
+   "path_pod": "/workspace/p20/work/omnisft_noinv_pitt_sft.json",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/omnisft_noinv_pitt_sft.json",
+   "sha256_first_1MB": "35b93e6ac2a20223f755af20a42a7c8a38ce3b3f312852a3cdee2b313c748569"
+  },
+  {
+   "path_pod": "/root/p20/ref/omnisft_pitt_oof.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omnisft_pitt_oof.csv",
+   "sha256_first_1MB": "fd715b2a5ec64118aa2e1a7d9b3e9c20b928b97fac67680b285e036d1c1550d2"
+  },
+  {
+   "path_pod": "/workspace/p20/work/pitt_groupkfold5_pod.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/pitt_groupkfold5_pod.csv",
+   "sha256_first_1MB": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406"
+  },
+  {
+   "path_pod": "/root/p20/scripts/pod_manifest_noinv.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/pitt_noinv_cut/manifest.csv (clips) + pitt_conflict_manifest.csv (set)",
+   "sha256_first_1MB": "b7d1c53c540b0535c966cc7c6cefffc98af4fa2c6066a2ef64b9008a2f25df22"
+  }
+ ],
+ "created_utc": "2026-09-23T13:00:58Z",
+ "sft_json": {
+  "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+  "clip_list": "/root/p20/scripts/pod_manifest_noinv.csv",
+  "fold_file": "/workspace/p20/work/pitt_groupkfold5_pod.csv",
+  "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+  "n": 468,
+  "n_speakers": 228,
+  "epochs": 3,
+  "lr": 0.0001,
+  "trained": "projector only (thinker.audio_tower.proj)",
+  "p_yes": "recipe: softmax over the ' Yes' and ' No' logits",
+  "yes_id": 7414,
+  "no_id": 2308,
+  "rule_ids": [
+   [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004,
+    14080
+   ],
+   [
+    902,
+    2152,
+    2308,
+    2753,
+    5664,
+    8996
+   ]
+  ],
+  "losses": {
+   "0_0": 0.5837714723386069,
+   "0_1": 0.2821007497075766,
+   "0_2": 0.10977438386009239,
+   "1_0": 0.6093486696282492,
+   "1_1": 0.3588719041370612,
+   "1_2": 0.13435095739687847,
+   "2_0": 0.6124285363597187,
+   "2_1": 0.3398056280883876,
+   "2_2": 0.12240085444963453,
+   "3_0": 0.6130068723062674,
+   "3_1": 0.33044616419821976,
+   "3_2": 0.18624961660491923,
+   "4_0": 0.6091731236875058,
+   "4_1": 0.3276369521742066,
+   "4_2": 0.1398046007833133
+  },
+  "minutes": 19.5,
+  "date": "2026-09-23"
+ },
+ "paper_sft_json_auc": {
+  "overall": 0.7673,
+  "conflict": 0.5189,
+  "agreement": 0.8593
+ }
+}

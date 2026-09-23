@@ -1,0 +1,487 @@
+{
+ "result": "POD5_direction_noinv",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/POD5_direction_noinv.csv",
+ "pod_per_clip_csv": "/workspace/scores/part20/POD5/POD5_direction_noinv.csv",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0), fresh per cell",
+  "unit": "speaker, resampled with replacement",
+  "interval": "percentile 2.5/97.5",
+  "paired": "one speaker draw per replicate for both sides"
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "cells": [
+  {
+   "id": "POD5_dir_cos",
+   "what": "cos(probe direction, mass-weighted Yes-minus-No unembedding), answer state, interviewer-free (paper -0.0109)",
+   "value": 0.006712268070367601,
+   "lo": -0.012195697468436571,
+   "hi": 0.02121298579837009,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_probe",
+   "what": "answer-state final-stage probe AUC, Mac split, interviewer-free (paper 0.7709)",
+   "value": 0.7957768306857808,
+   "lo": 0.7482554923989846,
+   "hi": 0.8407891303519927,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_after_removal",
+   "what": "probe AUC after removing the readout direction, held-out-fold standardised, interviewer-free (paper 0.7662)",
+   "value": 0.7768694304533127,
+   "lo": 0.7297437600970642,
+   "hi": 0.822664119917679,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_probe_minus_removed",
+   "what": "probe AUC minus after-removal AUC, paired, interviewer-free",
+   "value": 0.018907400232468063,
+   "lo": 0.0034713807032957403,
+   "hi": 0.03414797090409462,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_kept_control",
+   "what": "matched control: same pooling with d kept, interviewer-free",
+   "value": 0.778845408756296,
+   "lo": 0.7319830980337602,
+   "hi": 0.8243879391878361,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_dir_probe_conflict",
+   "what": "probe AUC, answer state, interviewer-free, conflict arm (full fit restricted to the arm)",
+   "value": 0.5977997799779978,
+   "lo": 0.48668689698101464,
+   "hi": 0.7050000672689066,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_dir_after_removal_conflict",
+   "what": "after_removal AUC, answer state, interviewer-free, conflict arm (full fit restricted to the arm)",
+   "value": 0.572937293729373,
+   "lo": 0.46840722276419994,
+   "hi": 0.6794209047255265,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_dir_probe_agreement",
+   "what": "probe AUC, answer state, interviewer-free, agreement arm (full fit restricted to the arm)",
+   "value": 0.8718621951704658,
+   "lo": 0.8286822215588363,
+   "hi": 0.9121406479816963,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_dir_after_removal_agreement",
+   "what": "after_removal AUC, answer state, interviewer-free, agreement arm (full fit restricted to the arm)",
+   "value": 0.8544774635000199,
+   "lo": 0.8083851543145277,
+   "hi": 0.8977039364168571,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  }
+ ],
+ "command": "python3 direction_pod5.py o25noinv_pitt_states.npz o25noinv_pitt_readout.pt o25noinv_pitt_zeroshot_scores.csv pitt_groupkfold5_mac.csv dir_noinv noinv",
+ "sources": [
+  {
+   "path_pod": "/workspace/p20/work/dir_noinv.json",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/dir_noinv.json",
+   "sha256_first_1MB": "f162c12b6e921b881309f71ae37cdaf0c90737565921260367ae0d4d67efcb0c"
+  },
+  {
+   "path_pod": "/workspace/p20/work/dir_noinv_perclip.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/dir_noinv_perclip.csv",
+   "sha256_first_1MB": "c609cffa7643d52f70e5dd1f507ec814b5745c10d49db2fa2eff4fb65f0a7243"
+  },
+  {
+   "path_pod": "/workspace/p20/work/o25noinv_pitt_states.npz",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/o25noinv_pitt_states.npz",
+   "sha256_first_1MB": "3a63386c7383a67e08a5c2c59b7dd52313cf2896749de91a868dc849cbeec2d7"
+  },
+  {
+   "path_pod": "/workspace/p20/work/o25noinv_pitt_readout.pt",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/o25noinv_pitt_readout.pt",
+   "sha256_first_1MB": "7f9787ba24a8150bb7e0522cb0a9dfaf379a24299556807a34b2e190b3d7f43c"
+  },
+  {
+   "path_pod": "/root/p20/ref/readout_direction.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/omni/readout_direction.csv",
+   "sha256_first_1MB": "e1faf42dff8b6e8387e3565ae6b90de11df19b3857960a042706092e27cf9ee4"
+  },
+  {
+   "path_pod": "/workspace/p20/work/pitt_groupkfold5_mac.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/pitt_groupkfold5_mac.csv",
+   "sha256_first_1MB": "b6e2416288fd59208dc7efbac643509ba20c46561e73ec3670f89ca48e7111c9"
+  },
+  {
+   "path_pod": "/workspace/p20/work/dir_orig.json",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/dir_orig.json",
+   "sha256_first_1MB": "a85614fc82c5ec04afd8c1a52fddb486d53586a7d39ac414f69b937b09808f0d"
+  }
+ ],
+ "created_utc": "2026-09-23T12:48:29Z",
+ "paper_row": {
+  "direction_used": "d_weighted",
+  "n": 468,
+  "n_speakers": 228,
+  "cosine": -0.0109,
+  "cosine_random": 0.0135,
+  "auc_probe": 0.7709,
+  "auc_d": 0.6608,
+  "auc_probe_without_d": 0.7662,
+  "ci_lo": -0.0235,
+  "ci_hi": 0.0097,
+  "delta_plain": 0.0188,
+  "delta_top": 0.0031,
+  "delta_weighted": 0.0031
+ },
+ "noinv_full": {
+  "tag": "noinv",
+  "states": "/workspace/p20/work/o25noinv_pitt_states.npz",
+  "readout": "/workspace/p20/work/o25noinv_pitt_readout.pt",
+  "zeroshot_csv": "/workspace/p20/work/o25noinv_pitt_zeroshot_scores.csv",
+  "fold_file": "/workspace/p20/work/pitt_groupkfold5_mac.csv",
+  "n": 468,
+  "n_speakers": 228,
+  "features": "ans[:, -1, :] final LM stage, first answer position",
+  "norm_verdict": "as_saved",
+  "norm_checks": {
+   "as_saved": {
+    "mean_abs_err_vs_stored_p_yes": 0.006267230081087843,
+    "r": 0.9975638840935512,
+    "auc": 0.7281480046493607
+   },
+   "rmsnorm_applied": {
+    "mean_abs_err_vs_stored_p_yes": 0.16651209790121224,
+    "r": 0.9796788915751931,
+    "auc": 0.7447307245253778
+   }
+  },
+  "yes_ids": [
+   7414,
+   9454,
+   9693,
+   9834,
+   14004,
+   14080
+  ],
+  "no_ids": [
+   902,
+   2152,
+   2308,
+   2753,
+   5664,
+   8996
+  ],
+  "mean_subset_mass": [
+   1.0138858539787105e-05,
+   0.37302795486232804,
+   0.0015189843055789698,
+   4.4818493127932635e-06,
+   8.30853464528656e-06,
+   3.602217107712398e-07,
+   9.251657212402897e-06,
+   0.0014646897467892929,
+   3.093582678897366e-05,
+   0.6238772184285771,
+   7.350828118304197e-07,
+   4.694062570448436e-05
+  ],
+  "auc_zeroshot_from_csv": 0.7231499418829911,
+  "gate": {
+   "d_weighted": {
+    "proj_auc": 0.7281673769856645,
+    "delta": 0.005017435102673384,
+    "pass": true
+   },
+   "d_plain": {
+    "proj_auc": 0.738221619527315,
+    "delta": 0.015071677644323933,
+    "pass": false
+   },
+   "d_top": {
+    "proj_auc": 0.7282254939945757,
+    "delta": 0.005075552111584614,
+    "pass": true
+   }
+  },
+  "direction_used": "d_weighted",
+  "fallback_note": "",
+  "cosine": [
+   0.006712268070367601,
+   -0.012195697468436571,
+   0.02121298579837009,
+   2000
+  ],
+  "random_floor_mean_abs_cos": 0.013314152844789961,
+  "random_floor_2.5_97.5": [
+   0.0005057471794206742,
+   0.03723469918785012
+  ],
+  "random_floor_n": 2000,
+  "random_floor_seed": 0,
+  "probe_auc": [
+   0.7957768306857808,
+   0.7482554923989846,
+   0.8407891303519927,
+   2000
+  ],
+  "after_removal_auc": [
+   0.7768694304533127,
+   0.7297437600970642,
+   0.822664119917679,
+   2000
+  ],
+  "probe_minus_after_removal": [
+   0.018907400232468063,
+   0.0034713807032957403,
+   0.03414797090409462,
+   2000
+  ],
+  "kept_control_auc": [
+   0.778845408756296,
+   0.7319830980337602,
+   0.8243879391878361,
+   2000
+  ],
+  "auc_d": [
+   0.7281673769856645,
+   0.6728116144309968,
+   0.7807820211515863,
+   2000
+  ],
+  "per_fold_auc_removed": [
+   0.7600724309642373,
+   0.8160265528686581,
+   0.8608695652173913,
+   0.7880512091038406,
+   0.7944186046511628
+  ],
+  "per_fold_auc_kept": [
+   0.7627885921231327,
+   0.8174490279753438,
+   0.8602898550724638,
+   0.7901849217638691,
+   0.7948837209302325
+  ],
+  "arms": {
+   "conflict": {
+    "probe": [
+     0.5977997799779978,
+     0.48668689698101464,
+     0.7050000672689066,
+     2000
+    ],
+    "after_removal": [
+     0.572937293729373,
+     0.46840722276419994,
+     0.6794209047255265,
+     2000
+    ]
+   },
+   "agreement": {
+    "probe": [
+     0.8718621951704658,
+     0.8286822215588363,
+     0.9121406479816963,
+     2000
+    ],
+    "after_removal": [
+     0.8544774635000199,
+     0.8083851543145277,
+     0.8977039364168571,
+     2000
+    ]
+   }
+  },
+  "legacy_ids_check": {
+   "legacy": {
+    "yes_ids": [
+     7414,
+     9454,
+     9693,
+     9834,
+     14004
+    ],
+    "no_ids": [
+     902,
+     2152,
+     2308,
+     2753,
+     8996
+    ],
+    "cos_w_raw_d": 0.006712254286098431,
+    "cos_d_rule_vs_d_legacy": 0.9999999999994201,
+    "proj_auc": 0.7281673769856645
+   }
+  },
+  "format": "each stat = [point, lo2.5, hi97.5, valid_draws]",
+  "bootstrap": {
+   "draws": 2000,
+   "seed": 0,
+   "unit": "speaker"
+  },
+  "seconds": 249
+ },
+ "original_states_rerun_on_pod": {
+  "tag": "orig",
+  "states": "/root/p20/o25_pitt_states.npz",
+  "readout": "/root/p20/omni25_readout.pt",
+  "zeroshot_csv": "/root/p20/o25_pitt_zeroshot_scores.csv",
+  "fold_file": "/workspace/p20/work/pitt_groupkfold5_mac.csv",
+  "n": 468,
+  "n_speakers": 228,
+  "features": "ans[:, -1, :] final LM stage, first answer position",
+  "norm_verdict": "as_saved",
+  "norm_checks": {
+   "as_saved": {
+    "mean_abs_err_vs_stored_p_yes": 0.0057161658473276235,
+    "r": 0.9967632767938391,
+    "auc": 0.6608678806664083
+   },
+   "rmsnorm_applied": {
+    "mean_abs_err_vs_stored_p_yes": 0.15391683339126616,
+    "r": 0.9817238024312158,
+    "auc": 0.6862650135606354
+   }
+  },
+  "yes_ids": [
+   7414,
+   9454,
+   9693,
+   9834,
+   14004
+  ],
+  "no_ids": [
+   902,
+   2152,
+   2308,
+   2753,
+   8996
+  ],
+  "mean_subset_mass": [
+   9.989419981351915e-06,
+   0.34920271421889687,
+   0.0014577933993185532,
+   4.116451936515885e-06,
+   8.017574848221832e-06,
+   9.237686559789365e-06,
+   0.001509281484991647,
+   3.3830317926140756e-05,
+   0.6477158188942698,
+   4.920055127112514e-05
+  ],
+  "auc_zeroshot_from_csv": 0.6577683068578071,
+  "gate": {
+   "d_weighted": {
+    "proj_auc": 0.6608485083301046,
+    "delta": 0.0030802014722974835,
+    "pass": true
+   },
+   "d_plain": {
+    "proj_auc": 0.6766175900813638,
+    "delta": 0.018849283223556723,
+    "pass": false
+   },
+   "d_top": {
+    "proj_auc": 0.6608872530027121,
+    "delta": 0.0031189461449050437,
+    "pass": true
+   }
+  },
+  "direction_used": "d_weighted",
+  "fallback_note": "",
+  "cosine": [
+   -0.010850199372951605,
+   -0.02335975628031877,
+   0.009861571240127714,
+   2000
+  ],
+  "random_floor_mean_abs_cos": 0.01331419548289437,
+  "random_floor_2.5_97.5": [
+   0.0005065297168842431,
+   0.03723588369858363
+  ],
+  "random_floor_n": 2000,
+  "random_floor_seed": 0,
+  "probe_auc": [
+   0.7709414955443626,
+   0.7210235536220739,
+   0.8223935786435785,
+   2000
+  ],
+  "after_removal_auc": [
+   0.7660984114684231,
+   0.7172719805582709,
+   0.8155441826648843,
+   2000
+  ],
+  "probe_minus_after_removal": [
+   0.0048430840759395855,
+   -0.01053326271280546,
+   0.021023178442650815,
+   2000
+  ],
+  "kept_control_auc": [
+   0.7650329329717164,
+   0.7162860726585986,
+   0.8145979556451206,
+   2000
+  ],
+  "auc_d": [
+   0.6608485083301046,
+   0.6071097684174922,
+   0.7163887676607382,
+   2000
+  ],
+  "per_fold_auc_removed": [
+   0.7922136713444998,
+   0.7956377430061641,
+   0.8539130434782609,
+   0.7652916073968705,
+   0.7632558139534884
+  ],
+  "per_fold_auc_kept": [
+   0.7890448166591217,
+   0.7918444760550024,
+   0.8504347826086956,
+   0.7631578947368421,
+   0.7627906976744186
+  ],
+  "arms": {},
+  "legacy_ids_check": {},
+  "format": "each stat = [point, lo2.5, hi97.5, valid_draws]",
+  "bootstrap": {
+   "draws": 2000,
+   "seed": 0,
+   "unit": "speaker"
+  },
+  "seconds": 69
+ }
+}

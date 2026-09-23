@@ -1,0 +1,379 @@
+{
+ "part": "16 M5 (old Part D)",
+ "date": "2026-09-23",
+ "question": "readout-direction test on Qwen2-Audio, to sit beside Qwen2.5-Omni and Qwen3-Omni",
+ "model_id": "Qwen/Qwen2-Audio-7B-Instruct",
+ "lm_head_source": "/Users/chaitanyaparwatkar/.cache/huggingface/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model-00005-of-00005.safetensors",
+ "lm_head_tied": false,
+ "which_head_used": "untied language_model.lm_head.weight, read directly from model-00005-of-00005.safetensors (the shard holds that one tensor and nothing else); config carries no tie_word_embeddings key (value=None), and a distinct lm_head tensor is present in the checkpoint index, so the head is NOT tied to the input embedding",
+ "lm_head_shape": [
+  156032,
+  4096
+ ],
+ "vocab_size": 156032,
+ "hidden": 4096,
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "prompt_note": "the prompt that produced the states, from probe2/extract2.py line 20, condition 'ad'. This run does not re-run the model; it reuses those states.",
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004,
+  14080
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  5664,
+  8996
+ ],
+ "token_id_note": "ids built as direction_q3o.py does: ['Yes','yes','YES'] and ['No','no','NO'], each in bare and leading-space form, single-token encodings only, deduped and sorted. The original extractor extract2.py used a slightly wider list and took t[0] of any encoding; that affects the saved p_yes column, not the direction computed here.",
+ "source_files": {
+  "states": "/Volumes/G-Drive Pro/paper1_local_runs/probe2/pitt_states.npz",
+  "manifest": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+  "hf_snapshot": "/Users/chaitanyaparwatkar/.cache/huggingface/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a",
+  "shard": "/Users/chaitanyaparwatkar/.cache/huggingface/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model-00005-of-00005.safetensors",
+  "reference_q3o": "<authors-scratch>/p15/direction_q3o.py"
+ },
+ "sha256_first_1MB": {
+  "states": "5d8272dc673cdbded7c0a84207d5306ffdd30b6d1fee6a99b549b05d7087494c",
+  "manifest": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "shard": "81a8cf29c850891663e45d0a0d8cacd2663a9a3ff117e6f74c3ef1c470bfe8cd",
+  "config": "ab122e112e2450f10cec59216185bd519ccd7529c79d4c1c00255d43b97a037d"
+ },
+ "n": 468,
+ "n_speakers": 228,
+ "n_conflict": 146,
+ "n_speakers_conflict": 100,
+ "n_agreement": 322,
+ "n_speakers_agreement": 175,
+ "seed": 0,
+ "draws": 2000,
+ "bootstrap": {
+  "draws": 2000,
+  "rng": "numpy.random.default_rng(0), reseeded per cell",
+  "unit": "speaker, resampled with replacement (never clips)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "refit_per_draw": false,
+  "paired": "conflict-minus-agreement draws the speaker list ONCE per replicate and recomputes BOTH arm AUCs inside that draw"
+ },
+ "folds": "GroupKFold(n_splits=5) grouped by speaker, clips in npz order; scaler fit inside the training fold only",
+ "folds_note": "no saved fold file found under /Users/chaitanyaparwatkar/Desktop/release or /Volumes/G-Drive Pro/paper1_local_runs (searched *fold*.csv/json/npz and the fold column of every *_oof.csv in probe2/ and part15/ - none carry one); folds recomputed deterministically with GroupKFold(n_splits=5) grouped by speaker on the clips in npz order, which is the same scheme p15/direction_q3o.py and part15/H_readout_arms.py used, so the three backbones stay comparable",
+ "features": "ans[:, -1, :] from pitt_states.npz, the final LM stage at the first answer position",
+ "direction": "mass-weighted Yes minus No lm_head rows, normalised to unit length",
+ "auc": "recomputed from the per-clip scores with the rank formula (scipy rankdata), never copied from a json",
+ "auc_without_d_definition": "auc_without_d is the q3o definition (project d out of the fold COEFFICIENT) so the three backbones are comparable; auc_without_d_Xproj is the literal reading (project d out of X, re-run the probe) and is reported beside it",
+ "arm_note": "*_refit rows run the whole pipeline inside the arm, with that arm's own mass-weighted direction and its own GroupKFold(5); *_restricted rows are the all-468 probe and direction evaluated on that arm's clips only, which is what part15/H_readout_arms.csv reports",
+ "direction_agreement": {
+  "cos_all_conflict": 1.0,
+  "cos_all_agreement": 1.0,
+  "cos_conflict_agreement": 1.0
+ },
+ "sanity": {
+  "spearman_score_along_d_vs_saved_p_yes": 1.0,
+  "auc_saved_p_yes_zeroshot": 0.6173
+ },
+ "paired_conflict_minus_agreement": {
+  "auc_probe": {
+   "diff": -0.281,
+   "lo": -0.3799,
+   "hi": -0.1762,
+   "draws": 2000
+  },
+  "auc_d": {
+   "diff": -0.2847,
+   "lo": -0.3947,
+   "hi": -0.1475,
+   "draws": 2000
+  },
+  "auc_without_d": {
+   "diff": -0.2745,
+   "lo": -0.3754,
+   "hi": -0.1707,
+   "draws": 2000
+  }
+ },
+ "results": [
+  {
+   "cell": "all",
+   "n": 468,
+   "n_spk": 228,
+   "cos": 0.01451856735458354,
+   "rand_mean_abs": 0.012392883317044925,
+   "rand_lo": 0.0004815001505699085,
+   "rand_hi": 0.03432580215705906,
+   "rand_used": 2000,
+   "auc_probe": 0.8222975590856257,
+   "auc_d": 0.6173576133281674,
+   "auc_without_d": 0.8326811313444401,
+   "auc_without_d_Xproj": 0.8223363037582332,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "spk_per_fold": [
+    45,
+    46,
+    46,
+    45,
+    46
+   ],
+   "auc_probe_lo": 0.7742119901408085,
+   "auc_probe_hi": 0.8670694745697013,
+   "auc_probe_draws": 2000,
+   "auc_d_lo": 0.5539496649176339,
+   "auc_d_hi": 0.6799643419991862,
+   "auc_d_draws": 2000,
+   "auc_without_d_lo": 0.7857139864011161,
+   "auc_without_d_hi": 0.8758753145565592,
+   "auc_without_d_draws": 2000,
+   "auc_without_d_Xproj_lo": 0.7743012728806178,
+   "auc_without_d_Xproj_hi": 0.8671967415167668,
+   "auc_without_d_Xproj_draws": 2000
+  },
+  {
+   "cell": "conflict_refit",
+   "n": 146,
+   "n_spk": 100,
+   "cos": 0.005429282654025127,
+   "rand_mean_abs": 0.012329658870771844,
+   "rand_lo": 0.0005120282798040095,
+   "rand_hi": 0.03498683466996616,
+   "rand_used": 2000,
+   "auc_probe": 0.6756875687568756,
+   "auc_d": 0.4136413641364136,
+   "auc_without_d": 0.6869086908690869,
+   "auc_without_d_Xproj": 0.6759075907590759,
+   "fold_sizes": [
+    30,
+    29,
+    29,
+    29,
+    29
+   ],
+   "spk_per_fold": [
+    20,
+    19,
+    20,
+    20,
+    21
+   ],
+   "auc_probe_lo": 0.5684735042735043,
+   "auc_probe_hi": 0.776130764682696,
+   "auc_probe_draws": 2000,
+   "auc_d_lo": 0.3010102507286302,
+   "auc_d_hi": 0.5424246308449545,
+   "auc_d_draws": 2000,
+   "auc_without_d_lo": 0.5806467144487828,
+   "auc_without_d_hi": 0.7872157189363514,
+   "auc_without_d_draws": 2000,
+   "auc_without_d_Xproj_lo": 0.5687231691919191,
+   "auc_without_d_Xproj_hi": 0.7765958698962214,
+   "auc_without_d_Xproj_draws": 2000
+  },
+  {
+   "cell": "agreement_refit",
+   "n": 322,
+   "n_spk": 175,
+   "cos": 0.01474852985217124,
+   "rand_mean_abs": 0.01259411588741824,
+   "rand_lo": 0.0004671801630077395,
+   "rand_hi": 0.03589692336659195,
+   "rand_used": 2000,
+   "auc_probe": 0.9316943151529617,
+   "auc_d": 0.6983729164180292,
+   "auc_without_d": 0.9346381827584835,
+   "auc_without_d_Xproj": 0.9324501730516768,
+   "fold_sizes": [
+    65,
+    65,
+    64,
+    64,
+    64
+   ],
+   "spk_per_fold": [
+    35,
+    35,
+    35,
+    35,
+    35
+   ],
+   "auc_probe_lo": 0.902037362942538,
+   "auc_probe_hi": 0.9578185085728651,
+   "auc_probe_draws": 2000,
+   "auc_d_lo": 0.6373243156628273,
+   "auc_d_hi": 0.7592350435845333,
+   "auc_d_draws": 2000,
+   "auc_without_d_lo": 0.9056508569295026,
+   "auc_without_d_hi": 0.9603221930412797,
+   "auc_without_d_draws": 2000,
+   "auc_without_d_Xproj_lo": 0.9027223689469065,
+   "auc_without_d_Xproj_hi": 0.9582584240163613,
+   "auc_without_d_Xproj_draws": 2000
+  },
+  {
+   "cell": "conflict_restricted",
+   "n": 146,
+   "n_spk": 100,
+   "cos": "",
+   "rand_mean_abs": "",
+   "rand_lo": "",
+   "rand_hi": "",
+   "rand_used": "",
+   "auc_probe": 0.6178217821782178,
+   "auc_d": 0.4136413641364136,
+   "auc_without_d": 0.6325632563256326,
+   "auc_without_d_Xproj": 0.6180418041804181,
+   "fold_sizes": "",
+   "spk_per_fold": "",
+   "auc_probe_lo": 0.5122978216473792,
+   "auc_probe_hi": 0.7221651512502185,
+   "auc_probe_draws": 2000,
+   "auc_d_lo": 0.3010102507286302,
+   "auc_d_hi": 0.5424246308449545,
+   "auc_d_draws": 2000,
+   "auc_without_d_lo": 0.5276664297971471,
+   "auc_without_d_hi": 0.7335895453736127,
+   "auc_without_d_draws": 2000,
+   "auc_without_d_Xproj_lo": 0.512842280601561,
+   "auc_without_d_Xproj_hi": 0.7213310206410334,
+   "auc_without_d_Xproj_draws": 2000
+  },
+  {
+   "cell": "agreement_restricted",
+   "n": 322,
+   "n_spk": 175,
+   "cos": "",
+   "rand_mean_abs": "",
+   "rand_lo": "",
+   "rand_hi": "",
+   "rand_used": "",
+   "auc_probe": 0.8987946055615229,
+   "auc_d": 0.6983729164180292,
+   "auc_without_d": 0.9070294784580499,
+   "auc_without_d_Xproj": 0.8987548235668537,
+   "fold_sizes": "",
+   "spk_per_fold": "",
+   "auc_probe_lo": 0.8597583467944271,
+   "auc_probe_hi": 0.9328316273501736,
+   "auc_probe_draws": 2000,
+   "auc_d_lo": 0.6373243156628273,
+   "auc_d_hi": 0.7592350435845333,
+   "auc_d_draws": 2000,
+   "auc_without_d_lo": 0.8701820094595826,
+   "auc_without_d_hi": 0.9383208446716511,
+   "auc_without_d_draws": 2000,
+   "auc_without_d_Xproj_lo": 0.8592859022853624,
+   "auc_without_d_Xproj_hi": 0.9325748374175665,
+   "auc_without_d_Xproj_draws": 2000
+  }
+ ],
+ "outputs": {
+  "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M5_readout_direction_q2a.csv",
+  "summary_csv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M5_readout_direction_q2a_summary.csv",
+  "sidecar": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M5_readout_direction_q2a.json",
+  "rows_tsv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/rows/M5.tsv"
+ },
+ "python": "3.10.2",
+ "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M5_readout_direction_q2a.py",
+ "runtime_s": 12.7,
+ "token_decodings": {
+  "yes": {
+   "7414": " Yes",
+   "9454": "Yes",
+   "9693": "yes",
+   "9834": " yes",
+   "14004": "YES",
+   "14080": " YES"
+  },
+  "no": {
+   "902": " no",
+   "2152": "no",
+   "2308": " No",
+   "2753": "No",
+   "5664": " NO",
+   "8996": "NO"
+  }
+ },
+ "mass_weight_degeneracy": {
+  "yes_weights_all": [
+   7.1e-05,
+   0.999916,
+   9e-06,
+   2e-06,
+   1e-06,
+   0.0
+  ],
+  "no_weights_all": [
+   0.0,
+   1.7e-05,
+   6e-06,
+   0.99997,
+   2e-06,
+   5e-06
+  ],
+  "dominant_yes_token": "Yes (id 9454), share 0.999916",
+  "dominant_no_token": "No (id 2753), share 0.999970",
+  "cos_dvec_vs_plain_top_token_difference": 1.0,
+  "cos_all_vs_conflict_10dp": 1.0,
+  "cos_all_vs_agreement_10dp": 1.0,
+  "cos_conflict_vs_agreement_10dp": 1.0,
+  "verdict": "the mass weighting is a no-op on Qwen2-Audio: dvec equals normalise(W[Yes]-W[No]) to 6 dp, and no subset of the clips can produce a different readout direction. Logged LOW in DISCREPANCIES.md."
+ },
+ "numerical_checks": {
+  "accelerate_blas_flags": "spurious; X@W.T cross-checked against np.einsum, max abs diff 8.88e-16, all entries finite, max |logit| 16.42, and the same divide/overflow/underflow flags fire on pure random data of identical shape",
+  "max_abs_X": 78.375,
+  "max_abs_W": 0.26953125,
+  "max_abs_logit": 16.415983431135828,
+  "spearman_score_along_d_vs_saved_p_yes": 0.9999575035849764,
+  "kendall_tau_score_along_d_vs_saved_p_yes": 0.9961382895001738,
+  "auc_score_along_d_6dp": 0.617358,
+  "auc_saved_p_yes_6dp": 0.617338,
+  "clips_whose_rank_differs": 243,
+  "note": "the tiny gap is the fp16 / wider-id-list / two-way-renormalised scorer versus this float64 full-vocab run; logged LOW. README_probe2.txt Table 1 zero-shot audio Pitt = 0.6174 matches the direction value.",
+  "tsv_values_reproduce_from_perclip_csv": "yes - every AUC in rows/M5.tsv was recomputed from M5_readout_direction_q2a.csv with both the rank formula and sklearn.roc_auc_score and agreed to 4 dp"
+ },
+ "headline": "Qwen2-Audio: cos=0.0145, rand mean|cos|=0.0124 [0.0005,0.0343], auc_probe=0.8223, auc_d=0.6174, auc_without_d=0.8327 | n=468, n_speakers=228",
+ "interpretation": "cos(probe_dir, readout_dir) = 0.0145 sits INSIDE the 2.5/97.5 random-direction interval [0.0005, 0.0343], so the probe direction is statistically indistinguishable from orthogonal to the Yes/No readout direction. Removing the readout direction costs the probe nothing (0.8223 -> 0.8327 coefficient projection, 0.8223 X projection). Same qualitative verdict as Qwen3-Omni.",
+ "comparison_table": {
+  "Qwen3-Omni": {
+   "cos": 0.0051,
+   "rand_mean_abs": 0.0177,
+   "rand_ci": [
+    0.0008,
+    0.0498
+   ],
+   "auc_probe": 0.8307,
+   "auc_d": 0.7656,
+   "auc_without_d": 0.8305,
+   "source": "given in the task brief, not recomputed here"
+  },
+  "Qwen2-Audio": {
+   "cos": 0.0145,
+   "rand_mean_abs": 0.0124,
+   "rand_ci": [
+    0.0005,
+    0.0343
+   ],
+   "auc_probe": 0.8223,
+   "auc_d": 0.6174,
+   "auc_without_d": 0.8327,
+   "source": "computed by this run"
+  }
+ },
+ "discrepancies_logged": [
+  "MEDIUM no saved fold file, folds recomputed",
+  "LOW mass weighting degenerate",
+  "LOW auc_d vs saved p_yes 5th decimal",
+  "LOW spurious Accelerate BLAS flags"
+ ]
+}

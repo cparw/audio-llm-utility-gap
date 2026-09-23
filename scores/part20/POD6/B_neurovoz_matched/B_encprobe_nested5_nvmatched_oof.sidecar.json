@@ -1,0 +1,97 @@
+{
+ "result": "Qwen2.5-Omni ENCODER nested probe, five renumbered splits, NeuroVoz age and sex matched subset",
+ "mean5": 0.8986,
+ "lo": 0.843,
+ "hi": 0.9428,
+ "per_repeat": [
+  0.8982,
+  0.9093,
+  0.8951,
+  0.9174,
+  0.873
+ ],
+ "usable_draws": 2000,
+ "single_split": {
+  "auc": 0.8951,
+  "lo": 0.8359,
+  "hi": 0.9427
+ },
+ "chosen_layers": {
+  "single": [
+   16,
+   27,
+   30,
+   17,
+   27
+  ],
+  "seed0": [
+   25,
+   16,
+   17,
+   20,
+   18
+  ],
+  "seed1": [
+   16,
+   25,
+   19,
+   18,
+   30
+  ],
+  "seed2": [
+   16,
+   17,
+   17,
+   17,
+   29
+  ],
+  "seed3": [
+   16,
+   16,
+   16,
+   20,
+   15
+  ],
+  "seed4": [
+   26,
+   29,
+   19,
+   16,
+   25
+  ]
+ },
+ "paper_full_set": {
+  "mean5": 0.9213,
+  "single_split": 0.916
+ },
+ "n": 907,
+ "n_speakers": 76,
+ "folds": "NEW for this subset: renumber speakers with default_rng(seed).permutation(unique ids), seeds 0..4, GroupKFold(5) POD tie rule; files in B_neurovoz_matched/folds/",
+ "model_id": "Qwen/Qwen2.5-Omni-7B (thinker.audio_tower, 32 encoder layers, mean over frames), bf16, 30 s window",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "pipeline_check_vs_paper_zeroshot": {
+  "n_matched": 907,
+  "max_abs_diff": 0.04593655181974837,
+  "median_abs_diff": 3.417154505669373e-05,
+  "within_1e3": 478,
+  "pearson": 0.992473387619544,
+  "auc_pod6": 0.6311666715290136,
+  "auc_paper": 0.6281860528439868,
+  "prompt_same": true
+ },
+ "probe": "StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'); inner GroupKFold(4) layer choice",
+ "seed": "bootstrap default_rng(0), 2000 draws, speakers with replacement; all five repeats recomputed per draw",
+ "command": "/usr/local/bin/python3 scripts/b_boot_nested5.py B_neurovoz_matched/omni_nvmatched_enc_nested5_oof.csv B_neurovoz_matched/omni_nvmatched_enc_nested5.json B_neurovoz_matched/omni_nvmatched_zeroshot_scores.csv /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched",
+ "sources": [
+  "B_neurovoz_matched/omni_nvmatched_enc_nested5_oof.csv",
+  "B_neurovoz_matched/omni_nvmatched_enc_nested5.json",
+  "B_neurovoz_matched/omni_nvmatched_zeroshot_scores.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "B_neurovoz_matched/omni_nvmatched_enc_nested5_oof.csv": "0e47d51ad785768891116fd3c5b2531c45528a2dc2f9a8905f2691a9bb1ea6a2",
+  "B_neurovoz_matched/omni_nvmatched_enc_nested5.json": "80546c0a27438f309dd6e47633aca65c0f253b67be5904692dd746c15edc3074",
+  "B_neurovoz_matched/omni_nvmatched_zeroshot_scores.csv": "604e5b1bb14c556bd47330509df7db66e123adbf548d4ee6ba8d15c8153773f8",
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082"
+ }
+}

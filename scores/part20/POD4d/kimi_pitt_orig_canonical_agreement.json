@@ -1,0 +1,26 @@
+{
+ "id": "kimi_pitt_orig_canonical_agreement",
+ "what": "Kimi-Audio zero-shot Pitt original windows agreement AUC (canonical paper file, recomputed)",
+ "value": 0.7227,
+ "lo": 0.656,
+ "hi": 0.7896,
+ "n": 322,
+ "n_speakers": 175,
+ "usable_draws": 2000,
+ "bootstrap_draws": 2000,
+ "seed": 0,
+ "bootstrap": "speakers resampled with replacement, fresh numpy.random.default_rng(0) per cell, percentile 2.5/97.5",
+ "auc": "rank formula, scipy.stats.rankdata ties averaged",
+ "score_column": "p_yes",
+ "model_id": "moonshotai/Kimi-Audio-7B-Instruct",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "cd /workspace/scores/part20/POD4d && /opt/kimienv/bin/python scripts/analyze.py /workspace/scores/part20/POD4d/kimi_pitt_noinv468_scores.csv /workspace/scores/part20/POD4d/canonical_kimi_pitt_zeroshot_scores.csv /workspace/scores/part20/POD4d p_yes <this command> canon",
+ "per_clip_csv": "/workspace/scores/part20/POD4d/kimi_pitt_orig_canonical_agreement.csv",
+ "sources": [
+  {
+   "path": "/workspace/scores/part20/POD4d/canonical_kimi_pitt_zeroshot_scores.csv",
+   "sha256_first_1MB": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365",
+   "byte_copy_of": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv"
+  }
+ ]
+}

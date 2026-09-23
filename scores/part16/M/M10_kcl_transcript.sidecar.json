@@ -1,0 +1,91 @@
+{
+ "task": "M10",
+ "title": "Interval for the MDVR-KCL transcript answer",
+ "source_files": {
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_kcl_text.csv": {
+   "sha256_first_1mb": "6a9384d0a4106edac94b38a0469ca9389c58f57eaa5522b27412e1c8df22f71f"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_kcl_text.json": {
+   "sha256_first_1mb": "9e7bacbf4c0ac6d1a3e3665497bbe51978ad0a8cf9db9e3ec2133020a6dcb897"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv": {
+   "sha256_first_1mb": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_zeroshot.json": {
+   "sha256_first_1mb": "d905a38f28057b780e505e8802cb6aa400b8cb47868d814a56eaf66f37e08305"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_enc_nested_oof.csv": {
+   "sha256_first_1mb": "d3f6e287eb55faf86a36a4481e7c82a5fef90ee3d5329d0a442fc4a78e86e24a"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_nested_repeats.json": {
+   "sha256_first_1mb": "9ebe61ce4336e9fa7d4c2a54a989881ad1575e25d4660e87d57064ba076e0da5"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": {
+   "sha256_first_1mb": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd"
+  }
+ },
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M10_kcl_transcript.csv",
+ "n": 37,
+ "n_speakers": 37,
+ "n_positive": 16,
+ "n_negative": 21,
+ "one_row_per_speaker": true,
+ "max_clips_per_speaker": 1,
+ "clip_level_equals_speaker_level_auc": true,
+ "auc_speaker_level_transcript": 0.7634,
+ "seed": 0,
+ "n_bootstrap": 2000,
+ "bootstrap_usable_draws": 2000,
+ "bootstrap_unit": "speaker, with replacement, paired (one speaker list per replicate)",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_transcript": "Based only on this transcript of what the person said, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "prompt_audio": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "encoder_probe_note": "p_enc is the saved nested out-of-fold probe score (one repeat). master_lookup publishes the mean of 5 repeats.",
+ "folds": "not required; scores are already out-of-fold. No saved fold file found on disk.",
+ "published_master_lookup": {
+  "transcript": 0.7619,
+  "audio": 0.7143,
+  "encoder": 0.7506
+ },
+ "recomputed_rank_formula": {
+  "transcript": 0.7634,
+  "audio": 0.7143,
+  "encoder": 0.7768,
+  "transcript_minus_audio": 0.0491,
+  "transcript_minus_encoder": -0.0134
+ },
+ "ci_2p5_97p5": {
+  "transcript": [
+   0.5936,
+   0.9118
+  ],
+  "audio": [
+   0.521,
+   0.881
+  ],
+  "encoder": [
+   0.5994,
+   0.9265
+  ],
+  "transcript_minus_audio": [
+   -0.1827,
+   0.2818
+  ],
+  "transcript_minus_encoder": [
+   -0.2383,
+   0.2381
+  ]
+ },
+ "p_boot_transcript_gt_audio": 0.6655,
+ "tie_diagnosis_transcript": {
+  "n_pairs": 336,
+  "strict_wins": 256,
+  "tied_pairs": 1,
+  "auc_ties_as_loss": 0.761905,
+  "auc_ties_half_credit_rank_formula": 0.763393,
+  "auc_sklearn_roc_auc_score": 0.763393,
+  "explains_published_0_7619": true,
+  "note": "The published 0.7619 counts the single tied pair as a loss (strict >). The PART16 rank formula gives ties half credit -> 0.7634. sklearn agrees with the rank formula."
+ },
+ "shell_command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M10_kcl_transcript.py"
+}

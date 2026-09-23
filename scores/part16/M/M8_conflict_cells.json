@@ -1,0 +1,135 @@
+{
+ "task": "M8",
+ "question": "Are the conflict cells actually below chance?",
+ "generated_by": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M8_conflict_cells.py",
+ "shell_command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M8_conflict_cells.py",
+ "python": "3.10.2",
+ "numpy": "2.2.6",
+ "pandas": "2.3.3",
+ "scipy": "scipy.stats",
+ "seed": 0,
+ "n_bootstrap": 2000,
+ "bootstrap_unit": "speaker (cluster), with replacement, percentile 2.5/97.5",
+ "paired_rule": "one speaker draw per replicate, both arms recomputed inside that draw",
+ "auc_method": "rank formula (scipy.stats.rankdata), recomputed from per-clip p_yes; no AUC copied from any json",
+ "model_ids_scored_elsewhere": "zero-shot answer-token p_yes files produced by earlier parts; this task only re-reads and re-scores them",
+ "prompt_setA": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "prompt_setB": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "folds": "not applicable - all quantities here are zero-shot per-clip scores, no cross-validated probe is fit in this task, so no saved fold file is used or recomputed",
+ "manifests": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14_manifest_new.csv": {
+   "n": 966,
+   "sha256_first1mb": "f919c2499098b178fb332cdce0cf9395484d96b4f199ac15480397658ab5fd7c"
+  },
+  "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv": {
+   "n": 468,
+   "sha256_first1mb": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ },
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv": {
+   "model": "Qwen2.5-Omni",
+   "tag": "primary",
+   "set": "A_edaic_part14",
+   "n_rows": 966,
+   "sha256_first1mb": "3e118a11ec4be0daccf95265ff31253dbaf80d5442571ec12cad923a7da7c1ff"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv": {
+   "model": "Qwen2-Audio",
+   "tag": "primary",
+   "set": "A_edaic_part14",
+   "n_rows": 966,
+   "sha256_first1mb": "e09dc9a9a2d2f7564df393e8450f82ace9552aa2c1a25226bbecd0af6e7a9138"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "tag": "primary",
+   "set": "A_edaic_part14",
+   "n_rows": 966,
+   "sha256_first1mb": "112f62ff61571312de50f6866c73fbcaca979b5f375f07c4a54280765c4bd2dc"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv": {
+   "model": "Audio Flamingo 2",
+   "tag": "primary",
+   "set": "A_edaic_part14",
+   "n_rows": 966,
+   "sha256_first1mb": "6d392b1261472f2f35c43284d010cb536dabc5ff83e1f166afc9d0d7b0559100"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv": {
+   "model": "Audio Flamingo 3",
+   "tag": "primary",
+   "set": "A_edaic_part14",
+   "n_rows": 966,
+   "sha256_first1mb": "8bce04f1ca9702151cb4550951e5df64fd2a369eb447c8fb53028d95a8f0b6fc"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv": {
+   "model": "Kimi-Audio",
+   "tag": "primary",
+   "set": "A_edaic_part14",
+   "n_rows": 966,
+   "sha256_first1mb": "d9fdfcdf5fbde6cb25d1b57f419334beb2f3f376caf540c717dc0f3f53551cc0"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv": {
+   "model": "Qwen2.5-Omni",
+   "tag": "primary",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+  },
+  "/Volumes/G-Drive Pro/paper1_local_runs/probe2/pitt_zeroshot_scores.csv": {
+   "model": "Qwen2-Audio",
+   "tag": "primary",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "9cd9800ed47adee9d9912219bf31db487d4941128364d80babf3d0488fbfff6c"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "tag": "primary",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "9d7348cb925b6ed060f72bba32de4773c40af0a59b61c93e60c92fabc38d42d6"
+  },
+  "/Volumes/G-Drive Pro/paper1_local_runs/af2_results/af2_pitt468.csv": {
+   "model": "Audio Flamingo 2",
+   "tag": "af2_pitt468",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "f70f37696cd46110933d452037a038253c13c0c1b0ec09a86c06832ba4787e25"
+  },
+  "/Volumes/G-Drive Pro/paper1_local_runs/af2_pitt_audio.csv": {
+   "model": "Audio Flamingo 2",
+   "tag": "af2_pitt_audio",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "7b1120ad367341954adc1722aef739227a51f514b4bbeeb5a1db7c1044527a35"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/af3_pitt.csv": {
+   "model": "Audio Flamingo 3",
+   "tag": "primary",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "675eab0366cb0506ee8fcec01b623e587278dd7251613325d96ee12e19909c4f"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv": {
+   "model": "Kimi-Audio",
+   "tag": "primary",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv": {
+   "model": "Kimi-Audio",
+   "tag": "alt_overnight_copy",
+   "set": "B_pitt",
+   "n_rows": 468,
+   "sha256_first1mb": "8023fd5845b7c4d89b4c4e1ef66aab9b77373cb67cca46496eb6a673359a89ad"
+  }
+ },
+ "missing_sources": [],
+ "outputs": [
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M8_conflict_cells.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M8_perclip.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/rows/M8.tsv"
+ ]
+}

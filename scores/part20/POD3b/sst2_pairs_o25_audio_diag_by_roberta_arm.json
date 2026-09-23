@@ -1,0 +1,79 @@
+{
+ "results": {
+  "conflict_robconflict": {
+   "what": "M2 conflict rows whose RoBERTa rule arm is also conflict",
+   "value": 0.1950752266143351,
+   "lo": 0.1545073730624021,
+   "hi": 0.24130055185721108,
+   "n": 420,
+   "n_distinct_segments": 420,
+   "n_speakers": 137,
+   "n_pos": 174,
+   "usable_draws": 2000
+  },
+  "conflict_robnone": {
+   "what": "M2 conflict rows whose RoBERTa rule arm is none",
+   "value": 0.6150309658943882,
+   "lo": 0.5593088597068498,
+   "hi": 0.675452074392329,
+   "n": 855,
+   "n_distinct_segments": 855,
+   "n_speakers": 160,
+   "n_pos": 169,
+   "usable_draws": 2000
+  },
+  "agreement_robagreement_distinct": {
+   "what": "M2 agreement distinct segments whose RoBERTa rule arm is also agreement",
+   "value": 0.9680127041742287,
+   "lo": 0.942482681187203,
+   "hi": 0.9876546886227568,
+   "n": 391,
+   "n_distinct_segments": 391,
+   "n_speakers": 145,
+   "n_pos": 87,
+   "usable_draws": 2000
+  },
+  "agreement_robnone_distinct": {
+   "what": "M2 agreement distinct segments whose RoBERTa rule arm is none",
+   "value": 0.7517786561264822,
+   "lo": 0.681803670950304,
+   "hi": 0.8099941036072879,
+   "n": 379,
+   "n_distinct_segments": 379,
+   "n_speakers": 141,
+   "n_pos": 115,
+   "usable_draws": 2000
+  },
+  "conflict_p14speakers": {
+   "what": "M2 conflict rows, 138 Part 14 speakers only",
+   "value": 0.4488864976911372,
+   "lo": 0.401103334853478,
+   "hi": 0.4982203902720629,
+   "n": 1236,
+   "n_distinct_segments": 1236,
+   "n_speakers": 138,
+   "n_pos": 337,
+   "usable_draws": 2000
+  },
+  "agreement_distinct_p14speakers": {
+   "what": "M2 agreement distinct segments, 138 Part 14 speakers only",
+   "value": 0.858721199222726,
+   "lo": 0.8200540950266021,
+   "hi": 0.891242753039372,
+   "n": 737,
+   "n_distinct_segments": 737,
+   "n_speakers": 138,
+   "n_pos": 202,
+   "usable_draws": 2000
+  }
+ },
+ "input": "/workspace/p20/m2_with_roberta_arm.csv",
+ "input_sha256_first_1MB": "add90192ea54fe692ec90ac5dde82e95f144251f7d6b1838ac2655b6e6701865",
+ "roberta_rule_arm": "from part14_segments_sentiment.csv clearly_positive/clearly_negative by segment index: conflict = (label 1 and clearly_positive) or (label 0 and clearly_negative); agreement = the reverse; else none",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "seed": 0,
+ "bootstrap": "2000 draws, fresh default_rng(0) per cell, speakers resampled with replacement, percentile 2.5/97.5",
+ "command": "python3 p20_diag.py m2_with_roberta_arm.csv /workspace/scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3b",
+ "date": "2026-09-23T12:25:57.749232+00:00"
+}

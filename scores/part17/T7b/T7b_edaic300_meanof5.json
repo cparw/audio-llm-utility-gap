@@ -1,0 +1,557 @@
+{
+ "task": "PART17 T7b: E-DAIC 300 s window probe, mean of five per-repeat AUCs (paper convention), 2000-draw speaker interval, paired vs zero-shot answer 0.8278",
+ "date": "2026-09-23",
+ "REPRODUCTION_GATE": "PASSED. The unmodified part16 probe_boot.py rerun on Linux x86_64 with sklearn 1.9.1 / numpy 2.1.2 / scipy 1.18.1 reproduces every published per-repeat AUC and all 25 layer picks for enc, proj, llm, ans. Its edaic_full_nested_repeats.json and edaic_full_perclip.csv are byte-identical to the published files (sha256 817e9d58... and 7566ae55...), and its log is identical to probe2.log from the stage lines on.",
+ "gate": {
+  "passed": true,
+  "checks": {
+   "clip_order_equal": true,
+   "labels_equal": true,
+   "p_yes_npz_vs_perclip_maxabs": 0.0,
+   "one_clip_per_speaker": true,
+   "n": 275,
+   "n_spk": 275,
+   "n_pos": 66
+  },
+  "per_stream": {
+   "llm": {
+    "per_repeat_4dp_rerun": [
+     0.6918,
+     0.7062,
+     0.6893,
+     0.7055,
+     0.7078
+    ],
+    "per_repeat_4dp_published": [
+     0.6918,
+     0.7062,
+     0.6893,
+     0.7055,
+     0.7078
+    ],
+    "per_repeat_match_4dp": true,
+    "layers_match": true,
+    "mean_of_repeat_aucs_full_precision": 0.7001014934029288,
+    "mean_of_4dp_repeat_aucs_rounded": 0.7001,
+    "mean_of_repeat_aucs_published": 0.7001,
+    "max_abs_mean_oof_vs_published_perclip": 0.0,
+    "reproduced": true
+   },
+   "enc": {
+    "per_repeat_4dp_rerun": [
+     0.5964,
+     0.5826,
+     0.5962,
+     0.5608,
+     0.606
+    ],
+    "per_repeat_4dp_published": [
+     0.5964,
+     0.5826,
+     0.5962,
+     0.5608,
+     0.606
+    ],
+    "per_repeat_match_4dp": true,
+    "layers_match": true,
+    "mean_of_repeat_aucs_full_precision": 0.588386254893432,
+    "mean_of_4dp_repeat_aucs_rounded": 0.5884,
+    "mean_of_repeat_aucs_published": 0.5884,
+    "max_abs_mean_oof_vs_published_perclip": 0.0,
+    "reproduced": true
+   },
+   "ans": {
+    "per_repeat_4dp_rerun": [
+     0.755,
+     0.7302,
+     0.7418,
+     0.7225,
+     0.7679
+    ],
+    "per_repeat_4dp_published": [
+     0.755,
+     0.7302,
+     0.7418,
+     0.7225,
+     0.7679
+    ],
+    "per_repeat_match_4dp": true,
+    "layers_match": true,
+    "mean_of_repeat_aucs_full_precision": 0.7434826736262143,
+    "mean_of_4dp_repeat_aucs_rounded": 0.7435,
+    "mean_of_repeat_aucs_published": 0.7435,
+    "max_abs_mean_oof_vs_published_perclip": 0.0,
+    "reproduced": true
+   },
+   "proj": {
+    "per_repeat_4dp_rerun": [
+     0.551,
+     0.5618,
+     0.5795,
+     0.5653,
+     0.5474
+    ],
+    "per_repeat_4dp_published": [
+     0.551,
+     0.5618,
+     0.5795,
+     0.5653,
+     0.5474
+    ],
+    "per_repeat_match_4dp": true,
+    "layers_match": true,
+    "mean_of_repeat_aucs_full_precision": 0.5609975351602146,
+    "mean_of_4dp_repeat_aucs_rounded": 0.561,
+    "mean_of_repeat_aucs_published": 0.561,
+    "max_abs_mean_oof_vs_published_perclip": 0.0,
+    "reproduced": true
+   }
+  }
+ },
+ "per_repeat_auc_full_precision": {
+  "llm": [
+   0.6917500362476439,
+   0.7061765985210962,
+   0.68928519646223,
+   0.7055241409308395,
+   0.7077714948528345
+  ],
+  "enc": [
+   0.5964187327823691,
+   0.5825721328113672,
+   0.5962012469189503,
+   0.5607510511816732,
+   0.6059881107727998
+  ],
+  "ans": [
+   0.754965927214731,
+   0.730172538784979,
+   0.741844280121792,
+   0.722488038277512,
+   0.7679425837320574
+  ],
+  "proj": [
+   0.5509641873278237,
+   0.5618384804987676,
+   0.5794548354356966,
+   0.5653182543134696,
+   0.5474119182253153
+  ]
+ },
+ "results": {
+  "answer": {
+   "auc": 0.8277511961722488,
+   "ci": [
+    0.7702680190413039,
+    0.882162099811676
+   ]
+  },
+  "used_mean_of_five": {
+   "llm": {
+    "meanof5": 0.7001014934029288,
+    "lo": 0.623078851409801,
+    "hi": 0.7726592134606488,
+    "d": -0.12764970276931997,
+    "dlo": -0.19931182925072716,
+    "dhi": -0.06289344782645095,
+    "ez": "yes"
+   },
+   "enc": {
+    "meanof5": 0.588386254893432,
+    "lo": 0.5267623732992601,
+    "hi": 0.6523287485242031,
+    "d": -0.2393649412788168,
+    "dlo": -0.3188292697258822,
+    "dhi": -0.15723986914309845,
+    "ez": "yes"
+   },
+   "ans": {
+    "meanof5": 0.7434826736262143,
+    "lo": 0.679299311402388,
+    "hi": 0.80648266552998,
+    "d": -0.08426852254603445,
+    "dlo": -0.13393750616750957,
+    "dhi": -0.03699445946039149,
+    "ez": "yes"
+   },
+   "proj": {
+    "meanof5": 0.5609975351602146,
+    "lo": 0.48708512432035683,
+    "hi": 0.633878185240475,
+    "d": -0.26675366101203424,
+    "dlo": -0.34941993655542614,
+    "dhi": -0.18092565741228225,
+    "ez": "yes"
+   }
+  },
+  "not_used_auc_of_mean_oof": {
+   "llm": {
+    "a": 0.7087864288821226,
+    "lo": 0.6231553623188406,
+    "hi": 0.7874003305509396,
+    "d": -0.11896476729012617,
+    "dlo": -0.19953252006799707,
+    "dhi": -0.04783753344227048,
+    "ez": "yes"
+   },
+   "enc": {
+    "a": 0.5916340437871538,
+    "lo": 0.5109791833293627,
+    "hi": 0.6706340171833783,
+    "d": -0.236117152385095,
+    "dlo": -0.3272297641882839,
+    "dhi": -0.1394064326205433,
+    "ez": "yes"
+   },
+   "ans": {
+    "a": 0.7747571407858489,
+    "lo": 0.7040940169374482,
+    "hi": 0.8387201797002031,
+    "d": -0.052994055386399896,
+    "dlo": -0.10456156339924325,
+    "dhi": -0.00486164088729681,
+    "ez": "yes"
+   },
+   "proj": {
+    "a": 0.5631433956792808,
+    "lo": 0.47900542159180204,
+    "hi": 0.6477522437021072,
+    "d": -0.26460780049296795,
+    "dlo": -0.3574951914916294,
+    "dhi": -0.16665702479338845,
+    "ez": "yes"
+   }
+  }
+ },
+ "paste_lines": [
+  "T7b LM mean-of-5 0.7001 [0.6231, 0.7727] | paired minus answer -0.1276 [-0.1993, -0.0629] excludes zero yes | n=275 n_spk=275 | /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+  "T7b encoder mean-of-5 0.5884 [0.5268, 0.6523] | paired minus answer -0.2394 [-0.3188, -0.1572] excludes zero yes | n=275 n_spk=275 | /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+  "T7b answer-state mean-of-5 0.7435 [0.6793, 0.8065] | paired minus answer -0.0843 [-0.1339, -0.0370] excludes zero yes | n=275 n_spk=275 | /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+  "T7b projector mean-of-5 0.5610 [0.4871, 0.6339] | paired minus answer -0.2668 [-0.3494, -0.1809] excludes zero yes | n=275 n_spk=275 | /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv"
+ ],
+ "side_by_side": [
+  "LM           USED 0.7001 [0.6231, 0.7727] paired -0.1276 [-0.1993, -0.0629] excl0 yes   | NOT USED 0.7088 [0.6232, 0.7874] paired -0.1190 [-0.1995, -0.0478] excl0 yes",
+  "encoder      USED 0.5884 [0.5268, 0.6523] paired -0.2394 [-0.3188, -0.1572] excl0 yes   | NOT USED 0.5916 [0.5110, 0.6706] paired -0.2361 [-0.3272, -0.1394] excl0 yes",
+  "answer-state USED 0.7435 [0.6793, 0.8065] paired -0.0843 [-0.1339, -0.0370] excl0 yes   | NOT USED 0.7748 [0.7041, 0.8387] paired -0.0530 [-0.1046, -0.0049] excl0 yes",
+  "projector    USED 0.5610 [0.4871, 0.6339] paired -0.2668 [-0.3494, -0.1809] excl0 yes   | NOT USED 0.5631 [0.4790, 0.6478] paired -0.2646 [-0.3575, -0.1667] excl0 yes"
+ ],
+ "bootstrap": {
+  "draws": 2000,
+  "seed": "numpy.random.default_rng(0), fresh per cell",
+  "unit": "speaker (one clip per speaker, 275 speakers), resampled with replacement; draw code identical to probe_boot.py boot()",
+  "mean_of_five": "inside every draw the five per-repeat AUCs are recomputed on the drawn speakers and averaged",
+  "paired": "one speaker draw per replicate; mean of five recomputed and answer AUC recomputed inside the same draw; statistic = difference",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "rank AUC (ties averaged), same function as probe_boot.py",
+  "check_not_used": "the AUC-of-averaged-OOF cells computed by this bootstrap reproduce probe_boot.py's published intervals exactly (LM 0.7088 [0.6232, 0.7874], paired -0.1190 [-0.1995, -0.0478]; enc 0.5916 [0.5110, 0.6706], paired -0.2361 [-0.3272, -0.1394])",
+  "check_platform": "T7b_boot.py rerun on the Mac (/usr/local/bin/python3) on the synced npz gives byte-identical summary csv, fragment, per-clip csv and gate json"
+ },
+ "pod": {
+  "runpod_id": "eyawl43rjukfkj",
+  "ssh": "root@205.196.17.122 -p 12029",
+  "env": {
+   "runpod_id": "eyawl43rjukfkj",
+   "host": "a762862326f9",
+   "image_note": "fresh runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404 per task text; python3.12 system interpreter",
+   "os": "PRETTY_NAME=\"Ubuntu 24.04.3 LTS\"",
+   "kernel": "6.8.0-136-generic",
+   "machine": "x86_64",
+   "python": "3.12.3",
+   "executable": "/usr/bin/python3",
+   "sklearn": "1.9.1",
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "joblib": "1.6.0",
+   "threadpoolctl": "3.7.0",
+   "threadpool_info": [
+    {
+     "user_api": "blas",
+     "internal_api": "openblas",
+     "num_threads": 64,
+     "prefix": "libscipy_openblas",
+     "filepath": "/usr/local/lib/python3.12/dist-packages/numpy.libs/libscipy_openblas64_-ff651d7f.so",
+     "version": "0.3.27",
+     "threading_layer": "pthreads",
+     "architecture": "SkylakeX"
+    },
+    {
+     "user_api": "blas",
+     "internal_api": "openblas",
+     "num_threads": 64,
+     "prefix": "libscipy_openblas",
+     "filepath": "/usr/local/lib/python3.12/dist-packages/scipy.libs/libscipy_openblas-5f890258.so",
+     "version": "0.3.31.dev",
+     "threading_layer": "pthreads",
+     "architecture": "SkylakeX"
+    },
+    {
+     "user_api": "openmp",
+     "internal_api": "openmp",
+     "num_threads": 128,
+     "prefix": "libgomp",
+     "filepath": "/usr/local/lib/python3.12/dist-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+     "version": null
+    }
+   ],
+   "cpu": [
+    "CPU(s):                                  128",
+    "Model name:                              AMD EPYC 9374F 32-Core Processor",
+    "CPU(s) scaling MHz:                      47%"
+   ],
+   "os_cpu_count": 128,
+   "loky_cpu_count": 14,
+   "env_threads": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null
+   },
+   "install_cmd": "python3 -m pip install --break-system-packages -q scikit-learn numpy scipy pandas"
+  },
+  "blas_threads": "OpenBLAS 0.3.27 (scipy-openblas64, SkylakeX kernels) 64 threads in the main process; joblib reports cpu_count 14 on this pod, so the 16 loky workers doing the inner layer scoring run with 1 BLAS thread each (checked with threadpoolctl inside a worker)",
+  "not_terminated": "pod left running for the verifier; /workspace/T7B_DONE touched"
+ },
+ "diagnostics": {
+  "note": "Not needed for the gate (default environment reproduced). Run to pin the cause of the Mac mismatch. float64 input on the SAME pod and sklearn does NOT reproduce and flips exactly the two near-tie layer picks the Mac runs flipped (LM repeat 1 fold 1: 18 -> 14; answer-state repeat 0 fold 1: 28 -> 19). So the float32 fit path is the cause. Single-thread BLAS keeps all 100 layer picks and the encoder per-repeat AUCs, but moves some LM / answer-state / projector per-repeat AUCs in the 4th decimal (LM mean still 0.7001, enc 0.5884): the published numbers are tied to multi-threaded BLAS in the final outer fit.",
+  "runs": {
+   "diag_f64": {
+    "what": "same pod, same sklearn 1.9.1, input cast to float64 before the probe (one-line change)",
+    "npz": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/diag_f64/edaic_full_oof_repeats.npz",
+    "npz_sha256": "0ff65a4fea0b1578b3d5b4ba419c022b2e56fa35b0fcb7c98f0993a532b09a33",
+    "script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/diag_f64/probe_boot_diag_f64.py",
+    "log": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/logs/diag_f64.log",
+    "llm": {
+     "per_repeat": [
+      0.6915,
+      0.6976,
+      0.6886,
+      0.7057,
+      0.7071
+     ],
+     "mean_of_repeat_aucs": 0.6981,
+     "per_repeat_match_published": false,
+     "layer_mismatches_rep_fold_this_published": [
+      [
+       1,
+       1,
+       14,
+       18
+      ]
+     ]
+    },
+    "enc": {
+     "per_repeat": [
+      0.5963,
+      0.5829,
+      0.5966,
+      0.5609,
+      0.6058
+     ],
+     "mean_of_repeat_aucs": 0.5885,
+     "per_repeat_match_published": false,
+     "layer_mismatches_rep_fold_this_published": []
+    },
+    "ans": {
+     "per_repeat": [
+      0.7274,
+      0.731,
+      0.7417,
+      0.7231,
+      0.7677
+     ],
+     "mean_of_repeat_aucs": 0.7382,
+     "per_repeat_match_published": false,
+     "layer_mismatches_rep_fold_this_published": [
+      [
+       0,
+       1,
+       19,
+       28
+      ]
+     ]
+    },
+    "proj": {
+     "per_repeat": [
+      0.5509,
+      0.5615,
+      0.5794,
+      0.5654,
+      0.5468
+     ],
+     "mean_of_repeat_aucs": 0.5608,
+     "per_repeat_match_published": false,
+     "layer_mismatches_rep_fold_this_published": []
+    },
+    "reproduces_published": false
+   },
+   "diag_omp1": {
+    "what": "same pod, unmodified float32 script, OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1",
+    "npz": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/diag_omp1/edaic_full_oof_repeats.npz",
+    "npz_sha256": "1a9e3e4146a3f45b268527d1459affc41f2c100970198f171168ad277e386876",
+    "script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/diag_omp1/probe_boot_diag_omp1.py",
+    "log": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/logs/diag_omp1.log",
+    "llm": {
+     "per_repeat": [
+      0.6918,
+      0.7063,
+      0.6894,
+      0.7058,
+      0.7073
+     ],
+     "mean_of_repeat_aucs": 0.7001,
+     "per_repeat_match_published": false,
+     "layer_mismatches_rep_fold_this_published": []
+    },
+    "enc": {
+     "per_repeat": [
+      0.5964,
+      0.5826,
+      0.5962,
+      0.5608,
+      0.606
+     ],
+     "mean_of_repeat_aucs": 0.5884,
+     "per_repeat_match_published": true,
+     "layer_mismatches_rep_fold_this_published": []
+    },
+    "ans": {
+     "per_repeat": [
+      0.7561,
+      0.7305,
+      0.7421,
+      0.7219,
+      0.7682
+     ],
+     "mean_of_repeat_aucs": 0.7438,
+     "per_repeat_match_published": false,
+     "layer_mismatches_rep_fold_this_published": []
+    },
+    "proj": {
+     "per_repeat": [
+      0.5506,
+      0.5618,
+      0.5793,
+      0.5652,
+      0.5472
+     ],
+     "mean_of_repeat_aucs": 0.5608,
+     "per_repeat_match_published": false,
+     "layer_mismatches_rep_fold_this_published": []
+    },
+    "reproduces_published": false
+   }
+  }
+ },
+ "commands": [
+  "scp probe_boot.py full_zeroshot_scores.csv edaic_full_nested_repeats.json edaic_full_perclip.csv edaic_full_perclip.json probe2.log edaicfull_shards.tgz -> pod:/workspace/ref/",
+  "pod: python3 -m pip install --break-system-packages -q scikit-learn numpy scipy pandas",
+  "pod: cd /workspace/edaicfull/out && tar -xzf /workspace/ref/edaicfull_shards.tgz && cp /workspace/ref/full_zeroshot_scores.csv . && cp /workspace/ref/probe_boot.py /workspace/edaicfull/",
+  "pod: cd /workspace/edaicfull && python3 -W ignore probe_boot.py > /workspace/t7b/runA_default.log   (unmodified script, default threads, 74 s wall)",
+  "pod: cd /workspace/t7b && python3 T7b_boot.py --npz /workspace/edaicfull/out/edaic_full_oof_repeats.npz --rerun_json /workspace/edaicfull/out/edaic_full_nested_repeats.json --ref_json /workspace/ref/edaic_full_nested_repeats.json --ref_perclip /workspace/ref/edaic_full_perclip.csv --out_dir /workspace/t7b/out --file_label /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+  "pod diagnostics: /workspace/diag_f64/probe_boot_diag_f64.py (D path + .astype(np.float64)); OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 /workspace/diag_omp1/probe_boot_diag_omp1.py (D path only)",
+  "scp pod outputs -> part17/T7b/ ; Mac: /usr/local/bin/python3 T7b_boot.py (same args, Mac paths, out to scratch) -> byte-identical ; /usr/local/bin/python3 T7b_sidecar.py"
+ ],
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "window": "E-DAIC 300 s window (same window as part16 EDAICFULL; see T7 sidecar for the truncation note)",
+ "sources_sha256": {
+  "shard_tarball": {
+   "path": "/Volumes/G-Drive Pro/paper work/paper1_local_runs/part16_EDAICFULL_states/edaicfull_shards.tgz",
+   "sha256": "67fe8111f2c34362f9b5208b25a55381672ede25742b1e84d86eaacf34a0c1ab"
+  },
+  "probe_script_original": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/probe_boot.py",
+   "sha256": "4ecca1f8ba81b3b1c2a514416ff36ad01e48beef67142d954105003900873517"
+  },
+  "zeroshot_scores_rows_order": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv",
+   "sha256": "9ec70d6cf53de8933489927f2610ae4abd48bff75646cddde370bc2b0c589d68"
+  },
+  "published_nested_repeats_json": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/edaic_full_nested_repeats.json",
+   "sha256": "817e9d58ffab070287d97147d5775563be12c094be555e433339f899381ae96e"
+  },
+  "published_perclip_csv_answer_p_yes": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/edaic_full_perclip.csv",
+   "sha256": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770"
+  },
+  "published_perclip_json": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/edaic_full_perclip.json",
+   "sha256": "5d32b37717666e603dab4b628edcce6fa0c0d9d17ece0645b9144f226538be8b"
+  },
+  "published_probe_log": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/probe2.log",
+   "sha256": "10cfca688daea1da1ef201be633069d0121f8550287cfa8b8fb7df1dec3891d5"
+  },
+  "mac_attempt_probe": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7_probe.py",
+   "sha256": "7da079fe5a74ca5eaa72d8a0223af0d58134354fa71259e15aafd9c081b6572d"
+  },
+  "mac_attempt_boot": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7_boot.py",
+   "sha256": "8e4d9787bd0eb2aaa8fdaaa901fe07948b8c618efec77aa5e9f9d673568780af"
+  },
+  "mac_attempt_sidecar": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7_edaic300_meanof5.json",
+   "sha256": "006cd7d7f482d346273ac1de761cb70a8201233723146787dc811de7bb0a1d35"
+  }
+ },
+ "outputs_sha256": {
+  "per_repeat_oof_npz": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/pod_rerun_out/edaic_full_oof_repeats.npz",
+   "sha256": "6a0ccd7e6adaa3c89353c9e41858f594477ed84ba47a9876a18681c5b442e378"
+  },
+  "rerun_nested_repeats_json": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/pod_rerun_out/edaic_full_nested_repeats.json",
+   "sha256": "817e9d58ffab070287d97147d5775563be12c094be555e433339f899381ae96e"
+  },
+  "rerun_perclip_csv_mean_oof": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/pod_rerun_out/edaic_full_perclip.csv",
+   "sha256": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770"
+  },
+  "rerun_gap_csv_notused_convention": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/pod_rerun_out/edaic_full_gap.csv",
+   "sha256": "44f5d38adad63a9008568056a67ae64a1b1b70d9d1fa2ec7fa039f71dc025180"
+  },
+  "perclip_csv_per_repeat": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+   "sha256": "4ec65125609317c9d119a7eb03cd3d4090fec86ff362c458f5bcc8b171c6393e"
+  },
+  "summary_csv": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5.csv",
+   "sha256": "c5246186a20f9ed4aaaee007a9065745bf3af97ab6f99e7621cfd28c6c251b9f"
+  },
+  "gate_json": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_gate.json",
+   "sha256": "b04b976ce6d728ee24be541c76b5c54ca88048e0717423a0638d85c24fb8ae1a"
+  },
+  "boot_run_json": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_boot_run.json",
+   "sha256": "381137ee70e7ae80cc118bdd3c2d03ec35d722df4ee53c7e91a0c84536ca98a9"
+  },
+  "pod_env_json": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/pod_env.json",
+   "sha256": "9492fdd46dece70cd77e99897240bf573f77d114c499e9a5ebe4e6ccea9a4901"
+  },
+  "fragment": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/rows/T7b.tsv",
+   "sha256": "800e0bd96bc1793c8ce08d51b6b1381bf56c255b836898e2f6b5035e2e0e3b36"
+  },
+  "probe_log": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/logs/runA_default.log",
+   "sha256": "10cfca688daea1da1ef201be633069d0121f8550287cfa8b8fb7df1dec3891d5"
+  },
+  "boot_log": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/logs/T7b_boot.log",
+   "sha256": "d5f31517f627698614ce44e7f1a228fb57b42b63007323247443d11a70696bc7"
+  },
+  "boot_script": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T7b/T7b_boot.py",
+   "sha256": "6fe03c0cf4f0f6fc7b961f6caa94e6b4fa323ad15900bfae8a9f08db2de99c17"
+  }
+ }
+}

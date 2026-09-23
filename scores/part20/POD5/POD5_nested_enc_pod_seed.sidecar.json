@@ -1,0 +1,769 @@
+{
+ "result": "POD5_nested_enc_pod_seed",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/POD5_nested_enc_pod_seed.csv",
+ "pod_per_clip_csv": "/workspace/scores/part20/POD5/POD5_nested_enc_pod_seed.csv",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0), fresh per cell",
+  "unit": "speaker, resampled with replacement",
+  "interval": "percentile 2.5/97.5",
+  "paired": "one speaker draw per replicate for both sides"
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "cells": [
+  {
+   "id": "POD5_enc_pod_seed_overall",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, interviewer-free, overall",
+   "value": 0.7568461836497482,
+   "lo": 0.708190047114713,
+   "hi": 0.8067246434255868,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_enc_pod_seed_original_rerun_overall",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, original_rerun 468 windows, overall",
+   "value": 0.776129407206509,
+   "lo": 0.7244995959349548,
+   "hi": 0.8273161375237821,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_enc_pod_seed_diff_overall",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, paired original_rerun minus interviewer-free, overall",
+   "value": 0.01928322355676082,
+   "lo": -0.008864366382308761,
+   "hi": 0.05070067965367949,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_enc_pod_seed_conflict",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, interviewer-free, conflict",
+   "value": 0.6018481848184818,
+   "lo": 0.5042349895228884,
+   "hi": 0.7000535557437733,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_enc_pod_seed_original_rerun_conflict",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, original_rerun 468 windows, conflict",
+   "value": 0.5904070407040704,
+   "lo": 0.4839304334158337,
+   "hi": 0.7001219529013288,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_enc_pod_seed_diff_conflict",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, paired original_rerun minus interviewer-free, conflict",
+   "value": -0.011441144114411439,
+   "lo": -0.07658129460374133,
+   "hi": 0.04864042755490117,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_enc_pod_seed_agreement",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, interviewer-free, agreement",
+   "value": 0.8234395512591002,
+   "lo": 0.7746284408708396,
+   "hi": 0.8658678589850041,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_enc_pod_seed_original_rerun_agreement",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, original_rerun 468 windows, agreement",
+   "value": 0.8510721247563353,
+   "lo": 0.8050232142747156,
+   "hi": 0.8918731965770124,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_enc_pod_seed_diff_agreement",
+   "what": "Qwen2.5-Omni nested probe, encoder SUPPLEMENT, splits pitt_groupkfold5_pod_seed0..4_UNVERIFIED (paper pod json 0.7761), mean of per-repeat AUCs, paired original_rerun minus interviewer-free, agreement",
+   "value": 0.027632573497235136,
+   "lo": -0.001953808877662508,
+   "hi": 0.05782050902650936,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  }
+ ],
+ "command": "python3 nested_p20.py o25noinv_pitt_states.npz pitt_folds_part20.json noinv enc:pod_seed",
+ "sources": [
+  {
+   "path_pod": "/workspace/p20/work/noinv_enc_pod_seed_oof.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/noinv_enc_pod_seed_oof.csv",
+   "sha256_first_1MB": "635d018a09cf6d39f8f7b9f48a976680c3da9383583e4d1d1a710e210ab7a143"
+  },
+  {
+   "path_pod": "/workspace/p20/work/orig_enc_pod_seed_oof.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/orig_enc_pod_seed_oof.csv",
+   "sha256_first_1MB": "28cc42c1b8eb2d5f80d6ee1af51af5f40222bee74177aea2f74165e3ae9a672b"
+  },
+  {
+   "path_pod": "/root/p20/o25_pitt_states.npz",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256_first_1MB": "21d5beb3f6b520e54a418afb1d6ac106c88b7c9ce5b831bb465bf005cf8c46e7"
+  },
+  {
+   "path_pod": "/workspace/p20/work/o25noinv_pitt_states.npz",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/o25noinv_pitt_states.npz",
+   "sha256_first_1MB": "3a63386c7383a67e08a5c2c59b7dd52313cf2896749de91a868dc849cbeec2d7"
+  },
+  {
+   "path_pod": "/root/p20/scripts/pitt_folds_part20.json",
+   "path_mac": "",
+   "sha256_first_1MB": "f7d2320bd5fbf1cbaf6f37b2d86016f5c66e82318d5cf9a494a6f1145eb552f6"
+  },
+  {
+   "path_pod": "/root/p20/ref/omni_pitt_nested_repeats.json",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_nested_repeats.json",
+   "sha256_first_1MB": "dc4bb27a4c6cfd43ea8abe1b3c12a4718501a01951691bf64a4d9238cdf67cba"
+  }
+ ],
+ "created_utc": "2026-09-23T12:47:47Z",
+ "noinv_summary": {
+  "enc_mac_seed": {
+   "stream": "enc",
+   "fold_sets": [
+    "mac_seed0",
+    "mac_seed1",
+    "mac_seed2",
+    "mac_seed3",
+    "mac_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed0.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed1.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed2.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed3.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed4.csv"
+   ],
+   "per_repeat_auc": [
+    0.756,
+    0.7666,
+    0.7535,
+    0.7799,
+    0.7654
+   ],
+   "mean_auc": 0.7643,
+   "chosen_layers": {
+    "mac_seed0": [
+     22,
+     26,
+     31,
+     28,
+     28
+    ],
+    "mac_seed1": [
+     27,
+     31,
+     28,
+     31,
+     24
+    ],
+    "mac_seed2": [
+     29,
+     30,
+     26,
+     28,
+     22
+    ],
+    "mac_seed3": [
+     28,
+     30,
+     23,
+     30,
+     30
+    ],
+    "mac_seed4": [
+     24,
+     20,
+     31,
+     27,
+     30
+    ]
+   },
+   "n": 468,
+   "n_layers": 32,
+   "oof_csv": "/workspace/p20/work/noinv_enc_mac_seed_oof.csv"
+  },
+  "enc_pod_seed": {
+   "stream": "enc",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7493,
+    0.7613,
+    0.7625,
+    0.7669,
+    0.7443
+   ],
+   "mean_auc": 0.7568,
+   "chosen_layers": {
+    "pod_seed0": [
+     28,
+     26,
+     31,
+     31,
+     30
+    ],
+    "pod_seed1": [
+     28,
+     30,
+     26,
+     30,
+     31
+    ],
+    "pod_seed2": [
+     30,
+     19,
+     24,
+     19,
+     30
+    ],
+    "pod_seed3": [
+     25,
+     26,
+     31,
+     22,
+     24
+    ],
+    "pod_seed4": [
+     23,
+     30,
+     25,
+     22,
+     28
+    ]
+   },
+   "n": 468,
+   "n_layers": 32,
+   "oof_csv": "/workspace/p20/work/noinv_enc_pod_seed_oof.csv"
+  },
+  "llm_pod_seed": {
+   "stream": "llm",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.8015,
+    0.8075,
+    0.8182,
+    0.7836,
+    0.799
+   ],
+   "mean_auc": 0.802,
+   "chosen_layers": {
+    "pod_seed0": [
+     28,
+     10,
+     24,
+     9,
+     27
+    ],
+    "pod_seed1": [
+     23,
+     27,
+     9,
+     22,
+     28
+    ],
+    "pod_seed2": [
+     8,
+     8,
+     10,
+     9,
+     9
+    ],
+    "pod_seed3": [
+     10,
+     18,
+     11,
+     25,
+     25
+    ],
+    "pod_seed4": [
+     23,
+     9,
+     27,
+     10,
+     27
+    ]
+   },
+   "n": 468,
+   "n_layers": 29,
+   "oof_csv": "/workspace/p20/work/noinv_llm_pod_seed_oof.csv"
+  },
+  "ans_pod_seed": {
+   "stream": "ans",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7699,
+    0.7729,
+    0.7722,
+    0.7819,
+    0.7918
+   ],
+   "mean_auc": 0.7777,
+   "chosen_layers": {
+    "pod_seed0": [
+     16,
+     16,
+     21,
+     28,
+     2
+    ],
+    "pod_seed1": [
+     17,
+     2,
+     27,
+     14,
+     28
+    ],
+    "pod_seed2": [
+     25,
+     28,
+     17,
+     16,
+     15
+    ],
+    "pod_seed3": [
+     28,
+     4,
+     15,
+     16,
+     19
+    ],
+    "pod_seed4": [
+     15,
+     16,
+     27,
+     16,
+     27
+    ]
+   },
+   "n": 468,
+   "n_layers": 29,
+   "oof_csv": "/workspace/p20/work/noinv_ans_pod_seed_oof.csv"
+  },
+  "proj_pod_single": {
+   "stream": "proj",
+   "fold_sets": [
+    "pod_single"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod.csv"
+   ],
+   "per_repeat_auc": [
+    0.7591
+   ],
+   "mean_auc": 0.7591,
+   "chosen_layers": {
+    "pod_single": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "n": 468,
+   "n_layers": 1,
+   "oof_csv": "/workspace/p20/work/noinv_proj_pod_single_oof.csv"
+  }
+ },
+ "paper_json": {
+  "enc": {
+   "mean": 0.7761,
+   "repeats": 5,
+   "per_repeat": [
+    0.7921,
+    0.7937,
+    0.7652,
+    0.7778,
+    0.7518
+   ],
+   "n": 468,
+   "n_points": 32
+  },
+  "proj": {
+   "mean": 0.7507,
+   "repeats": 1,
+   "per_repeat": [
+    0.7507
+   ],
+   "n": 468,
+   "n_points": 1
+  },
+  "llm": {
+   "mean": 0.8032,
+   "repeats": 5,
+   "per_repeat": [
+    0.8135,
+    0.8046,
+    0.7985,
+    0.7961,
+    0.8031
+   ],
+   "n": 468,
+   "n_points": 29
+  },
+  "ans": {
+   "mean": 0.7636,
+   "repeats": 5,
+   "per_repeat": [
+    0.755,
+    0.7792,
+    0.7831,
+    0.7537,
+    0.7469
+   ],
+   "n": 468,
+   "n_points": 29
+  }
+ },
+ "original_side": "pod rerun of the same code on overnight2/part10/o25_pitt_states.npz; reproduces the paper per-repeat AUCs",
+ "orig_rerun_summary": {
+  "enc_mac_seed": {
+   "stream": "enc",
+   "fold_sets": [
+    "mac_seed0",
+    "mac_seed1",
+    "mac_seed2",
+    "mac_seed3",
+    "mac_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed0.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed1.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed2.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed3.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac_seed4.csv"
+   ],
+   "per_repeat_auc": [
+    0.7596,
+    0.7727,
+    0.7457,
+    0.7904,
+    0.7842
+   ],
+   "mean_auc": 0.7705,
+   "chosen_layers": {
+    "mac_seed0": [
+     23,
+     26,
+     27,
+     25,
+     27
+    ],
+    "mac_seed1": [
+     27,
+     31,
+     27,
+     27,
+     21
+    ],
+    "mac_seed2": [
+     21,
+     30,
+     26,
+     27,
+     21
+    ],
+    "mac_seed3": [
+     27,
+     27,
+     27,
+     10,
+     27
+    ],
+    "mac_seed4": [
+     21,
+     28,
+     24,
+     27,
+     25
+    ]
+   },
+   "n": 468,
+   "n_layers": 32,
+   "oof_csv": "/workspace/p20/work/orig_enc_mac_seed_oof.csv"
+  },
+  "enc_pod_seed": {
+   "stream": "enc",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7921,
+    0.7937,
+    0.7652,
+    0.7778,
+    0.7518
+   ],
+   "mean_auc": 0.7761,
+   "chosen_layers": {
+    "pod_seed0": [
+     27,
+     27,
+     27,
+     27,
+     27
+    ],
+    "pod_seed1": [
+     26,
+     27,
+     27,
+     27,
+     27
+    ],
+    "pod_seed2": [
+     27,
+     21,
+     27,
+     27,
+     10
+    ],
+    "pod_seed3": [
+     22,
+     27,
+     27,
+     27,
+     25
+    ],
+    "pod_seed4": [
+     14,
+     25,
+     27,
+     21,
+     27
+    ]
+   },
+   "n": 468,
+   "n_layers": 32,
+   "oof_csv": "/workspace/p20/work/orig_enc_pod_seed_oof.csv"
+  },
+  "llm_pod_seed": {
+   "stream": "llm",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.8135,
+    0.8046,
+    0.7985,
+    0.7961,
+    0.8031
+   ],
+   "mean_auc": 0.8032,
+   "chosen_layers": {
+    "pod_seed0": [
+     26,
+     10,
+     28,
+     27,
+     11
+    ],
+    "pod_seed1": [
+     11,
+     26,
+     28,
+     19,
+     27
+    ],
+    "pod_seed2": [
+     28,
+     27,
+     10,
+     18,
+     11
+    ],
+    "pod_seed3": [
+     11,
+     27,
+     26,
+     18,
+     8
+    ],
+    "pod_seed4": [
+     27,
+     26,
+     27,
+     10,
+     7
+    ]
+   },
+   "n": 468,
+   "n_layers": 29,
+   "oof_csv": "/workspace/p20/work/orig_llm_pod_seed_oof.csv"
+  },
+  "ans_pod_seed": {
+   "stream": "ans",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.755,
+    0.7792,
+    0.7831,
+    0.7537,
+    0.7469
+   ],
+   "mean_auc": 0.7636,
+   "chosen_layers": {
+    "pod_seed0": [
+     22,
+     13,
+     28,
+     16,
+     22
+    ],
+    "pod_seed1": [
+     22,
+     27,
+     22,
+     16,
+     22
+    ],
+    "pod_seed2": [
+     21,
+     18,
+     22,
+     27,
+     27
+    ],
+    "pod_seed3": [
+     22,
+     1,
+     27,
+     27,
+     1
+    ],
+    "pod_seed4": [
+     21,
+     5,
+     27,
+     10,
+     1
+    ]
+   },
+   "n": 468,
+   "n_layers": 29,
+   "oof_csv": "/workspace/p20/work/orig_ans_pod_seed_oof.csv"
+  },
+  "proj_pod_single": {
+   "stream": "proj",
+   "fold_sets": [
+    "pod_single"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod.csv"
+   ],
+   "per_repeat_auc": [
+    0.7669
+   ],
+   "mean_auc": 0.7669,
+   "chosen_layers": {
+    "pod_single": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "n": 468,
+   "n_layers": 1,
+   "oof_csv": "/workspace/p20/work/orig_proj_pod_single_oof.csv"
+  }
+ }
+}

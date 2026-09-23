@@ -1,0 +1,26 @@
+{
+ "result": "scores/part22/p22_validation_gate.json",
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/sync/gate/gate.json": "a844b299f3bfe3b1f1372a15135987a09089e36dd586899128951f09fe4538f2",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/sync/gate/gate_zeroshot_scores.csv": "34741c976b02f38cfcf038e3cbe4b4252f8051a05f9aef9a7e4df7faf5faf744",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/sync/extract_full.py": "b9262a04547b719a98593718a9f5016d3d355c0c43df5f5935a579fabc8dc949",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/edaic_full_perclip.csv": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.csv": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017"
+ },
+ "n": 10,
+ "seed": "n/a (deterministic forward pass; no resampling)",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "exact_command": "cd /workspace/p22/gate && WINDOW_S=0 python3 extract_full.py mf_gate10.csv /workspace/p22/gate/gate mdd",
+ "libs": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "python": "3.12.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA H200"
+ },
+ "dtype": "bfloat16",
+ "pod": "RunPod 8flz9sdjujokel H200"
+}

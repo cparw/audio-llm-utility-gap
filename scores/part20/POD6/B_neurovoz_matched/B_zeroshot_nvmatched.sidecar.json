@@ -1,0 +1,32 @@
+{
+ "result": "Qwen2.5-Omni zero-shot answer AUC, NeuroVoz age and sex matched subset (existing per-clip scores, not rerun)",
+ "auc": 0.6282,
+ "lo": 0.5584,
+ "hi": 0.6985,
+ "usable_draws": 2000,
+ "n": 907,
+ "n_speakers": 76,
+ "full_set_recomputed": {
+  "auc": 0.6951,
+  "lo": 0.6356,
+  "hi": 0.7519,
+  "n": 1270,
+  "paper": "0.6951"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "prompt_unique": 1,
+ "median_answer_mass": 0.9952118396759032,
+ "seed": "default_rng(0), 2000 draws, speakers with replacement",
+ "command": "/usr/local/bin/python3 scripts/b_cpu.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched",
+ "sources": [
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_clips.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_pairs.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_clips.csv": "e98aebe814f0eddd4975e3c5b660b0aebf27a1497a72a89753a2ff3310333bf8",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_pairs.csv": "803b5470d5ea35cd12a4e2b1012fa622a0ddf45c248856cb346b899698b2e6c4"
+ }
+}

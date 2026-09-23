@@ -1,0 +1,16 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/workspace/p16pod4b/mf_adress2020_orig.csv",
+ "condition": "ad",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 156,
+ "n_positive": 78,
+ "auc": 0.6272,
+ "median_mass": 0.9967,
+ "window_seconds": 30.0,
+ "dtype": "bfloat16",
+ "device": "cuda",
+ "encoder_layers": 32,
+ "llm_stages": 29,
+ "date": "2026-09-23"
+}

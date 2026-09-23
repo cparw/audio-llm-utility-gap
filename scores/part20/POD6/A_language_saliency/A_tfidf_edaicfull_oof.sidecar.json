@@ -1,0 +1,43 @@
+{
+ "result": "TF-IDF word logistic regression, out of fold, E-DAIC full interview",
+ "auc": 0.6778,
+ "lo": 0.5973,
+ "hi": 0.7549,
+ "usable_draws": 2000,
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "seed": "bootstrap numpy.random.default_rng(0), 2000 draws, speakers with replacement",
+ "model": "TfidfVectorizer() fit inside each training fold + LogisticRegression(C=1, class_weight='balanced', max_iter=5000)",
+ "model_id": "none (no neural model)",
+ "prompt": "none (no prompt; transcript text only)",
+ "folds": "/Users/chaitanyaparwatkar/Desktop/release/folds/edaic_groupkfold5_mac.csv",
+ "fold_note": "single-split _mac file: sklearn GroupKFold(5) as installed on the Mac; the split that reproduces the eGeMAPS baseline",
+ "transcript_source": "/Volumes/G-Drive Pro/paper work/paper1_local_runs/edaicfull_text.csv",
+ "vocab_size_per_fold": [
+  9072,
+  9235,
+  9276,
+  9000,
+  9129
+ ],
+ "labels_match_paper_transcript_run": "275/275 vs /Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaicfull_text.csv",
+ "pitt_text_equals_conflict_manifest": null,
+ "command": "/usr/local/bin/python3 scripts/a_lang_saliency.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/A_language_saliency",
+ "versions": {
+  "python": "3.10.2",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+ },
+ "sources": [
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/edaicfull_text.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/edaic_groupkfold5_mac.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaicfull_text.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/edaicfull_text.csv": "7574775aa9c38abc2caf6ca9fa1ae694c04aa470e1b700a4376eee86d4f915f5",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/edaic_groupkfold5_mac.csv": "165f9bb80fd3d355ece22d75695e576f84bdfdd15fea4f2ede798b192fe0c6a8",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaicfull_text.csv": "90330c3e463c2483363d507293e003cc2cef39f3dcb9f6e157b62a0f38d4ada4"
+ }
+}

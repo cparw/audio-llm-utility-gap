@@ -1,0 +1,64 @@
+{
+ "result": "paired AUC difference, balanced LoRA minus earlier LoRA (part16 POD2), Pitt 468",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_minus_earlier_lora_pitt_perclip.csv",
+ "n": 468,
+ "n_speakers": 228,
+ "seed": "default_rng(0) fresh per cell, one speaker draw per replicate scores both models",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_oof.csv": "2278a5cf199b4abc094539d797ed2e8d1b894fddcb4bc51daeb87c6a96b86ae2",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv": "dda1ef283d07bcad8238eb74718a50c05cd1f3f2a17c934f98922bb335a8f24d"
+ },
+ "results": {
+  "overall_2logit": {
+   "v": -0.10495931809376202,
+   "lo": -0.15772390168171946,
+   "hi": -0.05841791740318172,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000
+  },
+  "conflict_2logit": {
+   "v": 0.024972497249724945,
+   "lo": -0.06752179817038306,
+   "hi": 0.10768098146537147,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000
+  },
+  "agreement_2logit": {
+   "v": -0.13557703783267694,
+   "lo": -0.19773186859006273,
+   "hi": -0.08477771019648615,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000
+  },
+  "overall_multivariant": {
+   "v": -0.11073227431228205,
+   "lo": -0.16586270443679163,
+   "hi": -0.062381217207931924,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000
+  },
+  "conflict_multivariant": {
+   "v": 0.022002200220021972,
+   "lo": -0.07329922139993829,
+   "hi": 0.10542067736175406,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000
+  },
+  "agreement_multivariant": {
+   "v": -0.14365278275052706,
+   "lo": -0.2070430690054884,
+   "hi": -0.09197141409196219,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000
+  }
+ },
+ "command": "/usr/local/bin/python3 analyze_balanced.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2"
+}

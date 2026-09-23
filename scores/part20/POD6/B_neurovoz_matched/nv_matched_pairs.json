@@ -1,0 +1,47 @@
+{
+ "eligible_pd": 52,
+ "eligible_hc": 53,
+ "excluded": [
+  [
+   "108",
+   "PD",
+   "not in the 1270-clip paper set"
+  ],
+  [
+   "121",
+   "HC",
+   "sex or age: missing or ambiguous"
+  ],
+  [
+   "135",
+   "HC",
+   "sex or age: missing or ambiguous"
+  ]
+ ],
+ "max_matching_pairs": 38,
+ "greedy_pairs": 38,
+ "greedy_is_maximum": true,
+ "greedy_order": "PD speakers by number of eligible healthy partners ascending, ties by default_rng(0).permutation(PD ids); each takes the unmatched eligible healthy speaker with the smallest |age difference|, ties by the next default_rng(0).permutation(HC ids)",
+ "n_clips": 907,
+ "n_clips_pd": 454,
+ "n_clips_hc": 453,
+ "n_speakers": 76,
+ "sex_counts": {
+  "0": 20,
+  "1": 18
+ },
+ "mean_abs_age_diff": 2.1315789473684212,
+ "pd_age_mean": 69.57894736842105,
+ "hc_age_mean": 68.07894736842105,
+ "full_set": {
+  "pd_age_mean": 71.46153846153847,
+  "hc_age_mean": 64.0377358490566,
+  "pd_male_frac": 0.6153846153846154,
+  "hc_male_frac": 0.5094339622641509
+ },
+ "metadata": [
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/drive_data/spanish_neurovoz/zenodo_upload/metadata/data_pd.csv",
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/drive_data/spanish_neurovoz/zenodo_upload/metadata/data_hc.csv"
+ ],
+ "clip_list": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv"
+}

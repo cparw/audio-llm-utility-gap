@@ -1,0 +1,874 @@
+{
+ "task": "PART17 task 1: Table 2 E-DAIC agreement cells on 311 distinct segments",
+ "created": "2026-09-23T03:54:42",
+ "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_table2_distinct.py",
+ "seed": 0,
+ "draws": 2000,
+ "bootstrap": "speakers resampled with replacement from sorted unique ids via default_rng(0).integers(0,K,K), fresh rng per cell; percentile 2.5/97.5; distinct cell: a drawn speaker contributes its distinct agreement segments once per draw",
+ "auc": "rank formula scipy.stats.rankdata ties averaged; cross-checked against sklearn roc_auc_score to 1e-12",
+ "dedup_rule": "first occurrence of seg_uid in manifest row order (all repeats carry identical p_yes in every stream, so the rule is immaterial)",
+ "join": "positional after verifying clip id (set_speaker_seguid), label and speaker on all 966 rows",
+ "sources": [
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14_manifest_new.csv",
+   "sha256_first_1MB": "f919c2499098b178fb332cdce0cf9395484d96b4f199ac15480397658ab5fd7c"
+  },
+  {
+   "path": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256_first_1MB": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv",
+   "sha256_first_1MB": "3e118a11ec4be0daccf95265ff31253dbaf80d5442571ec12cad923a7da7c1ff"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv",
+   "sha256_first_1MB": "e09dc9a9a2d2f7564df393e8450f82ace9552aa2c1a25226bbecd0af6e7a9138"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv",
+   "sha256_first_1MB": "112f62ff61571312de50f6866c73fbcaca979b5f375f07c4a54280765c4bd2dc"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv",
+   "sha256_first_1MB": "6d392b1261472f2f35c43284d010cb536dabc5ff83e1f166afc9d0d7b0559100"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv",
+   "sha256_first_1MB": "8bce04f1ca9702151cb4550951e5df64fd2a369eb447c8fb53028d95a8f0b6fc"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv",
+   "sha256_first_1MB": "d9fdfcdf5fbde6cb25d1b57f419334beb2f3f376caf540c717dc0f3f53551cc0"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv",
+   "sha256_first_1MB": "14f25d3d5e9fe5e66c303413f297a79db2b79609e4301032dd23d9903f3729b9"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv",
+   "sha256_first_1MB": "3609d2133afca849030f41127f501308d534508c321fba344da326c9d9f17358"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD1/p14_o25_1a_joined.csv",
+   "sha256_first_1MB": "7d6a614d1e06c2ecc6f50bc8c4a47390319972337c84d77ae55cc626a80c8754"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD1/p14_q2a_1a_joined.csv",
+   "sha256_first_1MB": "0b9c7a425bc90197186ab9e5f2156da8ae6c878b61a904467d835e2899bd223b"
+  },
+  {
+   "path": "<authors-notes-not-released>",
+   "sha256_first_1MB": "54dc07982a3a5152cdf82a5ce08d5f1ef1be3d958d2b286c98a9c353874e86d5"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/paper1_final/AudioLLMHealthUtilityGap.tex",
+   "sha256_first_1MB": "41652c4cfd4929ea6d9b47604e0b31b2db026acdafa090d80f8b1e49e47b402a"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_table2_distinct.py",
+   "sha256_first_1MB": "9035010811021cc0470ee9369e80e19edf033c5e27bce5bb3b56c0a31332eeb3"
+  }
+ ],
+ "n": {
+  "conflict_rows": 483,
+  "agreement_rows_old": 483,
+  "agreement_distinct_new": 311
+ },
+ "n_speakers": 138,
+ "manifest_arm_stats": {
+  "conflict": {
+   "rows": 483,
+   "distinct_seg_uid": 483,
+   "distinct_speaker_start_end": 483,
+   "distinct_text": 483,
+   "speakers": 138,
+   "pos_rows": 205,
+   "max_attr_variants_within_seg": 1
+  },
+  "agreement": {
+   "rows": 483,
+   "distinct_seg_uid": 311,
+   "distinct_speaker_start_end": 311,
+   "distinct_text": 311,
+   "speakers": 138,
+   "pos_rows": 205,
+   "max_attr_variants_within_seg": 1
+  }
+ },
+ "agreement_repeat_distribution": {
+  "1": 208,
+  "2": 63,
+  "3": 21,
+  "4": 12,
+  "5": 4,
+  "6": 3
+ },
+ "pitt_manifest_arms": {
+  "agreement": {
+   "rows": 322,
+   "distinct_segment_path": 322
+  },
+  "conflict": {
+   "rows": 146,
+   "distinct_segment_path": 146
+  }
+ },
+ "alignment": {
+  "o25": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  },
+  "q2a": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  },
+  "q3o": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  },
+  "af2": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  },
+  "af3": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  },
+  "kimi": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  },
+  "o25t": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  },
+  "q2at": {
+   "rows": 966,
+   "id_match": 966,
+   "label_match": 966,
+   "speaker_match": 966,
+   "nan_p": 0
+  }
+ },
+ "pod1_crosscheck": {
+  "o25t": {
+   "rows": 966,
+   "key_match": 966,
+   "max_abs_diff_text": 0.0,
+   "max_abs_diff_audio": 0.0
+  },
+  "q2at": {
+   "rows": 966,
+   "key_match": 966,
+   "max_abs_diff_text": 0.0,
+   "max_abs_diff_audio": 0.0
+  }
+ },
+ "paper_table2_source": {
+  "transcript": "<authors-notes-not-released>",
+  "line": 1913,
+  "timestamp": "2026-09-23T05:58:23.554Z",
+  "rows": {
+   "Qwen2-Audio": [
+    "0.23",
+    "0.95",
+    "0.41",
+    "0.70"
+   ],
+   "Qwen2.5-Omni": [
+    "0.22",
+    "0.95",
+    "0.53",
+    "0.71"
+   ],
+   "Qwen3-Omni": [
+    "0.30",
+    "0.96",
+    "0.61",
+    "0.82"
+   ],
+   "Audio Flamingo 2": [
+    "0.53",
+    "0.61",
+    "0.63",
+    "0.55"
+   ],
+   "Audio Flamingo 3": [
+    "0.42",
+    "0.81",
+    "0.61",
+    "0.59"
+   ],
+   "Kimi-Audio": [
+    "0.53",
+    "0.87",
+    "0.72",
+    "0.72"
+   ]
+  }
+ },
+ "ondisk_tex_table2_stale": {
+  "SALMONN": [
+   "0.29",
+   "0.85"
+  ],
+  "DiVA": [
+   "0.30",
+   "0.70"
+  ],
+  "Qwen2.5-Omni": [
+   "0.31",
+   "0.85"
+  ],
+  "Qwen3-Omni": [
+   "0.35",
+   "0.87"
+  ],
+  "Qwen2-Audio": [
+   "0.35",
+   "0.92"
+  ],
+  "Audio Flamingo 3": [
+   "0.36",
+   "0.93"
+  ],
+  "MiMo-Audio": [
+   "0.47",
+   "0.82"
+  ],
+  "Kimi-Audio": [
+   "0.52",
+   "0.87"
+  ],
+  "Audio Flamingo 2": [
+   "0.55",
+   "0.57"
+  ],
+  "Qwen2-Audio#2": [
+   "0.41",
+   "0.70"
+  ],
+  "Qwen2.5-Omni#2": [
+   "0.44",
+   "0.77"
+  ]
+ },
+ "model_ids": {
+  "o25": "Qwen/Qwen2.5-Omni-7B",
+  "q2a": "Qwen/Qwen2-Audio-7B-Instruct",
+  "q3o": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "af2": "nvidia/audio-flamingo-2",
+  "af3": "nvidia/audio-flamingo-3-hf",
+  "kimi": "moonshotai/Kimi-Audio-7B-Instruct",
+  "o25t": "Qwen/Qwen2.5-Omni-7B",
+  "q2at": "Qwen/Qwen2-Audio-7B-Instruct"
+ },
+ "results": [
+  {
+   "key": "o25",
+   "model": "Qwen2.5-Omni",
+   "stream": "audio",
+   "conflict": {
+    "value": 0.22177575013160203,
+    "lo": 0.1828646149784432,
+    "hi": 0.2632112160440995,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.9481663449728023,
+    "lo": 0.9038819299212365,
+    "hi": 0.9827866513474888,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.9646506874767744,
+    "lo": 0.93758089375461,
+    "hi": 0.9857466737457867,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.7428749373451724,
+    "lo": -0.7868938951339735,
+    "hi": -0.6944484040256372,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.7263905948412003,
+    "lo": -0.77862162646955,
+    "hi": -0.6654980428862605,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": "0.95",
+   "paper_source": "live tex pasted 2026-09-23T05:58:23.554Z (transcript line 1913) Table 2 Depression Agree.",
+   "old_2dp": "0.95",
+   "new_2dp": "0.96",
+   "changes_at_2dp": "yes",
+   "old_reproduces_expected": true,
+   "old_expected": 0.9482,
+   "near_rounding_boundary": false,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  },
+  {
+   "key": "q2a",
+   "model": "Qwen2-Audio",
+   "stream": "audio",
+   "conflict": {
+    "value": 0.22802246008071592,
+    "lo": 0.18162758136357438,
+    "hi": 0.27816398770800566,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.9477803123354974,
+    "lo": 0.9127906780189963,
+    "hi": 0.9761575906585105,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.9608416945373467,
+    "lo": 0.9351371712656382,
+    "hi": 0.9813872399178472,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.7328192344566308,
+    "lo": -0.7779965200759946,
+    "hi": -0.6837209048903733,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.7197578522547815,
+    "lo": -0.768864916905239,
+    "hi": -0.6678768602771575,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": "0.95",
+   "paper_source": "live tex pasted 2026-09-23T05:58:23.554Z (transcript line 1913) Table 2 Depression Agree.",
+   "old_2dp": "0.95",
+   "new_2dp": "0.96",
+   "changes_at_2dp": "yes",
+   "old_reproduces_expected": true,
+   "old_expected": 0.9478,
+   "near_rounding_boundary": false,
+   "model_id": "Qwen/Qwen2-Audio-7B-Instruct",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  },
+  {
+   "key": "q3o",
+   "model": "Qwen3-Omni-30B-A3B",
+   "stream": "audio",
+   "conflict": {
+    "value": 0.30075451833655026,
+    "lo": 0.24541840607781334,
+    "hi": 0.36412393684799244,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.9637655729075276,
+    "lo": 0.9335719854622999,
+    "hi": 0.9864173654244307,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.9726867335562988,
+    "lo": 0.9507233379191542,
+    "hi": 0.9903566831495668,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.6719322152197484,
+    "lo": -0.7266207921961361,
+    "hi": -0.6105302443655257,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.6630110545709773,
+    "lo": -0.7192080439115682,
+    "hi": -0.6029558941918016,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": "0.96",
+   "paper_source": "live tex pasted 2026-09-23T05:58:23.554Z (transcript line 1913) Table 2 Depression Agree.",
+   "old_2dp": "0.96",
+   "new_2dp": "0.97",
+   "changes_at_2dp": "yes",
+   "old_reproduces_expected": true,
+   "old_expected": 0.9638,
+   "near_rounding_boundary": false,
+   "model_id": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  },
+  {
+   "key": "af2",
+   "model": "Audio Flamingo 2",
+   "stream": "audio",
+   "conflict": {
+    "value": 0.5285664151605545,
+    "lo": 0.45115123572553095,
+    "hi": 0.6014774907447251,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.6082997017020529,
+    "lo": 0.5126419116121382,
+    "hi": 0.699717671324129,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.6296915644741732,
+    "lo": 0.5451010146023844,
+    "hi": 0.70865997788914,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.10112514931361871,
+    "lo": -0.16472734981618792,
+    "hi": -0.0383837623489771,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.07973328654149847,
+    "lo": -0.1487992377975317,
+    "hi": -0.0103558893697045,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": "0.61",
+   "paper_source": "live tex pasted 2026-09-23T05:58:23.554Z (transcript line 1913) Table 2 Depression Agree.",
+   "old_2dp": "0.61",
+   "new_2dp": "0.63",
+   "changes_at_2dp": "yes",
+   "old_reproduces_expected": true,
+   "old_expected": 0.6083,
+   "near_rounding_boundary": false,
+   "model_id": "nvidia/audio-flamingo-2",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  },
+  {
+   "key": "af3",
+   "model": "Audio Flamingo 3",
+   "stream": "audio",
+   "conflict": {
+    "value": 0.4235304439375329,
+    "lo": 0.36058593455645144,
+    "hi": 0.48800955506309884,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.8095279873662046,
+    "lo": 0.7446751853361018,
+    "hi": 0.8696447182860588,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.8424842066146414,
+    "lo": 0.7963059741174907,
+    "hi": 0.8854357583837914,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.4189537626771085,
+    "lo": -0.4877569130185091,
+    "hi": -0.3461386092550403,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.38599754342867165,
+    "lo": -0.46751305463097204,
+    "hi": -0.301779009689689,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": "0.81",
+   "paper_source": "live tex pasted 2026-09-23T05:58:23.554Z (transcript line 1913) Table 2 Depression Agree.",
+   "old_2dp": "0.81",
+   "new_2dp": "0.84",
+   "changes_at_2dp": "yes",
+   "old_reproduces_expected": true,
+   "old_expected": 0.8095,
+   "near_rounding_boundary": false,
+   "model_id": "nvidia/audio-flamingo-3-hf",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  },
+  {
+   "key": "kimi",
+   "model": "Kimi-Audio",
+   "stream": "audio",
+   "conflict": {
+    "value": 0.5258466397613616,
+    "lo": 0.4500658158013635,
+    "hi": 0.5977139894419304,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.874416564309528,
+    "lo": 0.8172421282056938,
+    "hi": 0.9223341202942702,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.8936269044964698,
+    "lo": 0.8479417912404931,
+    "hi": 0.9328908308645215,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.36778026473510816,
+    "lo": -0.43943881868036727,
+    "hi": -0.30200720169061257,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.3485699245481664,
+    "lo": -0.4248326792634247,
+    "hi": -0.2795167089373253,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": "0.87",
+   "paper_source": "live tex pasted 2026-09-23T05:58:23.554Z (transcript line 1913) Table 2 Depression Agree.",
+   "old_2dp": "0.87",
+   "new_2dp": "0.89",
+   "changes_at_2dp": "yes",
+   "old_reproduces_expected": true,
+   "old_expected": 0.8744,
+   "near_rounding_boundary": false,
+   "model_id": "moonshotai/Kimi-Audio-7B-Instruct",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  },
+  {
+   "key": "o25t",
+   "model": "Qwen2.5-Omni",
+   "stream": "transcript",
+   "conflict": {
+    "value": 0.14978066327425865,
+    "lo": 0.11309219358834663,
+    "hi": 0.18867861454580095,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.9596244955255308,
+    "lo": 0.9305849101229896,
+    "hi": 0.982335812416036,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.9620494240059457,
+    "lo": 0.934488731540365,
+    "hi": 0.9822039105028112,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.8122687607316871,
+    "lo": -0.8536030745855828,
+    "hi": -0.7691985888431185,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.8098438322512721,
+    "lo": -0.853274957501352,
+    "hi": -0.7649167652673153,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": null,
+   "paper_source": null,
+   "old_2dp": "0.96",
+   "new_2dp": "0.96",
+   "changes_at_2dp": "no",
+   "old_reproduces_expected": true,
+   "old_expected": 0.9596,
+   "near_rounding_boundary": false,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  },
+  {
+   "key": "q2at",
+   "model": "Qwen2-Audio",
+   "stream": "transcript",
+   "conflict": {
+    "value": 0.2358834883312862,
+    "lo": 0.18509601770678014,
+    "hi": 0.2885972332070994,
+    "n_rows": 483,
+    "n_segments": 483,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_OLD_483rows": {
+    "value": 0.9081242323214599,
+    "lo": 0.8515297543525598,
+    "hi": 0.9547206324610343,
+    "n_rows": 483,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 205,
+    "n_neg": 278,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "agreement_NEW_311distinct": {
+    "value": 0.9199182460052026,
+    "lo": 0.8790755510678283,
+    "hi": 0.956004690828911,
+    "n_rows": 311,
+    "n_segments": 311,
+    "n_spk": 138,
+    "usable": 2000,
+    "n_pos": 104,
+    "n_neg": 207,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv"
+   },
+   "paired_conflict_minus_agreement_NEW_311distinct": {
+    "value": -0.6840347576739163,
+    "lo": -0.7515693005795142,
+    "hi": -0.6161232526281635,
+    "n_rows": 794,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paired_conflict_minus_agreement_OLD_483rows": {
+    "value": -0.6722407439901736,
+    "lo": -0.7449229906258876,
+    "hi": -0.590259242168973,
+    "n_rows": 966,
+    "n_segments": 794,
+    "n_spk": 138,
+    "usable": 2000,
+    "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv"
+   },
+   "paper_value": null,
+   "paper_source": null,
+   "old_2dp": "0.91",
+   "new_2dp": "0.92",
+   "changes_at_2dp": "yes",
+   "old_reproduces_expected": true,
+   "old_expected": 0.9081,
+   "near_rounding_boundary": false,
+   "model_id": "Qwen/Qwen2-Audio-7B-Instruct",
+   "source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv",
+   "max_abs_pyes_diff_among_repeats": 0.0
+  }
+ ],
+ "outputs": [
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_table2_distinct.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_perclip_all966.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/rows/T1.tsv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_table2_distinct.json",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T1_run.log"
+ ]
+}

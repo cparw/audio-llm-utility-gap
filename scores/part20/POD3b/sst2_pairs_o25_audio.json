@@ -1,0 +1,112 @@
+{
+ "result_file": "/workspace/scores/part20/POD3b/sst2_pairs_o25_audio.csv",
+ "result_file_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3b/sst2_pairs_o25_audio.csv",
+ "results": {
+  "conflict": {
+   "what": "conflict arm AUC",
+   "value": 0.46194420276582104,
+   "lo": 0.4165369792737343,
+   "hi": 0.5102493846117783,
+   "n": 1334,
+   "n_distinct_segments": 1334,
+   "n_speakers": 162,
+   "kind": "auc",
+   "usable_draws": 2000,
+   "n_pos": 358
+  },
+  "agreement_all": {
+   "what": "agreement arm AUC, all rows",
+   "value": 0.8316352230057698,
+   "lo": 0.7765840798246911,
+   "hi": 0.8794666578424294,
+   "n": 1334,
+   "n_distinct_segments": 799,
+   "n_speakers": 162,
+   "kind": "auc",
+   "usable_draws": 2000,
+   "n_pos": 358
+  },
+  "agreement_distinct": {
+   "what": "agreement arm AUC, distinct segments",
+   "value": 0.8553697350867162,
+   "lo": 0.8199397955261525,
+   "hi": 0.8884535992315604,
+   "n": 799,
+   "n_distinct_segments": 799,
+   "n_speakers": 162,
+   "kind": "auc",
+   "usable_draws": 2000,
+   "n_pos": 216
+  },
+  "diff_conflict_minus_agreement_all": {
+   "what": "paired conflict minus agreement (all rows)",
+   "value": -0.3696910202399487,
+   "lo": -0.42692860857195963,
+   "hi": -0.3073268668681941,
+   "n": 2668,
+   "n_distinct_segments": 2133,
+   "n_speakers": 162,
+   "kind": "diff",
+   "usable_draws": 2000
+  },
+  "diff_conflict_minus_agreement_distinct": {
+   "what": "paired conflict minus agreement (distinct agreement segments)",
+   "value": -0.39342553232089517,
+   "lo": -0.44204601371955055,
+   "hi": -0.34097337929099714,
+   "n": 2133,
+   "n_distinct_segments": 2133,
+   "n_speakers": 162,
+   "kind": "diff",
+   "usable_draws": 2000
+  }
+ },
+ "n_rows": 2668,
+ "n_speakers": 162,
+ "n_distinct_segments": 2133,
+ "median_answer_mass": 0.9965194166,
+ "min_answer_mass": 0.987832129,
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "prompt_unique": 1,
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "seed": 0,
+ "bootstrap": "2000 draws, fresh numpy.random.default_rng(0) per cell, speakers resampled with replacement, percentile 2.5/97.5; differences paired (one speaker draw per replicate)",
+ "auc": "rank formula, scipy.stats.rankdata ties averaged",
+ "scoring_note": "each distinct segment scored once (deterministic forward pass, rerun max diff 0.0 on this pod) and its p_yes joined to every manifest row that uses it",
+ "sources": {
+  "/workspace/p20/M2_distilbert_manifest.csv": {
+   "sha256_first_1MB": "f93e0a32bf2c7f8b75a53fa80373d6f7190b61afa2332ab2da0f1f49c58eddee"
+  },
+  "/workspace/p20/out/m2_shard0.csv": {
+   "sha256_first_1MB": "494dd313da2a86affb34dd99ddde295b60f55eb18d59743844bb2f6e682099b7"
+  },
+  "/workspace/p20/out/m2_shard1.csv": {
+   "sha256_first_1MB": "25f1efa4ac1bb827ece1d9c62acbc60e83f548c6ff88352880b4ebbc6a4e2ebd"
+  },
+  "/workspace/p20/out/m2_shard2.csv": {
+   "sha256_first_1MB": "0364a4335da0abe8b48de3b3d0dd61852a422023d30993ef76f385975310ed25"
+  },
+  "/workspace/p20/out/m2_shard3.csv": {
+   "sha256_first_1MB": "dfaa8ec9c9efb9797df936844d383921c825cfce1e45bd4dc72983ef1533067e"
+  },
+  "/workspace/p20/p20_score.py": {
+   "sha256_first_1MB": "81d3846e90a2b88052021affb7927878fa982dfe0697e9a4debdb278abe6c10b"
+  },
+  "/workspace/p20/cut_segs_p20.py": {
+   "sha256_first_1MB": "196adfc426505067a9fe52295265ebd2b3c4fb9b63a5f7791493670f4ab45052"
+  },
+  "/workspace/p20/cut_list.csv": {
+   "sha256_first_1MB": "70fbc086e4aa0e3a0f0b6a62df63c20fa1d385480990e9f523a0f81e29e301a9"
+  },
+  "/workspace/p20/m2_distinct_manifest.csv": {
+   "sha256_first_1MB": "7dad31355be992ab82d21f27aa0d5e228218223571df5b045db22b94b800c161"
+  },
+  "/workspace/p20/val20.csv": {
+   "sha256_first_1MB": "d40253ae97bccb796aeb71f60f4d58cc3af500ac3f152005e2210e4b8c05dbfe"
+  }
+ },
+ "command": "python3 p20_analyze.py M2_distilbert_manifest.csv out/m2_shard*.csv /workspace/scores/part20/POD3b/sst2_pairs_o25_audio POD3b_sst2_o25_audio /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3b p20_score.py cut_segs_p20.py cut_list.csv m2_distinct_manifest.csv val20.csv",
+ "date": "2026-09-23T12:23:24.483981Z"
+}
