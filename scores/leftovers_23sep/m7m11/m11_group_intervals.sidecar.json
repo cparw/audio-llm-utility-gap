@@ -1,0 +1,23 @@
+{
+ "task": "m7m11 (b): M11 KCL group-level intervals, cause and fix",
+ "cause": "M11_kcl_wer.py boot_mean() resamples only the speakers of the summarised group (N=16 PD or 21 control, fresh rng(0) per cell); M11_verify.py and verify/M11_verify.py (mode all37) resample all 37 speakers from one rng(0) stream and keep the group's rows, so the group size varies per draw. Different estimators, not an arithmetic error. M11_robust.py used the all-37 scheme, so rows/M11.tsv mixed both.",
+ "which_was_wrong": "The verifier (and M11_robust.py) for one-group cells: they did not resample the speakers the original script's cell used, which the brief's rule requires. The main script's group-mean intervals stand. The six M11_robust.py group intervals (MEDIAN, >=20 words, POOLED) are recomputed here under the same rule, and the group rows now carry n = 16 or 21 (rows/M11.tsv printed n = 37 for the group means).",
+ "rule": "fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over the unique sorted speaker ids of the cell; one-group cell: that group's speakers (>=20-word rows: that group's speakers inside the subset); difference: the cell's speakers (37, or the 31 inside the >=20-word subset), same idx; 2000 draws; percentiles 2.5/97.5; a draw is dropped only if a group is empty (count in usable_draws)",
+ "new_rows": "paired PD minus control intervals for MEDIAN, >=20 words and POOLED did not exist before (rows/M11.tsv had the point only); added under the paired rule",
+ "command": "/usr/local/bin/python3 'scripts/leftovers_23sep/m7m11/m11_group_intervals.py'",
+ "env": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "pandas": "2.3.3",
+  "machine": "arm64"
+ },
+ "inputs_sha256": {
+  "<local data dir>/release/edaic_rerun/part16/M11_kcl_wer.csv": "76d903720ab76e3eb2453a58761a270e49630c183a2a07fd2491b510614133e2",
+  "<local data dir>/release/edaic_rerun/part16/rows/M11.tsv": "8a90f1767b1901be22f2334c3384d53ea1a5460efd09984606937164569e0565"
+ },
+ "n": 37,
+ "n_pd": 16,
+ "n_control": 21,
+ "out_csv": "scores/leftovers_23sep/m7m11/m11_group_intervals.csv"
+}
