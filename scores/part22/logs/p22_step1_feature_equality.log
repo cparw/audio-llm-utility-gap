@@ -1,0 +1,21 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+200 s clip: paper vs truncation off: same shape True max|diff| 0.0 input_ids equal True
+900 s clip vs same clip cut at 300 s, both paper call: shape (128, 30000) (128, 30000) max|diff| 0.0 input_ids equal True
+900 s clip, truncation off, first 30000 frames vs paper call: max|diff| 0.4473233222961426 frac frames changed 0.0032333333333333333
+900 s stationary clip, truncation off, first 30000 frames vs paper call: max|diff| 0.0153542160987854
+FEATURE_EQUALITY_DONE
+Exception ignored in atexit callback: <function dump_compile_times at 0x1321e1360>
+Traceback (most recent call last):
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 910, in dump_compile_times
+    log.info(compile_times(repr="str", aggregate=True))
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 896, in compile_times
+    out += tabulate(rows, headers=("Function", "Runtimes (s)"))
+  File "<local python site-packages>/torch/_dynamo/utils.py", line 246, in tabulate
+    return tabulate.tabulate(rows, headers=headers)
+AttributeError: module 'tabulate' has no attribute 'tabulate'

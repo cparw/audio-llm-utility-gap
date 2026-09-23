@@ -1,0 +1,18 @@
+115254a61c16e76f1d48742406dfc6e941b7143d9b69d91962cbcddde2d06398  models/qwen2_5_omni/processing_qwen2_5_omni.py
+976d3ac0cf130b70f52f7fa5a21ae4913aa88554afc74dd42962087ee6eaa5e2  models/qwen2_5_omni/modeling_qwen2_5_omni.py
+dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb  models/whisper/feature_extraction_whisper.py
+db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d  feature_extraction_sequence_utils.py
+d0baaf792cb7c441b73c11b71ac5d5e601de432b8b6d93f5c483ad88668fcee0  feature_extraction_utils.py
+53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5  processing_utils.py
+b86b1145881a8582a57189d3e92790a744e7df8b0d21bbdcedcf64816cb673bb  models/auto/feature_extraction_auto.py
+
+accelerate==1.15.0
+huggingface_hub==1.32.0
+librosa==1.0.0
+numpy==2.1.2
+soundfile==0.14.0
+torch==2.8.0+cu128
+torchaudio==2.8.0+cu128
+torchvision==0.23.0+cu128
+transformers==5.17.0
+NVIDIA H200, 570.195.03
