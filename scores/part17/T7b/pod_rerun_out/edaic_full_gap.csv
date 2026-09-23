@@ -1,0 +1,10 @@
+id,what,value,lo,hi,n,n_spk,excludes_zero,usable_draws
+edaic_full_zeroshot_answer,Qwen2.5-Omni zero-shot answer AUC,0.8278,0.7703,0.8822,275,275,,2000
+edaic_full_probe_enc,encoder probe AUC (per-clip OOF averaged over repeats),0.5916,0.511,0.6706,275,275,,2000
+edaic_full_probe_proj,projector probe AUC (per-clip OOF averaged over repeats),0.5631,0.479,0.6478,275,275,,2000
+edaic_full_probe_llm,LM probe AUC (per-clip OOF averaged over repeats),0.7088,0.6232,0.7874,275,275,,2000
+edaic_full_probe_ans,answer-state probe AUC (per-clip OOF averaged over repeats),0.7748,0.7041,0.8387,275,275,,2000
+edaic_full_gap_llm_minus_answer,LM probe minus zero-shot answer (paired),-0.119,-0.1995,-0.0478,275,275,yes,2000
+edaic_full_gap_enc_minus_answer,encoder probe minus zero-shot answer (paired),-0.2361,-0.3272,-0.1394,275,275,yes,2000
+edaic_full_gap_ans_minus_answer,answer-state probe minus zero-shot answer (paired),-0.053,-0.1046,-0.0049,275,275,yes,2000
+edaic_full_gap_proj_minus_answer,projector probe minus zero-shot answer (paired),-0.2646,-0.3575,-0.1667,275,275,yes,2000

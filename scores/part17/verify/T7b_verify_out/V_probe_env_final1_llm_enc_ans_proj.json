@@ -1,0 +1,52 @@
+{
+ "env": {
+  "python": "3.12.3",
+  "machine": "x86_64",
+  "system": "Linux",
+  "sklearn": "1.9.1",
+  "numpy": "2.1.2",
+  "scipy": "1.18.1",
+  "blas": [
+   [
+    "openmp",
+    null,
+    128
+   ],
+   [
+    "openblas",
+    "0.3.27",
+    64
+   ],
+   [
+    "openblas",
+    "0.3.31.dev",
+    64
+   ]
+  ]
+ },
+ "seconds": 21.720160007476807,
+ "stages": [
+  "llm",
+  "enc",
+  "ans",
+  "proj"
+ ],
+ "tag": "final1",
+ "inner_threads": 1,
+ "final_threads": "1",
+ "final_blas_main_process": [
+  [
+   "openmp",
+   128
+  ],
+  [
+   "openblas",
+   64
+  ],
+  [
+   "openblas",
+   64
+  ]
+ ],
+ "njobs": 14
+}
