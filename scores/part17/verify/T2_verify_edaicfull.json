@@ -1,0 +1,226 @@
+{
+ "files": {
+  "0": {
+   "file": "edaic_full_groupkfold5_shuffle_rs0.csv",
+   "rows": 275,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "838978c629b24570fa39600fcc2cffbe4d07d18942196beb10f7d013c95987fb",
+   "equals_sklearn_shuffle_rs": true
+  },
+  "1": {
+   "file": "edaic_full_groupkfold5_shuffle_rs1.csv",
+   "rows": 275,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "9f005e42c7edd3a938027f78b21ee223e031f53f097cd9956f5686ac54a6a749",
+   "equals_sklearn_shuffle_rs": true
+  },
+  "2": {
+   "file": "edaic_full_groupkfold5_shuffle_rs2.csv",
+   "rows": 275,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "7f806a02c3f967af96cece42ee73d8c0663b92a1ba54eba30eb02827d413acfc",
+   "equals_sklearn_shuffle_rs": true
+  },
+  "3": {
+   "file": "edaic_full_groupkfold5_shuffle_rs3.csv",
+   "rows": 275,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "23b99947912fb847c4e316cc5dfe07d9e9ce3ca1a5f588dbc05188dd9304150d",
+   "equals_sklearn_shuffle_rs": true
+  },
+  "4": {
+   "file": "edaic_full_groupkfold5_shuffle_rs4.csv",
+   "rows": 275,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "df177992a39ea2baa4b92d44ceafe02d282bf8e6de4fad2d691585e279aa4bc3",
+   "equals_sklearn_shuffle_rs": true
+  }
+ },
+ "streams": {
+  "enc": {
+   "maxabs_mean_refit_vs_saved": 0.005604862349405326,
+   "median_abs": 0.0002713180411833549,
+   "maxabs_unshuffled_contrast": 0.6168233377779876,
+   "per_repeat_auc_refit": [
+    0.5963,
+    0.5826,
+    0.5966,
+    0.561,
+    0.6061
+   ],
+   "per_repeat_auc_saved": [
+    0.5964,
+    0.5826,
+    0.5962,
+    0.5608,
+    0.606
+   ],
+   "auc_of_mean_refit": {
+    "mw": 0.591489,
+    "trap": 0.591489,
+    "agree_4dp": true
+   },
+   "auc_of_mean_saved_json": 0.5916,
+   "auc_of_mean_saved_csv": {
+    "mw": 0.591634,
+    "trap": 0.591634,
+    "agree_4dp": true
+   }
+  },
+  "proj": {
+   "maxabs_mean_refit_vs_saved": 0.005110548205332299,
+   "median_abs": 0.0003529766534809062,
+   "maxabs_unshuffled_contrast": 0.8589307250469795,
+   "per_repeat_auc_refit": [
+    0.5513,
+    0.5618,
+    0.5794,
+    0.5655,
+    0.5472
+   ],
+   "per_repeat_auc_saved": [
+    0.551,
+    0.5618,
+    0.5795,
+    0.5653,
+    0.5474
+   ],
+   "auc_of_mean_refit": {
+    "mw": 0.563506,
+    "trap": 0.563506,
+    "agree_4dp": true
+   },
+   "auc_of_mean_saved_json": 0.5631,
+   "auc_of_mean_saved_csv": {
+    "mw": 0.563143,
+    "trap": 0.563143,
+    "agree_4dp": true
+   }
+  },
+  "llm": {
+   "maxabs_mean_refit_vs_saved": 0.024009331247045462,
+   "median_abs": 0.0003387428853578456,
+   "maxabs_unshuffled_contrast": 0.6330706794810912,
+   "per_repeat_auc_refit": [
+    0.6915,
+    0.7055,
+    0.6887,
+    0.7057,
+    0.7072
+   ],
+   "per_repeat_auc_saved": [
+    0.6918,
+    0.7062,
+    0.6893,
+    0.7055,
+    0.7078
+   ],
+   "auc_of_mean_refit": {
+    "mw": 0.708424,
+    "trap": 0.708424,
+    "agree_4dp": true
+   },
+   "auc_of_mean_saved_json": 0.7088,
+   "auc_of_mean_saved_csv": {
+    "mw": 0.708786,
+    "trap": 0.708786,
+    "agree_4dp": true
+   }
+  },
+  "ans": {
+   "maxabs_mean_refit_vs_saved": 0.023293128867411056,
+   "median_abs": 0.00045975633526573745,
+   "maxabs_unshuffled_contrast": 0.6217820885434371,
+   "per_repeat_auc_refit": [
+    0.7563,
+    0.7304,
+    0.742,
+    0.7226,
+    0.7666
+   ],
+   "per_repeat_auc_saved": [
+    0.755,
+    0.7302,
+    0.7418,
+    0.7225,
+    0.7679
+   ],
+   "auc_of_mean_refit": {
+    "mw": 0.775192,
+    "trap": 0.775192,
+    "agree_4dp": true
+   },
+   "auc_of_mean_saved_json": 0.7748,
+   "auc_of_mean_saved_csv": {
+    "mw": 0.774757,
+    "trap": 0.774757,
+    "agree_4dp": true
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+pod-written: {'n': 468, 'fold_agree': 468, 'speaker_agree': 468, 'mac_file_agree': 125} {'n': 275, 'fold_agree_pod_file': 275, 'fold_agree_mac_file': 20}
+{'id': 'T2_pitt_single_mac_q2a_probe2_pitt', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie min 0.906; layers re-derived True; sk_eq True'}
+{'id': 'T2_pitt_single_mac_egemaps_pitt', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie 0.802'}
+{'id': 'T2_adresso_single_mac_q2a_probe2_adresso', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie min 0.875; layers re-derived True; sk_eq True'}
+{'id': 'T2_adresso_single_mac_egemaps_adresso', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie 0.918'}
+{'id': 'T2_adress2020_single_mac_q2a_probe2_adress2020', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie min 0.757; layers re-derived True; sk_eq True'}
+{'id': 'T2_adress2020_single_mac_egemaps_adress2020', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie 0.798'}
+{'id': 'T2_pcgita_single_mac_q2a_probe2_pcgita', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie min 0.978; layers re-derived True; sk_eq True'}
+{'id': 'T2_pcgita_single_mac_egemaps_pcgita', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie 0.978'}
+{'id': 'T2_neurovoz_single_mac_q2a_probe2_neurovoz', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie min 0.958; layers re-derived True; sk_eq True'}
+{'id': 'T2_neurovoz_single_mac_egemaps_neurovoz', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie 0.728'}
+{'id': 'T2_kcl_single_mac_q2a_probe2_kcl', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie min 0.717; layers re-derived True; sk_eq True'}
+{'id': 'T2_kcl_single_mac_egemaps_kcl', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie 0.554'}
+{'id': 'T2_edaic_single_mac_q2a_probe2_edaic', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie min 0.960; layers re-derived True; sk_eq True'}
+{'id': 'T2_edaic_single_mac_egemaps_edaic', 'orig': '1.110e-16', 'mine': '1.110e-16', 'agree_4dp': True, 'note': 'other-tie 0.724'}
+{'id': 'T2_pitt_single_pod_omni_final_pitt', 'orig': '6.126e-02', 'mine': '6.126e-02', 'agree_4dp': True, 'note': "other-tie min 0.977; stable-rule eq True; layers {'enc': True, 'proj': None, 'llm': True, 'ans': True}"}
+{'id': 'T2_edaic_single_pod_omni_final_edaic', 'orig': '3.364e-02', 'mine': '3.364e-02', 'agree_4dp': True, 'note': "other-tie min 0.933; stable-rule eq True; layers {'enc': True, 'proj': None, 'llm': True, 'ans': True}"}
+{'id': 'T2_kcl_single_pod_q2a_probe2_kcl_local', 'orig': '2.664e-03', 'mine': '2.664e-03', 'agree_4dp': True, 'note': "other-tie min 0.859; stable-rule eq True; layers {'enc': True, 'llm': False}"}
+{'id': 'T2_adresso_single_pod_q3o_new_adresso', 'orig': '3.059e-02', 'mine': '3.059e-02', 'agree_4dp': True, 'note': "other-tie min 0.863; stable-rule eq True; layers {'enc': True, 'proj': None, 'llm': True, 'ans': True}"}
+{'id': 'T2_adress2020_single_pod_q3o_new_adress2020', 'orig': '1.397e-02', 'mine': '1.397e-02', 'agree_4dp': True, 'note': "other-tie min 0.752; stable-rule eq True; layers {'enc': True, 'proj': None, 'llm': False, 'ans': True}"}
+{'id': 'T2_pcgita_single_pod_q3o_new_pcgita', 'orig': '4.612e-02', 'mine': '4.612e-02', 'agree_4dp': True, 'note': "other-tie min 0.943; stable-rule eq True; layers {'enc': True, 'proj': None, 'llm': True, 'ans': False}"}
+{'id': 'T2_neurovoz_single_pod_q3o_new_neurovoz', 'orig': '4.473e-02', 'mine': '4.473e-02', 'agree_4dp': True, 'note': "other-tie min 0.958; stable-rule eq True; layers {'enc': True, 'proj': None, 'llm': True, 'ans': True}"}
+{'id': 'T2_kcl_single_pod_q3o_new_kcl', 'orig': '2.764e-03', 'mine': '2.764e-03', 'agree_4dp': True, 'note': "other-tie min 0.666; stable-rule eq True; layers {'enc': True, 'proj': None, 'llm': False, 'ans': True}"}
+{'id': 'T2_pcgita_seed_pod_q3o_POD3_pcgita', 'orig': '8.311e-02', 'mine': '8.311e-02', 'agree_4dp': True, 'note': "other-tie min 0.912; layers {'0': {'enc': True, 'proj': None, 'llm': False, 'ans': True}, '1': {'enc': True, 'llm': True, 'ans': True}, '2': {'enc': True, 'llm': True, 'ans': True}, '3': {'enc': True, 'llm': True, 'ans': True}, '4': {'enc': True, 'llm': False, 'ans': False}}"}
+{'id': 'T2_pitt_seed_pod_pod3_q3o_POD3_pitt', 'orig': '5.363e-02', 'mine': '5.363e-02', 'agree_4dp': True, 'note': "other-tie min 0.906; layers {'0': {'enc': True, 'proj': None, 'llm': True, 'ans': True}, '1': {'enc': True, 'llm': True, 'ans': True}, '2': {'enc': True, 'llm': True, 'ans': True}, '3': {'enc': True, 'llm': True, 'ans': True}, '4': {'enc': True, 'llm': True, 'ans': True}}"}
+{'id': 'T2_pitt_seed_mac_omni_part10_pitt_nested5', 'orig': '0.000e+00', 'mine': '0.000e+00', 'agree_4dp': True, 'note': 'other-tie min 0.961'}
+{'id': 'T2_edaic_full_shuffle_part16_EDAICFULL', 'orig': '2.401e-02', 'mine': '2.401e-02', 'agree_4dp': True, 'note': 'unshuffled contrast min 0.617; files eq sklearn shuffle True'}

@@ -1,0 +1,141 @@
+{
+ "saved_pod_json": {
+  "mean": 0.7761,
+  "repeats": 5,
+  "per_repeat": [
+   0.7921,
+   0.7937,
+   0.7652,
+   0.7778,
+   0.7518
+  ],
+  "n": 468,
+  "n_points": 32
+ },
+ "seeds": {
+  "0": {
+   "file_equals_my_stable_rule": true,
+   "layers": [
+    27,
+    27,
+    27,
+    27,
+    27
+   ],
+   "auc_refit_pod_split": {
+    "mw": 0.791999,
+    "trap": 0.791999,
+    "agree_4dp": true
+   },
+   "auc_saved_pod": 0.7921,
+   "auc_mac_split_saved_npz": {
+    "mw": 0.759802,
+    "trap": 0.759802,
+    "agree_4dp": true
+   }
+  },
+  "1": {
+   "file_equals_my_stable_rule": true,
+   "layers": [
+    26,
+    27,
+    27,
+    27,
+    27
+   ],
+   "auc_refit_pod_split": {
+    "mw": 0.793607,
+    "trap": 0.793607,
+    "agree_4dp": true
+   },
+   "auc_saved_pod": 0.7937,
+   "auc_mac_split_saved_npz": {
+    "mw": 0.772472,
+    "trap": 0.772472,
+    "agree_4dp": true
+   }
+  },
+  "2": {
+   "file_equals_my_stable_rule": true,
+   "layers": [
+    27,
+    21,
+    27,
+    27,
+    10
+   ],
+   "auc_refit_pod_split": {
+    "mw": 0.765304,
+    "trap": 0.765304,
+    "agree_4dp": true
+   },
+   "auc_saved_pod": 0.7652,
+   "auc_mac_split_saved_npz": {
+    "mw": 0.745893,
+    "trap": 0.745893,
+    "agree_4dp": true
+   }
+  },
+  "3": {
+   "file_equals_my_stable_rule": true,
+   "layers": [
+    22,
+    27,
+    27,
+    27,
+    25
+   ],
+   "auc_refit_pod_split": {
+    "mw": 0.777935,
+    "trap": 0.777935,
+    "agree_4dp": true
+   },
+   "auc_saved_pod": 0.7778,
+   "auc_mac_split_saved_npz": {
+    "mw": 0.790333,
+    "trap": 0.790333,
+    "agree_4dp": true
+   }
+  },
+  "4": {
+   "file_equals_my_stable_rule": true,
+   "layers": [
+    14,
+    25,
+    27,
+    21,
+    27
+   ],
+   "auc_refit_pod_split": {
+    "mw": 0.75153,
+    "trap": 0.75153,
+    "agree_4dp": true
+   },
+   "auc_saved_pod": 0.7518,
+   "auc_mac_split_saved_npz": {
+    "mw": 0.784347,
+    "trap": 0.784347,
+    "agree_4dp": true
+   }
+  }
+ },
+ "mean_refit_pod": 0.7760751646648586,
+ "mean_mac_npz": 0.7705695466873305,
+ "bootstrap": {
+  "draws": 2000,
+  "usable": 2000,
+  "pod_mean_ci": [
+   0.7245,
+   0.8272
+  ],
+  "mac_mean_ci": [
+   0.7157,
+   0.822
+  ],
+  "diff_point": 0.0055,
+  "diff_ci": [
+   -0.0083,
+   0.021
+  ]
+ }
+}

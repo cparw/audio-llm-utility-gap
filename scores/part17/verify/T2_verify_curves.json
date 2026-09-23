@@ -1,0 +1,26 @@
+{
+ "omni_pitt_encoder": {
+  "n_layers_curve": 32,
+  "n_layers_states": 32,
+  "max_dauc_pod": 0.0005617977528089568,
+  "max_dauc_mac": 0.053409531189461346
+ },
+ "omni_edaic_encoder": {
+  "n_layers_curve": 32,
+  "n_layers_states": 32,
+  "max_dauc_pod": 0.0008699434536754147,
+  "max_dauc_mac": 0.08771929824561403
+ },
+ "q2a_kcl_encoder": {
+  "n_layers_curve": 33,
+  "n_layers_states": 33,
+  "max_dauc_pod": 0.0029761904761904656,
+  "max_dauc_mac": 0.10119047619047616
+ },
+ "q2a_adresso_encoder": {
+  "n_layers_curve": 33,
+  "n_layers_states": 33,
+  "max_dauc_pod": 0.00042765502494634955,
+  "max_dauc_mac": 0.0372772630078404
+ }
+}
