@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1510.59it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  55%|█████▍    | 1341/2447 [00:00<00:00, 13367.94it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 13364.68it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 11s | transformers 5.17.0 torch 2.8.0+cu128
+feature_extractor WhisperFeatureExtractor chunk_length 300 sampling_rate 16000 n_samples 4800000 nb_max_frames 30000 hop 160
+rule yes [7414, 9454, 9693, 9834, 14004, 14080] rule no [902, 2152, 2308, 2753, 5664, 8996] multi-token excluded []
+audio token 151646 | yes [7414, 9454, 9693, 9834, 14004] | no [902, 2152, 2308, 2753, 8996] | max_position_embeddings 32768 | attn sdpa
+DEFAULT {"wave_samples": 14400000, "wave_s": 900.0, "input_features_shape": [1, 128, 30000], "feature_attention_mask_sum": 30000, "n_audio_tok": 7500, "seq_len": 7548, "fit_in_context": 1, "fe_kwargs": {"sampling_rate": 16000, "padding": "max_length", "return_attention_mask": true, "return_tensors": "pt", "_n_samples_in": 14400000}}
+LIFTED  {"wave_samples": 14400000, "wave_s": 900.0, "input_features_shape": [1, 128, 90000], "feature_attention_mask_sum": 90000, "n_audio_tok": 22500, "seq_len": 22548, "fit_in_context": 1, "fe_kwargs": {"sampling_rate": 16000, "padding": "max_length", "return_attention_mask": true, "return_tensors": "pt", "truncation": false, "_n_samples_in": 14400000}}
+DEFAULT SCORE {'p_yes': 0.577617711052789, 'answer_mass': 0.9939565360546112, 'p_yes_rule': 0.5776175768305111, 'answer_mass_rule': 0.9939588308334351, 'peak_gpu_gib': 19.538, 'model_sec': 1.641}
+LIFTED SCORE {'p_yes': 0.17333602924119174, 'answer_mass': 0.9959503561258316, 'p_yes_rule': 0.17333608509280538, 'answer_mass_rule': 0.9959524422883987, 'peak_gpu_gib': 27.63, 'model_sec': 2.275}

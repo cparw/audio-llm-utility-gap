@@ -1,0 +1,46 @@
+<local data dir>/scores/part22/pod/analyze22.py:106: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  out = dict(step="PART22 step3 rescore all 275 with truncation off", created_utc=datetime.datetime.utcnow().isoformat() + "Z",
+n 275 pos 66 | long(>300 s) 217 short(<=300 s) 58 capped 89
+  default_pod_vs_reference_max_abs_diff: 0.0
+  default_tokens_max: 7500
+  default_tokens_at_7500: 217
+  lifted_tokens_min: 1648
+  lifted_tokens_max: 22500
+  lifted_tokens_equal_formula_on_full_length: 275
+  lifted_frames_equal_exact_formula: 275
+  default_tokens_equal_exact_formula_min_frames_30000: 275
+  note_naive_samples_div_160_formula_misses_pids: ['324', '385', '606', '607', '655']
+  lifted_seq_len_max: 22548
+  lifted_fit_in_32768: 275
+  lifted_tokens_capped89_all_22500: True
+  short58_inputs_identical: 58
+  short58_max_abs_diff_p_yes_lifted_vs_default: 0.0
+  short58_reproduce_1e4: True
+  long217_inputs_identical: 0
+  long217_mean_abs_change_p_yes: 0.1575506699197155
+  long217_pearson_default_vs_lifted: 0.7307122611911445
+  answer_mass_default_median: 0.9962271824479103
+  answer_mass_lifted_median: 0.9969413802027702
+  answer_mass_lifted_min: 0.9871441125869751
+  rule_vs_paper_idset_max_abs_diff_default: 2.973482885471057e-07
+  rule_vs_paper_idset_max_abs_diff_lifted: 3.6699273608942207e-07
+  answer_mass_rule_lifted_median: 0.9969426095485687
+  lifted_peak_gpu_gib_max: 27.63
+  lifted_model_sec_median: 1.222
+  lifted_model_sec_max: 2.78
+P22_auc_default_all275               E-DAIC zero-shot AUC, default processor (300 s cut), all275    0.8278 [0.7703, 0.8822]
+P22_auc_lifted_all275                E-DAIC zero-shot AUC, truncation=False (whole window), all275  0.8379 [0.7805, 0.8876]
+P22_auc_diff_all275                  paired AUC lifted minus default, all275                        0.0101 [-0.0309, 0.0518]
+P22_auc_lifted_all275_ruleids        as P22_auc_lifted_all275, rule Yes/No id set                   0.8379 [0.7805, 0.8876]
+P22_auc_default_long217              E-DAIC zero-shot AUC, default processor (300 s cut), long217   0.8380 [0.7758, 0.8930]
+P22_auc_lifted_long217               E-DAIC zero-shot AUC, truncation=False (whole window), long217 0.8571 [0.8028, 0.9062]
+P22_auc_diff_long217                 paired AUC lifted minus default, long217                       0.0192 [-0.0309, 0.0703]
+P22_auc_lifted_long217_ruleids       as P22_auc_lifted_long217, rule Yes/No id set                  0.8571 [0.8028, 0.9062]
+P22_auc_default_capped89             E-DAIC zero-shot AUC, default processor (300 s cut), capped89  0.8169 [0.6985, 0.9161]
+P22_auc_lifted_capped89              E-DAIC zero-shot AUC, truncation=False (whole window), capped89 0.8552 [0.7513, 0.9414]
+P22_auc_diff_capped89                paired AUC lifted minus default, capped89                      0.0383 [-0.0424, 0.1360]
+P22_auc_lifted_capped89_ruleids      as P22_auc_lifted_capped89, rule Yes/No id set                 0.8552 [0.7513, 0.9414]
+P22_short58_maxdiff                  max |p_yes lifted - default| on the 58 windows <= 300 s        0.00e+00
+P22_lift_tok_max                     max audio tokens with truncation=False (900 s window)          22500
+P22_default_tok_max                  max audio tokens with the default processor                    7500
+WROTE scores/part22/edaic_lifted_auc.json
