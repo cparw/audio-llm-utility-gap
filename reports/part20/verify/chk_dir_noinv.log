@@ -1,0 +1,24 @@
+basic {'n': 468, 'n_spk': 228, 'n_pos': 290, 'arms': {'conflict': 146, 'agreement': 322}, 'unique_clips': 468, 'ok': True} | fold mismatches vs release mac file 0 missing 0 | fold_file named /workspace/p20/work/pitt_groupkfold5_mac.csv
+independent recompute vs csv: max|oof| 1.11e-16 max|perp_z| 4.44e-16 max|keep_z| 4.44e-16 max|proj_d| 5.25e-15 | zero-shot col vs extraction 8.33e-17 | yes/no ids match True | prompt True
+AGREE POD5_dir_probe: computed 0.7958 [0.7483, 0.8408] | verified 0.7958 [0.7483, 0.8408] n=468/228
+PASTE POD5_dir_probe | answer-state final-stage probe AUC, Mac split, interviewer-free (paper 0.7709) | 0.7958 [0.7483, 0.8408] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_noinv.csv | 0.80 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_after_removal: computed 0.7769 [0.7297, 0.8227] | verified 0.7769 [0.7297, 0.8227] n=468/228
+PASTE POD5_dir_after_removal | probe AUC after removing the readout direction, held-out-fold standardised, interviewer-free (paper 0.7662) | 0.7769 [0.7297, 0.8227] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_noinv.csv | 0.78 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_kept_control: computed 0.7788 [0.7320, 0.8244] | verified 0.7788 [0.7320, 0.8244] n=468/228
+PASTE POD5_dir_kept_control | matched control: same pooling with d kept, interviewer-free | 0.7788 [0.7320, 0.8244] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_noinv.csv | 0.78 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_probe_minus_removed: computed 0.0189 [0.0035, 0.0341] | verified 0.0189 [0.0035, 0.0341] n=468/228
+PASTE POD5_dir_probe_minus_removed | probe AUC minus after-removal AUC, paired, interviewer-free | 0.0189 [0.0035, 0.0341] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_noinv.csv | 0.02 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_probe_conflict: computed 0.5978 [0.4867, 0.7050] | verified 0.5978 [0.4867, 0.7050] n=146/100
+PASTE POD5_dir_probe_conflict | probe AUC, answer state, interviewer-free, conflict arm (full fit restricted to the arm) | 0.5978 [0.4867, 0.7050] | n=146 n_spk=100 | scores/part20/POD5/POD5_direction_noinv.csv | 0.60 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_after_removal_conflict: computed 0.5729 [0.4684, 0.6794] | verified 0.5729 [0.4684, 0.6794] n=146/100
+PASTE POD5_dir_after_removal_conflict | after_removal AUC, answer state, interviewer-free, conflict arm (full fit restricted to the arm) | 0.5729 [0.4684, 0.6794] | n=146 n_spk=100 | scores/part20/POD5/POD5_direction_noinv.csv | 0.57 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_probe_agreement: computed 0.8719 [0.8287, 0.9121] | verified 0.8719 [0.8287, 0.9121] n=322/175
+PASTE POD5_dir_probe_agreement | probe AUC, answer state, interviewer-free, agreement arm (full fit restricted to the arm) | 0.8719 [0.8287, 0.9121] | n=322 n_spk=175 | scores/part20/POD5/POD5_direction_noinv.csv | 0.87 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_after_removal_agreement: computed 0.8545 [0.8084, 0.8977] | verified 0.8545 [0.8084, 0.8977] n=322/175
+PASTE POD5_dir_after_removal_agreement | after_removal AUC, answer state, interviewer-free, agreement arm (full fit restricted to the arm) | 0.8545 [0.8084, 0.8977] | n=322 n_spk=175 | scores/part20/POD5/POD5_direction_noinv.csv | 0.85 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_cos: computed 0.0067 [-0.0122, 0.0212] | verified 0.0067 [-0.0122, 0.0212] (legacy ids 0.0067)
+PASTE POD5_dir_cos | cos(probe direction, mass-weighted Yes-minus-No unembedding), answer state, interviewer-free (paper -0.0109) | 0.0067 [-0.0122, 0.0212] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_noinv.csv | 0.01 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_floor: computed 0.0133 [0.0005, 0.0372] | verified 0.0133 [0.0005, 0.0372]
+PASTE POD5_dir_floor | random floor, mean |cos| of 2000 Gaussian directions (fresh default_rng(0)) with the mass-weighted readout direction, interviewer-free (paper 0.0135) | 0.0133 [0.0005, 0.0372] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_noinv.csv | 0.01 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_auc_d: computed 0.7282 [0.6728, 0.7808] | verified 0.7282 [0.6728, 0.7808] gate delta +0.0050
+PASTE POD5_dir_auc_d | AUC of the projection on the readout direction (gate: vs zero-shot 0.7231), interviewer-free | 0.7282 [0.6728, 0.7808] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_noinv.csv | 0.73 | VERIFIED (agree 4dp: yes)

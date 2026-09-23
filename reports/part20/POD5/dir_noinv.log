@@ -1,0 +1,5 @@
+norm verdict as_saved {"as_saved": {"mean_abs_err_vs_stored_p_yes": 0.006267230081087843, "r": 0.9975638840935512, "auc": 0.7281480046493607}, "rmsnorm_applied": {"mean_abs_err_vs_stored_p_yes": 0.16651209790121224, "r": 0.9796788915751931, "auc": 0.7447307245253778}}
+gate {"d_weighted": {"proj_auc": 0.7281673769856645, "delta": 0.005017435102673384, "pass": true}, "d_plain": {"proj_auc": 0.738221619527315, "delta": 0.015071677644323933, "pass": false}, "d_top": {"proj_auc": 0.7282254939945757, "delta": 0.005075552111584614, "pass": true}}
+probe 0.7958 after removal 0.7769 kept-control 0.7788 cos 0.0067 floor 0.0133 2s
+DIRECTION noinv {"cosine": [0.006712268070367601, -0.012195697468436571, 0.02121298579837009, 2000], "random_floor_mean_abs_cos": 0.013314152844789961, "probe_auc": [0.7957768306857808, 0.7482554923989846, 0.8407891303519927, 2000], "after_removal_auc": [0.7768694304533127, 0.7297437600970642, 0.822664119917679, 2000], "probe_minus_after_removal": [0.018907400232468063, 0.0034713807032957403, 0.03414797090409462, 2000], "direction_used": "d_weighted"}
+DIRECTION DONE

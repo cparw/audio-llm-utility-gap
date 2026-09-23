@@ -1,0 +1,15 @@
+basic {'n': 468, 'n_spk': 228, 'n_pos': 290, 'arms': {'conflict': 146, 'agreement': 322}, 'unique_clips': 468, 'ok': True} | fold mismatches 0/0 | noinv side vs noinv RESULT 0.00e+00 | orig zero-shot col vs omni_final 8.33e-17
+AGREE POD5_dir_kept_minus_removed: computed 0.0020 [-0.0002, 0.0041] | verified 0.0020 [-0.0002, 0.0041] n=468/228
+PASTE POD5_dir_kept_minus_removed | matched control minus after-removal (same held-out-fold pooling), paired, interviewer-free | 0.0020 [-0.0002, 0.0041] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_origrerun_check.csv | 0.00 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_orig_probe: computed 0.7709 [0.7210, 0.8224] | verified 0.7709 [0.7210, 0.8224] n=468/228
+PASTE POD5_dir_orig_probe | probe AUC, ORIGINAL states rerun (paper 0.7709) | 0.7709 [0.7210, 0.8224] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_origrerun_check.csv | 0.77 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_orig_after_removal: computed 0.7661 [0.7173, 0.8155] | verified 0.7661 [0.7173, 0.8155] n=468/228
+PASTE POD5_dir_orig_after_removal | after-removal AUC, ORIGINAL states rerun (paper 0.7662) | 0.7661 [0.7173, 0.8155] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_origrerun_check.csv | 0.77 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_orig_kept_minus_removed: computed -0.0011 [-0.0031, 0.0010] | verified -0.0011 [-0.0031, 0.0010] n=468/228
+PASTE POD5_dir_orig_kept_minus_removed | matched control minus after-removal, paired, ORIGINAL states rerun | -0.0011 [-0.0031, 0.0010] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_origrerun_check.csv | -0.00 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_probe_diff: computed -0.0248 [-0.0605, 0.0127] | verified -0.0248 [-0.0605, 0.0127] n=468/228
+PASTE POD5_dir_probe_diff | probe AUC, paired original(rerun) minus interviewer-free | -0.0248 [-0.0605, 0.0127] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_origrerun_check.csv | -0.02 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_after_removal_diff: computed -0.0108 [-0.0473, 0.0243] | verified -0.0108 [-0.0473, 0.0243] n=468/228
+PASTE POD5_dir_after_removal_diff | after-removal AUC, paired original(rerun) minus interviewer-free | -0.0108 [-0.0473, 0.0243] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_origrerun_check.csv | -0.01 | VERIFIED (agree 4dp: yes)
+AGREE POD5_dir_orig_cos: computed -0.0109 [-0.0234, 0.0099] | verified -0.0109 [-0.0234, 0.0099]
+PASTE POD5_dir_orig_cos | cos, ORIGINAL states rerun on this pod (paper -0.0109) | -0.0109 [-0.0234, 0.0099] | n=468 n_spk=228 | scores/part20/POD5/POD5_direction_origrerun_check.csv | -0.01 | VERIFIED (agree 4dp: yes)
