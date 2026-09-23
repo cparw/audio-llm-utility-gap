@@ -1,0 +1,140 @@
+{
+ "name": "o25_orig_voice",
+ "per_clip_csv": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+ "per_clip_csv_mac": "scores/part20/POD4/o25_orig_voice.csv",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "dtype": "bf16",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "cd /workspace/pod4 && HF_HOME=/workspace/hf python3 score_zs.py Qwen/Qwen2.5-Omni-7B bf16 man_cut.csv,out/o25_noinv_recording.csv,recording | ...  man_orig.csv,out/o25_orig_recording_rerun.csv,recording | ... man_orig.csv,out/o25_orig_voice.csv,voice  (one invocation per job, see run_o25.sh); then python3 finalize.py <name> (calls analyze.py spec_<name>.json)",
+ "sources": [
+  {
+   "role": "clip manifest used by the scorer",
+   "pod_path": "/workspace/pod4/man_orig.csv",
+   "mac_origin": "<local data dir>/DementiaBank/segments/ (468 wavs, sha256 per clip in the per-clip csv) + <local data dir>/DementiaBank/pitt_conflict_manifest.csv (set)"
+  },
+  {
+   "role": "paper per-clip file (comparison)",
+   "pod_path": "/workspace/pod4/ref/omni_final__omni_pitt_zeroshot_scores.csv",
+   "mac_path": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv"
+  },
+  {
+   "role": "scorer",
+   "pod_path": "/workspace/pod4/score_zs.py"
+  },
+  {
+   "role": "analysis",
+   "pod_path": "/workspace/pod4/analyze.py"
+  },
+  {
+   "role": "original window wavs (directory; per-clip sha256 in the per-clip csv)",
+   "pod_path": "/workspace/data/pitt468/",
+   "mac_path": "<local data dir>/DementiaBank/segments/"
+  },
+  {
+   "role": "sha256 list of the 468 Mac segment wavs, all 468 matched on the pod (gate.py)",
+   "pod_path": "/workspace/pod4/ref/pitt468_mac_sha256.txt"
+  }
+ ],
+ "cells": [
+  {
+   "id": "o25_orig_voice_overall",
+   "what": "o25_orig_voice zero-shot AUC, overall",
+   "file": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "file_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "arm": null
+  },
+  {
+   "id": "o25_orig_voice_conflict",
+   "what": "o25_orig_voice zero-shot AUC, conflict",
+   "file": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "file_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "o25_orig_voice_agreement",
+   "what": "o25_orig_voice zero-shot AUC, agreement",
+   "file": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "file_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "arm": "agreement"
+  },
+  {
+   "id": "paper_o25_orig_recording_overall",
+   "what": "paper o25 zero-shot on the original 468 windows, recording wording, overall (recomputed)",
+   "file": "/workspace/pod4/ref/omni_final__omni_pitt_zeroshot_scores.csv",
+   "file_mac": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "arm": null
+  },
+  {
+   "id": "paper_o25_orig_recording_conflict",
+   "what": "paper o25 zero-shot on the original 468 windows, recording wording, conflict (recomputed)",
+   "file": "/workspace/pod4/ref/omni_final__omni_pitt_zeroshot_scores.csv",
+   "file_mac": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "paper_o25_orig_recording_agreement",
+   "what": "paper o25 zero-shot on the original 468 windows, recording wording, agreement (recomputed)",
+   "file": "/workspace/pod4/ref/omni_final__omni_pitt_zeroshot_scores.csv",
+   "file_mac": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "arm": "agreement"
+  }
+ ],
+ "paired": [
+  {
+   "id": "o25_orig_voice_PAIRED_voice_minus_paperrecording_overall",
+   "what": "PAIRED voice wording minus recording wording (paper file), o25, original windows, overall",
+   "a": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "a_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "b": "/workspace/pod4/ref/omni_final__omni_pitt_zeroshot_scores.csv",
+   "b_mac": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "arm": null
+  },
+  {
+   "id": "o25_orig_voice_PAIRED_voice_minus_paperrecording_conflict",
+   "what": "PAIRED voice wording minus recording wording (paper file), o25, original windows, conflict",
+   "a": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "a_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "b": "/workspace/pod4/ref/omni_final__omni_pitt_zeroshot_scores.csv",
+   "b_mac": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "o25_orig_voice_PAIRED_voice_minus_paperrecording_agreement",
+   "what": "PAIRED voice wording minus recording wording (paper file), o25, original windows, agreement",
+   "a": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "a_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "b": "/workspace/pod4/ref/omni_final__omni_pitt_zeroshot_scores.csv",
+   "b_mac": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "arm": "agreement"
+  },
+  {
+   "id": "o25_orig_voice_PAIRED_voice_minus_podrecording_overall",
+   "what": "PAIRED voice wording minus recording wording (this pod's rerun, same code), o25, overall",
+   "a": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "a_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "b": "/workspace/pod4/out/o25_orig_recording_rerun.csv",
+   "b_mac": "scores/part20/POD4/o25_orig_recording_rerun.csv",
+   "arm": null
+  },
+  {
+   "id": "o25_orig_voice_PAIRED_voice_minus_podrecording_conflict",
+   "what": "PAIRED voice wording minus recording wording (this pod's rerun, same code), o25, conflict",
+   "a": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "a_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "b": "/workspace/pod4/out/o25_orig_recording_rerun.csv",
+   "b_mac": "scores/part20/POD4/o25_orig_recording_rerun.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "o25_orig_voice_PAIRED_voice_minus_podrecording_agreement",
+   "what": "PAIRED voice wording minus recording wording (this pod's rerun, same code), o25, agreement",
+   "a": "/workspace/scores/part20/POD4/o25_orig_voice.csv",
+   "a_mac": "scores/part20/POD4/o25_orig_voice.csv",
+   "b": "/workspace/pod4/out/o25_orig_recording_rerun.csv",
+   "b_mac": "scores/part20/POD4/o25_orig_recording_rerun.csv",
+   "arm": "agreement"
+  }
+ ],
+ "sidecar": "/workspace/scores/part20/POD4/o25_orig_voice.sidecar.json",
+ "mass_col": true
+}

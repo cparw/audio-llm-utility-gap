@@ -1,0 +1,140 @@
+{
+ "name": "q2a_orig_recording_rerun_bf16",
+ "per_clip_csv": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+ "per_clip_csv_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+ "model": "Qwen/Qwen2-Audio-7B-Instruct",
+ "dtype": "bf16",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "cd /workspace/pod4 && HF_HOME=/workspace/hf python3 score_zs.py Qwen/Qwen2-Audio-7B-Instruct bf16 man_orig.csv,out/q2a_orig_recording_rerun_bf16.csv,recording man_cut.csv,out/q2a_noinv_recording_bf16.csv,recording (see run_q2a.sh); then python3 finalize.py <name>",
+ "sources": [
+  {
+   "role": "clip manifest used by the scorer",
+   "pod_path": "/workspace/pod4/man_orig.csv",
+   "mac_origin": "<local data dir>/DementiaBank/segments/ (468 wavs, sha256 per clip in the per-clip csv) + <local data dir>/DementiaBank/pitt_conflict_manifest.csv (set)"
+  },
+  {
+   "role": "paper per-clip file (comparison)",
+   "pod_path": "/workspace/pod4/ref/probe2__pitt_zeroshot_scores.csv",
+   "mac_path": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv"
+  },
+  {
+   "role": "scorer",
+   "pod_path": "/workspace/pod4/score_zs.py"
+  },
+  {
+   "role": "analysis",
+   "pod_path": "/workspace/pod4/analyze.py"
+  },
+  {
+   "role": "original window wavs (directory; per-clip sha256 in the per-clip csv)",
+   "pod_path": "/workspace/data/pitt468/",
+   "mac_path": "<local data dir>/DementiaBank/segments/"
+  },
+  {
+   "role": "sha256 list of the 468 Mac segment wavs, all 468 matched on the pod (gate.py)",
+   "pod_path": "/workspace/pod4/ref/pitt468_mac_sha256.txt"
+  }
+ ],
+ "cells": [
+  {
+   "id": "q2a_orig_recording_rerun_bf16_overall",
+   "what": "q2a_orig_recording_rerun_bf16 zero-shot AUC, overall",
+   "file": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "file_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "arm": null
+  },
+  {
+   "id": "q2a_orig_recording_rerun_bf16_conflict",
+   "what": "q2a_orig_recording_rerun_bf16 zero-shot AUC, conflict",
+   "file": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "file_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "q2a_orig_recording_rerun_bf16_agreement",
+   "what": "q2a_orig_recording_rerun_bf16 zero-shot AUC, agreement",
+   "file": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "file_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "arm": "agreement"
+  },
+  {
+   "id": "paper_q2a_orig_recording_overall",
+   "what": "paper q2a zero-shot on the original 468 windows, recording wording, overall (recomputed)",
+   "file": "/workspace/pod4/ref/probe2__pitt_zeroshot_scores.csv",
+   "file_mac": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+   "arm": null
+  },
+  {
+   "id": "paper_q2a_orig_recording_conflict",
+   "what": "paper q2a zero-shot on the original 468 windows, recording wording, conflict (recomputed)",
+   "file": "/workspace/pod4/ref/probe2__pitt_zeroshot_scores.csv",
+   "file_mac": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "paper_q2a_orig_recording_agreement",
+   "what": "paper q2a zero-shot on the original 468 windows, recording wording, agreement (recomputed)",
+   "file": "/workspace/pod4/ref/probe2__pitt_zeroshot_scores.csv",
+   "file_mac": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+   "arm": "agreement"
+  }
+ ],
+ "paired": [
+  {
+   "id": "q2a_orig_recording_rerun_bf16_PAIRED_podrerun_minus_paper_overall",
+   "what": "PAIRED this pod's rerun minus paper file, q2a, recording wording, original windows, overall",
+   "a": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "a_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "b": "/workspace/pod4/ref/probe2__pitt_zeroshot_scores.csv",
+   "b_mac": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+   "arm": null
+  },
+  {
+   "id": "q2a_orig_recording_rerun_bf16_PAIRED_podrerun_minus_paper_conflict",
+   "what": "PAIRED this pod's rerun minus paper file, q2a, recording wording, original windows, conflict",
+   "a": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "a_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "b": "/workspace/pod4/ref/probe2__pitt_zeroshot_scores.csv",
+   "b_mac": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "q2a_orig_recording_rerun_bf16_PAIRED_podrerun_minus_paper_agreement",
+   "what": "PAIRED this pod's rerun minus paper file, q2a, recording wording, original windows, agreement",
+   "a": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "a_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "b": "/workspace/pod4/ref/probe2__pitt_zeroshot_scores.csv",
+   "b_mac": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+   "arm": "agreement"
+  },
+  {
+   "id": "q2a_orig_recording_rerun_bf16_PAIRED_podorig_minus_noinv_overall",
+   "what": "PAIRED original (this pod's rerun, same code) minus interviewer-free, q2a, overall",
+   "a": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "a_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "b": "/workspace/pod4/out/q2a_noinv_recording_bf16.csv",
+   "b_mac": "scores/part20/POD4/q2a_noinv_recording_bf16.csv",
+   "arm": null
+  },
+  {
+   "id": "q2a_orig_recording_rerun_bf16_PAIRED_podorig_minus_noinv_conflict",
+   "what": "PAIRED original (this pod's rerun, same code) minus interviewer-free, q2a, conflict",
+   "a": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "a_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "b": "/workspace/pod4/out/q2a_noinv_recording_bf16.csv",
+   "b_mac": "scores/part20/POD4/q2a_noinv_recording_bf16.csv",
+   "arm": "conflict"
+  },
+  {
+   "id": "q2a_orig_recording_rerun_bf16_PAIRED_podorig_minus_noinv_agreement",
+   "what": "PAIRED original (this pod's rerun, same code) minus interviewer-free, q2a, agreement",
+   "a": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "a_mac": "scores/part20/POD4/q2a_orig_recording_rerun_bf16.csv",
+   "b": "/workspace/pod4/out/q2a_noinv_recording_bf16.csv",
+   "b_mac": "scores/part20/POD4/q2a_noinv_recording_bf16.csv",
+   "arm": "agreement"
+  }
+ ],
+ "sidecar": "/workspace/scores/part20/POD4/q2a_orig_recording_rerun_bf16.sidecar.json",
+ "mass_col": true
+}
