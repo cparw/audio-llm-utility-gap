@@ -1,0 +1,100 @@
+EXTRACT START 12:33:16
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 991.00it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   5%|▌         | 123/2447 [00:00<00:02, 1130.95it/s]Loading weights:  10%|▉         | 237/2447 [00:00<00:02, 877.68it/s] Loading weights:  13%|█▎        | 328/2447 [00:00<00:02, 846.65it/s]Loading weights:  17%|█▋        | 414/2447 [00:00<00:02, 833.20it/s]Loading weights:  22%|██▏       | 528/2447 [00:00<00:02, 927.79it/s]Loading weights:  26%|██▋       | 643/2447 [00:00<00:01, 990.37it/s]Loading weights:  30%|███       | 744/2447 [00:00<00:02, 706.46it/s]Loading weights:  34%|███▍      | 830/2447 [00:01<00:02, 739.40it/s]Loading weights:  37%|███▋      | 913/2447 [00:01<00:02, 737.54it/s]Loading weights:  42%|████▏     | 1036/2447 [00:01<00:01, 858.93it/s]Loading weights:  46%|████▋     | 1133/2447 [00:01<00:01, 864.47it/s]Loading weights:  50%|█████     | 1224/2447 [00:01<00:01, 856.35it/s]Loading weights:  54%|█████▍    | 1332/2447 [00:01<00:01, 913.80it/s]Loading weights:  58%|█████▊    | 1427/2447 [00:01<00:01, 915.62it/s]Loading weights:  62%|██████▏   | 1524/2447 [00:01<00:00, 923.64it/s]Loading weights:  67%|██████▋   | 1628/2447 [00:01<00:00, 957.04it/s]Loading weights:  73%|███████▎  | 1792/2447 [00:01<00:00, 1138.20it/s]Loading weights:  84%|████████▍ | 2062/2447 [00:02<00:00, 1588.34it/s]Loading weights:  91%|█████████ | 2223/2447 [00:02<00:00, 1372.50it/s]Loading weights:  97%|█████████▋| 2367/2447 [00:02<00:00, 1168.20it/s]Loading weights: 100%|██████████| 2447/2447 [00:02<00:00, 984.09it/s] 
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 44s on cuda
+STAGES audio encoder layers 32 (+1 projector) | language model stages 29 (embeddings + 28 layers)
+audio token 151646 | yes ids [7414, 9454, 9693, 9834, 14004] | no ids [902, 2152, 2308, 2753, 8996]
+1/907 HC_ABLANDADA_0034.wav p_yes 0.547 mass 0.995  45s
+26/907 HC_ABLANDADA_0048.wav p_yes 0.438 mass 0.994  52s
+51/907 HC_SOMBRA_0051.wav p_yes 0.531 mass 0.994  58s
+76/907 HC_PIDIO_0054.wav p_yes 0.363 mass 0.994  64s
+101/907 HC_DIABLO_0061.wav p_yes 0.349 mass 0.996  69s
+126/907 HC_PIDIO_0063.wav p_yes 0.438 mass 0.995  79s
+151/907 HC_TOMAS_0065.wav p_yes 0.308 mass 0.995  89s
+176/907 HC_MANGA_0073.wav p_yes 0.234 mass 0.996  99s
+201/907 HC_MANGA_0075.wav p_yes 0.307 mass 0.996  108s
+226/907 HC_CARMEN_0080.wav p_yes 0.257 mass 0.996  117s
+251/907 HC_BARBAS_0082.wav p_yes 0.349 mass 0.995  125s
+276/907 HC_TOMAS_0086.wav p_yes 0.308 mass 0.996  133s
+301/907 HC_PIDIO_0112.wav p_yes 0.363 mass 0.994  141s
+326/907 HC_CARMEN_0118.wav p_yes 0.282 mass 0.996  150s
+351/907 HC_TOMAS_0122.wav p_yes 0.378 mass 0.995  158s
+376/907 HC_BARBAS_0130.wav p_yes 0.335 mass 0.994  167s
+401/907 HC_PIDIO_0132.wav p_yes 0.378 mass 0.994  178s
+426/907 HC_MANGA_0142.wav p_yes 0.212 mass 0.995  190s
+451/907 HC_SOMBRA_0145.wav p_yes 0.407 mass 0.994  201s
+476/907 PD_CARMEN_0007.wav p_yes 0.500 mass 0.995  213s
+501/907 PD_PIDIO_0010.wav p_yes 0.484 mass 0.994  223s
+526/907 PD_MANGA_0012.wav p_yes 0.173 mass 0.996  232s
+551/907 PD_BURRO_0015.wav p_yes 0.307 mass 0.993  237s
+576/907 PD_GANGA_0017.wav p_yes 0.500 mass 0.996  242s
+601/907 PD_PIDIO_0020.wav p_yes 0.453 mass 0.996  247s
+626/907 PD_MANGA_0025.wav p_yes 0.192 mass 0.995  253s
+651/907 PD_ABLANDADA_0028.wav p_yes 0.562 mass 0.995  258s
+676/907 PD_BARBAS_0030.wav p_yes 0.500 mass 0.996  263s
+701/907 PD_PIDIO_0032.wav p_yes 0.335 mass 0.994  268s
+726/907 PD_SOMBRA_0038.wav p_yes 0.484 mass 0.995  272s
+751/907 PD_CARMEN_0040.wav p_yes 0.307 mass 0.996  277s
+776/907 PD_SOMBRA_0042.wav p_yes 0.282 mass 0.995  282s
+801/907 PD_TOMAS_0046.wav p_yes 0.335 mass 0.996  287s
+826/907 PD_MANGA_0066.wav p_yes 0.245 mass 0.997  292s
+851/907 PD_ABLANDADA_0077.wav p_yes 0.516 mass 0.995  297s
+876/907 PD_PIDIO_0111.wav p_yes 0.531 mass 0.995  302s
+901/907 PD_ABLANDADA_0117.wav p_yes 0.335 mass 0.995  307s
+907/907 PD_SOMBRA_0117.wav p_yes 0.363 mass 0.995  308s
+RESULT zero-shot mf_nv_matched.csv n=907 AUC=0.6312 median_mass=0.995  424s
+STATES {'enc': [907, 32, 1280], 'proj': [907, 1, 3584], 'llm': [907, 29, 3584], 'ans': [907, 29, 3584]}
+EXTRACT DONE 12:40:23
+single fold 0 layer 16 inner 0.8657  3s
+single fold 1 layer 27 inner 0.9358  5s
+single fold 2 layer 30 inner 0.8946  7s
+single fold 3 layer 17 inner 0.9408  8s
+single fold 4 layer 27 inner 0.9059  10s
+RESULT single enc AUC 0.8951 layers [16, 27, 30, 17, 27]
+seed0 fold 0 layer 25 inner 0.8926  12s
+seed0 fold 1 layer 16 inner 0.9115  13s
+seed0 fold 2 layer 17 inner 0.9150  15s
+seed0 fold 3 layer 20 inner 0.8867  16s
+seed0 fold 4 layer 18 inner 0.9089  17s
+RESULT seed0 enc AUC 0.8982 layers [25, 16, 17, 20, 18]
+seed1 fold 0 layer 16 inner 0.9212  19s
+seed1 fold 1 layer 25 inner 0.9040  21s
+seed1 fold 2 layer 19 inner 0.9609  22s
+seed1 fold 3 layer 18 inner 0.9129  24s
+seed1 fold 4 layer 30 inner 0.9007  25s
+RESULT seed1 enc AUC 0.9093 layers [16, 25, 19, 18, 30]
+seed2 fold 0 layer 16 inner 0.9252  26s
+seed2 fold 1 layer 17 inner 0.8718  28s
+seed2 fold 2 layer 17 inner 0.9283  30s
+seed2 fold 3 layer 17 inner 0.8864  31s
+seed2 fold 4 layer 29 inner 0.9235  33s
+RESULT seed2 enc AUC 0.8951 layers [16, 17, 17, 17, 29]
+seed3 fold 0 layer 16 inner 0.9209  35s
+seed3 fold 1 layer 16 inner 0.9077  36s
+seed3 fold 2 layer 16 inner 0.9364  37s
+seed3 fold 3 layer 20 inner 0.9352  39s
+seed3 fold 4 layer 15 inner 0.9576  40s
+RESULT seed3 enc AUC 0.9174 layers [16, 16, 16, 20, 15]
+seed4 fold 0 layer 26 inner 0.9102  42s
+seed4 fold 1 layer 29 inner 0.8990  44s
+seed4 fold 2 layer 19 inner 0.9564  45s
+seed4 fold 3 layer 16 inner 0.9362  47s
+seed4 fold 4 layer 25 inner 0.9303  49s
+RESULT seed4 enc AUC 0.8730 layers [26, 29, 19, 16, 25]
+NESTED5 DONE {"single": {"auc": 0.895061, "layers": [16, 27, 30, 17, 27]}, "seed0": {"auc": 0.898156, "layers": [25, 16, 17, 20, 18]}, "seed1": {"auc": 0.9093, "layers": [16, 25, 19, 18, 30]}, "seed2": {"auc": 0.895071, "layers": [16, 17, 17, 17, 29]}, "seed3": {"auc": 0.917428, "layers": [16, 16, 16, 20, 15]}, "seed4": {"auc": 0.872954, "layers": [26, 29, 19, 16, 25]}, "mean5": 0.898582}
+B DONE 12:41:14
