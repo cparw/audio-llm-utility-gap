@@ -1,0 +1,92 @@
+manifest rows 966 cols 22
+arm conflict: rows 483 distinct seg_uid 483 distinct (spk,start,end) 483 speakers 138 pos_rows 205
+arm agreement: rows 483 distinct seg_uid 311 distinct (spk,start,end) 311 speakers 138 pos_rows 205
+agreement repeat distribution (times seen -> n segments) {1: 208, 2: 63, 3: 21, 4: 12, 5: 4, 6: 3} extra rows 172
+max attribute variants within one seg_uid (all arms) 1
+seg_uids appearing in both arms 0
+speakers with >1 label 0
+speaker sets equal across arms True 138
+distinct agreement segments 311 pos 104 neg 207 speakers 138
+Pitt arm agreement: rows 322 distinct segment_path 322 distinct (spk,start_ms,end_ms) 322 speakers 175
+Pitt arm conflict: rows 146 distinct segment_path 146 distinct (spk,start_ms,end_ms) 146 speakers 100
+[q2a] <local data dir>/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.0000,1.0000]
+[o25] <local data dir>/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.0141,0.9831]
+[q3o] <local data dir>/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.0004,0.9997]
+[af2] <local data dir>/release/edaic_rerun/part14/p14_af2.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.2238,0.7383]
+[af3] <local data dir>/release/edaic_rerun/part14/p14_af3.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.0086,0.9959]
+[kimi] <local data dir>/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.0568,0.9988]
+[o25t] <local data dir>/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.0043,0.9974]
+[q2at] <local data dir>/release/edaic_rerun/part16/pod_sync/p14_q2a_text.csv: rows 966 id_match 966 label_match 966 speaker_match 966 nan 0 max p_yes spread among agreement repeats 0 range [0.0000,1.0000]
+[POD1 o25] rows 966 key_match 966 max|text-pod_sync| 1.11e-16 max|audio-part14| 1.11e-16
+[POD1 q2a] rows 966 key_match 966 max|text-pod_sync| 1.11e-16 max|audio-part14| 1.11e-16
+speaker order: K 138 first ['301', '302', '303'] last ['716', '717', '718'] (numeric sort == string sort: True )
+    [q2a] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 2.22e-16
+Qwen2-Audio | audio | OLD 0.9478 [0.9128, 0.9762] n=483 | NEW 0.9608 [0.9351, 0.9814] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.2280 [0.1816, 0.2782] | paired NEW -0.7328 [-0.7780, -0.6837] 2000/2000 | paired OLD -0.7198 [-0.7689, -0.6679]
+    alt conventions NEW interval: loop_choice [0.9351, 0.9814]; block_integers [0.9351, 0.9814]
+    [o25] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 2.22e-16
+Qwen2.5-Omni | audio | OLD 0.9482 [0.9039, 0.9828] n=483 | NEW 0.9647 [0.9376, 0.9857] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.2218 [0.1829, 0.2632] | paired NEW -0.7429 [-0.7869, -0.6944] 2000/2000 | paired OLD -0.7264 [-0.7786, -0.6655]
+    alt conventions NEW interval: loop_choice [0.9376, 0.9857]; block_integers [0.9376, 0.9857]
+    [q3o] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 2.22e-16
+Qwen3-Omni-30B-A3B | audio | OLD 0.9638 [0.9336, 0.9864] n=483 | NEW 0.9727 [0.9507, 0.9904] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.3008 [0.2454, 0.3641] | paired NEW -0.6719 [-0.7266, -0.6105] 2000/2000 | paired OLD -0.6630 [-0.7192, -0.6030]
+    alt conventions NEW interval: loop_choice [0.9507, 0.9904]; block_integers [0.9507, 0.9904]
+    [af2] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 1.11e-16
+Audio Flamingo 2 | audio | OLD 0.6083 [0.5126, 0.6997] n=483 | NEW 0.6297 [0.5451, 0.7087] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.5286 [0.4512, 0.6015] | paired NEW -0.1011 [-0.1647, -0.0384] 2000/2000 | paired OLD -0.0797 [-0.1488, -0.0104]
+    alt conventions NEW interval: loop_choice [0.5451, 0.7087]; block_integers [0.5451, 0.7087]
+    [af3] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 1.11e-16
+Audio Flamingo 3 | audio | OLD 0.8095 [0.7447, 0.8696] n=483 | NEW 0.8425 [0.7963, 0.8854] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.4235 [0.3606, 0.4880] | paired NEW -0.4190 [-0.4878, -0.3461] 2000/2000 | paired OLD -0.3860 [-0.4675, -0.3018]
+    alt conventions NEW interval: loop_choice [0.7963, 0.8854]; block_integers [0.7963, 0.8854]
+    [kimi] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 2.22e-16
+Kimi-Audio | audio | OLD 0.8744 [0.8172, 0.9223] n=483 | NEW 0.8936 [0.8479, 0.9329] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.5258 [0.4501, 0.5977] | paired NEW -0.3678 [-0.4394, -0.3020] 2000/2000 | paired OLD -0.3486 [-0.4248, -0.2795]
+    alt conventions NEW interval: loop_choice [0.8479, 0.9329]; block_integers [0.8479, 0.9329]
+    [o25t] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 2.22e-16
+Qwen2.5-Omni | transcript | OLD 0.9596 [0.9306, 0.9823] n=483 | NEW 0.9620 [0.9345, 0.9822] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.1498 [0.1131, 0.1887] | paired NEW -0.8123 [-0.8536, -0.7692] 2000/2000 | paired OLD -0.8098 [-0.8533, -0.7649]
+    alt conventions NEW interval: loop_choice [0.9345, 0.9822]; block_integers [0.9345, 0.9822]
+    [q2at] brute-force replicated-row trapezoid vs weighted MWU, first 100 NEW draws: max |diff| 2.22e-16
+Qwen2-Audio | transcript | OLD 0.9081 [0.8515, 0.9547] n=483 | NEW 0.9199 [0.8791, 0.9560] n=311 n_spk=138 pos=104 neg=207 usable=2000 | conflict 0.2359 [0.1851, 0.2886] | paired NEW -0.6840 [-0.7516, -0.6161] 2000/2000 | paired OLD -0.6722 [-0.7449, -0.5903]
+    alt conventions NEW interval: loop_choice [0.8791, 0.9560]; block_integers [0.8791, 0.9560]
+
+COMPARISON with main job claims (4 dp)
+  Qwen2-Audio          audio      agreement_old_483        verifier ('0.9478', '0.9128', '0.9762') task ('0.9478', '0.9128', '0.9762') AGREE
+  Qwen2-Audio          audio      agreement_new_distinct   verifier ('0.9608', '0.9351', '0.9814') task ('0.9608', '0.9351', '0.9814') AGREE
+  Qwen2-Audio          audio      conflict                 verifier ('0.2280', '0.1816', '0.2782') task ('0.2280', '0.1816', '0.2782') AGREE
+  Qwen2-Audio          audio      paired_new               verifier ('-0.7328', '-0.7780', '-0.6837') task ('-0.7328', '-0.7780', '-0.6837') AGREE
+  -> Qwen2-Audio audio: paper 0.95 old2dp 0.95 new2dp 0.96 changes yes
+  Qwen2.5-Omni         audio      agreement_old_483        verifier ('0.9482', '0.9039', '0.9828') task ('0.9482', '0.9039', '0.9828') AGREE
+  Qwen2.5-Omni         audio      agreement_new_distinct   verifier ('0.9647', '0.9376', '0.9857') task ('0.9647', '0.9376', '0.9857') AGREE
+  Qwen2.5-Omni         audio      conflict                 verifier ('0.2218', '0.1829', '0.2632') task ('0.2218', '0.1829', '0.2632') AGREE
+  Qwen2.5-Omni         audio      paired_new               verifier ('-0.7429', '-0.7869', '-0.6944') task ('-0.7429', '-0.7869', '-0.6944') AGREE
+  -> Qwen2.5-Omni audio: paper 0.95 old2dp 0.95 new2dp 0.96 changes yes
+  Qwen3-Omni-30B-A3B   audio      agreement_old_483        verifier ('0.9638', '0.9336', '0.9864') task ('0.9638', '0.9336', '0.9864') AGREE
+  Qwen3-Omni-30B-A3B   audio      agreement_new_distinct   verifier ('0.9727', '0.9507', '0.9904') task ('0.9727', '0.9507', '0.9904') AGREE
+  Qwen3-Omni-30B-A3B   audio      conflict                 verifier ('0.3008', '0.2454', '0.3641') task ('0.3008', '0.2454', '0.3641') AGREE
+  Qwen3-Omni-30B-A3B   audio      paired_new               verifier ('-0.6719', '-0.7266', '-0.6105') task ('-0.6719', '-0.7266', '-0.6105') AGREE
+  -> Qwen3-Omni-30B-A3B audio: paper 0.96 old2dp 0.96 new2dp 0.97 changes yes
+  Audio Flamingo 2     audio      agreement_old_483        verifier ('0.6083', '0.5126', '0.6997') task ('0.6083', '0.5126', '0.6997') AGREE
+  Audio Flamingo 2     audio      agreement_new_distinct   verifier ('0.6297', '0.5451', '0.7087') task ('0.6297', '0.5451', '0.7087') AGREE
+  Audio Flamingo 2     audio      conflict                 verifier ('0.5286', '0.4512', '0.6015') task ('0.5286', '0.4512', '0.6015') AGREE
+  Audio Flamingo 2     audio      paired_new               verifier ('-0.1011', '-0.1647', '-0.0384') task ('-0.1011', '-0.1647', '-0.0384') AGREE
+  -> Audio Flamingo 2 audio: paper 0.61 old2dp 0.61 new2dp 0.63 changes yes
+  Audio Flamingo 3     audio      agreement_old_483        verifier ('0.8095', '0.7447', '0.8696') task ('0.8095', '0.7447', '0.8696') AGREE
+  Audio Flamingo 3     audio      agreement_new_distinct   verifier ('0.8425', '0.7963', '0.8854') task ('0.8425', '0.7963', '0.8854') AGREE
+  Audio Flamingo 3     audio      conflict                 verifier ('0.4235', '0.3606', '0.4880') task ('0.4235', '0.3606', '0.4880') AGREE
+  Audio Flamingo 3     audio      paired_new               verifier ('-0.4190', '-0.4878', '-0.3461') task ('-0.4190', '-0.4878', '-0.3461') AGREE
+  -> Audio Flamingo 3 audio: paper 0.81 old2dp 0.81 new2dp 0.84 changes yes
+  Kimi-Audio           audio      agreement_old_483        verifier ('0.8744', '0.8172', '0.9223') task ('0.8744', '0.8172', '0.9223') AGREE
+  Kimi-Audio           audio      agreement_new_distinct   verifier ('0.8936', '0.8479', '0.9329') task ('0.8936', '0.8479', '0.9329') AGREE
+  Kimi-Audio           audio      conflict                 verifier ('0.5258', '0.4501', '0.5977') task ('0.5258', '0.4501', '0.5977') AGREE
+  Kimi-Audio           audio      paired_new               verifier ('-0.3678', '-0.4394', '-0.3020') task ('-0.3678', '-0.4394', '-0.3020') AGREE
+  -> Kimi-Audio audio: paper 0.87 old2dp 0.87 new2dp 0.89 changes yes
+  Qwen2.5-Omni         transcript agreement_old_483        verifier ('0.9596', '0.9306', '0.9823') task ('0.9596', '0.9306', '0.9823') AGREE
+  Qwen2.5-Omni         transcript agreement_new_distinct   verifier ('0.9620', '0.9345', '0.9822') task ('0.9620', '0.9345', '0.9822') AGREE
+  Qwen2.5-Omni         transcript conflict                 verifier ('0.1498', '0.1131', '0.1887') task ('0.1498', '0.1131', '0.1887') AGREE
+  Qwen2.5-Omni         transcript paired_new               verifier ('-0.8123', '-0.8536', '-0.7692') task ('-0.8123', '-0.8536', '-0.7692') AGREE
+  -> Qwen2.5-Omni transcript: paper None old2dp 0.96 new2dp 0.96 changes no
+  Qwen2-Audio          transcript agreement_old_483        verifier ('0.9081', '0.8515', '0.9547') task ('0.9081', '0.8515', '0.9547') AGREE
+  Qwen2-Audio          transcript agreement_new_distinct   verifier ('0.9199', '0.8791', '0.9560') task ('0.9199', '0.8791', '0.9560') AGREE
+  Qwen2-Audio          transcript conflict                 verifier ('0.2359', '0.1851', '0.2886') task ('0.2359', '0.1851', '0.2886') AGREE
+  Qwen2-Audio          transcript paired_new               verifier ('-0.6840', '-0.7516', '-0.6161') task ('-0.6840', '-0.7516', '-0.6161') AGREE
+  -> Qwen2-Audio transcript: paper None old2dp 0.91 new2dp 0.92 changes yes
+
+agree 32 disagree 0
+paper text check: audio agreement NEW > 0.80 except AF2: [('Qwen2-Audio', '0.9608'), ('Qwen2.5-Omni', '0.9647'), ('Qwen3-Omni-30B-A3B', '0.9727'), ('Audio Flamingo 2', '0.6297'), ('Audio Flamingo 3', '0.8425'), ('Kimi-Audio', '0.8936')]
+paired NEW intervals exclude zero: [('Qwen2-Audio', 'audio', True), ('Qwen2.5-Omni', 'audio', True), ('Qwen3-Omni-30B-A3B', 'audio', True), ('Audio Flamingo 2', 'audio', True), ('Audio Flamingo 3', 'audio', True), ('Kimi-Audio', 'audio', True), ('Qwen2.5-Omni', 'transcript', True), ('Qwen2-Audio', 'transcript', True)]
