@@ -1,0 +1,19 @@
+PASTE A4_ctl300_zeroshot: 0.8279 [0.7700, 0.8821] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.83 [0.77, 0.88] | above 0.5
+PASTE A4_zeroshot_whole_minus_ctl300: 0.0087 [-0.0325, 0.0510] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.01 [-0.03, 0.05] | difference: includes 0
+PASTE A4_ctl300_vs_T7b_maxabs: 0.0305 n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.03 | n/a
+PASTE A4_ctl300_enc_meanof5: 0.5897 [0.5276, 0.6543] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.59 [0.53, 0.65] | above 0.5
+PASTE A4_ctl300_enc_minus_answer: -0.2382 [-0.3166, -0.1564] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp -0.24 [-0.32, -0.16] | difference: excludes 0
+PASTE A4_enc_whole_minus_ctl300: 0.0085 [-0.0264, 0.0464] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.01 [-0.03, 0.05] | difference: includes 0
+CTL encoder      300 s same-GPU 0.5897 [0.5276, 0.6543] minus answer -0.2382 [-0.3166, -0.1564] | whole 0.5981 whole-300 0.0085 [-0.0264, 0.0464]
+PASTE A4_ctl300_proj_meanof5: 0.5618 [0.4882, 0.6353] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.56 [0.49, 0.64] | includes 0.5
+PASTE A4_ctl300_proj_minus_answer: -0.2661 [-0.3491, -0.1802] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp -0.27 [-0.35, -0.18] | difference: excludes 0
+PASTE A4_proj_whole_minus_ctl300: 0.0248 [-0.0186, 0.0707] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.02 [-0.02, 0.07] | difference: includes 0
+CTL projector    300 s same-GPU 0.5618 [0.4882, 0.6353] minus answer -0.2661 [-0.3491, -0.1802] | whole 0.5866 whole-300 0.0248 [-0.0186, 0.0707]
+PASTE A4_ctl300_llm_meanof5: 0.7002 [0.6211, 0.7731] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.70 [0.62, 0.77] | above 0.5
+PASTE A4_ctl300_llm_minus_answer: -0.1277 [-0.2012, -0.0612] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp -0.13 [-0.20, -0.06] | difference: excludes 0
+PASTE A4_llm_whole_minus_ctl300: 0.0435 [0.0003, 0.0932] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.04 [0.00, 0.09] | difference: excludes 0
+CTL LM           300 s same-GPU 0.7002 [0.6211, 0.7731] minus answer -0.1277 [-0.2012, -0.0612] | whole 0.7437 whole-300 0.0435 [0.0003, 0.0932]
+PASTE A4_ctl300_ans_meanof5: 0.7452 [0.6826, 0.8059] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.75 [0.68, 0.81] | above 0.5
+PASTE A4_ctl300_ans_minus_answer: -0.0827 [-0.1314, -0.0356] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp -0.08 [-0.13, -0.04] | difference: excludes 0
+PASTE A4_ans_whole_minus_ctl300: 0.0907 [0.0480, 0.1348] n=275 n_spk=275 scores/part23/A/A4_ctl300_samegpu_perclip.csv | two-dp 0.09 [0.05, 0.13] | difference: excludes 0
+CTL answer state 300 s same-GPU 0.7452 [0.6826, 0.8059] minus answer -0.0827 [-0.1314, -0.0356] | whole 0.8359 whole-300 0.0907 [0.0480, 0.1348]
