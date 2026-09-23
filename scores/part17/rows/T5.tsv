@@ -1,0 +1,51 @@
+id	what	value	lo	hi	n	n_spk	file
+T5_pitt_answer	Pitt Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.6578	0.6033	0.7125	468	228	<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv
+T5_pitt_layers_above	Pitt encoder layers (of 32) with probe auc_oof > answer AUC	31			468	228	scores/part17/T5_omitted_curves.csv
+T5_pitt_layers_strict	Pitt encoder layers (of 32) with auc_mean - auc_std > answer AUC	25			468	228	scores/part17/T5_omitted_curves.csv
+T5_pitt_layers_above_ci	Pitt encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	25			468	228	scores/part17/T5_omitted_curves.csv
+T5_pitt_probe_max	Pitt encoder probe max auc_oof (layer 27)	0.8083			468	228	<local data dir>/release/overnight/curves/omni/pitt_encoder.csv
+T5_adresso_answer	ADReSSo Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.6150	0.5432	0.6890	237	237	<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv
+T5_adresso_layers_above	ADReSSo encoder layers (of 32) with probe auc_oof > answer AUC	32			237	237	scores/part17/T5_omitted_curves.csv
+T5_adresso_layers_strict	ADReSSo encoder layers (of 32) with auc_mean - auc_std > answer AUC	32			237	237	scores/part17/T5_omitted_curves.csv
+T5_adresso_layers_above_ci	ADReSSo encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	32			237	237	scores/part17/T5_omitted_curves.csv
+T5_adresso_probe_max	ADReSSo encoder probe max auc_oof (layer 27)	0.9030			237	237	<local data dir>/release/omni_final/omni_adresso_encoder_perlayer.csv
+T5_adress2020_answer	ADReSS-2020 Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.6241	0.5348	0.7148	156	156	<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv
+T5_adress2020_layers_above	ADReSS-2020 encoder layers (of 32) with probe auc_oof > answer AUC	32			156	156	scores/part17/T5_omitted_curves.csv
+T5_adress2020_layers_strict	ADReSS-2020 encoder layers (of 32) with auc_mean - auc_std > answer AUC	26			156	156	scores/part17/T5_omitted_curves.csv
+T5_adress2020_layers_above_ci	ADReSS-2020 encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	24			156	156	scores/part17/T5_omitted_curves.csv
+T5_adress2020_probe_max	ADReSS-2020 encoder probe max auc_oof (layer 25)	0.8248			156	156	<local data dir>/release/omni_final/omni_adress2020_encoder_perlayer.csv
+T5_pcgita_answer	PC-GITA Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.5635	0.4931	0.6331	1100	100	<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv
+T5_pcgita_layers_above	PC-GITA encoder layers (of 32) with probe auc_oof > answer AUC	32			1100	100	scores/part17/T5_omitted_curves.csv
+T5_pcgita_layers_strict	PC-GITA encoder layers (of 32) with auc_mean - auc_std > answer AUC	32			1100	100	scores/part17/T5_omitted_curves.csv
+T5_pcgita_layers_above_ci	PC-GITA encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	32			1100	100	scores/part17/T5_omitted_curves.csv
+T5_pcgita_probe_max	PC-GITA encoder probe max auc_oof (layer 6)	0.9234			1100	100	<local data dir>/release/overnight/curves/omni/pcgita_encoder.csv
+T5_neurovoz_answer	NeuroVoz Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.6951	0.6356	0.7519	1270	107	<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv
+T5_neurovoz_layers_above	NeuroVoz encoder layers (of 32) with probe auc_oof > answer AUC	32			1270	107	scores/part17/T5_omitted_curves.csv
+T5_neurovoz_layers_strict	NeuroVoz encoder layers (of 32) with auc_mean - auc_std > answer AUC	32			1270	107	scores/part17/T5_omitted_curves.csv
+T5_neurovoz_layers_above_ci	NeuroVoz encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	32			1270	107	scores/part17/T5_omitted_curves.csv
+T5_neurovoz_probe_max	NeuroVoz encoder probe max auc_oof (layer 25)	0.9335			1270	107	<local data dir>/release/omni_final/omni_neurovoz_encoder_perlayer.csv
+T5_kcl_answer	MDVR-KCL Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.7143	0.5210	0.8810	37	37	<local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv
+T5_kcl_layers_above	MDVR-KCL encoder layers (of 32) with probe auc_oof > answer AUC	32			37	37	scores/part17/T5_omitted_curves.csv
+T5_kcl_layers_strict	MDVR-KCL encoder layers (of 32) with auc_mean - auc_std > answer AUC	15			37	37	scores/part17/T5_omitted_curves.csv
+T5_kcl_layers_above_ci	MDVR-KCL encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	0			37	37	scores/part17/T5_omitted_curves.csv
+T5_kcl_probe_max	MDVR-KCL encoder probe max auc_oof (layer 19)	0.8482			37	37	<local data dir>/release/omni_final/omni_kcl_encoder_perlayer.csv
+T5_edaic_full_answer	E-DAIC (full, 900 s cap) Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.8285	0.7708	0.8827	275	275	<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv
+T5_edaic_full_layers_above	E-DAIC (full, 900 s cap) encoder layers (of 32) with probe auc_oof > answer AUC	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_full_layers_strict	E-DAIC (full, 900 s cap) encoder layers (of 32) with auc_mean - auc_std > answer AUC	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_full_layers_above_ci	E-DAIC (full, 900 s cap) encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_full_probe_max	E-DAIC (full, 900 s cap) encoder probe max auc_oof (layer 19)	0.6896			275	275	<local data dir>/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv
+T5_edaic_mid300_answer	E-DAIC (middle 300 s) Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.8122	0.7479	0.8707	275	275	<local data dir>/release/edaic_rerun/variants/o25_mid300_zeroshot_scores.csv
+T5_edaic_mid300_layers_above	E-DAIC (middle 300 s) encoder layers (of 32) with probe auc_oof > answer AUC	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_mid300_layers_strict	E-DAIC (middle 300 s) encoder layers (of 32) with auc_mean - auc_std > answer AUC	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_mid300_layers_above_ci	E-DAIC (middle 300 s) encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_mid300_probe_max	E-DAIC (middle 300 s) encoder probe max auc_oof (layer 22)	0.6839			275	275	<local data dir>/release/edaic_rerun/variants/o25_mid300_encoder_perlayer.csv
+T5_edaic_mid30_answer	E-DAIC (middle 30 s) Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.7205	0.6531	0.7917	275	275	<local data dir>/release/edaic_rerun/variants/o25_mid30_zeroshot_scores.csv
+T5_edaic_mid30_layers_above	E-DAIC (middle 30 s) encoder layers (of 32) with probe auc_oof > answer AUC	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_mid30_layers_strict	E-DAIC (middle 30 s) encoder layers (of 32) with auc_mean - auc_std > answer AUC	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_mid30_layers_above_ci	E-DAIC (middle 30 s) encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_mid30_probe_max	E-DAIC (middle 30 s) encoder probe max auc_oof (layer 2)	0.6705			275	275	<local data dir>/release/edaic_rerun/variants/o25_mid30_encoder_perlayer.csv
+T5_edaic_first30_answer	E-DAIC (first 30 s, omni_final) Qwen2.5-Omni zero-shot answer AUC (rank formula, speaker bootstrap)	0.6620	0.5831	0.7315	275	275	<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv
+T5_edaic_first30_layers_above	E-DAIC (first 30 s, omni_final) encoder layers (of 32) with probe auc_oof > answer AUC	2			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_first30_layers_strict	E-DAIC (first 30 s, omni_final) encoder layers (of 32) with auc_mean - auc_std > answer AUC	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_first30_layers_above_ci	E-DAIC (first 30 s, omni_final) encoder layers (of 32) with probe auc_oof > answer AUC upper 97.5 bound	0			275	275	scores/part17/T5_omitted_curves.csv
+T5_edaic_first30_probe_max	E-DAIC (first 30 s, omni_final) encoder probe max auc_oof (layer 1)	0.6686			275	275	<local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv

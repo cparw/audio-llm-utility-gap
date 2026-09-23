@@ -1,0 +1,263 @@
+figure script <local data dir>/release/edaic_rerun/make_fig1_v4.py sha256 0806d85429c1d9c9b6178c84fdb08e83c33cc61cf10d9d28f54911f3fc8fe20d
+figure script curve reads: [('MIRROR', 'pcgita_encoder.csv', 'auc'), ('MIRROR', 'pitt_encoder.csv', 'auc'), ('RERUN', 'o25_{variant}_encoder_perlayer.csv', 'auc_oof')]
+figure script answers: {'edaic_full': 0.8285, 'edaic_mid30': 0.7205, 'edaic_mid300': 0.8122, 'pcgita': 0.5635, 'pitt': 0.6578}
+==========================================================================================
+pitt AD plotted
+  zero-shot file <local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv  rows 468  speakers 228  positives 290  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.657768  trapezoid 0.657768  diff 0.00e+00
+  interval (sorted str speakers) [0.6033, 0.7125]  usable 2000/2000  speakers 228
+  interval alt orders: {'sorted_num': None, 'appearance': (0.6002, 0.7127)}
+  run json <local data dir>/release/omni_final/omni_pitt_zeroshot.json: auc 0.6578 n 468 n_positive 290 window 30
+  master_lookup ('Qwen2.5-Omni', 'pitt'): (0.6578, 468, '<local data dir>/paper1_local_runs/omni_final/omni_pitt_zeroshot.json')
+  curve file <local data dir>/release/overnight/curves/omni/pitt_encoder.csv col auc  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 31/32  (vs 4dp answer 31, vs figure value 31)  mean-std above 25/32  above CI hi 25/32
+  probe min 0.6517 (L2)  median 0.7597  max 0.8083 (L27)
+  layers at or below answer (layer, margin): [(2, -0.006)]
+  CHECK answer AUC             claimed 0.6578  mine 0.6578  AGREE
+  CHECK interval lo            claimed 0.6033  mine 0.6033  AGREE
+  CHECK interval hi            claimed 0.7125  mine 0.7125  AGREE
+  CHECK layers above           claimed 31  mine 31  AGREE
+  CHECK mean-std above         claimed 25  mine 25  AGREE
+  CHECK above CI hi            claimed 25  mine 25  AGREE
+  CHECK probe min              claimed 0.6517  mine 0.6517  AGREE
+  CHECK probe min layer        claimed 2  mine 2  AGREE
+  CHECK probe median           claimed 0.7597  mine 0.7597  AGREE
+  CHECK probe max              claimed 0.8083  mine 0.8083  AGREE
+  CHECK probe max layer        claimed 27  mine 27  AGREE
+  CHECK n                      claimed 468  mine 468  AGREE
+  CHECK n_speakers             claimed 228  mine 228  AGREE
+==========================================================================================
+adresso AD omitted
+  zero-shot file <local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv  rows 237  speakers 237  positives 122  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.615039  trapezoid 0.615039  diff 0.00e+00
+  interval (sorted str speakers) [0.5432, 0.6890]  usable 2000/2000  speakers 237
+  interval alt orders: {'sorted_num': None, 'appearance': (0.5432, 0.689)}
+  run json <local data dir>/release/omni_final/omni_adresso_zeroshot.json: auc 0.615 n 237 n_positive 122 window 30
+  master_lookup ('Qwen2.5-Omni', 'adresso'): (0.615, 237, '<local data dir>/paper1_local_runs/omni_final/omni_adresso_zeroshot.json')
+  curve file <local data dir>/release/omni_final/omni_adresso_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 32/32  (vs 4dp answer 32, vs figure value None)  mean-std above 32/32  above CI hi 32/32
+  probe min 0.7413 (L0)  median 0.8604  max 0.9030 (L27)
+  layers at or below answer (layer, margin): []
+  CHECK answer AUC             claimed 0.615  mine 0.6150  AGREE
+  CHECK interval lo            claimed 0.5432  mine 0.5432  AGREE
+  CHECK interval hi            claimed 0.689  mine 0.6890  AGREE
+  CHECK layers above           claimed 32  mine 32  AGREE
+  CHECK mean-std above         claimed 32  mine 32  AGREE
+  CHECK above CI hi            claimed 32  mine 32  AGREE
+  CHECK probe min              claimed 0.7413  mine 0.7413  AGREE
+  CHECK probe min layer        claimed 0  mine 0  AGREE
+  CHECK probe median           claimed 0.8604  mine 0.8604  AGREE
+  CHECK probe max              claimed 0.903  mine 0.9030  AGREE
+  CHECK probe max layer        claimed 27  mine 27  AGREE
+  CHECK n                      claimed 237  mine 237  AGREE
+  CHECK n_speakers             claimed 237  mine 237  AGREE
+==========================================================================================
+adress2020 AD omitted
+  zero-shot file <local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv  rows 156  speakers 156  positives 78  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.624096  trapezoid 0.624096  diff 1.11e-16
+  interval (sorted str speakers) [0.5348, 0.7148]  usable 2000/2000  speakers 156
+  interval alt orders: {'sorted_num': None, 'appearance': (0.5348, 0.7148)}
+  run json <local data dir>/release/omni_final/omni_adress2020_zeroshot.json: auc 0.6241 n 156 n_positive 78 window 30
+  master_lookup ('Qwen2.5-Omni', 'adress2020'): (0.6241, 156, '<local data dir>/paper1_local_runs/omni_final/omni_adress2020_zeroshot.json')
+  curve file <local data dir>/release/omni_final/omni_adress2020_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 32/32  (vs 4dp answer 32, vs figure value None)  mean-std above 26/32  above CI hi 24/32
+  probe min 0.6502 (L2)  median 0.7855  max 0.8248 (L25)
+  layers at or below answer (layer, margin): []
+  CHECK answer AUC             claimed 0.6241  mine 0.6241  AGREE
+  CHECK interval lo            claimed 0.5348  mine 0.5348  AGREE
+  CHECK interval hi            claimed 0.7148  mine 0.7148  AGREE
+  CHECK layers above           claimed 32  mine 32  AGREE
+  CHECK mean-std above         claimed 26  mine 26  AGREE
+  CHECK above CI hi            claimed 24  mine 24  AGREE
+  CHECK probe min              claimed 0.6502  mine 0.6502  AGREE
+  CHECK probe min layer        claimed 2  mine 2  AGREE
+  CHECK probe median           claimed 0.7855  mine 0.7855  AGREE
+  CHECK probe max              claimed 0.8248  mine 0.8248  AGREE
+  CHECK probe max layer        claimed 25  mine 25  AGREE
+  CHECK n                      claimed 156  mine 156  AGREE
+  CHECK n_speakers             claimed 156  mine 156  AGREE
+==========================================================================================
+pcgita PD plotted
+  zero-shot file <local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv  rows 1100  speakers 100  positives 550  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.563478  trapezoid 0.563478  diff 0.00e+00
+  interval (sorted str speakers) [0.4931, 0.6331]  usable 2000/2000  speakers 100
+  interval alt orders: {'sorted_num': None, 'appearance': (0.4946, 0.6321)}
+  run json <local data dir>/release/omni_final/omni_pcgita_zeroshot.json: auc 0.5635 n 1100 n_positive 550 window 30
+  master_lookup ('Qwen2.5-Omni', 'pcgita'): (0.5635, 1100, '<local data dir>/paper1_local_runs/omni_final/omni_pcgita_zeroshot.json')
+  curve file <local data dir>/release/overnight/curves/omni/pcgita_encoder.csv col auc  rows 32  max |curve - stat auc_oof| 1.110e-16
+  layers above answer 32/32  (vs 4dp answer 32, vs figure value 32)  mean-std above 32/32  above CI hi 32/32
+  probe min 0.8720 (L0)  median 0.9065  max 0.9234 (L6)
+  layers at or below answer (layer, margin): []
+  CHECK answer AUC             claimed 0.5635  mine 0.5635  AGREE
+  CHECK interval lo            claimed 0.4931  mine 0.4931  AGREE
+  CHECK interval hi            claimed 0.6331  mine 0.6331  AGREE
+  CHECK layers above           claimed 32  mine 32  AGREE
+  CHECK mean-std above         claimed 32  mine 32  AGREE
+  CHECK above CI hi            claimed 32  mine 32  AGREE
+  CHECK probe min              claimed 0.872  mine 0.8720  AGREE
+  CHECK probe min layer        claimed 0  mine 0  AGREE
+  CHECK probe median           claimed 0.9065  mine 0.9065  AGREE
+  CHECK probe max              claimed 0.9234  mine 0.9234  AGREE
+  CHECK probe max layer        claimed 6  mine 6  AGREE
+  CHECK n                      claimed 1100  mine 1100  AGREE
+  CHECK n_speakers             claimed 100  mine 100  AGREE
+==========================================================================================
+neurovoz PD omitted
+  zero-shot file <local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv  rows 1270  speakers 107  positives 621  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.695081  trapezoid 0.695081  diff 1.11e-16
+  interval (sorted str speakers) [0.6356, 0.7519]  usable 2000/2000  speakers 107
+  interval alt orders: {'sorted_num': (0.6357, 0.7485), 'appearance': (0.6357, 0.7515)}
+  run json <local data dir>/release/omni_final/omni_neurovoz_zeroshot.json: auc 0.6951 n 1270 n_positive 621 window 30
+  master_lookup ('Qwen2.5-Omni', 'neurovoz'): (0.6951, 1270, '<local data dir>/paper1_local_runs/omni_final/omni_neurovoz_zeroshot.json')
+  curve file <local data dir>/release/omni_final/omni_neurovoz_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 32/32  (vs 4dp answer 32, vs figure value None)  mean-std above 32/32  above CI hi 32/32
+  probe min 0.8365 (L0)  median 0.9218  max 0.9335 (L25)
+  layers at or below answer (layer, margin): []
+  CHECK answer AUC             claimed 0.6951  mine 0.6951  AGREE
+  CHECK interval lo            claimed 0.6356  mine 0.6356  AGREE
+  CHECK interval hi            claimed 0.7519  mine 0.7519  AGREE
+  CHECK layers above           claimed 32  mine 32  AGREE
+  CHECK mean-std above         claimed 32  mine 32  AGREE
+  CHECK above CI hi            claimed 32  mine 32  AGREE
+  CHECK probe min              claimed 0.8365  mine 0.8365  AGREE
+  CHECK probe min layer        claimed 0  mine 0  AGREE
+  CHECK probe median           claimed 0.9218  mine 0.9218  AGREE
+  CHECK probe max              claimed 0.9335  mine 0.9335  AGREE
+  CHECK probe max layer        claimed 25  mine 25  AGREE
+  CHECK n                      claimed 1270  mine 1270  AGREE
+  CHECK n_speakers             claimed 107  mine 107  AGREE
+==========================================================================================
+kcl PD omitted
+  zero-shot file <local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv  rows 37  speakers 37  positives 16  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.714286  trapezoid 0.714286  diff 1.11e-16
+  interval (sorted str speakers) [0.5210, 0.8810]  usable 2000/2000  speakers 37
+  interval alt orders: {'sorted_num': None, 'appearance': (0.521, 0.881)}
+  run json <local data dir>/release/omni_final/omni_kcl_zeroshot.json: auc 0.7143 n 37 n_positive 16 window 30
+  master_lookup ('Qwen2.5-Omni', 'kcl'): (0.7143, 37, '<local data dir>/paper1_local_runs/omni_final/omni_kcl_zeroshot.json')
+  curve file <local data dir>/release/omni_final/omni_kcl_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 32/32  (vs 4dp answer 32, vs figure value None)  mean-std above 15/32  above CI hi 0/32
+  probe min 0.7470 (L0)  median 0.8021  max 0.8482 (L19)
+  layers at or below answer (layer, margin): []
+  CHECK answer AUC             claimed 0.7143  mine 0.7143  AGREE
+  CHECK interval lo            claimed 0.521  mine 0.5210  AGREE
+  CHECK interval hi            claimed 0.881  mine 0.8810  AGREE
+  CHECK layers above           claimed 32  mine 32  AGREE
+  CHECK mean-std above         claimed 15  mine 15  AGREE
+  CHECK above CI hi            claimed 0  mine 0  AGREE
+  CHECK probe min              claimed 0.747  mine 0.7470  AGREE
+  CHECK probe min layer        claimed 0  mine 0  AGREE
+  CHECK probe median           claimed 0.8021  mine 0.8021  AGREE
+  CHECK probe max              claimed 0.8482  mine 0.8482  AGREE
+  CHECK probe max layer        claimed 19  mine 19  AGREE
+  CHECK n                      claimed 37  mine 37  AGREE
+  CHECK n_speakers             claimed 37  mine 37  AGREE
+==========================================================================================
+edaic_full MDD plotted
+  zero-shot file <local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv  rows 275  speakers 275  positives 66  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.828476  trapezoid 0.828476  diff 0.00e+00
+  interval (sorted str speakers) [0.7708, 0.8827]  usable 2000/2000  speakers 275
+  interval alt orders: {'sorted_num': (0.7708, 0.8827), 'appearance': (0.7708, 0.8827)}
+  run json <local data dir>/release/edaic_rerun/variants/o25_full_zeroshot.json: auc 0.8285 n 275 n_positive 66 window 0.0
+  master_lookup ('Qwen2.5-Omni', 'edaic_full'): (0.8285, 275, '<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot.json')
+  curve file <local data dir>/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 0/32  (vs 4dp answer 0, vs figure value 0)  mean-std above 0/32  above CI hi 0/32
+  probe min 0.5684 (L30)  median 0.6224  max 0.6896 (L19)
+  layers at or below answer (layer, margin): [(0, -0.2405), (1, -0.2545), (2, -0.2021), (3, -0.2312), (4, -0.2192), (5, -0.2203), (6, -0.2249), (7, -0.249), (8, -0.2326), (9, -0.2123), (10, -0.1915), (11, -0.2055), (12, -0.212), (13, -0.2015), (14, -0.2175), (15, -0.2065), (16, -0.1841), (17, -0.1792), (18, -0.1527), (19, -0.1389), (20, -0.1612), (21, -0.1393), (22, -0.148), (23, -0.1558), (24, -0.1553), (25, -0.1657), (26, -0.1932), (27, -0.2003), (28, -0.2144), (29, -0.222), (30, -0.2601), (31, -0.2104)]
+  CHECK answer AUC             claimed 0.8285  mine 0.8285  AGREE
+  CHECK interval lo            claimed 0.7708  mine 0.7708  AGREE
+  CHECK interval hi            claimed 0.8827  mine 0.8827  AGREE
+  CHECK layers above           claimed 0  mine 0  AGREE
+  CHECK probe min              claimed 0.5684  mine 0.5684  AGREE
+  CHECK probe median           claimed 0.6224  mine 0.6224  AGREE
+  CHECK probe max              claimed 0.6896  mine 0.6896  AGREE
+  CHECK probe max layer        claimed 19  mine 19  AGREE
+  CHECK n                      claimed 275  mine 275  AGREE
+  CHECK n_speakers             claimed 275  mine 275  AGREE
+==========================================================================================
+edaic_mid300 MDD variant
+  zero-shot file <local data dir>/release/edaic_rerun/variants/o25_mid300_zeroshot_scores.csv  rows 275  speakers 275  positives 66  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.812165  trapezoid 0.812165  diff 0.00e+00
+  interval (sorted str speakers) [0.7479, 0.8707]  usable 2000/2000  speakers 275
+  interval alt orders: {'sorted_num': (0.7479, 0.8707), 'appearance': (0.7479, 0.8707)}
+  run json <local data dir>/release/edaic_rerun/variants/o25_mid300_zeroshot.json: auc 0.8122 n 275 n_positive 66 window 0.0
+  master_lookup ('Qwen2.5-Omni', 'edaic_mid300'): (0.8122, 275, '<local data dir>/release/edaic_rerun/variants/o25_mid300_zeroshot.json')
+  curve file <local data dir>/release/edaic_rerun/variants/o25_mid300_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 0/32  (vs 4dp answer 0, vs figure value 0)  mean-std above 0/32  above CI hi 0/32
+  probe min 0.5663 (L1)  median 0.6096  max 0.6839 (L22)
+  layers at or below answer (layer, margin): [(0, -0.2347), (1, -0.2459), (2, -0.2009), (3, -0.219), (4, -0.2333), (5, -0.2279), (6, -0.2194), (7, -0.2354), (8, -0.2363), (9, -0.2165), (10, -0.1922), (11, -0.1984), (12, -0.194), (13, -0.1925), (14, -0.2013), (15, -0.2037), (16, -0.1696), (17, -0.1479), (18, -0.1414), (19, -0.1476), (20, -0.1616), (21, -0.148), (22, -0.1282), (23, -0.1516), (24, -0.1549), (25, -0.1506), (26, -0.2059), (27, -0.2157), (28, -0.2104), (29, -0.2379), (30, -0.2389), (31, -0.2312)]
+  CHECK answer AUC             claimed 0.8122  mine 0.8122  AGREE
+  CHECK interval lo            claimed 0.7479  mine 0.7479  AGREE
+  CHECK interval hi            claimed 0.8707  mine 0.8707  AGREE
+  CHECK layers above           claimed 0  mine 0  AGREE
+  CHECK probe max              claimed 0.6839  mine 0.6839  AGREE
+  CHECK probe max layer        claimed 22  mine 22  AGREE
+  CHECK n                      claimed 275  mine 275  AGREE
+  CHECK n_speakers             claimed 275  mine 275  AGREE
+==========================================================================================
+edaic_mid30 MDD variant
+  zero-shot file <local data dir>/release/edaic_rerun/variants/o25_mid30_zeroshot_scores.csv  rows 275  speakers 275  positives 66  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.720531  trapezoid 0.720531  diff 0.00e+00
+  interval (sorted str speakers) [0.6531, 0.7917]  usable 2000/2000  speakers 275
+  interval alt orders: {'sorted_num': (0.6531, 0.7917), 'appearance': (0.6531, 0.7917)}
+  run json <local data dir>/release/edaic_rerun/variants/o25_mid30_zeroshot.json: auc 0.7205 n 275 n_positive 66 window 0.0
+  master_lookup ('Qwen2.5-Omni', 'edaic_mid30'): (0.7205, 275, '<local data dir>/release/edaic_rerun/variants/o25_mid30_zeroshot.json')
+  curve file <local data dir>/release/edaic_rerun/variants/o25_mid30_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 0/32  (vs 4dp answer 0, vs figure value 0)  mean-std above 0/32  above CI hi 0/32
+  probe min 0.5196 (L30)  median 0.5659  max 0.6705 (L2)
+  layers at or below answer (layer, margin): [(0, -0.1211), (1, -0.0839), (2, -0.05), (3, -0.073), (4, -0.0837), (5, -0.0879), (6, -0.1027), (7, -0.1037), (8, -0.0937), (9, -0.1186), (10, -0.1031), (11, -0.1331), (12, -0.1403), (13, -0.1467), (14, -0.1358), (15, -0.1782), (16, -0.1744), (17, -0.1687), (18, -0.1667), (19, -0.1593), (20, -0.15), (21, -0.161), (22, -0.172), (23, -0.1938), (24, -0.1931), (25, -0.1875), (26, -0.2008), (27, -0.189), (28, -0.1791), (29, -0.1783), (30, -0.2009), (31, -0.1889)]
+  CHECK answer AUC             claimed 0.7205  mine 0.7205  AGREE
+  CHECK interval lo            claimed 0.6531  mine 0.6531  AGREE
+  CHECK interval hi            claimed 0.7917  mine 0.7917  AGREE
+  CHECK layers above           claimed 0  mine 0  AGREE
+  CHECK probe max              claimed 0.6705  mine 0.6705  AGREE
+  CHECK probe max layer        claimed 2  mine 2  AGREE
+  CHECK n                      claimed 275  mine 275  AGREE
+  CHECK n_speakers             claimed 275  mine 275  AGREE
+==========================================================================================
+edaic_first30 MDD reference
+  zero-shot file <local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv  rows 275  speakers 275  positives 66  mixed-label speakers 0
+  answer AUC  Mann-Whitney 0.662027  trapezoid 0.662027  diff 0.00e+00
+  interval (sorted str speakers) [0.5831, 0.7315]  usable 2000/2000  speakers 275
+  interval alt orders: {'sorted_num': (0.5831, 0.7315), 'appearance': (0.5831, 0.7315)}
+  run json <local data dir>/release/omni_final/omni_edaic_zeroshot.json: auc 0.662 n 275 n_positive 66 window 30
+  master_lookup ('Qwen2.5-Omni', 'edaic'): (0.662, 275, '<local data dir>/paper1_local_runs/omni_final/omni_edaic_zeroshot.json')
+  curve file <local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv col auc_oof  rows 32  max |curve - stat auc_oof| 0.000e+00
+  layers above answer 2/32  (vs 4dp answer 2, vs figure value None)  mean-std above 0/32  above CI hi 0/32
+  probe min 0.4814 (L31)  median 0.5795  max 0.6686 (L1)
+  layers at or below answer (layer, margin): [(2, -0.0072), (3, -0.0313), (4, -0.0249), (5, -0.0017), (6, -0.0193), (7, -0.0547), (8, -0.0372), (9, -0.0374), (10, -0.0229), (11, -0.0662), (12, -0.0587), (13, -0.0589), (14, -0.0684), (15, -0.0765), (16, -0.0903), (17, -0.0887), (18, -0.09), (19, -0.1311), (20, -0.1259), (21, -0.1224), (22, -0.1377), (23, -0.123), (24, -0.1407), (25, -0.1178), (26, -0.1514), (27, -0.1205), (28, -0.1477), (29, -0.1338), (30, -0.1441), (31, -0.1806)]
+  CHECK answer AUC             claimed 0.662  mine 0.6620  AGREE
+  CHECK interval lo            claimed 0.5831  mine 0.5831  AGREE
+  CHECK interval hi            claimed 0.7315  mine 0.7315  AGREE
+  CHECK layers above           claimed 2  mine 2  AGREE
+  CHECK mean-std above         claimed 0  mine 0  AGREE
+  CHECK n                      claimed 275  mine 275  AGREE
+  CHECK n_speakers             claimed 275  mine 275  AGREE
+==========================================================================================
+EXTRA CHECKS
+  sidecar T5_pitt: OK
+  sidecar T5_adresso: OK
+  sidecar T5_adress2020: OK
+  sidecar T5_pcgita: OK
+  sidecar T5_neurovoz: OK
+  sidecar T5_kcl: OK
+  sidecar T5_edaic_full: OK
+  sidecar T5_edaic_mid300: OK
+  sidecar T5_edaic_mid30: OK
+  sidecar T5_edaic_first30: OK
+  per-clip csv scores/part17/T5_zeroshot_perclip.csv: rows 4368; per dataset {'pitt': 468, 'adresso': 237, 'adress2020': 156, 'pcgita': 1100, 'neurovoz': 1270, 'kcl': 37, 'edaic_full': 275, 'edaic_mid300': 275, 'edaic_mid30': 275, 'edaic_first30': 275}; value mismatches vs source {'pitt': 0, 'adresso': 0, 'adress2020': 0, 'pcgita': 0, 'neurovoz': 0, 'kcl': 0, 'edaic_full': 0, 'edaic_mid300': 0, 'edaic_mid30': 0, 'edaic_first30': 0}
+  curves csv rows per dataset {'pitt': 32, 'adresso': 32, 'adress2020': 32, 'pcgita': 32, 'neurovoz': 32, 'kcl': 32, 'edaic_full': 32, 'edaic_mid300': 32, 'edaic_mid30': 32, 'edaic_first30': 32}
+  probe clip set == zero-shot clip set: {'pitt': (468, 468, True), 'adresso': (237, 237, True), 'adress2020': (156, 156, True), 'pcgita': (1100, 1100, True), 'neurovoz': (1270, 1270, True), 'kcl': (37, 37, True), 'edaic_first30': (275, 275, True), 'edaic_full': ('nested_repeats n', None, False), 'edaic_mid300': ('nested_repeats n', None, False), 'edaic_mid30': ('nested_repeats n', None, False)}
+  [adress2020] states <local data dir>/release/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz: enc (156, 32, 1280); clip order equals zero-shot file: True; max |p_yes diff| 0.03836380753010504
+  [adress2020] states do not match the zero-shot run, recompute skipped
+  [pitt] states <local data dir>/release/overnight2/part10/o25_pitt_states.npz: enc (468, 32, 1280); clip order equals zero-shot file: True; max |p_yes diff| 0.0
+  [pitt] recomputed auc_oof vs saved: max |diff| 5.34e-02, 4dp agree 0/32; mean max |diff| 4.40e-02; std max |diff| 3.44e-02
+  [pitt] layers above answer from MY recomputed curve: 32/32 (saved curve 31/32)
+  [edaic_first30] states <local data dir>/release/overnight2/part10/o25_edaic_states.npz: enc (275, 32, 1280); clip order equals zero-shot file: True; max |p_yes diff| 0.0
+  [edaic_first30] recomputed auc_oof vs saved: max |diff| 8.77e-02, 4dp agree 0/32; mean max |diff| 7.69e-02; std max |diff| 4.90e-02
+  [edaic_first30] layers above answer from MY recomputed curve: 0/32 (saved curve 2/32)
+  [pitt] partition sensitivity over 20 speaker partitions (<local data dir>/release/overnight2/part10/o25_pitt_states.npz): per-layer auc_oof SD median 0.0184, max range 0.0909; layers above 0.6578: min 28 median 31 max 32 of 32
+  [edaic_first30] partition sensitivity over 20 speaker partitions (<local data dir>/release/overnight2/part10/o25_edaic_states.npz): per-layer auc_oof SD median 0.0235, max range 0.1158; layers above 0.6620: min 0 median 0 max 4 of 32
+  [adress2020] partition sensitivity over 20 speaker partitions (<local data dir>/release/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz): per-layer auc_oof SD median 0.0153, max range 0.0896; layers above 0.6241: min 31 median 32 max 32 of 32
+  files under omni_final modified on/after 2026-09-23 UTC: 0
+
+CHECKS 111  agree 111  disagree 0
