@@ -1,0 +1,49 @@
+id	what	value	lo	hi	n	n_spk	file
+4b_adress2020_A_orig_zs	adress2020 arm A_orig Omni zero-shot AUC	0.6272	0.5379	0.7165	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_A_orig_enc	adress2020 arm A_orig Omni encoder nested probe AUC	0.7959	0.7251	0.8602	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_B_paronly_zs	adress2020 arm B_paronly Omni zero-shot AUC	0.6524	0.5648	0.7380	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_B_paronly_enc	adress2020 arm B_paronly Omni encoder nested probe AUC	0.7641	0.6921	0.8350	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_C_durmatch_zs	adress2020 arm C_durmatch Omni zero-shot AUC	0.6313	0.5435	0.7141	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_C_durmatch_enc	adress2020 arm C_durmatch Omni encoder nested probe AUC	0.8075	0.7361	0.8705	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_published_zs	adress2020 arm published Omni zero-shot AUC	0.6241	0.5348	0.7148	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_published_enc	adress2020 arm published Omni encoder nested probe AUC	0.7878	0.7148	0.8517	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_paired_zs_A_to_B	adress2020 PAIRED zero-shot: original cut -> interviewer removed	0.0251	-0.0254	0.0769	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_paired_zs_A_to_C	adress2020 PAIRED zero-shot: original cut -> duration-matched, interviewer KEPT	0.0041	-0.0386	0.0473	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_paired_zs_C_to_B	adress2020 PAIRED zero-shot: duration-matched WITH interviewer -> interviewer removed	0.0210	-0.0325	0.0756	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_paired_enc_A_to_B	adress2020 PAIRED encoder probe: original cut -> interviewer removed	-0.0317	-0.0761	0.0102	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_paired_enc_A_to_C	adress2020 PAIRED encoder probe: original cut -> duration-matched, interviewer KEPT	0.0117	-0.0229	0.0449	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_paired_enc_C_to_B	adress2020 PAIRED encoder probe: duration-matched WITH interviewer -> interviewer removed	-0.0434	-0.0888	-0.0033	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_gap_A_orig	adress2020 arm A_orig GAP = encoder probe AUC minus zero-shot AUC	0.1686	0.0627	0.2735	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_gap_B_paronly	adress2020 arm B_paronly GAP = encoder probe AUC minus zero-shot AUC	0.1118	0.0020	0.2144	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_gap_C_durmatch	adress2020 arm C_durmatch GAP = encoder probe AUC minus zero-shot AUC	0.1762	0.0739	0.2792	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_gap_published	adress2020 arm published GAP = encoder probe AUC minus zero-shot AUC	0.1637	0.0557	0.2693	156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_inv_share_mean	adress2020 mean interviewer share of the original window	0.0853			156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_inv_share_median	adress2020 median interviewer share of the original window	0.0501			156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_inv_any_count	adress2020 windows containing any interviewer speech	114			156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_inv_gt5s_count	adress2020 windows containing more than 5 s of interviewer speech	22			156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_dur_removed_mean_s	adress2020 mean seconds removed going from arm A to arm B	2.3600			156	156	out/adress2020_no_interviewer.csv
+4b_adress2020_par_under10s_count	adress2020 windows with under 10 s of participant speech	1			156	156	out/adress2020_no_interviewer.csv
+4b_adresso_A_orig_zs	adresso arm A_orig Omni zero-shot AUC	0.6291	0.5404	0.7134	161	161	out/adresso_no_interviewer.csv
+4b_adresso_A_orig_enc	adresso arm A_orig Omni encoder nested probe AUC	0.8624	0.8063	0.9155	161	161	out/adresso_no_interviewer.csv
+4b_adresso_B_paronly_zs	adresso arm B_paronly Omni zero-shot AUC	0.6302	0.5461	0.7202	161	161	out/adresso_no_interviewer.csv
+4b_adresso_B_paronly_enc	adresso arm B_paronly Omni encoder nested probe AUC	0.8242	0.7582	0.8822	161	161	out/adresso_no_interviewer.csv
+4b_adresso_C_durmatch_zs	adresso arm C_durmatch Omni zero-shot AUC	0.6083	0.5194	0.6999	161	161	out/adresso_no_interviewer.csv
+4b_adresso_C_durmatch_enc	adresso arm C_durmatch Omni encoder nested probe AUC	0.8726	0.8183	0.9225	161	161	out/adresso_no_interviewer.csv
+4b_adresso_published_zs	adresso arm published Omni zero-shot AUC	0.6320	0.5448	0.7177	161	161	out/adresso_no_interviewer.csv
+4b_adresso_published_enc	adresso arm published Omni encoder nested probe AUC	0.9046	0.8548	0.9479	161	161	out/adresso_no_interviewer.csv
+4b_adresso_paired_zs_A_to_B	adresso PAIRED zero-shot: original cut -> interviewer removed	0.0011	-0.0441	0.0462	161	161	out/adresso_no_interviewer.csv
+4b_adresso_paired_zs_A_to_C	adresso PAIRED zero-shot: original cut -> duration-matched, interviewer KEPT	-0.0208	-0.0610	0.0196	161	161	out/adresso_no_interviewer.csv
+4b_adresso_paired_zs_C_to_B	adresso PAIRED zero-shot: duration-matched WITH interviewer -> interviewer removed	0.0219	-0.0253	0.0683	161	161	out/adresso_no_interviewer.csv
+4b_adresso_paired_enc_A_to_B	adresso PAIRED encoder probe: original cut -> interviewer removed	-0.0382	-0.0693	-0.0094	161	161	out/adresso_no_interviewer.csv
+4b_adresso_paired_enc_A_to_C	adresso PAIRED encoder probe: original cut -> duration-matched, interviewer KEPT	0.0103	-0.0128	0.0326	161	161	out/adresso_no_interviewer.csv
+4b_adresso_paired_enc_C_to_B	adresso PAIRED encoder probe: duration-matched WITH interviewer -> interviewer removed	-0.0485	-0.0832	-0.0161	161	161	out/adresso_no_interviewer.csv
+4b_adresso_gap_A_orig	adresso arm A_orig GAP = encoder probe AUC minus zero-shot AUC	0.2333	0.1450	0.3262	161	161	out/adresso_no_interviewer.csv
+4b_adresso_gap_B_paronly	adresso arm B_paronly GAP = encoder probe AUC minus zero-shot AUC	0.1940	0.0976	0.2900	161	161	out/adresso_no_interviewer.csv
+4b_adresso_gap_C_durmatch	adresso arm C_durmatch GAP = encoder probe AUC minus zero-shot AUC	0.2644	0.1687	0.3602	161	161	out/adresso_no_interviewer.csv
+4b_adresso_gap_published	adresso arm published GAP = encoder probe AUC minus zero-shot AUC	0.2726	0.1783	0.3674	161	161	out/adresso_no_interviewer.csv
+4b_adresso_inv_share_mean	adresso mean interviewer share of the original window	0.0825			161	161	out/adresso_no_interviewer.csv
+4b_adresso_inv_share_median	adresso median interviewer share of the original window	0.0395			161	161	out/adresso_no_interviewer.csv
+4b_adresso_inv_any_count	adresso windows containing any interviewer speech	105			161	161	out/adresso_no_interviewer.csv
+4b_adresso_inv_gt5s_count	adresso windows containing more than 5 s of interviewer speech	21			161	161	out/adresso_no_interviewer.csv
+4b_adresso_dur_removed_mean_s	adresso mean seconds removed going from arm A to arm B	2.2145			161	161	out/adresso_no_interviewer.csv
+4b_adresso_par_under10s_count	adresso windows with under 10 s of participant speech	4			161	161	out/adresso_no_interviewer.csv

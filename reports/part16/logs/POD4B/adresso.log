@@ -1,0 +1,143 @@
++ CORPUS=adresso
++ cd /workspace/p16pod4b
++ export HF_HOME=/workspace/hf
++ HF_HOME=/workspace/hf
++ export PYTHONUNBUFFERED=1
++ PYTHONUNBUFFERED=1
++ echo '=== CUT adresso ==='
+=== CUT adresso ===
++ python3 cut_arms4b.py adresso
+[adresso] built 161/166 clips for arms paronly + durmatch
+  arm A orig     duration: mean 29.32s median 30.00s min 10.09s max 30.00s
+  arm B paronly  duration: mean 27.10s median 28.84s min 3.46s max 30.00s
+  arm C durmatch duration: identical to arm B by construction
+  mean seconds removed A->B: 2.21s  median 1.06s
+  under 5s of participant speech: 1 clips (0.6%)
+  under 10s of participant speech: 4 clips (2.5%)
+  under 15s of participant speech: 8 clips (5.0%)
+  manifest mf_adresso_orig.csv : 161 rows
+  manifest mf_adresso_paronly.csv : 161 rows
+  manifest mf_adresso_durmatch.csv : 161 rows
+CUT DONE adresso
++ for ARM in orig paronly durmatch
++ echo '=== EXTRACT adresso orig ==='
+=== EXTRACT adresso orig ===
++ WINDOW_S=30
++ python3 extract_probe_layers.py /workspace/p16pod4b/mf_adresso_orig.csv /workspace/p16pod4b/out/p16_adresso_orig ad Qwen/Qwen2.5-Omni-7B
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1456.36it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  57%|█████▋    | 1401/2447 [00:00<00:00, 14007.91it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 14615.67it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 8s on cuda
+STAGES audio encoder layers 32 (+1 projector) | language model stages 29 (embeddings + 28 layers)
+audio token 151646 | yes ids [7414, 9454, 9693, 9834, 14004] | no ids [902, 2152, 2308, 2753, 8996]
+1/161 adrso002.wav p_yes 0.438 mass 0.995  10s
+26/161 adrso049.wav p_yes 0.335 mass 0.997  13s
+51/161 adrso116.wav p_yes 0.423 mass 0.996  16s
+76/161 adrso165.wav p_yes 0.349 mass 0.998  19s
+101/161 adrso211.wav p_yes 0.349 mass 0.996  22s
+126/161 adrso259.wav p_yes 0.349 mass 0.995  25s
+151/161 adrso298.wav p_yes 0.282 mass 0.997  29s
+161/161 adrso316.wav p_yes 0.234 mass 0.997  31s
+RESULT zero-shot mf_adresso_orig.csv n=161 AUC=0.6291 median_mass=0.997  56s
+STATES {'enc': [161, 32, 1280], 'proj': [161, 1, 3584], 'llm': [161, 29, 3584], 'ans': [161, 29, 3584]}
++ echo '=== PROBE adresso orig ==='
+=== PROBE adresso orig ===
++ python3 nested_oof.py /workspace/p16pod4b/out/p16_adresso_orig_states.npz /workspace/p16pod4b/out/p16_adresso_orig enc
+enc: nested OOF AUC 0.8624  layers [30, 31, 31, 4, 8]  -> /workspace/p16pod4b/out/p16_adresso_orig_enc_nested_oof.csv
+NESTED OOF DONE
++ for ARM in orig paronly durmatch
++ echo '=== EXTRACT adresso paronly ==='
+=== EXTRACT adresso paronly ===
++ WINDOW_S=30
++ python3 extract_probe_layers.py /workspace/p16pod4b/mf_adresso_paronly.csv /workspace/p16pod4b/out/p16_adresso_paronly ad Qwen/Qwen2.5-Omni-7B
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1262.20it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  55%|█████▍    | 1344/2447 [00:00<00:00, 13425.67it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 13875.34it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 8s on cuda
+STAGES audio encoder layers 32 (+1 projector) | language model stages 29 (embeddings + 28 layers)
+audio token 151646 | yes ids [7414, 9454, 9693, 9834, 14004] | no ids [902, 2152, 2308, 2753, 8996]
+1/161 adrso002.wav p_yes 0.438 mass 0.995  10s
+26/161 adrso049.wav p_yes 0.321 mass 0.997  13s
+51/161 adrso116.wav p_yes 0.454 mass 0.997  15s
+76/161 adrso165.wav p_yes 0.378 mass 0.997  18s
+101/161 adrso211.wav p_yes 0.335 mass 0.996  21s
+126/161 adrso259.wav p_yes 0.349 mass 0.995  24s
+151/161 adrso298.wav p_yes 0.282 mass 0.997  27s
+161/161 adrso316.wav p_yes 0.234 mass 0.997  28s
+RESULT zero-shot mf_adresso_paronly.csv n=161 AUC=0.6302 median_mass=0.997  53s
+STATES {'enc': [161, 32, 1280], 'proj': [161, 1, 3584], 'llm': [161, 29, 3584], 'ans': [161, 29, 3584]}
++ echo '=== PROBE adresso paronly ==='
+=== PROBE adresso paronly ===
++ python3 nested_oof.py /workspace/p16pod4b/out/p16_adresso_paronly_states.npz /workspace/p16pod4b/out/p16_adresso_paronly enc
+enc: nested OOF AUC 0.8242  layers [25, 31, 28, 4, 8]  -> /workspace/p16pod4b/out/p16_adresso_paronly_enc_nested_oof.csv
+NESTED OOF DONE
++ for ARM in orig paronly durmatch
++ echo '=== EXTRACT adresso durmatch ==='
+=== EXTRACT adresso durmatch ===
++ WINDOW_S=30
++ python3 extract_probe_layers.py /workspace/p16pod4b/mf_adresso_durmatch.csv /workspace/p16pod4b/out/p16_adresso_durmatch ad Qwen/Qwen2.5-Omni-7B
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1327.98it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  60%|█████▉    | 1465/2447 [00:00<00:00, 14641.50it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 14644.62it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 8s on cuda
+STAGES audio encoder layers 32 (+1 projector) | language model stages 29 (embeddings + 28 layers)
+audio token 151646 | yes ids [7414, 9454, 9693, 9834, 14004] | no ids [902, 2152, 2308, 2753, 8996]
+1/161 adrso002.wav p_yes 0.438 mass 0.995  10s
+26/161 adrso049.wav p_yes 0.335 mass 0.997  13s
+51/161 adrso116.wav p_yes 0.454 mass 0.997  16s
+76/161 adrso165.wav p_yes 0.308 mass 0.997  19s
+101/161 adrso211.wav p_yes 0.349 mass 0.996  21s
+126/161 adrso259.wav p_yes 0.408 mass 0.996  24s
+151/161 adrso298.wav p_yes 0.282 mass 0.997  28s
+161/161 adrso316.wav p_yes 0.234 mass 0.997  29s
+RESULT zero-shot mf_adresso_durmatch.csv n=161 AUC=0.6083 median_mass=0.997  53s
+STATES {'enc': [161, 32, 1280], 'proj': [161, 1, 3584], 'llm': [161, 29, 3584], 'ans': [161, 29, 3584]}
++ echo '=== PROBE adresso durmatch ==='
+=== PROBE adresso durmatch ===
++ python3 nested_oof.py /workspace/p16pod4b/out/p16_adresso_durmatch_states.npz /workspace/p16pod4b/out/p16_adresso_durmatch enc
+enc: nested OOF AUC 0.8726  layers [31, 29, 29, 6, 8]  -> /workspace/p16pod4b/out/p16_adresso_durmatch_enc_nested_oof.csv
+NESTED OOF DONE
++ echo 'ALL4B DONE adresso'
+ALL4B DONE adresso
