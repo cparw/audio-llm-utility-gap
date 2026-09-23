@@ -1,0 +1,32 @@
+{
+ "states": "/root/p20/o25_pitt_states.npz",
+ "folds_json": "/root/p20/scripts/pitt_folds_part20.json",
+ "results": {
+  "proj_pod_seed0": {
+   "stream": "proj",
+   "fold_sets": [
+    "pod_seed0"
+   ],
+   "fold_files": [
+    "folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7507
+   ],
+   "mean_auc": 0.7507,
+   "chosen_layers": {
+    "pod_seed0": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "n": 468,
+   "n_layers": 1,
+   "oof_csv": "/workspace/p20/work/origP_proj_pod_seed0_oof.csv"
+  }
+ },
+ "seconds": 4
+}

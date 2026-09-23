@@ -1,0 +1,4 @@
+5 inner tasks on 4 workers
+inner done 3s
+NESTED proj_pod_seed0: mean 0.7478 per-repeat [0.7478] layers [[0, 0, 0, 0, 0]]
+NESTED DONE

@@ -1,0 +1,292 @@
+{
+ "states": "/workspace/p20/work/o25noinv_pitt_states.npz",
+ "folds_json": "/root/p20/scripts/pitt_folds_part20.json",
+ "results": {
+  "enc_mac_seed": {
+   "stream": "enc",
+   "fold_sets": [
+    "mac_seed0",
+    "mac_seed1",
+    "mac_seed2",
+    "mac_seed3",
+    "mac_seed4"
+   ],
+   "fold_files": [
+    "folds/pitt_groupkfold5_mac_seed0.csv",
+    "folds/pitt_groupkfold5_mac_seed1.csv",
+    "folds/pitt_groupkfold5_mac_seed2.csv",
+    "folds/pitt_groupkfold5_mac_seed3.csv",
+    "folds/pitt_groupkfold5_mac_seed4.csv"
+   ],
+   "per_repeat_auc": [
+    0.756,
+    0.7666,
+    0.7535,
+    0.7799,
+    0.7654
+   ],
+   "mean_auc": 0.7643,
+   "chosen_layers": {
+    "mac_seed0": [
+     22,
+     26,
+     31,
+     28,
+     28
+    ],
+    "mac_seed1": [
+     27,
+     31,
+     28,
+     31,
+     24
+    ],
+    "mac_seed2": [
+     29,
+     30,
+     26,
+     28,
+     22
+    ],
+    "mac_seed3": [
+     28,
+     30,
+     23,
+     30,
+     30
+    ],
+    "mac_seed4": [
+     24,
+     20,
+     31,
+     27,
+     30
+    ]
+   },
+   "n": 468,
+   "n_layers": 32,
+   "oof_csv": "/workspace/p20/work/noinv_enc_mac_seed_oof.csv"
+  },
+  "enc_pod_seed": {
+   "stream": "enc",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7493,
+    0.7613,
+    0.7625,
+    0.7669,
+    0.7443
+   ],
+   "mean_auc": 0.7568,
+   "chosen_layers": {
+    "pod_seed0": [
+     28,
+     26,
+     31,
+     31,
+     30
+    ],
+    "pod_seed1": [
+     28,
+     30,
+     26,
+     30,
+     31
+    ],
+    "pod_seed2": [
+     30,
+     19,
+     24,
+     19,
+     30
+    ],
+    "pod_seed3": [
+     25,
+     26,
+     31,
+     22,
+     24
+    ],
+    "pod_seed4": [
+     23,
+     30,
+     25,
+     22,
+     28
+    ]
+   },
+   "n": 468,
+   "n_layers": 32,
+   "oof_csv": "/workspace/p20/work/noinv_enc_pod_seed_oof.csv"
+  },
+  "llm_pod_seed": {
+   "stream": "llm",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.8015,
+    0.8075,
+    0.8182,
+    0.7836,
+    0.799
+   ],
+   "mean_auc": 0.802,
+   "chosen_layers": {
+    "pod_seed0": [
+     28,
+     10,
+     24,
+     9,
+     27
+    ],
+    "pod_seed1": [
+     23,
+     27,
+     9,
+     22,
+     28
+    ],
+    "pod_seed2": [
+     8,
+     8,
+     10,
+     9,
+     9
+    ],
+    "pod_seed3": [
+     10,
+     18,
+     11,
+     25,
+     25
+    ],
+    "pod_seed4": [
+     23,
+     9,
+     27,
+     10,
+     27
+    ]
+   },
+   "n": 468,
+   "n_layers": 29,
+   "oof_csv": "/workspace/p20/work/noinv_llm_pod_seed_oof.csv"
+  },
+  "ans_pod_seed": {
+   "stream": "ans",
+   "fold_sets": [
+    "pod_seed0",
+    "pod_seed1",
+    "pod_seed2",
+    "pod_seed3",
+    "pod_seed4"
+   ],
+   "fold_files": [
+    "folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7699,
+    0.7729,
+    0.7722,
+    0.7819,
+    0.7918
+   ],
+   "mean_auc": 0.7777,
+   "chosen_layers": {
+    "pod_seed0": [
+     16,
+     16,
+     21,
+     28,
+     2
+    ],
+    "pod_seed1": [
+     17,
+     2,
+     27,
+     14,
+     28
+    ],
+    "pod_seed2": [
+     25,
+     28,
+     17,
+     16,
+     15
+    ],
+    "pod_seed3": [
+     28,
+     4,
+     15,
+     16,
+     19
+    ],
+    "pod_seed4": [
+     15,
+     16,
+     27,
+     16,
+     27
+    ]
+   },
+   "n": 468,
+   "n_layers": 29,
+   "oof_csv": "/workspace/p20/work/noinv_ans_pod_seed_oof.csv"
+  },
+  "proj_pod_single": {
+   "stream": "proj",
+   "fold_sets": [
+    "pod_single"
+   ],
+   "fold_files": [
+    "folds/pitt_groupkfold5_pod.csv"
+   ],
+   "per_repeat_auc": [
+    0.7591
+   ],
+   "mean_auc": 0.7591,
+   "chosen_layers": {
+    "pod_single": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "n": 468,
+   "n_layers": 1,
+   "oof_csv": "/workspace/p20/work/noinv_proj_pod_single_oof.csv"
+  }
+ },
+ "seconds": 127
+}
