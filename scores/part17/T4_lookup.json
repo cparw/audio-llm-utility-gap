@@ -1,0 +1,667 @@
+{
+ "task": "PART 17 task 4: record decisions and new values in master/master_lookup.csv",
+ "date": "2026-09-23",
+ "exact_command": "/usr/local/bin/python3 scripts/part17/T4_lookup.py",
+ "seed": "numpy.random.default_rng(0), fresh per cell",
+ "bootstrap_draws": 2000,
+ "bootstrap_unit": "speaker, resampled with replacement within the cell's own rows; mean-of-five cells recompute all five per-repeat AUCs inside each draw; paired cells recompute both AUCs inside the same draw",
+ "percentiles": [
+  2.5,
+  97.5
+ ],
+ "auc_method": "rank formula, scipy rankdata average ties, recomputed from per-clip scores",
+ "pitt_speakers": "manifest grp+spk (228 on the 468 clips; 100 conflict, 175 agreement)",
+ "source_sha256_first1mb": {
+  "<local data dir>/DementiaBank/pitt_conflict_manifest.csv": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47",
+  "<local data dir>/release/omni_final/omni_pitt_enc_nested_oof.csv": "6102b824a5883cb59bf3c14186fb233ee1e31030bccc5cd94cb8e0cb290bfed6",
+  "scores/part16/EDAICFULL/edaic_full_perclip.csv": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770",
+  "scores/part16/EDAICFULL/edaic_full_nested_repeats.json": "817e9d58ffab070287d97147d5775563be12c094be555e433339f899381ae96e",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv": "819aea0259baa36b3ac7de9504a8392557263df1e9f101fa4239caec4feb3fc4",
+  "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv": "5c0571a4c5f9f5970b9a610999bf357c6899b996c0b03df9a4d732226ef3c32b",
+  "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_pitt_nested_repeats.json": "16291c2084c508ce27d0552ab0831f822edc1d51bc9c3c6c010fef65e20aa791",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_nested_repeats.json": "866a456f2ffb967ef2c28805c29fcc6b8fc85d9c9ee8c6055b8c053a2fdd52d3",
+  "<local data dir>/release/overnight2/final/q3o_pitt_nested_repeats.json": "880bae70b9e74b0e5884e5b771be7532b9a7eedabe3142e102a0e5e82672f10d",
+  "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365",
+  "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv": "8023fd5845b7c4d89b4c4e1ef66aab9b77373cb67cca46496eb6a673359a89ad",
+  "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv": "f70f37696cd46110933d452037a038253c13c0c1b0ec09a86c06832ba4787e25",
+  "<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv": "7b1120ad367341954adc1722aef739227a51f514b4bbeeb5a1db7c1044527a35",
+  "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz": "cf790ab7bf84ef88ea52d80fd372de4a8e5a96318e8872c89bda32e3d78eb349",
+  "<local data dir>/release/edaic_rerun/part16/POD3/out/readout_direction_q3o_by_arm.csv": "f501e699fdcc79e0608ea10e9606a12ff2072c916a4305bf0391c9bc855a9eaa",
+  "<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv": "dda1ef283d07bcad8238eb74718a50c05cd1f3f2a17c934f98922bb335a8f24d",
+  "<local data dir>/release/omni_final/abl2_pitt_both_oof.csv": "758a7a4a86a71e2f2b5a5e4476ae7d43db787bc3907a9ed6e121837942d82883",
+  "<local data dir>/release/omni_final/abl_pitt_both.json": "411da0df877a030e12cc06f6168c92877e4f91efdfbf169a53ae88fa12889c44",
+  "<local data dir>/release/omni_final/abl2_pitt_both.json": "74fa503563728c7850026292eaf8db309e86be61db54ca5715c3d592839d9127",
+  "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot.json": "607a6a66bb0ff83ac8a39ba18cefbadeb16ed289579b378c56b81e721821de4f",
+  "<local data dir>/release/edaic_rerun/variants/o25_full_nested_repeats.json": "b46207780762fa28b9ac67298cf1fd426df121d3b28786941cad3080e0aee4b9",
+  "<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_oof.sidecar.json": "94210a6e9950883192c4f98c90761c91483a3dd8d6d647fbcd4afffee29e9695"
+ },
+ "lookup": {
+  "file": "<local data dir>/release/master/master_lookup.csv",
+  "backup": "<local data dir>/release/master/master_lookup.csv.bak_pre_part17",
+  "rows_before": 221,
+  "rows_after": 231,
+  "stale_prefix_rows_before": 76,
+  "stale_prefix_rows_after": 75,
+  "sha256_before": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+  "sha256_after": "97fedc8161d5d284073a94a08e300ae6f5b896614052ca02d5fa34c85f63ca38",
+  "untouched_rows_byte_identical": true,
+  "changes": [
+   {
+    "kind": "updated",
+    "line": 126,
+    "before": [
+     "Qwen2.5-Omni",
+     "pitt",
+     "encoder probe",
+     "0.7706",
+     "468",
+     "five split nested, mean of 5 repeats (part10 re-run)",
+     "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz [SUPERSEDES omni_final/omni_pitt_nested_repeats.json 0.7761 and single-split 0.7969]"
+    ],
+    "after": [
+     "Qwen2.5-Omni",
+     "pitt",
+     "encoder probe",
+     "0.7706",
+     "468",
+     "mean of five per-repeat AUCs (five split nested, 5 repeats, part10 re-run); 0.7917 is the AUC of the per-clip probabilities averaged over the five repeats and is NOT used (authors' decision 2026-09-23)",
+     "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz [SUPERSEDES omni_final/omni_pitt_nested_repeats.json 0.7761 and single-split 0.7969]"
+    ],
+    "recomputed_id": "T4_pitt_o25_enc_mean5"
+   },
+   {
+    "kind": "updated",
+    "line": 203,
+    "before": [
+     "Qwen2.5-Omni",
+     "edaic_full",
+     "LM probe",
+     "0.6853",
+     "275",
+     "five split nested, mean of 5 repeats, full window capped at 900 s, E-DAIC 275 speakers",
+     "<local data dir>/release/edaic_rerun/variants/o25_full_nested_repeats.json"
+    ],
+    "after": [
+     "Qwen2.5-Omni",
+     "edaic_full",
+     "LM probe",
+     "0.7088",
+     "275",
+     "300 s window: the first 300 s of each E-DAIC full window (Qwen2_5OmniProcessor truncates audio at 300 s; 217 of 275 windows truncated), not the full interview; five split nested, 5 repeats, AUC of the per-clip OOF probability AVERAGED over the 5 repeats (the mean of the 5 per-repeat AUCs from this same run is 0.7001, separate row); POD2 rebuild 2026-09-23, E-DAIC 275 speakers [SUPERSEDES variants/o25_full_nested_repeats.json 0.6853, mean of 5 repeats, original run, no per-clip file]",
+     "scores/part16/EDAICFULL/edaic_full_perclip.csv"
+    ],
+    "recomputed_id": "T4_edaic_o25_llm_avgprob"
+   },
+   {
+    "kind": "updated",
+    "line": 201,
+    "before": [
+     "Qwen2.5-Omni",
+     "edaic_full",
+     "encoder probe",
+     "0.593",
+     "275",
+     "five split nested, mean of 5 repeats, full window capped at 900 s, E-DAIC 275 speakers",
+     "<local data dir>/release/edaic_rerun/variants/o25_full_nested_repeats.json"
+    ],
+    "after": [
+     "Qwen2.5-Omni",
+     "edaic_full",
+     "encoder probe",
+     "0.5916",
+     "275",
+     "300 s window: the first 300 s of each E-DAIC full window (Qwen2_5OmniProcessor truncates audio at 300 s; 217 of 275 windows truncated), not the full interview; five split nested, 5 repeats, AUC of the per-clip OOF probability AVERAGED over the 5 repeats (the mean of the 5 per-repeat AUCs from this same run is 0.5884, separate row); POD2 rebuild 2026-09-23, E-DAIC 275 speakers [SUPERSEDES variants/o25_full_nested_repeats.json 0.5930, mean of 5 repeats, original run, no per-clip file]",
+     "scores/part16/EDAICFULL/edaic_full_perclip.csv"
+    ],
+    "recomputed_id": "T4_edaic_o25_enc_avgprob"
+   },
+   {
+    "kind": "updated",
+    "line": 170,
+    "before": [
+     "Qwen3-Omni-30B-A3B",
+     "pcgita",
+     "encoder probe",
+     "0.8969",
+     "1100",
+     "five split nested, mean of 5 repeats",
+     "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_nested_repeats.json"
+    ],
+    "after": [
+     "Qwen3-Omni-30B-A3B",
+     "pcgita",
+     "encoder probe",
+     "0.8969",
+     "1100",
+     "mean of five per-repeat AUCs (five split nested, layer chosen inside the training folds), POD3 re-extraction; the AUC of the averaged probabilities is 0.9109 and is NOT used; same convention as the Qwen3-Omni Pitt encoder row [SUPERSEDES source overnight2/q3o_new/q3o_pcgita_nested_repeats.json: same mean 0.8969, different per-repeat AUCs, no per-clip file]",
+     "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv"
+    ],
+    "recomputed_id": "T4_pcgita_q3o_enc_mean5"
+   },
+   {
+    "kind": "updated",
+    "line": 176,
+    "before": [
+     "Qwen3-Omni-30B-A3B",
+     "pitt",
+     "encoder probe",
+     "0.8289",
+     "468",
+     "five split nested, mean of 5 repeats",
+     "<local data dir>/release/overnight2/final/q3o_pitt_nested_repeats.json"
+    ],
+    "after": [
+     "Qwen3-Omni-30B-A3B",
+     "pitt",
+     "encoder probe",
+     "0.8122",
+     "468",
+     "mean of five per-repeat AUCs (five split nested, layer chosen inside the training folds), POD3 re-extraction; the AUC of the averaged probabilities is 0.8354 and is NOT used; per-repeat AUCs also in part16/pod_sync/q3o_pitt_nested_repeats.json [SUPERSEDES overnight2/final/q3o_pitt_nested_repeats.json 0.8289, no per-clip file]",
+     "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv"
+    ],
+    "recomputed_id": "T4_pitt_q3o_enc_mean5"
+   },
+   {
+    "kind": "updated",
+    "line": 39,
+    "before": [
+     "Kimi-Audio",
+     "pitt",
+     "zero shot answer",
+     "0.718",
+     "468",
+     "zero shot, 30 s window",
+     "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot.json"
+    ],
+    "after": [
+     "Kimi-Audio",
+     "pitt",
+     "zero shot answer",
+     "0.718",
+     "468",
+     "zero shot, 30 s window; canonical Kimi-Audio Pitt file (authors' decision 2026-09-23); conflict arm 0.7197 and agreement arm 0.7227 from the same file (rows pitt_conflict / pitt_agreement) [SUPERSEDES overnight/kimi/kimi_pitt_zeroshot_scores.csv: pooled 0.6964, conflict 0.7078, agreement 0.7014; source was overnight2/part3/kimi_pitt_zeroshot.json, same run, now the per-clip csv]",
+     "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv"
+    ],
+    "recomputed_id": "T4_pitt_kimi_pooled"
+   },
+   {
+    "kind": "updated",
+    "line": 9,
+    "before": [
+     "Audio Flamingo 2",
+     "pitt",
+     "zero shot answer",
+     "0.5724",
+     "468",
+     "zero shot",
+     "<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv"
+    ],
+    "after": [
+     "Audio Flamingo 2",
+     "pitt",
+     "zero shot answer",
+     "0.5724",
+     "468",
+     "zero shot; canonical AF2 Pitt file (authors' decision 2026-09-23); conflict arm 0.6310 and agreement arm 0.5544 from the same file (rows pitt_conflict / pitt_agreement) [SUPERSEDES af2_pitt_audio.csv: pooled 0.5273, conflict 0.6691, agreement 0.4895]",
+     "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv"
+    ],
+    "recomputed_id": "T4_pitt_af2_pooled"
+   },
+   {
+    "kind": "new",
+    "line": 223,
+    "before": null,
+    "after": [
+     "Qwen2.5-Omni",
+     "edaic_full",
+     "LM probe (mean of 5 per-repeat AUCs)",
+     "0.7001",
+     "275",
+     "300 s window: the first 300 s of each E-DAIC full window (Qwen2_5OmniProcessor truncates audio at 300 s; 217 of 275 windows truncated), not the full interview; five split nested, MEAN OF FIVE PER-REPEAT AUCs, the convention decided for Pitt (0.7706); same POD2 run as the 0.7088 LM probe row; NOT recomputed from per-clip scores: the per-repeat OOF file edaic_full_oof_repeats.npz was written on the pod and is not on this Mac, so this is the mean of the five per_repeat AUCs listed in the json (0.6918, 0.7062, 0.6893, 0.7055, 0.7078)",
+     "scores/part16/EDAICFULL/edaic_full_nested_repeats.json"
+    ],
+    "recomputed_id": "T4_edaic_o25_llm_mean5_jsononly"
+   },
+   {
+    "kind": "new",
+    "line": 224,
+    "before": null,
+    "after": [
+     "Qwen2.5-Omni",
+     "edaic_full",
+     "encoder probe (mean of 5 per-repeat AUCs)",
+     "0.5884",
+     "275",
+     "300 s window: the first 300 s of each E-DAIC full window (Qwen2_5OmniProcessor truncates audio at 300 s; 217 of 275 windows truncated), not the full interview; five split nested, MEAN OF FIVE PER-REPEAT AUCs, the convention decided for Pitt (0.7706); same POD2 run as the 0.5916 encoder probe row; NOT recomputed from per-clip scores: the per-repeat OOF file edaic_full_oof_repeats.npz was written on the pod and is not on this Mac, so this is the mean of the five per_repeat AUCs listed in the json (0.5964, 0.5826, 0.5962, 0.5608, 0.606)",
+     "scores/part16/EDAICFULL/edaic_full_nested_repeats.json"
+    ],
+    "recomputed_id": "T4_edaic_o25_enc_mean5_jsononly"
+   },
+   {
+    "kind": "new",
+    "line": 225,
+    "before": null,
+    "after": [
+     "Kimi-Audio",
+     "pitt_conflict",
+     "zero shot answer",
+     "0.7197",
+     "146",
+     "zero shot, 30 s window, Pitt conflict arm only (146 clips, 100 speakers; arm from DementiaBank/pitt_conflict_manifest.csv set column, AUC restricted to the arm); canonical file (authors' decision 2026-09-23) [SUPERSEDES overnight/kimi/kimi_pitt_zeroshot_scores.csv conflict 0.7078]",
+     "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv"
+    ],
+    "recomputed_id": "T4_pitt_kimi_conflict"
+   },
+   {
+    "kind": "new",
+    "line": 226,
+    "before": null,
+    "after": [
+     "Kimi-Audio",
+     "pitt_agreement",
+     "zero shot answer",
+     "0.7227",
+     "322",
+     "zero shot, 30 s window, Pitt agreement arm only (322 clips, 175 speakers; arm from DementiaBank/pitt_conflict_manifest.csv set column, AUC restricted to the arm); canonical file (authors' decision 2026-09-23) [SUPERSEDES overnight/kimi/kimi_pitt_zeroshot_scores.csv agreement 0.7014]",
+     "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv"
+    ],
+    "recomputed_id": "T4_pitt_kimi_agreement"
+   },
+   {
+    "kind": "new",
+    "line": 227,
+    "before": null,
+    "after": [
+     "Audio Flamingo 2",
+     "pitt_conflict",
+     "zero shot answer",
+     "0.631",
+     "146",
+     "zero shot, Pitt conflict arm only (146 clips, 100 speakers; arm from DementiaBank/pitt_conflict_manifest.csv set column, AUC restricted to the arm); canonical file (authors' decision 2026-09-23) [SUPERSEDES af2_pitt_audio.csv conflict 0.6691]",
+     "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv"
+    ],
+    "recomputed_id": "T4_pitt_af2_conflict"
+   },
+   {
+    "kind": "new",
+    "line": 228,
+    "before": null,
+    "after": [
+     "Audio Flamingo 2",
+     "pitt_agreement",
+     "zero shot answer",
+     "0.5544",
+     "322",
+     "zero shot, Pitt agreement arm only (322 clips, 175 speakers; arm from DementiaBank/pitt_conflict_manifest.csv set column, AUC restricted to the arm); canonical file (authors' decision 2026-09-23); the decision text typed 0.5536, which no AF2 file produces (0 tied scores, so no tie convention gives it); 0.5544 is what this file gives [SUPERSEDES af2_pitt_audio.csv agreement 0.4895]",
+     "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv"
+    ],
+    "recomputed_id": "T4_pitt_af2_agreement"
+   },
+   {
+    "kind": "new",
+    "line": 229,
+    "before": null,
+    "after": [
+     "Qwen3-Omni-30B-A3B",
+     "pitt_conflict",
+     "answer-state probe",
+     "0.6394",
+     "146",
+     "full-fit probe restricted to the arm, same as Qwen2.5-Omni Part H: logistic probe on the final LM stage at the first answer position, out of fold over all 468 Pitt clips (GroupKFold 5 by speaker, not nested), AUC computed on the arm's clips (146 clips, 100 speakers); 0.6145 is the probe refit within the arm (POD3) and is NOT used (authors' decision 2026-09-23); per-clip column oof",
+     "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz"
+    ],
+    "recomputed_id": "T4_pitt_q3o_conflict_fullfit"
+   },
+   {
+    "kind": "new",
+    "line": 230,
+    "before": null,
+    "after": [
+     "Qwen3-Omni-30B-A3B",
+     "pitt_agreement",
+     "answer-state probe",
+     "0.9032",
+     "322",
+     "full-fit probe restricted to the arm, same as Qwen2.5-Omni Part H: logistic probe on the final LM stage at the first answer position, out of fold over all 468 Pitt clips (GroupKFold 5 by speaker, not nested), AUC computed on the arm's clips (322 clips, 175 speakers); 0.9349 is the probe refit within the arm (POD3), the estimator not used under the same decision; per-clip column oof",
+     "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz"
+    ],
+    "recomputed_id": "T4_pitt_q3o_agreement_fullfit"
+   },
+   {
+    "kind": "new",
+    "line": 231,
+    "before": null,
+    "after": [
+     "Qwen2.5-Omni",
+     "pitt",
+     "LoRA fine tune",
+     "0.825",
+     "468",
+     "LoRA rank 8 (alpha 16, dropout 0.05) on q/k/v/o of all 28 thinker LM layers, audio tower and projector frozen, 3 epochs, lr 1e-4, 5 fold GroupKFold by speaker, out of fold AUC on p_yes, 30 s window, POD2 fresh run 2026-09-23 (Part 16); 125 tied p_yes values, ties averaged",
+     "<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv"
+    ],
+    "recomputed_id": "T4_pitt_o25_lora"
+   },
+   {
+    "kind": "new",
+    "line": 232,
+    "before": null,
+    "after": [
+     "Qwen2.5-Omni",
+     "pitt",
+     "LoRA plus projector fine tune",
+     "0.7696",
+     "468",
+     "LoRA rank 8 plus projector trained together (9,637,376 trainable params), 3 epochs, lr 1e-4, 5 folds, out of fold AUC, 30 s window, run 2026-09-18; recomputed from the per-clip csv (114 tied p_yes values, ties averaged); abl_pitt_both.json claims 0.7872 but no per-clip file pairs with it; abl2_pitt_both.json, which pairs with this csv, says 0.7696; the csv value is recorded",
+     "<local data dir>/release/omni_final/abl2_pitt_both_oof.csv"
+    ],
+    "recomputed_id": "T4_pitt_o25_lora_plus_proj"
+   }
+  ]
+ },
+ "superseded_registry": "<local data dir>/release/master/SUPERSEDED.csv",
+ "edaic_per_repeat_perclip": "edaic_full_perclip.csv carries only oof_* columns averaged over the 5 repeats; the per-repeat OOF (edaic_full_oof_repeats.npz, written by probe_boot.py on the pod) is not on this Mac, G-Drive or any scratch folder. The mean-of-five values 0.7001 / 0.5884 cannot be recomputed from per-clip scores and no mean-of-five paired probe-minus-answer interval can be computed.",
+ "values": {
+  "T4_pitt_o25_enc_mean5": {
+   "what": "Qwen2.5-Omni Pitt encoder probe, mean of five per-repeat AUCs",
+   "value": 0.7705695466873305,
+   "lo": 0.7156926699364878,
+   "hi": 0.8219678044301659,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz",
+   "draws": 2000
+  },
+  "T4_pitt_o25_enc_avgprob_NOTUSED": {
+   "what": "Qwen2.5-Omni Pitt encoder probe, AUC of averaged probabilities (NOT used)",
+   "value": 0.7916892677256877,
+   "lo": 0.7324452864688041,
+   "hi": 0.8480293239779454,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz",
+   "draws": 2000
+  },
+  "T4_edaic_o25_llm_avgprob": {
+   "what": "Qwen2.5-Omni E-DAIC 300 s window LM probe, AUC of per-clip OOF averaged over 5 repeats",
+   "value": 0.7087864288821226,
+   "lo": 0.6231553623188406,
+   "hi": 0.7874003305509396,
+   "n": 275,
+   "n_spk": 275,
+   "file": "scores/part16/EDAICFULL/edaic_full_perclip.csv",
+   "draws": 2000
+  },
+  "T4_edaic_o25_llm_minus_answer_avgprob": {
+   "what": "Qwen2.5-Omni E-DAIC 300 s window LM probe minus zero-shot answer, paired, averaged-prob convention",
+   "value": -0.11896476729012617,
+   "lo": -0.19953252006799707,
+   "hi": -0.04783753344227048,
+   "n": 275,
+   "n_spk": 275,
+   "file": "scores/part16/EDAICFULL/edaic_full_perclip.csv",
+   "draws": 2000
+  },
+  "T4_edaic_o25_enc_avgprob": {
+   "what": "Qwen2.5-Omni E-DAIC 300 s window encoder probe, AUC of per-clip OOF averaged over 5 repeats",
+   "value": 0.5916340437871538,
+   "lo": 0.5109791833293627,
+   "hi": 0.6706340171833783,
+   "n": 275,
+   "n_spk": 275,
+   "file": "scores/part16/EDAICFULL/edaic_full_perclip.csv",
+   "draws": 2000
+  },
+  "T4_edaic_o25_enc_minus_answer_avgprob": {
+   "what": "Qwen2.5-Omni E-DAIC 300 s window encoder probe minus zero-shot answer, paired, averaged-prob convention",
+   "value": -0.236117152385095,
+   "lo": -0.3272297641882839,
+   "hi": -0.1394064326205433,
+   "n": 275,
+   "n_spk": 275,
+   "file": "scores/part16/EDAICFULL/edaic_full_perclip.csv",
+   "draws": 2000
+  },
+  "T4_edaic_o25_llm_mean5_jsononly": {
+   "what": "Qwen2.5-Omni E-DAIC 300 s window LM probe, mean of five per-repeat AUCs (json per_repeat list, per-clip repeats not on Mac)",
+   "value": 0.7001199999999999,
+   "lo": null,
+   "hi": null,
+   "n": 275,
+   "n_spk": 275,
+   "file": "scores/part16/EDAICFULL/edaic_full_nested_repeats.json",
+   "draws": null
+  },
+  "T4_edaic_o25_enc_mean5_jsononly": {
+   "what": "Qwen2.5-Omni E-DAIC 300 s window encoder probe, mean of five per-repeat AUCs (json per_repeat list, per-clip repeats not on Mac)",
+   "value": 0.5883999999999999,
+   "lo": null,
+   "hi": null,
+   "n": 275,
+   "n_spk": 275,
+   "file": "scores/part16/EDAICFULL/edaic_full_nested_repeats.json",
+   "draws": null
+  },
+  "T4_pcgita_q3o_enc_mean5": {
+   "what": "Qwen3-Omni PC-GITA encoder probe, mean of five per-repeat AUCs",
+   "value": 0.8969269421487602,
+   "lo": 0.8321641457858573,
+   "hi": 0.945372432115629,
+   "n": 1100,
+   "n_spk": 100,
+   "file": "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv",
+   "draws": 2000
+  },
+  "T4_pcgita_q3o_enc_avgprob_NOTUSED": {
+   "what": "Qwen3-Omni PC-GITA encoder probe, AUC of averaged probabilities (NOT used)",
+   "value": 0.9108661157024793,
+   "lo": 0.8452455158597132,
+   "hi": 0.9599765654139066,
+   "n": 1100,
+   "n_spk": 100,
+   "file": "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv",
+   "draws": 2000
+  },
+  "T4_pitt_q3o_enc_mean5": {
+   "what": "Qwen3-Omni Pitt encoder probe, mean of five per-repeat AUCs",
+   "value": 0.812247191011236,
+   "lo": 0.761292651154577,
+   "hi": 0.8625498592742825,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv",
+   "draws": 2000
+  },
+  "T4_pitt_q3o_enc_avgprob_NOTUSED": {
+   "what": "Qwen3-Omni Pitt encoder probe, AUC of averaged probabilities (NOT used)",
+   "value": 0.8353738860906625,
+   "lo": 0.7816911468955547,
+   "hi": 0.8877408826171072,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv",
+   "draws": 2000
+  },
+  "T4_pitt_kimi_pooled": {
+   "what": "Kimi-Audio Pitt pooled zero-shot answer AUC",
+   "value": 0.7180356450987989,
+   "lo": 0.6584954708351735,
+   "hi": 0.7741946436142072,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+   "draws": 2000
+  },
+  "T4_pitt_kimi_conflict": {
+   "what": "Kimi-Audio Pitt conflict zero-shot answer AUC",
+   "value": 0.7196919691969197,
+   "lo": 0.6200675389596276,
+   "hi": 0.8147314928079331,
+   "n": 146,
+   "n_spk": 100,
+   "file": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+   "draws": 2000
+  },
+  "T4_pitt_kimi_agreement": {
+   "what": "Kimi-Audio Pitt agreement zero-shot answer AUC",
+   "value": 0.7226797151609182,
+   "lo": 0.6560302125798525,
+   "hi": 0.7895728975119553,
+   "n": 322,
+   "n_spk": 175,
+   "file": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+   "draws": 2000
+  },
+  "T4_pitt_kimi_SUPERSEDED_overnight_pooled": {
+   "what": "Kimi-Audio SUPERSEDED overnight/kimi copy Pitt pooled zero-shot answer AUC",
+   "value": 0.6963580007748934,
+   "lo": 0.6323516032346788,
+   "hi": 0.7574899659661594,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv",
+   "draws": 2000
+  },
+  "T4_pitt_kimi_SUPERSEDED_overnight_conflict": {
+   "what": "Kimi-Audio SUPERSEDED overnight/kimi copy Pitt conflict zero-shot answer AUC",
+   "value": 0.7078107810781078,
+   "lo": 0.6037331077683145,
+   "hi": 0.8083358768035516,
+   "n": 146,
+   "n_spk": 100,
+   "file": "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv",
+   "draws": 2000
+  },
+  "T4_pitt_kimi_SUPERSEDED_overnight_agreement": {
+   "what": "Kimi-Audio SUPERSEDED overnight/kimi copy Pitt agreement zero-shot answer AUC",
+   "value": 0.7014361300075586,
+   "lo": 0.6309330199257017,
+   "hi": 0.7730363803235705,
+   "n": 322,
+   "n_spk": 175,
+   "file": "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv",
+   "draws": 2000
+  },
+  "T4_pitt_af2_pooled": {
+   "what": "Audio Flamingo 2 Pitt pooled zero-shot answer AUC",
+   "value": 0.572355676094537,
+   "lo": 0.506550580886383,
+   "hi": 0.6424242343765693,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv",
+   "draws": 2000
+  },
+  "T4_pitt_af2_conflict": {
+   "what": "Audio Flamingo 2 Pitt conflict zero-shot answer AUC",
+   "value": 0.6310231023102311,
+   "lo": 0.5335852484249713,
+   "hi": 0.7259971072931276,
+   "n": 146,
+   "n_spk": 100,
+   "file": "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv",
+   "draws": 2000
+  },
+  "T4_pitt_af2_agreement": {
+   "what": "Audio Flamingo 2 Pitt agreement zero-shot answer AUC",
+   "value": 0.5544416597048176,
+   "lo": 0.4760154563877674,
+   "hi": 0.6296423536438385,
+   "n": 322,
+   "n_spk": 175,
+   "file": "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv",
+   "draws": 2000
+  },
+  "T4_pitt_af2_SUPERSEDED_audio_pooled": {
+   "what": "Audio Flamingo 2 SUPERSEDED af2_pitt_audio Pitt pooled zero-shot answer AUC",
+   "value": 0.5272956218519953,
+   "lo": 0.46217316442319467,
+   "hi": 0.592415287238773,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv",
+   "draws": 2000
+  },
+  "T4_pitt_af2_SUPERSEDED_audio_conflict": {
+   "what": "Audio Flamingo 2 SUPERSEDED af2_pitt_audio Pitt conflict zero-shot answer AUC",
+   "value": 0.6690869086908691,
+   "lo": 0.5650168523338539,
+   "hi": 0.7654418356253219,
+   "n": 146,
+   "n_spk": 100,
+   "file": "<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv",
+   "draws": 2000
+  },
+  "T4_pitt_af2_SUPERSEDED_audio_agreement": {
+   "what": "Audio Flamingo 2 SUPERSEDED af2_pitt_audio Pitt agreement zero-shot answer AUC",
+   "value": 0.48947766240999324,
+   "lo": 0.4181523835566567,
+   "hi": 0.5591077426895606,
+   "n": 322,
+   "n_spk": 175,
+   "file": "<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv",
+   "draws": 2000
+  },
+  "T4_pitt_q3o_conflict_fullfit": {
+   "what": "Qwen3-Omni Pitt conflict arm answer-state probe, full-fit probe restricted to the arm",
+   "value": 0.6393839383938393,
+   "lo": 0.5326205072067142,
+   "hi": 0.7451030139778684,
+   "n": 146,
+   "n_spk": 100,
+   "file": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz",
+   "draws": 2000
+  },
+  "T4_pitt_q3o_agreement_fullfit": {
+   "what": "Qwen3-Omni Pitt agreement arm answer-state probe, full-fit probe restricted to the arm",
+   "value": 0.9032104069698055,
+   "lo": 0.8627131055051073,
+   "hi": 0.9400178589533816,
+   "n": 322,
+   "n_spk": 175,
+   "file": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz",
+   "draws": 2000
+  },
+  "T4_pitt_o25_lora": {
+   "what": "Qwen2.5-Omni Pitt LoRA fine tune out-of-fold AUC (125 tied values, ties averaged)",
+   "value": 0.825,
+   "lo": 0.7735194856592271,
+   "hi": 0.8728794378093947,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv",
+   "draws": 2000
+  },
+  "T4_pitt_o25_lora_plus_proj": {
+   "what": "Qwen2.5-Omni Pitt LoRA plus projector fine tune out-of-fold AUC (114 tied values, ties averaged)",
+   "value": 0.7695854320030996,
+   "lo": 0.7135460374021751,
+   "hi": 0.8253337473135325,
+   "n": 468,
+   "n_spk": 228,
+   "file": "<local data dir>/release/omni_final/abl2_pitt_both_oof.csv",
+   "draws": 2000
+  }
+ },
+ "builder": {
+  "searched": "release/ (no build_master*.py and no .py that writes master_lookup.csv), <local data dir>, G-Drive 'paper work' and paper1_local_runs, all <local data dir>/scratch folders",
+  "found_only_at": "<local data dir>/scratch/build_master.py",
+  "sha256_full": "e2374cebf372e414127a2280a43418731472dcfc0189077c28489062eea1080b",
+  "location_note": "another job's temporary scratch folder under <local data dir>/tmp, not a permanent location and not under release/",
+  "overrides_mechanism": "hard-coded block '# --- AUTHORITATIVE OVERRIDES' (R1 forces Qwen2.5-Omni pitt encoder probe to 0.7706 with its SUPERSEDES note; _CONF adds two edaic_conflict rows), then rows are sorted by (model,dataset,stream) and de-duplicated first-wins; it opens release/master/master_lookup.csv for writing directly",
+  "test": "a COPY with only GD and the output path changed was run to scratch folder t4/ (never over the real file); the real file's mtime and sha were checked unchanged",
+  "regen_with_its_own_stale_GD": {
+   "rows": 101,
+   "vs_pre_part17_file": "drops 120 of 221 rows",
+   "vs_edited_file": "drops 130 of 231 rows"
+  },
+  "regen_with_current_GD": {
+   "rows": 178,
+   "vs_pre_part17_file": "drops 43 appended rows (edaic_mid30, edaic_mid300, edaic_full, pitt_all, edaic_conflict_v2) and rewrites 76 source prefixes",
+   "vs_edited_file": "drops 53 of 231 rows; auc differs 1, estimator differs 5, source differs 78 on shared keys"
+  },
+  "decision": "left untouched: it cannot reproduce even the pre-Part-17 file (rows 179-221 were appended outside it, unsorted), and making it do so would mean pasting the whole file into it as overrides; do NOT run it, it overwrites the real lookup"
+ },
+ "q3o_arm_interval_note": "Q3O arm CIs here use manifest speaker keys (Control015 style); part16 Q3Ofix used the npz spk strings (Control15 style). Same partition, different np.unique sort order, so different draws: conflict [0.5326,0.7451] here vs [0.5323,0.7418] with npz keys (reproduced exactly here); agreement [0.8627,0.9400] vs [0.8626,0.9374]. Point values identical."
+}

@@ -1,0 +1,128 @@
+manifest rows 468 arms {'agreement': 322, 'conflict': 146} speakers grp+spk 228
+  arm agreement clips 322 speakers 175
+  arm conflict clips 146 speakers 100
+part10 per-repeat [0.7598 0.7725 0.7459 0.7903 0.7843]
+[OK ] Q25O pitt encoder mean-of-5 (row 1): claimed 0.7706 | MW 0.770570 | trap 0.770570 n=468
+[OK ] Q25O pitt encoder averaged-prob (not used): claimed 0.7917 | MW 0.791689 | trap 0.791689 
+[OK ] Q25O pitt encoder old single-split (SUPERSEDED): claimed 0.7969 | MW 0.796881 | trap 0.796881 
+[OK ] E-DAIC full row 2 LM (oof_llm): claimed 0.7088 | MW 0.708786 | trap 0.708786 n=275 pos=66
+[OK ] E-DAIC full row 3 encoder (oof_enc): claimed 0.5916 | MW 0.591634 | trap 0.591634 n=275 pos=66
+[OK ] E-DAIC full json ans auc_of_mean_oof (oof_ans): claimed 0.7748 | MW 0.774757 | trap 0.774757 n=275 pos=66
+[OK ] E-DAIC full json proj auc_of_mean_oof (oof_proj): claimed 0.5631 | MW 0.563143 | trap 0.563143 n=275 pos=66
+[OK ] E-DAIC full zero-shot answer p_yes_answer: claimed None | MW 0.827751 | trap 0.827751 
+[OK ] E-DAIC LM mean of json per_repeat (row 4): claimed 0.7001 | computed 0.700120 
+[OK ] E-DAIC enc mean of json per_repeat (row 5): claimed 0.5884 | computed 0.588400 
+json llm per_repeat [0.6918, 0.7062, 0.6893, 0.7055, 0.7078] enc per_repeat [0.5964, 0.5826, 0.5962, 0.5608, 0.606]
+E-DAIC LM minus answer -0.1190 CI (np.float64(-0.1995), np.float64(-0.0478)) (claimed -0.1190 [-0.1995, -0.0478]) B=2000
+E-DAIC enc minus answer -0.2361 CI (np.float64(-0.3272), np.float64(-0.1394)) (claimed -0.2361 [-0.3272, -0.1394]) B=2000
+[OK ] old E-DAIC LM mean of per_repeat: claimed 0.6853 | computed 0.685300 
+[OK ] old E-DAIC enc mean of per_repeat: claimed 0.593 | computed 0.593000 
+old json ans 0.7542 proj 0.5293
+E-DAIC windows longer than 300 s: 217 of 275 (claimed 217 of 275)
+q3o pitt enc per-repeat [0.8199 0.8016 0.8142 0.8342 0.7914]
+[OK ] Q3O pitt encoder mean-of-5 (row 7): claimed 0.8122 | MW 0.812247 | trap 0.812247 n=468
+[OK ] Q3O pitt encoder averaged-prob (not used): claimed 0.8354 | MW 0.835374 | trap 0.835374 
+pod_sync json enc per_repeat [0.8199, 0.8016, 0.8142, 0.8342, 0.7914] vs csv [np.float64(0.8199), np.float64(0.8016), np.float64(0.8142), np.float64(0.8342), np.float64(0.7914)]
+[OK ] Q3O pitt POD3 llm mean over 5 repeat(s) (side note): claimed 0.8445 | MW 0.844473 | trap 0.844473 
+[OK ] Q3O pitt POD3 ans mean over 5 repeat(s) (side note): claimed 0.8237 | MW 0.823716 | trap 0.823716 
+[OK ] Q3O pitt POD3 proj mean over 1 repeat(s) (side note): claimed 0.782 | MW 0.782013 | trap 0.782013 
+[OK ] old Q3O pitt enc json mean (SUPERSEDED): claimed 0.8289 | computed 0.828920 
+old json llm/ans/proj means 0.8477 0.8268 0.7619
+q3o pcgita enc per-repeat [0.9223 0.8697 0.8742 0.8988 0.9196]
+[OK ] Q3O pcgita encoder mean-of-5 (row 6): claimed 0.8969 | MW 0.896927 | trap 0.896927 n=1100
+[OK ] Q3O pcgita encoder averaged-prob (not used): claimed 0.9109 | MW 0.910866 | trap 0.910866 
+old pcgita json per_repeat [0.9235, 0.8703, 0.8745, 0.8976, 0.9187] mean 0.89692
+[OK ] old Q3O pcgita enc json mean: claimed 0.8969 | computed 0.896920 
+Kimi pitt canonical (rows 8-10): n=468 labels match manifest: True; ties (0, 0)
+[OK ] Kimi pitt canonical (rows 8-10) pooled: claimed 0.718 | MW 0.718036 | trap 0.718036 n=468 spk=228
+[OK ] Kimi pitt canonical (rows 8-10) conflict: claimed 0.7197 | MW 0.719692 | trap 0.719692 n=146 spk=100
+[OK ] Kimi pitt canonical (rows 8-10) agreement: claimed 0.7227 | MW 0.722680 | trap 0.722680 n=322 spk=175
+Kimi pitt OLD (SUPERSEDED): n=468 labels match manifest: True; ties (0, 0)
+[OK ] Kimi pitt OLD (SUPERSEDED) pooled: claimed 0.6964 | MW 0.696358 | trap 0.696358 n=468 spk=228
+[OK ] Kimi pitt OLD (SUPERSEDED) conflict: claimed 0.7078 | MW 0.707811 | trap 0.707811 n=146 spk=100
+[OK ] Kimi pitt OLD (SUPERSEDED) agreement: claimed 0.7014 | MW 0.701436 | trap 0.701436 n=322 spk=175
+AF2 pitt canonical (rows 11-13): n=468 labels match manifest: True; ties (0, 0)
+[OK ] AF2 pitt canonical (rows 11-13) pooled: claimed 0.5724 | MW 0.572356 | trap 0.572356 n=468 spk=228
+[OK ] AF2 pitt canonical (rows 11-13) conflict: claimed 0.631 | MW 0.631023 | trap 0.631023 n=146 spk=100
+[OK ] AF2 pitt canonical (rows 11-13) agreement: claimed 0.5544 | MW 0.554442 | trap 0.554442 n=322 spk=175
+AF2 pitt OLD af2_pitt_audio.csv (SUPERSEDED): n=468 labels match manifest: True; ties (0, 0)
+[OK ] AF2 pitt OLD af2_pitt_audio.csv (SUPERSEDED) pooled: claimed 0.5273 | MW 0.527296 | trap 0.527296 n=468 spk=228
+[OK ] AF2 pitt OLD af2_pitt_audio.csv (SUPERSEDED) conflict: claimed 0.6691 | MW 0.669087 | trap 0.669087 n=146 spk=100
+[OK ] AF2 pitt OLD af2_pitt_audio.csv (SUPERSEDED) agreement: claimed 0.4895 | MW 0.489478 | trap 0.489478 n=322 spk=175
+AF2 agreement arm ties: (0, 0) ; old file agreement ties: (0, 0)
+perp npz spk == manifest grp+spk: True
+[OK ] Q3O pitt answer-state full-fit pooled (vs readout csv 'all' 0.8307): claimed 0.8307 | MW 0.830686 | trap 0.830686 
+[OK ] Q3O pitt answer-state conflict full-fit restricted (row 14): claimed 0.6394 | MW 0.639384 | trap 0.639384 n=146 spk=100
+   CI npz IDs (np.float64(0.5323), np.float64(0.7418)) | grp+int IDs (np.float64(0.5323), np.float64(0.7418)) | grp+zero-padded manifest IDs (np.float64(0.5326), np.float64(0.7451))
+[OK ] Q3O pitt answer-state agreement full-fit restricted (row 15): claimed 0.9032 | MW 0.903210 | trap 0.903210 n=322 spk=175
+   CI npz IDs (np.float64(0.8626), np.float64(0.9374)) | grp+int IDs (np.float64(0.8626), np.float64(0.9374)) | grp+zero-padded manifest IDs (np.float64(0.8627), np.float64(0.94))
+readout csv refit-within-arm auc_probe: {'all': 0.8307, 'conflict': 0.6145, 'agreement': 0.9349}
+lora labels match manifest True arm col matches manifest True
+[OK ] Q25O pitt LoRA (row 16): claimed 0.825 | MW 0.825000 | trap 0.825000 n=468 tied values 360 in 125 groups
+[OK ] Q25O pitt LoRA+projector abl2 csv (row 17): claimed 0.7696 | MW 0.769585 | trap 0.769585 n=468 tied values 314 in 114 groups
+   abl2 csv conflict 0.5710 (abl2 json 0.571, abl json 0.5364)
+   abl2 csv agreement 0.8443 (abl2 json 0.8443, abl json 0.8851)
+rows (excl header) before 221 after 231
+duplicate keys before 0 after 0
+dropped []
+added 10
+   + ('Audio Flamingo 2', 'pitt_agreement', 'zero shot answer') 0.5544 322
+   + ('Audio Flamingo 2', 'pitt_conflict', 'zero shot answer') 0.631 146
+   + ('Kimi-Audio', 'pitt_agreement', 'zero shot answer') 0.7227 322
+   + ('Kimi-Audio', 'pitt_conflict', 'zero shot answer') 0.7197 146
+   + ('Qwen2.5-Omni', 'edaic_full', 'LM probe (mean of 5 per-repeat AUCs)') 0.7001 275
+   + ('Qwen2.5-Omni', 'edaic_full', 'encoder probe (mean of 5 per-repeat AUCs)') 0.5884 275
+   + ('Qwen2.5-Omni', 'pitt', 'LoRA fine tune') 0.825 468
+   + ('Qwen2.5-Omni', 'pitt', 'LoRA plus projector fine tune') 0.7696 468
+   + ('Qwen3-Omni-30B-A3B', 'pitt_agreement', 'answer-state probe') 0.9032 322
+   + ('Qwen3-Omni-30B-A3B', 'pitt_conflict', 'answer-state probe') 0.6394 146
+changed 7
+   ~ ('Audio Flamingo 2', 'pitt', 'zero shot answer') cols changed ['estimator', 'source'] auc 0.5724 -> 0.5724
+   ~ ('Kimi-Audio', 'pitt', 'zero shot answer') cols changed ['estimator', 'source'] auc 0.718 -> 0.718
+   ~ ('Qwen2.5-Omni', 'edaic_full', 'LM probe') cols changed ['auc', 'estimator', 'source'] auc 0.6853 -> 0.7088
+   ~ ('Qwen2.5-Omni', 'edaic_full', 'encoder probe') cols changed ['auc', 'estimator', 'source'] auc 0.593 -> 0.5916
+   ~ ('Qwen2.5-Omni', 'pitt', 'encoder probe') cols changed ['estimator'] auc 0.7706 -> 0.7706
+   ~ ('Qwen3-Omni-30B-A3B', 'pcgita', 'encoder probe') cols changed ['estimator', 'source'] auc 0.8969 -> 0.8969
+   ~ ('Qwen3-Omni-30B-A3B', 'pitt', 'encoder probe') cols changed ['auc', 'estimator', 'source'] auc 0.8289 -> 0.8122
+unchanged 214
+header identical True
+rows with stale G-Drive prefix: before 76 after 75
+rows whose source path does not exist: 75
+   of which in touched rows: []
+   missing paths that exist under 'paper work/': 75
+SUPERSEDED rows 8
+   file exists True | superseded_by exists True | kimi_pitt_zeroshot_scores.csv
+   file exists True | superseded_by exists True | af2_pitt_audio.csv
+   file exists True | superseded_by exists True | omni_pitt_enc_nested_oof.csv
+   file exists True | superseded_by exists True | o25_full_nested_repeats.json
+   file exists True | superseded_by exists True | readout_direction_q3o_by_arm.csv
+   file exists True | superseded_by exists True | q3o_pitt_nested_repeats.json
+   file exists True | superseded_by exists True | q3o_pcgita_nested_repeats.json
+   file exists True | superseded_by exists True | abl_pitt_both.json
+[OK ] CI T4_pitt_o25_enc_mean5: claimed [0.7157, 0.822] n_spk 228.0 | manifest: [0.7157, 0.822] spk=228 B=2000 | own: [0.7157, 0.822] spk=228 B=2000
+[OK ] CI T4_pitt_o25_enc_avgprob_NOTUSED: claimed [0.7324, 0.848] n_spk 228.0 | manifest: [0.7324, 0.848] spk=228 B=2000 | own: [0.7324, 0.848] spk=228 B=2000
+[OK ] CI T4_edaic_o25_llm_avgprob: claimed [0.6232, 0.7874] n_spk 275.0 | pid: [0.6232, 0.7874] spk=275 B=2000
+[OK ] CI T4_edaic_o25_enc_avgprob: claimed [0.511, 0.6706] n_spk 275.0 | pid: [0.511, 0.6706] spk=275 B=2000
+pcgita speakers 100 clips 1100
+[OK ] CI T4_pcgita_q3o_enc_mean5: claimed [0.8322, 0.9454] n_spk 100.0 | own: [0.8322, 0.9454] spk=100 B=2000
+[OK ] CI T4_pcgita_q3o_enc_avgprob_NOTUSED: claimed [0.8452, 0.96] n_spk 100.0 | own: [0.8452, 0.96] spk=100 B=2000
+[OK ] CI T4_pitt_q3o_enc_mean5: claimed [0.7613, 0.8625] n_spk 228.0 | manifest: [0.761, 0.8603] spk=228 B=2000 | own: [0.7613, 0.8625] spk=228 B=2000
+[OK ] CI T4_pitt_q3o_enc_avgprob_NOTUSED: claimed [0.7817, 0.8877] n_spk 228.0 | manifest: [0.7805, 0.8858] spk=228 B=2000 | own: [0.7817, 0.8877] spk=228 B=2000
+[OK ] CI T4_pitt_kimi_pooled: claimed [0.6585, 0.7742] n_spk 228.0 | manifest: [0.6585, 0.7742] spk=228 B=2000 | own: [0.6585, 0.7742] spk=228 B=2000
+[OK ] CI T4_pitt_kimi_conflict: claimed [0.6201, 0.8147] n_spk 100.0 | manifest: [0.6201, 0.8147] spk=100 B=2000 | own: [0.6201, 0.8147] spk=100 B=2000
+[OK ] CI T4_pitt_kimi_agreement: claimed [0.656, 0.7896] n_spk 175.0 | manifest: [0.656, 0.7896] spk=175 B=2000 | own: [0.656, 0.7896] spk=175 B=2000
+[OK ] CI T4_pitt_kimi_SUPERSEDED_overnight_pooled: claimed [0.6324, 0.7575] n_spk 228.0 | manifest: [0.6324, 0.7575] spk=228 B=2000 | own: [0.6324, 0.7575] spk=228 B=2000
+[OK ] CI T4_pitt_kimi_SUPERSEDED_overnight_conflict: claimed [0.6037, 0.8083] n_spk 100.0 | manifest: [0.6037, 0.8083] spk=100 B=2000 | own: [0.6037, 0.8083] spk=100 B=2000
+[OK ] CI T4_pitt_kimi_SUPERSEDED_overnight_agreement: claimed [0.6309, 0.773] n_spk 175.0 | manifest: [0.6309, 0.773] spk=175 B=2000 | own: [0.6309, 0.773] spk=175 B=2000
+[OK ] CI T4_pitt_af2_pooled: claimed [0.5066, 0.6424] n_spk 228.0 | manifest: [0.5066, 0.6424] spk=228 B=2000 | own: [0.5066, 0.6424] spk=228 B=2000
+[OK ] CI T4_pitt_af2_conflict: claimed [0.5336, 0.726] n_spk 100.0 | manifest: [0.5336, 0.726] spk=100 B=2000 | own: [0.5336, 0.726] spk=100 B=2000
+[OK ] CI T4_pitt_af2_agreement: claimed [0.476, 0.6296] n_spk 175.0 | manifest: [0.476, 0.6296] spk=175 B=2000 | own: [0.476, 0.6296] spk=175 B=2000
+[OK ] CI T4_pitt_af2_SUPERSEDED_audio_pooled: claimed [0.4622, 0.5924] n_spk 228.0 | manifest: [0.4622, 0.5924] spk=228 B=2000 | own: [0.4622, 0.5924] spk=228 B=2000
+[OK ] CI T4_pitt_af2_SUPERSEDED_audio_conflict: claimed [0.565, 0.7654] n_spk 100.0 | manifest: [0.565, 0.7654] spk=100 B=2000 | own: [0.565, 0.7654] spk=100 B=2000
+[OK ] CI T4_pitt_af2_SUPERSEDED_audio_agreement: claimed [0.4182, 0.5591] n_spk 175.0 | manifest: [0.4182, 0.5591] spk=175 B=2000 | own: [0.4182, 0.5591] spk=175 B=2000
+[OK ] CI T4_pitt_q3o_conflict_fullfit: claimed [0.5326, 0.7451] n_spk 100.0 | manifest: [0.5326, 0.7451] spk=100 B=2000 | own: [0.5323, 0.7418] spk=100 B=2000
+[OK ] CI T4_pitt_q3o_agreement_fullfit: claimed [0.8627, 0.94] n_spk 175.0 | manifest: [0.8627, 0.94] spk=175 B=2000 | own: [0.8626, 0.9374] spk=175 B=2000
+[OK ] CI T4_pitt_o25_lora: claimed [0.7735, 0.8729] n_spk 228.0 | manifest: [0.7735, 0.8729] spk=228 B=2000 | own: [0.7735, 0.8729] spk=228 B=2000
+[OK ] CI T4_pitt_o25_lora_plus_proj: claimed [0.7135, 0.8253] n_spk 228.0 | manifest: [0.7135, 0.8253] spk=228 B=2000 | own: [0.7135, 0.8253] spk=228 B=2000
+T4.tsv rows_before 221.0 rows_after 231.0 stale 75.0
+interval checks 24 unmatched 0
