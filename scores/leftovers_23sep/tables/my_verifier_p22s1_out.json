@@ -1,0 +1,15 @@
+{
+ "tf_version": "5.17.0",
+ "trunc_default_line196": "truncation: bool = True,",
+ "n_samples_line91": "self.n_samples = chunk_length * sampling_rate",
+ "chunk_length": 300,
+ "n_samples": 4800000,
+ "tok_300s": 7500,
+ "tok_900s_off": 22500,
+ "n_windows": 275,
+ "dur_col": "win_dur_s",
+ "formula_match": 275,
+ "gt300": 217,
+ "gt300_at_7500": 217,
+ "capped900": 89
+}

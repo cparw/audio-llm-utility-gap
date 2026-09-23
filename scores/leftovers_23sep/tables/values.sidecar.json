@@ -1,0 +1,105 @@
+{
+ "what": "leftovers_23sep task \"tables\": (a) summary_all_v2.csv with value_verified filled from real twin files, (b) PART 23 rows appended to master_lookup.csv, (c) stale notes fixed, (d) <local data dir>/scratch verifier scripts saved",
+ "generated_utc": "2026-09-23T22:31:06Z",
+ "machine": "Mac only, no pod (no refit needed); /usr/local/bin/python3 3.10.2, numpy 2.2.6, scipy 1.15.3, sklearn 1.7.2",
+ "per_value_file": "values.csv: 49 values, each recomputed by scripts/my_verifier.py or scripts/my_verifier_p22s1.py and compared with its reference (PART23_VERIFIED.tsv, T7b.tsv, POD1 verifier); 0 disagreements",
+ "verifier_rule": "AUC by average-rank Mann-Whitney (scipy rankdata), asserted equal to sklearn roc_auc_score to 1e-12; bootstrap 2000 draws, fresh numpy default_rng(0) per cell, idx = rng.choice(N, size=N, replace=True) over the unique sorted speaker ids (E-DAIC pids 300 to 718, one clip per speaker), draws with one class skipped (none occurred), 2.5 and 97.5 percentiles, paired cells share idx",
+ "twin_rule": "A twin is a number written by an independent verifier: the verify/ folders of PART 16 and 17, pod-side VERIFY files, or today's sibling tasks p16twins (twins_p16.tsv and its pod pulls, Linux sklearn 1.9.1) and m7m11 (m7m11_values.tsv verifier columns). Copies of the claimed value (keys claimed, theirs, original, orig, task, primary, POD4_value, master, json_auc, figure_answer) are never used. Match at the fragment precision (4 dp at most). Interval twinned when the verifier lo and hi sit in the same record or in records keyed to the same quantity. Decided by scripts/twin_extract.py + scripts/twin_decide.py; each accepted twin value re-found in its twin file by scripts/check_twins.py (all but one: P16.POD2.L2 lo is stored as 0.43485 = 0.43484998, a rounding tie).",
+ "summary_v2_counts": {
+  "generated_utc": "2026-09-23T22:30:42Z",
+  "source_v1": "<local data dir>/release_from_mac/summary/summary_all.csv",
+  "rows": 1532,
+  "agree_4dp_by_part": {
+   "16 NO": 1,
+   "16 no twin": 14,
+   "16 yes": 546,
+   "16 yes, interval differs": 9,
+   "16 yes, second record only": 10,
+   "17 no twin": 36,
+   "17 yes": 254
+  },
+  "t7b_intervals_added": 4,
+  "twin_source_counts": {
+   "Mac verifier (verify folder)": 704,
+   "": 50,
+   "m7m11 task": 22,
+   "p16twins task": 52,
+   "pod-side verifier": 42
+  },
+  "paper_value_rows_16_17_by_status": {
+   "yes": 249
+  },
+  "paper_value_rows_without_twin": []
+ },
+ "master_lookup": {
+  "rows_before": 234,
+  "rows_after": 242,
+  "appended": 8,
+  "estimator_notes_fixed": 8,
+  "md5_before": "a0b55e8d333722fa0e93f10f22e94e6f",
+  "md5_after": "9ceeb85d5fad3a7ee31c0a290575af42"
+ },
+ "files_changed_in_place": {
+  "<local data dir>/release/master/master_lookup.csv": {
+   "backup": "<local data dir>/release/master/master_lookup.csv.bak_pre_part23",
+   "sha256_before": "323c6cc579e89de7c14f9d37fcd101f4060da87de936565f0a1ea6d96a7b542a",
+   "sha256_after": "68f8bccfe0a6151bd5d59cd9ddc29445ad25080fd25d869eaca0c3b667928467"
+  },
+  "<local data dir>/release/edaic_rerun/part17/rows/T7.tsv": {
+   "backup": "<local data dir>/release/edaic_rerun/part17/rows/T7.tsv.bak_pre_notefix_23sep",
+   "sha256_before": "8b7c1ea4678d399057f6a786d08e0653b9c67c9cecea47b38528fd454d38918c",
+   "sha256_after": "3786b83c8aec972b8a1267c8d1b22c8e65b0096bde333f4ff7017c2c1290793a"
+  },
+  "<local data dir>/release/edaic_rerun/part17/rows/T4.tsv": {
+   "backup": "<local data dir>/release/edaic_rerun/part17/rows/T4.tsv.bak_pre_notefix_23sep",
+   "sha256_before": "7e89c6f0bd23ad91eede93198c9451244d0a05e528935200b22fec4b5168a4ef",
+   "sha256_after": "24cd4dae2429060f026970a1b7e63e3a1f254c58b850e3a4f9aa01de35b9ddbf"
+  },
+  "<local data dir>/release/scores/part22/rows/P22_verified.tsv": {
+   "backup": "<local data dir>/release/scores/part22/rows/P22_verified.tsv.bak_pre_notefix_23sep",
+   "sha256_before": "9eba050db12c5a3b97d46576922c616a5b90fdb213b581031785f0eb9bd05832",
+   "sha256_after": "e5029a15d82edc67c5ff6e8210ed64ac5539d0120efb99f4ac3e87dd8d01ca55"
+  },
+  "<local data dir>/release/scores/part22/rows/P22.tsv": {
+   "backup": "<local data dir>/release/scores/part22/rows/P22.tsv.bak_pre_notefix_23sep",
+   "sha256_before": "ba4812c773514222650164c67a42b00e2165c7180094a9c9e2b385a31ab4dd34",
+   "sha256_after": "fd452f99f591be9b90ec89b7ff3b64c62424d5e0c5e751cfec4e1024aaf9c52e"
+  },
+  "<local data dir>/release/edaic_rerun/part16/POD1/p14_o25_sftfull.json": {
+   "backup": "<local data dir>/release/edaic_rerun/part16/POD1/p14_o25_sftfull.json.bak_pre_notefix_23sep",
+   "sha256_before": "b72e2892817c038130d647bd2ce049f1675c9279fee9bf5eb09fd048b7976d07",
+   "sha256_after": "3ca1f13d06b58ad25f1f90da8c55c98d8d01869e29d8c2f90b1327b88005af75"
+  },
+  "<local data dir>/release/edaic_rerun/part16/POD1/out16/p14_o25_sftfull.json": {
+   "backup": "<local data dir>/release/edaic_rerun/part16/POD1/out16/p14_o25_sftfull.json.bak_pre_notefix_23sep",
+   "sha256_before": "b72e2892817c038130d647bd2ce049f1675c9279fee9bf5eb09fd048b7976d07",
+   "sha256_after": "3ca1f13d06b58ad25f1f90da8c55c98d8d01869e29d8c2f90b1327b88005af75"
+  }
+ },
+ "new_files": [
+  "<local data dir>/release_from_mac/summary/summary_all_v2.csv",
+  "<local data dir>/release_from_mac/summary/summary_counts_v2.json",
+  "<local data dir>/release/master/master_lookup.csv.bak_pre_part23",
+  "<local data dir>/release/master/master_lookup.csv.bak_pre_notefix_23sep"
+ ],
+ "not_touched": "summary_all.csv v1 (md5 74230359244cd86570ade0baeaec1d54), any omni_final folder, the Overleaf tex, git; no pod created",
+ "scripts": [
+  "scripts/build_summary_v2.py",
+  "scripts/check_twins.py",
+  "scripts/edit_master_lookup.py",
+  "scripts/edit_notes.py",
+  "scripts/my_verifier.py",
+  "scripts/my_verifier_p22s1.py",
+  "scripts/twin_decide.py",
+  "scripts/twin_extract.py",
+  "scripts/write_sidecar.py",
+  "scripts/write_values.py"
+ ],
+ "n": {
+  "summary_rows": 1532,
+  "fragment_rows_16_17": 870,
+  "t7b_rows": 275,
+  "part23_rows": 275,
+  "sftfull_rows": 966
+ }
+}
