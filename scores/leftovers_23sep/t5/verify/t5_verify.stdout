@@ -1,0 +1,107 @@
+AGREE    T5_pitt_enc_pod10_maxabs                                               claimed [0] mine [0] vrefit route 1.11e-16
+AGREE    T5_pitt_enc_pod10_match4dp                                             claimed [32/32] mine [32/32] vrefit route 32/32
+AGREE    T5_pitt_enc_pod10_meanstd_match4dp                                     claimed [32/32 and 32/32] mine [32/32 and 32/32] vrefit route 32/32 and 32/32
+AGREE    T5_pitt_enc_pod10_layers_above                                         claimed [31/32 vs 31/32] mine [31/32 vs 31/32] answer 0.657768; vrefit route 31/32
+AGREE    T5_pitt_proj_pod10_maxabs                                              claimed [0] mine [0] vrefit route 0
+AGREE    T5_pitt_proj_pod10_match4dp                                            claimed [1/1] mine [1/1] vrefit route 1/1
+AGREE    T5_pitt_proj_pod10_meanstd_match4dp                                    claimed [1/1 and 1/1] mine [1/1 and 1/1] vrefit route 1/1 and 1/1
+AGREE    T5_pitt_llm_pod2_maxabs                                                claimed [0] mine [0] vrefit route 2.22e-16
+AGREE    T5_pitt_llm_pod2_match4dp                                              claimed [29/29] mine [29/29] vrefit route 29/29
+AGREE    T5_pitt_llm_pod2_meanstd_match4dp                                      claimed [29/29 and 29/29] mine [29/29 and 29/29] vrefit route 29/29 and 29/29
+AGREE    T5_pitt_ans_pod13_maxabs                                               claimed [0] mine [0] vrefit route 2.22e-16
+AGREE    T5_pitt_ans_pod13_match4dp                                             claimed [29/29] mine [29/29] vrefit route 29/29
+AGREE    T5_pitt_ans_pod13_meanstd_match4dp                                     claimed [29/29 and 29/29] mine [29/29 and 29/29] vrefit route 29/29 and 29/29
+AGREE    T5_edaic_first30_enc_pod10_maxabs                                      claimed [0] mine [0] vrefit route 1.11e-16
+AGREE    T5_edaic_first30_enc_pod10_match4dp                                    claimed [32/32] mine [32/32] vrefit route 32/32
+AGREE    T5_edaic_first30_enc_pod10_meanstd_match4dp                            claimed [32/32 and 32/32] mine [32/32 and 32/32] vrefit route 32/32 and 32/32
+AGREE    T5_edaic_first30_enc_pod10_layers_above                                claimed [2/32 vs 2/32] mine [2/32 vs 2/32] answer 0.662027; vrefit route 2/32
+AGREE    T5_edaic_first30_enc_pod9_maxabs                                       claimed [0] mine [0] vrefit route 1.11e-16
+AGREE    T5_edaic_first30_enc_pod9_match4dp                                     claimed [32/32] mine [32/32] vrefit route 32/32
+AGREE    T5_edaic_first30_enc_pod9_meanstd_match4dp                             claimed [32/32 and 32/32] mine [32/32 and 32/32] vrefit route 32/32 and 32/32
+AGREE    T5_edaic_first30_enc_pod9_layers_above                                 claimed [2/32 vs 2/32] mine [2/32 vs 2/32] answer 0.662027; vrefit route 2/32
+AGREE    T5_edaic_first30_proj_pod10_maxabs                                     claimed [0] mine [0] vrefit route 1.11e-16
+AGREE    T5_edaic_first30_proj_pod10_match4dp                                   claimed [1/1] mine [1/1] vrefit route 1/1
+AGREE    T5_edaic_first30_proj_pod10_meanstd_match4dp                           claimed [1/1 and 1/1] mine [1/1 and 1/1] vrefit route 1/1 and 1/1
+AGREE    T5_edaic_first30_proj_pod9_maxabs                                      claimed [0] mine [0] vrefit route 1.11e-16
+AGREE    T5_edaic_first30_proj_pod9_match4dp                                    claimed [1/1] mine [1/1] vrefit route 1/1
+AGREE    T5_edaic_first30_proj_pod9_meanstd_match4dp                            claimed [1/1 and 1/1] mine [1/1 and 1/1] vrefit route 1/1 and 1/1
+AGREE    T5_edaic_first30_llm_pod5_maxabs                                       claimed [0] mine [0] vrefit route 1.11e-16
+AGREE    T5_edaic_first30_llm_pod5_match4dp                                     claimed [29/29] mine [29/29] vrefit route 29/29
+AGREE    T5_edaic_first30_llm_pod5_meanstd_match4dp                             claimed [29/29 and 29/29] mine [29/29 and 29/29] vrefit route 29/29 and 29/29
+AGREE    T5_edaic_first30_ans_pod6_maxabs                                       claimed [0] mine [0] vrefit route 1.11e-16
+AGREE    T5_edaic_first30_ans_pod6_match4dp                                     claimed [29/29] mine [29/29] vrefit route 29/29
+AGREE    T5_edaic_first30_ans_pod6_meanstd_match4dp                             claimed [29/29 and 29/29] mine [29/29 and 29/29] vrefit route 29/29 and 29/29
+AGREE    T5_adress2020_enc_pod7_maxabs                                          claimed [2.88e-03] mine [2.88e-03] vrefit route 2.88e-03
+AGREE    T5_adress2020_enc_pod7_match4dp                                        claimed [1/32] mine [1/32] vrefit route 1/32
+AGREE    T5_adress2020_enc_pod7_meanstd_match4dp                                claimed [5/32 and 1/32] mine [5/32 and 1/32] vrefit route 5/32 and 1/32
+AGREE    T5_adress2020_enc_pod7_layers_above                                    claimed [32/32 vs 32/32] mine [32/32 vs 32/32] answer 0.624096; vrefit route 32/32
+AGREE    T5_adress2020_proj_pod7_maxabs                                         claimed [1.31e-03] mine [1.31e-03] vrefit route 1.31e-03
+AGREE    T5_adress2020_proj_pod7_match4dp                                       claimed [0/1] mine [0/1] vrefit route 0/1
+AGREE    T5_adress2020_proj_pod7_meanstd_match4dp                               claimed [0/1 and 0/1] mine [0/1 and 0/1] vrefit route 0/1 and 0/1
+AGREE    T5_neurovoz_enc_pod8_maxabs                                            claimed [1.09e-03] mine [1.09e-03] vrefit route 1.09e-03
+AGREE    T5_neurovoz_enc_pod8_match4dp                                          claimed [5/32] mine [5/32] vrefit route 5/32
+AGREE    T5_neurovoz_enc_pod8_meanstd_match4dp                                  claimed [1/32 and 4/32] mine [1/32 and 4/32] vrefit route 1/32 and 4/32
+AGREE    T5_neurovoz_enc_pod8_layers_above                                      claimed [32/32 vs 32/32] mine [32/32 vs 32/32] answer 0.695081; vrefit route 32/32
+AGREE    T5_neurovoz_proj_pod8_maxabs                                           claimed [4.96e-06] mine [4.96e-06] vrefit route 4.96e-06
+AGREE    T5_neurovoz_proj_pod8_match4dp                                         claimed [0/1] mine [0/1] vrefit route 0/1
+AGREE    T5_neurovoz_proj_pod8_meanstd_match4dp                                 claimed [0/1 and 0/1] mine [0/1 and 0/1] vrefit route 0/1 and 0/1
+AGREE    T5_edaic_full_enc_pod9_maxabs                                          claimed [2.97e-03] mine [2.97e-03] vrefit route 2.97e-03
+AGREE    T5_edaic_full_enc_pod9_match4dp                                        claimed [2/32] mine [2/32] vrefit route 2/32
+AGREE    T5_edaic_full_enc_pod9_meanstd_match4dp                                claimed [0/32 and 0/32] mine [0/32 and 0/32] vrefit route 0/32 and 0/32
+AGREE    T5_edaic_full_enc_pod9_layers_above                                    claimed [0/32 vs 0/32] mine [0/32 vs 0/32] answer 0.828476; vrefit route 0/32
+AGREE    T5_edaic_full_proj_pod9_maxabs                                         claimed [7.25e-04] mine [7.25e-04] vrefit route 7.25e-04
+AGREE    T5_edaic_full_proj_pod9_match4dp                                       claimed [0/1] mine [0/1] vrefit route 0/1
+AGREE    T5_edaic_full_proj_pod9_meanstd_match4dp                               claimed [0/1 and 0/1] mine [0/1 and 0/1] vrefit route 0/1 and 0/1
+AGREE    T5_adresso_enc_refit                                                   claimed [not possible] mine [not possible] candidate states 6 with clip counts [161, 161, 161, 161, 161, 161]
+AGREE    T5_pcgita_enc_refit                                                    claimed [not possible] mine [not possible] candidate states found: 0
+AGREE    T5_kcl_enc_refit                                                       claimed [not possible] mine [not possible] candidate states found: 0
+AGREE    T5_edaic_mid300_enc_refit                                              claimed [not possible] mine [not possible] candidate states found: 0
+AGREE    T5_edaic_mid30_enc_refit                                               claimed [not possible] mine [not possible] candidate states found: 0
+AGREE    T5_diag_pitt_enc_macfile_pod10                                         claimed [5.37e-02; 0/32] mine [5.37e-02; 0/32] 
+AGREE    T5_diag_pitt_enc_mac_macfile_mac                                       claimed [5.34e-02; 0/32] mine [5.34e-02; 0/32] 
+AGREE    T5_diag_pitt_enc_mac_podfile_mac                                       claimed [5.62e-04; 11/32] mine [5.62e-04; 11/32] 
+AGREE    T5_diag_pitt_enc_exact_script_pod1                                     claimed [6.78e-04; 8/32] mine [6.78e-04; 8/32] 
+AGREE    T5_diag_pitt_enc_podfile_f64_pod10                                     claimed [4.65e-04; 8/32] mine [4.65e-04; 8/32] 
+AGREE    T5_diag_pitt_enc_podfile_thr8_pod10                                    claimed [5.62e-04; 4/32] mine [5.62e-04; 4/32] 
+AGREE    T5_diag_pitt_enc_podfile_ctHaswell_pod10                               claimed [6.78e-04; 8/32] mine [6.78e-04; 8/32] 
+AGREE    T5_diag_pitt_enc_podfile_ctZen_pod10                                   claimed [6.78e-04; 8/32] mine [6.78e-04; 8/32] 
+AGREE    T5_diag_pitt_enc_podfile_ctSandybridge_pod10                           claimed [4.84e-04; 8/32] mine [4.84e-04; 8/32] 
+AGREE    T5_diag_pitt_enc_podfile_ctPrescott_pod10                              claimed [5.42e-04; 5/32] mine [5.42e-04; 5/32] 
+AGREE    T5_diag_pitt_enc_podfile_ctSkylakeX_pod10                              claimed [0; 32/32] mine [0; 32/32] 
+AGREE    T5_diag_pitt_enc_vrefit_pod10                                          claimed [1.11e-16; 32/32] mine [1.11e-16; 32/32] 
+AGREE    T5_diag_edaic_first30_enc_macfile_pod10                                claimed [8.79e-02; 0/32] mine [8.79e-02; 0/32] 
+AGREE    T5_diag_edaic_first30_enc_macfile_pod9                                 claimed [8.79e-02; 0/32] mine [8.79e-02; 0/32] 
+AGREE    T5_diag_edaic_first30_enc_mac_macfile_mac                              claimed [8.77e-02; 0/32] mine [8.77e-02; 0/32] 
+AGREE    T5_diag_edaic_first30_enc_mac_podfile_mac                              claimed [8.70e-04; 4/32] mine [8.70e-04; 4/32] 
+AGREE    T5_diag_edaic_first30_enc_exact_script_pod4                            claimed [5.07e-04; 7/32] mine [5.07e-04; 7/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_f64_pod10                            claimed [1.09e-03; 5/32] mine [1.09e-03; 5/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_f64_pod9                             claimed [1.09e-03; 5/32] mine [1.09e-03; 5/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_thr8_pod10                           claimed [0; 32/32] mine [0; 32/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_thr8_pod9                            claimed [0; 32/32] mine [0; 32/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctHaswell_pod10                      claimed [5.07e-04; 7/32] mine [5.07e-04; 7/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctHaswell_pod9                       claimed [5.07e-04; 7/32] mine [5.07e-04; 7/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctZen_pod10                          claimed [5.07e-04; 7/32] mine [5.07e-04; 7/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctZen_pod9                           claimed [5.07e-04; 7/32] mine [5.07e-04; 7/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctSandybridge_pod10                  claimed [6.52e-04; 3/32] mine [6.52e-04; 3/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctSandybridge_pod9                   claimed [6.52e-04; 3/32] mine [6.52e-04; 3/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctPrescott_pod10                     claimed [5.80e-04; 6/32] mine [5.80e-04; 6/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctPrescott_pod9                      claimed [5.80e-04; 6/32] mine [5.80e-04; 6/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctSkylakeX_pod10                     claimed [0; 32/32] mine [0; 32/32] 
+AGREE    T5_diag_edaic_first30_enc_podfile_ctSkylakeX_pod9                      claimed [0; 32/32] mine [0; 32/32] 
+AGREE    T5_diag_edaic_first30_enc_vrefit_pod10                                 claimed [1.11e-16; 32/32] mine [1.11e-16; 32/32] 
+AGREE    T5_diag_edaic_first30_enc_vrefit_pod9                                  claimed [1.11e-16; 32/32] mine [1.11e-16; 32/32] 
+AGREE    T5_folds_pitt_encproj_pod1                                             claimed [pod file 468/468; Mac file 125/468] mine [pod file 468/468; Mac file 125/468] 
+AGREE    T5_folds_edaic30_encproj_pod10                                         claimed [pod file 275/275; Mac file 20/275] mine [pod file 275/275; Mac file 20/275] 
+AGREE    T5_folds_pitt_encproj_pod10                                            claimed [pod file 468/468; Mac file 125/468] mine [pod file 468/468; Mac file 125/468] 
+AGREE    T5_folds_pitt_ans_pod13                                                claimed [pod file 468/468; Mac file 125/468] mine [pod file 468/468; Mac file 125/468] 
+AGREE    T5_folds_pitt_llm_pod2                                                 claimed [pod file 468/468; Mac file 125/468] mine [pod file 468/468; Mac file 125/468] 
+AGREE    T5_folds_pitt_ans_pod3                                                 claimed [pod file 468/468; Mac file 125/468] mine [pod file 468/468; Mac file 125/468] 
+AGREE    T5_folds_edaic30_encproj_pod4                                          claimed [pod file 275/275; Mac file 20/275] mine [pod file 275/275; Mac file 20/275] 
+AGREE    T5_folds_edaic30_llm_pod5                                              claimed [pod file 275/275; Mac file 20/275] mine [pod file 275/275; Mac file 20/275] 
+AGREE    T5_folds_edaic30_ans_pod6                                              claimed [pod file 275/275; Mac file 20/275] mine [pod file 275/275; Mac file 20/275] 
+AGREE    T5_folds_edaic30_encproj_pod9                                          claimed [pod file 275/275; Mac file 20/275] mine [pod file 275/275; Mac file 20/275] 
+AGREE    T5_folds_edaic30_encproj_mac                                           claimed [pod file 20/275; Mac file 275/275] mine [pod file 20/275; Mac file 275/275] 
+AGREE    T5_folds_pitt_encproj_mac                                              claimed [pod file 125/468; Mac file 468/468] mine [pod file 125/468; Mac file 468/468] 
+AGREE    T5_diag_pitt_enc_p17_verifier_refit_explained                          claimed [1.11e-16] mine [1.11e-16] 
+AGREE    T5_diag_edaic_first30_enc_p17_verifier_refit_explained                 claimed [1.11e-16] mine [1.11e-16] 
+TOTAL agree 106 disagree 0 of 106

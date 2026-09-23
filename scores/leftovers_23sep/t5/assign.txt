@@ -1,0 +1,12 @@
+lo-t5-1 main full pitt_encproj
+lo-t5-2 main basic pitt_llm
+lo-t5-3 main basic pitt_ans
+lo-t5-4 main full edaic30_encproj
+lo-t5-5 main basic edaic30_llm
+lo-t5-6 main basic edaic30_ans
+lo-t5-7 main basic adress2020_encproj
+lo-t5-8 main basic neurovoz_encproj
+lo-t5-9 main basic edaicfull_encproj
+lo-t5-10 main full pitt_encproj edaic30_encproj
+lo-t5-9 main full edaicfull_encproj (done), then edaic30_encproj (relayed from lo-t5-4, AVX-512 host)
+lo-t5-13 main basic pitt_ans (relayed from lo-t5-3, cpu5c AVX-512 host)

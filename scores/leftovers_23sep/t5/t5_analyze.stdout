@@ -1,0 +1,73 @@
+          pod                 job stream       variant                               cpu                              openblas_arch  maxabs_auc_oof  match4_auc_oof  n_layers
+0     lo-t5-1        pitt_encproj    enc       macfile   AMD EPYC 7713 64-Core Processor                                    Haswell    5.381635e-02               0        32
+1     lo-t5-1        pitt_encproj   proj       macfile   AMD EPYC 7713 64-Core Processor                                    Haswell    1.921736e-02               0         1
+18    lo-t5-1        pitt_encproj    enc        vrefit   AMD EPYC 7713 64-Core Processor                                    Haswell    6.780318e-04               8        32
+19    lo-t5-1        pitt_encproj   proj        vrefit   AMD EPYC 7713 64-Core Processor                                    Haswell    5.811701e-05               0         1
+20    lo-t5-1        pitt_encproj    enc  exact_script   AMD EPYC 7713 64-Core Processor                                    Haswell    6.780318e-04               8        32
+21    lo-t5-1        pitt_encproj   proj  exact_script   AMD EPYC 7713 64-Core Processor                                    Haswell    5.811701e-05               0         1
+22   lo-t5-10     edaic30_encproj    enc       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    8.793678e-02               0        32
+23   lo-t5-10     edaic30_encproj   proj       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.148325e-01               0         1
+42   lo-t5-10     edaic30_encproj    enc        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.110223e-16              32        32
+43   lo-t5-10     edaic30_encproj   proj        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.110223e-16               1         1
+44   lo-t5-10     edaic30_encproj    enc  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    0.000000e+00              32        32
+45   lo-t5-10     edaic30_encproj   proj  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    0.000000e+00               1         1
+46   lo-t5-10        pitt_encproj    enc       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    5.371949e-02               0        32
+47   lo-t5-10        pitt_encproj   proj       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.917861e-02               0         1
+66   lo-t5-10        pitt_encproj    enc        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.110223e-16              32        32
+67   lo-t5-10        pitt_encproj   proj        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    0.000000e+00               1         1
+68   lo-t5-10        pitt_encproj    enc  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    0.000000e+00              32        32
+69   lo-t5-10        pitt_encproj   proj  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    0.000000e+00               1         1
+70   lo-t5-13            pitt_ans    ans       macfile  AMD EPYC 9575F 64-Core Processor                                   SkylakeX    2.562960e-02               1        29
+72   lo-t5-13            pitt_ans    ans        vrefit  AMD EPYC 9575F 64-Core Processor                                   SkylakeX    2.220446e-16              29        29
+73   lo-t5-13            pitt_ans    ans  exact_script  AMD EPYC 9575F 64-Core Processor                                   SkylakeX    0.000000e+00              29        29
+74    lo-t5-2            pitt_llm    llm       macfile  AMD EPYC 9754 128-Core Processor                                   SkylakeX    1.917861e-02               0        29
+76    lo-t5-2            pitt_llm    llm        vrefit  AMD EPYC 9754 128-Core Processor                                   SkylakeX    2.220446e-16              29        29
+77    lo-t5-2            pitt_llm    llm  exact_script  AMD EPYC 9754 128-Core Processor                                   SkylakeX    0.000000e+00              29        29
+78    lo-t5-3            pitt_ans    ans       macfile   AMD EPYC 7713 64-Core Processor                                    Haswell    2.520341e-02               1        29
+80    lo-t5-3            pitt_ans    ans        vrefit   AMD EPYC 7713 64-Core Processor                                    Haswell    7.942658e-04               4        29
+81    lo-t5-3            pitt_ans    ans  exact_script   AMD EPYC 7713 64-Core Processor                                    Haswell    7.942658e-04               4        29
+82    lo-t5-4     edaic30_encproj    enc       macfile   AMD EPYC 7713 64-Core Processor                                    Haswell    8.800928e-02               0        32
+83    lo-t5-4     edaic30_encproj   proj       macfile   AMD EPYC 7713 64-Core Processor                                    Haswell    1.149050e-01               0         1
+100   lo-t5-4     edaic30_encproj    enc        vrefit   AMD EPYC 7713 64-Core Processor                                    Haswell    5.074670e-04               7        32
+101   lo-t5-4     edaic30_encproj   proj        vrefit   AMD EPYC 7713 64-Core Processor                                    Haswell    3.624764e-04               0         1
+102   lo-t5-4     edaic30_encproj    enc  exact_script   AMD EPYC 7713 64-Core Processor                                    Haswell    5.074670e-04               7        32
+103   lo-t5-4     edaic30_encproj   proj  exact_script   AMD EPYC 7713 64-Core Processor                                    Haswell    3.624764e-04               0         1
+104   lo-t5-5         edaic30_llm    llm       macfile  AMD EPYC 9965 192-Core Processor                                   SkylakeX    1.148325e-01               0        29
+106   lo-t5-5         edaic30_llm    llm        vrefit  AMD EPYC 9965 192-Core Processor                                   SkylakeX    1.110223e-16              29        29
+107   lo-t5-5         edaic30_llm    llm  exact_script  AMD EPYC 9965 192-Core Processor                                   SkylakeX    0.000000e+00              29        29
+108   lo-t5-6         edaic30_ans    ans       macfile  AMD EPYC 9965 192-Core Processor                                   SkylakeX    8.133971e-02               1        29
+110   lo-t5-6         edaic30_ans    ans        vrefit  AMD EPYC 9965 192-Core Processor                                   SkylakeX    1.110223e-16              29        29
+111   lo-t5-6         edaic30_ans    ans  exact_script  AMD EPYC 9965 192-Core Processor                                   SkylakeX    0.000000e+00              29        29
+112   lo-t5-7  adress2020_encproj    enc       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    5.621302e-02               0        32
+113   lo-t5-7  adress2020_encproj   proj       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    5.489809e-02               0         1
+116   lo-t5-7  adress2020_encproj    enc        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    2.876397e-03               1        32
+117   lo-t5-7  adress2020_encproj   proj        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.314924e-03               0         1
+118   lo-t5-7  adress2020_encproj    enc  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    2.876397e-03               1        32
+119   lo-t5-7  adress2020_encproj   proj  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.314924e-03               0         1
+120   lo-t5-8    neurovoz_encproj    enc       macfile  AMD EPYC 9655P 96-Core Processor                                   SkylakeX    3.588203e-02               0        32
+121   lo-t5-8    neurovoz_encproj   proj       macfile  AMD EPYC 9655P 96-Core Processor                                   SkylakeX    1.296061e-02               0         1
+124   lo-t5-8    neurovoz_encproj    enc        vrefit  AMD EPYC 9655P 96-Core Processor                                   SkylakeX    1.091733e-03               5        32
+125   lo-t5-8    neurovoz_encproj   proj        vrefit  AMD EPYC 9655P 96-Core Processor                                   SkylakeX    4.962422e-06               0         1
+126   lo-t5-8    neurovoz_encproj    enc  exact_script  AMD EPYC 9655P 96-Core Processor                                   SkylakeX    1.091733e-03               5        32
+127   lo-t5-8    neurovoz_encproj   proj  exact_script  AMD EPYC 9655P 96-Core Processor                                   SkylakeX    4.962422e-06               0         1
+128   lo-t5-9     edaic30_encproj    enc       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    8.793678e-02               0        32
+129   lo-t5-9     edaic30_encproj   proj       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.148325e-01               0         1
+148   lo-t5-9     edaic30_encproj    enc        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.110223e-16              32        32
+149   lo-t5-9     edaic30_encproj   proj        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    1.110223e-16               1         1
+150   lo-t5-9     edaic30_encproj    enc  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    0.000000e+00              32        32
+151   lo-t5-9     edaic30_encproj   proj  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    0.000000e+00               1         1
+152   lo-t5-9   edaicfull_encproj    enc       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    5.060171e-02               0        32
+153   lo-t5-9   edaicfull_encproj   proj       macfile   AMD EPYC 9654 96-Core Processor                                   SkylakeX    9.569378e-03               0         1
+156   lo-t5-9   edaicfull_encproj    enc        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    2.972307e-03               2        32
+157   lo-t5-9   edaicfull_encproj   proj        vrefit   AMD EPYC 9654 96-Core Processor                                   SkylakeX    7.249529e-04               0         1
+158   lo-t5-9   edaicfull_encproj    enc  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    2.972307e-03               2        32
+159   lo-t5-9   edaicfull_encproj   proj  exact_script   AMD EPYC 9654 96-Core Processor                                   SkylakeX    7.249529e-04               0         1
+160       mac     edaic30_encproj    enc   mac_macfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    8.771930e-02               0        32
+161       mac     edaic30_encproj   proj   mac_macfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    1.143976e-01               0         1
+162       mac     edaic30_encproj    enc   mac_podfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    8.699435e-04               4        32
+163       mac     edaic30_encproj   proj   mac_podfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    1.232420e-03               0         1
+164       mac        pitt_encproj    enc   mac_macfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    5.340953e-02               0        32
+165       mac        pitt_encproj   proj   mac_macfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    1.929485e-02               0         1
+166       mac        pitt_encproj    enc   mac_podfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    5.617978e-04              11        32
+167       mac        pitt_encproj   proj   mac_podfile                      Apple M4 Max  Accelerate (numpy and scipy build config)    1.356064e-04               0         1
+106 values written; mac vs P17 verifier refit: {'pitt': 1.1102230246251565e-16, 'edaic_first30': 1.1102230246251565e-16}
