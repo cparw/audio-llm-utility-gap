@@ -1,0 +1,6 @@
+id	what	value	lo	hi	n	n_spk	file
+M10	MDVR-KCL Qwen2.5-Omni transcript-only answer AUC	0.7634	0.5936	0.9118	37	37	<local data dir>/Desktop/release/overnight2/text_new/o25_kcl_text.csv
+M10	MDVR-KCL Qwen2.5-Omni audio zero-shot answer AUC	0.7143	0.5210	0.8810	37	37	<local data dir>/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv
+M10	MDVR-KCL Qwen2.5-Omni encoder probe AUC (single saved OOF repeat)	0.7768	0.5994	0.9265	37	37	<local data dir>/Desktop/release/omni_final/omni_kcl_enc_nested_oof.csv
+M10	MDVR-KCL paired transcript minus audio answer AUC	0.0491	-0.1827	0.2818	37	37	scores/part16/M/M10_kcl_transcript.csv
+M10	MDVR-KCL paired transcript minus encoder probe AUC	-0.0134	-0.2383	0.2381	37	37	scores/part16/M/M10_kcl_transcript.csv

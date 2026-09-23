@@ -1,0 +1,39 @@
+id	what	value	lo	hi	n	n_spk	file
+M11	A_asr_reproduction_wer_vs_paper_transcript	0.0000			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_mean_PD	0.3049	0.1301	0.4944	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_mean_control	0.4779	0.0917	1.1479	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_diff_PD_minus_control	-0.1730	-0.8969	0.3060	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_spearman_vs_pyes_text	0.2723	-0.0814	0.5558	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_spearman_vs_pyes_audio	-0.0916	-0.3876	0.2143	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_auc_alone	0.6220			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_mean_token_logprob_mean_PD	-0.1103	-0.1502	-0.0739	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_mean_token_logprob_mean_control	-0.1356	-0.2345	-0.0759	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_mean_token_logprob_diff_PD_minus_control	0.0253	-0.0532	0.1288	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_mean_token_logprob_spearman_vs_pyes_text	-0.4009	-0.6720	-0.0835	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_mean_token_logprob_spearman_vs_pyes_audio	-0.3101	-0.5693	0.0113	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_mean_token_logprob_auc_alone	0.4792			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_compression_ratio_mean_PD	1.5938	1.4484	1.7269	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_compression_ratio_mean_control	1.4898	1.3076	1.6417	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_compression_ratio_diff_PD_minus_control	0.1040	-0.1036	0.3400	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_compression_ratio_spearman_vs_pyes_text	-0.1390	-0.4219	0.1794	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_compression_ratio_spearman_vs_pyes_audio	-0.1305	-0.4261	0.1964	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	C_compression_ratio_auc_alone	0.5625			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	D_n_words_30s_mean_PD	59.1875	46.1875	71.9375	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	D_n_words_30s_mean_control	55.8095	43.0464	67.6202	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	D_n_words_30s_diff_PD_minus_control	3.3780	-13.8212	22.5698	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	D_n_words_30s_spearman_vs_pyes_text	-0.1588	-0.4443	0.1670	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	D_n_words_30s_spearman_vs_pyes_audio	-0.0508	-0.3683	0.2864	37	37	scores/part16/M/M11_kcl_wer.csv
+M11	D_n_words_30s_auc_alone	0.5268			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	E_auc_from_passage_identity_alone	0.6682			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	auc_text_condition_recomputed	0.7634			37	37	<local data dir>/Desktop/release/podE_final/out/o25_kcl_text.csv
+M11	auc_audio_condition_recomputed	0.7143			37	37	<local data dir>/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv
+M11	F_wer_vs_local_copy_mean_PD	0.3123	0.1974	0.4388	37	37	<local data dir>/paper1_local_runs/kcl_read30b_text.csv
+M11	F_wer_vs_local_copy_mean_control	0.3987	0.2558	0.5577	37	37	<local data dir>/paper1_local_runs/kcl_read30b_text.csv
+M11	B_xsys_disagree_MEDIAN_PD	0.1027	0.0323	0.4799	16	16	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_MEDIAN_control	0.0333	0.0000	0.2088	21	21	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_MEDIAN_diff_PD_minus_control	0.0694			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_ge20w_MEAN_PD	0.2100	0.0645	0.3906	14	14	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_ge20w_MEAN_control	0.1506	0.0481	0.2765	17	17	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_ge20w_MEAN_diff_PD_minus_control	0.0594			37	37	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_POOLED_PD	0.2650	0.0729	0.4944	16	16	scores/part16/M/M11_kcl_wer.csv
+M11	B_xsys_disagree_POOLED_control	0.1800	0.0595	0.3764	21	21	scores/part16/M/M11_kcl_wer.csv
