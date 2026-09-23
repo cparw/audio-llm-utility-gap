@@ -1,0 +1,16 @@
+{
+ "fit_sklearn": "1.9.1",
+ "folds_from": "1.7.2 /workspace/sk172/sklearn/__init__.py",
+ "all": {
+  "auc_probe": 0.7973459899263852,
+  "same_as_mac_folds": false
+ },
+ "conflict": {
+  "auc_probe": 0.6213421342134213,
+  "same_as_mac_folds": false
+ },
+ "agreement": {
+  "auc_probe": 0.9259259259259259,
+  "same_as_mac_folds": false
+ }
+}

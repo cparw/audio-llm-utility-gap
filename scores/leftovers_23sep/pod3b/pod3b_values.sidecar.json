@@ -1,0 +1,254 @@
+{
+ "task": "leftovers_23sep pod3b: POD3 item 3b. Twin the Qwen3-Omni readout-direction cosine 0.0051 with the real lm_head rows, rerun the probe refit, log both, explain 0.7864 vs 0.8307.",
+ "date_utc": "2026-09-23T22:34:29Z",
+ "values_file": "pod3b_values.tsv (121 rows; 0 disagree with the verifier at 4 dp; every row that has a published or Mac value matches it at 4 dp)",
+ "headline": {
+  "cosine_all": "0.0051 (0.005109), verifier 0.005109; Mac check from the 10 lm_head rows 0.005109. Conflict -0.0067, agreement 0.0086. Random floor 0.0177 [0.0008, 0.0498].",
+  "refit": "Linux sklearn 1.9.1 refit 0.8307 [0.7833, 0.8741], equal to POD3's saved OOF to 6e-8 per clip. With the Mac's folds the same Linux fit gives 0.7864 [0.7335, 0.8359].",
+  "gap_cause": "GroupKFold fold assignment. scikit-learn 1.9.0 made GroupKFold sort group sizes with a stable sort (PR 28464, v1.9 changelog; 1.6.1, 1.7.2 and 1.8.0 sources use the default sort, 1.9.0 and 1.9.1 use kind='stable'). The Mac has 1.7.2, the pods 1.9.1. 228 speakers share 8 distinct clip counts (112 have 1 clip), so the tie order decides the split: all 228 speakers get different fold-mates. Linux fit on Mac folds = 0.7864 and Mac fit on Linux folds = 0.8307, so the solver and platform add nothing at 4 dp.",
+  "what_0_8307_is": "one draw. Over 200 partitions of the same greedy rule that differ only in tie order: mean 0.8033, sd 0.0122, 2.5 to 97.5 percent 0.7786 to 0.8244, range 0.7713 to 0.8414. 2 of 200 reach 0.8307; 17 of 200 are at or below 0.7864. Cosine stays in [0.0023, 0.0090], never outside the random floor.",
+  "paper_line_149": "'removing the readout direction leaves their probes at 0.81 and 0.83': on the POD3 split Qwen3-Omni gives 0.8305 (train z) / 0.8276 (held-out z). Averaged over the 200 splits it is 0.8061 / 0.7998, and the probe itself averages 0.8033, so removing d still changes nothing (mean change -0.0029 / +0.0034). The cosine clause (0.005, at the random floor) holds on every split."
+ },
+ "definitions": {
+  "states": "q3o_pitt_states.npz key ans, [:, -1, :] (final thinker stage at the first answer position), float32 cast to float64; 468 clips, 228 speakers, arms from the clip name prefix (equals the manifest 'set' column on 468/468)",
+  "direction_d": "softmax(X W^T) over the full 152064 vocabulary; wy = mean over clips of the 5 Yes-token probabilities, wn the same for the 5 No tokens, each renormalised to sum 1; d = W_yes^T wy - W_no^T wn, unit norm. Yes ids 7414 9454 9693 9834 14004; No ids 902 2152 2308 2753 8996",
+  "lm_head_as_pod3_used": "rescore_probe.py line 22 saved net.lm_head.weight.float() as float16; reproduced by W.astype(np.float16). 49826 rows / 62019 entries change under that rounding; the cosine changes by under 1e-9.",
+  "probe": "GroupKFold(5) by speaker; per fold StandardScaler on the training fold, LogisticRegression(max_iter=2000, class_weight='balanced'); OOF probability pooled",
+  "cosine": "w = mean over folds of coef/scale, unit norm; cosine = w . d. Random floor: 2000 unit Gaussian directions from default_rng(0), mean |w . r| and 2.5/97.5 percentiles",
+  "auc_without_d": "per fold w_perp = w - (w.d/d.d) d on standardised features; trainz standardises held-out scores with the training fold mean/std (as shipped); foldz standardises within the held-out fold (canonical, Q3O_direction_FIXED.json)",
+  "auc": "rank formula with averaged ties (primary) and scipy mannwhitneyu U/(n1 n0) (verifier)",
+  "bootstrap": "2000 draws, fresh numpy default_rng(0) per cell, idx = rng.choice(N, size=N, replace=True) over the sorted unique speaker ids, 2.5/97.5 percentiles; same idx for every quantity (paired). Primary intervals recomputed on the Mac from the pods' per-clip columns by scripts/build_pod3b_values.py; verifier intervals computed on lo-pod3b-2.",
+  "partitions": "sklearn's greedy rule (largest speaker first into the lightest fold) with ties broken by default_rng(seed).permutation, seeds 0..199"
+ },
+ "inputs": {
+  "states": {
+   "path": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_pitt_states.npz",
+   "md5": "6e741712b3635ce4c364d03e758638ca",
+   "note": "same md5 as <local data dir>/paper1_local_runs/part16_POD3_states/q3o_pitt_states.npz (the partF input)"
+  },
+  "states_slice_for_pods_4_6_7": {
+   "path": "q3o_pitt_ansfinal.npz (ans[:,-1,:] float32, labels, speakers, names)",
+   "sha256_of_X_bytes": "eab5dd4b7499348bf0df647bafd9b63928fd496b99477cc949fa42cd96aa803f"
+  },
+  "pod3_per_clip_columns": {
+   "path": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_perp_cols.npz",
+   "md5": "83eb2852fd97a69ce7b7d131a30de119"
+  },
+  "manifest": {
+   "path": "<local data dir>/release_from_mac/session_scratch/p16/mf_pitt468_pod.csv (copied to mac/mf_pitt468.csv)",
+   "md5": "49bed3e3336c1725c2d9af879cb739b0"
+  },
+  "direction_by_arm.py": {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD3/direction_by_arm.py",
+   "md5": "c46cf7dba5959dcee2cf29808bf3243e",
+   "note": "run unmodified; identical to session_scratch/pod3/direction_by_arm.py. direction_q3o.py itself is not on disk; its published row equals this script's 'all' row on all four numbers."
+  },
+  "lm_head": {
+   "repo": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+   "revision": "26291f793822fb6be9555850f06dfe95f2d7e695 (lastModified 2025-09-22, before the POD3 run)",
+   "tensor": "thinker.lm_head.weight",
+   "shard": "model-00013-of-00015.safetensors",
+   "shape": [
+    152064,
+    2048
+   ],
+   "dtype": "BF16",
+   "data_offsets": [
+    1531734528,
+    2154588672
+   ],
+   "sha256_bf16_bytes": "ef1c824486f6f733cb2479d50b43ca4b4dba940f310b377c89a038be5955210b",
+   "routes": "lo-pod3b-1/3/4/6/7: HTTP range read of only that tensor (623 MB) + manual bf16 parse; lo-pod3b-2: full 5.0 GB shard via huggingface_hub + safetensors/torch. Bitwise equal.",
+   "identity_checks": "X.d equals POD3's saved proj_d to 1.4e-6 (relative 3e-7) on all 468 clips; float64 p_yes vs POD3's bf16 GPU p_yes: median |diff| 0.0061, max 0.0295, Pearson 0.9992",
+   "kept": "the 10 Yes/No rows, d, w, and the per-clip log-sum-exp are in pull/lo-pod3b-1/out/pod3b_primary_{fp16,bf16exact}_vectors.npz; the full matrix stayed on the pods (1.2 GB) and was not copied"
+  }
+ },
+ "environment_pods": {
+  "python": "3.12.3",
+  "scikit-learn": "1.9.1",
+  "numpy": "2.1.2",
+  "scipy": "1.18.1",
+  "torch": "2.8.0+cu128 (verifier only)",
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "cpu": "cpu3c, 32 vCPU, x86_64"
+ },
+ "environment_mac": {
+  "scikit-learn": "1.7.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "machine": "arm64",
+  "use": "fold ids (mac/mac_folds.npz), two diagnostics (mac/mac_crosscheck.json, mac/mac_cosine_from_rows.json), bootstrap intervals and the tsv build. No Mac refit is used as a headline value."
+ },
+ "verifier": {
+  "independence": "separate code (scripts/pod3b_verify.py, pod3b_verify_spread.py, pod3b_verify_spread_wo.py): own lm_head route, own softmax (logsumexp), own AUC (mannwhitneyu), own fold builder asserted equal to sklearn 1.9.1 GroupKFold on all 3 arms, own bootstrap per the rule. Shared by definition: StandardScaler + LogisticRegression.",
+  "run1_note": "verifier run 1 (out/pod3b_verify_run1_legacyfolds.json) built its folds with the default-kind argsort (the 1.7.2 rule) and so did not match sklearn 1.9.1 (AUC 0.7973); that is how the stable-sort change was found. Run 2 uses kind='stable' and matches. Run 1's 200-partition spread does not use that fold builder and agrees with lo-pod3b-3."
+ },
+ "pods": [
+  {
+   "name": "lo-pod3b-1",
+   "id": "lset6zsll05a0j",
+   "role": "primary: unmodified direction_by_arm.py (fp16 and bf16-exact lm_head) + pod3b_primary.py",
+   "created_utc": "22:01:01",
+   "deleted_utc": "22:22:21 watchdog",
+   "minutes": 21.32
+  },
+  {
+   "name": "lo-pod3b-2",
+   "id": "glo3tcdga9q6ts",
+   "role": "independent verifier pod3b_verify.py (run 1 old fold rule, run 2 sklearn 1.9.1 rule) + real sklearn 1.7.2 folds on Linux",
+   "created_utc": "22:01:03",
+   "deleted_utc": "22:25:40 manual",
+   "minutes": 24.61
+  },
+  {
+   "name": "lo-pod3b-3",
+   "id": "fe509h13o5my6z",
+   "role": "gap test pod3b_gap.py: Linux folds vs Mac folds, 200 tie-order partitions",
+   "created_utc": "22:01:05",
+   "deleted_utc": "22:19:46 watchdog",
+   "minutes": 18.69
+  },
+  {
+   "name": "lo-pod3b-4",
+   "id": "mqer73p876hd7s",
+   "role": "verifier twin of the 200-partition spread, per-partition output",
+   "created_utc": "22:24:20",
+   "deleted_utc": "22:26:12 watchdog",
+   "minutes": 1.86
+  },
+  {
+   "name": "lo-pod3b-5",
+   "id": "5235hj8yq80x16",
+   "role": "never got a public IP; deleted unused",
+   "created_utc": "22:28:46",
+   "deleted_utc": "22:31:20 manual",
+   "minutes": 2.57
+  },
+  {
+   "name": "lo-pod3b-6",
+   "id": "u41vhmj6bmnhs8",
+   "role": "verifier twin: probe and probe-without-d over the 200 partitions",
+   "created_utc": "22:28:47",
+   "deleted_utc": "22:32:45 watchdog",
+   "minutes": 3.97
+  },
+  {
+   "name": "lo-pod3b-7",
+   "id": "l9kongt67mpxp4",
+   "role": "primary: probe and probe-without-d over the 200 partitions",
+   "created_utc": "22:31:21",
+   "deleted_utc": "22:33:24 manual",
+   "minutes": 2.05
+  }
+ ],
+ "cost_estimate_usd": 1.2,
+ "cost_note": "7 CPU pods at $0.96/h, 75.1 pod-minutes, from creation to deletion times; not from the billing API",
+ "incidents": [
+  "lo-pod3b-2 manual pull: the tar stream carried a 12 byte stdout prefix; stripped, 19/19 files extracted, result sha256 match the pod's SHA256SUMS.txt (manual_actions.log)",
+  "lo-pod3b-5 never got a public IP and was deleted unused after 2.6 min"
+ ],
+ "watchdog": "watchdog_pod3b.sh (part24/watchdog24.sh with pods.txt, pull/ and GPU=0 for CPU pods); tested once (watchdog_test_once.log), then run detached; log watchdog_pod3b.log. All 7 pods confirmed 404 on the REST API afterwards.",
+ "not_done": [
+  "the 6 POD3 3a best-stage rows are outside 3b and were not twinned here",
+  "DISCREPANCIES.md got the entry in DISCREPANCIES_entry_pod3b.txt appended (copy before the append: mac/DISCREPANCIES.md.before_pod3b); PART16_RESULTS.md, summary_all.csv and the paper tex were not edited"
+ ],
+ "files": {
+  "pods.txt": "367cd79bd207949e72ff5ce206a87ccb8cd1ae8440be0eeca6bff88a425bc075",
+  "manual_actions.log": "bd40db7d15c4aa51cdf04e2325012d9384268ef8cb83f4d5163cea8fa4cf4995",
+  "pod3b_values.tsv": "5d054749bb10c6d6ef997ba6eeb7eef7aa520f07ccf160ac89d54e963774a5aa",
+  "pull/lo-pod3b-3/fetch_lmh.py": "4058f0235a76282f154cc26d0f9218151e5b728519f4fddbb1ae05273ced2eba",
+  "pull/lo-pod3b-3/pod3b_gap.py": "e02d12b5db7959404026f674b4bc9a68ada7d33664168c373cc415ede8db02f0",
+  "pull/lo-pod3b-3/run_pod3.sh": "dc43f05b0fce47222034ca6e6662914b73b93d079514a87164f6905e162efbf7",
+  "pull/lo-pod3b-3/out/lmh_fetch.json": "af2aa12a0ffbb87fef87b305f65a74a1c9d98fa91c4e623ed2ce55a49980079f",
+  "pull/lo-pod3b-3/out/pod3b_gap_spread_all.csv": "2c8e662a984c574e3498b88c79b65fef626aaba19cedda06a668f91b86d25bdb",
+  "pull/lo-pod3b-3/out/pod3b_gap_spread_conflict.csv": "bf61b3287091d604ebcd45fcbe40520b7fbb2bd25c96c143e8956b8ca7fc1e3f",
+  "pull/lo-pod3b-3/out/pod3b_gap_spread_agreement.csv": "1edeb52cf2cfece3f1469df5c4d38c79371045537e2207a8054bd7cc41d09653",
+  "pull/lo-pod3b-3/out/pod3b_gap_perclip.csv": "28b0036ed990f1acb405f94ff506d4eea4699556d7d2ea11fe4bd369eba03ec2",
+  "pull/lo-pod3b-3/out/pod3b_gap.json": "120b656b32db86be6fa60aa1b4baae0d9862b6e7deadf71870c18b80c950c822",
+  "pull/lo-pod3b-3/out/SHA256SUMS.txt": "ff825cd149d4a69e1251770a68372319d2b5085454340e43832d6518c3bdb59a",
+  "pull/lo-pod3b-1/direction_by_arm.py": "19612db5e6964fe1855e8a5bfa37f925148ca36b9470cdd6d351d07d1488172c",
+  "pull/lo-pod3b-1/fetch_lmh.py": "4058f0235a76282f154cc26d0f9218151e5b728519f4fddbb1ae05273ced2eba",
+  "pull/lo-pod3b-1/pod3b_primary.py": "f8877bb4e4c1a98b23949bef11ebe81f16aa2e27de9cc13bf2fa0d4b6efbde65",
+  "pull/lo-pod3b-1/run_pod1.sh": "bf0e4259e2341278c1f959832a5dbc98279b5a3f7cfb451f5394804ffe8703ca",
+  "pull/lo-pod3b-1/out/lmh_fetch.json": "30506ab3d981d32b85c10990b71e4fa1b71e300a2e144b774dfc7a1c3e4b08d1",
+  "pull/lo-pod3b-1/out/orig_direction_by_arm_fp16.json": "3bcb1f4d96f04c1e79d262446df2d10d3174fc4e4c2febcfcbcec6a78da27ff3",
+  "pull/lo-pod3b-1/out/orig_direction_by_arm_fp16.csv": "f501e699fdcc79e0608ea10e9606a12ff2072c916a4305bf0391c9bc855a9eaa",
+  "pull/lo-pod3b-1/out/orig_direction_by_arm_bf16exact.json": "f267db2f04a720cb3c52e4a7d848164582e1f4f1fcae3e144e69415ed229b4a0",
+  "pull/lo-pod3b-1/out/orig_direction_by_arm_bf16exact.csv": "f501e699fdcc79e0608ea10e9606a12ff2072c916a4305bf0391c9bc855a9eaa",
+  "pull/lo-pod3b-1/out/pod3b_primary_fp16_perclip.csv": "5b9689f656e8c332414602ad16f4adfbf4334ce3af51ce60a8cd67b0f9cbd3fa",
+  "pull/lo-pod3b-1/out/pod3b_primary_fp16_vectors.npz": "07693c4420867e4294214d99318b59ec7bc4f5e1629f4ed2f7a0c6b0e4afa0ec",
+  "pull/lo-pod3b-1/out/pod3b_primary_fp16.json": "1ce913adae28bf20af5f5ec15ac689d41185767c637f3f824a9e01a27d219052",
+  "pull/lo-pod3b-1/out/pod3b_primary_bf16exact_perclip.csv": "70d8e21e5b53dca763ffbef380912697778e803f1da3ad9de9a281a8c7f4f6b8",
+  "pull/lo-pod3b-1/out/pod3b_primary_bf16exact_vectors.npz": "3eb97c20f66d0fcacfb05441e45e1e996988b4520e87c2ac478305897a58a8bb",
+  "pull/lo-pod3b-1/out/pod3b_primary_bf16exact.json": "0a2535fed1681fa55f46e76c4af199cfa1688fc0d1cc058b023b82f60be7c75d",
+  "pull/lo-pod3b-1/out/SHA256SUMS.txt": "83590a079888f5d888289b79909aa61b2b3df57aaa5ac7af0f420e3e3ea15ddf",
+  "pull/lo-pod3b-4/fetch_lmh.py": "4058f0235a76282f154cc26d0f9218151e5b728519f4fddbb1ae05273ced2eba",
+  "pull/lo-pod3b-4/pod3b_verify_spread.py": "886f006e85f30ad72090efb523fac158b11ad29ffcf462bdaa8ae3983058c821",
+  "pull/lo-pod3b-4/run_pod4.sh": "3a3f8107eb4bf1f9e409bbf0dd65262e4e61c47d30d45f394734cfa5bd1a3110",
+  "pull/lo-pod3b-4/out/lmh_fetch.json": "30506ab3d981d32b85c10990b71e4fa1b71e300a2e144b774dfc7a1c3e4b08d1",
+  "pull/lo-pod3b-4/out/verify_spread_all.csv": "2c8e662a984c574e3498b88c79b65fef626aaba19cedda06a668f91b86d25bdb",
+  "pull/lo-pod3b-4/out/verify_spread_conflict.csv": "9dbec8248a72744e19e87faa0aac521732943375ea59ed69a7725dee0ad86999",
+  "pull/lo-pod3b-4/out/verify_spread_agreement.csv": "1edeb52cf2cfece3f1469df5c4d38c79371045537e2207a8054bd7cc41d09653",
+  "pull/lo-pod3b-4/out/verify_spread.json": "20f1381108d208d6b1069d0f19a8a851aed3376ba70eb1075567677c4024d493",
+  "pull/lo-pod3b-4/out/SHA256SUMS.txt": "dd1166dbb9f20b8da7fda0117881979e73e2ec6dac51a11f13684353bf483d20",
+  "pull/lo-pod3b-2/fetch_lmh.py": "4058f0235a76282f154cc26d0f9218151e5b728519f4fddbb1ae05273ced2eba",
+  "pull/lo-pod3b-2/pod3b_verify.py": "50d33329956ced34e5622f9a6bcff8a5567f1fdfe739840bb7eeee6efad2de73",
+  "pull/lo-pod3b-2/pod3b_verify_run2.py": "50d33329956ced34e5622f9a6bcff8a5567f1fdfe739840bb7eeee6efad2de73",
+  "pull/lo-pod3b-2/run_pod2.sh": "4a654292638c3de9db96d3b3227be6955d218c1e2d231335c9a61c2e74dda35a",
+  "pull/lo-pod3b-2/run_pod2b.sh": "ea5d095ca541b67fc58468008b6463554eecc0499e756b1d8619a40818c62009",
+  "pull/lo-pod3b-2/sk172_folds.py": "69ceb7b5e33e30d3f7c1885b7ea61fd475b71aa01dfb7162f59142dec073d1b0",
+  "pull/lo-pod3b-2/out/lmh_fetch.json": "49c98ac86fc151df02e923e45f39ded70b171fa6a20a6b6af3717342a037110a",
+  "pull/lo-pod3b-2/out/SHA256SUMS.txt": "a92bddcbc3524d6de3e5af85dcf338e61b8055bbe0da0480e71f67e3ec83a88d",
+  "pull/lo-pod3b-2/out/pod3b_verify_run1_legacyfolds.json": "d3d9a028ecedabd564213df82911e4858a5db35078d14b8ee224625f1eb0f0b5",
+  "pull/lo-pod3b-2/out/sk172_linux_folds.json": "ae4d989477f427bfcc4a843f1dc332099b2eb9cb79dae535593c3f736bb3e426",
+  "pull/lo-pod3b-2/out/pod3b_verify.json": "800ff45faae41a030d6da7f3d01a2e6503c9148d3a99e1f2b9fa3f063921d920",
+  "pull/lo-pod3b-2/out/sk172_linux_refit.json": "14cca705baf29b4676365d7b9f0596ca7547bc133ccfac080384aabef50b6522",
+  "pull/lo-pod3b-6/fetch_lmh.py": "4058f0235a76282f154cc26d0f9218151e5b728519f4fddbb1ae05273ced2eba",
+  "pull/lo-pod3b-6/pod3b_verify_spread_wo.py": "90a9f30652c5f78d6b7641cb1ed02f2b9cb79582a5f1cd2c9e17ca2a9afd1003",
+  "pull/lo-pod3b-6/run_pod6.sh": "ac91b7fa8f9a8efc1dbc0a7f8cab1d30af265c1d43e1887912d1339c3cbb997d",
+  "pull/lo-pod3b-6/out/lmh_fetch.json": "8914f98a05790a54fc4b8ecccdce343128cc1b3c47eb18364f2387b24e08ab6c",
+  "pull/lo-pod3b-6/out/verify_spread_wo_all.csv": "832139a0f3a0309447f347566881f6a6f9a4343c886b6fb9a932e6a526eca207",
+  "pull/lo-pod3b-6/out/verify_spread_wo_conflict.csv": "05712a9d7c53a1e06cd5d351a7f6a08e0361fef99a00e552b27f22cd8d74b6a9",
+  "pull/lo-pod3b-6/out/verify_spread_wo_agreement.csv": "f372ac4577cc23a2ceb13b445ffb80f9f5ab63cb41af7d8ddaf3ccf4b62087a4",
+  "pull/lo-pod3b-6/out/verify_spread_wo.json": "791fa3a4d18bc10a935e4b91eb9302a85bdbef97efeddc38058b1d51a2abe332",
+  "pull/lo-pod3b-6/out/SHA256SUMS.txt": "d41d51bfdbbc27c4f298ba9729c08fc8fadf74b3f10f79d5f2a6f807f5ad7f91",
+  "pull/lo-pod3b-7/fetch_lmh.py": "4058f0235a76282f154cc26d0f9218151e5b728519f4fddbb1ae05273ced2eba",
+  "pull/lo-pod3b-7/pod3b_spread_wo.py": "18d2891cbb2249415d486920c76bc14dca4e48c2b916cfc3d120fb7120b8a5a3",
+  "pull/lo-pod3b-7/run_pod5.sh": "cbf003c401ab0f468bf24b59fcb2dd690bf4987c26ce5a027e63449f892a33fc",
+  "pull/lo-pod3b-7/out/lmh_fetch.json": "349010b3c095f6c4239ff5562e59b37626f6d16d882e6154205749cd58b798e2",
+  "pull/lo-pod3b-7/out/spread_wo_all.csv": "832139a0f3a0309447f347566881f6a6f9a4343c886b6fb9a932e6a526eca207",
+  "pull/lo-pod3b-7/out/spread_wo_conflict.csv": "05712a9d7c53a1e06cd5d351a7f6a08e0361fef99a00e552b27f22cd8d74b6a9",
+  "pull/lo-pod3b-7/out/spread_wo_agreement.csv": "f372ac4577cc23a2ceb13b445ffb80f9f5ab63cb41af7d8ddaf3ccf4b62087a4",
+  "pull/lo-pod3b-7/out/spread_wo.json": "5eb8fbeca2269b7c4ae6b90431d3ec6ecc9fb1751707512cd65274dfce0c3504",
+  "pull/lo-pod3b-7/out/SHA256SUMS.txt": "5974467f11d377fedc68347b989abff74bf6e24b46b9446e039a0ec4555d0e2b",
+  "scripts/pod3b_primary.py": "f8877bb4e4c1a98b23949bef11ebe81f16aa2e27de9cc13bf2fa0d4b6efbde65",
+  "scripts/pod3b_gap.py": "e02d12b5db7959404026f674b4bc9a68ada7d33664168c373cc415ede8db02f0",
+  "scripts/pod3b_verify.py": "50d33329956ced34e5622f9a6bcff8a5567f1fdfe739840bb7eeee6efad2de73",
+  "scripts/pod3b_verify_spread.py": "886f006e85f30ad72090efb523fac158b11ad29ffcf462bdaa8ae3983058c821",
+  "scripts/sk172_folds.py": "69ceb7b5e33e30d3f7c1885b7ea61fd475b71aa01dfb7162f59142dec073d1b0",
+  "scripts/fetch_lmh.py": "4058f0235a76282f154cc26d0f9218151e5b728519f4fddbb1ae05273ced2eba",
+  "scripts/run_pod1.sh": "bf0e4259e2341278c1f959832a5dbc98279b5a3f7cfb451f5394804ffe8703ca",
+  "scripts/run_pod2.sh": "4a654292638c3de9db96d3b3227be6955d218c1e2d231335c9a61c2e74dda35a",
+  "scripts/run_pod2b.sh": "ea5d095ca541b67fc58468008b6463554eecc0499e756b1d8619a40818c62009",
+  "scripts/run_pod3.sh": "dc43f05b0fce47222034ca6e6662914b73b93d079514a87164f6905e162efbf7",
+  "scripts/run_pod4.sh": "3a3f8107eb4bf1f9e409bbf0dd65262e4e61c47d30d45f394734cfa5bd1a3110",
+  "scripts/direction_by_arm.py": "19612db5e6964fe1855e8a5bfa37f925148ca36b9470cdd6d351d07d1488172c",
+  "scripts/mac_crosscheck.py": "e56bd92718298c10f030e14a6f0787b997bf9f03182bd48f2c3bcdca22c0eb19",
+  "scripts/mac_cosine_from_rows.py": "474b5a0e4335465cd47e7e59ecab986196197e9640d1cc4e480bf3757c5ed4f2",
+  "scripts/build_pod3b_values.py": "0882388f6b00f0b49e505375b58113739e538f8e1f36d77848a1054d41107057",
+  "mac/mac_crosscheck.json": "638108c64a3d214f88487ff5ff08a8cc4d956c0eccac8b81c4d07cd30d6e5603",
+  "mac/mac_cosine_from_rows.json": "108602fed1a1a23cbe4409358fafc0ed0bbd044c3d032960c3b1c2671ed84eb7",
+  "mac/mac_folds.npz": "345158048183207f5b1b0af0d0fb3283f3e317a1360d41ef5f789b2f60f8c2c1",
+  "mac/mac_argsort.json": "d53c42d497f271ed782abadaa7674fe4707103f0d31114cfea895275c1eb70ac",
+  "mac/mf_pitt468.csv": "8ebf4914d980b4bf5dfab522a51173f6919e6cf242abab5cb2e65fe55de4a372",
+  "mac/create_1.json": "d0141feb69d7ac84e2c745c712493dc846443a5e0fef1d34aeba8d59e85bdeec",
+  "mac/create_2.json": "cf7c33d01c9adfe6038976b11ea6dc997848bb622dcac4446bdafb92266e6005",
+  "mac/create_3.json": "a49cd03deb76394fafdf165389b019a3d6b4664ee2bc4ce82e1f7e65a616a99d",
+  "mac/create_4.json": "f646cd3c65a93da270388994c9dd4730c0982f3c29e3f092a416b701d938f8a2",
+  "mac/q3o_model_safetensors_index.json": "03ffe9a54efe9007ceb788c2b036f5c589094918c4582add4e92bc17e1cba838",
+  "mac/q3o_shard13_header.json": "57b61576735bca18c89f468c53a5b0ca346805d1aebdceb6d8ecc3dffe7ba207",
+  "DISCREPANCIES_entry_pod3b.txt": "7ac5de31d3904c22e5fd7a40b1506a872fb8c561fd31f79904de7e2cf7cf16e1",
+  "mac/DISCREPANCIES.md.before_pod3b": "4e1fbf35eaaf197207bcfa33a3149ae9fa85b011f35a79a574fa82830873ef4d"
+ },
+ "discrepancies_log": "<local data dir>/release/edaic_rerun/DISCREPANCIES.md, entry '[LEFTOVERS pod3b]' appended at the end"
+}
