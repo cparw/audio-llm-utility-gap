@@ -1,0 +1,30 @@
+paper_vs_omni: scores/part17/paper_vs_omni.csv
+tex: <local data dir>/paper1_final/AudioLLMHealthUtilityGap.tex
+added basis: sentences in AudioLLMHealthUtilityGap.tex not in pasted_tex_dryrun.tex
+
+group         MATCH  MISMATCH  UNMATCHED   (of UNMATCHED: method/design constants)
+red               7         1          1   (0)
+added_23sep      28        16         32   (7)
+other            78         3         10   (9)
+
+MISMATCH rows:
+  [red] line 244  paper (claim, no number)  file pcgita +0.3227 [0.2391, 0.404]; neurovoz  C_intervals.csv
+  [added_23sep] line 77  paper 0.43 to 0.62  file 0.5246 to 0.7634  o25_kcl_text.csv
+  [added_23sep] line 77  paper 0.68  file 0.823  o25_edaicfull_text.json
+  [added_23sep] line 77  paper 0.84 to 0.93  file 0.5246 to 0.7634  o25_kcl_text.csv
+  [added_23sep] line 149  paper 0.35  file 0.8941  omni_pcgita_nested_repeats.json
+  [added_23sep] line 149  paper 0.11  file 0.7846  q2a_pitt_nested_repeats.json
+  [added_23sep] line 149  paper 0.60  file 0.7619  q3o_pitt_zeroshot_scores.csv
+  [added_23sep] line 149  paper 0.60  file 0.9213  omni_neurovoz_nested_repeats.json
+  [added_23sep] line 149  paper 0.90  file 0.7953  pitt_enc_nested5_oof.npz
+  [added_23sep] line 149  paper 0.63  file 0.654  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 180  paper 0.96  file 0.1498  p14_o25_1a_joined.csv
+  [added_23sep] line 180  paper 0.22  file 0.7987  omni_pitt_text.csv
+  [added_23sep] line 180  paper 0.95  file 0.7987  omni_pitt_text.csv
+  [added_23sep] line 180  paper 0.46  file 0.5322  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 180  paper 0.39  file 0.5322  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 226  paper 5.0  file 0.8032  omni_pitt_nested_repeats.json
+  [added_23sep] line 226  paper 4.6  file 0.8032  omni_pitt_nested_repeats.json
+  [other] line 97  paper 0.92  file 0.7082  pitt_all_segments.csv
+  [other] line 172  paper 0.61  file 0.6169  af3_pitt.csv
+  [other] line 172  paper 0.59  file 0.5822  af3_pitt.csv

@@ -1,0 +1,42 @@
+rows 1657, status {'current': 1484, 'CONTESTED': 98, 'SUPERSEDED': 36, 'ALT': 39}, stale prefixes rewritten 97, files not found 25
+master/SUPERSEDED.csv present: 8 rows, columns ['file', 'superseded_by', 'reason', 'decided_on']
+SUPERSEDED.csv row 2 kimi_pitt_zeroshot_scores.csv: superseded values [0.6964, 0.7014, 0.7078], scoped=False, index rows marked 5
+SUPERSEDED.csv row 3 af2_pitt_audio.csv: superseded values [0.4895, 0.5273, 0.6691], scoped=False, index rows marked 9
+SUPERSEDED.csv row 4 omni_pitt_enc_nested_oof.csv: superseded values [0.7969], scoped=True, index rows marked 3
+SUPERSEDED.csv row 5 o25_full_nested_repeats.json: superseded values [0.593, 0.6853], scoped=True, index rows marked 4
+SUPERSEDED.csv row 6 readout_direction_q3o_by_arm.csv: superseded values [0.6145, 0.9349], scoped=False, index rows marked 2
+SUPERSEDED.csv row 7 q3o_pitt_nested_repeats.json: superseded values [0.8289], scoped=True, index rows marked 1
+SUPERSEDED.csv row 8 q3o_pcgita_nested_repeats.json: superseded values [0.8969], scoped=True, index rows marked 1
+SUPERSEDED.csv row 9 abl_pitt_both.json: superseded values [0.7872], scoped=False, index rows marked 1
+SUPERSEDED.csv marked 26 index rows
+DISCREPANCIES.md:284 ## [HIGH] M7 first pass used a SUPERSEDED Pitt probe file -> S1,S2
+DISCREPANCIES.md:356 ## [RETRACTED, SEE CORRECTION BELOW] POD4 / Part 16 4b, quoted Pitt encoder-probe figure 0.7706 not found in any file  -> retracted claim, carries no value (0.7706 is correct)
+DISCREPANCIES.md:889 ## [CORRECTION] POD4's claim that "0.7706 exists in no file" is WRONG, retracted -> retraction of the claim above; no value to mark
+DISCREPANCIES.md:897 ## [HIGH] POD4's 4b used the SUPERSEDED Pitt encoder baseline for arm A -> S3
+
+FILES NOT FOUND (path as resolved | as recorded | row):
+<local data dir>/release/folds/pitt_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/pitt_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:39
+<local data dir>/release/folds/pitt_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/pitt_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:40
+<local data dir>/release/folds/pitt_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/pitt_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:41
+<local data dir>/release/folds/adresso_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/adresso_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:42
+<local data dir>/release/folds/adresso_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/adresso_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:43
+<local data dir>/release/folds/adresso_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/adresso_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:44
+<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/adress2020_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:45
+<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/adress2020_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:46
+<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/adress2020_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:47
+<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | <local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | part17/rows/T2.tsv:48
+<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | <local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | part17/rows/T2.tsv:49
+<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | <local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | part17/rows/T2.tsv:50
+<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | <local data dir>/release/folds/pcgita_groupkfold5_pod_seed0..4.csv | part17/rows/T2.tsv:51
+<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:52
+<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:53
+<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:54
+<local data dir>/release/folds/kcl_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/kcl_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:55
+<local data dir>/release/folds/kcl_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/kcl_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:56
+<local data dir>/release/folds/kcl_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/kcl_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:57
+<local data dir>/release/folds/edaic_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/edaic_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:58
+<local data dir>/release/folds/edaic_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/edaic_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:59
+<local data dir>/release/folds/edaic_groupkfold5_pod_seed0..4_UNVERIFIED.csv | <local data dir>/release/folds/edaic_groupkfold5_pod_seed0..4_UNVERIFIED.csv | part17/rows/T2.tsv:60
+<local data dir>/release/folds/pitt_groupkfold5_mac_seed0..4.csv | <local data dir>/release/folds/pitt_groupkfold5_mac_seed0..4.csv | part17/rows/T2.tsv:61
+<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed0..4.csv | <local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed0..4.csv | part17/rows/T2.tsv:62
+<local data dir>/release/folds/edaic_full_groupkfold5_shuffle_rs0..4.csv | <local data dir>/release/folds/edaic_full_groupkfold5_shuffle_rs0..4.csv | part17/rows/T2.tsv:63
