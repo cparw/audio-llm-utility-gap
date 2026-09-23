@@ -1,0 +1,4 @@
+all {'probe_mean': 0.8032616234017823, 'wo_trainz_mean': 0.8061275668345602, 'wo_foldz_mean': 0.7998307826423867}
+conflict {'probe_mean': 0.5782695269526953, 'wo_trainz_mean': 0.5893278327832783, 'wo_foldz_mean': 0.5834136413641364}
+agreement {'probe_mean': 0.9261870947209293, 'wo_trainz_mean': 0.9292025699168556, 'wo_foldz_mean': 0.9181344233599873}
+DONE
