@@ -1,0 +1,4 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+revision 0a095220c30b7b31434169c3086508ef3ea5bf0a lm_head keys ['language_model.lm_head.weight']
+shard model-00005-of-00005.safetensors dtype BF16 shape [156032, 4096] bytes 1278214144
+saved (156032, 4096) float32 26.2 s
