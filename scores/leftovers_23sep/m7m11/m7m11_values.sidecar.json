@@ -1,0 +1,55 @@
+{
+ "table": "scores/leftovers_23sep/m7m11/m7m11_values.tsv",
+ "rows": 60,
+ "agree_4dp": 60,
+ "m7_summary": {
+  "point": "exact: Table 1 mean of five per-repeat AUCs (omni_final/omni_<ds>_nested_repeats.json) minus zero-shot AUC recomputed from the per-clip file",
+  "interval": "APPROXIMATE: single-split paired percentile interval shifted by (mean of five minus single-split AUC); the exact per-draw mean-of-five interval needs per-repeat per-clip OOF, which was never saved, and the Table 1 states are gone",
+  "why_not_exact": "per-repeat per-clip OOF for adresso, adress2020, pcgita, neurovoz, kcl never saved (only json per-repeat AUCs); Table 1 Omni states only on pod gv9jvm57b21mcz (omni-final, 18 Sep), which no longer exists in GET /v1/pods; no omni_<ds>_states.npz for these five on the Mac release tree, G-Drive paper work, or in any session transcript",
+  "validation_max_endpoint_error": {
+   "pitt_part10": 0.008390561959943699,
+   "edaic300_T7b": 0.01670788285573835,
+   "neurovoz_pod6_reextract": 0.0018839915496346726,
+   "adress2020_pod4b_reextract": 0.005275504987682533
+  },
+  "validation_note": "shifted single split vs exact mean of five on the same states and the Table 1 outer splits: NeuroVoz 0.0019, ADReSS-2020 0.0053; shifted single repeat vs exact: Pitt 0.0084, E-DAIC 300 s 0.0167",
+  "pcgita": "0.3306 (tex prints 0.35; the 0.3454 in part16 M7 used the single split 0.9089)"
+ },
+ "m11_summary": {
+  "cause": "M11_kcl_wer.py boot_mean() resamples only the speakers of the summarised group (N=16 PD or 21 control, fresh rng(0) per cell); M11_verify.py and verify/M11_verify.py (mode all37) resample all 37 speakers from one rng(0) stream and keep the group's rows, so the group size varies per draw. Different estimators, not an arithmetic error. M11_robust.py used the all-37 scheme, so rows/M11.tsv mixed both.",
+  "which_was_wrong": "The verifier (and M11_robust.py) for one-group cells: they did not resample the speakers the original script's cell used, which the brief's rule requires. The main script's group-mean intervals stand. The six M11_robust.py group intervals (MEDIAN, >=20 words, POOLED) are recomputed here under the same rule, and the group rows now carry n = 16 or 21 (rows/M11.tsv printed n = 37 for the group means).",
+  "rule": "fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over the unique sorted speaker ids of the cell; one-group cell: that group's speakers (>=20-word rows: that group's speakers inside the subset); difference: the cell's speakers (37, or the 31 inside the >=20-word subset), same idx; 2000 draws; percentiles 2.5/97.5; a draw is dropped only if a group is empty (count in usable_draws)",
+  "new_rows": "paired PD minus control intervals for MEDIAN, >=20 words and POOLED did not exist before (rows/M11.tsv had the point only); added under the paired rule"
+ },
+ "m11_all37_scheme_agree": "16/16",
+ "verifier": {
+  "script": "scripts/leftovers_23sep/m7m11/m7m11_verify.py",
+  "pod": "lo-m7m11-3 (weqnlwasxdgpgq), RunPod CPU, 32 vCPU; first run lo-m7m11-2 (z0ikr6rmvcs5tk) agreed 60/60 before the >=20-word difference rule fix",
+  "env": {
+   "sklearn": "1.9.1",
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "python": "3.12.3",
+   "machine": "x86_64",
+   "rows": 60
+  },
+  "method": "independent code: sklearn roc_auc_score, pandas groupby indices, Python sorted speaker list, np.quantile"
+ },
+ "main": {
+  "m7": "scripts/leftovers_23sep/m7m11/m7_meanof5_gaps.py",
+  "m11": "scripts/leftovers_23sep/m7m11/m11_group_intervals.py",
+  "env": "Mac, /usr/local/bin/python3, numpy 2.2.6, scipy 1.15.3, pandas 2.3.3"
+ },
+ "refit": {
+  "script": "scripts/leftovers_23sep/m7m11/pod1_adress2020_rep5_refit.py",
+  "pod": "lo-m7m11-1 (was0szcwexnom3), RunPod CPU, 32 vCPU, sklearn 1.9.1 numpy 2.1.2 scipy 1.18.1 Python 3.12.3",
+  "output": "scores/leftovers_23sep/m7m11/lo-m7m11-1/adress2020_pod4b_enc_rep5_oof.csv"
+ },
+ "sha256": {
+  "scores/leftovers_23sep/m7m11/m7_meanof5_gaps.csv": "e281c88649f54d746bba527490cb5311dcd69ce09fbddba425ac573f798b9846",
+  "scores/leftovers_23sep/m7m11/m11_group_intervals.csv": "abcf6ee07722fe4177c9f43c678cbe0f150dc930c8077361b8e377708fa1e1f1",
+  "scores/leftovers_23sep/m7m11/lo-m7m11-3/m7m11_verify.csv": "fd272805ef01c7d7931a0a967eb5f515390b7bd1bef7421ebe2dc996ed308194",
+  "scores/leftovers_23sep/m7m11/m7m11_values.tsv": "3c6d42559abfb5ffd391d9ad93cd226b368095667b2e1140e17ad014a3019dcf"
+ }
+}
