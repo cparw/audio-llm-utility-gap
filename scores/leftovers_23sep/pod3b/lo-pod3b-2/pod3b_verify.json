@@ -1,0 +1,248 @@
+{
+ "lm_head_shape": [
+  152064,
+  2048
+ ],
+ "lm_head_dtype": "torch.bfloat16",
+ "lm_head_sha256_bf16": "ef1c824486f6f733cb2479d50b43ca4b4dba940f310b377c89a038be5955210b",
+ "range_copy_bitwise_equal": true,
+ "fp16_dump_rows_changed": 49826,
+ "fp16_dump_entries_changed": 62019,
+ "env": {
+  "python": "3.12.3",
+  "sklearn": "1.9.1",
+  "numpy": "2.1.2",
+  "scipy": "1.18.1",
+  "torch": "2.8.0+cu128",
+  "machine": "x86_64"
+ },
+ "fp16_pyes_maxabs_vs_saved": 0.02953708586872733,
+ "fp16_projd_maxabs_vs_pod": 1.3954167226160052e-06,
+ "fp16_all_own_folds_equal_sklearn": true,
+ "fp16_all": {
+  "n": 468,
+  "n_speakers": 228,
+  "cosine": 0.00510875854282219,
+  "rand_mean": 0.017665675028178923,
+  "rand_lo": 0.0008139472429772222,
+  "rand_hi": 0.04979518981634765,
+  "auc_probe": 0.8306857807051531,
+  "auc_probe_ci": [
+   0.7833338558766657,
+   0.8741168044847757
+  ],
+  "auc_d": 0.7656334753971329,
+  "auc_d_ci": [
+   0.7087610461329731,
+   0.8179431514848181
+  ],
+  "auc_wo_trainz": 0.8305114296784192,
+  "auc_wo_trainz_ci": [
+   0.7825540249558905,
+   0.8736541777085769
+  ],
+  "auc_wo_foldz": 0.8275668345602479,
+  "auc_wo_foldz_ci": [
+   0.7795004034003127,
+   0.8695964432185043
+  ],
+  "draws": 2000,
+  "oof_maxabs_vs_pod": 6.712665621133596e-07
+ },
+ "legacyrule_linux_all": {
+  "auc_probe": 0.7973459899263852,
+  "cosine": 0.005737660568262121,
+  "note": "sklearn 1.7.2 fold rule (default-kind argsort) run on Linux numpy 2.1.2"
+ },
+ "macfolds_all": {
+  "auc_probe": 0.7863618752421542,
+  "auc_probe_ci": [
+   0.733526036269353,
+   0.8358947088994076
+  ],
+  "cosine": 0.0054764337484914,
+  "speakers_with_different_foldmates": 228
+ },
+ "fp16_conflict_own_folds_equal_sklearn": true,
+ "fp16_conflict": {
+  "n": 146,
+  "n_speakers": 100,
+  "cosine": -0.006677145035943749,
+  "rand_mean": 0.017716212117483053,
+  "rand_lo": 0.0008061232212889838,
+  "rand_hi": 0.05159522169445716,
+  "auc_probe": 0.6145214521452145,
+  "auc_probe_ci": [
+   0.502093094556775,
+   0.7246087021531099
+  ],
+  "auc_d": 0.6028602860286029,
+  "auc_d_ci": [
+   0.496539929221551,
+   0.7024788097057003
+  ],
+  "auc_wo_trainz": 0.6195819581958196,
+  "auc_wo_trainz_ci": [
+   0.5094197733918129,
+   0.7283496346574682
+  ],
+  "auc_wo_foldz": 0.6158415841584158,
+  "auc_wo_foldz_ci": [
+   0.5065607492997198,
+   0.7248580597643097
+  ],
+  "draws": 2000
+ },
+ "legacyrule_linux_conflict": {
+  "auc_probe": 0.6213421342134213,
+  "cosine": -0.007488603303427929,
+  "note": "sklearn 1.7.2 fold rule (default-kind argsort) run on Linux numpy 2.1.2"
+ },
+ "macfolds_conflict": {
+  "auc_probe": 0.5520352035203521,
+  "auc_probe_ci": [
+   0.43845101373882883,
+   0.663731780043789
+  ],
+  "cosine": -0.00735563182530053,
+  "speakers_with_different_foldmates": 100
+ },
+ "fp16_agreement_own_folds_equal_sklearn": true,
+ "fp16_agreement": {
+  "n": 322,
+  "n_speakers": 175,
+  "cosine": 0.00863813143049334,
+  "rand_mean": 0.01722878970899455,
+  "rand_lo": 0.0007418365184679315,
+  "rand_hi": 0.048002473738149455,
+  "auc_probe": 0.9348768747264988,
+  "auc_probe_ci": [
+   0.9034381242016835,
+   0.9613974333225567
+  ],
+  "auc_d": 0.8264311572582249,
+  "auc_d_ci": [
+   0.7741252126672338,
+   0.8730990470397405
+  ],
+  "auc_wo_trainz": 0.9340812348331146,
+  "auc_wo_trainz_ci": [
+   0.902061619846094,
+   0.9603697839042434
+  ],
+  "auc_wo_foldz": 0.9326490830250229,
+  "auc_wo_foldz_ci": [
+   0.9021030037149689,
+   0.9601275332828167
+  ],
+  "draws": 2000
+ },
+ "legacyrule_linux_agreement": {
+  "auc_probe": 0.9259259259259259,
+  "cosine": 0.009377735430627202,
+  "note": "sklearn 1.7.2 fold rule (default-kind argsort) run on Linux numpy 2.1.2"
+ },
+ "macfolds_agreement": {
+  "auc_probe": 0.9313760591956081,
+  "auc_probe_ci": [
+   0.9015318525361892,
+   0.9580447784703943
+  ],
+  "cosine": 0.007859049262192424,
+  "speakers_with_different_foldmates": 175
+ },
+ "bf16exact_pyes_maxabs_vs_saved": 0.029537088749734042,
+ "bf16exact_projd_maxabs_vs_pod": 1.3817280297701018e-06,
+ "bf16exact_all_own_folds_equal_sklearn": true,
+ "bf16exact_all": {
+  "n": 468,
+  "n_speakers": 228,
+  "cosine": 0.0051087583590580885,
+  "rand_mean": 0.017665675028178923,
+  "rand_lo": 0.0008139472429772222,
+  "rand_hi": 0.04979518981634765,
+  "auc_probe": 0.8306857807051531,
+  "auc_probe_ci": [
+   0.7833338558766657,
+   0.8741168044847757
+  ],
+  "auc_d": 0.7656334753971329,
+  "auc_d_ci": [
+   0.7087610461329731,
+   0.8179431514848181
+  ],
+  "auc_wo_trainz": 0.8305114296784192,
+  "auc_wo_trainz_ci": [
+   0.7825540249558905,
+   0.8736541777085769
+  ],
+  "auc_wo_foldz": 0.8275668345602479,
+  "auc_wo_foldz_ci": [
+   0.7795004034003127,
+   0.8695964432185043
+  ],
+  "draws": 2000,
+  "oof_maxabs_vs_pod": 6.712665621133596e-07
+ },
+ "bf16exact_conflict_own_folds_equal_sklearn": true,
+ "bf16exact_conflict": {
+  "n": 146,
+  "n_speakers": 100,
+  "cosine": -0.006677144409813247,
+  "rand_mean": 0.017716212117483053,
+  "rand_lo": 0.0008061232212889838,
+  "rand_hi": 0.05159522169445716,
+  "auc_probe": 0.6145214521452145,
+  "auc_probe_ci": [
+   0.502093094556775,
+   0.7246087021531099
+  ],
+  "auc_d": 0.6028602860286029,
+  "auc_d_ci": [
+   0.496539929221551,
+   0.7024788097057003
+  ],
+  "auc_wo_trainz": 0.6195819581958196,
+  "auc_wo_trainz_ci": [
+   0.5094197733918129,
+   0.7283496346574682
+  ],
+  "auc_wo_foldz": 0.6158415841584158,
+  "auc_wo_foldz_ci": [
+   0.5065607492997198,
+   0.7248580597643097
+  ],
+  "draws": 2000
+ },
+ "bf16exact_agreement_own_folds_equal_sklearn": true,
+ "bf16exact_agreement": {
+  "n": 322,
+  "n_speakers": 175,
+  "cosine": 0.008638132128697382,
+  "rand_mean": 0.01722878970899455,
+  "rand_lo": 0.0007418365184679315,
+  "rand_hi": 0.048002473738149455,
+  "auc_probe": 0.9348768747264988,
+  "auc_probe_ci": [
+   0.9034381242016835,
+   0.9613974333225567
+  ],
+  "auc_d": 0.8264311572582249,
+  "auc_d_ci": [
+   0.7741252126672338,
+   0.8730990470397405
+  ],
+  "auc_wo_trainz": 0.9340812348331146,
+  "auc_wo_trainz_ci": [
+   0.902061619846094,
+   0.9603697839042434
+  ],
+  "auc_wo_foldz": 0.9326490830250229,
+  "auc_wo_foldz_ci": [
+   0.9021030037149689,
+   0.9601275332828167
+  ],
+  "draws": 2000
+ },
+ "date": "2026-09-23T22:23:16"
+}
