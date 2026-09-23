@@ -1,0 +1,8 @@
+{
+ "baseline_wording1": {
+  "conflict": 0.221776,
+  "agreement": 0.948166
+ },
+ "max_abs_change": 0.122127,
+ "where": "wording 2 conflict arm"
+}

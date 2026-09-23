@@ -1,0 +1,24 @@
+{
+ "n": 966,
+ "share_yes_no": 1.0,
+ "agreement_gen_vs_logit_over_yesno": 0.986542,
+ "agreement_over_all_clips": 0.986542,
+ "by_arm": {
+  "conflict": {
+   "n": 483,
+   "share_yes_no": 1.0,
+   "agreement": 0.991718
+  },
+  "agreement": {
+   "n": 483,
+   "share_yes_no": 1.0,
+   "agreement": 0.981366
+  }
+ },
+ "first_word_counts": {
+  "no": 730,
+  "yes": 236
+ },
+ "non_yesno_first_tokens": {},
+ "max_abs_diff_vs_part14_audio_p_yes": 4.9996090600856746e-11
+}
