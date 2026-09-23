@@ -1,0 +1,348 @@
+{
+ "file": "/workspace/scores/part20/POD2/balanced_lora_pitt_oof.csv",
+ "md5_file": "c9a7b5b034dbf94856099ce581ad3f98",
+ "folds_file": "/workspace/p20/pitt_groupkfold5_pod.csv",
+ "md5_folds": "6c611f6822a29cc422bf90ffc03f3535",
+ "columns": [
+  "name",
+  "spk",
+  "label",
+  "arm",
+  "fold",
+  "p_yes",
+  "p_yes_2logit",
+  "answer_mass",
+  "prompt"
+ ],
+ "n": 468,
+ "n_spk": 228,
+ "n_conflict": 146,
+ "n_agreement": 322,
+ "n_pos": 290,
+ "n_unique_names": 468,
+ "score_col": "p_yes",
+ "score_min": 0.07624748266916767,
+ "score_max": 0.9941818469449109,
+ "n_nan": 0,
+ "manifest_rows": 468,
+ "fold_rows": 468,
+ "manifest_matches_oof_labels": true,
+ "manifest_matches_oof_speakers": true,
+ "manifest_matches_oof_arms": true,
+ "oof_fold_col_matches_fold_file": true,
+ "fold_sizes": [
+  94,
+  94,
+  94,
+  93,
+  93
+ ],
+ "weight_table": {
+  "0": {
+   "y0_conflict": {
+    "N_y": 133,
+    "N_ya": 32,
+    "w_raw": 2.078125,
+    "w_mean1": 2.078125,
+    "group_total_weight": 66.5
+   },
+   "y0_agreement": {
+    "N_y": 133,
+    "N_ya": 101,
+    "w_raw": 0.6584158415841584,
+    "w_mean1": 0.6584158415841584,
+    "group_total_weight": 66.5
+   },
+   "y1_conflict": {
+    "N_y": 241,
+    "N_ya": 86,
+    "w_raw": 1.4011627906976745,
+    "w_mean1": 1.4011627906976745,
+    "group_total_weight": 120.49999999999994
+   },
+   "y1_agreement": {
+    "N_y": 241,
+    "N_ya": 155,
+    "w_raw": 0.7774193548387097,
+    "w_mean1": 0.7774193548387097,
+    "group_total_weight": 120.5
+   },
+   "n_train": 374,
+   "mean_raw": 1.0
+  },
+  "1": {
+   "y0_conflict": {
+    "N_y": 143,
+    "N_ya": 37,
+    "w_raw": 1.9324324324324325,
+    "w_mean1": 1.9324324324324325,
+    "group_total_weight": 71.50000000000001
+   },
+   "y0_agreement": {
+    "N_y": 143,
+    "N_ya": 106,
+    "w_raw": 0.6745283018867925,
+    "w_mean1": 0.6745283018867925,
+    "group_total_weight": 71.5
+   },
+   "y1_conflict": {
+    "N_y": 231,
+    "N_ya": 83,
+    "w_raw": 1.391566265060241,
+    "w_mean1": 1.391566265060241,
+    "group_total_weight": 115.5
+   },
+   "y1_agreement": {
+    "N_y": 231,
+    "N_ya": 148,
+    "w_raw": 0.7804054054054054,
+    "w_mean1": 0.7804054054054054,
+    "group_total_weight": 115.49999999999999
+   },
+   "n_train": 374,
+   "mean_raw": 1.0
+  },
+  "2": {
+   "y0_conflict": {
+    "N_y": 145,
+    "N_ya": 33,
+    "w_raw": 2.196969696969697,
+    "w_mean1": 2.196969696969697,
+    "group_total_weight": 72.5
+   },
+   "y0_agreement": {
+    "N_y": 145,
+    "N_ya": 112,
+    "w_raw": 0.6473214285714286,
+    "w_mean1": 0.6473214285714286,
+    "group_total_weight": 72.50000000000001
+   },
+   "y1_conflict": {
+    "N_y": 229,
+    "N_ya": 87,
+    "w_raw": 1.3160919540229885,
+    "w_mean1": 1.3160919540229885,
+    "group_total_weight": 114.50000000000004
+   },
+   "y1_agreement": {
+    "N_y": 229,
+    "N_ya": 142,
+    "w_raw": 0.8063380281690141,
+    "w_mean1": 0.8063380281690141,
+    "group_total_weight": 114.50000000000001
+   },
+   "n_train": 374,
+   "mean_raw": 1.0
+  },
+  "3": {
+   "y0_conflict": {
+    "N_y": 142,
+    "N_ya": 36,
+    "w_raw": 1.9722222222222223,
+    "w_mean1": 1.9722222222222219,
+    "group_total_weight": 71.00000000000001
+   },
+   "y0_agreement": {
+    "N_y": 142,
+    "N_ya": 106,
+    "w_raw": 0.6698113207547169,
+    "w_mean1": 0.6698113207547168,
+    "group_total_weight": 71.0
+   },
+   "y1_conflict": {
+    "N_y": 233,
+    "N_ya": 82,
+    "w_raw": 1.420731707317073,
+    "w_mean1": 1.4207317073170729,
+    "group_total_weight": 116.49999999999996
+   },
+   "y1_agreement": {
+    "N_y": 233,
+    "N_ya": 151,
+    "w_raw": 0.7715231788079471,
+    "w_mean1": 0.7715231788079469,
+    "group_total_weight": 116.49999999999997
+   },
+   "n_train": 375,
+   "mean_raw": 1.0000000000000002
+  },
+  "4": {
+   "y0_conflict": {
+    "N_y": 149,
+    "N_ya": 42,
+    "w_raw": 1.7738095238095237,
+    "w_mean1": 1.7738095238095237,
+    "group_total_weight": 74.49999999999999
+   },
+   "y0_agreement": {
+    "N_y": 149,
+    "N_ya": 107,
+    "w_raw": 0.6962616822429907,
+    "w_mean1": 0.6962616822429907,
+    "group_total_weight": 74.5
+   },
+   "y1_conflict": {
+    "N_y": 226,
+    "N_ya": 66,
+    "w_raw": 1.7121212121212122,
+    "w_mean1": 1.7121212121212122,
+    "group_total_weight": 113.00000000000003
+   },
+   "y1_agreement": {
+    "N_y": 226,
+    "N_ya": 160,
+    "w_raw": 0.70625,
+    "w_mean1": 0.70625,
+    "group_total_weight": 112.99999999999999
+   },
+   "n_train": 375,
+   "mean_raw": 1.0
+  }
+ },
+ "balanced": {
+  "overall": {
+   "auc": 0.7112553273924835,
+   "auc_trapezoid": 0.7112553273924835,
+   "lo": 0.6367854033417305,
+   "hi": 0.779891579231671,
+   "draws": 2000,
+   "n": 468,
+   "n_spk": 228
+  },
+  "conflict": {
+   "auc": 0.5735973597359736,
+   "auc_trapezoid": 0.5735973597359736,
+   "lo": 0.45489994026284347,
+   "hi": 0.6939382134710937,
+   "draws": 2000,
+   "n": 146,
+   "n_spk": 100,
+   "lo_allspk": 0.4510422292618751,
+   "hi_allspk": 0.6939192828562635,
+   "draws_allspk": 2000
+  },
+  "agreement": {
+   "auc": 0.7724469904921033,
+   "auc_trapezoid": 0.7724469904921034,
+   "lo": 0.6937830418143199,
+   "hi": 0.8396193540240281,
+   "draws": 2000,
+   "n": 322,
+   "n_spk": 175,
+   "lo_allspk": 0.6951336536950035,
+   "hi_allspk": 0.8397850157958551,
+   "draws_allspk": 2000
+  }
+ },
+ "vs_earlier_lora": {
+  "file": "/workspace/verify20_POD2/lora_pitt_oof.csv",
+  "score_col": "p_yes_multivariant",
+  "overall": {
+   "other_auc": 0.8219876017047656,
+   "other_lo": 0.7701885742224188,
+   "other_hi": 0.871085396426515,
+   "diff": -0.11073227431228205,
+   "diff_lo": -0.16586270443679163,
+   "diff_hi": -0.062381217207931924,
+   "diff_draws": 2000
+  },
+  "conflict": {
+   "other_auc": 0.5515951595159516,
+   "other_lo": 0.4332711751349468,
+   "other_hi": 0.6814203806522608,
+   "diff": 0.022002200220021972,
+   "diff_lo": -0.07329922139993829,
+   "diff_hi": 0.10542067736175406,
+   "diff_draws": 2000,
+   "diff_lo_allspk": -0.07680683825630631,
+   "diff_hi_allspk": 0.1105774572649572
+  },
+  "agreement": {
+   "other_auc": 0.9160997732426304,
+   "other_lo": 0.8797551151992913,
+   "other_hi": 0.9478793399877492,
+   "diff": -0.14365278275052706,
+   "diff_lo": -0.2070430690054884,
+   "diff_hi": -0.09197141409196219,
+   "diff_draws": 2000,
+   "diff_lo_allspk": -0.2072320752367077,
+   "diff_hi_allspk": -0.08972682819175967
+  }
+ },
+ "balanced_conflict_minus_agreement": {
+  "v": -0.1988496307561297,
+  "lo": -0.3306203848483099,
+  "hi": -0.07108362826836653,
+  "draws": 2000
+ },
+ "gap_change_balanced_minus_earlier": {
+  "v": 0.16565498297054904,
+  "lo": 0.05973825651735644,
+  "hi": 0.26838295546374924,
+  "draws": 2000,
+  "earlier_gap": -0.36450461372667875
+ },
+ "fold_checkpoints": {
+  "0": {
+   "file": "/workspace/scores/part20/POD2/balanced_lora_pitt_fold0.json",
+   "problems": [],
+   "n_problems": 0,
+   "steps": 1122,
+   "rescale": 1.0
+  },
+  "1": {
+   "file": "/workspace/scores/part20/POD2/balanced_lora_pitt_fold1.json",
+   "problems": [],
+   "n_problems": 0,
+   "steps": 1122,
+   "rescale": 1.0
+  },
+  "2": {
+   "file": "/workspace/scores/part20/POD2/balanced_lora_pitt_fold2.json",
+   "problems": [],
+   "n_problems": 0,
+   "steps": 1122,
+   "rescale": 1.0
+  },
+  "3": {
+   "file": "/workspace/scores/part20/POD2/balanced_lora_pitt_fold3.json",
+   "problems": [],
+   "n_problems": 0,
+   "steps": 1125,
+   "rescale": 0.9999999999999998
+  },
+  "4": {
+   "file": "/workspace/scores/part20/POD2/balanced_lora_pitt_fold4.json",
+   "problems": [],
+   "n_problems": 0,
+   "steps": 1125,
+   "rescale": 1.0
+  }
+ },
+ "sidecar_prompt_verbatim_present": true,
+ "sidecar_mentions_pitt_groupkfold5_pod": true,
+ "sidecar_keys": [
+  "result",
+  "model_id",
+  "prompt_verbatim",
+  "prompt_check",
+  "n",
+  "n_speakers",
+  "n_conflict",
+  "n_agreement",
+  "seed",
+  "per_clip_csv",
+  "columns",
+  "training",
+  "parameter_counts",
+  "results",
+  "sources_sha256_first_1MB",
+  "audio",
+  "command_train",
+  "command_analysis",
+  "pod",
+  "date_utc",
+  "pod_paths",
+  "run_layout"
+ ]
+}
