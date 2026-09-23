@@ -1,0 +1,6 @@
+seed 0 auc 0.811801 layers [26, 30, 29, 26, 30] t=1s
+seed 1 auc 0.794379 layers [30, 21, 26, 31, 17] t=2s
+seed 2 auc 0.799310 layers [27, 22, 29, 25, 17] t=2s
+seed 3 auc 0.806870 layers [17, 29, 25, 26, 27] t=3s
+seed 4 auc 0.799474 layers [17, 19, 26, 25, 29] t=4s
+mean5 0.8023668639053255
