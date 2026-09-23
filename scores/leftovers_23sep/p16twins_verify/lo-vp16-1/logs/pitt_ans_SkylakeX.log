@@ -1,0 +1,3 @@
+pitt_ans_SkylakeX ans X (468, 49, 2048) n=468 pos=290 spk=228 load 1s
+fits 6s best 26 mean 0.848473
+DONE pitt_ans_SkylakeX best 26 0.8485 [0.8069, 0.8882] per_repeat [np.float64(0.8509), np.float64(0.8496), np.float64(0.85), np.float64(0.851), np.float64(0.8409)] top5 [[26, 0.8484734598992638], [34, 0.8459666795815576], [24, 0.839711352189074], [36, 0.8390933746609841], [33, 0.8387814800464936]] arch ['SkylakeX'] 7s

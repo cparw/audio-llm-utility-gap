@@ -1,0 +1,55 @@
+id	claimed	recomputed	verified
+3b_all_cos	0.0051	0.0051	yes
+3b_conflict_cos	-0.0067	-0.0067	yes
+3b_agreement_cos	0.0086	0.0086	yes
+SEED14_3b	0.0051	0.0051	yes
+3b_conflict_auc_probe	0.6145 [0.5021, 0.7246]	0.6145 [0.5021, 0.7246]	yes
+3b_agreement_auc_probe	0.9349 [0.9034, 0.9614]	0.9349 [0.9034, 0.9614]	yes
+3b_conflict_auc_wo_d	0.6196 [0.5094, 0.7283]	0.6196 [0.5094, 0.7283]	yes
+3b_agreement_auc_wo_d	0.9341 [0.9021, 0.9604]	0.9341 [0.9021, 0.9604]	yes
+3a_pitt_enc_best_stage	0.8276 [0.7765, 0.8760]	0.8276 [0.7765, 0.8760]	yes
+3a_pitt_llm_best_stage	0.8634 [0.8179, 0.9062]	0.8634 [0.8179, 0.9062]	yes
+3a_pitt_ans_best_stage	0.8485 [0.8069, 0.8882]	0.8485 [0.8069, 0.8882]	yes
+3a_pcgita_enc_best_stage	0.9133 [0.8519, 0.9604]	0.9133 [0.8519, 0.9604]	yes
+3a_pcgita_llm_best_stage	0.8960 [0.8341, 0.9463]	0.8960 [0.8341, 0.9463]	yes
+3a_pcgita_ans_best_stage	0.8962 [0.8327, 0.9452]	0.8962 [0.8327, 0.9452]	yes
+M3_pitt_speaker	0.6771 [0.6096, 0.7494]	0.6771 [0.6096, 0.7494]	yes
+M3_pitt_clip_minus_speaker	-0.0193 [-0.0565, 0.0172]	-0.0193 [-0.0565, 0.0172]	yes
+M3_pcgita_speaker	0.5948 [0.4778, 0.7089]	0.5948 [0.4778, 0.7089]	yes
+M3_pcgita_clip_minus_speaker	-0.0313 [-0.0820, 0.0179]	-0.0313 [-0.0820, 0.0179]	yes
+M3_neurovoz_speaker	0.7948 [0.7045, 0.8733]	0.7948 [0.7045, 0.8733]	yes
+M3_neurovoz_clip_minus_speaker	-0.0997 [-0.1325, -0.0613]	-0.0997 [-0.1325, -0.0613]	yes
+M7fix#01 Pitt encoder probe mean of 5	0.7706 [0.7157, 0.8220]	0.7706 [0.7157, 0.8220]	yes
+M7fix#02 Pitt paired probe minus zero-shot	+0.1128 [0.0455, 0.1768]	+0.1128 [0.0455, 0.1768]	yes
+M7_pitt_probe_rep5	0.7917 [0.7324, 0.8480]	0.7917 [0.7324, 0.8480]	yes
+M7_pitt_gap_rep5	0.1339 [0.0641, 0.2019]	0.1339 [0.0641, 0.2019]	yes
+POD4_4b_resolved	468	468	yes
+POD4_4b_invwin	158	158	yes
+POD4_4b_invshare	0.0200	0.0200	yes
+POD4_4b_parshare	0.5871	0.5871	yes
+POD4_4b_pardur	17.61	17.61	yes
+POD4_4b_under10s	68	68	yes
+M9.FILES	307	307	yes
+M9.SWEEPMIN	0.8662	0.8662	yes
+M5_all_auc_without_d	0.8327 [0.7857, 0.8759]	0.8327 [0.7857, 0.8759]	yes
+M5_all_auc_without_d_Xproj	0.8223 [0.7743, 0.8672]	0.8223 [0.7743, 0.8672]	yes
+M5_conflict_refit_auc_without_d	0.6869 [0.5806, 0.7872]	0.6869 [0.5806, 0.7872]	yes
+M5_agreement_refit_auc_without_d	0.9346 [0.9057, 0.9603]	0.9346 [0.9057, 0.9603]	yes
+M5_conflict_restricted_auc_without_d	0.6326 [0.5277, 0.7336]	0.6326 [0.5277, 0.7336]	yes
+M5_conflict_restricted_auc_without_d_Xproj	0.6180 [0.5128, 0.7213]	0.6180 [0.5128, 0.7213]	yes
+M5_agreement_restricted_auc_without_d	0.9070 [0.8702, 0.9383]	0.9070 [0.8702, 0.9383]	yes
+M5_agreement_restricted_auc_without_d_Xproj	0.8988 [0.8593, 0.9326]	0.8988 [0.8593, 0.9326]	yes
+M5_paired_auc_without_d_conflict_minus_agreement	-0.2745 [-0.3754, -0.1707]	-0.2745 [-0.3754, -0.1707]	yes
+M5_all_randfloor	0.0124 [0.0005, 0.0343]	0.0124 [0.0005, 0.0343]	yes
+M5_conflict_refit_randfloor	0.0123 [0.0005, 0.0350]	0.0123 [0.0005, 0.0350]	yes
+M5_agreement_refit_randfloor	0.0126 [0.0005, 0.0359]	0.0126 [0.0005, 0.0359]	yes
+MEDAIC_full_llm_nested_NOCI	0.6853	0.6853	yes
+MEDAIC_full_llm_minus_answer_POINT	-0.1432	-0.1432	yes
+MEDAIC_full_enc_nested_NOCI	0.5930	0.5930	yes
+MEDAIC_full_enc_minus_answer_POINT	-0.2355	-0.2355	yes
+MEDAIC_full_ans_nested_NOCI	0.7542	0.7542	yes
+MEDAIC_full_ans_minus_answer_POINT	-0.0743	-0.0743	yes
+MEDAIC_full_proj_nested_NOCI	0.5293	0.5293	yes
+MEDAIC_full_proj_minus_answer_POINT	-0.2992	-0.2992	yes
+P16.POD2.L5	4.13;4.07;4.05;4.03;4.00	4.13;4.07;4.05;4.03;4.00	yes
+P16.POD2.L6	21.013	21.013	yes

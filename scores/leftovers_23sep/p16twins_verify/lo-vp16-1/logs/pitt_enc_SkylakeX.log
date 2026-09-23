@@ -1,0 +1,3 @@
+pitt_enc_SkylakeX enc X (468, 32, 1280) n=468 pos=290 spk=228 load 0s
+fits 5s best 30 mean 0.827577
+DONE pitt_enc_SkylakeX best 30 0.8276 [0.7765, 0.8760] per_repeat [np.float64(0.8311), np.float64(0.8126), np.float64(0.8259), np.float64(0.8477), np.float64(0.8206)] top5 [[30, 0.8275765207283998], [29, 0.8264529252227819], [24, 0.8154048818287485], [27, 0.8142754746222394], [31, 0.8139248353351414]] arch ['SkylakeX'] 6s

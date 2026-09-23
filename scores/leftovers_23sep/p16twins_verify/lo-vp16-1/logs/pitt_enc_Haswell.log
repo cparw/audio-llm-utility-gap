@@ -1,0 +1,3 @@
+pitt_enc_Haswell enc X (468, 32, 1280) n=468 pos=290 spk=228 load 0s
+fits 5s best 30 mean 0.827423
+DONE pitt_enc_Haswell best 30 0.8274 [0.7763, 0.8759] per_repeat [np.float64(0.8311), np.float64(0.8125), np.float64(0.8254), np.float64(0.8476), np.float64(0.8206)] top5 [[30, 0.8274234792716001], [29, 0.8262514529252227], [24, 0.8154726850058116], [27, 0.8142251065478497], [31, 0.8139151491669896]] arch ['Haswell'] 6s

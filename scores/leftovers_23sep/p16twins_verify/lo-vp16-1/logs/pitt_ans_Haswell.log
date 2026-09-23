@@ -1,0 +1,3 @@
+pitt_ans_Haswell ans X (468, 49, 2048) n=468 pos=290 spk=228 load 1s
+fits 6s best 26 mean 0.848466
+DONE pitt_ans_Haswell best 26 0.8485 [0.8068, 0.8881] per_repeat [np.float64(0.8508), np.float64(0.8496), np.float64(0.85), np.float64(0.851), np.float64(0.841)] top5 [[26, 0.8484657109647424], [34, 0.8460577295621852], [24, 0.8398430840759395], [36, 0.8390778767919411], [33, 0.8387872917473848]] arch ['Haswell'] 7s

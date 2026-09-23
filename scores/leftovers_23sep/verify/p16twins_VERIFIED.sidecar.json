@@ -1,0 +1,795 @@
+{
+ "task": "independent verifier for p16twins",
+ "date_utc": "2026-09-23T23:15:03Z",
+ "tsv": "scores/leftovers_23sep/verify/p16twins_VERIFIED.tsv",
+ "n_values": 54,
+ "n_verified_yes": 54,
+ "rule": "verified = the recomputed value, and both CI bounds when the claim has them, print the same as the claim at the claim's precision (4 dp; 2 dp for pardur; 3 dp for L6; integers for counts)",
+ "independence": "all code written for this check (scratch vp16_mac.py, vp16_m5.py, pod/v_stage.py, pod/v_dir.py, pod/v_lmhead.py; copies in p16twins_work/scripts). No task script was imported or copied. AUC by Mann-Whitney counting (searchsorted or pairwise), not scipy rankdata or sklearn roc_auc_score.",
+ "bootstrap": "2000 draws, fresh numpy default_rng(0) per cell, idx = rng.choice(N, N, replace=True) over sorted unique speaker ids, 2.5/97.5 percentiles, paired = same idx; 3a CI = mean over the 5 repeats inside each draw",
+ "environments": {
+  "pod1 lo-vp16-1": "AMD EPYC 9654, 32 vCPU, Python 3.12.3, sklearn 1.9.1, numpy 2.1.2, scipy 1.18.1; OpenBLAS default kernel SkylakeX (AVX512). All 3a streams, all stages x 5 repeats, run three times: default, forced SkylakeX, forced Haswell (AVX2)",
+  "pod4 lo-vp16-4 and pod5 lo-vp16-5": "AMD EPYC 7702P (AVX2), same Python stack; 3b direction refit, identical results on both",
+  "lm_head": {
+   "repo": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+   "revision": "26291f793822fb6be9555850f06dfe95f2d7e695",
+   "shard": "model-00013-of-00015.safetensors",
+   "key": "thinker.lm_head.weight",
+   "dtype": "BF16",
+   "shape": [
+    152064,
+    2048
+   ],
+   "sha256_raw_bf16": "ef1c824486f6f733cb2479d50b43ca4b4dba940f310b377c89a038be5955210b",
+   "seconds": 7.5
+  },
+  "mac": "/usr/local/bin/python3 3.10.2, sklearn 1.7.2, numpy 2.2.6 (per-clip recomputes, M5 refit)"
+ },
+ "inputs": {
+  "q3o_pitt_states": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pitt_states.npz (uploaded, sha256 adc889e0... matched on the pod)",
+  "q3o_pcgita_states": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz (uploaded, sha256 172ab28d... matched)",
+  "arms": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv set column (146 conflict, 322 agreement)",
+  "q2a_states_M5": "<local data dir>/paper1_local_runs/probe2/pitt_states.npz; Qwen2-Audio lm_head from the cached HF shard model-00005-of-00005.safetensors",
+  "perclip": [
+   "<local data dir>/release/omni_final/omni_{pitt,pcgita,neurovoz}_zeroshot_scores.csv",
+   "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz",
+   "<local data dir>/release/edaic_rerun/part16/M5_readout_direction_q2a.csv",
+   "<local data dir>/release/edaic_rerun/part16/POD4/cha_overlap_468.csv and cut_report.json",
+   "<local data dir>/release/edaic_rerun/part16/M9_inventory.csv (608 files reopened)",
+   "<local data dir>/release/edaic_rerun/logs/podA/o25_full_rep.log and variants/o25_full_zeroshot_scores.csv",
+   "<local data dir>/release/edaic_rerun/part16/POD2/lora.log"
+  ]
+ },
+ "extra_checks": {
+  "mac_sklearn_1.7.2_3b_probe": "the same probe on the Mac gives all 0.7864, conflict 0.5520, agreement 0.9314 with equal fold sizes, so the old Mac numbers are a fold-assignment artefact of sklearn 1.7.2",
+  "M5_mac_refit": "the Mac refit reproduces the M5 per-clip probe and without-d columns exactly (max abs diff 0.0) for all, conflict and agreement",
+  "kernel": {
+   "pitt_enc": {
+    "avx512": [
+     0.827577,
+     30
+    ],
+    "forced_skylakex": [
+     0.827577,
+     30
+    ],
+    "forced_haswell_avx2": [
+     0.827423,
+     30,
+     [
+      0.7763,
+      0.8759
+     ]
+    ]
+   },
+   "pitt_llm": {
+    "avx512": [
+     0.863363,
+     13
+    ],
+    "forced_skylakex": [
+     0.863363,
+     13
+    ],
+    "forced_haswell_avx2": [
+     0.863251,
+     13,
+     [
+      0.8176,
+      0.9061
+     ]
+    ]
+   },
+   "pitt_ans": {
+    "avx512": [
+     0.848473,
+     26
+    ],
+    "forced_skylakex": [
+     0.848473,
+     26
+    ],
+    "forced_haswell_avx2": [
+     0.848466,
+     26,
+     [
+      0.8068,
+      0.8881
+     ]
+    ]
+   },
+   "pcgita_enc": {
+    "avx512": [
+     0.913317,
+     14
+    ],
+    "forced_skylakex": [
+     0.913317,
+     14
+    ],
+    "forced_haswell_avx2": [
+     0.913317,
+     14,
+     [
+      0.8519,
+      0.9604
+     ]
+    ]
+   },
+   "pcgita_llm": {
+    "avx512": [
+     0.89597,
+     14
+    ],
+    "forced_skylakex": [
+     0.89597,
+     14
+    ],
+    "forced_haswell_avx2": [
+     0.896082,
+     14,
+     [
+      0.8343,
+      0.9462
+     ]
+    ]
+   },
+   "pcgita_ans": {
+    "avx512": [
+     0.896211,
+     15
+    ],
+    "forced_skylakex": [
+     0.896211,
+     15
+    ],
+    "forced_haswell_avx2": [
+     0.8962,
+     15,
+     [
+      0.8326,
+      0.9452
+     ]
+    ]
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "3b_all_cos",
+   "claimed": "0.0051",
+   "recomputed": "0.0051",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit, arm all; pod5 rerun 0.005109",
+   "full": 0.005108758329073949,
+   "full_ci": null
+  },
+  {
+   "id": "3b_conflict_cos",
+   "claimed": "-0.0067",
+   "recomputed": "-0.0067",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit, arm conflict; pod5 rerun -0.006677",
+   "full": -0.0066771444098132505,
+   "full_ci": null
+  },
+  {
+   "id": "3b_agreement_cos",
+   "claimed": "0.0086",
+   "recomputed": "0.0086",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit, arm agreement; pod5 rerun 0.008638",
+   "full": 0.008638132128692983,
+   "full_ci": null
+  },
+  {
+   "id": "SEED14_3b",
+   "claimed": "0.0051",
+   "recomputed": "0.0051",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit, arm all; pod5 rerun 0.005109",
+   "full": 0.005108758329073949,
+   "full_ci": null
+  },
+  {
+   "id": "3b_conflict_auc_probe",
+   "claimed": "0.6145 [0.5021, 0.7246]",
+   "recomputed": "0.6145 [0.5021, 0.7246]",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit inside the arm",
+   "full": 0.6145214521452145,
+   "full_ci": [
+    0.502093094556775,
+    0.7246087021531099
+   ]
+  },
+  {
+   "id": "3b_agreement_auc_probe",
+   "claimed": "0.9349 [0.9034, 0.9614]",
+   "recomputed": "0.9349 [0.9034, 0.9614]",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit inside the arm",
+   "full": 0.9348768747264988,
+   "full_ci": [
+    0.9034381242016835,
+    0.9613974333225567
+   ]
+  },
+  {
+   "id": "3b_conflict_auc_wo_d",
+   "claimed": "0.6196 [0.5094, 0.7283]",
+   "recomputed": "0.6196 [0.5094, 0.7283]",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit, held-out projection standardised with the training fold",
+   "full": 0.6195819581958196,
+   "full_ci": [
+    0.5094197733918129,
+    0.7283496346574682
+   ]
+  },
+  {
+   "id": "3b_agreement_auc_wo_d",
+   "claimed": "0.9341 [0.9021, 0.9604]",
+   "recomputed": "0.9341 [0.9021, 0.9604]",
+   "verified": "yes",
+   "src": "pod4",
+   "how": "Linux refit, held-out projection standardised with the training fold",
+   "full": 0.9340812348331146,
+   "full_ci": [
+    0.902061619846094,
+    0.9603697839042434
+   ]
+  },
+  {
+   "id": "3a_pitt_enc_best_stage",
+   "claimed": "0.8276 [0.7765, 0.8760]",
+   "recomputed": "0.8276 [0.7765, 0.8760]",
+   "verified": "yes",
+   "src": "pod1",
+   "how": "best stage 30 of 32; per repeat [0.8311, 0.8126, 0.8259, 0.8477, 0.8206]; AVX2 Haswell kernel gives 0.8274 [0.7763, 0.8759] stage 30",
+   "full": 0.8275765207283998,
+   "full_ci": [
+    0.7765223611635299,
+    0.8760009684050765
+   ]
+  },
+  {
+   "id": "3a_pitt_llm_best_stage",
+   "claimed": "0.8634 [0.8179, 0.9062]",
+   "recomputed": "0.8634 [0.8179, 0.9062]",
+   "verified": "yes",
+   "src": "pod1",
+   "how": "best stage 13 of 49; per repeat [0.8572, 0.8555, 0.8619, 0.8794, 0.8628]; AVX2 Haswell kernel gives 0.8633 [0.8176, 0.9061] stage 13",
+   "full": 0.8633630375823325,
+   "full_ci": [
+    0.817858287092499,
+    0.906240644377409
+   ]
+  },
+  {
+   "id": "3a_pitt_ans_best_stage",
+   "claimed": "0.8485 [0.8069, 0.8882]",
+   "recomputed": "0.8485 [0.8069, 0.8882]",
+   "verified": "yes",
+   "src": "pod1",
+   "how": "best stage 26 of 49; per repeat [0.8509, 0.8496, 0.85, 0.851, 0.8409]; AVX2 Haswell kernel gives 0.8485 [0.8068, 0.8881] stage 26",
+   "full": 0.8484734598992638,
+   "full_ci": [
+    0.8068647377660194,
+    0.8881763520581019
+   ]
+  },
+  {
+   "id": "3a_pcgita_enc_best_stage",
+   "claimed": "0.9133 [0.8519, 0.9604]",
+   "recomputed": "0.9133 [0.8519, 0.9604]",
+   "verified": "yes",
+   "src": "pod1",
+   "how": "best stage 14 of 32; per repeat [0.9252, 0.9015, 0.8898, 0.9204, 0.9296]; AVX2 Haswell kernel gives 0.9133 [0.8519, 0.9604] stage 14",
+   "full": 0.9133170247933883,
+   "full_ci": [
+    0.8518904130605964,
+    0.960394753994761
+   ]
+  },
+  {
+   "id": "3a_pcgita_llm_best_stage",
+   "claimed": "0.8960 [0.8341, 0.9463]",
+   "recomputed": "0.8960 [0.8341, 0.9463]",
+   "verified": "yes",
+   "src": "pod1",
+   "how": "best stage 14 of 49; per repeat [0.895, 0.8883, 0.9001, 0.88, 0.9165]; AVX2 Haswell kernel gives 0.8961 [0.8343, 0.9462] stage 14",
+   "full": 0.8959702479338842,
+   "full_ci": [
+    0.8341282025209272,
+    0.9462982337048713
+   ]
+  },
+  {
+   "id": "3a_pcgita_ans_best_stage",
+   "claimed": "0.8962 [0.8327, 0.9452]",
+   "recomputed": "0.8962 [0.8327, 0.9452]",
+   "verified": "yes",
+   "src": "pod1",
+   "how": "best stage 15 of 49; per repeat [0.908, 0.8902, 0.8885, 0.8869, 0.9075]; AVX2 Haswell kernel gives 0.8962 [0.8326, 0.9452] stage 15",
+   "full": 0.8962105785123967,
+   "full_ci": [
+    0.8327088895149846,
+    0.9451937193777491
+   ]
+  },
+  {
+   "id": "M3_pitt_speaker",
+   "claimed": "0.6771 [0.6096, 0.7494]",
+   "recomputed": "0.6771 [0.6096, 0.7494]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.6770833333333334,
+   "full_ci": [
+    0.60960468413089,
+    0.7494210973243938
+   ]
+  },
+  {
+   "id": "M3_pitt_clip_minus_speaker",
+   "claimed": "-0.0193 [-0.0565, 0.0172]",
+   "recomputed": "-0.0193 [-0.0565, 0.0172]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.019315026475526298,
+   "full_ci": [
+    -0.05654083490780851,
+    0.017247437281261706
+   ]
+  },
+  {
+   "id": "M3_pcgita_speaker",
+   "claimed": "0.5948 [0.4778, 0.7089]",
+   "recomputed": "0.5948 [0.4778, 0.7089]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.5948,
+   "full_ci": [
+    0.47782969428860156,
+    0.7088653037766827
+   ]
+  },
+  {
+   "id": "M3_pcgita_clip_minus_speaker",
+   "claimed": "-0.0313 [-0.0820, 0.0179]",
+   "recomputed": "-0.0313 [-0.0820, 0.0179]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.03132231404958674,
+   "full_ci": [
+    -0.08198937040031405,
+    0.017903647637453394
+   ]
+  },
+  {
+   "id": "M3_neurovoz_speaker",
+   "claimed": "0.7948 [0.7045, 0.8733]",
+   "recomputed": "0.7948 [0.7045, 0.8733]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.7947552447552447,
+   "full_ci": [
+    0.7045421500745701,
+    0.8733375310196674
+   ]
+  },
+  {
+   "id": "M3_neurovoz_clip_minus_speaker",
+   "claimed": "-0.0997 [-0.1325, -0.0613]",
+   "recomputed": "-0.0997 [-0.1325, -0.0613]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.09967374937898144,
+   "full_ci": [
+    -0.13248337022862514,
+    -0.061297799437302986
+   ]
+  },
+  {
+   "id": "M7fix#01 Pitt encoder probe mean of 5",
+   "claimed": "0.7706 [0.7157, 0.8220]",
+   "recomputed": "0.7706 [0.7157, 0.8220]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.7705695466873305,
+   "full_ci": [
+    0.7156926699364878,
+    0.8219678044301659
+   ]
+  },
+  {
+   "id": "M7fix#02 Pitt paired probe minus zero-shot",
+   "claimed": "+0.1128 [0.0455, 0.1768]",
+   "recomputed": "+0.1128 [0.0455, 0.1768]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.11280123982952339,
+   "full_ci": [
+    0.04550149479611408,
+    0.1768100605302147
+   ]
+  },
+  {
+   "id": "M7_pitt_probe_rep5",
+   "claimed": "0.7917 [0.7324, 0.8480]",
+   "recomputed": "0.7917 [0.7324, 0.8480]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.7916892677256877,
+   "full_ci": [
+    0.7324452864688041,
+    0.8480293239779454
+   ]
+  },
+  {
+   "id": "M7_pitt_gap_rep5",
+   "claimed": "0.1339 [0.0641, 0.2019]",
+   "recomputed": "0.1339 [0.0641, 0.2019]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.13392096086788063,
+   "full_ci": [
+    0.06407005517666717,
+    0.20190232262934266
+   ]
+  },
+  {
+   "id": "POD4_4b_resolved",
+   "claimed": "468",
+   "recomputed": "468",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 468,
+   "full_ci": null
+  },
+  {
+   "id": "POD4_4b_invwin",
+   "claimed": "158",
+   "recomputed": "158",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 158,
+   "full_ci": null
+  },
+  {
+   "id": "POD4_4b_invshare",
+   "claimed": "0.0200",
+   "recomputed": "0.0200",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.019971866096866096,
+   "full_ci": null
+  },
+  {
+   "id": "POD4_4b_parshare",
+   "claimed": "0.5871",
+   "recomputed": "0.5871",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.5871166666666666,
+   "full_ci": null
+  },
+  {
+   "id": "POD4_4b_pardur",
+   "claimed": "17.61",
+   "recomputed": "17.61",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 17.613500000000002,
+   "full_ci": null
+  },
+  {
+   "id": "POD4_4b_under10s",
+   "claimed": "68",
+   "recomputed": "68",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 68,
+   "full_ci": null
+  },
+  {
+   "id": "M9.FILES",
+   "claimed": "307",
+   "recomputed": "307",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 307,
+   "full_ci": null
+  },
+  {
+   "id": "M9.SWEEPMIN",
+   "claimed": "0.8662",
+   "recomputed": "0.8662",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.8661956191062927,
+   "full_ci": null
+  },
+  {
+   "id": "M5_all_auc_without_d",
+   "claimed": "0.8327 [0.7857, 0.8759]",
+   "recomputed": "0.8327 [0.7857, 0.8759]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.8326811313444401,
+   "full_ci": [
+    0.7857139864011161,
+    0.8758753145565592
+   ]
+  },
+  {
+   "id": "M5_all_auc_without_d_Xproj",
+   "claimed": "0.8223 [0.7743, 0.8672]",
+   "recomputed": "0.8223 [0.7743, 0.8672]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.8223363037582332,
+   "full_ci": [
+    0.7743012728806178,
+    0.8671967415167668
+   ]
+  },
+  {
+   "id": "M5_conflict_refit_auc_without_d",
+   "claimed": "0.6869 [0.5806, 0.7872]",
+   "recomputed": "0.6869 [0.5806, 0.7872]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.6869086908690869,
+   "full_ci": [
+    0.5806467144487828,
+    0.7872157189363514
+   ]
+  },
+  {
+   "id": "M5_agreement_refit_auc_without_d",
+   "claimed": "0.9346 [0.9057, 0.9603]",
+   "recomputed": "0.9346 [0.9057, 0.9603]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.9346381827584835,
+   "full_ci": [
+    0.9056508569295026,
+    0.9603221930412797
+   ]
+  },
+  {
+   "id": "M5_conflict_restricted_auc_without_d",
+   "claimed": "0.6326 [0.5277, 0.7336]",
+   "recomputed": "0.6326 [0.5277, 0.7336]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.6325632563256326,
+   "full_ci": [
+    0.5276664297971471,
+    0.7335895453736127
+   ]
+  },
+  {
+   "id": "M5_conflict_restricted_auc_without_d_Xproj",
+   "claimed": "0.6180 [0.5128, 0.7213]",
+   "recomputed": "0.6180 [0.5128, 0.7213]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.6180418041804181,
+   "full_ci": [
+    0.512842280601561,
+    0.7213310206410334
+   ]
+  },
+  {
+   "id": "M5_agreement_restricted_auc_without_d",
+   "claimed": "0.9070 [0.8702, 0.9383]",
+   "recomputed": "0.9070 [0.8702, 0.9383]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.9070294784580499,
+   "full_ci": [
+    0.8701820094595826,
+    0.9383208446716511
+   ]
+  },
+  {
+   "id": "M5_agreement_restricted_auc_without_d_Xproj",
+   "claimed": "0.8988 [0.8593, 0.9326]",
+   "recomputed": "0.8988 [0.8593, 0.9326]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.8987548235668537,
+   "full_ci": [
+    0.8592859022853624,
+    0.9325748374175665
+   ]
+  },
+  {
+   "id": "M5_paired_auc_without_d_conflict_minus_agreement",
+   "claimed": "-0.2745 [-0.3754, -0.1707]",
+   "recomputed": "-0.2745 [-0.3754, -0.1707]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.27446622213241734,
+   "full_ci": [
+    -0.3753870433548733,
+    -0.17067133572656612
+   ]
+  },
+  {
+   "id": "M5_all_randfloor",
+   "claimed": "0.0124 [0.0005, 0.0343]",
+   "recomputed": "0.0124 [0.0005, 0.0343]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "Mac refit, sklearn 1.7.2",
+   "full": 0.012392883317044927,
+   "full_ci": [
+    0.0004815001505699119,
+    0.03432580215705905
+   ]
+  },
+  {
+   "id": "M5_conflict_refit_randfloor",
+   "claimed": "0.0123 [0.0005, 0.0350]",
+   "recomputed": "0.0123 [0.0005, 0.0350]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "Mac refit, sklearn 1.7.2",
+   "full": 0.012329658870771844,
+   "full_ci": [
+    0.0005120282798040112,
+    0.034986834669966174
+   ]
+  },
+  {
+   "id": "M5_agreement_refit_randfloor",
+   "claimed": "0.0126 [0.0005, 0.0359]",
+   "recomputed": "0.0126 [0.0005, 0.0359]",
+   "verified": "yes",
+   "src": "mac",
+   "how": "Mac refit, sklearn 1.7.2",
+   "full": 0.01259411588741824,
+   "full_ci": [
+    0.00046718016300773636,
+    0.035896923366591935
+   ]
+  },
+  {
+   "id": "MEDAIC_full_llm_nested_NOCI",
+   "claimed": "0.6853",
+   "recomputed": "0.6853",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.6853,
+   "full_ci": null
+  },
+  {
+   "id": "MEDAIC_full_llm_minus_answer_POINT",
+   "claimed": "-0.1432",
+   "recomputed": "-0.1432",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.14317614905031173,
+   "full_ci": null
+  },
+  {
+   "id": "MEDAIC_full_enc_nested_NOCI",
+   "claimed": "0.5930",
+   "recomputed": "0.5930",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.5930000000000001,
+   "full_ci": null
+  },
+  {
+   "id": "MEDAIC_full_enc_minus_answer_POINT",
+   "claimed": "-0.2355",
+   "recomputed": "-0.2355",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.23547614905031167,
+   "full_ci": null
+  },
+  {
+   "id": "MEDAIC_full_ans_nested_NOCI",
+   "claimed": "0.7542",
+   "recomputed": "0.7542",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.7542200000000001,
+   "full_ci": null
+  },
+  {
+   "id": "MEDAIC_full_ans_minus_answer_POINT",
+   "claimed": "-0.0743",
+   "recomputed": "-0.0743",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.07425614905031164,
+   "full_ci": null
+  },
+  {
+   "id": "MEDAIC_full_proj_nested_NOCI",
+   "claimed": "0.5293",
+   "recomputed": "0.5293",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 0.5293,
+   "full_ci": null
+  },
+  {
+   "id": "MEDAIC_full_proj_minus_answer_POINT",
+   "claimed": "-0.2992",
+   "recomputed": "-0.2992",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": -0.29917614905031176,
+   "full_ci": null
+  },
+  {
+   "id": "P16.POD2.L5",
+   "claimed": "4.13;4.07;4.05;4.03;4.00",
+   "recomputed": "4.13;4.07;4.05;4.03;4.00",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": "4.13;4.07;4.05;4.03;4.00",
+   "full_ci": null
+  },
+  {
+   "id": "P16.POD2.L6",
+   "claimed": "21.013",
+   "recomputed": "21.013",
+   "verified": "yes",
+   "src": "mac",
+   "how": "",
+   "full": 21.013,
+   "full_ci": null
+  }
+ ]
+}
