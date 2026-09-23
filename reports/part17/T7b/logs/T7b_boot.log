@@ -1,0 +1,36 @@
+GATE llm  rerun [0.6918, 0.7062, 0.6893, 0.7055, 0.7078] pub [0.6918, 0.7062, 0.6893, 0.7055, 0.7078]  layers match True  mean 0.7001 vs 0.7001  max|meanOOF-pub| 0.0e+00  -> PASS
+GATE enc  rerun [0.5964, 0.5826, 0.5962, 0.5608, 0.606] pub [0.5964, 0.5826, 0.5962, 0.5608, 0.606]  layers match True  mean 0.5884 vs 0.5884  max|meanOOF-pub| 0.0e+00  -> PASS
+GATE ans  rerun [0.755, 0.7302, 0.7418, 0.7225, 0.7679] pub [0.755, 0.7302, 0.7418, 0.7225, 0.7679]  layers match True  mean 0.7435 vs 0.7435  max|meanOOF-pub| 0.0e+00  -> PASS
+GATE proj rerun [0.551, 0.5618, 0.5795, 0.5653, 0.5474] pub [0.551, 0.5618, 0.5795, 0.5653, 0.5474]  layers match True  mean 0.5610 vs 0.5610  max|meanOOF-pub| 0.0e+00  -> PASS
+GATE PASSED
+T7b_zeroshot_answer                          0.8278 [0.7703, 0.8822]  usable 2000/2000
+T7b_llm_meanof5                              0.7001 [0.6231, 0.7727]  usable 2000/2000
+T7b_llm_meanof5_minus_answer                 -0.1276 [-0.1993, -0.0629] excl0 yes usable 2000/2000
+T7b_enc_meanof5                              0.5884 [0.5268, 0.6523]  usable 2000/2000
+T7b_enc_meanof5_minus_answer                 -0.2394 [-0.3188, -0.1572] excl0 yes usable 2000/2000
+T7b_ans_meanof5                              0.7435 [0.6793, 0.8065]  usable 2000/2000
+T7b_ans_meanof5_minus_answer                 -0.0843 [-0.1339, -0.0370] excl0 yes usable 2000/2000
+T7b_proj_meanof5                             0.5610 [0.4871, 0.6339]  usable 2000/2000
+T7b_proj_meanof5_minus_answer                -0.2668 [-0.3494, -0.1809] excl0 yes usable 2000/2000
+T7b_notused_llm_aucofmeanoof                 0.7088 [0.6232, 0.7874]  usable 2000/2000
+T7b_notused_llm_aucofmeanoof_minus_answer    -0.1190 [-0.1995, -0.0478] excl0 yes usable 2000/2000
+T7b_notused_enc_aucofmeanoof                 0.5916 [0.5110, 0.6706]  usable 2000/2000
+T7b_notused_enc_aucofmeanoof_minus_answer    -0.2361 [-0.3272, -0.1394] excl0 yes usable 2000/2000
+T7b_notused_ans_aucofmeanoof                 0.7748 [0.7041, 0.8387]  usable 2000/2000
+T7b_notused_ans_aucofmeanoof_minus_answer    -0.0530 [-0.1046, -0.0049] excl0 yes usable 2000/2000
+T7b_notused_proj_aucofmeanoof                0.5631 [0.4790, 0.6478]  usable 2000/2000
+T7b_notused_proj_aucofmeanoof_minus_answer   -0.2646 [-0.3575, -0.1667] excl0 yes usable 2000/2000
+
+=== PASTE LINES ===
+T7b LM mean-of-5 0.7001 [0.6231, 0.7727] | paired minus answer -0.1276 [-0.1993, -0.0629] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv
+T7b encoder mean-of-5 0.5884 [0.5268, 0.6523] | paired minus answer -0.2394 [-0.3188, -0.1572] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv
+T7b answer-state mean-of-5 0.7435 [0.6793, 0.8065] | paired minus answer -0.0843 [-0.1339, -0.0370] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv
+T7b projector mean-of-5 0.5610 [0.4871, 0.6339] | paired minus answer -0.2668 [-0.3494, -0.1809] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv
+T7b answer 0.8278 [0.7703, 0.8822] | n=275 n_spk=275
+
+=== SIDE BY SIDE: USED (mean of five per-repeat AUCs) vs NOT USED (AUC of averaged OOF) ===
+LM           USED 0.7001 [0.6231, 0.7727] paired -0.1276 [-0.1993, -0.0629] excl0 yes   | NOT USED 0.7088 [0.6232, 0.7874] paired -0.1190 [-0.1995, -0.0478] excl0 yes
+encoder      USED 0.5884 [0.5268, 0.6523] paired -0.2394 [-0.3188, -0.1572] excl0 yes   | NOT USED 0.5916 [0.5110, 0.6706] paired -0.2361 [-0.3272, -0.1394] excl0 yes
+answer-state USED 0.7435 [0.6793, 0.8065] paired -0.0843 [-0.1339, -0.0370] excl0 yes   | NOT USED 0.7748 [0.7041, 0.8387] paired -0.0530 [-0.1046, -0.0049] excl0 yes
+projector    USED 0.5610 [0.4871, 0.6339] paired -0.2668 [-0.3494, -0.1809] excl0 yes   | NOT USED 0.5631 [0.4790, 0.6478] paired -0.2646 [-0.3575, -0.1667] excl0 yes
+wrote /workspace/t7b/out

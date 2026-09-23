@@ -1,0 +1,59 @@
+{
+ "runpod_id": "eyawl43rjukfkj",
+ "host": "a762862326f9",
+ "image_note": "fresh runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404 per task text; python3.12 system interpreter",
+ "os": "PRETTY_NAME=\"Ubuntu 24.04.3 LTS\"",
+ "kernel": "6.8.0-136-generic",
+ "machine": "x86_64",
+ "python": "3.12.3",
+ "executable": "/usr/bin/python3",
+ "sklearn": "1.9.1",
+ "numpy": "2.1.2",
+ "scipy": "1.18.1",
+ "pandas": "3.0.6",
+ "joblib": "1.6.0",
+ "threadpoolctl": "3.7.0",
+ "threadpool_info": [
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 64,
+   "prefix": "libscipy_openblas",
+   "filepath": "/usr/local/lib/python3.12/dist-packages/numpy.libs/libscipy_openblas64_-ff651d7f.so",
+   "version": "0.3.27",
+   "threading_layer": "pthreads",
+   "architecture": "SkylakeX"
+  },
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 64,
+   "prefix": "libscipy_openblas",
+   "filepath": "/usr/local/lib/python3.12/dist-packages/scipy.libs/libscipy_openblas-5f890258.so",
+   "version": "0.3.31.dev",
+   "threading_layer": "pthreads",
+   "architecture": "SkylakeX"
+  },
+  {
+   "user_api": "openmp",
+   "internal_api": "openmp",
+   "num_threads": 128,
+   "prefix": "libgomp",
+   "filepath": "/usr/local/lib/python3.12/dist-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+   "version": null
+  }
+ ],
+ "cpu": [
+  "CPU(s):                                  128",
+  "Model name:                              AMD EPYC 9374F 32-Core Processor",
+  "CPU(s) scaling MHz:                      47%"
+ ],
+ "os_cpu_count": 128,
+ "loky_cpu_count": 14,
+ "env_threads": {
+  "OMP_NUM_THREADS": null,
+  "OPENBLAS_NUM_THREADS": null,
+  "MKL_NUM_THREADS": null
+ },
+ "install_cmd": "python3 -m pip install --break-system-packages -q scikit-learn numpy scipy pandas"
+}

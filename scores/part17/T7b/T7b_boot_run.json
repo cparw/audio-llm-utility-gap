@@ -1,0 +1,159 @@
+{
+ "env_of_this_bootstrap": {
+  "python": "3.12.3",
+  "executable": "/usr/bin/python3",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "sklearn": "1.9.1",
+  "numpy": "2.1.2",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "threadpoolctl": "3.7.0",
+  "threadpool_info": [
+   {
+    "user_api": "blas",
+    "internal_api": "openblas",
+    "num_threads": 64,
+    "prefix": "libscipy_openblas",
+    "filepath": "/usr/local/lib/python3.12/dist-packages/numpy.libs/libscipy_openblas64_-ff651d7f.so",
+    "version": "0.3.27",
+    "threading_layer": "pthreads",
+    "architecture": "SkylakeX"
+   },
+   {
+    "user_api": "blas",
+    "internal_api": "openblas",
+    "num_threads": 64,
+    "prefix": "libscipy_openblas",
+    "filepath": "/usr/local/lib/python3.12/dist-packages/scipy.libs/libscipy_openblas-5f890258.so",
+    "version": "0.3.31.dev",
+    "threading_layer": "pthreads",
+    "architecture": "SkylakeX"
+   },
+   {
+    "user_api": "openmp",
+    "internal_api": "openmp",
+    "num_threads": 128,
+    "prefix": "libgomp",
+    "filepath": "/usr/local/lib/python3.12/dist-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+    "version": null
+   }
+  ],
+  "cpu_count": 128
+ },
+ "inputs": {
+  "/workspace/edaicfull/out/edaic_full_oof_repeats.npz": "6a0ccd7e6adaa3c89353c9e41858f594477ed84ba47a9876a18681c5b442e378",
+  "/workspace/edaicfull/out/edaic_full_nested_repeats.json": "817e9d58ffab070287d97147d5775563be12c094be555e433339f899381ae96e",
+  "/workspace/ref/edaic_full_nested_repeats.json": "817e9d58ffab070287d97147d5775563be12c094be555e433339f899381ae96e",
+  "/workspace/ref/edaic_full_perclip.csv": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770"
+ },
+ "script_sha256": "6fe03c0cf4f0f6fc7b961f6caa94e6b4fa323ad15900bfae8a9f08db2de99c17",
+ "argv": [
+  "T7b_boot.py",
+  "--npz",
+  "/workspace/edaicfull/out/edaic_full_oof_repeats.npz",
+  "--rerun_json",
+  "/workspace/edaicfull/out/edaic_full_nested_repeats.json",
+  "--ref_json",
+  "/workspace/ref/edaic_full_nested_repeats.json",
+  "--ref_perclip",
+  "/workspace/ref/edaic_full_perclip.csv",
+  "--out_dir",
+  "/workspace/t7b/out",
+  "--file_label",
+  "scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv"
+ ],
+ "paste_lines": [
+  "T7b LM mean-of-5 0.7001 [0.6231, 0.7727] | paired minus answer -0.1276 [-0.1993, -0.0629] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+  "T7b encoder mean-of-5 0.5884 [0.5268, 0.6523] | paired minus answer -0.2394 [-0.3188, -0.1572] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+  "T7b answer-state mean-of-5 0.7435 [0.6793, 0.8065] | paired minus answer -0.0843 [-0.1339, -0.0370] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv",
+  "T7b projector mean-of-5 0.5610 [0.4871, 0.6339] | paired minus answer -0.2668 [-0.3494, -0.1809] excludes zero yes | n=275 n_spk=275 | scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv"
+ ],
+ "side_by_side": [
+  "LM           USED 0.7001 [0.6231, 0.7727] paired -0.1276 [-0.1993, -0.0629] excl0 yes   | NOT USED 0.7088 [0.6232, 0.7874] paired -0.1190 [-0.1995, -0.0478] excl0 yes",
+  "encoder      USED 0.5884 [0.5268, 0.6523] paired -0.2394 [-0.3188, -0.1572] excl0 yes   | NOT USED 0.5916 [0.5110, 0.6706] paired -0.2361 [-0.3272, -0.1394] excl0 yes",
+  "answer-state USED 0.7435 [0.6793, 0.8065] paired -0.0843 [-0.1339, -0.0370] excl0 yes   | NOT USED 0.7748 [0.7041, 0.8387] paired -0.0530 [-0.1046, -0.0049] excl0 yes",
+  "projector    USED 0.5610 [0.4871, 0.6339] paired -0.2668 [-0.3494, -0.1809] excl0 yes   | NOT USED 0.5631 [0.4790, 0.6478] paired -0.2646 [-0.3575, -0.1667] excl0 yes"
+ ],
+ "results": {
+  "llm": {
+   "meanof5": 0.7001014934029288,
+   "lo": 0.623078851409801,
+   "hi": 0.7726592134606488,
+   "d": -0.12764970276931997,
+   "dlo": -0.19931182925072716,
+   "dhi": -0.06289344782645095,
+   "ez": "yes"
+  },
+  "enc": {
+   "meanof5": 0.588386254893432,
+   "lo": 0.5267623732992601,
+   "hi": 0.6523287485242031,
+   "d": -0.2393649412788168,
+   "dlo": -0.3188292697258822,
+   "dhi": -0.15723986914309845,
+   "ez": "yes"
+  },
+  "ans": {
+   "meanof5": 0.7434826736262143,
+   "lo": 0.679299311402388,
+   "hi": 0.80648266552998,
+   "d": -0.08426852254603445,
+   "dlo": -0.13393750616750957,
+   "dhi": -0.03699445946039149,
+   "ez": "yes"
+  },
+  "proj": {
+   "meanof5": 0.5609975351602146,
+   "lo": 0.48708512432035683,
+   "hi": 0.633878185240475,
+   "d": -0.26675366101203424,
+   "dlo": -0.34941993655542614,
+   "dhi": -0.18092565741228225,
+   "ez": "yes"
+  }
+ },
+ "notused": {
+  "llm": {
+   "a": 0.7087864288821226,
+   "lo": 0.6231553623188406,
+   "hi": 0.7874003305509396,
+   "d": -0.11896476729012617,
+   "dlo": -0.19953252006799707,
+   "dhi": -0.04783753344227048,
+   "ez": "yes"
+  },
+  "enc": {
+   "a": 0.5916340437871538,
+   "lo": 0.5109791833293627,
+   "hi": 0.6706340171833783,
+   "d": -0.236117152385095,
+   "dlo": -0.3272297641882839,
+   "dhi": -0.1394064326205433,
+   "ez": "yes"
+  },
+  "ans": {
+   "a": 0.7747571407858489,
+   "lo": 0.7040940169374482,
+   "hi": 0.8387201797002031,
+   "d": -0.052994055386399896,
+   "dlo": -0.10456156339924325,
+   "dhi": -0.00486164088729681,
+   "ez": "yes"
+  },
+  "proj": {
+   "a": 0.5631433956792808,
+   "lo": 0.47900542159180204,
+   "hi": 0.6477522437021072,
+   "d": -0.26460780049296795,
+   "dlo": -0.3574951914916294,
+   "dhi": -0.16665702479338845,
+   "ez": "yes"
+  }
+ },
+ "answer_auc": 0.8277511961722488,
+ "answer_ci": [
+  0.7702680190413039,
+  0.882162099811676
+ ]
+}

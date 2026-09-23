@@ -1,0 +1,4 @@
+2026-09-23T12:33:54Z
+cmd: cd /workspace/edaicfull && python3 -W ignore probe_boot.py
+exit 0
+2026-09-23T12:35:08Z
