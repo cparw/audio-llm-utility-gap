@@ -1,0 +1,129 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+{
+ "n": 468,
+ "n_spk": 228,
+ "fold_file": "ref/pitt_groupkfold5_mac.csv",
+ "ids": {
+  "rule": [
+   [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004,
+    14080
+   ],
+   [
+    902,
+    2152,
+    2308,
+    2753,
+    5664,
+    8996
+   ]
+  ],
+  "legacy": [
+   [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ]
+  ]
+ },
+ "fold_sizes": [
+  94,
+  94,
+  94,
+  93,
+  93
+ ],
+ "rule_norm_check": {
+  "as_saved": {
+   "mean_abs_vs_stored_p_yes": 0.005716165155644112,
+   "r": 0.9967632769488578
+  },
+  "rms_applied": {
+   "mean_abs_vs_stored_p_yes": 0.1539171929459463,
+   "r": 0.9817236880799374
+  }
+ },
+ "rule_mean_subset_mass": [
+  9.989408717354605e-06,
+  0.34920232291151515,
+  0.0014577917459296565,
+  4.116447293131775e-06,
+  8.01756577571843e-06,
+  3.4140754174480487e-07,
+  9.237675981220625e-06,
+  0.001509279744236381,
+  3.383027930148223e-05,
+  0.6477150849664861,
+  7.873523031363858e-07,
+  4.920049491880033e-05
+ ],
+ "rule_proj_auc": 0.6608485083301046,
+ "rule_gate_delta_vs_stored_pyes_auc": 0.0030802014722974835,
+ "legacy_norm_check": {
+  "as_saved": {
+   "mean_abs_vs_stored_p_yes": 0.005716165847327624,
+   "r": 0.9967632767938392
+  },
+  "rms_applied": {
+   "mean_abs_vs_stored_p_yes": 0.15391683339126616,
+   "r": 0.9817238024312159
+  }
+ },
+ "legacy_mean_subset_mass": [
+  9.989419981351915e-06,
+  0.34920271421889687,
+  0.0014577933993185532,
+  4.116451936515885e-06,
+  8.017574848221832e-06,
+  9.237686559789365e-06,
+  0.001509281484991647,
+  3.3830317926140756e-05,
+  0.6477158188942698,
+  4.920055127112514e-05
+ ],
+ "legacy_proj_auc": 0.6608485083301046,
+ "legacy_gate_delta_vs_stored_pyes_auc": 0.0030802014722974835,
+ "cos_d_rule_vs_d_legacy": 0.9999999999993913,
+ "probe_auc": 0.7709414955443626,
+ "rule": {
+  "cos_wraw_d": -0.010850170858793948,
+  "after_removal_auc": 0.7660984114684231,
+  "kept_control_auc": 0.7650329329717164,
+  "floor_mean": 0.013314196010136508,
+  "floor_lo": 0.0005065841071122309,
+  "floor_hi": 0.03723586638977869,
+  "cos_lo": -0.02335972965999573,
+  "cos_hi": 0.009861573533545142,
+  "cos_valid": 2000
+ },
+ "legacy": {
+  "cos_wraw_d": -0.010850199372951605,
+  "after_removal_auc": 0.7660984114684231,
+  "kept_control_auc": 0.7650329329717164,
+  "floor_mean": 0.01331419548289437,
+  "floor_lo": 0.0005065297168842431,
+  "floor_hi": 0.03723588369858363,
+  "cos_lo": -0.02335975628031877,
+  "cos_hi": 0.009861571240127714,
+  "cos_valid": 2000
+ }
+}

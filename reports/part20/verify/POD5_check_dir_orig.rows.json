@@ -1,0 +1,103 @@
+{
+ "rows": [
+  {
+   "id": "POD5_dir_kept_minus_removed",
+   "what": "matched control minus after-removal (same held-out-fold pooling), paired, interviewer-free",
+   "value_computed": "0.0020",
+   "value_verified": "0.0020",
+   "lo": "-0.0002",
+   "hi": "0.0041",
+   "n": 468,
+   "n_spk": 228,
+   "file": "scores/part20/POD5/POD5_direction_origrerun_check.csv",
+   "two_dp": "0.00",
+   "vs_half": "below",
+   "agree_4dp": "yes"
+  },
+  {
+   "id": "POD5_dir_orig_probe",
+   "what": "probe AUC, ORIGINAL states rerun (paper 0.7709)",
+   "value_computed": "0.7709",
+   "value_verified": "0.7709",
+   "lo": "0.7210",
+   "hi": "0.8224",
+   "n": 468,
+   "n_spk": 228,
+   "file": "scores/part20/POD5/POD5_direction_origrerun_check.csv",
+   "two_dp": "0.77",
+   "vs_half": "above",
+   "agree_4dp": "yes"
+  },
+  {
+   "id": "POD5_dir_orig_after_removal",
+   "what": "after-removal AUC, ORIGINAL states rerun (paper 0.7662)",
+   "value_computed": "0.7661",
+   "value_verified": "0.7661",
+   "lo": "0.7173",
+   "hi": "0.8155",
+   "n": 468,
+   "n_spk": 228,
+   "file": "scores/part20/POD5/POD5_direction_origrerun_check.csv",
+   "two_dp": "0.77",
+   "vs_half": "above",
+   "agree_4dp": "yes"
+  },
+  {
+   "id": "POD5_dir_orig_kept_minus_removed",
+   "what": "matched control minus after-removal, paired, ORIGINAL states rerun",
+   "value_computed": "-0.0011",
+   "value_verified": "-0.0011",
+   "lo": "-0.0031",
+   "hi": "0.0010",
+   "n": 468,
+   "n_spk": 228,
+   "file": "scores/part20/POD5/POD5_direction_origrerun_check.csv",
+   "two_dp": "-0.00",
+   "vs_half": "below",
+   "agree_4dp": "yes"
+  },
+  {
+   "id": "POD5_dir_probe_diff",
+   "what": "probe AUC, paired original(rerun) minus interviewer-free",
+   "value_computed": "-0.0248",
+   "value_verified": "-0.0248",
+   "lo": "-0.0605",
+   "hi": "0.0127",
+   "n": 468,
+   "n_spk": 228,
+   "file": "scores/part20/POD5/POD5_direction_origrerun_check.csv",
+   "two_dp": "-0.02",
+   "vs_half": "below",
+   "agree_4dp": "yes"
+  },
+  {
+   "id": "POD5_dir_after_removal_diff",
+   "what": "after-removal AUC, paired original(rerun) minus interviewer-free",
+   "value_computed": "-0.0108",
+   "value_verified": "-0.0108",
+   "lo": "-0.0473",
+   "hi": "0.0243",
+   "n": 468,
+   "n_spk": 228,
+   "file": "scores/part20/POD5/POD5_direction_origrerun_check.csv",
+   "two_dp": "-0.01",
+   "vs_half": "below",
+   "agree_4dp": "yes"
+  },
+  {
+   "id": "POD5_dir_orig_cos",
+   "what": "cos, ORIGINAL states rerun on this pod (paper -0.0109)",
+   "value_computed": "-0.0109",
+   "value_verified": "-0.0109",
+   "lo": "-0.0234",
+   "hi": "0.0099",
+   "n": 468,
+   "n_spk": 228,
+   "file": "scores/part20/POD5/POD5_direction_origrerun_check.csv",
+   "two_dp": "-0.01",
+   "vs_half": "n/a",
+   "agree_4dp": "yes"
+  }
+ ],
+ "all_agree": true
+}
