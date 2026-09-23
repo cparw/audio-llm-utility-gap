@@ -1,3 +1,5 @@
+Superseded. This is the first release's companion, kept for the record. Current numbers are in README.md and docs/.
+
 # The Representation Utility Gap in Audio LLMs for Clinical Speech
 
 Chaitanya Parwatkar, Nima Kelidari, Minoo Ahmadi, Ashutosh Chaubey, Mohammad Soleymani

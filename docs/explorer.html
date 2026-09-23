@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Utility Gap Explorer</title>
+<meta name="description" content="Interactive views over the aggregate results of The Representation Utility Gap in Audio LLMs for Clinical Speech: probe against answer, words against voice, layer by layer, and the E-DAIC audio window.">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f9f9f7; --card:#ffffff; --ink:#16181d; --ink2:#52514e; --ink3:#6f6d68;
+  --line:#e4e3dd; --axis:#c3c2b7; --hover:rgba(0,0,0,.035);
+  --accent:#1c5cab; --accent-ink:#ffffff;
+  --probe:#2a78d6; --answer:#eb6834; --warn:#d03b3b; --neutral:#9a988f;
+  --d-enc:#86b6ef; --d-proj:#5598e7; --d-lm:#2a78d6; --d-ans:#184f95;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0f1012; --card:#1a1a19; --ink:#eceae4; --ink2:#c3c2b7; --ink3:#9a988f;
+    --line:#2c2c2a; --axis:#45443f; --hover:rgba(255,255,255,.05);
+    --accent:#6da7ec; --accent-ink:#0f1012;
+    --probe:#3987e5; --answer:#d95926; --warn:#e66767; --neutral:#7a7870;
+    --d-enc:#1c5cab; --d-proj:#2a78d6; --d-lm:#5598e7; --d-ans:#9ec5f4;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0f1012; --card:#1a1a19; --ink:#eceae4; --ink2:#c3c2b7; --ink3:#9a988f;
+  --line:#2c2c2a; --axis:#45443f; --hover:rgba(255,255,255,.05);
+  --accent:#6da7ec; --accent-ink:#0f1012;
+  --probe:#3987e5; --answer:#d95926; --warn:#e66767; --neutral:#7a7870;
+  --d-enc:#1c5cab; --d-proj:#2a78d6; --d-lm:#5598e7; --d-ans:#9ec5f4;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;padding:44px 20px 80px;overflow-wrap:break-word}
+.wrap{max-width:1020px;margin:0 auto}
+a{color:var(--accent)}
+.kicker{font-size:13px;font-weight:600;margin:0 0 8px}
+.kicker a{text-decoration:none}
+h1{font-size:2rem;margin:0 0 8px;font-weight:650;line-height:1.15;letter-spacing:-.015em;text-wrap:balance}
+.sub{color:var(--ink2);margin:0 0 8px;font-size:1rem;max-width:70ch}
+.meta{color:var(--ink3);font-size:.85rem;margin:0 0 26px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tab{padding:8px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink2);
+  border-radius:999px;cursor:pointer;font-size:.85rem;font-weight:600;font-family:inherit;transition:.15s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.vt{font-size:1.1rem;font-weight:650;margin:0 0 10px}
+.toggles{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 12px}
+.toggles:empty{display:none}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid var(--line);
+  border-radius:999px;font-size:.79rem;cursor:pointer;user-select:none;font-weight:600;
+  color:var(--ink3);background:transparent;font-family:inherit;transition:.15s}
+.chip[aria-pressed="true"]{color:var(--ink);border-color:currentColor}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chip[aria-pressed="false"] i{opacity:.25}
+.chip:disabled{opacity:.45;cursor:not-allowed}
+.key{display:flex;gap:6px 16px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin:0 0 10px;align-items:center}
+.key span{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;flex:none}
+.sw.dot{width:10px;height:10px;border-radius:50%;background:var(--probe)}
+.sw.ring{width:11px;height:11px;border-radius:50%;border:2px solid var(--answer)}
+.sw.sqf{width:9px;height:9px;background:var(--d-ans)}
+.sw.sq{width:9px;height:9px;background:var(--ink2)}
+.sw.sqo{width:10px;height:10px;border:2px solid var(--warn)}
+.sw.line{width:18px;height:0;border-top:2px solid var(--probe)}
+.sw.dash{width:18px;height:0;border-top:2px dashed var(--answer)}
+.sw.band{width:14px;height:10px;background:var(--probe);opacity:.25;border-radius:2px}
+.sw.bar{width:14px;height:9px;border-radius:2px}
+.sw.wh{width:16px;height:0;border-top:1.5px solid var(--ink2)}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:inherit}
+.t{font-size:11.5px;fill:var(--ink3)}
+.v{font-size:12px;font-weight:600;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:3px;stroke-linejoin:round}
+.lab{font-size:12.5px;fill:var(--ink2)}
+.gl{stroke:var(--line);stroke-width:1}
+.hit{cursor:pointer;outline:none}
+.hit .bg{fill:transparent}
+.hit:hover .bg,.hit:focus .bg{fill:var(--hover)}
+.hit:focus-visible .bg{stroke:var(--accent);stroke-width:1.5}
+.caption{color:var(--ink2);font-size:.88rem;margin:12px 0 0;max-width:80ch}
+.caption:empty{display:none}
+.tablehead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:20px 0 4px;
+  font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:700}
+.tw{overflow-x:auto}
+.tw.tall{max-height:420px;overflow-y:auto}
+.tw.wide table{min-width:960px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);background:var(--card);position:sticky;top:0}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+td .m{color:var(--ink3)}
+td.n .m{white-space:normal}
+h2.sec{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-weight:700;margin:38px 0 12px}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:8px 18px;font-size:.9rem;max-width:80ch}
+dt{font-weight:600}
+dd{margin:0;color:var(--ink2)}
+.err{color:var(--warn);font-weight:600}
+#tip{position:fixed;left:0;top:0;opacity:0;pointer-events:none;transition:opacity .1s;z-index:9;
+  background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:7px;
+  padding:9px 12px;font-size:13px;line-height:1.5;max-width:280px;box-shadow:0 6px 22px -8px rgba(0,0,0,.35)}
+#tip.on{opacity:1}
+#tip .m{color:var(--ink3)}
+.foot{margin-top:46px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink3);font-size:.83rem;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:620px){
+  body{padding:32px 16px 60px}
+  h1{font-size:1.6rem}
+  .stage{padding:12px}
+  dl{grid-template-columns:1fr;gap:2px 0}
+  dd{margin-bottom:10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker"><a href="./">The Representation Utility Gap in Audio LLMs for Clinical Speech</a></p>
+  <h1>Explore the numbers</h1>
+  <p class="sub">Four views over the same data file behind the paper's tables. Pick a view, then hover or tap
+  any mark. The table under each chart holds every value.</p>
+  <p class="meta">Qwen2.5-Omni unless a view says otherwise. Scores are AUC: 0.5 is chance and 1.0 is perfect.
+  Only aggregate numbers, no audio or transcripts.</p>
+
+  <div class="tabs" role="tablist" aria-label="Views">
+    <button class="tab" role="tab" data-v="probe" aria-selected="true" aria-controls="stage">Probe or answer</button>
+    <button class="tab" role="tab" data-v="words" aria-selected="false" aria-controls="stage" tabindex="-1">Words against voice</button>
+    <button class="tab" role="tab" data-v="layers" aria-selected="false" aria-controls="stage" tabindex="-1">Layer by layer</button>
+    <button class="tab" role="tab" data-v="window" aria-selected="false" aria-controls="stage" tabindex="-1">E-DAIC audio window</button>
+  </div>
+
+  <div class="stage" id="stage" role="tabpanel">
+    <h2 class="vt" id="vt">Loading the data</h2>
+    <div class="toggles" id="toggles"></div>
+    <div class="key" id="key"></div>
+    <svg id="cv" role="group" aria-label="Chart for the selected view"></svg>
+    <p class="caption" id="cap"></p>
+    <div class="tablehead"><span>Values</span>
+      <button type="button" class="chip" id="dp" aria-pressed="false">4 decimals</button></div>
+    <div class="tw" id="tbl"></div>
+    <p class="caption" id="tnote"></p>
+  </div>
+
+  <h2 class="sec">About these numbers</h2>
+  <dl id="about"></dl>
+  <p class="caption">All values come from <a href="data/explorer_data.json">data/explorer_data.json</a>. This
+  page prints 2 decimals, rounding half away from zero. Where a 4 decimal value sits exactly on a tie, the
+  full value in the source file decides.</p>
+
+  <div class="foot">
+    <span>University of Southern California, Prof. Mohammad Soleymani's group</span>
+    <span><a href="./">Project page</a> &middot;
+      <a href="https://github.com/parw8649/audio-llm-utility-gap">Code (private until acceptance)</a> &middot;
+      ICASSP 2027 submission, under review</span>
+  </div>
+</div>
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var NS="http://www.w3.org/2000/svg";
+var tip=document.getElementById("tip");
+var D=null,view="probe",dp4=false;
+var st={probe:{enc:true,lm:true,ans:true},words:"depression",layers:"pcgita",window:{s300:true,whole:true}};
+
+/* 2 decimals, half away from zero on the decimal digits. One value in the file sits on a
+   4 decimal tie whose full value rounds the other way, so it is pinned here. */
+var PIN={"-0.3950":"-0.39"};
+function f2(v,signed){
+  if(v==null||isNaN(v))return "n/a";
+  var k=v.toFixed(4);if(PIN[k])return PIN[k];
+  var neg=v<0,s=Math.abs(v).toFixed(6),p=s.split("."),
+      n=parseInt(p[0],10)*100+parseInt(p[1].slice(0,2),10);
+  if(parseInt(p[1].slice(2),10)>=5000)n+=1;
+  var out=Math.floor(n/100)+"."+("0"+(n%100)).slice(-2);
+  if(n===0)return "0.00";
+  return (neg?"-":(signed?"+":""))+out;}
+function f4(v,signed){if(v==null)return "n/a";var s=v.toFixed(4);if(s==="-0.0000")s="0.0000";
+  return (signed&&v>0?"+":"")+s;}
+function fm(v,signed){return dp4?f4(v,signed):f2(v,signed);}
+function both(v,signed){return "<b>"+f2(v,signed)+"</b> <span class=m>("+f4(v,signed)+")</span>";}
+function iv(a,four){if(!a)return "";return "["+(four?f4(a[0]):f2(a[0]))+", "+(four?f4(a[1]):f2(a[1]))+"]";}
+function ivt(a){return iv(a,dp4);}
+
+function el(t,a){var n=document.createElementNS(NS,t);for(var k in a){if(a[k]!=null)n.setAttribute(k,a[k]);}return n;}
+function add(p,t,a,txt){var n=el(t,a||{});if(txt!=null)n.textContent=txt;p.appendChild(n);return n;}
+
+function place(x,y){var r=tip.getBoundingClientRect(),W=document.documentElement.clientWidth,H=innerHeight;
+  var l=x+14,t=y-r.height-12;
+  if(l+r.width>W-8)l=Math.max(8,x-r.width-14);
+  if(t<8)t=Math.min(H-r.height-8,y+18);
+  tip.style.left=l+"px";tip.style.top=t+"px";}
+function show(h,x,y){tip.innerHTML=h;tip.classList.add("on");place(x,y);}
+function hide(){tip.classList.remove("on");}
+function plain(h){return h.replace(/<br>/g,". ").replace(/<[^>]+>/g,"");}
+function bind(node,html,opt){
+  var get=typeof html==="function"?html:function(){return html;};
+  node.classList.add("hit");
+  if(!(opt&&opt.nofocus)){node.setAttribute("tabindex","0");node.setAttribute("role","img");node.setAttribute("aria-label",plain(get()));}
+  node.addEventListener("pointermove",function(e){if(e.pointerType==="mouse")show(get(e),e.clientX,e.clientY);});
+  node.addEventListener("pointerleave",function(e){if(e.pointerType==="mouse"){hide();if(opt&&opt.leave)opt.leave();}});
+  node.addEventListener("click",function(e){e.stopPropagation();show(get(e),e.clientX,e.clientY);});
+  node.addEventListener("focus",function(){var r=node.getBoundingClientRect();show(get(),r.left+Math.min(r.width/2,180),r.top);});
+  node.addEventListener("blur",hide);}
+document.addEventListener("click",hide);
+addEventListener("scroll",hide,{passive:true});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")hide();});
+
+var cv=document.getElementById("cv");
+function begin(){while(cv.firstChild)cv.removeChild(cv.firstChild);
+  var W=Math.round(cv.getBoundingClientRect().width)||Math.round(cv.parentNode.clientWidth)||640;
+  W=Math.max(W,260);return {s:cv,W:W,narrow:W<560};}
+function size(o,H){o.s.setAttribute("viewBox","0 0 "+o.W+" "+H);o.s.setAttribute("height",H);}
+function svgX(e,W){var r=cv.getBoundingClientRect();return (e.clientX-r.left)*(W/r.width);}
+function labelW(s,labels,W){var mx=0;labels.forEach(function(t){var n=add(s,"text",{"class":"lab",x:0,y:-50},t),w=0;
+  try{w=n.getComputedTextLength();}catch(e){}if(!w)w=t.length*6.9;if(w>mx)mx=w;s.removeChild(n);});
+  return Math.round(Math.min(W*.42,mx+20));}
+function xgrid(s,X,ticks,y0,y1,fmt){ticks.forEach(function(t){
+  add(s,"line",{"class":"gl",x1:X(t),y1:y0,x2:X(t),y2:y1});
+  add(s,"text",{"class":"t",x:X(t),y:y1+15,"text-anchor":"middle"},fmt?fmt(t):t.toFixed(1));});}
+function chance(s,X,y0,y1,solid){
+  add(s,"line",{x1:X(.5),y1:y0,x2:X(.5),y2:y1,style:"stroke:var(--ink3);stroke-width:1.2"+(solid?"":";stroke-dasharray:2 3")});
+  add(s,"text",{"class":"t",x:X(.5),y:y1+30,"text-anchor":"middle"},"chance");}
+function rowLabel(g,x,cy,lines){
+  if(lines.length===1){add(g,"text",{"class":"lab",x:x,y:cy+4,"text-anchor":"end"},lines[0]);return;}
+  add(g,"text",{"class":"lab",x:x,y:cy-3,"text-anchor":"end"},lines[0]);
+  add(g,"text",{"class":"t",x:x,y:cy+11,"text-anchor":"end"},lines[1]);}
+function whisker(g,X,a,y,color,halo){if(!a)return;
+  (halo?["stroke:var(--card);stroke-width:3.5;stroke-linecap:round"]:[]).concat(["stroke:"+color+";stroke-width:1.3"]).forEach(function(st){
+    add(g,"line",{x1:X(a[0]),y1:y,x2:X(a[1]),y2:y,style:st});
+    [a[0],a[1]].forEach(function(b){add(g,"line",{x1:X(b),y1:y-3,x2:X(b),y2:y+3,style:st});});});}
+function tbl(head,rows){return "<table><thead><tr>"+head.map(function(c){return "<th>"+c+"</th>";}).join("")+
+  "</tr></thead><tbody>"+rows.map(function(r){return "<tr>"+r.map(function(c,i){return "<td"+(i&&/^[-+0-9]/.test(String(c))?" class=n":"")+">"+c+"</td>";}).join("")+"</tr>";}).join("")+
+  "</tbody></table>";}
+function setUI(o){document.getElementById("vt").textContent=o.title;
+  document.getElementById("key").innerHTML=o.key||"";
+  document.getElementById("cap").innerHTML=o.cap||"";}
+function setTable(h,note,cls){var t=document.getElementById("tbl");t.innerHTML=h;t.className="tw"+(cls?" "+cls:"");
+  document.getElementById("tnote").innerHTML=note||"";}
+function chips(list,isOn,onClick){var box=document.getElementById("toggles");
+  box.innerHTML=list.map(function(c){return '<button type="button" class="chip" data-k="'+c[0]+'" aria-pressed="'+isOn(c[0])+'">'+
+    (c[2]?'<i style="background:'+c[2]+'"></i>':"")+c[1]+"</button>";}).join("");
+  Array.prototype.forEach.call(box.querySelectorAll(".chip"),function(b){b.addEventListener("click",function(e){
+    e.stopPropagation();onClick(b.getAttribute("data-k"));render();});});}
+
+/* ---------- view 1: probe or answer ---------- */
+function vProbe(){
+  var T1=D.table1,rows=T1.rows,S=st.probe;
+  chips([["enc","encoder probe","var(--probe)"],["lm","language model probe","var(--d-ans)"],["ans","zero-shot answer","var(--answer)"]],
+    function(k){return S[k];},function(k){S[k]=!S[k];if(!S.enc&&!S.lm&&!S.ans)S[k]=true;});
+  setUI({title:T1.title,
+    key:'<span><i class="sw dot"></i>encoder probe</span><span><i class="sw sqf"></i>language model probe</span>'+
+        '<span><i class="sw ring"></i>zero-shot answer</span><span><i class="sw wh"></i>95% interval, where verified</span>',
+    cap:T1.caption+" Probe intervals are drawn only for Pitt and E-DAIC, the two sets where they are verified on the paper's estimator."+
+      " Language model probe shown only for Pitt and E-DAIC, where it is verified."});
+  var o=begin(),W=o.W,s=o.s,LW=labelW(s,rows.map(function(r){return r.dataset;}).concat(rows.map(function(r){return r.condition;})),W),R=16,T=4,rowH=40,B=40,H=T+rows.length*rowH,yb=H;
+  H+=B;size(o,H);
+  var x0=LW,x1=W-R,X=function(v){return x0+(v-.4)/.6*(x1-x0);};
+  xgrid(s,X,[.4,.5,.6,.7,.8,.9,1],T,yb);chance(s,X,T,yb);
+  rows.forEach(function(r,i){
+    var y=T+i*rowH,cy=y+rowH/2,g=add(s,"g",{});
+    add(g,"rect",{"class":"bg",x:0,y:y+1,width:W,height:rowH-2,rx:4});
+    rowLabel(g,LW-12,cy,[r.dataset,r.condition]);
+    var vals=[];if(S.ans)vals.push(r.zero_shot.auc);if(S.enc)vals.push(r.probe_encoder.auc);if(S.lm&&r.probe_lm)vals.push(r.probe_lm.auc);
+    if(vals.length>1)add(g,"line",{x1:X(Math.min.apply(0,vals)),y1:cy,x2:X(Math.max.apply(0,vals)),y2:cy,style:"stroke:var(--axis);stroke-width:2"});
+    if(S.enc)whisker(g,X,r.probe_encoder.ci,cy-9,"var(--probe)");
+    if(S.lm&&r.probe_lm)whisker(g,X,r.probe_lm.ci,cy+9,"var(--d-ans)");
+    if(S.ans)whisker(g,X,r.zero_shot.ci,cy,"var(--answer)");
+    if(S.ans)add(g,"circle",{cx:X(r.zero_shot.auc),cy:cy,r:5,style:"fill:var(--card);stroke:var(--answer);stroke-width:2"});
+    if(S.lm&&r.probe_lm)add(g,"rect",{x:X(r.probe_lm.auc)-4.5,y:cy-4.5,width:9,height:9,style:"fill:var(--d-ans);stroke:var(--card);stroke-width:1.5"});
+    if(S.enc)add(g,"circle",{cx:X(r.probe_encoder.auc),cy:cy,r:5.5,style:"fill:var(--probe);stroke:var(--card);stroke-width:1.5"});
+    var h="<b>"+r.dataset+"</b> <span class=m>"+r.condition+", "+r.language+"</span><br>"+
+      "<span class=m>"+r.clips+" clips, "+r.speakers+" speakers, "+r.audio_heard+"</span><br>"+
+      "zero-shot answer "+both(r.zero_shot.auc)+" "+iv(r.zero_shot.ci)+"<br>"+
+      "encoder probe "+both(r.probe_encoder.auc)+(r.probe_encoder.ci?" "+iv(r.probe_encoder.ci):"")+"<br>"+
+      (r.probe_lm?"language model probe "+both(r.probe_lm.auc)+(r.probe_lm.ci?" "+iv(r.probe_lm.ci):"")+"<br>":"")+
+      "gap, encoder probe minus answer "+both(r.gap.value,true)+(r.gap.ci?" "+iv(r.gap.ci):"");
+    bind(g,h);
+  });
+  var anyNote=false;
+  setTable(tbl(["Dataset","Condition","Language","Clips","Speakers","Audio heard","Zero-shot answer [95%]",
+    "Encoder probe","Language model probe","Gap, encoder probe minus answer"],
+    rows.map(function(r){var sp=r.speakers+(r.speakers_note?" *":"");if(r.speakers_note)anyNote=true;
+      var gap=fm(r.gap.value,true)+"<br>"+(r.gap.ci?"<span class=m>"+ivt(r.gap.ci)+"</span>":
+        '<span class=m style="white-space:normal">'+(r.gap.excludes_zero?"(clears zero, one split)":"(does not clear zero, one split)")+"</span>");
+      return [r.dataset,r.condition,r.language,r.clips,sp,r.audio_heard,fm(r.zero_shot.auc)+"<br><span class=m>"+ivt(r.zero_shot.ci)+"</span>",
+        fm(r.probe_encoder.auc)+(r.probe_encoder.ci?"<br><span class=m>"+ivt(r.probe_encoder.ci)+"</span>":""),
+        r.probe_lm?fm(r.probe_lm.auc)+(r.probe_lm.ci?"<br><span class=m>"+ivt(r.probe_lm.ci)+"</span>":""):"not verified",gap];})),
+    (anyNote?"* "+rows.filter(function(r){return r.speakers_note;})[0].speakers_note+" ":"")+
+    "Gap intervals for Pitt and E-DAIC are paired, with the probe averaged over five fold assignments. For the other "+
+    "five sets the call on zero uses one saved split, so its interval is not shown.","wide");
+}
+
+/* ---------- view 2: words against voice ---------- */
+function vWords(){
+  var T2=D.table2,k=st.words,set=T2.settings[k];
+  chips([["depression","Depression, E-DAIC pairs"],["alzheimers","Alzheimer's, Pitt"]],
+    function(x){return x===k;},function(x){st.words=x;});
+  var counts=k==="depression"
+    ?set.conflict_segments+" conflict segments and "+set.agreement_segments+" distinct agreement segments from "+set.conflict_speakers+" speakers."
+    :set.conflict_segments+" conflict segments from "+set.conflict_speakers+" speakers and "+set.agreement_segments+
+     " agreement segments from "+set.agreement_speakers+" speakers, "+set.speakers_in_both+" speakers in both."+
+     (set.speakers_in_both_note?" "+set.speakers_in_both_note:"");
+  setUI({title:T2.title+": "+(k==="depression"?"depression (E-DAIC)":"Alzheimer's (Pitt)"),
+    key:'<span><i class="sw sq"></i>words agree with the label</span><span><i class="sw sqo"></i>words point away from the label</span>'+
+        '<span><i class="sw wh"></i>95% interval</span>',
+    cap:T2.caption+" "+counts+" "+set.note});
+  var rows=T2.rows,o=begin(),W=o.W,s=o.s,LW=labelW(s,rows.map(function(r){return r.model;}),W),R=16,T=4,rowH=36,B=40,
+      H=T+rows.length*rowH,yb=H;H+=B;size(o,H);
+  var x0=LW,x1=W-R,X=function(v){return x0+v*(x1-x0);};
+  xgrid(s,X,[0,.25,.5,.75,1],T,yb,function(t){return t.toFixed(2);});chance(s,X,T,yb,true);
+  var notes=[];
+  rows.forEach(function(r,i){
+    var c=r[k],y=T+i*rowH,cy=y+rowH/2,g=add(s,"g",{});
+    add(g,"rect",{"class":"bg",x:0,y:y+1,width:W,height:rowH-2,rx:4});
+    rowLabel(g,LW-12,cy,[r.model]);
+    add(g,"line",{x1:X(c.conflict.auc),y1:cy,x2:X(c.agreement.auc),y2:cy,style:"stroke:var(--axis);stroke-width:2"});
+    whisker(g,X,c.agreement.ci,cy-7,"var(--ink2)");
+    whisker(g,X,c.conflict.ci,cy+7,"var(--warn)");
+    add(g,"rect",{x:X(c.agreement.auc)-4.5,y:cy-4.5,width:9,height:9,style:"fill:var(--ink2);stroke:var(--card);stroke-width:1.5"});
+    add(g,"rect",{x:X(c.conflict.auc)-5,y:cy-5,width:10,height:10,style:"fill:none;stroke:var(--warn);stroke-width:2"});
+    var h="<b>"+r.model+"</b><br>words point away "+both(c.conflict.auc)+" "+iv(c.conflict.ci)+
+      "<br>words agree "+both(c.agreement.auc)+" "+iv(c.agreement.ci)+
+      "<br>conflict minus agreement "+(c.difference?both(c.difference.value,true)+" "+iv(c.difference.ci):"<span class=m>not available</span>");
+    if(c.note)h+="<br><span class=m>"+c.note+"</span>";
+    if(c.difference_note)h+="<br><span class=m>"+c.difference_note+"</span>";
+    var mn=[c.note,c.difference_note].filter(Boolean);
+    if(mn.length)notes.push(r.model+": "+mn.join(" "));
+    bind(g,h);
+  });
+  setTable(tbl(["Model","Words point away [95%]","Words agree [95%]","Conflict minus agreement [95%]"],
+    rows.map(function(r){var c=r[k];return [r.model,fm(c.conflict.auc)+" "+ivt(c.conflict.ci),fm(c.agreement.auc)+" "+ivt(c.agreement.ci),
+      c.difference?fm(c.difference.value,true)+" "+ivt(c.difference.ci):"not available"];})),notes.join(" "));
+}
+
+/* ---------- view 3: layer by layer ---------- */
+var SER_LABEL={pcgita:"PC-GITA (Parkinson's)",pitt:"Pitt (Alzheimer's)",edaic_300s:"E-DAIC, first 300 s",edaic_whole:"E-DAIC, up to 15 min"};
+var SER_NOTE={pcgita:"These are the saved single-split curves. They were not refit independently, so read the shape, not single points.",
+  pitt:"A refit on another machine moves single Pitt layers by up to 0.05, so read the shape, not single points.",
+  edaic_300s:"The model's audio processor keeps only the first 300 s, which cuts 217 of the 275 windows. These are the saved single-split curves. They were not refit independently, so read the shape, not single points.",
+  edaic_whole:"Heard with the 300 s cut lifted. These curves match a rerun on matching libraries within 0.002 per stage, not to 4 decimals."};
+function stageName(k){return k<32?"audio encoder layer "+k:(k===32?"language model layer 0 (projector output)":"language model layer "+(k-32));}
+function vLayers(){
+  var Lr=D.layers,sid=st.layers,ser=Lr.series.filter(function(x){return x.id===sid;})[0];
+  chips(Lr.series.map(function(x){return [x.id,SER_LABEL[x.id]||x.label];}),function(x){return x===sid;},function(x){st.layers=x;});
+  setUI({title:Lr.title+": "+(SER_LABEL[sid]||ser.label),
+    key:'<span><i class="sw line"></i>linear probe, each stage</span><span><i class="sw dash"></i>zero-shot answer</span><span><i class="sw band"></i>gap</span>',
+    cap:"Linear probe AUC at every stage of Qwen2.5-Omni: "+Lr.encoder_layers+" audio encoder layers, then "+Lr.lm_stages+
+      " language model stages at the audio token positions. Stage 0 of the language model is the projector output. Each point is one split's "+
+      "out-of-fold AUC with no layer selection, so peaks sit a little above the nested values in the text. The dashed line is the zero-shot answer. "+
+      "Audio heard: "+ser.window+"."+(SER_NOTE[sid]?" "+SER_NOTE[sid]:"")});
+  var o=begin(),W=o.W,s=o.s,nar=o.narrow,L=nar?30:40,R=nar?36:44,top=18,PH=nar?210:280,B=46,H=top+PH+B;size(o,H);
+  var G=2.4,S=31+G+28,x0=L,x1=W-R,X=function(u){return x0+u/S*(x1-x0);},pos=function(k){return k<32?k:31+G+(k-32);},unit=(x1-x0)/S;
+  var py=top,Y=function(v){return py+(.95-v)/.5*PH;},bx0=X(31.55),bx1=X(31+G-.55);
+  add(s,"text",{"class":"t",x:(bx0+bx1)/2,y:top-5,"text-anchor":"middle","font-style":"italic"},"projector");
+  add(s,"rect",{x:bx0,y:py,width:Math.max(2,bx1-bx0),height:PH,style:"fill:var(--line)"});
+  [.5,.6,.7,.8,.9].forEach(function(t){
+    add(s,"line",{x1:x0,y1:Y(t),x2:x1,y2:Y(t),style:t===.5?"stroke:var(--axis);stroke-dasharray:2 3":"stroke:var(--line)"});
+    add(s,"text",{"class":"t",x:x0-6,y:Y(t)+4,"text-anchor":"end"},t.toFixed(1));});
+  add(s,"text",{"class":"t",x:x1-2,y:Y(.5)-4,"text-anchor":"end"},"chance");
+  var ya=Y(ser.answer),defs=add(s,"defs",{});
+  add(add(defs,"clipPath",{id:"xa"}),"rect",{x:x0,y:py,width:x1-x0,height:Math.max(0,ya-py)});
+  add(add(defs,"clipPath",{id:"xb"}),"rect",{x:x0,y:ya,width:x1-x0,height:Math.max(0,py+PH-ya)});
+  var segs=[ser.encoder.map(function(v,i){return [X(i),Y(v)];}),ser.lm.map(function(v,j){return [X(31+G+j),Y(v)];})];
+  segs.forEach(function(pts){var line=pts.map(function(q,i){return (i?"L":"M")+q[0].toFixed(1)+" "+q[1].toFixed(1);}).join(""),
+    area=line+"L"+pts[pts.length-1][0].toFixed(1)+" "+ya.toFixed(1)+"L"+pts[0][0].toFixed(1)+" "+ya.toFixed(1)+"Z";
+    add(s,"path",{d:area,"clip-path":"url(#xa)",style:"fill:var(--probe);opacity:.16"});
+    add(s,"path",{d:area,"clip-path":"url(#xb)",style:"fill:var(--answer);opacity:.18"});});
+  add(s,"line",{x1:x0,y1:ya,x2:x1,y2:ya,style:"stroke:var(--answer);stroke-width:1.8;stroke-dasharray:6 4"});
+  add(s,"text",{"class":"v",x:x1+5,y:ya+4},f2(ser.answer));
+  segs.forEach(function(pts){
+    add(s,"path",{d:pts.map(function(q,i){return (i?"L":"M")+q[0].toFixed(1)+" "+q[1].toFixed(1);}).join(""),
+      style:"fill:none;stroke:var(--probe);stroke-width:2;stroke-linejoin:round"});
+    if(unit>=5)pts.forEach(function(q){add(s,"circle",{cx:q[0].toFixed(1),cy:q[1].toFixed(1),r:2,style:"fill:var(--probe)"});});});
+  var yb=py+PH;
+  /* on a phone the projector band is only a few px wide, so "31" and "0" step away from it */
+  var jo=nar?2:-3;
+  [0,8,16,24,31].forEach(function(k){if(nar&&(k===8||k===24))return;
+    add(s,"text",{"class":"t",x:X(k)-(k===31?jo:0),y:yb+15,"text-anchor":k===31?"end":"middle"},k);});
+  [0,7,14,21,28].forEach(function(j){if(nar&&(j===7||j===21))return;
+    add(s,"text",{"class":"t",x:X(31+G+j)+(j===0?jo:0),y:yb+15,"text-anchor":j===0?"start":"middle"},j);});
+  add(s,"text",{"class":"lab",x:nar?x0:X(15.5),y:yb+34,"text-anchor":nar?"start":"middle"},nar?"encoder layer":"audio encoder layer");
+  add(s,"text",{"class":"lab",x:nar?x1:X(31+G+14),y:yb+34,"text-anchor":nar?"end":"middle"},"language model layer");
+  var hl=add(s,"line",{x1:0,y1:py,x2:0,y2:py+PH,style:"stroke:var(--ink3);opacity:0"}),
+      hc=add(s,"circle",{r:5,cx:-20,cy:-20,style:"fill:var(--probe);stroke:var(--card);stroke-width:2;opacity:0"});
+  var ov=add(s,"rect",{x:x0-2,y:py,width:x1-x0+4,height:PH,style:"fill:transparent"});
+  bind(ov,function(e){if(!e)return "";
+    var u=(svgX(e,W)-x0)/(x1-x0)*S,b=0,bd=1e9;
+    for(var k=0;k<61;k++){var dd=Math.abs(pos(k)-u);if(dd<bd){bd=dd;b=k;}}
+    var v=b<32?ser.encoder[b]:ser.lm[b-32],x=X(pos(b));
+    hl.setAttribute("x1",x);hl.setAttribute("x2",x);hl.style.opacity=.6;hc.setAttribute("cx",x);hc.setAttribute("cy",Y(v));hc.style.opacity=1;
+    return "<b>"+(SER_LABEL[sid]||ser.label)+"</b><br>"+stageName(b)+"<br>probe <b>"+f2(v)+"</b><br>zero-shot answer "+both(ser.answer);
+  },{nofocus:true,leave:function(){hl.style.opacity=0;hc.style.opacity=0;}});
+  var trs=[];for(var k=0;k<61;k++){var v=k<32?ser.encoder[k]:ser.lm[k-32];trs.push([stageName(k),f2(v)]);}
+  setTable(tbl(["Stage","Probe AUC"],trs),
+    (sid==="edaic_whole"?"Single split values. This series is not in the paper figure.":"Single split values, as drawn in the paper figure.")+
+    " Printed at 2 decimals only, so read the shape, not single points. Zero-shot answer for this series: "+fm(ser.answer)+".","tall");
+}
+
+/* ---------- view 4: E-DAIC audio window ---------- */
+var STREAM_SHORT={zero_shot:"answer",encoder:"encoder",projector:"projector",lm:"language model",answer_state:"answer state"};
+var STREAM_C={zero_shot:"var(--answer)",encoder:"var(--d-enc)",projector:"var(--d-proj)",lm:"var(--d-lm)",answer_state:"var(--d-ans)"};
+function vWindow(){
+  var EW=D.edaic_window,S=st.window;
+  chips([["s300","first 300 s"],["whole","up to 15 min"]],function(k){return S[k];},function(k){S[k]=!S[k];if(!S.s300&&!S.whole)S[k]=true;});
+  setUI({title:EW.title,
+    key:'<span><i class="sw bar" style="background:var(--ink2);opacity:.45"></i>faded bar: first 300 s</span>'+
+        '<span><i class="sw bar" style="background:var(--ink2)"></i>solid bar: up to 15 min</span><span><i class="sw wh"></i>95% interval</span>',
+    cap:EW.caption+" "+EW.clips+" speakers, one window each. "+EW.windows.s300+" "+EW.windows.whole});
+  var rows=EW.rows,wins=["s300","whole"].filter(function(w){return S[w];}),o=begin(),W=o.W,s=o.s,
+      nm=function(r){return o.narrow?STREAM_SHORT[r.stream]||r.label:r.label;},
+      LW=labelW(s,rows.map(nm),W),R=44,T=4,bh=11,rowH=wins.length*(bh+4)+14,B=40,
+      H=T+rows.length*rowH,yb=H;H+=B;size(o,H);
+  var x0=LW,x1=W-R,X=function(v){return x0+(v-.4)/.6*(x1-x0);};
+  xgrid(s,X,[.4,.5,.6,.7,.8,.9,1],T,yb);chance(s,X,T,yb);
+  rows.forEach(function(r,i){
+    var y=T+i*rowH,g=add(s,"g",{});
+    add(g,"rect",{"class":"bg",x:0,y:y+1,width:W,height:rowH-2,rx:4});
+    add(g,"text",{"class":"lab",x:LW-12,y:y+rowH/2+4,"text-anchor":"end"},nm(r));
+    wins.forEach(function(w,j){var c=r[w],by=y+7+j*(bh+4),cy=by+bh/2;
+      add(g,"rect",{x:X(.5),y:by,width:Math.max(1,X(c.auc)-X(.5)),height:bh,rx:2.5,
+        style:"fill:"+STREAM_C[r.stream]+(w==="s300"?";opacity:.45":"")});
+      whisker(g,X,c.ci,cy,"var(--ink)",true);
+      add(g,"text",{"class":"v",x:X(c.ci[1])+6,y:cy+4},f2(c.auc));});
+    var h="<b>"+r.label+"</b>";
+    ["s300","whole"].forEach(function(w){var c=r[w];
+      h+="<br>"+(w==="s300"?"first 300 s":"up to 15 min")+" "+both(c.auc)+" "+iv(c.ci);
+      if(c.minus_answer)h+="<br><span class=m>minus the answer "+f2(c.minus_answer.value,true)+" "+iv(c.minus_answer.ci)+"</span>";});
+    if(r.whole_minus_300s)h+="<br>change, up to 15 min minus first 300 s "+both(r.whole_minus_300s.value,true)+" "+iv(r.whole_minus_300s.ci);
+    bind(g,h);
+  });
+  var zs=rows.filter(function(r){return r.whole_minus_300s;})[0];
+  setTable(tbl(["Stream","First 300 s [95%]","Minus the answer [95%]","Up to 15 min [95%]","Minus the answer [95%]"],
+    rows.map(function(r){return [r.label,fm(r.s300.auc)+" "+ivt(r.s300.ci),r.s300.minus_answer?fm(r.s300.minus_answer.value,true)+" "+ivt(r.s300.minus_answer.ci):"",
+      fm(r.whole.auc)+" "+ivt(r.whole.ci),r.whole.minus_answer?fm(r.whole.minus_answer.value,true)+" "+ivt(r.whole.minus_answer.ci):""];})),
+    zs?"Zero-shot answer, up to 15 min minus first 300 s: "+fm(zs.whole_minus_300s.value,true)+" "+ivt(zs.whole_minus_300s.ci)+
+      ", paired over the same speakers. Differences to the answer are paired within each window.":"");
+}
+
+var VIEWS={probe:vProbe,words:vWords,layers:vLayers,window:vWindow};
+function render(){hide();
+  var b=document.getElementById("dp"),off=view==="layers";b.disabled=off;
+  if(off)b.title="This view prints 2 decimals only";else b.removeAttribute("title");
+  if(D)VIEWS[view]();}
+function select(v,focus){if(!VIEWS[v])v="probe";view=v;
+  Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(t){var on=t.getAttribute("data-v")===v;
+    t.setAttribute("aria-selected",on?"true":"false");t.setAttribute("tabindex",on?"0":"-1");if(on&&focus)t.focus();});
+  try{history.replaceState(null,"","#"+v);}catch(e){}
+  render();}
+var tabs=Array.prototype.slice.call(document.querySelectorAll(".tab"));
+tabs.forEach(function(t,i){
+  t.addEventListener("click",function(e){e.stopPropagation();select(t.getAttribute("data-v"));});
+  t.addEventListener("keydown",function(e){var j=null;
+    if(e.key==="ArrowRight")j=(i+1)%tabs.length;else if(e.key==="ArrowLeft")j=(i-1+tabs.length)%tabs.length;
+    if(j!=null){e.preventDefault();select(tabs[j].getAttribute("data-v"),true);}});});
+document.getElementById("dp").addEventListener("click",function(e){e.stopPropagation();dp4=!dp4;
+  this.setAttribute("aria-pressed",dp4?"true":"false");render();});
+
+function about(){var m=D.meta,rows=[["Metric",m.metric],["Probe",m.probe],["Answer",m.answer],["Intervals",m.intervals],
+  ["Rounding",m.rounding],["Privacy",m.privacy]];
+  document.getElementById("about").innerHTML=rows.map(function(r){return "<dt>"+r[0]+"</dt><dd>"+r[1]+"</dd>";}).join("");}
+
+addEventListener("hashchange",function(){var v=(location.hash||"").replace("#","");if(D&&VIEWS[v]&&v!==view)select(v);});
+var lastW=document.documentElement.clientWidth,rt;
+addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(function(){var w=document.documentElement.clientWidth;
+  if(w!==lastW){lastW=w;render();}},120);});
+
+fetch("data/explorer_data.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
+.then(function(d){D=d;about();select((location.hash||"").replace("#","")||"probe");})
+.catch(function(){document.getElementById("vt").innerHTML='<span class="err">The data file did not load.</span>';
+  document.getElementById("cap").innerHTML='This page reads <a href="data/explorer_data.json">data/explorer_data.json</a>. '+
+  'Open it through a web server, for example the published page, rather than straight from disk.';});
+})();
+</script>
+</body>
+</html>
