@@ -1,0 +1,101 @@
+{
+ "result": "paired AUC difference, balanced LoRA (PART20 POD2) minus balanced projector fine-tune (PART20 POD1), Pitt 468, Qwen2.5-Omni, out of fold, same folds and same per-clip weighting",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_minus_pod1_projector_pitt_perclip.csv",
+ "sources_absolute": [
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_oof.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD1/balanced_ft_pitt_oof.csv"
+ ],
+ "sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_oof.csv": "2278a5cf199b4abc094539d797ed2e8d1b894fddcb4bc51daeb87c6a96b86ae2",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD1/balanced_ft_pitt_oof.csv": "fc4dca185fc3240ef9683fb9fd2014ad4d2b9b997cff9ae4de0538781406b6e9"
+ },
+ "n": 468,
+ "n_speakers": 228,
+ "seed": "default_rng(0) fresh per cell, 2000 draws, one speaker draw per replicate scores both models",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "like_for_like": "2logit: LoRA p_yes_2logit vs POD1 p_yes (both softmax over [' Yes',' No']); multivariant: LoRA p_yes vs POD1 p_yes_multi (both rule 3)",
+ "note": "POD1 answer_mass min is 4.0e-05 (its file); the LoRA answer_mass min is 0.9970",
+ "results": {
+  "overall.2logit": {
+   "lora": 0.7200406819062379,
+   "proj": 0.7300561797752809,
+   "proj_ci": [
+    0.6655924920305667,
+    0.790524456811967
+   ],
+   "diff": -0.010015497869042989,
+   "lo": -0.09005085782724306,
+   "hi": 0.06775004194302588,
+   "n": 468,
+   "n_spk": 228
+  },
+  "conflict.2logit": {
+   "lora": 0.577007700770077,
+   "proj": 0.4693069306930693,
+   "proj_ci": [
+    0.36859289888724367,
+    0.5854160116554863
+   ],
+   "diff": 0.10770077007700773,
+   "lo": -0.02629535360030491,
+   "hi": 0.23831792558168566,
+   "n": 146,
+   "n_spk": 100
+  },
+  "agreement.2logit": {
+   "lora": 0.7843219159008633,
+   "proj": 0.8279428730556551,
+   "proj_ci": [
+    0.7731564111444624,
+    0.8792242163491342
+   ],
+   "diff": -0.04362095715479175,
+   "lo": -0.12858548618770893,
+   "hi": 0.032505900955948935,
+   "n": 322,
+   "n_spk": 175
+  },
+  "overall.multivariant": {
+   "lora": 0.7112553273924835,
+   "proj": 0.7407012785741961,
+   "proj_ci": [
+    0.6761440329138664,
+    0.799398276026915
+   ],
+   "diff": -0.02944595118171256,
+   "lo": -0.1151580039470969,
+   "hi": 0.05254170132948335,
+   "n": 468,
+   "n_spk": 228
+  },
+  "conflict.multivariant": {
+   "lora": 0.5735973597359736,
+   "proj": 0.4671067106710671,
+   "proj_ci": [
+    0.36407284265176015,
+    0.5817801006581493
+   ],
+   "diff": 0.10649064906490646,
+   "lo": -0.03240677884322628,
+   "hi": 0.2409816704459561,
+   "n": 146,
+   "n_spk": 100
+  },
+  "agreement.multivariant": {
+   "lora": 0.7724469904921033,
+   "proj": 0.8432987229979712,
+   "proj_ci": [
+    0.7925142837726933,
+    0.8924371850820444
+   ],
+   "diff": -0.07085173250586785,
+   "lo": -0.1585605521017349,
+   "hi": 0.00863086831691631,
+   "n": 322,
+   "n_spk": 175
+  }
+ },
+ "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/compare_pod1.py",
+ "date_utc": "2026-09-23T12:52:25.351838"
+}

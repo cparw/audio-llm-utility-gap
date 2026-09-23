@@ -1,0 +1,170 @@
+{
+ "result": "POD2 \u2014 LoRA baseline on Pitt 468 for Qwen2.5-Omni (Part 16)",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "prompt_source": "copied verbatim from <authors-scratch>/p15/sft_projector.py, P['ad']",
+ "n": 468,
+ "n_speakers": 228,
+ "n_conflict": 146,
+ "n_agreement": 322,
+ "n_positive": 290,
+ "source_paths_absolute": {
+  "audio_source_mac": "/Volumes/G-Drive Pro/DementiaBank/segments (468 wav, 516863704 bytes, byte-count verified equal on pod)",
+  "audio_on_pod": "/workspace/data/pitt468",
+  "manifest_built_from": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omnisft_pitt_oof.csv (READ ONLY; used for path/speaker/label/set in the paper's own row order)",
+  "manifest_used": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/mf_pitt468_pod.csv",
+  "folds_file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/pitt468_folds.csv",
+  "arms_reference": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv (146 conflict + 322 agreement; arm labels carried in the manifest 'set' column, cross-checked to these counts)",
+  "training_script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/lora_pitt.py",
+  "fold_script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/make_folds.py",
+  "log": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/lora.log",
+  "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv"
+ },
+ "folds": {
+  "source": "NO saved fold file exists anywhere under /Users/chaitanyaparwatkar/Desktop/release (searched by filename and by scanning every *_oof.csv header for a 'fold' column). Folds were therefore generated once by make_folds.py and SAVED to pitt468_folds.csv, then LOADED by the training script.",
+  "method": "sklearn GroupKFold(n_splits=5) grouped by speaker over the manifest's own row order -- the identical call used in sft_projector.py, the script that produced the paper's projector fine-tune",
+  "sklearn_version": "1.9.1",
+  "fold_sizes": [
+   94,
+   94,
+   94,
+   93,
+   93
+  ],
+  "fold_positives": [
+   49,
+   59,
+   61,
+   57,
+   64
+  ],
+  "speakers_split_across_folds": 0
+ },
+ "training": {
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "target_modules": "q_proj,k_proj,v_proj,o_proj on all 28 thinker LM decoder layers (112 modules); audio_tower and projector frozen (asserted in code)",
+  "optimizer": "AdamW",
+  "lr": 0.0001,
+  "epochs": 3,
+  "batch_size": 1,
+  "dtype": "bfloat16",
+  "lora_params_cast_to": "float32",
+  "window_seconds": 30,
+  "loss": "cross entropy over the two logits [' Yes',' No'] at the final answer position -- copied verbatim from sft_projector.py",
+  "steps_per_fold": {
+   "0": 1122,
+   "1": 1122,
+   "2": 1122,
+   "3": 1125,
+   "4": 1125
+  },
+  "minutes_per_fold": {
+   "0": 4.13,
+   "1": 4.07,
+   "2": 4.05,
+   "3": 4.03,
+   "4": 4.0
+  },
+  "minutes_total": 20.29,
+  "peak_gpu_gb": 21.013
+ },
+ "parameter_counts": {
+  "total_params_full_model": 10732225408,
+  "total_params_thinker_audio_plus_lm": 8255263744,
+  "lora_trainable_params": 5046272,
+  "lora_pct_of_full_model": 0.04702,
+  "lora_pct_of_thinker": 0.061128,
+  "projector_trainable_params": 4591104,
+  "projector_pct_of_full_model": 0.042779,
+  "projector_pct_of_thinker": 0.055614,
+  "lm_layers": 28,
+  "lora_target_modules": 112
+ },
+ "scoring": {
+  "p_yes": "softmax over the two logits [' Yes',' No'] at the first answer position -- matches the paper's projector run exactly, so the two are comparable",
+  "p_yes_multivariant": "P(Yes-variants)/(P(Yes-variants)+P(No-variants)), summing single-token encodings of Yes/yes/YES and No/no/NO, bare and leading-space",
+  "answer_mass": "P(Yes-variants)+P(No-variants) from the full-vocabulary softmax, recorded per clip",
+  "decoding": "deterministic teacher-forced forward pass, no sampling"
+ },
+ "statistics": {
+  "auc": "Mann-Whitney rank formula with 0.5 credit for ties, recomputed from the per-clip csv; never read from any json",
+  "bootstrap": "2000 draws, numpy.random.default_rng(0) reseeded per cell, SPEAKERS resampled with replacement, percentile 2.5/97.5",
+  "arm_cells": "speakers resampled within that arm's own speaker universe",
+  "paired_diff": "one speaker list drawn per replicate, both arms recomputed inside that draw",
+  "usable_draws": {
+   "auc_all": 2000,
+   "conflict": 2000,
+   "agreement": 2000,
+   "paired_diff": 2000
+  }
+ },
+ "results": {
+  "auc_oof_all": 0.825,
+  "auc_oof_all_ci": [
+   0.773519,
+   0.872879
+  ],
+  "auc_conflict": 0.552035,
+  "auc_conflict_ci": [
+   0.43485,
+   0.683342
+  ],
+  "auc_agreement": 0.919899,
+  "auc_agreement_ci": [
+   0.884551,
+   0.951269
+  ],
+  "paired_conflict_minus_agreement": -0.367864,
+  "paired_diff_ci": [
+   -0.486061,
+   -0.243298
+  ],
+  "auc_oof_all_multivariant": 0.821988,
+  "auc_multivariant_ci": [
+   0.7702,
+   0.8711
+  ],
+  "answer_mass_median": 0.998774,
+  "answer_mass_min": 0.996742
+ },
+ "verification": {
+  "method": "two independent implementations of the rank AUC and the bootstrap (stats.py: rank-array Mann-Whitney + per-draw index concatenation; verify_pitt.py: searchsorted U-statistic + index-matrix draws), same documented protocol and seed",
+  "agreement": "identical to 6 decimals on every cell reported here",
+  "auc_implementation_check": "validated against a brute-force O(n^2) pairwise Mann-Whitney with ties to 1e-12"
+ },
+ "comparison_not_overwritten": {
+  "projector_finetune_oof_auc": 0.7673,
+  "projector_finetune_ci": [
+   0.7086,
+   0.8231
+  ],
+  "projector_source": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omnisft_pitt_oof.csv (READ ONLY, recomputed to 0.767280)",
+  "zero_shot_auc": 0.6578,
+  "zero_shot_ci": [
+   0.6033,
+   0.7125
+  ],
+  "zero_shot_source": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv (READ ONLY, recomputed to 0.657768)",
+  "pre_existing_lora_auc": 0.8202,
+  "pre_existing_lora_source": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/abl_pitt_oof.csv (READ ONLY, recomputed to 0.820234)"
+ },
+ "command": "python3 lora_pitt.py mf_pitt468_pod.csv pitt468_folds.csv lora_pitt Qwen/Qwen2.5-Omni-7B",
+ "pod": {
+  "id": "dtz7yg0r57zikq",
+  "gpu": "NVIDIA H200 143771 MiB",
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.17.0",
+  "peft": "0.21.0",
+  "sklearn": "1.9.1",
+  "python": "3.12.3"
+ },
+ "md5": {
+  "lora_pitt_oof.csv": "349e8c2e93c05e7e3bdb3bde21eb42ce",
+  "pitt468_folds.csv": "19621248a22be7f036336bad202a32d1",
+  "mf_pitt468_pod.csv": "49bed3e3336c1725c2d9af879cb739b0"
+ },
+ "date": "2026-09-23"
+}

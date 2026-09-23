@@ -1,0 +1,157 @@
+{
+ "date": "2026-09-23",
+ "pod": "POD2 dtz7yg0r57zikq H200",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "dtype": "bfloat16",
+ "condition": "mdd",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "one_clip_per_speaker": true,
+ "note_speaker_folds": "E-DAIC full is one clip per speaker (275 clips, 275 speakers), so GroupKFold by speaker and a clip-level fold split coincide exactly.",
+ "seed": "numpy.random.default_rng(0), reseeded per cell",
+ "bootstrap_draws": 2000,
+ "bootstrap_unit": "speaker, resampled with replacement, one draw per replicate, both AUCs recomputed inside the draw",
+ "percentiles": [
+  2.5,
+  97.5
+ ],
+ "auc_method": "rank formula recomputed from per-clip scores, never copied from a json",
+ "audio_source": "https://dcapswoz.ict.usc.edu/wwwedaic/data/<pid>_P.tar.gz (275 pids from windows_full.csv)",
+ "stitching": "dcaps_proc rebuild: concatenate raw <pid>_AUDIO.wav[Start_Time:End_Time] for every *_Transcript.csv row with End_Time > Start_Time, file order, no speaker filter, no duration filter, plain slicing truncated at end-of-audio. Verified against windows_full.csv src_dur_s: 275/275 match, max |diff| 0.0000 s. PROVENANCE: this rule was NOT read from dcaps_prep.py. That script exists only on CARC at /scratch1/parwatka/pd_probing/code/dcaps_prep.py and is not on this Mac, the G-Drive or the scratchpad (searched). The rule was inferred from the data and confirmed two ways: rebuilt stitched durations match windows_full.csv src_dur_s for 275/275 at max |diff| 0.0000 s, and the rebuilt windows reproduce the published zero-shot AUC to 0.0007 (0.8278 vs 0.8285, per-clip r 0.99988). pid 632 fixed the slicing semantics: its audio ends at 1155.0 s while its last transcript row is 1166.1-1167.3 s, and the observed 1.1999 s shortfall shows rows past the end of audio are truncated, not zero-padded.",
+ "window": "cut [start_s, end_s] from the stitched signal in stitched time at the native sample rate, then downmix to mono and resample to 16 kHz. Verified against win_dur_s: 275/275, max |diff| 0.0001 s.",
+ "truncation_caveat": "Qwen2_5OmniProcessor uses WhisperFeatureExtractor with chunk_length=300 s (n_samples=4800000, truncation=True), so every window longer than 300 s is cut to its first 300 s BEFORE the audio tower. 217/275 windows are truncated; 84144 s of audio is discarded. seq_len <= 32768 for 275/275, so the 32k context is never the binding constraint. See DISCREPANCIES.md POD2/Part16 EDAICFULL.",
+ "validation_gate": {
+  "published_auc": 0.8285,
+  "reference_file_recomputed": 0.8285,
+  "this_rebuild_recomputed": 0.8278,
+  "pearson_r_perclip_p_yes": 0.999882,
+  "mean_abs_diff": 0.001875,
+  "max_abs_diff": 0.03025,
+  "median_answer_mass_new": 0.9962,
+  "median_answer_mass_ref": 0.9962
+ },
+ "states_validation": {
+  "note": "per-layer AUC curves of the rebuilt states vs the original run's *_perlayer.csv",
+  "ans": {
+   "pearson_r": 0.9992,
+   "mean_abs_diff": 0.0028,
+   "my_peak": 0.7903,
+   "ref_peak": 0.7929
+  },
+  "llm": {
+   "pearson_r": 0.9997,
+   "mean_abs_diff": 0.0018,
+   "my_peak": 0.7636,
+   "ref_peak": 0.763
+  },
+  "enc": {
+   "pearson_r": 0.9995,
+   "mean_abs_diff": 0.0009,
+   "my_peak": 0.6922,
+   "ref_peak": 0.6896
+  }
+ },
+ "source_sha256_first1mb": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.csv": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.json": "702f65b1439c6b7cde63b37332127023e230c97f5017ecb472ede2464e4dab42",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot.json": "d23412b7f1a83e2b9ede93616825a5da7da28edd92e7493ea31086d6a827f8ae",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_nested_repeats.json": "b46207780762fa28b9ac67298cf1fd426df121d3b28786941cad3080e0aee4b9",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_ans_perlayer.csv": "23b319d4aa57e67716ab1974073ae70b706c1cf3cd0ef38ca7a709a743312ea2",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_llm_perlayer.csv": "1e235070dd4e81e17625fcfc37444afe895230301bb089167841fe44b4fc8f52",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv": "adbbb86b58d2d0bba56c1467a6a9ccd0206c1c1219d4fc69f2116ecc8b53fc3b",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_proj_perlayer.csv": "13df004f06c9dccec923455248d9997578ffc556956c3756a5a20720b58081c0"
+ },
+ "file": "edaic_full_gap.csv",
+ "deliverable": "paired probe-minus-answer AUC difference, 2000-draw speaker bootstrap",
+ "first30_row_provenance": "supplied as already computed and verified; not recomputed by POD2",
+ "exact_command": "python3 probe_boot.py",
+ "rows": [
+  {
+   "id": "edaic_full_zeroshot_answer",
+   "value": "0.8278",
+   "lo": "0.7703",
+   "hi": "0.8822",
+   "excludes_zero": ""
+  },
+  {
+   "id": "edaic_full_probe_enc",
+   "value": "0.5916",
+   "lo": "0.511",
+   "hi": "0.6706",
+   "excludes_zero": ""
+  },
+  {
+   "id": "edaic_full_probe_proj",
+   "value": "0.5631",
+   "lo": "0.479",
+   "hi": "0.6478",
+   "excludes_zero": ""
+  },
+  {
+   "id": "edaic_full_probe_llm",
+   "value": "0.7088",
+   "lo": "0.6232",
+   "hi": "0.7874",
+   "excludes_zero": ""
+  },
+  {
+   "id": "edaic_full_probe_ans",
+   "value": "0.7748",
+   "lo": "0.7041",
+   "hi": "0.8387",
+   "excludes_zero": ""
+  },
+  {
+   "id": "edaic_full_gap_llm_minus_answer",
+   "value": "-0.119",
+   "lo": "-0.1995",
+   "hi": "-0.0478",
+   "excludes_zero": "yes"
+  },
+  {
+   "id": "edaic_full_gap_enc_minus_answer",
+   "value": "-0.2361",
+   "lo": "-0.3272",
+   "hi": "-0.1394",
+   "excludes_zero": "yes"
+  },
+  {
+   "id": "edaic_full_gap_ans_minus_answer",
+   "value": "-0.053",
+   "lo": "-0.1046",
+   "hi": "-0.0049",
+   "excludes_zero": "yes"
+  },
+  {
+   "id": "edaic_full_gap_proj_minus_answer",
+   "value": "-0.2646",
+   "lo": "-0.3575",
+   "hi": "-0.1667",
+   "excludes_zero": "yes"
+  },
+  {
+   "id": "edaic_first30_zeroshot_answer",
+   "value": 0.662,
+   "lo": 0.5831,
+   "hi": 0.7315,
+   "excludes_zero": ""
+  },
+  {
+   "id": "edaic_first30_probe_enc",
+   "value": 0.6324,
+   "lo": 0.552,
+   "hi": 0.7104,
+   "excludes_zero": ""
+  },
+  {
+   "id": "edaic_first30_gap_enc_minus_answer",
+   "value": -0.0297,
+   "lo": -0.1291,
+   "hi": 0.0752,
+   "excludes_zero": "no"
+  }
+ ]
+}

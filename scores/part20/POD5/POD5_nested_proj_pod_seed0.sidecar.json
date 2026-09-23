@@ -1,0 +1,249 @@
+{
+ "result": "POD5_nested_proj_pod_seed0",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/POD5_nested_proj_pod_seed0.csv",
+ "pod_per_clip_csv": "/workspace/scores/part20/POD5/POD5_nested_proj_pod_seed0.csv",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0), fresh per cell",
+  "unit": "speaker, resampled with replacement",
+  "interval": "percentile 2.5/97.5",
+  "paired": "one speaker draw per replicate for both sides"
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "cells": [
+  {
+   "id": "POD5_proj_pod_seed0_overall",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, interviewer-free, overall",
+   "value": 0.7477818674932197,
+   "lo": 0.692819848880532,
+   "hi": 0.8015428778165955,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_proj_pod_seed0_original_rerun_overall",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, original_rerun 468 windows, overall",
+   "value": 0.7507458349476946,
+   "lo": 0.6971501997139191,
+   "hi": 0.8047471604546267,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_proj_pod_seed0_diff_overall",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, paired original_rerun minus interviewer-free, overall",
+   "value": 0.002963967454474914,
+   "lo": -0.04181858117637511,
+   "hi": 0.04893702319378093,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_proj_pod_seed0_conflict",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, interviewer-free, conflict",
+   "value": 0.6152915291529153,
+   "lo": 0.5052741302084525,
+   "hi": 0.7204208790604069,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_proj_pod_seed0_original_rerun_conflict",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, original_rerun 468 windows, conflict",
+   "value": 0.5687568756875687,
+   "lo": 0.448287060261879,
+   "hi": 0.6864742128438934,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_proj_pod_seed0_diff_conflict",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, paired original_rerun minus interviewer-free, conflict",
+   "value": -0.046534653465346576,
+   "lo": -0.16735143363365412,
+   "hi": 0.07456362459731694,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_proj_pod_seed0_agreement",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, interviewer-free, agreement",
+   "value": 0.8045908421848271,
+   "lo": 0.7485070981809453,
+   "hi": 0.8545309883111087,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_proj_pod_seed0_original_rerun_agreement",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, original_rerun 468 windows, agreement",
+   "value": 0.8237060906233838,
+   "lo": 0.7691816530097437,
+   "hi": 0.8740806629063446,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_proj_pod_seed0_diff_agreement",
+   "what": "Qwen2.5-Omni nested probe, projector SUPPLEMENT (1 point, seed-0 split as nested_repeats_all.py; paper json 0.7507), mean of per-repeat AUCs, paired original_rerun minus interviewer-free, agreement",
+   "value": 0.01911524843855672,
+   "lo": -0.020077233451052195,
+   "hi": 0.06036889503799736,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  }
+ ],
+ "command": "python3 nested_p20.py o25noinv_pitt_states.npz pitt_folds_part20.json noinv proj:pod_seed0",
+ "sources": [
+  {
+   "path_pod": "/workspace/p20/work/noinvP_proj_pod_seed0_oof.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/noinvP_proj_pod_seed0_oof.csv",
+   "sha256_first_1MB": "63af036daa03ec5539a1301b7b737cfbeab9c663f719b0538953862852f67521"
+  },
+  {
+   "path_pod": "/workspace/p20/work/origP_proj_pod_seed0_oof.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/origP_proj_pod_seed0_oof.csv",
+   "sha256_first_1MB": "4412af1d264631aa895ede13615bebc26e8dcac028d550a64daffdbbc9b7fffb"
+  },
+  {
+   "path_pod": "/root/p20/o25_pitt_states.npz",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256_first_1MB": "21d5beb3f6b520e54a418afb1d6ac106c88b7c9ce5b831bb465bf005cf8c46e7"
+  },
+  {
+   "path_pod": "/workspace/p20/work/o25noinv_pitt_states.npz",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/o25noinv_pitt_states.npz",
+   "sha256_first_1MB": "3a63386c7383a67e08a5c2c59b7dd52313cf2896749de91a868dc849cbeec2d7"
+  },
+  {
+   "path_pod": "/root/p20/scripts/pitt_folds_part20.json",
+   "path_mac": "",
+   "sha256_first_1MB": "f7d2320bd5fbf1cbaf6f37b2d86016f5c66e82318d5cf9a494a6f1145eb552f6"
+  },
+  {
+   "path_pod": "/root/p20/ref/omni_pitt_nested_repeats.json",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_nested_repeats.json",
+   "sha256_first_1MB": "dc4bb27a4c6cfd43ea8abe1b3c12a4718501a01951691bf64a4d9238cdf67cba"
+  }
+ ],
+ "created_utc": "2026-09-23T12:47:51Z",
+ "noinv_summary": {
+  "proj_pod_seed0": {
+   "stream": "proj",
+   "fold_sets": [
+    "pod_seed0"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7478
+   ],
+   "mean_auc": 0.7478,
+   "chosen_layers": {
+    "pod_seed0": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "n": 468,
+   "n_layers": 1,
+   "oof_csv": "/workspace/p20/work/noinvP_proj_pod_seed0_oof.csv"
+  }
+ },
+ "paper_json": {
+  "enc": {
+   "mean": 0.7761,
+   "repeats": 5,
+   "per_repeat": [
+    0.7921,
+    0.7937,
+    0.7652,
+    0.7778,
+    0.7518
+   ],
+   "n": 468,
+   "n_points": 32
+  },
+  "proj": {
+   "mean": 0.7507,
+   "repeats": 1,
+   "per_repeat": [
+    0.7507
+   ],
+   "n": 468,
+   "n_points": 1
+  },
+  "llm": {
+   "mean": 0.8032,
+   "repeats": 5,
+   "per_repeat": [
+    0.8135,
+    0.8046,
+    0.7985,
+    0.7961,
+    0.8031
+   ],
+   "n": 468,
+   "n_points": 29
+  },
+  "ans": {
+   "mean": 0.7636,
+   "repeats": 5,
+   "per_repeat": [
+    0.755,
+    0.7792,
+    0.7831,
+    0.7537,
+    0.7469
+   ],
+   "n": 468,
+   "n_points": 29
+  }
+ },
+ "original_side": "pod rerun of the same code on overnight2/part10/o25_pitt_states.npz; reproduces the paper per-repeat AUCs",
+ "orig_rerun_summary": {
+  "proj_pod_seed0": {
+   "stream": "proj",
+   "fold_sets": [
+    "pod_seed0"
+   ],
+   "fold_files": [
+    "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv"
+   ],
+   "per_repeat_auc": [
+    0.7507
+   ],
+   "mean_auc": 0.7507,
+   "chosen_layers": {
+    "pod_seed0": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "n": 468,
+   "n_layers": 1,
+   "oof_csv": "/workspace/p20/work/origP_proj_pod_seed0_oof.csv"
+  }
+ }
+}

@@ -1,0 +1,491 @@
+{
+ "result": "Qwen2.5-Omni projector fine-tuned on the 966 Part 14 E-DAIC clips (483 conflict + 483 agreement rows), out of fold by speaker",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "n": 966,
+ "n_speakers": 138,
+ "seed_bootstrap": 0,
+ "draws": 2000,
+ "sources_pod": {
+  "manifest_pod": "/workspace/p20/p14_ft966_manifest.csv",
+  "fold_file_pod": "/workspace/p20/part14_groupkfold5_pod.csv",
+  "script": "/workspace/p20/p20_ft966.py",
+  "stats_script": "/workspace/p20/p20_stats.py",
+  "cut_script": "/workspace/p20/p20_cut.py",
+  "cut_list": "/workspace/p20/p20_cut_list.csv",
+  "eval_script": "/workspace/p20/p20_eval.py"
+ },
+ "sha256_first_1MB": {
+  "manifest_pod": "f58c30fa0642b8cf4189786add41e383e15bd0a46aa257cbc23a18bc6cfec1bd",
+  "fold_file_pod": "2ce1f473c9aa951e701953ca87195c7781c69e54c390bd07f99e224eed517b8e",
+  "script": "038716e43576aee20525165477dc62a576b2e2e8b11175b3d5965cd83508a0de",
+  "stats_script": "bce3f82e0dfcdbad2565f6c6908991b46b232e62bf74deca39e39c8d17a73a3b",
+  "cut_script": "54e76615f5719591f41bfa62b9731dcf12c77abfc5d541e4b4239f97f7176c69",
+  "cut_list": "b19052fe8300b738c1e9b517cae5929e95aa67fac4c3cffb6bdd1a0583e8f000",
+  "eval_script": "d637c1a39ab9076af93027b347e4d30a9a995fade9ec109d6e8e68a6eec069a3"
+ },
+ "sources_mac": {
+  "manifest": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14_manifest_new.csv",
+  "clips": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14_clips/ (re-cut on pod from E-DAIC tarballs, every clip sha256-identical to these)",
+  "fold_file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3/part14_groupkfold5_pod.csv (NEW, POD tie rule)",
+  "training_manifest": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3/p14_ft966_manifest.csv"
+ },
+ "command": "bash /workspace/p20/p20_launch.sh  (per fold: python3 -u p20_ft966.py /workspace/p20/p14_ft966_manifest.csv /workspace/scores/part20/POD3 FOLD); then python3 p20_stats.py",
+ "recipe": "sft_projector.py unchanged: thinker.audio_tower.proj only (fp32), rest frozen, AdamW lr 1e-4, 3 epochs, 1 clip/update, CE over [' Yes',' No'] logits, RandomState(fold*10+ep) order, no class weighting, bf16, 30 s window",
+ "training_note": "trained on all 966 rows as specified; agreement rows reuse 311 distinct segments up to 6 times each, so repeated segments are seen more than once per epoch",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at first answer position, single-token Yes/No variants (paper list); p_yes_sft = softmax over [' Yes',' No'] kept for reference",
+ "agreement_duplicate_max_abs_diff": 0.0,
+ "median_answer_mass": 0.9979091514833272,
+ "min_answer_mass": 0.9490212500095367,
+ "fold_meta": {
+  "0": {
+   "fold": 0,
+   "n_train": 772,
+   "n_test": 194,
+   "epoch_losses": [
+    0.5716254494654815,
+    0.29747362960271123,
+    0.15095140613522623
+   ],
+   "yes_ids": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "no_ids": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "sft_ids": [
+    7414,
+    2308
+   ],
+   "space_caps_enc": {
+    " YES": [
+     14080
+    ],
+    " NO": [
+     5664
+    ]
+   },
+   "minutes": 13.0
+  },
+  "1": {
+   "fold": 1,
+   "n_train": 772,
+   "n_test": 194,
+   "epoch_losses": [
+    0.5725158872746337,
+    0.33144959428669146,
+    0.17629205977584603
+   ],
+   "yes_ids": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "no_ids": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "sft_ids": [
+    7414,
+    2308
+   ],
+   "space_caps_enc": {
+    " YES": [
+     14080
+    ],
+    " NO": [
+     5664
+    ]
+   },
+   "minutes": 13.0
+  },
+  "2": {
+   "fold": 2,
+   "n_train": 772,
+   "n_test": 194,
+   "epoch_losses": [
+    0.564163084625667,
+    0.2946201199894877,
+    0.10192576255860256
+   ],
+   "yes_ids": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "no_ids": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "sft_ids": [
+    7414,
+    2308
+   ],
+   "space_caps_enc": {
+    " YES": [
+     14080
+    ],
+    " NO": [
+     5664
+    ]
+   },
+   "minutes": 13.0
+  },
+  "3": {
+   "fold": 3,
+   "n_train": 774,
+   "n_test": 192,
+   "epoch_losses": [
+    0.5929039783760164,
+    0.3369471717544862,
+    0.206240175628564
+   ],
+   "yes_ids": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "no_ids": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "sft_ids": [
+    7414,
+    2308
+   ],
+   "space_caps_enc": {
+    " YES": [
+     14080
+    ],
+    " NO": [
+     5664
+    ]
+   },
+   "minutes": 11.4
+  },
+  "4": {
+   "fold": 4,
+   "n_train": 774,
+   "n_test": 192,
+   "epoch_losses": [
+    0.5470323575304422,
+    0.31816661340266933,
+    0.12666808619715247
+   ],
+   "yes_ids": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "no_ids": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "sft_ids": [
+    7414,
+    2308
+   ],
+   "space_caps_enc": {
+    " YES": [
+     14080
+    ],
+    " NO": [
+     5664
+    ]
+   },
+   "minutes": 11.4
+  }
+ },
+ "reeval_meta": {
+  "0": {
+   "fold": 0,
+   "Y5": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "N5": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "Y6": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004,
+    14080
+   ],
+   "N6": [
+    902,
+    2152,
+    2308,
+    2753,
+    5664,
+    8996
+   ],
+   "max_abs_diff_vs_training_eval": 0.0,
+   "cols": [
+    "p_yes_paper",
+    "mass_paper",
+    "p_yes_rule3_literal",
+    "mass_rule3_literal",
+    "p_yes_sft"
+   ]
+  },
+  "1": {
+   "fold": 1,
+   "Y5": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "N5": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "Y6": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004,
+    14080
+   ],
+   "N6": [
+    902,
+    2152,
+    2308,
+    2753,
+    5664,
+    8996
+   ],
+   "max_abs_diff_vs_training_eval": 0.0,
+   "cols": [
+    "p_yes_paper",
+    "mass_paper",
+    "p_yes_rule3_literal",
+    "mass_rule3_literal",
+    "p_yes_sft"
+   ]
+  },
+  "2": {
+   "fold": 2,
+   "Y5": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "N5": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "Y6": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004,
+    14080
+   ],
+   "N6": [
+    902,
+    2152,
+    2308,
+    2753,
+    5664,
+    8996
+   ],
+   "max_abs_diff_vs_training_eval": 0.0,
+   "cols": [
+    "p_yes_paper",
+    "mass_paper",
+    "p_yes_rule3_literal",
+    "mass_rule3_literal",
+    "p_yes_sft"
+   ]
+  },
+  "3": {
+   "fold": 3,
+   "Y5": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "N5": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "Y6": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004,
+    14080
+   ],
+   "N6": [
+    902,
+    2152,
+    2308,
+    2753,
+    5664,
+    8996
+   ],
+   "max_abs_diff_vs_training_eval": 0.0,
+   "cols": [
+    "p_yes_paper",
+    "mass_paper",
+    "p_yes_rule3_literal",
+    "mass_rule3_literal",
+    "p_yes_sft"
+   ]
+  },
+  "4": {
+   "fold": 4,
+   "Y5": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004
+   ],
+   "N5": [
+    902,
+    2152,
+    2308,
+    2753,
+    8996
+   ],
+   "Y6": [
+    7414,
+    9454,
+    9693,
+    9834,
+    14004,
+    14080
+   ],
+   "N6": [
+    902,
+    2152,
+    2308,
+    2753,
+    5664,
+    8996
+   ],
+   "max_abs_diff_vs_training_eval": 0.0,
+   "cols": [
+    "p_yes_paper",
+    "mass_paper",
+    "p_yes_rule3_literal",
+    "mass_rule3_literal",
+    "p_yes_sft"
+   ]
+  }
+ },
+ "reeval_max_abs_diff_paper_p_yes": 0.0,
+ "rule3_literal_note": "' YES' (14080) and ' NO' (5664) are single tokens; the paper scripts omit them. p_yes (primary) uses the paper list; p_yes_rule3_literal adds them, re-scored from the saved final fold checkpoints",
+ "results": {
+  "conflict": {
+   "auc": 0.5931742410949289,
+   "lo": 0.5086622473809388,
+   "hi": 0.683114928715514,
+   "n": 483,
+   "n_spk": 138,
+   "n_pos": 205,
+   "usable": 2000,
+   "auc_p_yes_sft": 0.5985436041410774,
+   "auc_rule3_literal": 0.5931742410949289,
+   "auc_reeval_paper": 0.5931742410949289
+  },
+  "agreement483": {
+   "auc": 0.6228110194771013,
+   "lo": 0.5222262670288206,
+   "hi": 0.7238100923320775,
+   "n": 483,
+   "n_spk": 138,
+   "n_pos": 205,
+   "usable": 2000,
+   "auc_p_yes_sft": 0.6193367257413581,
+   "auc_rule3_literal": 0.6228110194771013,
+   "auc_reeval_paper": 0.6228110194771013
+  },
+  "agreement311": {
+   "auc": 0.6686176142697882,
+   "lo": 0.5726899383358885,
+   "hi": 0.7585877692709527,
+   "n": 311,
+   "n_spk": 138,
+   "n_pos": 104,
+   "usable": 2000,
+   "auc_p_yes_sft": 0.6642279821627648,
+   "auc_rule3_literal": 0.6686176142697882,
+   "auc_reeval_paper": 0.6686176142697882
+  },
+  "diff_conflict_minus_agreement483": {
+   "auc": -0.02963677838217238,
+   "lo": -0.11242597160073434,
+   "hi": 0.04909860194201977,
+   "n": 966,
+   "n_spk": 138,
+   "usable": 2000
+  },
+  "diff_conflict_minus_agreement311": {
+   "auc": -0.07544337317485927,
+   "lo": -0.15134199400533244,
+   "hi": 0.000984416450056787,
+   "n": 794,
+   "n_spk": 138,
+   "usable": 2000
+  }
+ },
+ "date": "2026-09-23"
+}

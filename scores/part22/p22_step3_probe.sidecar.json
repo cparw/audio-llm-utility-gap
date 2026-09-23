@@ -1,0 +1,25 @@
+{
+ "result": "scores/part22/p22_step3_probe.json",
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/sync/step3_probe.json": "16b4ba0380082cd414dddce3f2ffcceffce1eb8f936e4b1bce0066d6b5d637c4",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/sync/p22_run.py": "daede049d99c7639d5b1f849b78e6ae9c93b1541c5d245a653b017f369847c52",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.csv": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017"
+ },
+ "n": 1,
+ "seed": "n/a (deterministic forward pass; no resampling)",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "exact_command": "python3 /workspace/p22/p22_run.py probe3",
+ "libs": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "python": "3.12.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA H200"
+ },
+ "dtype": "bfloat16",
+ "pod": "RunPod 8flz9sdjujokel H200",
+ "lifted_call_verbatim": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True, truncation=False)"
+}

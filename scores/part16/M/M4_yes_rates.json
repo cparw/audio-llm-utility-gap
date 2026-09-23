@@ -1,0 +1,91 @@
+{
+  "task": "M4",
+  "description": "Yes rate per model on the Part 14 483 pairs, both arms",
+  "manifest": {
+    "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14_manifest_new.csv",
+    "sha256_first_1mb": "f919c2499098b178fb332cdce0cf9395484d96b4f199ac15480397658ab5fd7c",
+    "n_clips": 966,
+    "n_pairs": 483,
+    "n_speakers": 138,
+    "n_conflict": 483,
+    "n_agreement": 483,
+    "n_unique_agreement_seg_uid": 311
+  },
+  "sources": {
+    "Qwen2.5-Omni": {
+      "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv",
+      "n_rows": 966,
+      "sha256_first_1mb": "3e118a11ec4be0daccf95265ff31253dbaf80d5442571ec12cad923a7da7c1ff",
+      "p_yes_col": "p_yes",
+      "mass_col": "mass",
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+    },
+    "Qwen2-Audio": {
+      "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv",
+      "n_rows": 966,
+      "sha256_first_1mb": "e09dc9a9a2d2f7564df393e8450f82ace9552aa2c1a25226bbecd0af6e7a9138",
+      "p_yes_col": "p_yes",
+      "mass_col": "mass",
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+    },
+    "Qwen3-Omni-30B-A3B": {
+      "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv",
+      "n_rows": 966,
+      "sha256_first_1mb": "112f62ff61571312de50f6866c73fbcaca979b5f375f07c4a54280765c4bd2dc",
+      "p_yes_col": "p_yes",
+      "mass_col": "mass",
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+    },
+    "AudioFlamingo2": {
+      "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.csv",
+      "n_rows": 966,
+      "sha256_first_1mb": "6d392b1261472f2f35c43284d010cb536dabc5ff83e1f166afc9d0d7b0559100",
+      "p_yes_col": "p_yes",
+      "mass_col": "answer_mass",
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+      "prompt_source": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af2.json",
+      "prompt_provenance": "af2_score.py takes --prompt on the command line and records it in neither p14_af2.csv nor logs/p14_af2.log, so this string is not recoverable from the run artifacts. It is the prompt recorded verbatim in the prompt column of the other five PART 14 score files on the same clip list."
+    },
+    "AudioFlamingo3": {
+      "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_af3.csv",
+      "n_rows": 966,
+      "sha256_first_1mb": "8bce04f1ca9702151cb4550951e5df64fd2a369eb447c8fb53028d95a8f0b6fc",
+      "p_yes_col": "p_yes",
+      "mass_col": "answer_mass",
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+    },
+    "Kimi-Audio": {
+      "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_kimi_zeroshot_scores.csv",
+      "n_rows": 966,
+      "sha256_first_1mb": "d9fdfcdf5fbde6cb25d1b57f419334beb2f3f376caf540c717dc0f3f53551cc0",
+      "p_yes_col": "p_yes",
+      "mass_col": "mass",
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+    }
+  },
+  "models_missing": [],
+  "yes_rule": "p_yes > 0.5 where p_yes = P(Yes)/(P(Yes)+P(No)) at the first answer position",
+  "answer_mass": "P(Yes)+P(No) at the first answer position; median reported; flagged if < 0.15",
+  "bootstrap": {
+    "n_draws": 2000,
+    "rng": "numpy.random.default_rng(0) reseeded per cell",
+    "unit": "speaker, with replacement",
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "paired": "one speaker draw per replicate, both arms recomputed inside it"
+  },
+  "seed": 0,
+  "model_id": null,
+  "prompt_note": "per-model prompt string under sources",
+  "auc_note": "no AUC in this task; rule 5 not applicable",
+  "folds_note": "no cross-validation in this task; rule 7 not applicable",
+  "shell_command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M4_yes_rates.py",
+  "outputs": [
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M4_yes_rates.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M4_yes_rate_diffs.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/rows/M4.tsv",
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M4_yes_rates.json"
+  ]
+}

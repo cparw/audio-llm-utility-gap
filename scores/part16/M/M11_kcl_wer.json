@@ -1,0 +1,126 @@
+{
+ "task": "PART16 M11 MDVR-KCL: does transcription quality explain the transcript result",
+ "true_wer_possible": false,
+ "reference_text_search": {
+  "looked_in": [
+   "/Volumes/G-Drive Pro/KCL/extracted/26-29_09_2017_KCL/ReadText",
+   "zip listing of /Volumes/G-Drive Pro/KCL/26_29_09_2017_KCL.zip (79 entries, all .wav, no README or doc)",
+   "recursive grep of /Users/chaitanyaparwatkar/Desktop/release for the passage wording",
+   "/Volumes/G-Drive Pro/paper1_local_runs"
+  ],
+  "result": "no read-passage reference text file exists on disk",
+  "prior_audit_agrees": "edaic_rerun/scripts_1a1c/report.py line 244: 'NO timed transcript exists for MDVR-KCL on disk. The KCL tree holds audio only'",
+  "second_reason_ill_posed": "speakers did not read one common passage (see finding E), and each scored clip is a 30 s window starting mid-passage at a measured per-file offset, /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/kcl_offsets.json",
+  "instructed_fallback": "scored, reported as finding A, and found degenerate (WER 0.0000 on 37/37)"
+ },
+ "models": {
+  "primary": "openai/whisper-large-v3",
+  "cross_system_control": "openai/whisper-medium",
+  "cache_primary": "/Volumes/G-Drive Pro/DementiaBank/hf_cache/hub",
+  "cache_control": "/Users/chaitanyaparwatkar/.cache/huggingface/hub"
+ },
+ "device": "mps",
+ "dtype": "float32",
+ "runtime_min": {
+  "large_v3": 1.29,
+  "medium": 0.83,
+  "total": 3.11
+ },
+ "decode_settings": {
+  "language": "en",
+  "task": "transcribe",
+  "do_sample": false,
+  "num_beams": 1,
+  "temperature": 0.0,
+  "max_new_tokens": 440,
+  "condition_on_prev_tokens": false
+ },
+ "normaliser": "transformers EnglishTextNormalizer built from the openai/whisper-large-v3 normalizer.json spelling map (1740 entries): lowercase, punctuation removed, contractions expanded, British->American spelling, whitespace collapsed. Then, identically on both sides: any char not in [a-z0-9 ] becomes a space and each contiguous digit run is its own token (5.7 -> '5 7', 30% -> '30').",
+ "wer_formula": "(S+D+I)/N, N = len(reference tokens), S/D/I from a Levenshtein backtrace with unit costs",
+ "passage_rule": {
+  "north_wind_keys": [
+   "north wind",
+   "traveller",
+   "traveler",
+   "cloak",
+   "stronger"
+  ],
+  "light_scattering_keys": [
+   "scattering",
+   "blue light",
+   "atmospheric",
+   "sunlight",
+   "observer",
+   "electromagnetic",
+   "spectrum"
+  ],
+  "rule": "more matched keys wins; 0-0 is 'neither', a tie is 'ambiguous'"
+ },
+ "bootstrap": {
+  "draws": 2000,
+  "rng": "numpy.random.default_rng(0), reseeded per cell",
+  "resample": "speakers with replacement (one clip per speaker here, so speaker = clip)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "paired": "one speaker draw per replicate, both group means recomputed inside that draw"
+ },
+ "folds": "not applicable: no cross-validated model is fitted in this task",
+ "n": 37,
+ "n_speakers": 37,
+ "seed": 0,
+ "prompt_text_condition": "Based only on this transcript of what the person said, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "prompt_audio_condition": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "shell_command": "cd /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16 && /usr/local/bin/python3 M11_kcl_wer.py",
+ "sources": {
+  "/Volumes/G-Drive Pro/paper1_local_runs/kcl30b_manifest.csv": {
+   "sha256_first_1mb": "978c72654e4672ec4130b4af50f45d13b3fec9d584b3ca34eed94339ae5462f9"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/part4_text/asr/asr_kcl.csv": {
+   "sha256_first_1mb": "29df4e2cbac90725df83a01b36b6ede82f60bffbccae2f0502c60f7c17e6f217"
+  },
+  "/Volumes/G-Drive Pro/paper1_local_runs/kcl_read30b_text.csv": {
+   "sha256_first_1mb": "fe9d375790158ae3b4a8c49623541d6968b109b78d614add2ff119d0bfe1cfa8"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/podE_final/out/o25_kcl_text.csv": {
+   "sha256_first_1mb": "6a9384d0a4106edac94b38a0469ca9389c58f57eaa5522b27412e1c8df22f71f"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv": {
+   "sha256_first_1mb": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/scripts_1a1c/kcl_offsets.json": {
+   "sha256_first_1mb": "1a558665078bda0a70bc79c90aca3311eb38cb599797f326f5f1c7ff5359c515"
+  },
+  "/Volumes/G-Drive Pro/paper1_local_runs/kcl_read30b/ID00_hc_0_0_0.wav": {
+   "sha256_first_1mb": "d3789c1e9282a3bcb7d4add5a83d5a6d8ba4790d376ffc48877271429b70ea36"
+  },
+  "/Volumes/G-Drive Pro/paper1_local_runs/kcl_read30b/ID36_hc_0_0_0.wav": {
+   "sha256_first_1mb": "38936212bb802c02206138e6e2c392e3f02efd11aa7b984fad8d1c3fd160a62c"
+  }
+ },
+ "outputs": [
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M11_kcl_wer.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M11_kcl_wer.json",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/rows/M11.tsv"
+ ],
+ "robustness": {
+  "script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M11_robust.py",
+  "why": "the per-clip mean cross-system disagreement is dominated by clips whose 30 s window caught almost no speech, so the WER denominator is tiny. ID11 has 10 reference words and 58 whisper-medium insertions, giving a single per-clip rate of 6.60 inside the control group.",
+  "per_clip_mean_diff_PD_minus_control": -0.173,
+  "median_diff": 0.0694,
+  "ge20words_mean_diff": 0.0594,
+  "pooled_word_weighted_diff": 0.085,
+  "reading": "the sign of the group gap flips once the tiny-denominator clips stop dominating, and the paired interval straddles zero either way, so there is no reliable ASR-quality difference between the groups."
+ },
+ "verification": {
+  "script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M11_verify.py",
+  "method": "independent recomputation from the per-clip csv: jiwer for the edit distance, a separate index-based bootstrap, AUC rewritten from the rank formula",
+  "result": "every point estimate, paired difference and Spearman interval agrees to 4 decimals; S, D and I agree exactly on all 37 clips for both alignments. Group-mean intervals differ in the last digits because the main script resamples within a group while the verifier draws all 37 speakers and subsets, e.g. B PD [0.1301, 0.4944] vs [0.1157, 0.5115]."
+ },
+ "answer": {
+  "does_asr_quality_differ_by_group": "no reliable difference. Every paired 2000-draw speaker interval straddles zero and the sign of the gap depends on how tiny-denominator clips are handled.",
+  "does_asr_quality_track_the_transcript_decision": "partly. Whisper's own mean token logprob correlates with the transcript p_yes at Spearman -0.4009, p=0.0139, CI [-0.6720, -0.0835]: clips the ASR was less sure of get a higher Yes. But the same measure carries no diagnosis signal on its own (AUC 0.4792), so it cannot be what produces the 0.7634 transcript result.",
+  "what_does_explain_it": "reading material. The speakers were not given one common passage: north_wind PD=13/control=10, light_scattering PD=2/control=7, neither PD=1/control=4. Passage identity alone reaches AUC 0.6682 against the diagnosis, next to 0.7634 for the full transcript condition."
+ }
+}

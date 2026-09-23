@@ -1,0 +1,35 @@
+{
+ "id": "kimi_pitt_canon_minus_podorig_agreement",
+ "what": "Kimi-Audio zero-shot Pitt agreement: canonical file minus this pod's rerun of the same original windows (paired, environment drift)",
+ "value": 0.0035,
+ "lo": -0.0053,
+ "hi": 0.0126,
+ "n": 322,
+ "n_speakers": 175,
+ "usable_draws": 2000,
+ "bootstrap_draws": 2000,
+ "seed": 0,
+ "bootstrap": "speakers resampled with replacement, fresh numpy.random.default_rng(0) per cell, percentile 2.5/97.5, PAIRED: one speaker draw per replicate",
+ "auc": "rank formula, scipy.stats.rankdata ties averaged",
+ "score_column": "p_yes",
+ "model_id": "moonshotai/Kimi-Audio-7B-Instruct",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "cd /workspace/scores/part20/POD4d && /opt/kimienv/bin/python scripts/analyze.py /workspace/scores/part20/POD4d/kimi_pitt_noinv468_scores.csv /workspace/scores/part20/POD4d/kimi_pitt_orig468_pod_scores.csv /workspace/scores/part20/POD4d p_yes <this command> podorig /workspace/scores/part20/POD4d/canonical_kimi_pitt_zeroshot_scores.csv",
+ "per_clip_csv": "/workspace/scores/part20/POD4d/kimi_pitt_canon_minus_podorig_agreement.csv",
+ "sources": [
+  {
+   "path": "/workspace/scores/part20/POD4d/canonical_kimi_pitt_zeroshot_scores.csv",
+   "sha256_first_1MB": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365",
+   "byte_copy_of": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv"
+  },
+  {
+   "path": "/workspace/scores/part20/POD4d/kimi_pitt_orig468_pod_scores.csv",
+   "sha256_first_1MB": "e9857d4a8337e56da7e3aed734bdbc2c4889e6ad25707dc642ee26278d6630d3"
+  }
+ ],
+ "auc_canonical": 0.7227,
+ "auc_pod_rerun": 0.7192,
+ "max_abs_clip_diff": 0.10344157259525738,
+ "median_abs_clip_diff": 0.009938591258231266,
+ "n_clips_abs_diff_over_1e3": 278
+}

@@ -1,0 +1,132 @@
+{
+  "task": "M3 speaker-level AUC beside clip-level",
+  "model_id": "Qwen/Qwen2.5-Omni-7B (zero shot, 30 s window) - scores read from disk, model not re-run",
+  "seed": 0,
+  "n_boot": 2000,
+  "bootstrap_unit": "speaker",
+  "ci": "percentile 2.5/97.5",
+  "paired": "speaker list drawn once per replicate, clip AUC and speaker AUC recomputed inside that draw",
+  "auc": "rank formula, scipy.stats.rankdata, recomputed from per-clip p_yes",
+  "folds": "not applicable - zero shot scores, no cross-validation",
+  "shell_command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M3_speaker_level.py",
+  "index_csv": {
+    "path": "/Users/chaitanyaparwatkar/Desktop/release/overnight/perclip/INDEX.csv",
+    "sha256_first1mb": "85f786a6930e720dc759d06015956a7232a635735c66873488b2be2f7565afe7"
+  },
+  "master_lookup": {
+    "path": "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv",
+    "sha256_first1mb": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd"
+  },
+  "datasets": {
+    "pitt": {
+      "local": {
+        "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+        "sha256_first1mb": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+        "n_rows": 468
+      },
+      "gdrive": {
+        "path": "/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pitt_zeroshot_scores.csv",
+        "sha256_first1mb": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+        "n_rows": 468
+      },
+      "mirror_max_abs_diff_p_yes": 0.0,
+      "n_clips": 468,
+      "n_speakers": 228,
+      "clip_auc": 0.6577683068578071,
+      "clip_ci": [
+        0.6033242994024883,
+        0.7125368049704085
+      ],
+      "speaker_auc": 0.6770833333333334,
+      "speaker_ci": [
+        0.60960468413089,
+        0.7494210973243938
+      ],
+      "diff": -0.019315026475526298,
+      "diff_ci": [
+        -0.05654083490780851,
+        0.017247437281261706
+      ],
+      "boot_usable": 2000,
+      "master_lookup_auc": 0.6578,
+      "index_auc": 0.6578,
+      "inconsistent_label_speakers": [],
+      "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+    },
+    "pcgita": {
+      "local": {
+        "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+        "sha256_first1mb": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+        "n_rows": 1100
+      },
+      "gdrive": {
+        "path": "/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_pcgita_zeroshot_scores.csv",
+        "sha256_first1mb": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+        "n_rows": 1100
+      },
+      "mirror_max_abs_diff_p_yes": 0.0,
+      "n_clips": 1100,
+      "n_speakers": 100,
+      "clip_auc": 0.5634776859504133,
+      "clip_ci": [
+        0.49306400723091104,
+        0.6330859923977538
+      ],
+      "speaker_auc": 0.5948,
+      "speaker_ci": [
+        0.47782969428860156,
+        0.7088653037766827
+      ],
+      "diff": -0.03132231404958674,
+      "diff_ci": [
+        -0.08198937040031405,
+        0.017903647637453394
+      ],
+      "boot_usable": 2000,
+      "master_lookup_auc": 0.5635,
+      "index_auc": 0.5635,
+      "inconsistent_label_speakers": [],
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."
+    },
+    "neurovoz": {
+      "local": {
+        "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+        "sha256_first1mb": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+        "n_rows": 1270
+      },
+      "gdrive": {
+        "path": "/Volumes/G-Drive Pro/paper1_local_runs/omni_final/omni_neurovoz_zeroshot_scores.csv",
+        "sha256_first1mb": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+        "n_rows": 1270
+      },
+      "mirror_max_abs_diff_p_yes": 0.0,
+      "n_clips": 1270,
+      "n_speakers": 107,
+      "clip_auc": 0.6950814953762633,
+      "clip_ci": [
+        0.6355883997757804,
+        0.7518676424825447
+      ],
+      "speaker_auc": 0.7947552447552447,
+      "speaker_ci": [
+        0.7045421500745701,
+        0.8733375310196674
+      ],
+      "diff": -0.09967374937898144,
+      "diff_ci": [
+        -0.13248337022862514,
+        -0.061297799437302986
+      ],
+      "boot_usable": 2000,
+      "master_lookup_auc": 0.6951,
+      "index_auc": 0.6951,
+      "inconsistent_label_speakers": [],
+      "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."
+    }
+  },
+  "outputs": [
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M3_speaker_level.csv",
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/rows/M3.tsv"
+  ],
+  "written": "2026-09-22T23:55:46"
+}

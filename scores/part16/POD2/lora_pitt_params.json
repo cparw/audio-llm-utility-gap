@@ -1,0 +1,17 @@
+{
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "total_params_full_model": 10732225408,
+ "total_params_thinker_audio_plus_lm": 8255263744,
+ "lora_trainable_params": 5046272,
+ "lora_pct_of_full_model": 0.04702,
+ "lora_pct_of_thinker": 0.061128,
+ "projector_trainable_params": 4591104,
+ "projector_module": "Linear",
+ "projector_pct_of_full_model": 0.042779,
+ "projector_pct_of_thinker": 0.055614,
+ "lm_layers": 28,
+ "lora_target_modules": 112,
+ "rank": 8,
+ "alpha": 16,
+ "dropout": 0.05
+}

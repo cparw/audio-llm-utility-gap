@@ -1,0 +1,22 @@
+{
+ "result": "Pitt 468 TF-IDF LR on raw CHAT manifest text (sensitivity)",
+ "auc": 0.8452,
+ "lo": 0.7975,
+ "hi": 0.8918,
+ "usable_draws": 2000,
+ "n": 468,
+ "n_speakers": 228,
+ "seed": "default_rng(0), 2000 draws",
+ "model_id": "none",
+ "prompt": "none",
+ "folds": "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac.csv",
+ "command": "/usr/local/bin/python3 scripts/a_pitt_rawtext.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/A_language_saliency",
+ "sources": [
+  "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_mac.csv": "b6e2416288fd59208dc7efbac643509ba20c46561e73ec3670f89ca48e7111c9"
+ }
+}

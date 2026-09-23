@@ -1,0 +1,253 @@
+{
+ "cell": "MEDAIC \u2014 E-DAIC representation-utility gap on the FULL window vs the 30 s window",
+ "date": "2026-09-23",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_audio": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "prompt_text": "Based only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "condition": "mdd",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "bootstrap": {
+  "draws": 2000,
+  "rng": "numpy.random.default_rng(0) reseeded per cell",
+  "unit": "speaker, resampled with replacement",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "paired": "one speaker list drawn per replicate, BOTH quantities recomputed inside that draw"
+ },
+ "auc": "recomputed with the tie-averaged rank (Mann-Whitney) formula from per-clip scores; never copied from a json",
+ "folds": "no fold assignment was created by this cell. Every probe number here comes from an OOF file that already carried its own speaker-disjoint nested GroupKFold(5) assignment (nested_repeats_all.py). No new GroupKFold was needed.",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the first answer position, bare and leading-space variants of Yes/yes/YES and No/no/NO, single-token encodings only; answer_mass = the denominator, carried per clip",
+ "full_window_def": "stitched participant audio, capped at 900 s; 89 of 275 capped; median window 591.8 s (edaic_rerun/variants/windows_full.json)",
+ "w30_window_def": "first 30 s of the raw session audio (omni_final/omni_edaic_zeroshot.json, window_seconds 30)",
+ "MISSING": "The full-window nested probe has NO per-clip OOF file and NO states npz anywhere on this Mac or on /Volumes/G-Drive Pro/paper1_local_runs. Its AUCs therefore could NOT be recomputed from per-clip scores and NO interval was attached to them. See DISCREPANCIES.md entry \"MEDAIC / Part 16\" (HIGH).",
+ "sources": {
+  "full_answer": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv",
+   "sha256_first_1MB": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+   "n_rows": 275
+  },
+  "full_sft_oof": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/sft_full_oof.csv",
+   "sha256_first_1MB": "b520dfc84bd45064e66c0a7a63fd39230a9e37b646d7bc0764dbe886efc70c1f",
+   "n_rows": 275
+  },
+  "full_text": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaicfull_text.csv",
+   "sha256_first_1MB": "90330c3e463c2483363d507293e003cc2cef39f3dcb9f6e157b62a0f38d4ada4",
+   "n_rows": 275
+  },
+  "full_nested_json": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_nested_repeats.json",
+   "sha256_first_1MB": "b46207780762fa28b9ac67298cf1fd426df121d3b28786941cad3080e0aee4b9",
+   "n_rows": null
+  },
+  "w30_answer": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_zeroshot_scores.csv",
+   "sha256_first_1MB": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f",
+   "n_rows": 275
+  },
+  "w30_enc_oof": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_enc_nested_oof.csv",
+   "sha256_first_1MB": "e5038ff9582d59e698b01fcc96e579876f696bd1a62dcdcf44d881a8e006a84c",
+   "n_rows": 275
+  },
+  "w30_llm_oof": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_llm_nested_oof.csv",
+   "sha256_first_1MB": "28c2314e2af86a3f8a2e9be961c1a3697786c9a2a8ee80c18e409eb8e6f2d950",
+   "n_rows": 275
+  },
+  "w30_ans_oof": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_ans_nested_oof.csv",
+   "sha256_first_1MB": "e8029cd46918926b558e1cce24298c0b58d45517dee20841f6b53315d93c91ca",
+   "n_rows": 275
+  },
+  "w30_proj_oof": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_proj_nested_oof.csv",
+   "sha256_first_1MB": "25559d990414bc2d8368616cb8817c713f1fa5a3dc9065fb04e960ddaa8b8646",
+   "n_rows": 275
+  },
+  "windows_full": {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.csv",
+   "sha256_first_1MB": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017",
+   "n_rows": 275
+  }
+ },
+ "command": "/usr/local/bin/python3 <authors-scratch>/p16m/MEDAIC_run.py",
+ "results": {
+  "speaker_overlap": {
+   "n_full": 275,
+   "n_30s": 275,
+   "intersection": 275,
+   "identical_sets": true,
+   "labels_identical": true,
+   "full_only": [],
+   "w30_only": []
+  },
+  "full_answer": {
+   "auc": 0.8284761490503117,
+   "lo": 0.7707812285181902,
+   "hi": 0.8826819124751349,
+   "usable": 2000,
+   "n": 275
+  },
+  "full_sft": {
+   "probe_auc": 0.6421270117442366,
+   "probe_lo": 0.5592715701233514,
+   "probe_hi": 0.718823673235058,
+   "answer_auc": 0.8284761490503117,
+   "answer_lo": 0.7707812285181902,
+   "answer_hi": 0.8826819124751349,
+   "paired_diff": -0.18634913730607516,
+   "diff_lo": -0.2696246520146521,
+   "diff_hi": -0.10979770518702958,
+   "excludes_zero": true,
+   "usable_draws": 2000,
+   "n": 275,
+   "join_losses": 0
+  },
+  "full_text": {
+   "probe_auc": 0.8229665071770335,
+   "probe_lo": 0.76508364174201,
+   "probe_hi": 0.8705168517854525,
+   "answer_auc": 0.8284761490503117,
+   "answer_lo": 0.7707812285181902,
+   "answer_hi": 0.8826819124751349,
+   "paired_diff": -0.005509641873278293,
+   "diff_lo": -0.05661138257001805,
+   "diff_hi": 0.04308549035009889,
+   "excludes_zero": false,
+   "usable_draws": 2000,
+   "n": 275,
+   "join_losses": 0
+  },
+  "full_nested_aggregate": {
+   "enc": {
+    "mean": 0.593,
+    "repeats": 5,
+    "per_repeat": [
+     0.5734,
+     0.5671,
+     0.6197,
+     0.56,
+     0.6448
+    ],
+    "minus_answer_point": -0.23547614905031178,
+    "interval": "NOT COMPUTABLE - no per-clip OOF file exists for the full window"
+   },
+   "proj": {
+    "mean": 0.5293,
+    "repeats": 1,
+    "per_repeat": [
+     0.5293
+    ],
+    "minus_answer_point": -0.29917614905031176,
+    "interval": "NOT COMPUTABLE - no per-clip OOF file exists for the full window"
+   },
+   "llm": {
+    "mean": 0.6853,
+    "repeats": 5,
+    "per_repeat": [
+     0.6664,
+     0.6748,
+     0.7107,
+     0.6765,
+     0.6981
+    ],
+    "minus_answer_point": -0.14317614905031173,
+    "interval": "NOT COMPUTABLE - no per-clip OOF file exists for the full window"
+   },
+   "ans": {
+    "mean": 0.7542,
+    "repeats": 5,
+    "per_repeat": [
+     0.7296,
+     0.7469,
+     0.7909,
+     0.7599,
+     0.7438
+    ],
+    "minus_answer_point": -0.07427614905031177,
+    "interval": "NOT COMPUTABLE - no per-clip OOF file exists for the full window"
+   }
+  },
+  "w30": {
+   "enc": {
+    "probe_auc": 0.6323763955342903,
+    "probe_lo": 0.5519837767165812,
+    "probe_hi": 0.7103799793457998,
+    "answer_auc": 0.662026968247064,
+    "answer_lo": 0.5831034055337068,
+    "answer_hi": 0.7314586558773856,
+    "paired_diff": -0.029650572712773715,
+    "diff_lo": -0.1291025641025641,
+    "diff_hi": 0.07517440946085353,
+    "excludes_zero": false,
+    "usable_draws": 2000,
+    "n": 275,
+    "join_losses": 0
+   },
+   "llm": {
+    "probe_auc": 0.5065245759025664,
+    "probe_lo": 0.42206683976679865,
+    "probe_hi": 0.5855810359480962,
+    "answer_auc": 0.662026968247064,
+    "answer_lo": 0.5831034055337068,
+    "answer_hi": 0.7314586558773856,
+    "paired_diff": -0.1555023923444976,
+    "diff_lo": -0.25361683136807145,
+    "diff_hi": -0.05768008474576279,
+    "excludes_zero": true,
+    "usable_draws": 2000,
+    "n": 275,
+    "join_losses": 0
+   },
+   "ans": {
+    "probe_auc": 0.6401333913295636,
+    "probe_lo": 0.5580532292384353,
+    "probe_hi": 0.7184794329770693,
+    "answer_auc": 0.662026968247064,
+    "answer_lo": 0.5831034055337068,
+    "answer_hi": 0.7314586558773856,
+    "paired_diff": -0.02189357691750038,
+    "diff_lo": -0.10534391746852809,
+    "diff_hi": 0.06633391543266633,
+    "excludes_zero": false,
+    "usable_draws": 2000,
+    "n": 275,
+    "join_losses": 0
+   },
+   "proj": {
+    "probe_auc": 0.5181963172393794,
+    "probe_lo": 0.44108960709294415,
+    "probe_hi": 0.599873542716871,
+    "answer_auc": 0.662026968247064,
+    "answer_lo": 0.5831034055337068,
+    "answer_hi": 0.7314586558773856,
+    "paired_diff": -0.14383065100768455,
+    "diff_lo": -0.2489514016063883,
+    "diff_hi": -0.03201489241373715,
+    "excludes_zero": true,
+    "usable_draws": 2000,
+    "n": 275,
+    "join_losses": 0
+   }
+  },
+  "w30_answer": {
+   "auc": 0.662026968247064,
+   "lo": 0.5831034055337068,
+   "hi": 0.7314586558773856,
+   "usable": 2000
+  },
+  "answer_full_minus_30s": {
+   "diff": 0.16644918080324778,
+   "lo": 0.08482552676000724,
+   "hi": 0.24920099286972242,
+   "excludes_zero": true,
+   "usable": 2000
+  }
+ }
+}

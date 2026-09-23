@@ -1,0 +1,58 @@
+{
+ "id": "af3_noinv_all",
+ "what": "AF3 zero-shot AUC, Pitt interviewer-free cut, all",
+ "value": 0.592,
+ "ci95": [
+  0.5293,
+  0.6577
+ ],
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "usable_draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0) fresh per cell",
+  "unit": "speaker (with replacement)",
+  "percentile": [
+   2.5,
+   97.5
+  ],
+  "paired": false
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "model_id": "nvidia/audio-flamingo-3-hf",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "command": "python3 analyze.py af3 work/af3_noinv468.csv",
+ "sources": [
+  {
+   "pod_path": "/workspace/work/af3_noinv468.csv",
+   "mac_path": "(pod-produced; synced to /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4c/work/)",
+   "sha256_first_1MB": "d841c1ce8bb862235edaa3b2c3438a2a3c773fac1f217865de934782b5148fa5"
+  },
+  {
+   "pod_path": "/workspace/refs/pitt_conflict_manifest.csv",
+   "mac_path": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256_first_1MB": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  },
+  {
+   "pod_path": "/workspace/cut/manifest.csv",
+   "mac_path": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/pitt_noinv_cut/manifest.csv",
+   "sha256_first_1MB": "408685cde24d07a285aa5ba17d4a6e039a1668566abfa992853e4f0c19966069"
+  }
+ ],
+ "per_clip_csv": "/workspace/scores/part20/POD4c/af3_noinv_all.csv",
+ "two_dp": "0.59",
+ "verdict": "above 0.5",
+ "scoring_command": "cd /workspace && HF_HOME=/workspace/hf WINDOW_S=30 python3 af3_zs.py cut/score_manifest.csv work/af3_noinv468.csv",
+ "scoring_env": "POD4c H200, system python 3.12.3, torch 2.8.0+cu128, transformers 5.17.0, AudioFlamingo3ForConditionalGeneration, bf16, 30 s cut (no clip exceeds 29.3 s)",
+ "scoring_script_sha256": "641616c758a8ef85f4006b9a1cd0b6359a0bf9f7b9857c51887bc249959fab36",
+ "scoring_script": "/workspace/af3_zs.py",
+ "date_utc": "2026-09-23T12:48:10Z",
+ "arm": "all",
+ "median_answer_mass": 0.9533,
+ "yes_rate": 0.7457,
+ "n_pos": 290,
+ "n_neg": 178,
+ "clips": "Pitt interviewer-free cut (PAR-only, first min(window,30 s)), /Users/chaitanyaparwatkar/Desktop/release/scores/part20/pitt_noinv_cut/"
+}

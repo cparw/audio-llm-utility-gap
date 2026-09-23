@@ -1,0 +1,100 @@
+{
+ "step": "PART22 validation gate",
+ "rows": [
+  {
+   "pid": "305",
+   "gate_p_yes": 0.577617711052789,
+   "ref_p_yes_answer": 0.577617711052789,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9939565360546112,
+   "ref_mass": 0.9939565360546112,
+   "n_audio_tok": 7500
+  },
+  {
+   "pid": "679",
+   "gate_p_yes": 0.2339097854731636,
+   "ref_p_yes_answer": 0.2339097854731636,
+   "abs_diff": 0.0,
+   "gate_mass": 0.994180828332901,
+   "ref_mass": 0.994180828332901,
+   "n_audio_tok": 7500
+  },
+  {
+   "pid": "466",
+   "gate_p_yes": 0.706314575488364,
+   "ref_p_yes_answer": 0.706314575488364,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9940349161624908,
+   "ref_mass": 0.9940349161624908,
+   "n_audio_tok": 7500
+  },
+  {
+   "pid": "705",
+   "gate_p_yes": 0.9604466103597945,
+   "ref_p_yes_answer": 0.9604466103597945,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9983506351709366,
+   "ref_mass": 0.9983506351709366,
+   "n_audio_tok": 4957
+  },
+  {
+   "pid": "300",
+   "gate_p_yes": 0.09012648339238387,
+   "ref_p_yes_answer": 0.09012648339238387,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9957385584712029,
+   "ref_mass": 0.9957385584712029,
+   "n_audio_tok": 7500
+  },
+  {
+   "pid": "301",
+   "gate_p_yes": 0.06016855039552881,
+   "ref_p_yes_answer": 0.06016855039552881,
+   "abs_diff": 0.0,
+   "gate_mass": 0.995842132717371,
+   "ref_mass": 0.995842132717371,
+   "n_audio_tok": 7500
+  },
+  {
+   "pid": "310",
+   "gate_p_yes": 0.13309448181473538,
+   "ref_p_yes_answer": 0.13309448181473538,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9952801913022995,
+   "ref_mass": 0.9952801913022995,
+   "n_audio_tok": 7445
+  },
+  {
+   "pid": "320",
+   "gate_p_yes": 0.39341839853750976,
+   "ref_p_yes_answer": 0.39341839853750976,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9949171841144562,
+   "ref_mass": 0.9949171841144562,
+   "n_audio_tok": 6227
+  },
+  {
+   "pid": "330",
+   "gate_p_yes": 0.636897729444262,
+   "ref_p_yes_answer": 0.636897729444262,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9964182078838348,
+   "ref_mass": 0.9964182078838348,
+   "n_audio_tok": 4540
+  },
+  {
+   "pid": "346",
+   "gate_p_yes": 0.97967570323723,
+   "ref_p_yes_answer": 0.97967570323723,
+   "abs_diff": 0.0,
+   "gate_mass": 0.9985600784420967,
+   "ref_mass": 0.9985600784420967,
+   "n_audio_tok": 7500
+  }
+ ],
+ "max_abs_diff": 0,
+ "tol": 0.001,
+ "gate": "PASS",
+ "command": "cd /workspace/p22/gate && WINDOW_S=0 python3 extract_full.py mf_gate10.csv /workspace/p22/gate/gate mdd",
+ "script": "extract_full.py copied unmodified from edaic_rerun/part16/EDAICFULL (sha256 b9262a04547b719a98593718a9f5016d3d355c0c43df5f5935a579fabc8dc949)"
+}

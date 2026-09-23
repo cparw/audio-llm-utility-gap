@@ -1,0 +1,43 @@
+{
+ "result": "TF-IDF word logistic regression, out of fold, E-DAIC first 30 s",
+ "auc": 0.4844,
+ "lo": 0.4028,
+ "hi": 0.5624,
+ "usable_draws": 2000,
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "seed": "bootstrap numpy.random.default_rng(0), 2000 draws, speakers with replacement",
+ "model": "TfidfVectorizer() fit inside each training fold + LogisticRegression(C=1, class_weight='balanced', max_iter=5000)",
+ "model_id": "none (no neural model)",
+ "prompt": "none (no prompt; transcript text only)",
+ "folds": "/Users/chaitanyaparwatkar/Desktop/release/folds/edaic_groupkfold5_mac.csv",
+ "fold_note": "single-split _mac file: sklearn GroupKFold(5) as installed on the Mac; the split that reproduces the eGeMAPS baseline",
+ "transcript_source": "/Volumes/G-Drive Pro/paper work/paper1_local_runs/edaic30_text.csv",
+ "vocab_size_per_fold": [
+  2413,
+  2387,
+  2367,
+  2404,
+  2385
+ ],
+ "labels_match_paper_transcript_run": "275/275 vs /Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaic30_text.csv",
+ "pitt_text_equals_conflict_manifest": null,
+ "command": "/usr/local/bin/python3 scripts/a_lang_saliency.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/A_language_saliency",
+ "versions": {
+  "python": "3.10.2",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+ },
+ "sources": [
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/edaic30_text.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/edaic_groupkfold5_mac.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaic30_text.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/edaic30_text.csv": "b13ad3f5e9ab5f3bf5db4f3f54ff99f01ea5162bad73ddc3c27c1c5b08e1daed",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/edaic_groupkfold5_mac.csv": "165f9bb80fd3d355ece22d75695e576f84bdfdd15fea4f2ede798b192fe0c6a8",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_edaic30_text.csv": "ff22e6b15a2f7fb850367406e3f1e180be6d7cbf71ff2e98642e9aba5de0dbee"
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "id": "P20_4b_q3o_orig_rerun_overall",
+ "what": "Qwen3-Omni zero-shot AUC, Pitt, original windows, part16 rerun file, overall",
+ "value": 0.7673,
+ "ci95": [
+  0.7123,
+  0.82
+ ],
+ "n": 468,
+ "n_speakers": 228,
+ "usable_draws": 2000,
+ "bootstrap": {
+  "draws": 2000,
+  "rng": "numpy.random.default_rng(0) fresh per cell",
+  "unit": "speaker, with replacement",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "paired": false
+ },
+ "auc": "rank formula, scipy.stats.rankdata average ties",
+ "seed": 0,
+ "model_id": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the first answer position over single-token ids of Yes, Yes, yes, yes, YES, YES and No, No, no, no, NO, NO (bare and leading space); bf16",
+ "command": "python3 analyze_noinv.py",
+ "perclip_csv_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/P20_4b_q3o_orig_rerun_overall.perclip.csv",
+ "sources": {
+  "rerun": {
+   "pod": "/workspace/p20/ref_rerun.csv",
+   "mac": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/q3o_pitt_zeroshot_scores.csv",
+   "sha256_first_1MB": "83087a0782963bfae1311eea10ac8fb24964d1ddd47fb936e30296bb4f435fc1"
+  },
+  "folds": {
+   "pod": "/workspace/p20/pitt_groupkfold5_pod.csv",
+   "mac": "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod.csv",
+   "sha256_first_1MB": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406"
+  },
+  "sets": {
+   "pod": "/workspace/p20/pitt_conflict_manifest.csv",
+   "mac": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256_first_1MB": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ },
+ "scoring": {
+  "noinv": {
+   "command": "cd /workspace/p20 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 nohup python3 score_q3o_noinv.py > score.log 2>&1",
+   "script_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/scripts/score_q3o_noinv.py",
+   "audio": "/workspace/p20/noinv/clips (pitt_noinv_clips.tgz sha256 b995bd9afe8a45b1c08472f7333c5855767d60de23307a7881b5f000c73d8a07; 468/468 wav sha256 checked against manifest.csv)"
+  },
+  "samepod": {
+   "command": "cd /workspace/p20 && HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 python3 score_orig468.py > score_orig.log 2>&1",
+   "script_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD4b/scripts/score_orig468.py",
+   "audio": "/workspace/p20/orig/segments = /Volumes/G-Drive Pro/DementiaBank/segments (468/468 wav sha256 checked against pitt_noinv_cut/source_segments.sha256)"
+  },
+  "reference_files_note": "the shipped (overnight2/q3o_new) and rerun (part16/pod_sync) p_yes were scored by earlier runs with 5+5 ids (no ' YES' 14080 / ' NO' 5664); this pod's files use 6+6 and keep the 5+5 value in p_yes_ref5 (max per-clip difference 4.2e-08 on the interviewer-free clips)",
+  "pod": "RunPod spkhephddpcaom, NVIDIA H200, runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404, transformers 5.17.0, torch 2.8.0+cu128, librosa 1.0.0, numpy 2.1.2, sdpa attention, bf16, thinker only, first 30 s of each clip"
+ },
+ "created_utc": "2026-09-23T12:43:42Z",
+ "n_positive": 290,
+ "median_answer_mass": 0.999529168009758,
+ "min_answer_mass": 0.9969913959503174
+}

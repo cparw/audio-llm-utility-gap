@@ -1,0 +1,132 @@
+{
+ "part": "PART 22 step 1 (Mac): Qwen2.5-Omni processor config and the 300 s audio cut",
+ "date": "2026-09-23T05:49:53",
+ "machine": "Mac macOS-26.5.1-arm64-arm-64bit",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "model_revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+ "model_weights_loaded": false,
+ "dtype": "n/a (processor only; no forward pass in step 1)",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "paper_call_verbatim": "inp = proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True)",
+ "n": {
+  "probe_rows": 32,
+  "perclip_rows_checked": 275,
+  "windows_gt_300s": 217,
+  "windows_capped_900s": 89
+ },
+ "seed": "numpy.random.default_rng(0) for synthetic probe audio (0.05*standard_normal); no bootstrap in step 1",
+ "transformers_version_paper_run": "5.17.0 (edaic_rerun/logs/podA/SETUP3.log line 15: 'OK tf 5.17.0 torch 2.8.0+cu128 cuda True')",
+ "transformers_version_live_pods": {
+  "205.196.17.122:11958": "5.17.0",
+  "205.196.17.170:18452": "5.17.0",
+  "216.81.245.29:41869": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "python": "3.12.3"
+ },
+ "transformers_version_mac_global": "5.5.4 (/usr/local/bin/python3; not used for results)",
+ "probe_env": {
+  "python": "<authors-scratch>/venv22/bin/python",
+  "note": "isolated venv (--system-site-packages) with pip install transformers==5.17.0; nothing installed globally",
+  "transformers": "5.17.0",
+  "tokenizers": "0.23.2",
+  "safetensors": "0.8.0",
+  "huggingface_hub": "1.10.1",
+  "torch": "2.11.0",
+  "numpy": "2.2.6",
+  "python_version": "3.10.2"
+ },
+ "wheel_sha256_full": "78ec1ce21579b38dfb83950a0658cd119f87212a2fcfdff478096ce9d6c03801",
+ "pod_source_identity": {
+  "files": [
+   "models/qwen2_5_omni/processing_qwen2_5_omni.py",
+   "models/whisper/feature_extraction_whisper.py",
+   "feature_extraction_sequence_utils.py",
+   "processing_utils.py",
+   "models/qwen2_5_omni/modeling_qwen2_5_omni.py"
+  ],
+  "full_sha256_wheel": [
+   "115254a61c16e76f1d48742406dfc6e941b7143d9b69d91962cbcddde2d06398",
+   "dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb",
+   "db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d",
+   "53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5",
+   "976d3ac0cf130b70f52f7fa5a21ae4913aa88554afc74dd42962087ee6eaa5e2"
+  ],
+  "identical_on_pods": [
+   "205.196.17.170:18452",
+   "216.81.245.29:41869"
+  ],
+  "pod_hf_cache_216.81.245.29:41869": {
+   "ref": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+   "preprocessor_config.json_sha256": "b47055ce61463ce143e9aab741d55c0aa520801a0a5d63be73c5b17cecb6bc69",
+   "config.json_sha256": "f85f5a078951471e32d6ce5dd169acf619e3480c83daf195e5016ef3eb89b1a9"
+  }
+ },
+ "exact_commands": [
+  "/usr/local/bin/python3 -m pip download transformers==5.17.0 --no-deps -d /src && unzip -q -o /src/transformers-5.17.0-py3-none-any.whl -d /src/tf5170",
+  "curl -sL -o /src/hf/<f> https://huggingface.co/Qwen/Qwen2.5-Omni-7B/resolve/main/<f>  for f in preprocessor_config.json chat_template.json config.json tokenizer_config.json (processor_config.json and chat_template.jinja: HTTP 404)",
+  "/usr/local/bin/python3 -m venv --system-site-packages <scratchpad>/venv22 && <scratchpad>/venv22/bin/python -m pip install -q transformers==5.17.0",
+  "HF_HUB_OFFLINE=1 <scratchpad>/venv22/bin/python scripts/p22_step1_proc_probe.py /P22_step1_proc_probe.json",
+  "HF_HUB_OFFLINE=1 <scratchpad>/venv22/bin/python scripts/p22_step1_loadtime_override.py",
+  "HF_HUB_OFFLINE=1 <scratchpad>/venv22/bin/python scripts/p22_step1_feature_equality.py",
+  "LOADTIME_LINE=\"$(cat logs/loadtime_line.txt)\" /usr/local/bin/python3 scripts/p22_step1_write_md.py",
+  "/usr/local/bin/python3 scripts/p22_step1_verify.py"
+ ],
+ "results": {
+  "feature_extractor_class": "WhisperFeatureExtractor",
+  "chunk_length_s": 300,
+  "class_default_chunk_length_s": 30,
+  "sampling_rate": 16000,
+  "n_samples": 4800000,
+  "nb_max_frames": 30000,
+  "max_length_default": "None -> self.n_samples (feature_extraction_whisper.py:303)",
+  "truncation_default": "True (feature_extraction_whisper.py:196); Omni processor passes none (processing_qwen2_5_omni.py:96-100)",
+  "cut_line": "transformers/feature_extraction_sequence_utils.py:333",
+  "token_formula": "processing_qwen2_5_omni.py:151-152: ((frames-1)//2+1 - 2)//2 + 1",
+  "tokens_300s": 7500,
+  "tokens_900s_truncation_off": 22500,
+  "seq_len_900s_truncation_off": 22548,
+  "text_max_position_embeddings": 32768,
+  "perclip_formula_match": "275/275",
+  "windows_gt_300s_all_7500": "217/217",
+  "lift_arguments_that_work": [
+   "audio_kwargs={'truncation': False}",
+   "truncation=False (flat)",
+   "audio_kwargs={'max_length': 900*16000}",
+   "proc.feature_extractor.n_samples=900*16000",
+   "Qwen2_5OmniProcessor.from_pretrained(MID, chunk_length=900)"
+  ],
+  "model_code_allows_900s": true
+ },
+ "sources_sha256_first1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/transformers-5.17.0-py3-none-any.whl": "fd6a006a659e6c5a2a9daa0daa931fd9afc82e87bc05c4a21f4e5eacf29c2cc3",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/tf5170/transformers/models/qwen2_5_omni/processing_qwen2_5_omni.py": "115254a61c16e76f1d48742406dfc6e941b7143d9b69d91962cbcddde2d06398",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/tf5170/transformers/models/whisper/feature_extraction_whisper.py": "dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/tf5170/transformers/feature_extraction_sequence_utils.py": "db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/tf5170/transformers/processing_utils.py": "53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/tf5170/transformers/feature_extraction_utils.py": "d0baaf792cb7c441b73c11b71ac5d5e601de432b8b6d93f5c483ad88668fcee0",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/tf5170/transformers/models/auto/feature_extraction_auto.py": "b86b1145881a8582a57189d3e92790a744e7df8b0d21bbdcedcf64816cb673bb",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/tf5170/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py": "976d3ac0cf130b70f52f7fa5a21ae4913aa88554afc74dd42962087ee6eaa5e2",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/hf/preprocessor_config.json": "b47055ce61463ce143e9aab741d55c0aa520801a0a5d63be73c5b17cecb6bc69",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/hf/config.json": "f85f5a078951471e32d6ce5dd169acf619e3480c83daf195e5016ef3eb89b1a9",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/hf/chat_template.json": "1933f7ca08e6503460e981d9037ddc0b851196abfa3aceea52d6ee0c0fdfd9f0",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/src/hf/tokenizer_config.json": "569aa7a9171e36dfff80f0a7550ab0c9c09e46ac840fea5030641417394fb0d2",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/logs/podA/SETUP3.log": "829433c4fb51668c89232df3090027db99881e4b9e40edca54d9c9252693dd67",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/logs/podA/o25_full_extract.log": "77124c6e0e84fb5bc389f4706a1cf605e6bc3627f3eef48438d5757f7bc8a67e",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot.json": "d23412b7f1a83e2b9ede93616825a5da7da28edd92e7493ea31086d6a827f8ae",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD4B/scripts_recovered/extract_probe_layers.py": "46e985910d7d5f6cc211b7e91889f50e8626d2ff7ceb36f3af5c0c97013c4de5",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/extract_full.py": "b9262a04547b719a98593718a9f5016d3d355c0c43df5f5935a579fabc8dc949",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv": "9ec70d6cf53de8933489927f2610ae4abd48bff75646cddde370bc2b0c589d68",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.csv": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/P22_step1_proc_probe.json": "8b7c4ad919a6608e0abbd654be8b3b4008fb579e2a0e663911c5bee5512b6927",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/logs/p22_step1_proc_probe.log": "4d33c0767f52cf93f2568e8055f3b13693608289c60803fcb603e0f2520b042a",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/logs/p22_step1_loadtime_override.log": "7575e5b6b68c249596d54723be72833988f8a97611953ee73e7cc87b672b5249",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/logs/p22_step1_feature_equality.log": "bfa6ba5f70350e5445c8797c613bf62f18d3c41dece7669155502a718d3c97bd",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/logs/p22_step1_verify.log": "1ea041d814d4352df1d48fd5f82d67b0fdde3f0a8db9f7343e951afb5ac5ea44",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/scripts/p22_step1_proc_probe.py": "0f9397483f131dc81ad972df12aecf71dd893d5c0a93cf729b57a07da608ba15",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/scripts/p22_step1_loadtime_override.py": "7c4ba65d03b346d96750dd3f3115fa5a7352ceaa6492f06902d2fe993f61effd",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/scripts/p22_step1_feature_equality.py": "c64bc3ef36598bee89b3ebcff01a0bb674aa098c1cd416307609a1535e2bad11",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/scripts/p22_step1_write_md.py": "801cc16eb586f758dc4a8d82816b3306e0b54b90fbb184f158d1d2b33354a573",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/scripts/p22_step1_verify.py": "4edf84957e7c7e61864ac92397620d29fbe3b5c803ace6b4a6370247b5b0a45d",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/P22_step1_processor_config.md": "15ccd780174eecaf7e1aa1755d7da30ec91a0f0942d0cb533f32c79ec2191c45"
+ }
+}

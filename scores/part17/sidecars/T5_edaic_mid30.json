@@ -1,0 +1,26 @@
+{
+ "result": "T5_edaic_mid30",
+ "dataset": "edaic_mid30",
+ "condition": "MDD",
+ "plotted": "plotted variant (fig1_gap_mid.pdf)",
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_encoder_perlayer.csv": "df9ae0b8fee704a604b9200794744660472c99a840ca7a9e892de0f9d1cd3b66",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_zeroshot_scores.csv": "54aa019cdcb9508cf5612d0913a06564db2a24912a2c901a1cba2a7cd2bc94ae",
+  "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd"
+ },
+ "n": 275,
+ "n_speakers": 275,
+ "seed": 0,
+ "bootstrap_draws": 2000,
+ "bootstrap_usable": 2000,
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py",
+ "outputs": [
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_summary.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_zeroshot_perclip.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/rows/T5.tsv"
+ ],
+ "count_rule": "over encoder rows layer 0..31 (32 transformer layers, no pre-transformer stage): probe auc_oof > full-precision recomputed answer AUC, strict",
+ "figure_script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/make_fig1_v4.py"
+}

@@ -1,0 +1,386 @@
+{
+ "A_paper_call|200.0": {
+  "n_samples_in": 3200000,
+  "dur_s": 200.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 20000,
+  "n_audio_tok": 5000,
+  "seq_len": 5048
+ },
+ "B_flat_truncation_False|200.0": {
+  "n_samples_in": 3200000,
+  "dur_s": 200.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 20000,
+  "n_audio_tok": 5000,
+  "seq_len": 5048
+ },
+ "C_audio_kwargs_truncation_False|200.0": {
+  "n_samples_in": 3200000,
+  "dur_s": 200.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 20000,
+  "n_audio_tok": 5000,
+  "seq_len": 5048
+ },
+ "D_audio_kwargs_max_length_900s|200.0": {
+  "n_samples_in": 3200000,
+  "dur_s": 200.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 20000,
+  "n_audio_tok": 5000,
+  "seq_len": 5048
+ },
+ "E_audio_kwargs_trunc_False_and_max_length_900s|200.0": {
+  "n_samples_in": 3200000,
+  "dur_s": 200.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 20000,
+  "n_audio_tok": 5000,
+  "seq_len": 5048
+ },
+ "A_paper_call|299.99": {
+  "n_samples_in": 4799840,
+  "dur_s": 299.99,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 29999,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "B_flat_truncation_False|299.99": {
+  "n_samples_in": 4799840,
+  "dur_s": 299.99,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 29999,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "C_audio_kwargs_truncation_False|299.99": {
+  "n_samples_in": 4799840,
+  "dur_s": 299.99,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 29999,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "D_audio_kwargs_max_length_900s|299.99": {
+  "n_samples_in": 4799840,
+  "dur_s": 299.99,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 29999,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "E_audio_kwargs_trunc_False_and_max_length_900s|299.99": {
+  "n_samples_in": 4799840,
+  "dur_s": 299.99,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 29999,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "A_paper_call|300.0": {
+  "n_samples_in": 4800000,
+  "dur_s": 300.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "B_flat_truncation_False|300.0": {
+  "n_samples_in": 4800000,
+  "dur_s": 300.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "C_audio_kwargs_truncation_False|300.0": {
+  "n_samples_in": 4800000,
+  "dur_s": 300.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "D_audio_kwargs_max_length_900s|300.0": {
+  "n_samples_in": 4800000,
+  "dur_s": 300.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "E_audio_kwargs_trunc_False_and_max_length_900s|300.0": {
+  "n_samples_in": 4800000,
+  "dur_s": 300.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "A_paper_call|300.01": {
+  "n_samples_in": 4800160,
+  "dur_s": 300.01,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "B_flat_truncation_False|300.01": {
+  "n_samples_in": 4800160,
+  "dur_s": 300.01,
+  "feat_shape": [
+   1,
+   128,
+   30001
+  ],
+  "mask_frames": 30001,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "C_audio_kwargs_truncation_False|300.01": {
+  "n_samples_in": 4800160,
+  "dur_s": 300.01,
+  "feat_shape": [
+   1,
+   128,
+   30001
+  ],
+  "mask_frames": 30001,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "D_audio_kwargs_max_length_900s|300.01": {
+  "n_samples_in": 4800160,
+  "dur_s": 300.01,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 30001,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "E_audio_kwargs_trunc_False_and_max_length_900s|300.01": {
+  "n_samples_in": 4800160,
+  "dur_s": 300.01,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 30001,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "A_paper_call|600.0": {
+  "n_samples_in": 9600000,
+  "dur_s": 600.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "B_flat_truncation_False|600.0": {
+  "n_samples_in": 9600000,
+  "dur_s": 600.0,
+  "feat_shape": [
+   1,
+   128,
+   60000
+  ],
+  "mask_frames": 60000,
+  "n_audio_tok": 15000,
+  "seq_len": 15048
+ },
+ "C_audio_kwargs_truncation_False|600.0": {
+  "n_samples_in": 9600000,
+  "dur_s": 600.0,
+  "feat_shape": [
+   1,
+   128,
+   60000
+  ],
+  "mask_frames": 60000,
+  "n_audio_tok": 15000,
+  "seq_len": 15048
+ },
+ "D_audio_kwargs_max_length_900s|600.0": {
+  "n_samples_in": 9600000,
+  "dur_s": 600.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 60000,
+  "n_audio_tok": 15000,
+  "seq_len": 15048
+ },
+ "E_audio_kwargs_trunc_False_and_max_length_900s|600.0": {
+  "n_samples_in": 9600000,
+  "dur_s": 600.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 60000,
+  "n_audio_tok": 15000,
+  "seq_len": 15048
+ },
+ "A_paper_call|900.0": {
+  "n_samples_in": 14400000,
+  "dur_s": 900.0,
+  "feat_shape": [
+   1,
+   128,
+   30000
+  ],
+  "mask_frames": 30000,
+  "n_audio_tok": 7500,
+  "seq_len": 7548
+ },
+ "B_flat_truncation_False|900.0": {
+  "n_samples_in": 14400000,
+  "dur_s": 900.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 90000,
+  "n_audio_tok": 22500,
+  "seq_len": 22548
+ },
+ "C_audio_kwargs_truncation_False|900.0": {
+  "n_samples_in": 14400000,
+  "dur_s": 900.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 90000,
+  "n_audio_tok": 22500,
+  "seq_len": 22548
+ },
+ "D_audio_kwargs_max_length_900s|900.0": {
+  "n_samples_in": 14400000,
+  "dur_s": 900.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 90000,
+  "n_audio_tok": 22500,
+  "seq_len": 22548
+ },
+ "E_audio_kwargs_trunc_False_and_max_length_900s|900.0": {
+  "n_samples_in": 14400000,
+  "dur_s": 900.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 90000,
+  "n_audio_tok": 22500,
+  "seq_len": 22548
+ },
+ "F_override_fe_n_samples_900s|200.0": {
+  "n_samples_in": 3200000,
+  "dur_s": 200.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 20000,
+  "n_audio_tok": 5000,
+  "seq_len": 5048
+ },
+ "F_override_fe_n_samples_900s|900.0": {
+  "n_samples_in": 14400000,
+  "dur_s": 900.0,
+  "feat_shape": [
+   1,
+   128,
+   90000
+  ],
+  "mask_frames": 90000,
+  "n_audio_tok": 22500,
+  "seq_len": 22548
+ }
+}

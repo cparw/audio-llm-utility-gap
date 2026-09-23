@@ -1,0 +1,70 @@
+{
+ "pod": "POD 4 (runpod id 1avtkbh82lpb6y), H200, working dir /workspace/p16pod4b",
+ "corpus": "adresso",
+ "what": "Part 4b extended: interviewer removed, with a duration-matched control that KEEPS the interviewer",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "dtype": "bfloat16",
+ "device": "cuda",
+ "condition": "ad",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "window_seconds": 30.0,
+ "n": 161,
+ "n_speakers": 161,
+ "label_distribution": {
+  "0": 74,
+  "1": 87
+ },
+ "arms": {
+  "A_orig": "the scored clip exactly as the paper cut it (ffmpeg -ss start_s -t 30 off the source), unchanged",
+  "B_paronly": "ONLY the participant intervals inside that same window, concatenated, 5 ms raised-cosine fade at every splice boundary",
+  "C_durmatch": "the first len(arm B) seconds of arm A: matched in length to B but the interviewer and the gaps are still in it"
+ },
+ "segmentation_source_description": "The RELEASED ADReSSo21 speaker-diarised segmentation csvs (columns speaker,begin,end in ms, speaker in {PAR,INV}). No diariser was run. Extracted from the challenge archive.",
+ "segmentation_source_path": "/Volumes/G-Drive Pro/DementiaBank/challenges/ADReSSo/ADReSSo21-diagnosis-train.tgz?f=open  ->  ADReSSo21/diagnosis/train/segmentation/{ad,cn}/<spk>.csv",
+ "p_yes_definition": "P(Yes)/(P(Yes)+P(No)) at the FIRST answer position, summing the first-token ids of Yes/ Yes/yes/ yes/YES and No/ No/no/ no/NO, single-token encodings only. answer_mass = P(Yes)+P(No), recorded per clip in the per-clip csv.",
+ "auc": "recomputed from the per-clip scores with the rank formula in boot.py; never copied from a json",
+ "bootstrap": "2000 draws, numpy.random.default_rng(0) reseeded per cell, SPEAKERS resampled with replacement (never clips), percentile 2.5/97.5. PAIRED: the speaker list is drawn ONCE per replicate and both quantities are recomputed inside that same draw. Usable draws reported per row in boot_adresso.json.",
+ "seed": 0,
+ "folds": "No saved fold assignment exists for these clips (checked the published *_enc_nested_oof.csv, which carry no fold column). Per rule 7: sklearn GroupKFold(n_splits=5) grouped by speaker in the source csv's own order, identical across arms A/B/C, which makes the paired contrast exact. Inner layer choice GroupKFold(4) on the training speakers. Logged as POD4B-D5 (MEDIUM).",
+ "probe": "encoder stages only (enc), 32 Qwen2.5-Omni audio encoder layers, nested layer selection",
+ "commands": [
+  "python3 cut_arms4b.py adresso",
+  "WINDOW_S=30 python3 extract_probe_layers.py /workspace/p16pod4b/mf_adresso_<ARM>.csv /workspace/p16pod4b/out/p16_adresso_<ARM> ad \"Qwen/Qwen2.5-Omni-7B\"   (ARM in orig|paronly|durmatch)",
+  "python3 nested_oof.py /workspace/p16pod4b/out/p16_adresso_<ARM>_states.npz /workspace/p16pod4b/out/p16_adresso_<ARM> enc",
+  "python3 analyse4b_pod4b.py adresso out/spec_adresso.json",
+  "python3 boot.py out/spec_adresso.json out/boot_adresso.json",
+  "python3 package4b.py adresso"
+ ],
+ "source_absolute_paths": {
+  "scored_clips_arm_A": "/workspace/p16pod4b/src/adresso_orig",
+  "par_intervals": "/workspace/p16pod4b/par_intervals_adresso.json",
+  "manifest_arm_A": "/workspace/p16pod4b/mf_adresso_orig.csv",
+  "manifest_arm_B": "/workspace/p16pod4b/mf_adresso_paronly.csv",
+  "manifest_arm_C": "/workspace/p16pod4b/mf_adresso_durmatch.csv",
+  "published_zeroshot": "/workspace/p16pod4b/pub/omni_adresso_zeroshot_scores.csv",
+  "published_enc_probe": "/workspace/p16pod4b/pub/omni_adresso_enc_nested_oof.csv",
+  "zeroshot_scores_arm_A": "/workspace/p16pod4b/out/p16_adresso_orig_zeroshot_scores.csv",
+  "zeroshot_scores_arm_B": "/workspace/p16pod4b/out/p16_adresso_paronly_zeroshot_scores.csv",
+  "zeroshot_scores_arm_C": "/workspace/p16pod4b/out/p16_adresso_durmatch_zeroshot_scores.csv",
+  "enc_oof_arm_A": "/workspace/p16pod4b/out/p16_adresso_orig_enc_nested_oof.csv",
+  "enc_oof_arm_B": "/workspace/p16pod4b/out/p16_adresso_paronly_enc_nested_oof.csv",
+  "enc_oof_arm_C": "/workspace/p16pod4b/out/p16_adresso_durmatch_enc_nested_oof.csv"
+ },
+ "sha256_first_1MB": {
+  "par_intervals": "8d8186859e071a05056e7e2102c8aed374dc0b14c4db5c2cd08062ad62502bad",
+  "manifest_arm_A": "9aa520cae382ee030586b33adffbb78ceb45b187ef80026a27d1adcfd190b3d1",
+  "manifest_arm_B": "d7ab81059d888b028ba29628ffa6b47d0296c80c9b9c49651910bbf7c05a2fe8",
+  "manifest_arm_C": "10ddbd09cd88196490ac71667d2c6461efa62ec863842dd92e4c625e0db33eea",
+  "published_zeroshot": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+  "published_enc_probe": "447010a74fe175e03a565ee647ff34a2e6fed447a2e8849defdfd8b5e9e118e5",
+  "zeroshot_scores_arm_A": "7236ba3fc45f57c9a78229fd70e35a9c992bb533c480bd7ad48e60feb4c50ab8",
+  "zeroshot_scores_arm_B": "10763b48f7b4fa4175df11f27c35268f3738140e639f5958866aaaee09e14a1a",
+  "zeroshot_scores_arm_C": "3fbafe1e0fb407adb8d37f2c1706d8e0e21ed617c258710c0c921bb7098a896f",
+  "enc_oof_arm_A": "45a5b92fe2ced35390ec5ff06d82068056ba815e9095884715ffedd9b3cfa0f1",
+  "enc_oof_arm_B": "87717147d1ceb6ecbcc69b89ddb34e54236b7daedf0d8d73a82b2fd6138c0d3f",
+  "enc_oof_arm_C": "ebec0ae816d198d89d2b1bb7a0468baa220afc920a3c8b76e1ee21ca9b5354a2"
+ },
+ "transformers": "5.17.0",
+ "torch": "2.8.0+cu128",
+ "date": "2026-09-23T08:33:19"
+}

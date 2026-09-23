@@ -1,0 +1,43 @@
+{
+ "result": "TF-IDF word logistic regression, out of fold, ADReSS-2020",
+ "auc": 0.9254,
+ "lo": 0.8866,
+ "hi": 0.9587,
+ "usable_draws": 2000,
+ "n": 156,
+ "n_speakers": 156,
+ "n_positive": 78,
+ "seed": "bootstrap numpy.random.default_rng(0), 2000 draws, speakers with replacement",
+ "model": "TfidfVectorizer() fit inside each training fold + LogisticRegression(C=1, class_weight='balanced', max_iter=5000)",
+ "model_id": "none (no neural model)",
+ "prompt": "none (no prompt; transcript text only)",
+ "folds": "/Users/chaitanyaparwatkar/Desktop/release/folds/adress2020_groupkfold5_mac.csv",
+ "fold_note": "single-split _mac file: sklearn GroupKFold(5) as installed on the Mac; the split that reproduces the eGeMAPS baseline",
+ "transcript_source": "/Volumes/G-Drive Pro/paper work/paper1_local_runs/adress2020_text.csv",
+ "vocab_size_per_fold": [
+  890,
+  978,
+  976,
+  944,
+  970
+ ],
+ "labels_match_paper_transcript_run": "156/156 vs /Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_adress2020_text.csv",
+ "pitt_text_equals_conflict_manifest": null,
+ "command": "/usr/local/bin/python3 scripts/a_lang_saliency.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/A_language_saliency",
+ "versions": {
+  "python": "3.10.2",
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+ },
+ "sources": [
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/adress2020_text.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/adress2020_groupkfold5_mac.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_adress2020_text.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/adress2020_text.csv": "8a427d906f5afc7aa604a6aedec134d20fac0c69d4d498ea7643eee280d83460",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/adress2020_groupkfold5_mac.csv": "71982b814aaf451a45dd6a3728dd6b90200c4fad9e6370a69e8c26265c0031f6",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_adress2020_text.csv": "9c2ed2a7c166ce6a1704634f4a6a62721d9c6ae7909f5b3a6875977f5abe0f6a"
+ }
+}

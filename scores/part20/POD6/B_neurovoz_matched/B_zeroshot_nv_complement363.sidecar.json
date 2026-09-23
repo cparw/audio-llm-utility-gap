@@ -1,0 +1,37 @@
+{
+ "result": "Qwen2.5-Omni zero-shot answer AUC on the 363 NeuroVoz clips outside the matched subset (paper per-clip file)",
+ "auc": 0.8462,
+ "lo": 0.7645,
+ "hi": 0.9144,
+ "usable_draws": 2000,
+ "n": 363,
+ "n_speakers": 31,
+ "speakers_by_group": {
+  "PD": {
+   "n_spk": 14,
+   "age_mean": 76.57142857142857,
+   "male_frac": 1.0
+  },
+  "HC": {
+   "n_spk": 17,
+   "age_mean": 53.8,
+   "male_frac": 0.625
+  }
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "seed": "default_rng(0), 2000 draws",
+ "command": "/usr/local/bin/python3 scripts/b_complement.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched",
+ "sources": [
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_clips.csv",
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/drive_data/spanish_neurovoz/zenodo_upload/metadata/data_pd.csv",
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/drive_data/spanish_neurovoz/zenodo_upload/metadata/data_hc.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_clips.csv": "e98aebe814f0eddd4975e3c5b660b0aebf27a1497a72a89753a2ff3310333bf8",
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/drive_data/spanish_neurovoz/zenodo_upload/metadata/data_pd.csv": "2932f1bb118f3439529647ba936ae463936eaac7a2df065ae6a6f8f8cca197f7",
+  "/Volumes/G-Drive Pro/paper work/paper1_local_runs/drive_data/spanish_neurovoz/zenodo_upload/metadata/data_hc.csv": "039510a13f1911d75387ab12cfe62ccb07ebdf25c90240c625e8dbd932ca31fc"
+ }
+}

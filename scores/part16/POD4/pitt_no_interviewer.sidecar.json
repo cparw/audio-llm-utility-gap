@@ -1,0 +1,182 @@
+{
+ "part": "POD4 4b - Pitt with the interviewer removed",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "dtype": "bfloat16",
+ "device": "cuda (H200)",
+ "window_seconds": 30.0,
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "prompt_source": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot.json (condition ad), identical string reproduced by extract_probe_layers.py COND=ad",
+ "n": 468,
+ "n_speakers": 228,
+ "n_conflict": 146,
+ "n_agreement": 322,
+ "sources": {
+  "manifest": "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+  "chat_transcripts": "/Volumes/G-Drive Pro/DementiaBank/transcripts/{Control,Dementia}/cookie/<session>.cha",
+  "original_segments": "/Volumes/G-Drive Pro/DementiaBank/segments/*.wav",
+  "published_zeroshot": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+  "published_encoder_probe": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_enc_nested_oof.csv"
+ },
+ "arms": {
+  "A_orig": "the existing segment wav unchanged; model truncates to the first 30 s",
+  "B_paronly": "ONLY the *PAR timed intervals inside that same 30 s, concatenated, 5 ms raised-cosine fade at every splice",
+  "C_durmatch": "the first len(B) seconds of arm A: duration-matched to B but still containing the interviewer and the gaps"
+ },
+ "why_arm_C": "A vs B confounds interviewer removal with a drop from 30.0 s to 17.6 s mean duration. C isolates duration, so B vs C is the clean interviewer contrast.",
+ "splice_fade_ms": 5.0,
+ "folds": "sklearn GroupKFold(n_splits=5) grouped by speaker over the source csv order. NO saved fold file exists for the Pitt 468 (logged MEDIUM in DISCREPANCIES.md). Identical folds across all three arms, which makes the paired contrast exact.",
+ "probe": "nested layer selection: outer GroupKFold(5) by speaker, inner GroupKFold(4) on training speakers picks the encoder layer, refit, out-of-fold. StandardScaler + LogisticRegression(max_iter=2000, class_weight=balanced).",
+ "auc": "rank formula with tie-averaged ranks, recomputed from the per-clip scores; no AUC copied from any json",
+ "bootstrap": "2000 draws, numpy.random.default_rng(0) reseeded per cell, SPEAKERS resampled with replacement (never clips), percentile 2.5/97.5. PAIRED draws the speaker list once per replicate and recomputes both quantities inside that draw. 2000/2000 usable draws in every cell.",
+ "commands": [
+  "python3 cut_arms.py",
+  "WINDOW_S=30 python3 extract_probe_layers.py /workspace/p16pod4/pitt/mf_<arm>.csv /workspace/p16pod4/out/p16_pitt_<arm> ad \"Qwen/Qwen2.5-Omni-7B\"",
+  "python3 nested_oof.py /workspace/p16pod4/out/p16_pitt_<arm>_states.npz /workspace/p16pod4/out/p16_pitt_<arm> enc",
+  "python3 analyse4b.py && python3 boot.py out/spec4b.json out/boot4b.json"
+ ],
+ "chat_resolution": {
+  "windows": 468,
+  "resolved": 468,
+  "unresolved": 0,
+  "windows_with_timed_INV_in_heard_30s": 158,
+  "mean_INV_share": 0.02,
+  "max_INV_share": 0.2818,
+  "max_INV_ms": 8454,
+  "mean_PAR_share": 0.5871,
+  "mean_gap_share": 0.3929,
+  "untimed_INV_utterances_in_these_transcripts": 788,
+  "note": "untimed INV utterances cannot be located, so 158/468 is a LOWER BOUND on interviewer presence"
+ },
+ "recut_duration": {
+  "mean_s": 17.61,
+  "median_s": 18.55,
+  "min_s": 0.68,
+  "max_s": 29.23,
+  "under_5s": 19,
+  "under_10s": 68,
+  "under_15s": 161,
+  "note": "the 68 clips under 10 s of participant speech are where this test is weakest"
+ },
+ "results": {
+  "published_recomputed": {
+   "zeroshot": 0.6578,
+   "encoder_probe_perclip": 0.7969,
+   "encoder_probe_repeats_mean": 0.7761,
+   "note": "the brief quoted 0.7706 for the encoder probe; that value is in no file. See DISCREPANCIES.md."
+  },
+  "arm_A_orig": {
+   "zeroshot": 0.6497,
+   "zeroshot_ci": [
+    0.5959,
+    0.7056
+   ],
+   "encoder_probe": 0.7949,
+   "encoder_probe_ci": [
+    0.7431,
+    0.8446
+   ]
+  },
+  "arm_B_paronly": {
+   "zeroshot": 0.723,
+   "zeroshot_ci": [
+    0.6664,
+    0.7753
+   ],
+   "encoder_probe": 0.7497,
+   "encoder_probe_ci": [
+    0.694,
+    0.8035
+   ]
+  },
+  "arm_C_durmatch": {
+   "zeroshot": 0.6145,
+   "zeroshot_ci": [
+    0.5582,
+    0.6683
+   ],
+   "encoder_probe": 0.798,
+   "encoder_probe_ci": [
+    0.7448,
+    0.8489
+   ]
+  },
+  "paired": {
+   "zeroshot_A_to_B": {
+    "delta": 0.0732,
+    "ci": [
+     0.0312,
+     0.1165
+    ]
+   },
+   "zeroshot_C_to_B": {
+    "delta": 0.1084,
+    "ci": [
+     0.0638,
+     0.155
+    ]
+   },
+   "encoder_A_to_B": {
+    "delta": -0.0452,
+    "ci": [
+     -0.0857,
+     -0.0083
+    ]
+   },
+   "encoder_C_to_B": {
+    "delta": -0.0483,
+    "ci": [
+     -0.0907,
+     -0.0062
+    ]
+   },
+   "zeroshot_A_to_C_duration_only": {
+    "delta": -0.0352,
+    "ci": [
+     -0.0729,
+     -0.0001
+    ]
+   },
+   "encoder_A_to_C_duration_only": {
+    "delta": 0.0032,
+    "ci": [
+     -0.0367,
+     0.0394
+    ]
+   }
+  },
+  "arm_split": {
+   "conflict_n146": {
+    "A_zeroshot": 0.5298,
+    "A_encoder": 0.6161,
+    "B_zeroshot": 0.5408,
+    "B_encoder": 0.6295
+   },
+   "agreement_n322": {
+    "A_zeroshot": 0.6952,
+    "A_encoder": 0.8674,
+    "B_zeroshot": 0.8007,
+    "B_encoder": 0.8037
+   }
+  }
+ },
+ "interviewer_is_itself_label_correlated": {
+  "mean_INV_ms_dementia": 852.5,
+  "mean_INV_ms_control": 186.4,
+  "windows_with_INV_dementia": "127/290",
+  "windows_with_INV_control": "31/178",
+  "AUC_of_INV_ms_alone": 0.6427,
+  "reading": "the investigator speaks more to impaired participants, so the original cut did carry a label-correlated interviewer cue"
+ },
+ "residual_cue_in_arm_B": {
+  "participant_duration_mean_control_s": 19.85,
+  "participant_duration_mean_dementia_s": 16.24,
+  "AUC_of_duration_alone_direction_free": 0.6648,
+  "reading": "arm B is not cue-free: how much the person spoke still predicts the label. That is plausibly clinical signal rather than channel, but it is not controlled here."
+ },
+ "headline": {
+  "gap_original_cut": 0.1452,
+  "gap_interviewer_free": 0.0267,
+  "statement": "On interviewer-free audio the Pitt representation utility gap falls from 0.1452 to 0.0267. The zero-shot model improves when the interviewer is removed; the encoder probe loses 0.045 and that loss is NOT explained by the shorter audio."
+ },
+ "verification": "every value re-derived from the per-clip csv with an independent pairwise Mann-Whitney implementation; 22/22 agree to 4 decimals. See VERIFY_POD4_SUMMARY.tsv."
+}

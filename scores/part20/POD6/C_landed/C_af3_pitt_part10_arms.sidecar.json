@@ -1,0 +1,82 @@
+{
+ "result": "Audio Flamingo 3 Pitt 468 zero-shot answer AUC by arm, alternative copy overnight2/part10",
+ "cells": {
+  "conflict": {
+   "auc": 0.6074807480748075,
+   "lo": 0.5063107837528604,
+   "hi": 0.7128714613192494,
+   "n": 146,
+   "n_spk": 100,
+   "usable": 2000
+  },
+  "agreement": {
+   "auc": 0.5854716155468035,
+   "lo": 0.5144020389556301,
+   "hi": 0.655419169155412,
+   "n": 322,
+   "n_spk": 175,
+   "usable": 2000
+  },
+  "conflict_minus_agreement": {
+   "auc": 0.02200913252800396,
+   "lo": -0.08463830003982595,
+   "hi": 0.13571749838128444,
+   "n": 468,
+   "n_spk": 228,
+   "usable": 2000
+  }
+ },
+ "method_check_vs_M8_part3": {
+  "conflict": [
+   0.0,
+   -0.0,
+   -0.0
+  ],
+  "agreement": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "conflict_minus_agreement": [
+   0.0,
+   -0.0,
+   0.0
+  ]
+ },
+ "model_id": "nvidia/audio-flamingo-3-hf",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "prompt_unique": 1,
+ "source_json": {
+  "model": "nvidia/audio-flamingo-3-hf",
+  "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+  "script": "/workspace/af3_score.py",
+  "clip_list": "/workspace/mf_pitt.csv",
+  "n": 468,
+  "n_speakers": 228,
+  "window_seconds": 30,
+  "pre_cut_to_single_window": true,
+  "auc": 0.5894,
+  "yes_rate": 0.8355,
+  "median_answer_mass": 0.9484,
+  "median_source_duration_s": 33.28,
+  "max_source_duration_s": 55.56,
+  "dtype": "bfloat16",
+  "date": "2026-09-20"
+ },
+ "seed": "bootstrap numpy.random.default_rng(0), 2000 draws, speakers with replacement; paired = one speaker draw per replicate",
+ "n": 468,
+ "n_speakers": 228,
+ "command": "/usr/local/bin/python3 scripts/c_af3_alt.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/C_landed",
+ "sources": [
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/af3_pitt.csv",
+  "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M8_conflict_cells.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/af3_pitt.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/af3_pitt.csv": "c421d9884331e0fa4e7db745041cd06b63dd2f6708f53cf12f37477fe77dd23b",
+  "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M8_conflict_cells.csv": "d56d1202786a7f9d35aca658020ca40c08a4798a43780a02c9627a955cf5169d",
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part3/af3_pitt.csv": "675eab0366cb0506ee8fcec01b623e587278dd7251613325d96ee12e19909c4f"
+ }
+}

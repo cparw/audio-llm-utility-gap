@@ -1,0 +1,36 @@
+{
+ "what": "20 clips present in both M2 and part14_clips: re-cut from E-DAIC tarballs on POD3b and re-scored",
+ "cut_check": "20 of 20 byte-identical (wave params and int16 samples equal); extended to all 794 part14_clips by full-file sha256: 794 of 794 identical",
+ "score_check_tf5170": {
+  "max_abs_diff": 0.010652701112989688,
+  "n_within_1e-3": 10,
+  "n": 20
+ },
+ "score_check_tf4571_first_attempt": {
+  "max_abs_diff": 0.03017248277977419
+ },
+ "rerun_determinism_max_abs_diff": 0.0,
+ "recut_vs_part14_clip_same_pod_max_abs_diff": 0.0,
+ "environment": {
+  "gpu": "H100 NVL",
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.17.0 (main run); 4.57.1 first attempt only",
+  "librosa": "1.0.0"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv": {
+   "sha256_first_1MB": "3e118a11ec4be0daccf95265ff31253dbaf80d5442571ec12cad923a7da7c1ff"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M2_distilbert_manifest.csv": {
+   "sha256_first_1MB": "f93e0a32bf2c7f8b75a53fa80373d6f7190b61afa2332ab2da0f1f49c58eddee"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD1/cut_segs.py": {
+   "sha256_first_1MB": "45c3ca30939ff0ecc347034a65f2b3c507b6d156942a72bac8a3df04228813de"
+  }
+ },
+ "command": "HF_HOME=/workspace/hf WINDOW_S=30 python3 p20_score.py val20_manifest.csv val20_scores_p14clips_tf517.csv 0 1",
+ "date": "2026-09-23T12:26:23.100392+00:00"
+}

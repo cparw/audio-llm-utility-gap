@@ -1,0 +1,35 @@
+{
+ "task": "M7 Pitt correction",
+ "why": "M7 used omni_final/omni_pitt_enc_nested_oof.csv (single split, 0.7969), which master_lookup.csv marks SUPERSEDED. The paper cites 0.7706 from the part10 5-repeat rerun.",
+ "source_files": {
+  "probe": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/pitt_enc_nested5_oof.npz",
+  "zeroshot": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv"
+ },
+ "sha256_first1mb": {
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/part10/pitt_enc_nested5_oof.npz": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47",
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+ },
+ "n": 468,
+ "n_speakers": 228,
+ "seed": 0,
+ "n_boot": 2000,
+ "usable_draws": 2000,
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "aggregation": "mean of the 5 per-repeat AUCs, recomputed inside every bootstrap draw",
+ "per_repeat_auc": [
+  0.7598,
+  0.7725,
+  0.7459,
+  0.7903,
+  0.7843
+ ],
+ "probe_mean_of_5_aucs": 0.7706,
+ "probe_auc_of_mean_prob": 0.7917,
+ "zeroshot": 0.6578,
+ "paired_gap": 0.1128,
+ "gap_ci": [
+  0.0455,
+  0.1768
+ ],
+ "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M7_pitt_fix.py"
+}

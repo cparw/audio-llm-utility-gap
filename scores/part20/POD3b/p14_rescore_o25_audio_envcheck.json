@@ -1,0 +1,115 @@
+{
+ "result_file": "/workspace/scores/part20/POD3b/p14_rescore_o25_audio_envcheck.csv",
+ "result_file_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3b/p14_rescore_o25_audio_envcheck.csv",
+ "results": {
+  "conflict": {
+   "what": "conflict arm AUC",
+   "value": 0.22100368485699246,
+   "lo": 0.1818276670448792,
+   "hi": 0.2624393539069762,
+   "n": 483,
+   "n_distinct_segments": 483,
+   "n_speakers": 138,
+   "kind": "auc",
+   "usable_draws": 2000,
+   "n_pos": 205
+  },
+  "agreement_all": {
+   "what": "agreement arm AUC, all rows",
+   "value": 0.9467099491138796,
+   "lo": 0.9016645853972666,
+   "hi": 0.9826995262938378,
+   "n": 483,
+   "n_distinct_segments": 311,
+   "n_speakers": 138,
+   "kind": "auc",
+   "usable_draws": 2000,
+   "n_pos": 205
+  },
+  "agreement_distinct": {
+   "what": "agreement arm AUC, distinct segments",
+   "value": 0.9635358602749907,
+   "lo": 0.9352454596088279,
+   "hi": 0.9856052653399668,
+   "n": 311,
+   "n_distinct_segments": 311,
+   "n_speakers": 138,
+   "kind": "auc",
+   "usable_draws": 2000,
+   "n_pos": 104
+  },
+  "diff_conflict_minus_agreement_all": {
+   "what": "paired conflict minus agreement (all rows)",
+   "value": -0.7257062642568872,
+   "lo": -0.7800163276914754,
+   "hi": -0.663667717894316,
+   "n": 966,
+   "n_distinct_segments": 794,
+   "n_speakers": 138,
+   "kind": "diff",
+   "usable_draws": 2000
+  },
+  "diff_conflict_minus_agreement_distinct": {
+   "what": "paired conflict minus agreement (distinct agreement segments)",
+   "value": -0.7425321754179983,
+   "lo": -0.7880338657626503,
+   "hi": -0.6929629445811423,
+   "n": 794,
+   "n_distinct_segments": 794,
+   "n_speakers": 138,
+   "kind": "diff",
+   "usable_draws": 2000
+  }
+ },
+ "n_rows": 966,
+ "n_speakers": 138,
+ "n_distinct_segments": 794,
+ "median_answer_mass": 0.99669097365,
+ "min_answer_mass": 0.9913757145,
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "prompt_unique": 1,
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "seed": 0,
+ "bootstrap": "2000 draws, fresh numpy.random.default_rng(0) per cell, speakers resampled with replacement, percentile 2.5/97.5; differences paired (one speaker draw per replicate)",
+ "auc": "rank formula, scipy.stats.rankdata ties averaged",
+ "scoring_note": "each distinct segment scored once (deterministic forward pass, rerun max diff 0.0 on this pod) and its p_yes joined to every manifest row that uses it",
+ "sources": {
+  "/workspace/p20/part14_manifest_new.csv": {
+   "sha256_first_1MB": "f919c2499098b178fb332cdce0cf9395484d96b4f199ac15480397658ab5fd7c"
+  },
+  "/workspace/p20/out/p14_shard0.csv": {
+   "sha256_first_1MB": "beb26ffa4eceb51510decda680efb7866e3f9ebbe7d2854c541c4dfa573eb868"
+  },
+  "/workspace/p20/out/p14_shard1.csv": {
+   "sha256_first_1MB": "9911c6c5c3a047ba07594088145f7cdad04f273b14151c468de490d3e4824e96"
+  },
+  "/workspace/p20/out/p14_shard2.csv": {
+   "sha256_first_1MB": "7b5635afac676af3dc4c341bdbda38fd831d5d3198ad555559f5d191bd46a3af"
+  },
+  "/workspace/p20/out/p14_shard3.csv": {
+   "sha256_first_1MB": "f3cba7e563bf837d7c9a1883fbe5374364b7655f22259977a1a33e0f26504ab5"
+  },
+  "/workspace/p20/p20_score.py": {
+   "sha256_first_1MB": "81d3846e90a2b88052021affb7927878fa982dfe0697e9a4debdb278abe6c10b"
+  },
+  "/workspace/p20/cut_segs_p20.py": {
+   "sha256_first_1MB": "196adfc426505067a9fe52295265ebd2b3c4fb9b63a5f7791493670f4ab45052"
+  },
+  "/workspace/p20/cut_segs_p20_p14extra.py": {
+   "sha256_first_1MB": "3349e15fa9b964e8fed7697a477aed32102976c257ffbca4c1fad314a0a1f1da"
+  },
+  "/workspace/p20/cut_list_p14extra.csv": {
+   "sha256_first_1MB": "085a37f035de991df14b8a9cb4b1dbddd4e864e5636d786f79b270de15ff2905"
+  },
+  "/workspace/p20/p14_distinct_manifest.csv": {
+   "sha256_first_1MB": "204a032bd6df0643971235261aca101789f340b2c99f84889e8df8b57f25c48c"
+  },
+  "/workspace/p20/p14clips_sha.csv": {
+   "sha256_first_1MB": "bcb18a02dda1c43bb252c046d09f14fa41df190d1ccbc203ef6af4a502b4e6bd"
+  }
+ },
+ "command": "python3 p20_analyze.py part14_manifest_new.csv out/p14_shard*.csv /workspace/scores/part20/POD3b/p14_rescore_o25_audio_envcheck POD3b_p14_rescore_envcheck /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3b p20_score.py cut_segs_p20.py cut_segs_p20_p14extra.py cut_list_p14extra.csv p14_distinct_manifest.csv p14clips_sha.csv",
+ "date": "2026-09-23T12:24:33.731233Z"
+}

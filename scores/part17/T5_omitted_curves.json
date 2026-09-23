@@ -1,0 +1,203 @@
+{
+ "task": "PART17 task 5, omitted dataset encoder curves vs zero-shot answer",
+ "date": "2026-09-23",
+ "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py",
+ "seed": 0,
+ "bootstrap_draws": 2000,
+ "bootstrap": "speakers resampled with replacement, numpy default_rng(0) fresh per dataset, percentile 2.5/97.5",
+ "auc": "rank formula, scipy.stats.rankdata ties averaged",
+ "count_rule": "over encoder rows layer 0..31 (32 transformer layers, no pre-transformer stage): probe auc_oof > full-precision recomputed answer AUC, strict",
+ "figure_script": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/make_fig1_v4.py",
+ "figure_script_sha256_1mb": "0806d85429c1d9c9b6178c84fdb08e83c33cc61cf10d9d28f54911f3fc8fe20d",
+ "figure_script_note": "make_fig1_v5.py is not on disk; make_fig1_v4.py wrote fig1_gap.pdf (variant full) and the fig1_gray_v5 render",
+ "outputs": [
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_summary.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_zeroshot_perclip.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/rows/T5.tsv"
+ ],
+ "results": [
+  {
+   "result": "T5_pitt",
+   "dataset": "pitt",
+   "condition": "AD",
+   "plotted": "plotted",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_encoder_perlayer.csv": "1e4a885cc2ddff92622ca3b94298f7f8ac5538fa955fd0f7fe93cbe5c2aafb18",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+    "/Users/chaitanyaparwatkar/Desktop/release/overnight/curves/omni/pitt_encoder.csv": "fa06f84fd856a1b2fe78069ec5ccbd1a81aa95574fb7817800d09d506a28c685"
+   },
+   "n": 468,
+   "n_speakers": 228,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_adresso",
+   "dataset": "adresso",
+   "condition": "AD",
+   "plotted": "omitted",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adresso_encoder_perlayer.csv": "ea4724eaf581dd1b4a2894910aea1619dd1ca5c0d8dfaad76291edbbb1711bf8",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adresso_zeroshot_scores.csv": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd"
+   },
+   "n": 237,
+   "n_speakers": 237,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_adress2020",
+   "dataset": "adress2020",
+   "condition": "AD",
+   "plotted": "omitted",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adress2020_encoder_perlayer.csv": "e56202f096162382cdc1a0a5d4451bbb7676e5b3f3649d1b5676b8b9f3b29752",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_adress2020_zeroshot_scores.csv": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543"
+   },
+   "n": 156,
+   "n_speakers": 156,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_pcgita",
+   "dataset": "pcgita",
+   "condition": "PD",
+   "plotted": "plotted",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pcgita_encoder_perlayer.csv": "45ebe1bf0a0f667cab35f66ab403b4dc1a25106b10dc01fa7a541d8a0f73a47e",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+    "/Users/chaitanyaparwatkar/Desktop/release/overnight/curves/omni/pcgita_encoder.csv": "e1bfa76d3bdc3e2ab621aa571ce469f210c6f0dc04cef3d11113474af11c47a8"
+   },
+   "n": 1100,
+   "n_speakers": 100,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_neurovoz",
+   "dataset": "neurovoz",
+   "condition": "PD",
+   "plotted": "omitted",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_encoder_perlayer.csv": "126fa3cee99739a5c875ebf2d35fcbe9eebb048db7ac5cb98ad27d046f9b0e55",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082"
+   },
+   "n": 1270,
+   "n_speakers": 107,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_kcl",
+   "dataset": "kcl",
+   "condition": "PD",
+   "plotted": "omitted",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_encoder_perlayer.csv": "5d728dc086cdf57a1bc4dc21dbeed094cd3ed42977a864a3606ef74a24347944",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_kcl_zeroshot_scores.csv": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e"
+   },
+   "n": 37,
+   "n_speakers": 37,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_edaic_full",
+   "dataset": "edaic_full",
+   "condition": "MDD",
+   "plotted": "plotted (fig1_gap.pdf)",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv": "adbbb86b58d2d0bba56c1467a6a9ccd0206c1c1219d4fc69f2116ecc8b53fc3b",
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd"
+   },
+   "n": 275,
+   "n_speakers": 275,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_edaic_mid300",
+   "dataset": "edaic_mid300",
+   "condition": "MDD",
+   "plotted": "plotted variant (fig1_gap_300.pdf)",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_encoder_perlayer.csv": "9f22c104ebc280fbcadfb98ed2a52a72152d4119e4cf21c568f8996410e9c782",
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid300_zeroshot_scores.csv": "4de7f3944fb3d1ea0807074a6d5fefe6e8234bbf2819814ce43279ec9723bd2b",
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd"
+   },
+   "n": 275,
+   "n_speakers": 275,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_edaic_mid30",
+   "dataset": "edaic_mid30",
+   "condition": "MDD",
+   "plotted": "plotted variant (fig1_gap_mid.pdf)",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_encoder_perlayer.csv": "df9ae0b8fee704a604b9200794744660472c99a840ca7a9e892de0f9d1cd3b66",
+    "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_zeroshot_scores.csv": "54aa019cdcb9508cf5612d0913a06564db2a24912a2c901a1cba2a7cd2bc94ae",
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd"
+   },
+   "n": 275,
+   "n_speakers": 275,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  },
+  {
+   "result": "T5_edaic_first30",
+   "dataset": "edaic_first30",
+   "condition": "MDD",
+   "plotted": "not plotted, reference",
+   "sources": {
+    "/Users/chaitanyaparwatkar/Desktop/release/master/master_lookup.csv": "75694521cf64abc0a501ca708629d41c49bb4517a0bfb02e52a6a3e43664a2dd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_encoder_perlayer.csv": "aa45ad8a6a030ed70538b113f9a38d6fa1d810c466c42183a8f0fe0b0bc4dafd",
+    "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_edaic_zeroshot_scores.csv": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f"
+   },
+   "n": 275,
+   "n_speakers": 275,
+   "seed": 0,
+   "bootstrap_draws": 2000,
+   "bootstrap_usable": 2000,
+   "model_id": "Qwen/Qwen2.5-Omni-7B",
+   "command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part17/T5_omitted_curves.py"
+  }
+ ]
+}

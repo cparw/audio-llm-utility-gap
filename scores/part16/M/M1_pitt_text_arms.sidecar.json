@@ -1,0 +1,287 @@
+{
+ "task": "PART16 / M1 - Pitt transcript-only, Qwen2.5-Omni, split by arm",
+ "date_run": "2026-09-22",
+ "source_files": {
+  "/Volumes/G-Drive Pro/paper1_local_runs/omni_pitt_text.csv": {
+   "sha256_first_1mb": "674747067c8bbb154433e49eef6a25e8d05bd65b5cb3c249f48ef632152842e1",
+   "mtime": "2026-09-15 15:14:43 PDT",
+   "bytes": 47343
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pitt_text.csv": {
+   "sha256_first_1mb": "1dc275b6f2731256d9b21ef65ff94667216619253313b9beb02131382fadba5e",
+   "mtime": "2026-09-20 02:38:33 PDT",
+   "bytes": 104330
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/podD2_final/out/o25_pitt_text.csv": {
+   "sha256_first_1mb": "1dc275b6f2731256d9b21ef65ff94667216619253313b9beb02131382fadba5e",
+   "mtime": "2026-09-20 02:38:33 PDT",
+   "bytes": 104330
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv": {
+   "sha256_first_1mb": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+   "mtime": "2026-09-18 05:52:40 PDT",
+   "bytes": 88464
+  },
+  "/Volumes/G-Drive Pro/DementiaBank/pitt_conflict_manifest.csv": {
+   "sha256_first_1mb": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+   "mtime": "2026-08-21 15:32:48 PDT",
+   "bytes": 238868
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/overnight/bootstrap_intervals.csv": {
+   "sha256_first_1mb": "189680a1505d4ca711d4648edc5dfd38b66eadb06f007b1520280dde90ce072a",
+   "mtime": "2026-09-18 05:52:40 PDT",
+   "bytes": 30005
+  }
+ },
+ "text_file_used": "/Volumes/G-Drive Pro/paper1_local_runs/omni_pitt_text.csv",
+ "text_file_used_reason": "This is the per-clip file the Sep 18 bootstrap tables point at. overnight/bootstrap_intervals.csv rows transcript_auc / pitt_conflict_auc / pitt_agreement_auc / pitt_conflict_minus_agreement for Qwen2.5-Omni pitt all name this exact path, and overnight/bootstrap_conflict_detail.csv row 'Qwen2.5-Omni,transcript' names it too. Its run log /Volumes/G-Drive Pro/paper1_local_runs/logs/omni_pitt_text.log records 'RESULT omni text pitt_text.csv n=468 AUC=0.697 agreement=0.799 conflict=0.455'.",
+ "n": 468,
+ "n_speakers": 228,
+ "n_conflict": 146,
+ "n_speakers_conflict": 100,
+ "n_agreement": 322,
+ "n_speakers_agreement": 175,
+ "join": {
+  "text_to_manifest": 468,
+  "arm_column_agreement": 468,
+  "label_agreement_manifest": 468,
+  "plus_audio": 468,
+  "speaker_agreement_audio": 468,
+  "label_agreement_audio": 468
+ },
+ "seed": 0,
+ "bootstrap_draws": 2000,
+ "bootstrap_unit": "speaker, with replacement",
+ "bootstrap_percentiles": [
+  2.5,
+  97.5
+ ],
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_text": "Based only on this transcript of what the person said, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "prompt_audio": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "folds": "not applicable - no model is fitted in this task; both streams are prompted zero-shot answer probabilities read off disk, so no fold assignment is used",
+ "auc_method": "rank formula, scipy.stats.rankdata, ties get average rank",
+ "shell_command": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M1_pitt_text_arms.py",
+ "outputs": {
+  "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M1_pitt_text_arms.csv",
+  "rows_tsv": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/rows/M1.tsv",
+  "sidecar": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M1_pitt_text_arms.sidecar.json"
+ },
+ "values": [
+  {
+   "id": "M1_text_all468",
+   "what": "Pitt Qwen2.5-Omni transcript-only answer AUC, all468 arm",
+   "value": 0.697462,
+   "lo": 0.636893,
+   "hi": 0.75491,
+   "n": 468,
+   "n_spk": 228,
+   "file": "/Volumes/G-Drive Pro/paper1_local_runs/omni_pitt_text.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_text_conflict",
+   "what": "Pitt Qwen2.5-Omni transcript-only answer AUC, conflict arm",
+   "value": 0.455006,
+   "lo": 0.341244,
+   "hi": 0.571774,
+   "n": 146,
+   "n_spk": 100,
+   "file": "/Volumes/G-Drive Pro/paper1_local_runs/omni_pitt_text.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_text_agreement",
+   "what": "Pitt Qwen2.5-Omni transcript-only answer AUC, agreement arm",
+   "value": 0.798663,
+   "lo": 0.739194,
+   "hi": 0.853462,
+   "n": 322,
+   "n_spk": 175,
+   "file": "/Volumes/G-Drive Pro/paper1_local_runs/omni_pitt_text.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_audio_all468",
+   "what": "Pitt Qwen2.5-Omni audio zero-shot answer AUC, all468 arm",
+   "value": 0.657768,
+   "lo": 0.603324,
+   "hi": 0.712537,
+   "n": 468,
+   "n_spk": 228,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_audio_conflict",
+   "what": "Pitt Qwen2.5-Omni audio zero-shot answer AUC, conflict arm",
+   "value": 0.532233,
+   "lo": 0.42155,
+   "hi": 0.644694,
+   "n": 146,
+   "n_spk": 100,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_audio_agreement",
+   "what": "Pitt Qwen2.5-Omni audio zero-shot answer AUC, agreement arm",
+   "value": 0.705375,
+   "lo": 0.643122,
+   "hi": 0.765773,
+   "n": 322,
+   "n_spk": 175,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_text_conflict_minus_agreement",
+   "what": "Pitt Qwen2.5-Omni transcript-only paired conflict minus agreement AUC",
+   "value": -0.343658,
+   "lo": -0.455577,
+   "hi": -0.22086,
+   "n": 468,
+   "n_spk": 228,
+   "file": "/Volumes/G-Drive Pro/paper1_local_runs/omni_pitt_text.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_audio_conflict_minus_agreement",
+   "what": "Pitt Qwen2.5-Omni audio zero-shot paired conflict minus agreement AUC",
+   "value": -0.173141,
+   "lo": -0.29581,
+   "hi": -0.039184,
+   "n": 468,
+   "n_spk": 228,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_text_minus_audio_all468",
+   "what": "Pitt Qwen2.5-Omni paired transcript minus audio AUC, all468 arm",
+   "value": 0.039694,
+   "lo": -0.030201,
+   "hi": 0.107032,
+   "n": 468,
+   "n_spk": 228,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M1_pitt_text_arms.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_text_minus_audio_conflict",
+   "what": "Pitt Qwen2.5-Omni paired transcript minus audio AUC, conflict arm",
+   "value": -0.077228,
+   "lo": -0.235988,
+   "hi": 0.06799,
+   "n": 146,
+   "n_spk": 100,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M1_pitt_text_arms.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_text_minus_audio_agreement",
+   "what": "Pitt Qwen2.5-Omni paired transcript minus audio AUC, agreement arm",
+   "value": 0.093289,
+   "lo": 0.015724,
+   "hi": 0.163737,
+   "n": 322,
+   "n_spk": 175,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/M1_pitt_text_arms.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_ALT_text_all468",
+   "what": "ALT Pitt Qwen2.5-Omni transcript-only answer AUC, all468 arm (Sep 20 pod rerun, different prompt run)",
+   "value": 0.662902,
+   "lo": 0.59825,
+   "hi": 0.724489,
+   "n": 468,
+   "n_spk": 228,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pitt_text.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_ALT_text_conflict",
+   "what": "ALT Pitt Qwen2.5-Omni transcript-only answer AUC, conflict arm (Sep 20 pod rerun, different prompt run)",
+   "value": 0.555996,
+   "lo": 0.451595,
+   "hi": 0.667974,
+   "n": 146,
+   "n_spk": 100,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pitt_text.csv",
+   "usable_draws": 2000
+  },
+  {
+   "id": "M1_ALT_text_agreement",
+   "what": "ALT Pitt Qwen2.5-Omni transcript-only answer AUC, agreement arm (Sep 20 pod rerun, different prompt run)",
+   "value": 0.707761,
+   "lo": 0.638076,
+   "hi": 0.769639,
+   "n": 322,
+   "n_spk": 175,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pitt_text.csv",
+   "usable_draws": 2000
+  }
+ ],
+ "candidate_files_found": [
+  {
+   "path": "/Volumes/G-Drive Pro/paper1_local_runs/omni_pitt_text.csv",
+   "mtime": "2026-09-15 15:14",
+   "n_rows": 468,
+   "columns": "id,speaker,label,set,p_yes,mass",
+   "used": true,
+   "note": "Sep 18 bootstrap tables point here; carries its own set column"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/o25_pitt_text.csv",
+   "mtime": "2026-09-20 02:38",
+   "n_rows": 468,
+   "columns": "speaker_id,id,label,p_yes,answer_mass,prompt",
+   "used": false,
+   "note": "Sep 20 pod rerun, same prompt string, json auc 0.6629; reported as ALT rows"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/podD2_final/out/o25_pitt_text.csv",
+   "mtime": "2026-09-20 02:38",
+   "n_rows": 468,
+   "columns": "speaker_id,id,label,p_yes,answer_mass,prompt",
+   "used": false,
+   "note": "byte-identical copy of the previous (md5 c5b37ecc5c7de852caa87ec7a5b16e21)"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_text.csv",
+   "mtime": "2026-09-22 18:46",
+   "n_rows": 708,
+   "used": false,
+   "note": "different clip set (pitt_all, 708 rows), not the 468 conflict manifest"
+  },
+  {
+   "path": "/Volumes/G-Drive Pro/paper1_local_runs/rebuild/omni_pitt_text_v1s_strip.csv",
+   "mtime": "2026-09-19 08:04",
+   "n_rows": 468,
+   "used": false,
+   "note": "Sep 19 prompt-variant rebuild v1s, auc 0.6377 per summary json"
+  },
+  {
+   "path": "/Volumes/G-Drive Pro/paper1_local_runs/rebuild/omni_pitt_text_v3s_strip.csv",
+   "mtime": "2026-09-19 08:09",
+   "n_rows": 468,
+   "used": false,
+   "note": "Sep 19 prompt-variant rebuild v3s, auc 0.6442 per summary json"
+  },
+  {
+   "path": "/Volumes/G-Drive Pro/paper1_local_runs/rebuild/omni_pitt_text_v7s_strip.csv",
+   "mtime": "2026-09-19 08:15",
+   "n_rows": 468,
+   "used": false,
+   "note": "Sep 19 prompt-variant rebuild v7s"
+  },
+  {
+   "path": "/Users/chaitanyaparwatkar/Desktop/release/overnight2/text_new/q3o_pitt_text.csv",
+   "mtime": "2026-09-20 02:44",
+   "n_rows": 468,
+   "used": false,
+   "note": "Qwen3-Omni, not Qwen2.5-Omni"
+  }
+ ]
+}

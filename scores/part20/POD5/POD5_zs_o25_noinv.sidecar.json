@@ -1,0 +1,130 @@
+{
+ "result": "POD5_zs_o25_noinv",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/POD5_zs_o25_noinv.csv",
+ "pod_per_clip_csv": "/workspace/scores/part20/POD5/POD5_zs_o25_noinv.csv",
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "bootstrap": {
+  "draws": 2000,
+  "seed": 0,
+  "rng": "numpy.random.default_rng(0), fresh per cell",
+  "unit": "speaker, resampled with replacement",
+  "interval": "percentile 2.5/97.5",
+  "paired": "one speaker draw per replicate for both sides"
+ },
+ "auc": "rank formula, scipy.stats.rankdata, ties averaged",
+ "cells": [
+  {
+   "id": "POD5_zs_o25_overall",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), interviewer-free, overall",
+   "value": 0.7231499418829911,
+   "lo": 0.6662808442193535,
+   "hi": 0.7750464329679808,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_zs_o25_paper_overall",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), paper 468 windows, overall",
+   "value": 0.6577683068578071,
+   "lo": 0.6033242994024883,
+   "hi": 0.7125368049704085,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_zs_o25_diff_overall",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), paired paper minus interviewer-free, overall",
+   "value": -0.06538163502518402,
+   "lo": -0.10935533378209557,
+   "hi": -0.023227930441847216,
+   "valid_draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  {
+   "id": "POD5_zs_o25_conflict",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), interviewer-free, conflict",
+   "value": 0.5425742574257426,
+   "lo": 0.42731722106722103,
+   "hi": 0.6661308766831685,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_zs_o25_paper_conflict",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), paper 468 windows, conflict",
+   "value": 0.5322332233223322,
+   "lo": 0.42155015727026596,
+   "hi": 0.6446943913141314,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_zs_o25_diff_conflict",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), paired paper minus interviewer-free, conflict",
+   "value": -0.010341034103410363,
+   "lo": -0.09275734414145856,
+   "hi": 0.06660087719298247,
+   "valid_draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  {
+   "id": "POD5_zs_o25_agreement",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), interviewer-free, agreement",
+   "value": 0.79989656681386,
+   "lo": 0.7496254576895515,
+   "hi": 0.8489151020696962,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_zs_o25_paper_agreement",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), paper 468 windows, agreement",
+   "value": 0.7053745474798107,
+   "lo": 0.6431215968788202,
+   "hi": 0.7657729289547797,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  {
+   "id": "POD5_zs_o25_diff_agreement",
+   "what": "Qwen2.5-Omni zero-shot p_yes (by-product of extraction; POD4 reports it officially), paired paper minus interviewer-free, agreement",
+   "value": -0.09452201933404936,
+   "lo": -0.15013281920824306,
+   "hi": -0.03947786502590707,
+   "valid_draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  }
+ ],
+ "command": "python3 extract_p20.py pod_manifest_noinv.csv o25noinv_pitt ad",
+ "sources": [
+  {
+   "path_pod": "/workspace/p20/work/o25noinv_pitt_zeroshot_scores.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD5/work/o25noinv_pitt_zeroshot_scores.csv",
+   "sha256_first_1MB": "96d85a7c65d1343375afbfa676b47c18aef6d4610f9801097a16630bff5f0952"
+  },
+  {
+   "path_pod": "/root/p20/ref/omni_pitt_zeroshot_scores.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "sha256_first_1MB": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+  },
+  {
+   "path_pod": "/root/p20/scripts/pod_manifest_noinv.csv",
+   "path_mac": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/pitt_noinv_cut/manifest.csv (clips) + pitt_conflict_manifest.csv (set)",
+   "sha256_first_1MB": "b7d1c53c540b0535c966cc7c6cefffc98af4fa2c6066a2ef64b9008a2f25df22"
+  }
+ ],
+ "created_utc": "2026-09-23T12:46:46Z",
+ "median_answer_mass_noinv": 0.9969418197870255
+}

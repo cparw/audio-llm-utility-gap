@@ -1,0 +1,102 @@
+{
+ "result": "NeuroVoz matched subset: five quiet-frame channel features each alone and together",
+ "cells": {
+  "noise_floor": {
+   "auc_raw": 0.464013770166584,
+   "raw_lo": 0.3872811646732274,
+   "raw_hi": 0.5423162917698011,
+   "auc_dirfree": 0.5359862298334159,
+   "dirfree_lo": 0.4576837082301989,
+   "dirfree_hi": 0.6127188353267726,
+   "usable": 2000,
+   "paper_full_raw": 0.459,
+   "paper_full_dirfree": 0.541
+  },
+  "snr": {
+   "auc_raw": 0.42941330921609244,
+   "raw_lo": 0.34132647217502077,
+   "raw_hi": 0.5180635240006926,
+   "auc_dirfree": 0.5705866907839076,
+   "dirfree_lo": 0.4819364759993074,
+   "dirfree_hi": 0.6586735278249791,
+   "usable": 2000,
+   "paper_full_raw": 0.4568,
+   "paper_full_dirfree": 0.5432
+  },
+  "centroid": {
+   "auc_raw": 0.2739446275928465,
+   "raw_lo": 0.19457319519212232,
+   "raw_hi": 0.3574065077391672,
+   "auc_dirfree": 0.7260553724071535,
+   "dirfree_lo": 0.6425934922608327,
+   "dirfree_hi": 0.8054268048078776,
+   "usable": 2000,
+   "paper_full_raw": 0.2218,
+   "paper_full_dirfree": 0.7782
+  },
+  "rolloff": {
+   "auc_raw": 0.25503739144810417,
+   "raw_lo": 0.18193940894076716,
+   "raw_hi": 0.33822542096471786,
+   "auc_dirfree": 0.7449626085518959,
+   "dirfree_lo": 0.661774579035282,
+   "dirfree_hi": 0.8180605910592328,
+   "usable": 2000,
+   "paper_full_raw": 0.1995,
+   "paper_full_dirfree": 0.8005
+  },
+  "tilt": {
+   "auc_raw": 0.33627019089574156,
+   "raw_lo": 0.27163753553006725,
+   "raw_hi": 0.4038603598630844,
+   "auc_dirfree": 0.6637298091042585,
+   "dirfree_lo": 0.5961396401369157,
+   "dirfree_hi": 0.7283624644699327,
+   "usable": 2000,
+   "paper_full_raw": 0.298,
+   "paper_full_dirfree": 0.702
+  },
+  "five_together": {
+   "auc": 0.7111960401046377,
+   "lo": 0.6078996238477302,
+   "hi": 0.7961297601758899,
+   "usable": 2000,
+   "paper_full": 0.7977
+  }
+ },
+ "method_check": {
+  "five_feature_full_recomputed": 0.7977,
+  "paper": 0.7977,
+  "noise_floor_raw_full_recomputed": 0.459,
+  "noise_floor_raw_paper": 0.459,
+  "snr_raw_full_recomputed": 0.4568,
+  "snr_raw_paper": 0.4568,
+  "centroid_raw_full_recomputed": 0.2218,
+  "centroid_raw_paper": 0.2218,
+  "rolloff_raw_full_recomputed": 0.1995,
+  "rolloff_raw_paper": 0.1995,
+  "tilt_raw_full_recomputed": 0.298,
+  "tilt_raw_paper": 0.298,
+  "subset_fold_equals_saved_NEW_file": true
+ },
+ "n": 907,
+ "n_speakers": 76,
+ "folds": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/folds/nvmatched_groupkfold5_pod_NEW.csv (NEW, POD tie rule on speaker labels)",
+ "feature_code": "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD4/chan4a.py (per-clip values reused, BEFORE normalisation)",
+ "model_id": "none",
+ "prompt": "none",
+ "seed": "default_rng(0), 2000 draws, speakers with replacement",
+ "command": "/usr/local/bin/python3 scripts/b_cpu.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched",
+ "sources": [
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD4/channel_norm_neurovoz.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD4/featprobe_nv.json",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_clips.csv",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_pairs.csv"
+ ],
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD4/channel_norm_neurovoz.csv": "1ced828ab6e396225ad4d5183b7e2023324ae1cb390b6683af6fc1b7ef5a6212",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD4/featprobe_nv.json": "bf63c39892e282a0174e8cdbb02a412c2dad817a7193738dfd0b73b72aed7ecf",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_clips.csv": "e98aebe814f0eddd4975e3c5b660b0aebf27a1497a72a89753a2ff3310333bf8",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD6/B_neurovoz_matched/nv_matched_pairs.csv": "803b5470d5ea35cd12a4e2b1012fa622a0ddf45c248856cb346b899698b2e6c4"
+ }
+}

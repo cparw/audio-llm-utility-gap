@@ -1,0 +1,236 @@
+{
+ "step": "PART22 step3 rescore all 275 with truncation off",
+ "created_utc": "2026-09-23T12:59:33.202533Z",
+ "checks": {
+  "default_pod_vs_reference_max_abs_diff": 0.0,
+  "default_tokens_max": 7500,
+  "default_tokens_at_7500": 217,
+  "lifted_tokens_min": 1648,
+  "lifted_tokens_max": 22500,
+  "lifted_tokens_equal_formula_on_full_length": 275,
+  "lifted_frames_equal_exact_formula": 275,
+  "default_tokens_equal_exact_formula_min_frames_30000": 275,
+  "note_naive_samples_div_160_formula_misses_pids": [
+   "324",
+   "385",
+   "606",
+   "607",
+   "655"
+  ],
+  "lifted_seq_len_max": 22548,
+  "lifted_fit_in_32768": 275,
+  "lifted_tokens_capped89_all_22500": true,
+  "short58_inputs_identical": 58,
+  "short58_max_abs_diff_p_yes_lifted_vs_default": 0.0,
+  "short58_reproduce_1e4": true,
+  "long217_inputs_identical": 0,
+  "long217_mean_abs_change_p_yes": 0.1575506699197155,
+  "long217_pearson_default_vs_lifted": 0.7307122611911445,
+  "answer_mass_default_median": 0.9962271824479103,
+  "answer_mass_lifted_median": 0.9969413802027702,
+  "answer_mass_lifted_min": 0.9871441125869751,
+  "rule_vs_paper_idset_max_abs_diff_default": 2.973482885471057e-07,
+  "rule_vs_paper_idset_max_abs_diff_lifted": 3.6699273608942207e-07,
+  "answer_mass_rule_lifted_median": 0.9969426095485687,
+  "lifted_peak_gpu_gib_max": 27.63,
+  "lifted_model_sec_median": 1.222,
+  "lifted_model_sec_max": 2.78
+ },
+ "results": {
+  "all275": {
+   "n": 275,
+   "n_pos": 66,
+   "n_spk": 275,
+   "auc_default_reference": 0.8277511961722488,
+   "ci_default_reference": [
+    0.7702680190413039,
+    0.882162099811676
+   ],
+   "auc_default_pod": 0.8277511961722488,
+   "ci_default_pod": [
+    0.7702680190413039,
+    0.882162099811676
+   ],
+   "auc_lifted": 0.8379005364651297,
+   "ci_lifted": [
+    0.7804703303300631,
+    0.8875656883135696
+   ],
+   "diff_lifted_minus_default": 0.010149340292880948,
+   "diff_ci": [
+    -0.030854815351599032,
+    0.05181797488200576
+   ],
+   "diff_boot_mean": 0.009994051779259898,
+   "usable_draws": [
+    2000,
+    2000,
+    2000
+   ],
+   "rule_idset": {
+    "auc_default": 0.8277511961722488,
+    "ci_default": [
+     0.7702680190413039,
+     0.882162099811676
+    ],
+    "auc_lifted": 0.8379005364651297,
+    "ci_lifted": [
+     0.7804703303300631,
+     0.8875656883135696
+    ],
+    "diff": 0.010149340292880948,
+    "diff_ci": [
+     -0.030854815351599032,
+     0.05181797488200576
+    ]
+   }
+  },
+  "long217": {
+   "n": 217,
+   "n_pos": 50,
+   "n_spk": 217,
+   "auc_default_reference": 0.8379640718562874,
+   "ci_default_reference": [
+    0.7758343278269489,
+    0.8929830094098495
+   ],
+   "auc_default_pod": 0.8379640718562874,
+   "ci_default_pod": [
+    0.7758343278269489,
+    0.8929830094098495
+   ],
+   "auc_lifted": 0.8571257485029941,
+   "ci_lifted": [
+    0.8028220000096199,
+    0.9062266288502979
+   ],
+   "diff_lifted_minus_default": 0.01916167664670665,
+   "diff_ci": [
+    -0.030908445740532024,
+    0.07030842748760259
+   ],
+   "diff_boot_mean": 0.01928268676295265,
+   "usable_draws": [
+    2000,
+    2000,
+    2000
+   ],
+   "rule_idset": {
+    "auc_default": 0.8379640718562874,
+    "ci_default": [
+     0.7758343278269489,
+     0.8929830094098495
+    ],
+    "auc_lifted": 0.8571257485029941,
+    "ci_lifted": [
+     0.8028220000096199,
+     0.9062266288502979
+    ],
+    "diff": 0.01916167664670665,
+    "diff_ci": [
+     -0.030908445740532024,
+     0.07030842748760259
+    ]
+   }
+  },
+  "capped89": {
+   "n": 89,
+   "n_pos": 18,
+   "n_spk": 89,
+   "auc_default_reference": 0.8169014084507042,
+   "ci_default_reference": [
+    0.6984962406015037,
+    0.9160988985560904
+   ],
+   "auc_default_pod": 0.8169014084507042,
+   "ci_default_pod": [
+    0.6984962406015037,
+    0.9160988985560904
+   ],
+   "auc_lifted": 0.8552425665101722,
+   "ci_lifted": [
+    0.7512612612612612,
+    0.9413640694201256
+   ],
+   "diff_lifted_minus_default": 0.03834115805946792,
+   "diff_ci": [
+    -0.04235521235521237,
+    0.13603889100367966
+   ],
+   "diff_boot_mean": 0.03636775185059012,
+   "usable_draws": [
+    2000,
+    2000,
+    2000
+   ],
+   "rule_idset": {
+    "auc_default": 0.8169014084507042,
+    "ci_default": [
+     0.6984962406015037,
+     0.9160988985560904
+    ],
+    "auc_lifted": 0.8552425665101722,
+    "ci_lifted": [
+     0.7512612612612612,
+     0.9413640694201256
+    ],
+    "diff": 0.03834115805946792,
+    "diff_ci": [
+     -0.04235521235521237,
+     0.13603889100367966
+    ]
+   }
+  }
+ },
+ "reference_published": {
+  "auc": 0.8285,
+  "rebuild": 0.8278,
+  "rebuild_ci": [
+   0.7703,
+   0.8822
+  ]
+ },
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/sync/lifted_all275.csv": "478c6394d5c934e5f352ecc388fc5bb2476545056afb461159a9a24e214feb79",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/EDAICFULL/edaic_full_perclip.csv": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/windows_full.csv": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/sync/p22_run.py": "daede049d99c7639d5b1f849b78e6ae9c93b1541c5d245a653b017f369847c52",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/analyze22.py": "8c3f00f17337c6a554405f6b5fa58eadb138594d2b5f5e7fa7d911a60389ff64",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/stats22.py": "f244f91bb7d098c135464c0fe20280d872ef48841e99599e94f55270816562dc"
+ },
+ "n": 275,
+ "n_speakers": 275,
+ "one_clip_per_speaker": true,
+ "seed": "numpy.random.default_rng(0), fresh per cell",
+ "bootstrap_draws": 2000,
+ "bootstrap_unit": "speaker, resampled with replacement; paired = one draw per replicate, both AUCs inside the draw",
+ "percentiles": [
+  2.5,
+  97.5
+ ],
+ "auc_method": "rank formula (mid-ranks for ties)",
+ "default_arm": "reference per-clip p_yes_answer from edaic_full_perclip.csv (the 0.8278 file); pod re-score of the same default call is also reported and matches it",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "dtype": "bfloat16",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the first answer position; Yes ids [7414, 9454, 9693, 9834, 14004], No ids [902, 2152, 2308, 2753, 8996]",
+ "default_call": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True)",
+ "lifted_call": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True, truncation=False)",
+ "exact_command": [
+  "pod: cd /workspace/p22 && HF_HOME=/workspace/hf python3 p22_run.py all3",
+  "mac: python3 /Users/chaitanyaparwatkar/Desktop/release/scores/part22/pod/analyze22.py"
+ ],
+ "libs": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "python": "3.12.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA H200"
+ },
+ "libs_mac": {
+  "numpy": "2.4.2",
+  "python": "3.14.6"
+ }
+}

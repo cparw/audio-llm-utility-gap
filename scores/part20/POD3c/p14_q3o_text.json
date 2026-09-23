@@ -1,0 +1,283 @@
+{
+ "result": "Qwen3-Omni-30B-A3B-Instruct transcript-only zero-shot on E-DAIC part14 pairs, beside Qwen3-Omni audio",
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3c/p14_q3o_text.csv",
+ "n": 966,
+ "n_speakers": 138,
+ "arms": {
+  "conflict483": [
+   483,
+   138
+  ],
+  "agreement483": [
+   483,
+   138
+  ],
+  "agreement311_distinct_seg_uid_first_occurrence": [
+   311,
+   138
+  ]
+ },
+ "model_id": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "dtype": "bfloat16",
+ "transformers": "5.17.0",
+ "torch": "2.8.0+cu128",
+ "gpu": "NVIDIA H100 NVL",
+ "prompt_verbatim": "Based only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "user_turn_template": "Transcript: \"<text>\"\\n\\n<prompt>  (no system message, add_generation_prompt=True; same as p15/text_score.py)",
+ "rendered_example_first_clip": "<|im_start|>user\nTranscript: \"<participant transcript removed>\"\n\nBased only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the first answer position; Yes/yes/YES and No/no/NO, bare and leading-space, single-token encodings only",
+ "yes_ids": {
+  "Yes": 9454,
+  " Yes": 7414,
+  "yes": 9693,
+  " yes": 9834,
+  "YES": 14004,
+  " YES": 14080
+ },
+ "no_ids": {
+  "No": 2753,
+  " No": 2308,
+  "no": 2152,
+  " no": 902,
+  "NO": 8996,
+  " NO": 5664
+ },
+ "audio_prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "seed": 0,
+ "bootstrap": "2000 draws, fresh numpy.random.default_rng(0) per cell, speakers with replacement, percentile 2.5/97.5; paired = one speaker draw per replicate",
+ "auc_method": "rank formula, scipy.stats.rankdata, ties averaged",
+ "decision_threshold_same_decision": "p_yes >= 0.5 counts as Yes",
+ "commands": {
+  "pod": "HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 python3 /workspace/p20/score_text_p20.py Qwen/Qwen3-Omni-30B-A3B-Instruct /workspace/p20/p14_text_input.csv /workspace/scores/part20/POD3c/p14_q3o_text_raw.csv",
+  "validation": "HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 python3 /workspace/p20/score_text_p20.py Qwen/Qwen2.5-Omni-7B /workspace/p20/p14_text_input.csv /workspace/p20/val_o25_first25.csv 25",
+  "mac": "python3 <authors-scratch>/p20/analyze_q3o_text.py"
+ },
+ "sources": {
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD3c/p14_q3o_text_raw.csv": {
+   "sha256_first_1MB": "836a069b7b08309036626c32b61620748c066d3a76260779f96449e912217a99"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14/p14_q3o_zeroshot_scores.csv": {
+   "sha256_first_1MB": "112f62ff61571312de50f6866c73fbcaca979b5f375f07c4a54280765c4bd2dc"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part14_manifest_new.csv": {
+   "sha256_first_1MB": "f919c2499098b178fb332cdce0cf9395484d96b4f199ac15480397658ab5fd7c"
+  },
+  "<authors-scratch>/p15/p14_text_input.csv": {
+   "sha256_first_1MB": "281805c57a39eb44c3dfab0bebca79c9ed87bbc41030608cd96d395bd55783c9"
+  },
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/pod_sync/p14_o25_text.csv": {
+   "sha256_first_1MB": "14f25d3d5e9fe5e66c303413f297a79db2b79609e4301032dd23d9903f3729b9"
+  }
+ },
+ "pod_transcript_copy": "/workspace/p20/p14_text_input.csv (sha256 full file 281805c57a39eb44c3dfab0bebca79c9ed87bbc41030608cd96d395bd55783c9, identical to the Mac source)",
+ "results": [
+  {
+   "id": "q3o_transcript_conflict483",
+   "what": "Qwen3-Omni transcript AUC, conflict483",
+   "value": 0.22428496227408318,
+   "lo": 0.17567670125086302,
+   "hi": 0.2742270350564468,
+   "n": 483,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "auc"
+  },
+  {
+   "id": "q3o_transcript_agreement483",
+   "what": "Qwen3-Omni transcript AUC, agreement483",
+   "value": 0.9470082470608878,
+   "lo": 0.9130581378113735,
+   "hi": 0.975711706715578,
+   "n": 483,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "auc"
+  },
+  {
+   "id": "q3o_transcript_agreement311",
+   "what": "Qwen3-Omni transcript AUC, agreement311",
+   "value": 0.9522946859903382,
+   "lo": 0.9249386313275203,
+   "hi": 0.9749757659547419,
+   "n": 311,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "auc"
+  },
+  {
+   "id": "q3o_audio_conflict483",
+   "what": "Qwen3-Omni audio AUC, conflict483",
+   "value": 0.30075451833655026,
+   "lo": 0.24541840607781334,
+   "hi": 0.36412393684799244,
+   "n": 483,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "auc"
+  },
+  {
+   "id": "q3o_audio_agreement483",
+   "what": "Qwen3-Omni audio AUC, agreement483",
+   "value": 0.9637655729075276,
+   "lo": 0.9335719854622999,
+   "hi": 0.9864173654244307,
+   "n": 483,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "auc"
+  },
+  {
+   "id": "q3o_audio_agreement311",
+   "what": "Qwen3-Omni audio AUC, agreement311",
+   "value": 0.9726867335562988,
+   "lo": 0.9507233379191542,
+   "hi": 0.9903566831495668,
+   "n": 311,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "auc"
+  },
+  {
+   "id": "q3o_transcript_conf_minus_agree483",
+   "what": "Qwen3-Omni transcript, conflict483 minus agreement483 (paired)",
+   "value": -0.7227232847868046,
+   "lo": -0.7803407449051767,
+   "hi": -0.6620310446806186,
+   "n": 966,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "diff"
+  },
+  {
+   "id": "q3o_transcript_conf_minus_agree311",
+   "what": "Qwen3-Omni transcript, conflict483 minus agreement311 (paired)",
+   "value": -0.728009723716255,
+   "lo": -0.7804890257641232,
+   "hi": -0.6730946298182154,
+   "n": 794,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "diff"
+  },
+  {
+   "id": "q3o_audio_conf_minus_agree483",
+   "what": "Qwen3-Omni audio, conflict483 minus agreement483 (paired)",
+   "value": -0.6630110545709773,
+   "lo": -0.7192080439115682,
+   "hi": -0.6029558941918016,
+   "n": 966,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "diff"
+  },
+  {
+   "id": "q3o_audio_conf_minus_agree311",
+   "what": "Qwen3-Omni audio, conflict483 minus agreement311 (paired)",
+   "value": -0.6719322152197484,
+   "lo": -0.7266207921961361,
+   "hi": -0.6105302443655257,
+   "n": 794,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "diff"
+  },
+  {
+   "id": "q3o_text_minus_audio_conflict483",
+   "what": "Qwen3-Omni transcript minus audio AUC, conflict483 (paired)",
+   "value": -0.07646955606246708,
+   "lo": -0.1285564536927752,
+   "hi": -0.02956852663778842,
+   "n": 483,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "diff"
+  },
+  {
+   "id": "q3o_text_minus_audio_agreement483",
+   "what": "Qwen3-Omni transcript minus audio AUC, agreement483 (paired)",
+   "value": -0.016757325846639803,
+   "lo": -0.03992618757168559,
+   "hi": 0.003910074218758918,
+   "n": 483,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "diff"
+  },
+  {
+   "id": "q3o_text_minus_audio_agreement311",
+   "what": "Qwen3-Omni transcript minus audio AUC, agreement311 (paired)",
+   "value": -0.02039204756596058,
+   "lo": -0.040159829665469146,
+   "hi": -0.0033771018062722386,
+   "n": 311,
+   "n_spk": 138,
+   "n_valid": 2000,
+   "kind": "diff"
+  }
+ ],
+ "text_vs_audio": {
+  "all966": {
+   "n": 966,
+   "n_spk": 138,
+   "pearson_r": 0.7634008944165049,
+   "pearson_p": 3.485281195850881e-185,
+   "same_decision_share": 0.8312629399585921,
+   "text_yes_rate": 0.3219461697722567,
+   "audio_yes_rate": 0.40372670807453415,
+   "median_mass_text": 0.9998937719501556,
+   "min_mass_text": 0.9968624413013458
+  },
+  "distinct794": {
+   "n": 794,
+   "n_spk": 138,
+   "pearson_r": 0.7398534865662696,
+   "pearson_p": 1.787293205598258e-138,
+   "same_decision_share": 0.8224181360201511,
+   "text_yes_rate": 0.29219143576826195,
+   "audio_yes_rate": 0.3690176322418136,
+   "median_mass_text": 0.9998932648450136,
+   "min_mass_text": 0.9968624413013458
+  },
+  "conflict483": {
+   "n": 483,
+   "n_spk": 138,
+   "pearson_r": 0.6487535451858648,
+   "pearson_p": 4.93132235996325e-59,
+   "same_decision_share": 0.7784679089026915,
+   "text_yes_rate": 0.31262939958592134,
+   "audio_yes_rate": 0.38923395445134573,
+   "median_mass_text": 0.9998353198170662,
+   "min_mass_text": 0.9968624413013458
+  },
+  "agreement483": {
+   "n": 483,
+   "n_spk": 138,
+   "pearson_r": 0.8475341703814954,
+   "pearson_p": 1.998091446975628e-134,
+   "same_decision_share": 0.8840579710144928,
+   "text_yes_rate": 0.33126293995859213,
+   "audio_yes_rate": 0.41821946169772256,
+   "median_mass_text": 0.9999363459646702,
+   "min_mass_text": 0.9989823698997498
+  },
+  "agreement311": {
+   "n": 311,
+   "n_spk": 138,
+   "pearson_r": 0.8516144992958168,
+   "pearson_p": 1.1025138511646234e-88,
+   "same_decision_share": 0.8906752411575563,
+   "text_yes_rate": 0.2604501607717042,
+   "audio_yes_rate": 0.33762057877813506,
+   "median_mass_text": 0.9999414915218948,
+   "min_mass_text": 0.9989823698997498
+  }
+ },
+ "token_set_sensitivity": {
+  "max_abs_p_yes_ts_minus_rule3": 8.851614418603493e-06,
+  "conflict483_auc_ts": 0.22482891735392174,
+  "agreement483_auc_ts": 0.9470959817511844,
+  "agreement311_auc_ts": 0.9522017837235228,
+  "all966_auc_rule3": 0.6283909457799614,
+  "all966_auc_ts": 0.6285400947534655
+ }
+}

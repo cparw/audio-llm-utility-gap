@@ -1,0 +1,581 @@
+{
+ "result": "PART20 POD2 balanced LoRA, Pitt 468, Qwen2.5-Omni, out of fold",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "prompt_check": "equals every row of the per-clip prompt column of /Users/chaitanyaparwatkar/Desktop/release/omni_final/omnisft_pitt_oof.csv",
+ "n": 468,
+ "n_speakers": 228,
+ "n_conflict": 146,
+ "n_agreement": 322,
+ "seed": {
+  "bootstrap": "numpy.random.default_rng(0) fresh per cell, 2000 draws, speakers resampled",
+  "lora_init_torch_seed": 0,
+  "fold_torch_seed": "1000+k",
+  "shuffle": "numpy RandomState(k*10+ep), as the earlier LoRA"
+ },
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_oof.csv",
+ "columns": {
+  "p_yes": "rule 3: sum of single-token Yes/yes/YES (bare + leading space) over Yes+No variants at the first answer position",
+  "p_yes_2logit": "softmax over [' Yes',' No'] only; this is the column the earlier LoRA 0.8250 and the projector 0.7673 were computed on",
+  "answer_mass": "P(Yes variants)+P(No variants), full vocab softmax"
+ },
+ "training": {
+  "lora": "r=8 alpha=16 dropout=0.05, q/k/v/o_proj of all 28 LM layers (112 modules); audio encoder and projector frozen",
+  "loss": "per-clip weight x CE over [' Yes',' No'] logits at the answer position",
+  "optimizer": "AdamW lr 1e-4",
+  "epochs": 3,
+  "batch": 1,
+  "dtype": "bfloat16 model, float32 LoRA params",
+  "window_s": 30,
+  "weighting": "inside each training fold, per label y: w=(N_y/2)/N_{y,a}, rescaled to mean 1 over the training fold (rescale factor is exactly 1)",
+  "weight_tables": {
+   "0": [
+    {
+     "label": 0,
+     "arm": "conflict",
+     "N_y": 133,
+     "N_ya": 32,
+     "w_raw": 2.078125,
+     "w_rescaled": 2.078125,
+     "total_weight": 66.5
+    },
+    {
+     "label": 0,
+     "arm": "agreement",
+     "N_y": 133,
+     "N_ya": 101,
+     "w_raw": 0.6584158415841584,
+     "w_rescaled": 0.6584158415841584,
+     "total_weight": 66.5
+    },
+    {
+     "label": 1,
+     "arm": "conflict",
+     "N_y": 241,
+     "N_ya": 86,
+     "w_raw": 1.4011627906976745,
+     "w_rescaled": 1.4011627906976745,
+     "total_weight": 120.5
+    },
+    {
+     "label": 1,
+     "arm": "agreement",
+     "N_y": 241,
+     "N_ya": 155,
+     "w_raw": 0.7774193548387097,
+     "w_rescaled": 0.7774193548387097,
+     "total_weight": 120.5
+    }
+   ],
+   "1": [
+    {
+     "label": 0,
+     "arm": "conflict",
+     "N_y": 143,
+     "N_ya": 37,
+     "w_raw": 1.9324324324324325,
+     "w_rescaled": 1.9324324324324325,
+     "total_weight": 71.5
+    },
+    {
+     "label": 0,
+     "arm": "agreement",
+     "N_y": 143,
+     "N_ya": 106,
+     "w_raw": 0.6745283018867925,
+     "w_rescaled": 0.6745283018867925,
+     "total_weight": 71.5
+    },
+    {
+     "label": 1,
+     "arm": "conflict",
+     "N_y": 231,
+     "N_ya": 83,
+     "w_raw": 1.391566265060241,
+     "w_rescaled": 1.391566265060241,
+     "total_weight": 115.5
+    },
+    {
+     "label": 1,
+     "arm": "agreement",
+     "N_y": 231,
+     "N_ya": 148,
+     "w_raw": 0.7804054054054054,
+     "w_rescaled": 0.7804054054054054,
+     "total_weight": 115.5
+    }
+   ],
+   "2": [
+    {
+     "label": 0,
+     "arm": "conflict",
+     "N_y": 145,
+     "N_ya": 33,
+     "w_raw": 2.196969696969697,
+     "w_rescaled": 2.196969696969697,
+     "total_weight": 72.5
+    },
+    {
+     "label": 0,
+     "arm": "agreement",
+     "N_y": 145,
+     "N_ya": 112,
+     "w_raw": 0.6473214285714286,
+     "w_rescaled": 0.6473214285714286,
+     "total_weight": 72.5
+    },
+    {
+     "label": 1,
+     "arm": "conflict",
+     "N_y": 229,
+     "N_ya": 87,
+     "w_raw": 1.3160919540229885,
+     "w_rescaled": 1.3160919540229885,
+     "total_weight": 114.5
+    },
+    {
+     "label": 1,
+     "arm": "agreement",
+     "N_y": 229,
+     "N_ya": 142,
+     "w_raw": 0.8063380281690141,
+     "w_rescaled": 0.8063380281690141,
+     "total_weight": 114.5
+    }
+   ],
+   "3": [
+    {
+     "label": 0,
+     "arm": "conflict",
+     "N_y": 142,
+     "N_ya": 36,
+     "w_raw": 1.9722222222222223,
+     "w_rescaled": 1.9722222222222219,
+     "total_weight": 70.99999999999999
+    },
+    {
+     "label": 0,
+     "arm": "agreement",
+     "N_y": 142,
+     "N_ya": 106,
+     "w_raw": 0.6698113207547169,
+     "w_rescaled": 0.6698113207547168,
+     "total_weight": 70.99999999999999
+    },
+    {
+     "label": 1,
+     "arm": "conflict",
+     "N_y": 233,
+     "N_ya": 82,
+     "w_raw": 1.420731707317073,
+     "w_rescaled": 1.4207317073170729,
+     "total_weight": 116.49999999999997
+    },
+    {
+     "label": 1,
+     "arm": "agreement",
+     "N_y": 233,
+     "N_ya": 151,
+     "w_raw": 0.7715231788079471,
+     "w_rescaled": 0.7715231788079469,
+     "total_weight": 116.49999999999997
+    }
+   ],
+   "4": [
+    {
+     "label": 0,
+     "arm": "conflict",
+     "N_y": 149,
+     "N_ya": 42,
+     "w_raw": 1.7738095238095237,
+     "w_rescaled": 1.7738095238095237,
+     "total_weight": 74.5
+    },
+    {
+     "label": 0,
+     "arm": "agreement",
+     "N_y": 149,
+     "N_ya": 107,
+     "w_raw": 0.6962616822429907,
+     "w_rescaled": 0.6962616822429907,
+     "total_weight": 74.5
+    },
+    {
+     "label": 1,
+     "arm": "conflict",
+     "N_y": 226,
+     "N_ya": 66,
+     "w_raw": 1.7121212121212122,
+     "w_rescaled": 1.7121212121212122,
+     "total_weight": 113.0
+    },
+    {
+     "label": 1,
+     "arm": "agreement",
+     "N_y": 226,
+     "N_ya": 160,
+     "w_raw": 0.70625,
+     "w_rescaled": 0.70625,
+     "total_weight": 113.0
+    }
+   ]
+  },
+  "epoch_loss": {
+   "0": [
+    {
+     "epoch": 0,
+     "mean_ce": 0.6624319066099305,
+     "mean_weighted_ce": 0.680057059032195
+    },
+    {
+     "epoch": 1,
+     "mean_ce": 0.4892259207454555,
+     "mean_weighted_ce": 0.5102261044508354
+    },
+    {
+     "epoch": 2,
+     "mean_ce": 0.3800823499346189,
+     "mean_weighted_ce": 0.4150749878286456
+    }
+   ],
+   "1": [
+    {
+     "epoch": 0,
+     "mean_ce": 0.6370364477668695,
+     "mean_weighted_ce": 0.6641119838029863
+    },
+    {
+     "epoch": 1,
+     "mean_ce": 0.5294292177208126,
+     "mean_weighted_ce": 0.5551904442565725
+    },
+    {
+     "epoch": 2,
+     "mean_ce": 0.3808711964336976,
+     "mean_weighted_ce": 0.3866445610880538
+    }
+   ],
+   "2": [
+    {
+     "epoch": 0,
+     "mean_ce": 0.6958343409061591,
+     "mean_weighted_ce": 0.7394709617875636
+    },
+    {
+     "epoch": 1,
+     "mean_ce": 0.5338296342621194,
+     "mean_weighted_ce": 0.5650913835313909
+    },
+    {
+     "epoch": 2,
+     "mean_ce": 0.40794879959660885,
+     "mean_weighted_ce": 0.4329849279521128
+    }
+   ],
+   "3": [
+    {
+     "epoch": 0,
+     "mean_ce": 0.6390948667625587,
+     "mean_weighted_ce": 0.6683598989546299
+    },
+    {
+     "epoch": 1,
+     "mean_ce": 0.5303333676606417,
+     "mean_weighted_ce": 0.5715114949395259
+    },
+    {
+     "epoch": 2,
+     "mean_ce": 0.39638170989354454,
+     "mean_weighted_ce": 0.3999129638597369
+    }
+   ],
+   "4": [
+    {
+     "epoch": 0,
+     "mean_ce": 0.6510829988420009,
+     "mean_weighted_ce": 0.6775192851920923
+    },
+    {
+     "epoch": 1,
+     "mean_ce": 0.5353263486772776,
+     "mean_weighted_ce": 0.5722927683939536
+    },
+    {
+     "epoch": 2,
+     "mean_ce": 0.44181032841093837,
+     "mean_weighted_ce": 0.47117634529651453
+    }
+   ]
+  },
+  "minutes_per_fold": {
+   "0": 11.94,
+   "1": 11.91,
+   "2": 11.97,
+   "3": 5.19,
+   "4": 5.2
+  },
+  "steps_per_fold": {
+   "0": 1122,
+   "1": 1122,
+   "2": 1122,
+   "3": 1125,
+   "4": 1125
+  },
+  "peak_gpu_gb": {
+   "0": 21.011,
+   "1": 21.011,
+   "2": 21.011,
+   "3": 21.013,
+   "4": 21.013
+  }
+ },
+ "parameter_counts": {
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "total_params_full_model": 10732225408,
+  "total_params_thinker_audio_plus_lm": 8255263744,
+  "lora_trainable_params": 5046272,
+  "lora_pct_of_full_model": 0.04702,
+  "lora_pct_of_thinker": 0.061128,
+  "lm_layers": 28,
+  "lora_target_modules": 112,
+  "rank": 8,
+  "alpha": 16,
+  "dropout": 0.05
+ },
+ "results": {
+  "balanced": {
+   "overall_2logit": {
+    "v": 0.7200406819062379,
+    "lo": 0.6494121876639536,
+    "hi": 0.7865944314013641,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "conflict_2logit": {
+    "v": 0.577007700770077,
+    "lo": 0.45856923428155044,
+    "hi": 0.700624912746056,
+    "n": 146,
+    "n_spk": 100,
+    "draws": 2000
+   },
+   "agreement_2logit": {
+    "v": 0.7843219159008633,
+    "lo": 0.7073932749780459,
+    "hi": 0.8509808992821347,
+    "n": 322,
+    "n_spk": 175,
+    "draws": 2000
+   },
+   "overall_multivariant": {
+    "v": 0.7112553273924835,
+    "lo": 0.6367854033417305,
+    "hi": 0.779891579231671,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "conflict_multivariant": {
+    "v": 0.5735973597359736,
+    "lo": 0.45489994026284347,
+    "hi": 0.6939382134710937,
+    "n": 146,
+    "n_spk": 100,
+    "draws": 2000
+   },
+   "agreement_multivariant": {
+    "v": 0.7724469904921033,
+    "lo": 0.6937830418143199,
+    "hi": 0.8396193540240281,
+    "n": 322,
+    "n_spk": 175,
+    "draws": 2000
+   }
+  },
+  "earlier": {
+   "overall_2logit": {
+    "v": 0.825,
+    "lo": 0.7735194856592271,
+    "hi": 0.8728794378093947,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "conflict_2logit": {
+    "v": 0.5520352035203521,
+    "lo": 0.4348499773550724,
+    "hi": 0.6833418367346938,
+    "n": 146,
+    "n_spk": 100,
+    "draws": 2000
+   },
+   "agreement_2logit": {
+    "v": 0.9198989537335402,
+    "lo": 0.884550749020306,
+    "hi": 0.9512694537743474,
+    "n": 322,
+    "n_spk": 175,
+    "draws": 2000
+   },
+   "overall_multivariant": {
+    "v": 0.8219876017047656,
+    "lo": 0.7701885742224188,
+    "hi": 0.871085396426515,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "conflict_multivariant": {
+    "v": 0.5515951595159516,
+    "lo": 0.4332711751349468,
+    "hi": 0.6814203806522608,
+    "n": 146,
+    "n_spk": 100,
+    "draws": 2000
+   },
+   "agreement_multivariant": {
+    "v": 0.9160997732426304,
+    "lo": 0.8797551151992913,
+    "hi": 0.9478793399877492,
+    "n": 322,
+    "n_spk": 175,
+    "draws": 2000
+   }
+  },
+  "diff_balanced_minus_earlier": {
+   "overall_2logit": {
+    "v": -0.10495931809376202,
+    "lo": -0.15772390168171946,
+    "hi": -0.05841791740318172,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "conflict_2logit": {
+    "v": 0.024972497249724945,
+    "lo": -0.06752179817038306,
+    "hi": 0.10768098146537147,
+    "n": 146,
+    "n_spk": 100,
+    "draws": 2000
+   },
+   "agreement_2logit": {
+    "v": -0.13557703783267694,
+    "lo": -0.19773186859006273,
+    "hi": -0.08477771019648615,
+    "n": 322,
+    "n_spk": 175,
+    "draws": 2000
+   },
+   "overall_multivariant": {
+    "v": -0.11073227431228205,
+    "lo": -0.16586270443679163,
+    "hi": -0.062381217207931924,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "conflict_multivariant": {
+    "v": 0.022002200220021972,
+    "lo": -0.07329922139993829,
+    "hi": 0.10542067736175406,
+    "n": 146,
+    "n_spk": 100,
+    "draws": 2000
+   },
+   "agreement_multivariant": {
+    "v": -0.14365278275052706,
+    "lo": -0.2070430690054884,
+    "hi": -0.09197141409196219,
+    "n": 322,
+    "n_spk": 175,
+    "draws": 2000
+   }
+  },
+  "conflict_minus_agreement": {
+   "2logit": {
+    "v": -0.2073142151307863,
+    "lo": -0.33886523994483225,
+    "hi": -0.07775077170621576,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "multivariant": {
+    "v": -0.1988496307561297,
+    "lo": -0.3306203848483099,
+    "hi": -0.07108362826836653,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   }
+  },
+  "gap_change_balanced_minus_earlier": {
+   "2logit": {
+    "v": 0.16054953508240188,
+    "lo": 0.05837906149010887,
+    "hi": 0.26036130115228473,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   },
+   "multivariant": {
+    "v": 0.16565498297054904,
+    "lo": 0.05973825651735644,
+    "hi": 0.26838295546374924,
+    "n": 468,
+    "n_spk": 228,
+    "draws": 2000
+   }
+  },
+  "answer_mass": {
+   "median": 0.9987287670373917,
+   "min": 0.9969682097434998,
+   "max": 0.9997130273841321
+  }
+ },
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/mf_pitt468_pod.csv": "8ebf4914d980b4bf5dfab522a51173f6919e6cf242abab5cb2e65fe55de4a372",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod.csv": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv": "dda1ef283d07bcad8238eb74718a50c05cd1f3f2a17c934f98922bb335a8f24d",
+  "/Users/chaitanyaparwatkar/Desktop/release/omni_final/omnisft_pitt_oof.csv": "fd715b2a5ec64118aa2e1a7d9b3e9c20b928b97fac67680b285e036d1c1550d2",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/lora_pitt.py": "91b061fc771967e6e3925c9187fec6747d21eddddd89df7782e2a16dcfd7b394",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_fold0.json": "4333162d258f60851211bd0ad64a16cc10fd0df0cd9481f0366002b1aca1de2d",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_fold1.json": "579db9ab78073886ff1f046a1b50abb7db60352bc6d8bb1df1a3acc234560907",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_fold2.json": "b08c6a80ff5553ac0a92b08d3706f45321745d3ec7b8c678a094b20c0598f9a8",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_fold3.json": "f179c1dafb251ce97635658beab1c226325b847a758f50d7292927553703d6f1",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_fold4.json": "f5a3f8829e9c1438dfd1d2fb05a427bf3f8dce613cf466fb9aed57caebc4634a",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt.py": "b6efb3ec5f169baebc98e4875400876bcb4a740e1d36cbbee1a9c225d4e465cf",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/analyze_balanced.py": "52915f23dde5af70736f925c6ac244514994f9cb2cc85e9e770024080bc765e1"
+ },
+ "audio": {
+  "mac_source": "/Volumes/G-Drive Pro/DementiaBank/segments",
+  "pod_path": "/workspace/data/pitt468",
+  "check": "full-file sha256 of all 468 pod wavs equals the Mac originals (382 sent as FLAC and rebuilt with the original header bytes, 86 sent as wav); 516863704 bytes"
+ },
+ "command_train": {
+  "0": "python3 balanced_lora_pitt.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/balanced_lora_pitt 0,3 Qwen/Qwen2.5-Omni-7B",
+  "1": "python3 balanced_lora_pitt.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/balanced_lora_pitt 1,4 Qwen/Qwen2.5-Omni-7B",
+  "2": "python3 balanced_lora_pitt.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/balanced_lora_pitt 2 Qwen/Qwen2.5-Omni-7B",
+  "3": "python3 balanced_lora_pitt.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/balanced_lora_pitt 0,3 Qwen/Qwen2.5-Omni-7B",
+  "4": "python3 balanced_lora_pitt.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/balanced_lora_pitt 1,4 Qwen/Qwen2.5-Omni-7B"
+ },
+ "command_analysis": "/usr/local/bin/python3 analyze_balanced.py /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2",
+ "pod": {
+  "id": "7ckjx1jr7jm7yh",
+  "gpu": "H100 NVL 94GB",
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.17.0",
+  "peft": "0.21.0"
+ },
+ "date_utc": "2026-09-23T12:46:03.498438",
+ "pod_paths": {
+  "fold_checkpoints": "/workspace/scores/part20/POD2/balanced_lora_pitt_fold{0..4}.json",
+  "adapters": "/workspace/scores/part20/POD2/balanced_lora_pitt_fold{0..4}_adapter.pt",
+  "logs": "/workspace/p20/train_f0_3.log, train_f1_4.log, train_f2.log",
+  "script": "/workspace/p20/balanced_lora_pitt.py"
+ },
+ "run_layout": "folds split over 3 processes on one H100 NVL: [0,3], [1,4], [2]; each fold restarts from the same seeded LoRA init (torch seed 0), dropout seed 1000+k"
+}

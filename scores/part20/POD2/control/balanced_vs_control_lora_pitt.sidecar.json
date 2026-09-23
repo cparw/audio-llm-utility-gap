@@ -1,0 +1,351 @@
+{
+ "result": "paired differences balanced LoRA minus same-pod uniform control, and control minus earlier LoRA",
+ "why": "separates the effect of the balancing weights from run-to-run variation of the LoRA recipe (the earlier LoRA ran on another pod with unseeded init and dropout)",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 468,
+ "n_speakers": 228,
+ "identical_to_balanced_except": "loss weight w=1 for every training clip (script uniform_lora_pitt_control.py = balanced_lora_pitt.py plus one line)",
+ "seed": {
+  "bootstrap": "default_rng(0) fresh per cell, 2000 draws, speakers resampled; paired = one speaker draw per replicate",
+  "lora_init_torch_seed": 0,
+  "fold_torch_seed": "1000+k"
+ },
+ "per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv",
+ "paired_per_clip_csv": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+ "results": {
+  "control.overall.2logit": {
+   "v": 0.8346474234792716,
+   "lo": 0.7855907020657826,
+   "hi": 0.882483706299972,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv"
+  },
+  "bal_minus_control.overall.2logit": {
+   "v": -0.11460674157303363,
+   "lo": -0.1751101021735642,
+   "hi": -0.05636103083157369,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control_minus_earlier.overall.2logit": {
+   "v": 0.00964742347927161,
+   "lo": -0.02040793506007358,
+   "hi": 0.04366338310034989,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control.conflict.2logit": {
+   "v": 0.6198019801980198,
+   "lo": 0.49631563038665455,
+   "hi": 0.7469937897072652,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv"
+  },
+  "bal_minus_control.conflict.2logit": {
+   "v": -0.04279427942794278,
+   "lo": -0.17067379349573436,
+   "hi": 0.08366460210210208,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control_minus_earlier.conflict.2logit": {
+   "v": 0.06776677667766773,
+   "lo": -0.010778805992413642,
+   "hi": 0.14912362990026662,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control.agreement.2logit": {
+   "v": 0.911166805903648,
+   "lo": 0.8710414287356728,
+   "hi": 0.9470716681014988,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv"
+  },
+  "bal_minus_control.agreement.2logit": {
+   "v": -0.12684489000278465,
+   "lo": -0.19367218574024295,
+   "hi": -0.07304417381493011,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control_minus_earlier.agreement.2logit": {
+   "v": -0.00873214782989229,
+   "lo": -0.031102733555021772,
+   "hi": 0.012997508145819245,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control.cma.2logit": {
+   "v": -0.29136482570562816,
+   "lo": -0.4204455051175323,
+   "hi": -0.16525641270744595,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv",
+   "diff": 1
+  },
+  "gapchange_bal_minus_control.2logit": {
+   "v": 0.08405061057484187,
+   "lo": -0.05505369759251704,
+   "hi": 0.21367469260964067,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control.overall.multivariant": {
+   "v": 0.8103254552499032,
+   "lo": 0.7564167887825368,
+   "hi": 0.8630104714001874,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv"
+  },
+  "bal_minus_control.overall.multivariant": {
+   "v": -0.09907012785741964,
+   "lo": -0.15807748698331658,
+   "hi": -0.04314652449945641,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control_minus_earlier.overall.multivariant": {
+   "v": -0.01166214645486241,
+   "lo": -0.035877772142547865,
+   "hi": 0.013375332229827992,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control.conflict.multivariant": {
+   "v": 0.5546754675467547,
+   "lo": 0.43393582128099173,
+   "hi": 0.6833518117901568,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv"
+  },
+  "bal_minus_control.conflict.multivariant": {
+   "v": 0.018921892189218914,
+   "lo": -0.0934147101848965,
+   "hi": 0.13158879341210164,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control_minus_earlier.conflict.multivariant": {
+   "v": 0.0030803080308030584,
+   "lo": -0.057311048418342246,
+   "hi": 0.06326233110847383,
+   "n": 146,
+   "n_spk": 100,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control.agreement.multivariant": {
+   "v": 0.8988741695508613,
+   "lo": 0.8558687238370397,
+   "hi": 0.9383382812396573,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv"
+  },
+  "bal_minus_control.agreement.multivariant": {
+   "v": -0.126427179058758,
+   "lo": -0.1938417431265936,
+   "hi": -0.07148867328504356,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control_minus_earlier.agreement.multivariant": {
+   "v": -0.017225603691769065,
+   "lo": -0.037972571990836826,
+   "hi": 0.0026327670982467135,
+   "n": 322,
+   "n_spk": 175,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  },
+  "control.cma.multivariant": {
+   "v": -0.3441987020041066,
+   "lo": -0.4727128881509274,
+   "hi": -0.2121988035898733,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv",
+   "diff": 1
+  },
+  "gapchange_bal_minus_control.multivariant": {
+   "v": 0.1453490712479769,
+   "lo": 0.024914131156182528,
+   "hi": 0.2646317490936892,
+   "n": 468,
+   "n_spk": 228,
+   "draws": 2000,
+   "file": "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/balanced_vs_control_lora_pitt_perclip.csv",
+   "diff": 1
+  }
+ },
+ "epoch_loss": {
+  "0": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.5806383044448965,
+    "mean_weighted_ce": 0.5806383044448965
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.3821119340141316,
+    "mean_weighted_ce": 0.3821119340141316
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.27469773716785084,
+    "mean_weighted_ce": 0.27469773716785084
+   }
+  ],
+  "1": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6124221258871456,
+    "mean_weighted_ce": 0.6124221258871456
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.47342140293794677,
+    "mean_weighted_ce": 0.47342140293794677
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.3107812198786,
+    "mean_weighted_ce": 0.3107812198786
+   }
+  ],
+  "2": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6684766019380746,
+    "mean_weighted_ce": 0.6684766019380746
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.44978667054311955,
+    "mean_weighted_ce": 0.44978667054311955
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.3173947482907405,
+    "mean_weighted_ce": 0.3173947482907405
+   }
+  ],
+  "3": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6039607163742184,
+    "mean_weighted_ce": 0.6039607163742184
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.4555496102546652,
+    "mean_weighted_ce": 0.4555496102546652
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.33912046753180525,
+    "mean_weighted_ce": 0.33912046753180525
+   }
+  ],
+  "4": [
+   {
+    "epoch": 0,
+    "mean_ce": 0.6084748442421357,
+    "mean_weighted_ce": 0.6084748442421357
+   },
+   {
+    "epoch": 1,
+    "mean_ce": 0.47382213960339625,
+    "mean_weighted_ce": 0.47382213960339625
+   },
+   {
+    "epoch": 2,
+    "mean_ce": 0.4691499762229699,
+    "mean_weighted_ce": 0.4691499762229699
+   }
+  ]
+ },
+ "minutes_per_fold": {
+  "0": 10.87,
+  "1": 10.9,
+  "2": 10.87,
+  "3": 5.19,
+  "4": 5.18
+ },
+ "answer_mass": {
+  "median": 0.998798631131649,
+  "min": 0.993518702685833
+ },
+ "sources_sha256_first_1MB": {
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/mf_pitt468_pod.csv": "8ebf4914d980b4bf5dfab522a51173f6919e6cf242abab5cb2e65fe55de4a372",
+  "/Users/chaitanyaparwatkar/Desktop/release/folds/pitt_groupkfold5_pod.csv": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406",
+  "/Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv": "dda1ef283d07bcad8238eb74718a50c05cd1f3f2a17c934f98922bb335a8f24d",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt_oof.csv": "2278a5cf199b4abc094539d797ed2e8d1b894fddcb4bc51daeb87c6a96b86ae2",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/balanced_lora_pitt.py": "b6efb3ec5f169baebc98e4875400876bcb4a740e1d36cbbee1a9c225d4e465cf",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_fold0.json": "bdbf419414a4d0fd438f9bbf2cd06388603507e95bbfc1201ea0098a6c8d74eb",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_fold1.json": "c5b87dff65e4f982f178a9f5dc7b6107cbe332a1c92d83fb07fb4c0e6bb737b5",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_fold2.json": "4e6e78adfb7fe0dabe0e69daeb38cb64087f74c2324cc816052e1b64e7c6236f",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_fold3.json": "a03b3d24841e8827c4e7ac69c77aa89826e32cfa105c560855cf9ef343045be7",
+  "/Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/control/uniform_lora_pitt_fold4.json": "54f9b3e68cb9475f2e0e004fa6e78c5c8aebe307527268c67c8a88ecbcfcd3cc"
+ },
+ "command_train": {
+  "0": "python3 uniform_lora_pitt_control.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/control/uniform_lora_pitt 0,3 Qwen/Qwen2.5-Omni-7B",
+  "1": "python3 uniform_lora_pitt_control.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/control/uniform_lora_pitt 1,4 Qwen/Qwen2.5-Omni-7B",
+  "2": "python3 uniform_lora_pitt_control.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/control/uniform_lora_pitt 2 Qwen/Qwen2.5-Omni-7B",
+  "3": "python3 uniform_lora_pitt_control.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/control/uniform_lora_pitt 0,3 Qwen/Qwen2.5-Omni-7B",
+  "4": "python3 uniform_lora_pitt_control.py mf_pitt468_pod.csv pitt_groupkfold5_pod.csv /workspace/scores/part20/POD2/control/uniform_lora_pitt 1,4 Qwen/Qwen2.5-Omni-7B"
+ },
+ "command_analysis": "/usr/local/bin/python3 /Users/chaitanyaparwatkar/Desktop/release/scores/part20/POD2/analyze_control.py",
+ "date_utc": "2026-09-23T13:05:41.472106"
+}
