@@ -1,0 +1,77 @@
+{
+ "fold_json_vs_release": {
+  "mac_seed0": {
+   "file": "pitt_groupkfold5_mac_seed0.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed0": {
+   "file": "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed1": {
+   "file": "pitt_groupkfold5_mac_seed1.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed1": {
+   "file": "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed2": {
+   "file": "pitt_groupkfold5_mac_seed2.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed2": {
+   "file": "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed3": {
+   "file": "pitt_groupkfold5_mac_seed3.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed3": {
+   "file": "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_seed4": {
+   "file": "pitt_groupkfold5_mac_seed4.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_seed4": {
+   "file": "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "pod_single": {
+   "file": "pitt_groupkfold5_pod.csv",
+   "mismatch": 0,
+   "n": 468
+  },
+  "mac_single": {
+   "file": "pitt_groupkfold5_mac.csv",
+   "mismatch": 0,
+   "n": 468
+  }
+ },
+ "refit": {
+  "proj_pod_seed0/pod_seed0": {
+   "max_abs_diff": 0.0,
+   "mean_abs_diff": 0.0,
+   "layers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}
