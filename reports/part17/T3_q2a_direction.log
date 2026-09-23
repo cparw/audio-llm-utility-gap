@@ -1,0 +1,103 @@
+====================================================================================================
+PART 17 T3  Qwen2-Audio readout-direction test, Pitt, corrected within-fold standardisation
+====================================================================================================
+[path] task path does not resolve: <local data dir>/paper1_local_runs/probe2/pitt_states.npz
+[path] using <local data dir>/paper work/paper1_local_runs/probe2/pitt_states.npz  (paper1_local_runs now lives under 'paper work/')
+  exists=True    332,079,526 B  <local data dir>/paper work/paper1_local_runs/probe2/pitt_states.npz
+  exists=True            377 B  <local data dir>/paper work/paper1_local_runs/probe2/pitt_nested.json
+  exists=True         29,666 B  <local data dir>/paper work/paper1_local_runs/probe2/pitt_ans_nested_oof.csv
+  exists=True         38,197 B  <local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv
+  exists=True        238,868 B  <local data dir>/DementiaBank/pitt_conflict_manifest.csv
+  exists=True  1,278,214,288 B  <hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model-00005-of-00005.safetensors
+  exists=True      7,028,015 B  <hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/tokenizer.json
+  exists=True            853 B  <hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/config.json
+  exists=True         78,989 B  <hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model.safetensors.index.json
+[states] ans (468, 33, 4096) float32 -> X = ans[:, -1, :] (468, 4096); n=468 n_spk=228 pos=290 neg=178
+[arms] conflict=146 (100 spk)  agreement=322 (175 spk)  npz-vs-manifest speaker map one-to-one=False
+[tokens] yes ids [7414, 9454, 9693, 9834, 14004, 14080]  ['ĠYes', 'Yes', 'yes', 'Ġyes', 'YES', 'ĠYES']
+[tokens] no  ids [902, 2152, 2308, 2753, 5664, 8996]  ['Ġno', 'no', 'ĠNo', 'No', 'ĠNO', 'NO']
+[lm_head] <hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model-00005-of-00005.safetensors  shape (156032, 4096) bf16 -> float32, header parsed by hand; tensors in shard: ['language_model.lm_head.weight']; tie_word_embeddings=ABSENT
+[lm_head] hand bf16 decode vs torch decode on the 12 Yes/No rows: max|diff| = 0.0
+[softmax] full vocab: mean total Yes mass 0.699691, mean total No mass 0.296416
+[direction] Yes weights 7414:0.000071  9454:0.999916  9693:0.000009  9834:0.000002  14004:0.000001  14080:0.000000
+[direction] No  weights 902:0.000000  2152:0.000017  2308:0.000006  2753:0.999970  5664:0.000002  8996:0.000005
+[direction] cos(d_fullvocab, d_12way verifier) = 1.0000000000   cos(d, d_top) = 0.9999999993   cos(d, d_plain) = 0.864674
+[gate] AUC(zero-shot p_yes, pitt_zeroshot_scores.csv) = 0.6173; AUC(X.d) = 0.6174; delta +0.0000 (part10 gate |delta| <= 0.01); spearman(X.d, saved p_yes) = 0.999958
+
+[probe] all 468: GroupKFold(5) by speaker, StandardScaler in-fold, LogisticRegression(max_iter=2000, class_weight='balanced')
+  fold sizes [94, 94, 94, 93, 93]  speakers/fold [45, 46, 46, 45, 46]
+  cos(probe direction, d) = 0.0145   per fold [0.0216, 0.0204, 0.0103, 0.011, 0.0006]
+  floor vs d          : mean|cos| 0.0123 [0.0005, 0.0321] (2000 draws)
+  floor vs probe dir  : mean|cos| 0.0124 [0.0005, 0.0343] (2000 draws)
+  analytic E|cos| for a random direction in 4096 dims = sqrt(2/(pi*4096)) = 0.0125
+  rng.normal loop stream == standard_normal block stream (fresh rng(0)): True
+  cos speaker bootstrap, probe refit per draw on the resampled speakers: mean 0.0129 [-0.0020, 0.0277] (2000 usable draws)
+
+[nested] saved chosen layers [23, 22, 23, 16, 23]; my inner GroupKFold(4) re-selection [23, 22, 23, 16, 23]; OOF vs pitt_ans_nested_oof.csv max|diff| = 1.110e-16
+[nested] cos(nested probe direction, d) = 0.0256   per fold [0.0176, 0.0234, 0.0279, 0.0119, 0.0341]
+
+====================================================================================================
+RESULTS (paste lines)
+====================================================================================================
+Q2A Pitt cos(probe direction, Yes-minus-No readout direction), final stage: 0.0145 [no interval], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt cos, speaker bootstrap with probe refit per draw (secondary; mean): 0.0129 [-0.0020, 0.0277], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt random floor mean|cos| vs readout direction d (fresh rng(0), 2000 dirs): 0.0123 [0.0005, 0.0321], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt random floor mean|cos| vs probe direction (fresh rng(0), 2000 dirs): 0.0124 [0.0005, 0.0343], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt ALL probe AUC (OOF): 0.8223 [0.7742, 0.8671], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt ALL AUC along readout direction: 0.6174 [0.5539, 0.6800], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt ALL probe AUC after projecting d out (within-fold z): 0.8114 [0.7646, 0.8577], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt ALL matched control, d kept (within-fold z): 0.8119 [0.7649, 0.8577], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt CONFLICT (restricted, decided) probe AUC (OOF): 0.6178 [0.5123, 0.7222], n=146, n_speakers=100, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt CONFLICT (restricted, decided) AUC along readout direction: 0.4136 [0.3010, 0.5424], n=146, n_speakers=100, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt CONFLICT (restricted, decided) probe AUC after projecting d out (within-fold z): 0.6013 [0.4929, 0.7114], n=146, n_speakers=100, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt CONFLICT (restricted, decided) matched control, d kept (within-fold z): 0.6029 [0.4961, 0.7123], n=146, n_speakers=100, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT (restricted, decided) probe AUC (OOF): 0.8988 [0.8598, 0.9328], n=322, n_speakers=175, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT (restricted, decided) AUC along readout direction: 0.6984 [0.6373, 0.7592], n=322, n_speakers=175, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT (restricted, decided) probe AUC after projecting d out (within-fold z): 0.8897 [0.8486, 0.9261], n=322, n_speakers=175, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT (restricted, decided) matched control, d kept (within-fold z): 0.8899 [0.8491, 0.9264], n=322, n_speakers=175, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt PAIRED conflict minus agreement, after-projection AUC: -0.2884 [-0.3884, -0.1815], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt PAIRED conflict minus agreement, probe AUC: -0.2810 [-0.3799, -0.1762], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt PAIRED conflict minus agreement, along-d AUC: -0.2847 [-0.3947, -0.1475], n=468, n_speakers=228, usable 2000/2000 | scores/part17/T3_q2a_direction.csv
+-- refit within arm, NOT USED --
+Q2A Pitt CONFLICT refit (not used) cos: 0.0054 [no interval], n=146, n_speakers=100 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt CONFLICT refit (not used) probe: 0.6757 [0.5685, 0.7761], n=146, n_speakers=100 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt CONFLICT refit (not used) proj_d: 0.4136 [0.3010, 0.5424], n=146, n_speakers=100 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt CONFLICT refit (not used) perp_z: 0.6744 [0.5730, 0.7703], n=146, n_speakers=100 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT refit (not used) cos: 0.0147 [no interval], n=322, n_speakers=175 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT refit (not used) probe: 0.9317 [0.9020, 0.9578], n=322, n_speakers=175 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT refit (not used) proj_d: 0.6984 [0.6373, 0.7592], n=322, n_speakers=175 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt AGREEMENT refit (not used) perp_z: 0.9242 [0.8932, 0.9510], n=322, n_speakers=175 | scores/part17/T3_q2a_direction.csv
+-- nested probe direction, supplement --
+Q2A Pitt NESTED cos(nested probe direction, d), layers [23, 22, 23, 16, 23]: 0.0256 [no interval], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt random floor vs nested probe direction: 0.0121 [0.0005, 0.0344], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt NESTED all probe: 0.8295 [0.7816, 0.8774], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt NESTED all perp_z: 0.8169 [0.7678, 0.8652], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt NESTED conflict probe: 0.6554 [0.5549, 0.7543], n=146, n_speakers=100 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt NESTED conflict perp_z: 0.6398 [0.5413, 0.7403], n=146, n_speakers=100 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt NESTED agreement probe: 0.8975 [0.8531, 0.9349], n=322, n_speakers=175 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt NESTED agreement perp_z: 0.8842 [0.8377, 0.9249], n=322, n_speakers=175 | scores/part17/T3_q2a_direction.csv
+Q2A Pitt NESTED PAIRED conflict minus agreement, perp_z: -0.2444 [-0.3489, -0.1438], n=468, n_speakers=228 | scores/part17/T3_q2a_direction.csv
+
+FIRST PASS (training-fold z, SUPERSEDED) vs CORRECTED (within-fold z), auc_without_d:
+  all        first pass 0.8327  ->  corrected 0.8114
+  conflict   first pass 0.6326  ->  corrected 0.6013
+  agreement  first pass 0.9070  ->  corrected 0.8897
+
+VERIFIER CHECK: 60/60 values identical to M5_verify_out.json at 4 dp
+
+====================================================================================================
+THREE BACKBONES, Pitt, all / conflict / agreement  (probe / along d / probe minus d, within-fold z)
+====================================================================================================
+Qwen2.5-Omni-7B : cos -0.0109, floor 0.0135 (vs d, 1000 dirs); all 0.7709 / 0.6608 / 0.7662 | <local data dir>/release/omni/readout_direction.csv
+                  conflict probe 0.5272, agreement probe 0.8672; along-d and minus-d by arm: not in any file | <local data dir>/release/edaic_rerun/part15/H_readout_arms.csv
+Qwen3-Omni-30B  : cos 0.0051, floor 0.0177 [0.0008, 0.0498] (vs probe dir, 2000 dirs) | <local data dir>/release/edaic_rerun/part16/pod_sync/readout_direction_q3o_FIXED.json
+                  all 0.8307 / 0.7656 / 0.8276; conflict 0.6394 / 0.6029 / 0.6532; agreement 0.9032 / 0.8264 / 0.8937 | <local data dir>/release/edaic_rerun/part16/rows/Q3Ofix.tsv  (canonical json value 0.8276)
+Qwen2-Audio-7B  : cos 0.0145, floor 0.0123 [0.0005, 0.0321] (vs d, 2000 dirs); all 0.8223 / 0.6174 / 0.8114; conflict 0.6178 / 0.4136 / 0.6013; agreement 0.8988 / 0.6984 / 0.8897 | scores/part17/T3_q2a_direction.csv
+
+wrote scores/part17/T3_q2a_direction.csv
+wrote scores/part17/T3_q2a_direction_summary.csv
+wrote scores/part17/T3_q2a_direction.json
+wrote scores/part17/rows/T3.tsv
+wrote reports/part17/T3_q2a_direction.log
+discrepancies appended to <local data dir>/release/edaic_rerun/DISCREPANCIES.md: ['[LOW] states path moved', '[LOW] first-pass random floor was NOT an advancing generator', "[MEDIUM] 'nested probe direction' vs the verifier's run", '[LOW] direction weighting differs between first pass and verifier']
+runtime 72.8s

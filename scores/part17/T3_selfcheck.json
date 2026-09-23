@@ -1,0 +1,836 @@
+{
+ "command": "/usr/local/bin/python3 scripts/part17/T3_selfcheck.py",
+ "sources": {
+  "per_clip": "scores/part17/T3_q2a_direction.csv",
+  "summary": "scores/part17/T3_q2a_direction_summary.csv",
+  "states": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_states.npz",
+  "manifest": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+  "shard": "<hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model-00005-of-00005.safetensors"
+ },
+ "sha256_first_1MB": {
+  "per_clip": "cf10aba8be32a2c1e75b49c8106f6816c137b4c4ab76a6430e3ce5fd15398205",
+  "summary": "a484b193a247b681cc0b136249c5b893527b66dc4db579e6edddd19dd8cacbb4",
+  "states": "5d8272dc673cdbded7c0a84207d5306ffdd30b6d1fee6a99b549b05d7087494c",
+  "manifest": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "shard": "81a8cf29c850891663e45d0a0d8cacd2663a9a3ff117e6f74c3ef1c470bfe8cd"
+ },
+ "n": 468,
+ "n_speakers": 228,
+ "seed": 0,
+ "draws": 2000,
+ "model_id": "Qwen/Qwen2-Audio-7B-Instruct",
+ "checks": [
+  {
+   "id": "T3_all_probe",
+   "field": "value",
+   "selfcheck": "0.8223",
+   "main": "0.8223",
+   "ok": true
+  },
+  {
+   "id": "T3_all_probe",
+   "field": "lo",
+   "selfcheck": "0.7742",
+   "main": "0.7742",
+   "ok": true
+  },
+  {
+   "id": "T3_all_probe",
+   "field": "hi",
+   "selfcheck": "0.8671",
+   "main": "0.8671",
+   "ok": true
+  },
+  {
+   "id": "T3_all_proj_d",
+   "field": "value",
+   "selfcheck": "0.6174",
+   "main": "0.6174",
+   "ok": true
+  },
+  {
+   "id": "T3_all_proj_d",
+   "field": "lo",
+   "selfcheck": "0.5539",
+   "main": "0.5539",
+   "ok": true
+  },
+  {
+   "id": "T3_all_proj_d",
+   "field": "hi",
+   "selfcheck": "0.6800",
+   "main": "0.6800",
+   "ok": true
+  },
+  {
+   "id": "T3_all_perp_z",
+   "field": "value",
+   "selfcheck": "0.8114",
+   "main": "0.8114",
+   "ok": true
+  },
+  {
+   "id": "T3_all_perp_z",
+   "field": "lo",
+   "selfcheck": "0.7646",
+   "main": "0.7646",
+   "ok": true
+  },
+  {
+   "id": "T3_all_perp_z",
+   "field": "hi",
+   "selfcheck": "0.8577",
+   "main": "0.8577",
+   "ok": true
+  },
+  {
+   "id": "T3_all_keep_z",
+   "field": "value",
+   "selfcheck": "0.8119",
+   "main": "0.8119",
+   "ok": true
+  },
+  {
+   "id": "T3_all_keep_z",
+   "field": "lo",
+   "selfcheck": "0.7649",
+   "main": "0.7649",
+   "ok": true
+  },
+  {
+   "id": "T3_all_keep_z",
+   "field": "hi",
+   "selfcheck": "0.8577",
+   "main": "0.8577",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_probe",
+   "field": "value",
+   "selfcheck": "0.8295",
+   "main": "0.8295",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_probe",
+   "field": "lo",
+   "selfcheck": "0.7816",
+   "main": "0.7816",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_probe",
+   "field": "hi",
+   "selfcheck": "0.8774",
+   "main": "0.8774",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_perp_z",
+   "field": "value",
+   "selfcheck": "0.8169",
+   "main": "0.8169",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_perp_z",
+   "field": "lo",
+   "selfcheck": "0.7678",
+   "main": "0.7678",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_perp_z",
+   "field": "hi",
+   "selfcheck": "0.8652",
+   "main": "0.8652",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_keep_z",
+   "field": "value",
+   "selfcheck": "0.8199",
+   "main": "0.8199",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_keep_z",
+   "field": "lo",
+   "selfcheck": "0.7709",
+   "main": "0.7709",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_all_keep_z",
+   "field": "hi",
+   "selfcheck": "0.8680",
+   "main": "0.8680",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_probe",
+   "field": "value",
+   "selfcheck": "0.6178",
+   "main": "0.6178",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_probe",
+   "field": "lo",
+   "selfcheck": "0.5123",
+   "main": "0.5123",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_probe",
+   "field": "hi",
+   "selfcheck": "0.7222",
+   "main": "0.7222",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_proj_d",
+   "field": "value",
+   "selfcheck": "0.4136",
+   "main": "0.4136",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_proj_d",
+   "field": "lo",
+   "selfcheck": "0.3010",
+   "main": "0.3010",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_proj_d",
+   "field": "hi",
+   "selfcheck": "0.5424",
+   "main": "0.5424",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_perp_z",
+   "field": "value",
+   "selfcheck": "0.6013",
+   "main": "0.6013",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_perp_z",
+   "field": "lo",
+   "selfcheck": "0.4929",
+   "main": "0.4929",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_perp_z",
+   "field": "hi",
+   "selfcheck": "0.7114",
+   "main": "0.7114",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_keep_z",
+   "field": "value",
+   "selfcheck": "0.6029",
+   "main": "0.6029",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_keep_z",
+   "field": "lo",
+   "selfcheck": "0.4961",
+   "main": "0.4961",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_keep_z",
+   "field": "hi",
+   "selfcheck": "0.7123",
+   "main": "0.7123",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_probe",
+   "field": "value",
+   "selfcheck": "0.6554",
+   "main": "0.6554",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_probe",
+   "field": "lo",
+   "selfcheck": "0.5549",
+   "main": "0.5549",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_probe",
+   "field": "hi",
+   "selfcheck": "0.7543",
+   "main": "0.7543",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_perp_z",
+   "field": "value",
+   "selfcheck": "0.6398",
+   "main": "0.6398",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_perp_z",
+   "field": "lo",
+   "selfcheck": "0.5413",
+   "main": "0.5413",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_perp_z",
+   "field": "hi",
+   "selfcheck": "0.7403",
+   "main": "0.7403",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_keep_z",
+   "field": "value",
+   "selfcheck": "0.6374",
+   "main": "0.6374",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_keep_z",
+   "field": "lo",
+   "selfcheck": "0.5391",
+   "main": "0.5391",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_conflict_keep_z",
+   "field": "hi",
+   "selfcheck": "0.7365",
+   "main": "0.7365",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_probe",
+   "field": "value",
+   "selfcheck": "0.8988",
+   "main": "0.8988",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_probe",
+   "field": "lo",
+   "selfcheck": "0.8598",
+   "main": "0.8598",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_probe",
+   "field": "hi",
+   "selfcheck": "0.9328",
+   "main": "0.9328",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_proj_d",
+   "field": "value",
+   "selfcheck": "0.6984",
+   "main": "0.6984",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_proj_d",
+   "field": "lo",
+   "selfcheck": "0.6373",
+   "main": "0.6373",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_proj_d",
+   "field": "hi",
+   "selfcheck": "0.7592",
+   "main": "0.7592",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_perp_z",
+   "field": "value",
+   "selfcheck": "0.8897",
+   "main": "0.8897",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_perp_z",
+   "field": "lo",
+   "selfcheck": "0.8486",
+   "main": "0.8486",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_perp_z",
+   "field": "hi",
+   "selfcheck": "0.9261",
+   "main": "0.9261",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_keep_z",
+   "field": "value",
+   "selfcheck": "0.8899",
+   "main": "0.8899",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_keep_z",
+   "field": "lo",
+   "selfcheck": "0.8491",
+   "main": "0.8491",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_keep_z",
+   "field": "hi",
+   "selfcheck": "0.9264",
+   "main": "0.9264",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_probe",
+   "field": "value",
+   "selfcheck": "0.8975",
+   "main": "0.8975",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_probe",
+   "field": "lo",
+   "selfcheck": "0.8531",
+   "main": "0.8531",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_probe",
+   "field": "hi",
+   "selfcheck": "0.9349",
+   "main": "0.9349",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_perp_z",
+   "field": "value",
+   "selfcheck": "0.8842",
+   "main": "0.8842",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_perp_z",
+   "field": "lo",
+   "selfcheck": "0.8377",
+   "main": "0.8377",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_perp_z",
+   "field": "hi",
+   "selfcheck": "0.9249",
+   "main": "0.9249",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_keep_z",
+   "field": "value",
+   "selfcheck": "0.8888",
+   "main": "0.8888",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_keep_z",
+   "field": "lo",
+   "selfcheck": "0.8438",
+   "main": "0.8438",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_agreement_keep_z",
+   "field": "hi",
+   "selfcheck": "0.9283",
+   "main": "0.9283",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_probe",
+   "field": "value",
+   "selfcheck": "0.6757",
+   "main": "0.6757",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_probe",
+   "field": "lo",
+   "selfcheck": "0.5685",
+   "main": "0.5685",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_probe",
+   "field": "hi",
+   "selfcheck": "0.7761",
+   "main": "0.7761",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_proj_d",
+   "field": "value",
+   "selfcheck": "0.4136",
+   "main": "0.4136",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_proj_d",
+   "field": "lo",
+   "selfcheck": "0.3010",
+   "main": "0.3010",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_proj_d",
+   "field": "hi",
+   "selfcheck": "0.5424",
+   "main": "0.5424",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_perp_z",
+   "field": "value",
+   "selfcheck": "0.6744",
+   "main": "0.6744",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_perp_z",
+   "field": "lo",
+   "selfcheck": "0.5730",
+   "main": "0.5730",
+   "ok": true
+  },
+  {
+   "id": "T3_conflict_refit_perp_z",
+   "field": "hi",
+   "selfcheck": "0.7703",
+   "main": "0.7703",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_probe",
+   "field": "value",
+   "selfcheck": "0.9317",
+   "main": "0.9317",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_probe",
+   "field": "lo",
+   "selfcheck": "0.9020",
+   "main": "0.9020",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_probe",
+   "field": "hi",
+   "selfcheck": "0.9578",
+   "main": "0.9578",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_proj_d",
+   "field": "value",
+   "selfcheck": "0.6984",
+   "main": "0.6984",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_proj_d",
+   "field": "lo",
+   "selfcheck": "0.6373",
+   "main": "0.6373",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_proj_d",
+   "field": "hi",
+   "selfcheck": "0.7592",
+   "main": "0.7592",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_perp_z",
+   "field": "value",
+   "selfcheck": "0.9242",
+   "main": "0.9242",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_perp_z",
+   "field": "lo",
+   "selfcheck": "0.8932",
+   "main": "0.8932",
+   "ok": true
+  },
+  {
+   "id": "T3_agreement_refit_perp_z",
+   "field": "hi",
+   "selfcheck": "0.9510",
+   "main": "0.9510",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_perp_z",
+   "field": "value",
+   "selfcheck": "-0.2884",
+   "main": "-0.2884",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_perp_z",
+   "field": "lo",
+   "selfcheck": "-0.3884",
+   "main": "-0.3884",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_perp_z",
+   "field": "hi",
+   "selfcheck": "-0.1815",
+   "main": "-0.1815",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_probe",
+   "field": "value",
+   "selfcheck": "-0.2810",
+   "main": "-0.2810",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_probe",
+   "field": "lo",
+   "selfcheck": "-0.3799",
+   "main": "-0.3799",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_probe",
+   "field": "hi",
+   "selfcheck": "-0.1762",
+   "main": "-0.1762",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_proj_d",
+   "field": "value",
+   "selfcheck": "-0.2847",
+   "main": "-0.2847",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_proj_d",
+   "field": "lo",
+   "selfcheck": "-0.3947",
+   "main": "-0.3947",
+   "ok": true
+  },
+  {
+   "id": "T3_paired_proj_d",
+   "field": "hi",
+   "selfcheck": "-0.1475",
+   "main": "-0.1475",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_paired_perp_z",
+   "field": "value",
+   "selfcheck": "-0.2444",
+   "main": "-0.2444",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_paired_perp_z",
+   "field": "lo",
+   "selfcheck": "-0.3489",
+   "main": "-0.3489",
+   "ok": true
+  },
+  {
+   "id": "T3_nested_paired_perp_z",
+   "field": "hi",
+   "selfcheck": "-0.1438",
+   "main": "-0.1438",
+   "ok": true
+  }
+ ],
+ "n_disagree": 0,
+ "rederive": {
+  "oof_maxdiff": 4.9722670425467186e-11,
+  "perp_z_maxdiff": 7.732732232312856e-10,
+  "keep_z_maxdiff": 4.939784137292236e-10,
+  "cos": 0.014518567501904014
+ },
+ "participant_172": {
+  "participants_with_two_ids": [
+   "172"
+  ],
+  "main_run_folds": {
+   "172": {
+    "Control172": [
+     1
+    ],
+    "Dementia172": [
+     3
+    ]
+   }
+  },
+  "sensitivity": {
+   "n_groups": 227,
+   "cos": 0.01462968569846019,
+   "all_probe": [
+    0.8272568771793878,
+    0.7803191869858537,
+    0.8714706893280406,
+    2000,
+    468,
+    227
+   ],
+   "all_perp_z": [
+    0.819953506392871,
+    0.7735891363658384,
+    0.8634980913202671,
+    2000,
+    468,
+    227
+   ],
+   "all_proj_d": [
+    0.6173576133281674,
+    0.5534987125072002,
+    0.6771604943559703,
+    2000,
+    468,
+    227
+   ],
+   "conflict_probe": [
+    0.6631463146314631,
+    0.5543062171991124,
+    0.7606332821926357,
+    2000,
+    146,
+    100
+   ],
+   "conflict_perp_z": [
+    0.6607260726072607,
+    0.551820136088262,
+    0.7606708137800575,
+    2000,
+    146,
+    100
+   ],
+   "conflict_proj_d": [
+    0.4136413641364136,
+    0.30049810993327597,
+    0.5399845871995729,
+    2000,
+    146,
+    100
+   ],
+   "agreement_probe": [
+    0.8917531925050722,
+    0.852336408985971,
+    0.9297637960656654,
+    2000,
+    322,
+    175
+   ],
+   "agreement_perp_z": [
+    0.8837570115765605,
+    0.843469761868026,
+    0.9221700458124196,
+    2000,
+    322,
+    175
+   ],
+   "agreement_proj_d": [
+    0.6983729164180292,
+    0.6330210452248448,
+    0.7572089820680226,
+    2000,
+    322,
+    175
+   ],
+   "paired_perp_z": [
+    -0.22303093896929982,
+    -0.3303693496172181,
+    -0.11916217600200547,
+    2000
+   ]
+  },
+  "per_clip": "scores/part17/T3_selfcheck_participant_grouped.csv"
+ },
+ "partition_sensitivity": {
+  "what": "50 partitions GroupKFold(5, shuffle=True, random_state=0..49) by participant; AUC of pooled OOF",
+  "dist": {
+   "all_probe": {
+    "median": 0.8112456412243316,
+    "p2_5": 0.7849951569159241,
+    "p97_5": 0.8303729174738473,
+    "min": 0.7689267725687718,
+    "max": 0.8361681518791166
+   },
+   "all_perp_z": {
+    "median": 0.8085432003099573,
+    "p2_5": 0.7839902169701666,
+    "p97_5": 0.8300963773731111,
+    "min": 0.770592793490895,
+    "max": 0.8344633862843859
+   },
+   "conflict_probe": {
+    "median": 0.6063806380638064,
+    "p2_5": 0.5698569856985699,
+    "p97_5": 0.6492739273927393,
+    "min": 0.5691969196919692,
+    "max": 0.671947194719472
+   },
+   "conflict_perp_z": {
+    "median": 0.6094609460946094,
+    "p2_5": 0.574917491749175,
+    "p97_5": 0.6593234323432343,
+    "min": 0.5696369636963696,
+    "max": 0.6796479647964796
+   },
+   "agreement_probe": {
+    "median": 0.885646656323348,
+    "p2_5": 0.8630276087043005,
+    "p97_5": 0.9086307037434858,
+    "min": 0.8491864582090146,
+    "max": 0.9104507299996022
+   },
+   "agreement_perp_z": {
+    "median": 0.8810120539443849,
+    "p2_5": 0.854937940088316,
+    "p97_5": 0.9046733898237658,
+    "min": 0.8488682022516609,
+    "max": 0.9053188526872737
+   },
+   "paired_perp_z": {
+    "median": -0.2723684899818303,
+    "p2_5": -0.30199446242511824,
+    "p97_5": -0.22465256532814046,
+    "min": -0.3050991457899819,
+    "max": -0.1962322118355767
+   }
+  },
+  "per_partition_csv": "scores/part17/T3_selfcheck_partitions.csv"
+ },
+ "runtime_s": 11.8
+}

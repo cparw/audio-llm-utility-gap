@@ -1,0 +1,497 @@
+{
+ "results": {
+  "ALL_probe": {
+   "value": 0.8222975590856257,
+   "lo": 0.7742119901408085,
+   "hi": 0.8670694745697013,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "ALL_along": {
+   "value": 0.6173576133281674,
+   "lo": 0.5539496649176339,
+   "hi": 0.6799643419991862,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "ALL_perp": {
+   "value": 0.8113521890740023,
+   "lo": 0.7646380456361327,
+   "hi": 0.8576748256412412,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "ALL_keep": {
+   "value": 0.8118752421542038,
+   "lo": 0.7649008026499182,
+   "hi": 0.8576724791967579,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "ALL_perp_ztrain": {
+   "value": 0.8325842696629213,
+   "lo": 0.7853159445186377,
+   "hi": 0.8758081498387568,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "CONFLICT_probe": {
+   "value": 0.6178217821782178,
+   "lo": 0.5122978216473792,
+   "hi": 0.7221651512502185,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "CONFLICT_along": {
+   "value": 0.4136413641364136,
+   "lo": 0.3010102507286302,
+   "hi": 0.5424246308449545,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "CONFLICT_perp": {
+   "value": 0.6013201320132013,
+   "lo": 0.49285125248015876,
+   "hi": 0.7114159506499227,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "CONFLICT_keep": {
+   "value": 0.6028602860286029,
+   "lo": 0.4961473453803364,
+   "hi": 0.7122884450820497,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "CONFLICT_perp_ztrain": {
+   "value": 0.6325632563256326,
+   "lo": 0.5276664297971471,
+   "hi": 0.7335895453736127,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "AGREEMENT_probe": {
+   "value": 0.8987946055615229,
+   "lo": 0.8597583467944271,
+   "hi": 0.9328316273501736,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "AGREEMENT_along": {
+   "value": 0.6983729164180292,
+   "lo": 0.6373243156628273,
+   "hi": 0.7592350435845333,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "AGREEMENT_perp": {
+   "value": 0.8897243107769424,
+   "lo": 0.8485954088309915,
+   "hi": 0.9260849838245866,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "AGREEMENT_keep": {
+   "value": 0.8899232207502884,
+   "lo": 0.8491085737179487,
+   "hi": 0.9263748208313426,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "AGREEMENT_perp_ztrain": {
+   "value": 0.9069499144687114,
+   "lo": 0.8701781394905423,
+   "hi": 0.9383208446716511,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "PAIRED_probe": {
+   "value": -0.2809728233833051,
+   "lo": -0.37989522102903156,
+   "hi": -0.17621252265107026,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "PAIRED_along": {
+   "value": -0.2847315522816156,
+   "lo": -0.3946531976172145,
+   "hi": -0.14752193943340808,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "PAIRED_perp": {
+   "value": -0.288404178763741,
+   "lo": -0.38835395042049353,
+   "hi": -0.18152881009230373,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "PAIRED_keep": {
+   "value": -0.28706293472168554,
+   "lo": -0.38660664217594964,
+   "hi": -0.18115102705168354,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "PAIRED_perp_ztrain": {
+   "value": -0.27438665814307883,
+   "lo": -0.3753852837828012,
+   "hi": -0.17067133572656612,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "cos_all": {
+   "value": 0.014518567354528245,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "floor_vs_d": {
+   "value": 0.012285509913754098,
+   "lo": 0.00047668962029818497,
+   "hi": 0.032110526353227455,
+   "draws": 2000,
+   "n": null,
+   "n_speakers": null
+  },
+  "floor_vs_probe": {
+   "value": 0.012392883317044925,
+   "lo": 0.00048150015056989834,
+   "hi": 0.03432580215705907,
+   "draws": 2000,
+   "n": null,
+   "n_speakers": null
+  },
+  "CONFLICT_refit_cos": {
+   "value": 0.005429282654336602,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "CONFLICT_refit_floor_vs_d": {
+   "value": 0.012285510033906906,
+   "lo": 0.00047668374165288807,
+   "hi": 0.03211053244023728,
+   "draws": 2000,
+   "n": null,
+   "n_speakers": null
+  },
+  "CONFLICT_refit_probe": {
+   "value": 0.6756875687568756,
+   "lo": 0.5684735042735043,
+   "hi": 0.776130764682696,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "CONFLICT_refit_along": {
+   "value": 0.4136413641364136,
+   "lo": 0.3010102507286302,
+   "hi": 0.5424246308449545,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "CONFLICT_refit_perp": {
+   "value": 0.6743674367436744,
+   "lo": 0.5729530451610929,
+   "hi": 0.7702626847585052,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "AGREEMENT_refit_cos": {
+   "value": 0.014748529852024595,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "AGREEMENT_refit_floor_vs_d": {
+   "value": 0.012285509859273182,
+   "lo": 0.0004766922857535864,
+   "hi": 0.03211052359259293,
+   "draws": 2000,
+   "n": null,
+   "n_speakers": null
+  },
+  "AGREEMENT_refit_probe": {
+   "value": 0.9316943151529617,
+   "lo": 0.902037362942538,
+   "hi": 0.9578185085728651,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "AGREEMENT_refit_along": {
+   "value": 0.6983729164180292,
+   "lo": 0.6373243156628273,
+   "hi": 0.7592350435845333,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "AGREEMENT_refit_perp": {
+   "value": 0.9242153001551497,
+   "lo": 0.8931647605135828,
+   "hi": 0.951046558383477,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "NESTED_cos": {
+   "value": 0.025561002047970176,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "NESTED_cos_meanfold": {
+   "value": 0.02296004064672329,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "NESTED_floor": {
+   "value": 0.012119926656333315,
+   "lo": 0.0005084333890910821,
+   "hi": 0.034396988683977996,
+   "draws": 2000,
+   "n": null,
+   "n_speakers": null
+  },
+  "NESTED_ALL_probe": {
+   "value": 0.8295040681906238,
+   "lo": 0.781586137546539,
+   "hi": 0.8773740853335675,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "NESTED_ALL_perp": {
+   "value": 0.8168539325842696,
+   "lo": 0.7677585995439709,
+   "hi": 0.8651835418892727,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "NESTED_ALL_keep": {
+   "value": 0.819876017047656,
+   "lo": 0.77087058969792,
+   "hi": 0.8679590082675802,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "NESTED_CONFLICT_probe": {
+   "value": 0.6554455445544555,
+   "lo": 0.5548968540940854,
+   "hi": 0.7542780976220275,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "NESTED_CONFLICT_perp": {
+   "value": 0.6398239823982398,
+   "lo": 0.5413198833460438,
+   "hi": 0.7402625796528235,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "NESTED_CONFLICT_keep": {
+   "value": 0.6374037403740374,
+   "lo": 0.5391251995660548,
+   "hi": 0.7364764705882353,
+   "draws": 2000,
+   "n": 146,
+   "n_speakers": 100
+  },
+  "NESTED_AGREEMENT_probe": {
+   "value": 0.8974817997374388,
+   "lo": 0.8531248436029271,
+   "hi": 0.9349275759137569,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "NESTED_AGREEMENT_perp": {
+   "value": 0.884234395512591,
+   "lo": 0.8376842993581316,
+   "hi": 0.9248577191216412,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "NESTED_AGREEMENT_keep": {
+   "value": 0.8888491068942197,
+   "lo": 0.843753826054498,
+   "hi": 0.9283161237698501,
+   "draws": 2000,
+   "n": 322,
+   "n_speakers": 175
+  },
+  "NESTED_PAIRED_probe": {
+   "value": -0.24203625518298333,
+   "lo": -0.3443941013342274,
+   "hi": -0.14345433794076923,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "NESTED_PAIRED_perp": {
+   "value": -0.2444104131143512,
+   "lo": -0.34894814032856825,
+   "hi": -0.14383725541560197,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "NESTED_PAIRED_keep": {
+   "value": -0.25144536652018235,
+   "lo": -0.35465826490545915,
+   "hi": -0.15044579776639588,
+   "draws": 2000,
+   "n": 468,
+   "n_speakers": 228
+  },
+  "REGROUP_probe_all": {
+   "value": 0.8272568771793878,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "REGROUP_perp_all": {
+   "value": 0.819953506392871,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "REGROUP_perp_conflict": {
+   "value": 0.6607260726072607,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "REGROUP_perp_agreement": {
+   "value": 0.8837570115765605,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "REGROUP_paired_perp": {
+   "value": -0.22303093896929982,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "REGROUP_cos": {
+   "value": 0.014629685535513961,
+   "lo": null,
+   "hi": null,
+   "draws": null,
+   "n": null,
+   "n_speakers": null
+  },
+  "PARTITIONS_mine": {
+   "conflict_perp_median": 0.6072607260726073,
+   "conflict_perp_lo": 0.5688888888888889,
+   "conflict_perp_hi": 0.6527447744774477,
+   "paired_median": -0.27254782406274997,
+   "paired_lo": -0.31259468016260983,
+   "paired_hi": -0.22741534411228448
+  },
+  "cos_boot_refit": {
+   "value": 0.01292388115978026,
+   "lo": -0.002023888065268425,
+   "hi": 0.02768269037532076,
+   "draws": 2000,
+   "n": null,
+   "n_speakers": null
+  }
+ },
+ "sha256_first_1MB": {
+  "states": "5d8272dc673cdbded7c0a84207d5306ffdd30b6d1fee6a99b549b05d7087494c",
+  "zeroshot": "9cd9800ed47adee9d9912219bf31db487d4941128364d80babf3d0488fbfff6c",
+  "nested_json": "081635c39f4480574b34a4ee51a4df06f3a5dd25d12ac63e14b7950caf4565e8",
+  "nested_oof": "4274dc9e1627008a9e1e36830f03f71baf7975adf15336308acba293ed4f07f9",
+  "manifest": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607",
+  "shard": "81a8cf29c850891663e45d0a0d8cacd2663a9a3ff117e6f74c3ef1c470bfe8cd",
+  "tokenizer": "4be2d47445b8518fdfdc43efcbcf7eb5ab54532e03882673cdbb76815bba14cd",
+  "vocab": "d9413f2b959a5e7721db6357cf8ff2c13d9a2faa92fa8c106347d5cb83d2a0b8"
+ },
+ "sources": {
+  "states": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_states.npz",
+  "zeroshot": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+  "nested_json": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_nested.json",
+  "nested_oof": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_ans_nested_oof.csv",
+  "manifest": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+  "shard": "<hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model-00005-of-00005.safetensors",
+  "tokenizer": "<hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/tokenizer.json",
+  "vocab": "<hf cache>/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/vocab.json"
+ },
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004,
+  14080
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  5664,
+  8996
+ ],
+ "chosen_nested": [
+  23,
+  22,
+  23,
+  16,
+  23
+ ],
+ "runtime_s": 46.78349709510803,
+ "command": "/usr/local/bin/python3 scripts/part17/verify/T3_verify.py"
+}
