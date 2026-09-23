@@ -1,0 +1,35 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1273.16it/s]
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  26%|██▋       | 648/2447 [00:00<00:00, 6435.72it/s]Loading weights:  55%|█████▍    | 1338/2447 [00:00<00:00, 6705.18it/s]Loading weights:  85%|████████▍ | 2068/2447 [00:00<00:00, 6975.25it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 7003.88it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B dtype bf16 loaded in 11s transformers 5.17.0 torch 2.8.0+cu128
+audio token 151646 | paper yes ids [7414, 9454, 9693, 9834, 14004] no ids [902, 2152, 2308, 2753, 8996] | rule3 yes ids [7414, 9454, 9693, 9834, 14004, 14080] no ids [902, 2152, 2308, 2753, 5664, 8996]
+ENCODINGS {'Yes': [9454], ' Yes': [7414], 'yes': [9693], ' yes': [9834], 'YES': [14004], ' YES': [14080], 'No': [2753], ' No': [2308], 'no': [2152], ' no': [902], 'NO': [8996], ' NO': [5664]}
+output_hidden_states=True attn_implementation=sdpa
+JOB man_orig.csv -> out/o25_orig_voice.csv | PROMPT Based only on how this person's voice sounds, does this speaker show signs of dementia? Answer with one word, Yes or No.
+1/468 conflict_Con_015-0_67805.wav p_yes 0.3780 mass 0.9907 12s
+51/468 conflict_Dem_010-2_4647.wav p_yes 0.3079 mass 0.9890 18s
+101/468 conflict_Dem_221-2_32438.wav p_yes 0.3212 mass 0.9883 24s
+151/468 agreement_Con_006-4_37223.wav p_yes 0.2946 mass 0.9879 29s
+201/468 agreement_Con_128-1_34057.wav p_yes 0.2817 mass 0.9911 35s
+251/468 agreement_Con_243-0_33988.wav p_yes 0.2571 mass 0.9881 40s
+301/468 agreement_Dem_029-1_30833.wav p_yes 0.3077 mass 0.9899 46s
+351/468 agreement_Dem_157-0_3215.wav p_yes 0.1564 mass 0.9891 52s
+401/468 agreement_Dem_268-0_145775.wav p_yes 0.3349 mass 0.9939 57s
+451/468 agreement_Dem_585-0_35202.wav p_yes 0.3212 mass 0.9887 63s
+468/468 agreement_Dem_714-0_13211.wav p_yes 0.4691 mass 0.9910 65s
+WROTE out/o25_orig_voice.csv n=468 65s
+ALL JOBS DONE

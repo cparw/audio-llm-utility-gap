@@ -1,0 +1,34 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1326.89it/s]
+Loading weights:   0%|          | 0/876 [00:00<?, ?it/s]Loading weights:  89%|████████▉ | 781/876 [00:00<00:00, 7767.75it/s]Loading weights: 100%|██████████| 876/876 [00:00<00:00, 7867.54it/s]
+MODEL Qwen/Qwen2-Audio-7B-Instruct dtype bf16 loaded in 9s transformers 5.17.0 torch 2.8.0+cu128
+audio token 151646 | paper yes ids [7414, 9454, 9693, 9834, 14004] no ids [902, 2152, 2308, 2753, 8996] | rule3 yes ids [7414, 9454, 9693, 9834, 14004, 14080] no ids [902, 2152, 2308, 2753, 5664, 8996]
+ENCODINGS {'Yes': [9454], ' Yes': [7414], 'yes': [9693], ' yes': [9834], 'YES': [14004], ' YES': [14080], 'No': [2753], ' No': [2308], 'no': [2152], ' no': [902], 'NO': [8996], ' NO': [5664]}
+output_hidden_states=True attn_implementation=sdpa
+JOB man_orig.csv -> out/q2a_orig_recording_rerun_bf16.csv | PROMPT Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.
+1/468 conflict_Con_015-0_67805.wav p_yes 0.9399 mass 0.9974 10s
+51/468 conflict_Dem_010-2_4647.wav p_yes 0.7058 mass 0.9973 14s
+101/468 conflict_Dem_221-2_32438.wav p_yes 0.8933 mass 0.9978 18s
+151/468 agreement_Con_006-4_37223.wav p_yes 0.7982 mass 0.9984 21s
+201/468 agreement_Con_128-1_34057.wav p_yes 0.3208 mass 0.9964 24s
+251/468 agreement_Con_243-0_33988.wav p_yes 0.8355 mass 0.9966 26s
+301/468 agreement_Dem_029-1_30833.wav p_yes 0.8933 mass 0.9974 29s
+351/468 agreement_Dem_157-0_3215.wav p_yes 0.8933 mass 0.9946 31s
+401/468 agreement_Dem_268-0_145775.wav p_yes 0.9526 mass 0.9960 33s
+451/468 agreement_Dem_585-0_35202.wav p_yes 0.5622 mass 0.9923 36s
+468/468 agreement_Dem_714-0_13211.wav p_yes 0.4688 mass 0.9972 37s
+WROTE out/q2a_orig_recording_rerun_bf16.csv n=468 37s
+JOB man_cut.csv -> out/q2a_noinv_recording_bf16.csv | PROMPT Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.
+1/468 conflict_Con_015-0_67805.wav p_yes 0.9850 mass 0.9982 37s
+51/468 conflict_Dem_010-2_4647.wav p_yes 0.9241 mass 0.9961 39s
+101/468 conflict_Dem_221-2_32438.wav p_yes 0.9689 mass 0.9920 41s
+151/468 agreement_Con_006-4_37223.wav p_yes 0.8520 mass 0.9983 44s
+201/468 agreement_Con_128-1_34057.wav p_yes 0.5000 mass 0.9956 46s
+251/468 agreement_Con_243-0_33988.wav p_yes 0.7773 mass 0.9968 48s
+301/468 agreement_Dem_029-1_30833.wav p_yes 0.9399 mass 0.9981 51s
+351/468 agreement_Dem_157-0_3215.wav p_yes 0.8176 mass 0.9951 53s
+401/468 agreement_Dem_268-0_145775.wav p_yes 0.8933 mass 0.9970 55s
+451/468 agreement_Dem_585-0_35202.wav p_yes 0.9553 mass 0.9972 58s
+468/468 agreement_Dem_714-0_13211.wav p_yes 0.7311 mass 0.9973 58s
+WROTE out/q2a_noinv_recording_bf16.csv n=468 58s
+ALL JOBS DONE

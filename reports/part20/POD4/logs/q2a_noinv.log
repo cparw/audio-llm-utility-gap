@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 970.72it/s]
+Loading weights:   0%|          | 0/876 [00:00<?, ?it/s]Loading weights:  30%|███       | 264/876 [00:00<00:00, 1624.22it/s]Loading weights:  49%|████▊     | 427/876 [00:00<00:00, 1626.28it/s]Loading weights:  67%|██████▋   | 590/876 [00:00<00:00, 469.41it/s] Loading weights:  79%|███████▊  | 689/876 [00:01<00:00, 380.92it/s]Loading weights:  87%|████████▋ | 759/876 [00:01<00:00, 334.87it/s]Loading weights:  93%|█████████▎| 812/876 [00:01<00:00, 316.72it/s]Loading weights:  98%|█████████▊| 856/876 [00:02<00:00, 271.35it/s]Loading weights: 100%|██████████| 876/876 [00:02<00:00, 401.98it/s]
+MODEL Qwen/Qwen2-Audio-7B-Instruct dtype fp16 loaded in 13s transformers 5.17.0 torch 2.8.0+cu128
+audio token 151646 | paper yes ids [7414, 9454, 9693, 9834, 14004] no ids [902, 2152, 2308, 2753, 8996] | rule3 yes ids [7414, 9454, 9693, 9834, 14004, 14080] no ids [902, 2152, 2308, 2753, 5664, 8996]
+ENCODINGS {'Yes': [9454], ' Yes': [7414], 'yes': [9693], ' yes': [9834], 'YES': [14004], ' YES': [14080], 'No': [2753], ' No': [2308], 'no': [2152], ' no': [902], 'NO': [8996], ' NO': [5664]}
+output_hidden_states=True attn_implementation=sdpa
+JOB man_cut.csv -> out/q2a_noinv_recording.csv | PROMPT Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.
+1/468 conflict_Con_015-0_67805.wav p_yes 0.9826 mass 0.9980 14s
+51/468 conflict_Dem_010-2_4647.wav p_yes 0.9247 mass 0.9962 18s
+101/468 conflict_Dem_221-2_32438.wav p_yes 0.9664 mass 0.9914 23s
+151/468 agreement_Con_006-4_37223.wav p_yes 0.8808 mass 0.9984 27s
+201/468 agreement_Con_128-1_34057.wav p_yes 0.5039 mass 0.9960 32s
+251/468 agreement_Con_243-0_33988.wav p_yes 0.7982 mass 0.9969 35s
+301/468 agreement_Dem_029-1_30833.wav p_yes 0.9458 mass 0.9982 39s
+351/468 agreement_Dem_157-0_3215.wav p_yes 0.8290 mass 0.9954 42s
+401/468 agreement_Dem_268-0_145775.wav p_yes 0.8948 mass 0.9971 45s
+451/468 agreement_Dem_585-0_35202.wav p_yes 0.9515 mass 0.9968 49s
+468/468 agreement_Dem_714-0_13211.wav p_yes 0.7122 mass 0.9971 50s
+WROTE out/q2a_noinv_recording.csv n=468 50s
+ALL JOBS DONE
