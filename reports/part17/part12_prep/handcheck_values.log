@@ -1,0 +1,2 @@
+o25_pitt_text.json auc field = 0.6629 (date 2026-09-20)
+omnisft_pitt_sft.json auc_oof 0.7673 arms {'agreement': 0.8593, 'conflict': 0.5189}
