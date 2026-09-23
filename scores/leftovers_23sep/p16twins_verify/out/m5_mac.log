@@ -1,0 +1,613 @@
+X (468, 4096) arms {'conflict': 146, 'agreement': 322}
+raw tokenizers ids [7414, 9454, 9693, 9834, 14004, 14080] [902, 2152, 2308, 2753, 5664, 8996] M5 ids [7414, 9454, 9693, 9834, 14004, 14080] [902, 2152, 2308, 2753, 5664, 8996]
+W (156032, 4096) float32 YES [7414, 9454, 9693, 9834, 14004, 14080] NO [902, 2152, 2308, 2753, 5664, 8996]
+<local data dir>/scratch/vp16/vp16_m5.py:44: RuntimeWarning: divide by zero encountered in matmul
+  b = X @ W[a:a + 20000].astype(np.float64).T
+<local data dir>/scratch/vp16/vp16_m5.py:44: RuntimeWarning: overflow encountered in matmul
+  b = X @ W[a:a + 20000].astype(np.float64).T
+<local data dir>/scratch/vp16/vp16_m5.py:44: RuntimeWarning: invalid value encountered in matmul
+  b = X @ W[a:a + 20000].astype(np.float64).T
+<local data dir>/scratch/vp16/vp16_m5.py:48: RuntimeWarning: divide by zero encountered in matmul
+  PY = np.exp(X @ W[YES].astype(np.float64).T - lse[:, None]); PN = np.exp(X @ W[NO].astype(np.float64).T - lse[:, None])
+<local data dir>/scratch/vp16/vp16_m5.py:48: RuntimeWarning: overflow encountered in matmul
+  PY = np.exp(X @ W[YES].astype(np.float64).T - lse[:, None]); PN = np.exp(X @ W[NO].astype(np.float64).T - lse[:, None])
+<local data dir>/scratch/vp16/vp16_m5.py:48: RuntimeWarning: invalid value encountered in matmul
+  PY = np.exp(X @ W[YES].astype(np.float64).T - lse[:, None]); PN = np.exp(X @ W[NO].astype(np.float64).T - lse[:, None])
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: divide by zero encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: overflow encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: invalid value encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: divide by zero encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: overflow encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: invalid value encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: divide by zero encountered in matmul
+  cos=float(w @ d),
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: overflow encountered in matmul
+  cos=float(w @ d),
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: invalid value encountered in matmul
+  cos=float(w @ d),
+all {'randfloor': 0.0124, 'randfloor_ci': [0.0004815001505699119, 0.03432580215705905], 'cos': 0.0145, 'max_abs_diff_vs_csv_wo': 0.0, 'max_abs_diff_vs_csv_probe': 0.0}
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: divide by zero encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: overflow encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: invalid value encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: divide by zero encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: overflow encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: invalid value encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: divide by zero encountered in matmul
+  cos=float(w @ d),
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: overflow encountered in matmul
+  cos=float(w @ d),
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: invalid value encountered in matmul
+  cos=float(w @ d),
+conflict_refit {'randfloor': 0.0123, 'randfloor_ci': [0.0005120282798040112, 0.034986834669966174], 'cos': 0.0054, 'max_abs_diff_vs_csv_wo': 0.0, 'max_abs_diff_vs_csv_probe': 0.0}
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: divide by zero encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: overflow encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/scratch/vp16/vp16_m5.py:51: RuntimeWarning: invalid value encountered in matmul
+  d = W[YES].astype(np.float64).T @ a - W[NO].astype(np.float64).T @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:200: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights + intercept
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: divide by zero encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: overflow encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:330: RuntimeWarning: invalid value encountered in matmul
+  grad[:n_features] = X.T @ grad_pointwise + l2_reg_strength * weights
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: divide by zero encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: overflow encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:60: RuntimeWarning: invalid value encountered in matmul
+  cp = c - (c @ d) / (d @ d) * d; pt = Xt @ cp
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: divide by zero encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: overflow encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:61: RuntimeWarning: invalid value encountered in matmul
+  wo[te] = (Xe @ cp - pt.mean()) / (pt.std() + 1e-12)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: divide by zero encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: overflow encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:72: RuntimeWarning: invalid value encountered in matmul
+  r = np.abs(V @ w)
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: divide by zero encountered in matmul
+  cos=float(w @ d),
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: overflow encountered in matmul
+  cos=float(w @ d),
+<local data dir>/scratch/vp16/vp16_m5.py:76: RuntimeWarning: invalid value encountered in matmul
+  cos=float(w @ d),
+agreement_refit {'randfloor': 0.0126, 'randfloor_ci': [0.00046718016300773636, 0.035896923366591935], 'cos': 0.0147, 'max_abs_diff_vs_csv_wo': 0.0, 'max_abs_diff_vs_csv_probe': 0.0}
+done 4.3
