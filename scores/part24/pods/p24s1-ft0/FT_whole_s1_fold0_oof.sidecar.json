@@ -1,0 +1,160 @@
+{
+ "what": "Qwen2.5-Omni projector fine-tune, E-DAIC, WHOLE window (processor truncation lifted), outer fold 0, seed 1",
+ "result_file": "FT_whole_s1_fold0_oof.csv",
+ "fold": 0,
+ "mode": "whole",
+ "seed": 1,
+ "seed_rule": "torch.manual_seed(s), torch.cuda.manual_seed_all(s), np.random.seed(s), random.seed(s) at process start; training order: one np.random.RandomState(s) created once per fold run, epoch e order = its e-th .permutation(train indices)",
+ "order_sha256_per_epoch": [
+  "dfb31e1b01d6eaa8c4220392b0637335f9c37b77c25a41540c2d93dd2b1f388c",
+  "43511700d826b7bf4e7411ff9734defe765624d05babd8d2dcebb8d0117c8b4a",
+  "7786fc71dbedada6cb5cc80b925b964333ef0683cae4d59a48b519a487d15bbc"
+ ],
+ "order_sha256_rule": "sha256 of the comma-joined pid list of that epoch's training order",
+ "fold_auc_p_yes_two_logit": 0.9224806201550387,
+ "fold_auc_p_yes_set": 0.9166666666666667,
+ "median_answer_mass": 0.9945899248123169,
+ "answer_mass_min": 0.9290546365082264,
+ "answer_mass_max": 0.998910391703248,
+ "n_mass_below_0.5": 0,
+ "n": 55,
+ "n_speakers": 55,
+ "n_pos": 12,
+ "n_train": 220,
+ "auc_rule": "sklearn.metrics.roc_auc_score",
+ "bootstrap_rule_for_pooled_report": "2000 draws; each cell a fresh numpy default_rng(0); idx = rng.choice(N, size=N, replace=True) over speakers (E-DAIC: one clip = one speaker); 2.5 and 97.5 percentiles; paired = both terms use the same idx. Not computed on the pod (needs all 5 folds).",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "hf_snapshot": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "recipe": "p15/sft_projector.py Omni branch: thinker.audio_tower.proj only (float32), encoder+LM frozen bf16, AdamW lr 1e-4, 3 epochs, 1 clip/update, CE over ' Yes'/' No' logits at last position",
+ "epochs": 3,
+ "lr": 0.0001,
+ "changes_from_recipe": [
+  "removed x = x[:16000*30] (the recipe heard only the first 30 s)",
+  "processor truncation=False",
+  "folds read from saved fold file",
+  "one outer fold per process",
+  "seeded training order (seed_rule) instead of RandomState(fold*10+epoch)",
+  "extra eval columns p_yes_set, answer_mass (paper id sets), p_yes_tok, p_no_tok, top1_id, top1_p, audio_tok",
+  "checkpoint every epoch and every 55 steps"
+ ],
+ "p_yes_definitions": {
+  "p_yes": "softmax over logits[7414, 2308] at the answer position, element 0 (recipe, as PART23 FT and Section 3)",
+  "p_yes_set": "P(Yes set)/(P(Yes set)+P(No set)), full-vocabulary softmax in float32 (zero-shot rule)",
+  "answer_mass": "P(Yes set)+P(No set), full-vocabulary softmax in float32"
+ },
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "id_text": {
+  "7414": " Yes",
+  "9454": "Yes",
+  "9693": "yes",
+  "9834": " yes",
+  "14004": "YES",
+  "902": " no",
+  "2152": "no",
+  "2308": " No",
+  "2753": "No",
+  "8996": "NO"
+ },
+ "recipe_yes_id": 7414,
+ "recipe_no_id": 2308,
+ "audio_token_id": 151646,
+ "gradient_checkpointing_frozen_lm": true,
+ "probe_longest_clip": null,
+ "proj20": {
+  "mean_step_s": 2.026,
+  "mean_dur_s_20": 518.0,
+  "mean_dur_s_train": 582.2,
+  "proj_train_min_len_weighted": 25.0,
+  "proj_train_min_mean": 22.3,
+  "proj_eval_min": 0.7,
+  "peak_alloc_gb_so_far": 39.79
+ },
+ "feature_extractor_n_samples": 4800000,
+ "attn_implementation": "sdpa",
+ "losses_per_epoch": {
+  "0": 0.506878984067589,
+  "1": 0.3204727417916398,
+  "2": 0.19420469714624977
+ },
+ "train_minutes": 25.47,
+ "eval_minutes": 0.93,
+ "wall_minutes_this_process": 26.62,
+ "restarts_from_checkpoint": 0,
+ "peak_alloc_gb_train": 39.79,
+ "peak_reserved_gb_train": 41.25,
+ "peak_alloc_gb_eval": 23.89,
+ "audio_tok_test": {
+  "min": 2008,
+  "max": 22500
+ },
+ "audio_tok_train_steps_max": 22500,
+ "sources": {
+  "manifest": [
+   "/workspace/p23/mf_whole.csv",
+   "85aed9407a29130d025304f9a76e69b808cdac7e0195fc4495beeb7ce7eda728"
+  ],
+  "fold_file": [
+   "/workspace/p23/edaic_groupkfold5_pod.csv",
+   "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff"
+  ],
+  "script": [
+   "/workspace/sft_whole24.py",
+   "ad2cf8c901d291cd44b7fc6e20206987518f12aa36111d88937435e00b04fef1"
+  ],
+  "cut_windows_sha256_of_list": "d5b5a5e7dff0926cd0df376173e5611567ec26d73e498e62d0b6efad1696e96e",
+  "windows_full.csv": [
+   "/workspace/edaicfull/windows_full.csv",
+   "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017"
+  ],
+  "build_windows.py": [
+   "/workspace/build_windows.py",
+   "a8f2597678459494b18902538678c9a156ab09d5855f2f62e90f249205488c84"
+  ],
+  "cut_sha256.txt": [
+   "/workspace/edaicfull/cut_sha256.txt",
+   "8c8acb5cfda681c8aacde9184b5a68b8c0c19e1219222ce3f278526de3915c5c"
+  ]
+ },
+ "command": "python3 /workspace/sft_whole24.py /workspace/p23/mf_whole.csv /workspace/p23/edaic_groupkfold5_pod.csv 0 1 /workspace/out",
+ "env": {
+  "GC": "on",
+  "GC_LIMIT_GB": 128.0,
+  "CK": 55,
+  "EPOCHS_OVERRIDE": null,
+  "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+  "OMP_NUM_THREADS": "8",
+  "RUNPOD_POD_ID": null
+ },
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91002,
+  "transformers": "5.17.0",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "soundfile": "0.14.0",
+  "huggingface_hub": "1.32.0",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "gpu": "NVIDIA H200"
+ },
+ "host": "bc718ebc0609",
+ "date_utc": "2026-09-23T22:40:26+00:00",
+ "note": "seed 1 run pre-emptively on a separate pod, in parallel with seed 0, to save time; same scripts and seed rule"
+}
