@@ -1,0 +1,95 @@
+id	claimed	recomputed	lo	hi	verified	file
+1_whole	0.8366	0.8366	0.7786	0.8866	yes	A2_edaic_whole_zeroshot_perclip.csv
+1_300s	0.8278	0.8278	0.7703	0.8822	yes	A2_edaic_whole_zeroshot_perclip.csv
+1_whole_minus_300s	0.0088	0.0088	-0.032	0.051	yes	A2_edaic_whole_zeroshot_perclip.csv
+2_encoder_meanof5	0.5981	0.5981	0.5267	0.6672	yes	A3_edaic_whole_meanof5_perclip.csv
+2_encoder_minus_zswhole	-0.2385	-0.2385	-0.3244	-0.1505	yes	A3+A2
+3_projector_meanof5	0.5866	0.5866	0.5166	0.6585	yes	A3_edaic_whole_meanof5_perclip.csv
+3_projector_minus_zswhole	-0.25	-0.25	-0.3339	-0.1623	yes	A3+A2
+4_LM_meanof5	0.7437	0.7437	0.6752	0.8097	yes	A3_edaic_whole_meanof5_perclip.csv
+4_LM_minus_zswhole	-0.0929	-0.0929	-0.1609	-0.0257	yes	A3+A2
+5_answer state_meanof5	0.8359	0.8359	0.7819	0.8832	yes	A3_edaic_whole_meanof5_perclip.csv
+5_answer state_minus_zswhole	-0.0007	-0.0007	-0.0455	0.0436	yes	A3+A2
+6_ft_whole_pooled	0.7931	0.7931	0.7263	0.8536	yes	FT_whole_fold{k}_oof.csv pooled
+6_ft_whole_fold0	0.9079	0.9079			yes	FT_whole_fold0_oof.csv
+6_ft_whole_fold1	0.8592	0.8592			yes	FT_whole_fold1_oof.csv
+6_ft_whole_fold2	0.8117	0.8117			yes	FT_whole_fold2_oof.csv
+6_ft_whole_fold3	0.4302	0.4302			yes	FT_whole_fold3_oof.csv
+6_ft_whole_fold4	0.8304	0.8304			yes	FT_whole_fold4_oof.csv
+6_ft_whole_minus_zswhole	-0.0435	-0.0435	-0.0939	0.0027	yes	FT_whole pooled + A2
+7_ft_ctrl300_pooled	0.815	0.815	0.7465	0.8776	yes	FT_ctrl300_fold{k}_oof.csv pooled
+7_ft_ctrl300_fold0	0.9758	0.9758			yes	FT_ctrl300_fold0_oof.csv
+7_ft_ctrl300_fold1	0.8233	0.8233			yes	FT_ctrl300_fold1_oof.csv
+7_ft_ctrl300_fold2	0.8358	0.8358			yes	FT_ctrl300_fold2_oof.csv
+7_ft_ctrl300_fold3	0.7442	0.7442			yes	FT_ctrl300_fold3_oof.csv
+7_ft_ctrl300_fold4	0.8043	0.8043			yes	FT_ctrl300_fold4_oof.csv
+7_ft_whole_minus_ctrl300	-0.0219	-0.0219	-0.0783	0.0356	yes	FT_whole pooled + FT_ctrl300 pooled
+8_fold3_median_mass	0.0	0.0			yes	FT_whole_fold3_oof.csv
+8_fold3_count_lt_0.01		55			n/a	FT_whole_fold3_oof.csv
+9a_ft_ctrl300_minus_zs300		-0.0128	-0.0483	0.0214	n/a	FT_ctrl300 pooled + A2 p_yes_300s_T7b
+9b_ft_whole_pooled_no_fold3		0.8274	0.7569	0.8898	n/a	FT_whole excl fold3 (220 clips)
+10_q3o_cut_count	0	0			yes	C_trunc_275_derived.csv
+10_af3_cut_count	136	136			yes	C_trunc_275_derived.csv
+11_encoder_max_abs_diff		0.0611			n/a	o25_whole_encoder_perlayer.csv vs shards/*.npz (enc)
+11_llm_max_abs_diff		0.0578			n/a	o25_whole_llm_perlayer.csv vs shards/*.npz (llm)
+11_encoder_stage0	0.5835	0.5859			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage1	0.5593	0.5468			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage2	0.6051	0.575			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage3	0.5998	0.5711			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage4	0.6071	0.5943			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage5	0.597	0.5987			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage6	0.6047	0.601			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage7	0.5867	0.58			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage8	0.5824	0.5908			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage9	0.5932	0.5936			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage10	0.6151	0.6079			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage11	0.6093	0.5727			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage12	0.6013	0.5537			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage13	0.6087	0.585			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage14	0.6098	0.5692			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage15	0.624	0.5993			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage16	0.6468	0.6124			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage17	0.6604	0.627			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage18	0.6847	0.6236			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage19	0.6875	0.636			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage20	0.6752	0.6285			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage21	0.6674	0.6297			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage22	0.6613	0.6287			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage23	0.652	0.6375			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage24	0.6611	0.6435			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage25	0.6654	0.6595			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage26	0.6396	0.6441			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage27	0.6234	0.604			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage28	0.6291	0.6191			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage29	0.6177	0.5992			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage30	0.598	0.587			no	o25_whole_encoder_perlayer.csv
+11_encoder_stage31	0.636	0.6215			no	o25_whole_encoder_perlayer.csv
+11_llm_stage0	0.6094	0.5844			no	o25_whole_llm_perlayer.csv
+11_llm_stage1	0.6318	0.5928			no	o25_whole_llm_perlayer.csv
+11_llm_stage2	0.6441	0.6053			no	o25_whole_llm_perlayer.csv
+11_llm_stage3	0.6641	0.6064			no	o25_whole_llm_perlayer.csv
+11_llm_stage4	0.6647	0.6126			no	o25_whole_llm_perlayer.csv
+11_llm_stage5	0.6663	0.6218			no	o25_whole_llm_perlayer.csv
+11_llm_stage6	0.6341	0.5996			no	o25_whole_llm_perlayer.csv
+11_llm_stage7	0.6492	0.6151			no	o25_whole_llm_perlayer.csv
+11_llm_stage8	0.6878	0.6628			no	o25_whole_llm_perlayer.csv
+11_llm_stage9	0.706	0.6659			no	o25_whole_llm_perlayer.csv
+11_llm_stage10	0.7389	0.7122			no	o25_whole_llm_perlayer.csv
+11_llm_stage11	0.7607	0.7355			no	o25_whole_llm_perlayer.csv
+11_llm_stage12	0.7437	0.7233			no	o25_whole_llm_perlayer.csv
+11_llm_stage13	0.7352	0.7116			no	o25_whole_llm_perlayer.csv
+11_llm_stage14	0.7444	0.7251			no	o25_whole_llm_perlayer.csv
+11_llm_stage15	0.7519	0.7347			no	o25_whole_llm_perlayer.csv
+11_llm_stage16	0.7308	0.7289			no	o25_whole_llm_perlayer.csv
+11_llm_stage17	0.7163	0.7293			no	o25_whole_llm_perlayer.csv
+11_llm_stage18	0.7362	0.7445			no	o25_whole_llm_perlayer.csv
+11_llm_stage19	0.7144	0.7331			no	o25_whole_llm_perlayer.csv
+11_llm_stage20	0.7186	0.731			no	o25_whole_llm_perlayer.csv
+11_llm_stage21	0.7086	0.7121			no	o25_whole_llm_perlayer.csv
+11_llm_stage22	0.7093	0.7081			no	o25_whole_llm_perlayer.csv
+11_llm_stage23	0.7324	0.7263			no	o25_whole_llm_perlayer.csv
+11_llm_stage24	0.7289	0.7155			no	o25_whole_llm_perlayer.csv
+11_llm_stage25	0.7292	0.7216			no	o25_whole_llm_perlayer.csv
+11_llm_stage26	0.7474	0.7302			no	o25_whole_llm_perlayer.csv
+11_llm_stage27	0.7596	0.7283			no	o25_whole_llm_perlayer.csv
+11_llm_stage28	0.7753	0.7358			no	o25_whole_llm_perlayer.csv
