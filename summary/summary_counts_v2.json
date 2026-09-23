@@ -1,0 +1,26 @@
+{
+ "generated_utc": "2026-09-23T22:30:42Z",
+ "source_v1": "summary/summary_all.csv",
+ "rows": 1532,
+ "agree_4dp_by_part": {
+  "16 NO": 1,
+  "16 no twin": 14,
+  "16 yes": 546,
+  "16 yes, interval differs": 9,
+  "16 yes, second record only": 10,
+  "17 no twin": 36,
+  "17 yes": 254
+ },
+ "t7b_intervals_added": 4,
+ "twin_source_counts": {
+  "Mac verifier (verify folder)": 704,
+  "": 50,
+  "m7m11 task": 22,
+  "p16twins task": 52,
+  "pod-side verifier": 42
+ },
+ "paper_value_rows_16_17_by_status": {
+  "yes": 249
+ },
+ "paper_value_rows_without_twin": []
+}
