@@ -1,0 +1,34 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:   7%|▋         | 176/2447 [00:00<00:01, 1615.47it/s]Loading weights:  21%|██▏       | 521/2447 [00:00<00:00, 2655.71it/s]Loading weights:  35%|███▍      | 851/2447 [00:00<00:00, 2918.16it/s]Loading weights:  48%|████▊     | 1167/2447 [00:00<00:00, 3011.71it/s]Loading weights:  66%|██████▌   | 1612/2447 [00:00<00:00, 3522.27it/s]Loading weights:  81%|████████  | 1982/2447 [00:00<00:00, 3581.44it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 3462.89it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+MODEL Qwen/Qwen2.5-Omni-7B | tf 5.17.0 torch 2.8.0+cu128 | 275 clips 275 spk | fold 4 train 220 test 55 | mode whole | recipe ids yes 7414 no 2308 | rule ids [7414, 9454, 9693, 9834, 14004, 14080] [902, 2152, 2308, 2753, 5664, 8996] | audio tok 151646 | fe n_samples 4800000 chunk_length 300 | attn sdpa
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+PROBE longest train clip {'pid': '301', 'dur_s': 900.0, 'audio_tok': 22500, 'peak_alloc_gb_no_gc': 128.45, 's': 5.1, 'peak_alloc_gb_gc': 39.45, 's_gc': 3.98} -> gradient checkpointing ON
+PROJ20 whole_fold4 {'mean_step_s': 2.259, 'mean_dur_s_20': 533.6, 'mean_dur_s_train': 592.9, 'proj_train_min_len_weighted': np.float64(27.6), 'proj_train_min_mean': np.float64(24.9), 'proj_eval_min': np.float64(0.8), 'peak_alloc_gb_so_far': 39.79}
+whole_fold4 ep 0 step 55/220 loss_avg 0.5207 last_tok 4187 0.62s peak 39.8 GB 2.7 min
+whole_fold4 ep 0 step 110/220 loss_avg 0.5226 last_tok 22500 3.95s peak 39.8 GB 5.0 min
+whole_fold4 ep 0 step 165/220 loss_avg 0.4418 last_tok 22500 3.99s peak 39.8 GB 7.3 min
+fold 4 epoch 0 loss 0.4647 9.6 min  EPOCH_CKPT
+whole_fold4 ep 1 step 55/220 loss_avg 0.2881 last_tok 22500 3.97s peak 39.8 GB 11.9 min
+whole_fold4 ep 1 step 110/220 loss_avg 0.2331 last_tok 22500 4.10s peak 39.8 GB 14.4 min
+whole_fold4 ep 1 step 165/220 loss_avg 0.2424 last_tok 8770 1.27s peak 39.8 GB 16.6 min
+fold 4 epoch 1 loss 0.2497 18.8 min  EPOCH_CKPT
+whole_fold4 ep 2 step 55/220 loss_avg 0.1998 last_tok 19640 3.46s peak 39.8 GB 21.0 min
+whole_fold4 ep 2 step 110/220 loss_avg 0.1611 last_tok 8065 1.08s peak 39.8 GB 23.2 min
+whole_fold4 ep 2 step 165/220 loss_avg 0.1514 last_tok 17525 2.81s peak 39.8 GB 25.5 min
+fold 4 epoch 2 loss 0.1406 27.9 min  EPOCH_CKPT
+/workspace/sft_whole.py:222: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "host": platform.node(), "date_utc": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"}
+RESULT whole_fold4 fold AUC 0.8304 n=55 train 27.43 min eval 0.89 min peak 39.79 GB gc True
