@@ -1,0 +1,1033 @@
+{
+ "meta": {
+  "paper": "The Representation Utility Gap in Audio LLMs for Clinical Speech",
+  "authors": [
+   "Chaitanya Parwatkar",
+   "Nima Kelidari",
+   "Minoo Ahmadi",
+   "Ashutosh Chaubey",
+   "Mohammad Soleymani"
+  ],
+  "affiliation": "University of Southern California",
+  "metric": "AUC, the area under the ROC curve. 0.5 is chance and 1.0 is perfect.",
+  "intervals": "Intervals are 95 percent percentile intervals from 2000 speaker-level bootstrap draws. Paired differences use one speaker draw per replicate for both sides.",
+  "probe": "A linear probe is a logistic regression on the model's hidden states, trained and tested on speaker-disjoint folds. Its layer is chosen inside the training folds and its AUC is the mean over five fold assignments.",
+  "answer": "The zero-shot answer is read from the Yes and No logits at the first answer position, in one forward pass.",
+  "rounding": "Values are rounded to 4 decimals. The paper prints 2.",
+  "privacy": "Group-level numbers only. No audio, transcripts, speaker ids or per-clip scores."
+ },
+ "table1": {
+  "title": "What the model holds versus what it answers",
+  "model": "Qwen2.5-Omni",
+  "caption": "Zero-shot answer and linear probes of Qwen2.5-Omni on seven datasets. The gap is the encoder probe minus the answer, as the paper defines it.",
+  "rows": [
+   {
+    "dataset": "PC-GITA",
+    "condition": "Parkinson's disease",
+    "language": "Spanish",
+    "clips": 1100,
+    "speakers": 100,
+    "audio_heard": "one recording, up to 30 s",
+    "zero_shot": {
+     "auc": 0.5635,
+     "ci": [
+      0.4931,
+      0.6331
+     ]
+    },
+    "probe_encoder": {
+     "auc": 0.8941,
+     "ci": null
+    },
+    "probe_lm": null,
+    "gap": {
+     "value": 0.3306,
+     "ci": null,
+     "excludes_zero": true,
+     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+    }
+   },
+   {
+    "dataset": "NeuroVoz",
+    "condition": "Parkinson's disease",
+    "language": "Spanish",
+    "clips": 1270,
+    "speakers": 107,
+    "audio_heard": "one recording, up to 30 s",
+    "zero_shot": {
+     "auc": 0.6951,
+     "ci": [
+      0.6356,
+      0.7519
+     ]
+    },
+    "probe_encoder": {
+     "auc": 0.9213,
+     "ci": null
+    },
+    "probe_lm": null,
+    "gap": {
+     "value": 0.2262,
+     "ci": null,
+     "excludes_zero": true,
+     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+    }
+   },
+   {
+    "dataset": "MDVR-KCL",
+    "condition": "Parkinson's disease",
+    "language": "English",
+    "clips": 37,
+    "speakers": 37,
+    "audio_heard": "one recording, up to 30 s",
+    "zero_shot": {
+     "auc": 0.7143,
+     "ci": [
+      0.521,
+      0.881
+     ]
+    },
+    "probe_encoder": {
+     "auc": 0.7506,
+     "ci": null
+    },
+    "probe_lm": null,
+    "gap": {
+     "value": 0.0363,
+     "ci": null,
+     "excludes_zero": false,
+     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+    }
+   },
+   {
+    "dataset": "E-DAIC",
+    "condition": "Depression",
+    "language": "English",
+    "clips": 275,
+    "speakers": 275,
+    "audio_heard": "first 300 s of the participant's turns",
+    "zero_shot": {
+     "auc": 0.8278,
+     "ci": [
+      0.7703,
+      0.8822
+     ]
+    },
+    "probe_encoder": {
+     "auc": 0.5884,
+     "ci": [
+      0.5268,
+      0.6523
+     ]
+    },
+    "probe_lm": {
+     "auc": 0.7001,
+     "ci": [
+      0.6231,
+      0.7727
+     ],
+     "minus_answer": {
+      "value": -0.1276,
+      "ci": [
+       -0.1993,
+       -0.0629
+      ]
+     }
+    },
+    "gap": {
+     "value": -0.2394,
+     "ci": [
+      -0.3188,
+      -0.1572
+     ],
+     "excludes_zero": true,
+     "interval_basis": "Paired interval, probe averaged over five fold assignments."
+    }
+   },
+   {
+    "dataset": "Pitt",
+    "condition": "Alzheimer's disease",
+    "language": "English",
+    "clips": 468,
+    "speakers": 227,
+    "audio_heard": "first 30 s",
+    "speakers_note": "228 speaker labels in the folds. One participant has sessions in both groups.",
+    "zero_shot": {
+     "auc": 0.6578,
+     "ci": [
+      0.6033,
+      0.7125
+     ]
+    },
+    "probe_encoder": {
+     "auc": 0.7706,
+     "ci": [
+      0.7157,
+      0.822
+     ]
+    },
+    "probe_lm": {
+     "auc": 0.8032,
+     "ci": [
+      0.7567,
+      0.8496
+     ]
+    },
+    "gap": {
+     "value": 0.1128,
+     "ci": [
+      0.0455,
+      0.1768
+     ],
+     "excludes_zero": true,
+     "interval_basis": "Paired interval, probe averaged over five fold assignments."
+    }
+   },
+   {
+    "dataset": "ADReSSo",
+    "condition": "Alzheimer's disease",
+    "language": "English",
+    "clips": 237,
+    "speakers": 237,
+    "audio_heard": "first 30 s",
+    "zero_shot": {
+     "auc": 0.615,
+     "ci": [
+      0.5432,
+      0.689
+     ]
+    },
+    "probe_encoder": {
+     "auc": 0.8752,
+     "ci": null
+    },
+    "probe_lm": null,
+    "gap": {
+     "value": 0.2602,
+     "ci": null,
+     "excludes_zero": true,
+     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+    }
+   },
+   {
+    "dataset": "ADReSS-2020",
+    "condition": "Alzheimer's disease",
+    "language": "English",
+    "clips": 156,
+    "speakers": 156,
+    "audio_heard": "first 30 s",
+    "zero_shot": {
+     "auc": 0.6241,
+     "ci": [
+      0.5348,
+      0.7148
+     ]
+    },
+    "probe_encoder": {
+     "auc": 0.8043,
+     "ci": null
+    },
+    "probe_lm": null,
+    "gap": {
+     "value": 0.1802,
+     "ci": null,
+     "excludes_zero": true,
+     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+    }
+   }
+  ]
+ },
+ "table2": {
+  "title": "When the words point the other way",
+  "caption": "Zero-shot AUC on conflict segments, where the words point away from the diagnosis, and on agreement segments, where they point toward it. Every model hears the same 30 s segments.",
+  "settings": {
+   "depression": {
+    "dataset": "E-DAIC",
+    "conflict_segments": 483,
+    "conflict_speakers": 138,
+    "agreement_segments": 311,
+    "agreement_speakers": 138,
+    "paired": true,
+    "note": "Each conflict segment is paired with an agreement segment from the same speaker. Some agreement segments are reused across pairs, so the agreement arm is scored on its distinct segments."
+   },
+   "alzheimers": {
+    "dataset": "Pitt",
+    "conflict_segments": 146,
+    "conflict_speakers": 100,
+    "agreement_segments": 322,
+    "agreement_speakers": 175,
+    "speakers_in_both": 48,
+    "speakers_in_both_note": "Speakers are counted by participant, as in Table 1. By speaker label the overlap is 47, because one participant carries two labels.",
+    "paired": false,
+    "note": "The Pitt arms are the top and bottom thirds of a fluency score. They are not paired by speaker."
+   }
+  },
+  "models": [
+   "Qwen2-Audio",
+   "Qwen2.5-Omni",
+   "Qwen3-Omni",
+   "Audio Flamingo 2",
+   "Audio Flamingo 3",
+   "Kimi-Audio"
+  ],
+  "rows": [
+   {
+    "model": "Qwen2-Audio",
+    "depression": {
+     "conflict": {
+      "auc": 0.228,
+      "ci": [
+       0.1816,
+       0.2782
+      ]
+     },
+     "agreement": {
+      "auc": 0.9608,
+      "ci": [
+       0.9351,
+       0.9814
+      ]
+     },
+     "difference": {
+      "value": -0.7328,
+      "ci": [
+       -0.778,
+       -0.6837
+      ]
+     }
+    },
+    "alzheimers": {
+     "conflict": {
+      "auc": 0.4132,
+      "ci": [
+       0.3005,
+       0.5423
+      ]
+     },
+     "agreement": {
+      "auc": 0.6985,
+      "ci": [
+       0.6372,
+       0.7597
+      ]
+     },
+     "difference": {
+      "value": -0.2853,
+      "ci": [
+       -0.395,
+       -0.1485
+      ]
+     }
+    }
+   },
+   {
+    "model": "Qwen2.5-Omni",
+    "depression": {
+     "conflict": {
+      "auc": 0.2218,
+      "ci": [
+       0.1829,
+       0.2632
+      ]
+     },
+     "agreement": {
+      "auc": 0.9647,
+      "ci": [
+       0.9376,
+       0.9857
+      ]
+     },
+     "difference": {
+      "value": -0.7429,
+      "ci": [
+       -0.7869,
+       -0.6944
+      ]
+     }
+    },
+    "alzheimers": {
+     "conflict": {
+      "auc": 0.5322,
+      "ci": [
+       0.4216,
+       0.6447
+      ]
+     },
+     "agreement": {
+      "auc": 0.7054,
+      "ci": [
+       0.6431,
+       0.7658
+      ]
+     },
+     "difference": {
+      "value": -0.1731,
+      "ci": [
+       -0.2958,
+       -0.0392
+      ]
+     }
+    }
+   },
+   {
+    "model": "Qwen3-Omni",
+    "depression": {
+     "conflict": {
+      "auc": 0.3008,
+      "ci": [
+       0.2454,
+       0.3641
+      ]
+     },
+     "agreement": {
+      "auc": 0.9727,
+      "ci": [
+       0.9507,
+       0.9904
+      ]
+     },
+     "difference": {
+      "value": -0.6719,
+      "ci": [
+       -0.7266,
+       -0.6105
+      ]
+     }
+    },
+    "alzheimers": {
+     "conflict": {
+      "auc": 0.6066,
+      "ci": [
+       0.4956,
+       0.7123
+      ]
+     },
+     "agreement": {
+      "auc": 0.8231,
+      "ci": [
+       0.7664,
+       0.872
+      ]
+     },
+     "difference": {
+      "value": -0.2165,
+      "ci": [
+       -0.3242,
+       -0.1052
+      ]
+     }
+    }
+   },
+   {
+    "model": "Audio Flamingo 2",
+    "depression": {
+     "conflict": {
+      "auc": 0.5286,
+      "ci": [
+       0.4512,
+       0.6015
+      ]
+     },
+     "agreement": {
+      "auc": 0.6297,
+      "ci": [
+       0.5451,
+       0.7087
+      ]
+     },
+     "difference": {
+      "value": -0.1011,
+      "ci": [
+       -0.1647,
+       -0.0384
+      ]
+     }
+    },
+    "alzheimers": {
+     "conflict": {
+      "auc": 0.5835,
+      "ci": [
+       0.473,
+       0.6913
+      ]
+     },
+     "agreement": {
+      "auc": 0.5337,
+      "ci": [
+       0.4574,
+       0.6116
+      ]
+     },
+     "difference": null,
+     "difference_note": "No verified interval for the arm difference on this window yet.",
+     "note": "Scored on the first 30 s, like the other five models."
+    }
+   },
+   {
+    "model": "Audio Flamingo 3",
+    "depression": {
+     "conflict": {
+      "auc": 0.4235,
+      "ci": [
+       0.3606,
+       0.488
+      ]
+     },
+     "agreement": {
+      "auc": 0.8425,
+      "ci": [
+       0.7963,
+       0.8854
+      ]
+     },
+     "difference": {
+      "value": -0.419,
+      "ci": [
+       -0.4878,
+       -0.3461
+      ]
+     }
+    },
+    "alzheimers": {
+     "conflict": {
+      "auc": 0.6075,
+      "ci": [
+       0.5063,
+       0.7129
+      ]
+     },
+     "agreement": {
+      "auc": 0.5855,
+      "ci": [
+       0.5144,
+       0.6554
+      ]
+     },
+     "difference": {
+      "value": 0.022,
+      "ci": [
+       -0.0846,
+       0.1357
+      ]
+     }
+    }
+   },
+   {
+    "model": "Kimi-Audio",
+    "depression": {
+     "conflict": {
+      "auc": 0.5258,
+      "ci": [
+       0.4501,
+       0.5977
+      ]
+     },
+     "agreement": {
+      "auc": 0.8936,
+      "ci": [
+       0.8479,
+       0.9329
+      ]
+     },
+     "difference": {
+      "value": -0.3678,
+      "ci": [
+       -0.4394,
+       -0.302
+      ]
+     }
+    },
+    "alzheimers": {
+     "conflict": {
+      "auc": 0.7197,
+      "ci": [
+       0.6201,
+       0.8147
+      ]
+     },
+     "agreement": {
+      "auc": 0.7227,
+      "ci": [
+       0.656,
+       0.7896
+      ]
+     },
+     "difference": {
+      "value": -0.003,
+      "ci": [
+       -0.1134,
+       0.1065
+      ]
+     }
+    }
+   }
+  ]
+ },
+ "layers": {
+  "title": "Where the signal sits, layer by layer",
+  "caption": "Linear probe AUC at every stage of Qwen2.5-Omni: 32 audio encoder layers, then 29 language model stages at the audio-token positions. Stage 0 of the language model is the projector output. Each point is one split's out-of-fold AUC with no layer selection. The flat line is the zero-shot answer.",
+  "encoder_layers": 32,
+  "lm_stages": 29,
+  "note": "These are the saved single-split curves that Figure 1 draws. A refit of one split on another machine moves single Pitt layers by up to 0.05, so read the shape, not single points. The up to 15 min E-DAIC series is a separate run and is not in Figure 1.",
+  "series": [
+   {
+    "id": "pcgita",
+    "dataset": "PC-GITA",
+    "label": "PC-GITA (Parkinson's)",
+    "condition": "Parkinson's disease",
+    "window": "one recording, up to 30 s",
+    "encoder": [
+     0.872,
+     0.889,
+     0.9079,
+     0.9048,
+     0.908,
+     0.9168,
+     0.9234,
+     0.9217,
+     0.9196,
+     0.9139,
+     0.9103,
+     0.9133,
+     0.9156,
+     0.9198,
+     0.9167,
+     0.916,
+     0.9052,
+     0.9093,
+     0.9039,
+     0.9076,
+     0.9072,
+     0.8995,
+     0.8927,
+     0.8949,
+     0.901,
+     0.9059,
+     0.9,
+     0.8986,
+     0.8966,
+     0.8904,
+     0.8955,
+     0.8846
+    ],
+    "lm": [
+     0.8848,
+     0.8854,
+     0.8857,
+     0.886,
+     0.8891,
+     0.8906,
+     0.8866,
+     0.8831,
+     0.8813,
+     0.8721,
+     0.8711,
+     0.8744,
+     0.8663,
+     0.871,
+     0.8711,
+     0.8681,
+     0.8647,
+     0.8626,
+     0.8588,
+     0.8558,
+     0.8497,
+     0.8551,
+     0.8616,
+     0.8608,
+     0.8476,
+     0.846,
+     0.8406,
+     0.8394,
+     0.8547
+    ],
+    "answer": 0.5635
+   },
+   {
+    "id": "pitt",
+    "dataset": "Pitt",
+    "label": "Pitt (Alzheimer's)",
+    "condition": "Alzheimer's disease",
+    "window": "first 30 s",
+    "encoder": [
+     0.6841,
+     0.6721,
+     0.6517,
+     0.6645,
+     0.6738,
+     0.6855,
+     0.69,
+     0.7176,
+     0.7319,
+     0.7133,
+     0.7394,
+     0.7253,
+     0.7163,
+     0.74,
+     0.7325,
+     0.7579,
+     0.7669,
+     0.7626,
+     0.7616,
+     0.7764,
+     0.7681,
+     0.7966,
+     0.7966,
+     0.8032,
+     0.795,
+     0.7958,
+     0.799,
+     0.8083,
+     0.7924,
+     0.789,
+     0.7946,
+     0.7908
+    ],
+    "lm": [
+     0.7669,
+     0.7729,
+     0.7745,
+     0.7931,
+     0.7911,
+     0.7875,
+     0.7805,
+     0.8046,
+     0.8097,
+     0.8317,
+     0.8318,
+     0.8305,
+     0.8292,
+     0.8225,
+     0.8135,
+     0.8058,
+     0.813,
+     0.8147,
+     0.8128,
+     0.8161,
+     0.8114,
+     0.8134,
+     0.8275,
+     0.8226,
+     0.8303,
+     0.8331,
+     0.8353,
+     0.8396,
+     0.8253
+    ],
+    "answer": 0.6578
+   },
+   {
+    "id": "edaic_300s",
+    "dataset": "E-DAIC",
+    "label": "E-DAIC (depression), first 300 s",
+    "condition": "Depression",
+    "window": "first 300 s",
+    "encoder": [
+     0.588,
+     0.574,
+     0.6264,
+     0.5973,
+     0.6093,
+     0.6082,
+     0.6036,
+     0.5795,
+     0.5958,
+     0.6162,
+     0.637,
+     0.623,
+     0.6164,
+     0.6269,
+     0.611,
+     0.6219,
+     0.6443,
+     0.6493,
+     0.6757,
+     0.6896,
+     0.6672,
+     0.6892,
+     0.6805,
+     0.6727,
+     0.6732,
+     0.6628,
+     0.6353,
+     0.6282,
+     0.614,
+     0.6065,
+     0.5684,
+     0.6181
+    ],
+    "lm": [
+     0.5895,
+     0.5966,
+     0.6006,
+     0.6095,
+     0.6155,
+     0.6318,
+     0.5868,
+     0.6116,
+     0.6633,
+     0.6674,
+     0.7044,
+     0.7102,
+     0.7233,
+     0.7399,
+     0.763,
+     0.7613,
+     0.7577,
+     0.7382,
+     0.7463,
+     0.7288,
+     0.7327,
+     0.7222,
+     0.7214,
+     0.7252,
+     0.721,
+     0.7125,
+     0.7076,
+     0.7099,
+     0.7156
+    ],
+    "answer": 0.8278
+   },
+   {
+    "id": "edaic_whole",
+    "dataset": "E-DAIC",
+    "label": "E-DAIC (depression), up to 15 min",
+    "label_note": "matches a rerun on matching libraries within 0.002 per stage",
+    "condition": "Depression",
+    "window": "the participant's turns up to 900 s",
+    "encoder": [
+     0.5835,
+     0.5593,
+     0.6051,
+     0.5998,
+     0.6071,
+     0.597,
+     0.6047,
+     0.5867,
+     0.5824,
+     0.5932,
+     0.6151,
+     0.6093,
+     0.6013,
+     0.6087,
+     0.6098,
+     0.624,
+     0.6468,
+     0.6604,
+     0.6847,
+     0.6875,
+     0.6752,
+     0.6674,
+     0.6613,
+     0.652,
+     0.6611,
+     0.6654,
+     0.6396,
+     0.6234,
+     0.6291,
+     0.6177,
+     0.598,
+     0.636
+    ],
+    "lm": [
+     0.6094,
+     0.6318,
+     0.6441,
+     0.6641,
+     0.6647,
+     0.6663,
+     0.6341,
+     0.6492,
+     0.6878,
+     0.706,
+     0.7389,
+     0.7607,
+     0.7437,
+     0.7352,
+     0.7444,
+     0.7519,
+     0.7308,
+     0.7163,
+     0.7362,
+     0.7144,
+     0.7186,
+     0.7086,
+     0.7093,
+     0.7324,
+     0.7289,
+     0.7292,
+     0.7474,
+     0.7596,
+     0.7753
+    ],
+    "answer": 0.8366
+   }
+  ]
+ },
+ "edaic_window": {
+  "title": "E-DAIC with two audio windows",
+  "caption": "The Qwen2.5-Omni processor keeps only the first 300 s of audio. Lifting that cut lets the model hear the participant's turns up to 900 s. Probe values are means over five fold assignments. Differences to the answer are paired.",
+  "clips": 275,
+  "speakers": 275,
+  "windows": {
+   "s300": "First 300 s of the participant's turns. The cut shortens 217 of the 275 windows.",
+   "whole": "The participant's turns up to 900 s. 89 of the 275 windows are still capped at 900 s."
+  },
+  "rows": [
+   {
+    "stream": "zero_shot",
+    "label": "zero-shot answer",
+    "s300": {
+     "auc": 0.8278,
+     "ci": [
+      0.7703,
+      0.8822
+     ]
+    },
+    "whole": {
+     "auc": 0.8366,
+     "ci": [
+      0.7786,
+      0.8866
+     ]
+    },
+    "whole_minus_300s": {
+     "value": 0.0088,
+     "ci": [
+      -0.032,
+      0.051
+     ]
+    }
+   },
+   {
+    "stream": "encoder",
+    "label": "encoder probe",
+    "s300": {
+     "auc": 0.5884,
+     "ci": [
+      0.5268,
+      0.6523
+     ],
+     "minus_answer": {
+      "value": -0.2394,
+      "ci": [
+       -0.3188,
+       -0.1572
+      ]
+     }
+    },
+    "whole": {
+     "auc": 0.5981,
+     "ci": [
+      0.5267,
+      0.6672
+     ],
+     "minus_answer": {
+      "value": -0.2385,
+      "ci": [
+       -0.3244,
+       -0.1505
+      ]
+     }
+    }
+   },
+   {
+    "stream": "projector",
+    "label": "projector probe",
+    "s300": {
+     "auc": 0.561,
+     "ci": [
+      0.4871,
+      0.6339
+     ],
+     "minus_answer": {
+      "value": -0.2668,
+      "ci": [
+       -0.3494,
+       -0.1809
+      ]
+     }
+    },
+    "whole": {
+     "auc": 0.5866,
+     "ci": [
+      0.5166,
+      0.6585
+     ],
+     "minus_answer": {
+      "value": -0.25,
+      "ci": [
+       -0.3339,
+       -0.1623
+      ]
+     }
+    }
+   },
+   {
+    "stream": "lm",
+    "label": "language model probe",
+    "s300": {
+     "auc": 0.7001,
+     "ci": [
+      0.6231,
+      0.7727
+     ],
+     "minus_answer": {
+      "value": -0.1276,
+      "ci": [
+       -0.1993,
+       -0.0629
+      ]
+     }
+    },
+    "whole": {
+     "auc": 0.7437,
+     "ci": [
+      0.6752,
+      0.8097
+     ],
+     "minus_answer": {
+      "value": -0.0929,
+      "ci": [
+       -0.1609,
+       -0.0257
+      ]
+     }
+    }
+   },
+   {
+    "stream": "answer_state",
+    "label": "answer-state probe",
+    "s300": {
+     "auc": 0.7435,
+     "ci": [
+      0.6793,
+      0.8065
+     ],
+     "minus_answer": {
+      "value": -0.0843,
+      "ci": [
+       -0.1339,
+       -0.037
+      ]
+     }
+    },
+    "whole": {
+     "auc": 0.8359,
+     "ci": [
+      0.7819,
+      0.8832
+     ],
+     "minus_answer": {
+      "value": -0.0007,
+      "ci": [
+       -0.0455,
+       0.0436
+      ]
+     }
+    }
+   }
+  ]
+ }
+}
