@@ -1,0 +1,15 @@
+{
+ "mode": "paper",
+ "sentiment_threshold": 0.6,
+ "source": "<local data dir>/Desktop/release/edaic_rerun/part14_segments_sentiment.csv",
+ "builder_mirrored": "scripts/part14/part14_select.py",
+ "eligibility": "speech_s>=5, nw>=25, span>=8",
+ "label_rule": "released y, conflict gated sev>=15 / sev<=4",
+ "conflict_rule": "(y==1 & sev>=15 & p_pos>=THR) or (y==0 & sev<=4 & p_neg>=THR)",
+ "agreement_rule": "same speaker's closest-span segment whose sentiment matches the label",
+ "n_pairs": 646,
+ "unmatched": 0,
+ "n_rows": 1292,
+ "n_speakers": 147,
+ "n_positive_rows": 494
+}

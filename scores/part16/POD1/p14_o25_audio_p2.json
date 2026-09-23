@@ -1,0 +1,26 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/workspace/mf_p14_pod.csv",
+ "prompt": "Listen to this recording. Does the speaker have depression? Answer Yes or No.",
+ "n": 966,
+ "window_seconds": 30.0,
+ "dtype": "bfloat16",
+ "device": "cuda",
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at first answer position, single-token Yes/No variants",
+ "command": "PROMPT_OVERRIDE=... WINDOW_S=30.0 python3 score_audio.py mf_p14_pod.csv out16/p14_o25_audio_p2.csv Qwen/Qwen2.5-Omni-7B",
+ "date": "2026-09-23"
+}

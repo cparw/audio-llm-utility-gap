@@ -1,0 +1,25 @@
+{
+ "conflict": {
+  "auc": 0.3439024390243902,
+  "n": 483,
+  "n_spk": 138,
+  "n_pos": 205,
+  "lo": 0.29002404681097016,
+  "hi": 0.3979005246166262
+ },
+ "agreement": {
+  "auc": 0.9118968240042112,
+  "n": 483,
+  "n_spk": 138,
+  "n_pos": 205,
+  "lo": 0.8504563216425199,
+  "hi": 0.9594126134584703
+ },
+ "usable_draws": 2000,
+ "n": 966,
+ "n_speakers": 138,
+ "n_pairs": 483,
+ "median_answer_mass": 0.993642,
+ "pooled_auc": 0.662599,
+ "prompt": "Listen to this recording. Does the speaker have depression? Answer Yes or No."
+}
