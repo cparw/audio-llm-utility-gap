@@ -1,0 +1,3 @@
+pcgita_enc_SkylakeX enc X (1100, 32, 1280) n=1100 pos=550 spk=100 load 1s
+fits 5s best 14 mean 0.913317
+DONE pcgita_enc_SkylakeX best 14 0.9133 [0.8519, 0.9604] per_repeat [np.float64(0.9252), np.float64(0.9015), np.float64(0.8898), np.float64(0.9204), np.float64(0.9296)] top5 [[14, 0.9133170247933883], [13, 0.9121719008264464], [15, 0.9100142148760331], [16, 0.9093140495867769], [19, 0.9047279338842976]] arch ['SkylakeX'] 6s

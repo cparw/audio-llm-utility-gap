@@ -1,0 +1,3 @@
+pcgita_llm_Haswell llm X (1100, 49, 2048) n=1100 pos=550 spk=100 load 1s
+fits 7s best 14 mean 0.896082
+DONE pcgita_llm_Haswell best 14 0.8961 [0.8343, 0.9462] per_repeat [np.float64(0.895), np.float64(0.8888), np.float64(0.9001), np.float64(0.8801), np.float64(0.9164)] top5 [[14, 0.8960819834710744], [19, 0.8924499173553718], [13, 0.8912720661157024], [15, 0.8897781818181818], [18, 0.8889811570247934]] arch ['Haswell'] 9s
