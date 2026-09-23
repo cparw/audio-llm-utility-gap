@@ -1,0 +1,654 @@
+{
+ "table": "scores/leftovers_23sep/verify/m7m11_VERIFIED.tsv",
+ "rows": 27,
+ "verified_yes": 27,
+ "task_checked": "scores/leftovers_23sep/m7m11/m7m11_values.tsv",
+ "independence": "own code, none of the task's scripts run or imported. AUC is a weighted Mann-Whitney over speaker draw counts (a speaker drawn k times weighs k), checked equal to sklearn roc_auc_score(sample_weight). Median over the count-weighted multiset; pooled = sum(w*(S+D+I))/sum(w*N). ADReSS-2020 POD4B refit: own script (sklearn Pipeline, ProcessPoolExecutor) on own pod.",
+ "bootstrap": "2000 draws; fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over the sorted unique speaker ids (M7: speaker cast to str as in part16 M7_gap_per_dataset.py; M11: that group's speakers for one-group cells, all 37 or the 31 >=20-word speakers for PD minus control, same idx); 2.5/97.5 np.quantile; one-class draws dropped (none were)",
+ "m7_convention": "point = json 'mean' of omni_<ds>_nested_repeats.json enc minus zero-shot AUC recomputed from per-clip p_yes; approx interval = single-split paired interval shifted by (json mean minus single-split AUC)",
+ "m7_detail": {
+  "adresso": {
+   "n": 237,
+   "n_spk": 237,
+   "n1": 122,
+   "n0": 115,
+   "zs": 0.6150392017106201,
+   "zs_k": 8629.0,
+   "zs_ci": [
+    0.5432332651905852,
+    0.6889640923339981
+   ],
+   "single": 0.8898788310762652,
+   "single_gap": 0.2748396293656451,
+   "single_ci": [
+    0.1919968661120173,
+    0.3525638738224378
+   ],
+   "mean5_json": 0.8752,
+   "mean5_of_rounded_repeats": 0.87524,
+   "per_repeat": [
+    0.8722,
+    0.8665,
+    0.8825,
+    0.874,
+    0.881
+   ],
+   "usable": 2000,
+   "gap_json": 0.2601607982893799,
+   "gap_rep": 0.2602007982893799,
+   "ci_shift_json": [
+    0.17731803503575205,
+    0.3378850427461727
+   ],
+   "ci_shift_rep": [
+    0.1773580350357521,
+    0.3379250427461725
+   ],
+   "gap_bounds": [
+    0.2601507982893799,
+    0.2602507982893799
+   ]
+  },
+  "adress2020": {
+   "n": 156,
+   "n_spk": 156,
+   "n1": 78,
+   "n0": 78,
+   "zs": 0.6240959894806049,
+   "zs_k": 3796.9999999999995,
+   "zs_ci": [
+    0.5348478618421052,
+    0.7148052262172812
+   ],
+   "single": 0.7878040762656148,
+   "single_gap": 0.16370808678500992,
+   "single_ci": [
+    0.055715354190963955,
+    0.26927930993807797
+   ],
+   "mean5_json": 0.8043,
+   "mean5_of_rounded_repeats": 0.8042999999999999,
+   "per_repeat": [
+    0.8161,
+    0.7936,
+    0.8051,
+    0.8062,
+    0.8005
+   ],
+   "usable": 2000,
+   "gap_json": 0.18020401051939516,
+   "gap_rep": 0.18020401051939505,
+   "ci_shift_json": [
+    0.0722112779253492,
+    0.28577523367246316
+   ],
+   "ci_shift_rep": [
+    0.0722112779253491,
+    0.28577523367246316
+   ],
+   "gap_bounds": [
+    0.18015401051939506,
+    0.18025401051939505
+   ]
+  },
+  "pcgita": {
+   "n": 1100,
+   "n_spk": 100,
+   "n1": 550,
+   "n0": 550,
+   "zs": 0.5634776859504133,
+   "zs_k": 170452.0,
+   "zs_ci": [
+    0.49306400723091104,
+    0.6330859923977538
+   ],
+   "single": 0.9088644628099174,
+   "single_gap": 0.34538677685950414,
+   "single_ci": [
+    0.26363164315908616,
+    0.42747673948462256
+   ],
+   "mean5_json": 0.8941,
+   "mean5_of_rounded_repeats": 0.89412,
+   "per_repeat": [
+    0.8882,
+    0.89,
+    0.8926,
+    0.8954,
+    0.9044
+   ],
+   "usable": 2000,
+   "gap_json": 0.33062231404958675,
+   "gap_rep": 0.33064231404958677,
+   "ci_shift_json": [
+    0.24886718034916866,
+    0.4127122766747051
+   ],
+   "ci_shift_rep": [
+    0.2488871803491688,
+    0.41273227667470525
+   ],
+   "gap_bounds": [
+    0.3305923140495868,
+    0.33069231404958677
+   ]
+  },
+  "neurovoz": {
+   "n": 1270,
+   "n_spk": 107,
+   "n1": 621,
+   "n0": 649,
+   "zs": 0.6950814953762633,
+   "zs_k": 280138.0,
+   "zs_ci": [
+    0.6355883997757804,
+    0.7518676424825447
+   ],
+   "single": 0.9159725478811699,
+   "single_gap": 0.2208910525049066,
+   "single_ci": [
+    0.16602827601395415,
+    0.2782598094974332
+   ],
+   "mean5_json": 0.9213,
+   "mean5_of_rounded_repeats": 0.9213000000000001,
+   "per_repeat": [
+    0.9275,
+    0.9154,
+    0.928,
+    0.9124,
+    0.9232
+   ],
+   "usable": 2000,
+   "gap_json": 0.22621850462373672,
+   "gap_rep": 0.22621850462373683,
+   "ci_shift_json": [
+    0.17135572813278432,
+    0.28358726161626324
+   ],
+   "ci_shift_rep": [
+    0.17135572813278432,
+    0.28358726161626346
+   ],
+   "gap_bounds": [
+    0.22616850462373683,
+    0.22626850462373682
+   ]
+  },
+  "kcl": {
+   "n": 37,
+   "n_spk": 37,
+   "n1": 16,
+   "n0": 21,
+   "zs": 0.7142857142857143,
+   "zs_k": 240.0,
+   "zs_ci": [
+    0.5209790209790209,
+    0.8809565434565434
+   ],
+   "single": 0.7767857142857143,
+   "single_gap": 0.0625,
+   "single_ci": [
+    -0.18129984051036677,
+    0.2900227272727272
+   ],
+   "mean5_json": 0.7506,
+   "mean5_of_rounded_repeats": 0.7506,
+   "per_repeat": [
+    0.744,
+    0.8304,
+    0.7768,
+    0.625,
+    0.7768
+   ],
+   "usable": 2000,
+   "gap_json": 0.03631428571428574,
+   "gap_rep": 0.03631428571428574,
+   "ci_shift_json": [
+    -0.207485554796081,
+    0.263837012987013
+   ],
+   "ci_shift_rep": [
+    -0.207485554796081,
+    0.263837012987013
+   ],
+   "gap_bounds": [
+    0.03626428571428575,
+    0.03636428571428574
+   ]
+  }
+ },
+ "val_detail": {
+  "VAL_neurovoz_pod6": {
+   "per_repeat": [
+    0.9287234913616638,
+    0.915833600063519,
+    0.9252907359023792,
+    0.9129355455810872,
+    0.926244761543214
+   ],
+   "mean5": 0.9218056268903727,
+   "zs": 0.6950814953762633,
+   "gap": 0.22672413151410942,
+   "exact_ci": [
+    0.17421111833708722,
+    0.2850649649145644
+   ],
+   "single": 0.9166474372811882,
+   "shifted_single_ci": [
+    0.17232712678745254,
+    0.2841218558933952
+   ],
+   "max_endpoint_err": 0.0018839915496346726,
+   "usable": 2000
+  },
+  "VAL_adress2020_pod4b": {
+   "per_repeat": [
+    0.811801446416831,
+    0.7943786982248521,
+    0.7993096646942801,
+    0.806870479947403,
+    0.799474030243261
+   ],
+   "mean5": 0.8023668639053255,
+   "zs": 0.6240959894806049,
+   "gap": 0.17827087442472067,
+   "exact_ci": [
+    0.0750032959789057,
+    0.27704811507936505
+   ],
+   "single": 0.7958579881656804,
+   "shifted_single_ci": [
+    0.07498409689576069,
+    0.2823236200670476
+   ],
+   "max_endpoint_err": 0.005275504987682533,
+   "usable": 2000,
+   "my_refit_vs_task_refit_max_abs_pred_diff": 0.0019544363021850586,
+   "fold_equal_my_vs_task": {
+    "0": 156,
+    "1": 156,
+    "2": 156,
+    "3": 156,
+    "4": 156
+   },
+   "fold_equal_my_vs_table1_seed_files": {
+    "0": "156/156",
+    "1": "156/156",
+    "2": "156/156",
+    "3": "156/156",
+    "4": "156/156"
+   }
+  }
+ },
+ "m11_detail": {
+  "M11fix_B_xsys_disagree_mean_PD": [
+   0.30486958448042795,
+   [
+    0.13007788549830193,
+    0.4943539072690047
+   ],
+   2000,
+   16,
+   16,
+   [
+    0.11571919646204588,
+    0.5114506416515994
+   ]
+  ],
+  "M11fix_B_xsys_disagree_mean_control": [
+   0.47785176847286887,
+   [
+    0.09173726419132193,
+    1.147869138427434
+   ],
+   2000,
+   21,
+   21,
+   [
+    0.08137865050252605,
+    1.169200274927196
+   ]
+  ],
+  "M11fix_B_xsys_disagree_diff_PD_minus_control": [
+   -0.17298218399244092,
+   [
+    -0.8969175055554208,
+    0.30602279698591195
+   ],
+   2000,
+   37,
+   37
+  ],
+  "M11fix_C_mean_token_logprob_mean_PD": [
+   -0.11028171112053287,
+   [
+    -0.15016281370175527,
+    -0.07391312054624175
+   ],
+   2000,
+   16,
+   16,
+   [
+    -0.15064863402492043,
+    -0.07303319552003415
+   ]
+  ],
+  "M11fix_C_mean_token_logprob_mean_control": [
+   -0.1356284206448241,
+   [
+    -0.23449836797066773,
+    -0.07586993288136107
+   ],
+   2000,
+   21,
+   21,
+   [
+    -0.23251646021911057,
+    -0.07527407574708468
+   ]
+  ],
+  "M11fix_C_mean_token_logprob_diff_PD_minus_control": [
+   0.025346709524291244,
+   [
+    -0.053184939321136424,
+    0.12880177014834515
+   ],
+   2000,
+   37,
+   37
+  ],
+  "M11fix_C_compression_ratio_mean_PD": [
+   1.5937625496473014,
+   [
+    1.4483669738873208,
+    1.7268552754431281
+   ],
+   2000,
+   16,
+   16,
+   [
+    1.4471189598153262,
+    1.7432967173694904
+   ]
+  ],
+  "M11fix_C_compression_ratio_mean_control": [
+   1.4897966333721055,
+   [
+    1.3076211558004083,
+    1.6416819534545566
+   ],
+   2000,
+   21,
+   21,
+   [
+    1.3120564923537035,
+    1.6421635280825047
+   ]
+  ],
+  "M11fix_C_compression_ratio_diff_PD_minus_control": [
+   0.1039659162751958,
+   [
+    -0.1036367627615459,
+    0.34002645631060624
+   ],
+   2000,
+   37,
+   37
+  ],
+  "M11fix_D_n_words_30s_mean_PD": [
+   59.1875,
+   [
+    46.1875,
+    71.9375
+   ],
+   2000,
+   16,
+   16,
+   [
+    46.14261904761905,
+    73.53846153846153
+   ]
+  ],
+  "M11fix_D_n_words_30s_mean_control": [
+   55.80952380952381,
+   [
+    43.04642857142858,
+    67.6202380952381
+   ],
+   2000,
+   21,
+   21,
+   [
+    43.052083333333336,
+    67.65297482837529
+   ]
+  ],
+  "M11fix_D_n_words_30s_diff_PD_minus_control": [
+   3.37797619047619,
+   [
+    -13.821228448275862,
+    22.569848484848485
+   ],
+   2000,
+   37,
+   37
+  ],
+  "M11fix_F_wer_vs_local_copy_mean_PD": [
+   0.3123459947253204,
+   [
+    0.19738346338531187,
+    0.4388370988598106
+   ],
+   2000,
+   16,
+   16,
+   [
+    0.1942787049691741,
+    0.448687244051792
+   ]
+  ],
+  "M11fix_F_wer_vs_local_copy_mean_control": [
+   0.3986541424004451,
+   [
+    0.25576023451693763,
+    0.5576746280888633
+   ],
+   2000,
+   21,
+   21,
+   [
+    0.25776949387356507,
+    0.5627444999132256
+   ]
+  ],
+  "M11fix_F_wer_vs_local_copy_diff_PD_minus_control": [
+   -0.08630814767512474,
+   [
+    -0.28506060189735966,
+    0.1047285858882708
+   ],
+   2000,
+   37,
+   37
+  ],
+  "M11fix_B_xsys_disagree_MEDIAN_PD": [
+   0.10272536687631026,
+   [
+    0.032258064516129,
+    0.3617021276595745
+   ],
+   2000,
+   16,
+   16,
+   [
+    0.032258064516129,
+    0.4799384469696962
+   ]
+  ],
+  "M11fix_B_xsys_disagree_ge20w_MEAN_PD": [
+   0.21002952512048909,
+   [
+    0.06711829973859391,
+    0.38365662164220415
+   ],
+   2000,
+   14,
+   14,
+   [
+    0.06452470405363857,
+    0.3905898166044424
+   ]
+  ],
+  "M11fix_B_xsys_disagree_POOLED_PD": [
+   0.26504751847940866,
+   [
+    0.0781521712066132,
+    0.47779104224875063
+   ],
+   2000,
+   16,
+   16,
+   [
+    0.07285859194621758,
+    0.4943700468080779
+   ]
+  ],
+  "M11fix_B_xsys_disagree_MEDIAN_control": [
+   0.0333333333333333,
+   [
+    0.0,
+    0.1341463414634146
+   ],
+   2000,
+   21,
+   21,
+   [
+    0.0,
+    0.2087776866283839
+   ]
+  ],
+  "M11fix_B_xsys_disagree_ge20w_MEAN_control": [
+   0.15058159634883794,
+   [
+    0.056176744003298786,
+    0.26841077128860213
+   ],
+   2000,
+   17,
+   17,
+   [
+    0.048106508521457786,
+    0.27652047541647606
+   ]
+  ],
+  "M11fix_B_xsys_disagree_POOLED_control": [
+   0.18003412969283278,
+   [
+    0.06196658758693387,
+    0.3635620236052802
+   ],
+   2000,
+   21,
+   21,
+   [
+    0.059465005339037126,
+    0.3763730481090347
+   ]
+  ],
+  "M11fix_B_xsys_disagree_MEDIAN_diff_PD_minus_control": [
+   0.06939203354297696,
+   [
+    -0.10081799355729405,
+    0.4112388031255945
+   ],
+   2000,
+   37,
+   37
+  ],
+  "M11fix_B_xsys_disagree_ge20w_MEAN_diff_PD_minus_control": [
+   0.05944792877165114,
+   [
+    -0.13554764858369947,
+    0.2707909240958411
+   ],
+   2000,
+   31,
+   31
+  ],
+  "M11fix_B_xsys_disagree_POOLED_diff_PD_minus_control": [
+   0.08501338878657588,
+   [
+    -0.18703093487511707,
+    0.3487659496082683
+   ],
+   2000,
+   37,
+   37
+  ]
+ },
+ "findings": [
+  "27/27 claimed values reproduce at 4 dp.",
+  "M7 single-split rows reproduce part16 M7_gap_per_dataset.csv exactly (ADReSSo 0.2748 [0.1920, 0.3526], ADReSS-2020 0.1637 [0.0557, 0.2693], PC-GITA 0.3454 [0.2636, 0.4275], NeuroVoz 0.2209 [0.1660, 0.2783], KCL 0.0625 [-0.1813, 0.2900]); zero-shot AUCs 0.6150, 0.6241, 0.5635, 0.6951, 0.7143.",
+  "Rounding bounds from the discrete AUC grid k/(n1 n0) plus the json mean: ADReSSo gap 0.260185..0.260211 (0.2602 fixed), ADReSS-2020 0.180178 exact, KCL 0.036310 exact, PC-GITA 0.330594..0.330672 (0.3306 or 0.3307), NeuroVoz 0.226170..0.226267 (0.2262 or 0.2263). Matches the task's not_closed note.",
+  "Sensitivity: if the shift uses the mean of the five rounded repeats (0.87524) instead of the json mean (0.8752), the ADReSSo approximate lo moves from 0.1773 to 0.1774. All other M7 endpoints are unchanged at 4 dp.",
+  "ADReSS-2020 POD4B refit on my own pod lo-vm7m11-1 (sklearn 1.9.1, numpy 2.1.2, scipy 1.18.1, Python 3.12.3): per-repeat AUCs identical to the task's refit (0.811801, 0.794379, 0.799310, 0.806870, 0.799474; mean 0.802367); outer folds equal the Table 1 seed files 156/156 for all 5 seeds; per-clip probabilities differ from the task's refit by at most 0.0020 (float-level solver differences), AUCs unaffected. Exact interval from my OOF [0.0750, 0.2770]; shifted single [0.0750, 0.2823]; max endpoint error 0.0053.",
+  "NeuroVoz POD6: per-repeat 0.9287/0.9158/0.9253/0.9129/0.9262, mean 0.9218; exact [0.1742, 0.2851]; shifted single [0.1723, 0.2841]; max endpoint error 0.0019.",
+  "M11 all-37 scheme reproduces the old numbers: B mean PD [0.1157, 0.5115], control [0.0814, 1.1692]; MEDIAN PD [0.0323, 0.4799], control [0.0000, 0.2088]; ge20w PD [0.0645, 0.3906], control [0.0481, 0.2765]; POOLED PD [0.0729, 0.4944], control [0.0595, 0.3764]. part16 rows/M11.tsv does carry these and n=37 on the group-mean rows.",
+  "Overleaf zip tex (paper1_submission_23sep/zip/AudioLLMHealthUtilityGap.tex) line 149 does print 0.35 on PC-GITA; the mean-of-five gap is 0.3306."
+ ],
+ "pod": {
+  "name": "lo-vm7m11-1",
+  "id": "xtnh88x0mz6ide",
+  "vcpu": 32,
+  "cost_per_hr": 0.96,
+  "runtime": "about 3 min",
+  "pulled_sha256_checked": true,
+  "deleted": "HTTP 204, GET 404"
+ },
+ "scripts": [
+  "scripts/leftovers_23sep/m7m11_verify/vcore.py",
+  "scripts/leftovers_23sep/m7m11_verify/v_m7.py",
+  "scripts/leftovers_23sep/m7m11_verify/v_m11.py",
+  "scripts/leftovers_23sep/m7m11_verify/vrefit.py",
+  "scripts/leftovers_23sep/m7m11_verify/v_write.py"
+ ],
+ "env_mac": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "pandas": "2.3.3"
+ },
+ "inputs_sha256": {
+  "<local data dir>/release/omni_final/omni_adresso_enc_nested_oof.csv": "447010a74fe175e03a565ee647ff34a2e6fed447a2e8849defdfd8b5e9e118e5",
+  "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+  "<local data dir>/release/omni_final/omni_adresso_nested_repeats.json": "9f84041e55dd991114a08951a21bcd4de26c2953a130e12ebe99085b8fb7840b",
+  "<local data dir>/release/omni_final/omni_adress2020_enc_nested_oof.csv": "7c26b3f361fc88b3134532c4210c275b4c89248398ffa06e523f137c812c9a9e",
+  "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+  "<local data dir>/release/omni_final/omni_adress2020_nested_repeats.json": "ec1b12cba4c005ec7cfe809d3d59061f6f0de92a9f5960bdefa09cea234d4b55",
+  "<local data dir>/release/omni_final/omni_pcgita_enc_nested_oof.csv": "d8413f410f91d92ba278266d5dafe0096beba7bce8b908c22c4419058982c67e",
+  "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+  "<local data dir>/release/omni_final/omni_pcgita_nested_repeats.json": "d527536a84934e0a78a78e3fc3b44437819f1d41c89fc1d1f95573b65529995e",
+  "<local data dir>/release/omni_final/omni_neurovoz_enc_nested_oof.csv": "1a1c2cac8ee13e34fe89a8ae5fd668dfc648dfc28feb70581ab9670434418e2d",
+  "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+  "<local data dir>/release/omni_final/omni_neurovoz_nested_repeats.json": "06df58214a53c7b082af4be22fe0cf38f38097daa383243b8e352a596efe68a7",
+  "<local data dir>/release/omni_final/omni_kcl_enc_nested_oof.csv": "d3f6e287eb55faf86a36a4481e7c82a5fef90ee3d5329d0a442fc4a78e86e24a",
+  "<local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e",
+  "<local data dir>/release/omni_final/omni_kcl_nested_repeats.json": "9ebe61ce4336e9fa7d4c2a54a989881ad1575e25d4660e87d57064ba076e0da5",
+  "<local data dir>/release/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_enc_nested5_oof.csv": "a067955838fbd814bef8261c4c8db3e765c57ed2e64a3c58e8f64c175384e59b",
+  "<local data dir>/release/edaic_rerun/part16/POD4B/out/p16_adress2020_orig_enc_nested_oof.csv": "02bb05dea1e8b349e46461aec583afac1690afb6fca5d59c2b9ddba23f7908b1",
+  "<local data dir>/release/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz": "669e745eae2c98de9db33486f7c6ff1d05627a22c2a6b5992ce7dee8ce3c2501",
+  "<local data dir>/release/edaic_rerun/part16/M11_kcl_wer.csv": "76d903720ab76e3eb2453a58761a270e49630c183a2a07fd2491b510614133e2",
+  "scores/leftovers_23sep/m7m11_verify/lo-vm7m11-1/vrefit_adress2020_pod4b_oof.csv": "7a15b59f3a616fd97668aabde0e5a49251094e918d3faaa87a7e8f864cd2fa3a",
+  "scores/leftovers_23sep/m7m11_verify/lo-vm7m11-1/vrefit_adress2020_pod4b.json": "09087e25b3e9251e40f49aa1d3ac5ee512c2c99ea3e10b3424eac591f8757ea8",
+  "scores/leftovers_23sep/m7m11/lo-m7m11-1/adress2020_pod4b_enc_rep5_oof.csv": "7de7e071063766b67e06829b155cda44b9403a203edde3e1c6c4e9e7b0292bbd",
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb"
+ },
+ "outputs_sha256": {
+  "scores/leftovers_23sep/verify/m7m11_VERIFIED.tsv": "1d827a270c25d0b48ba2638351fc7f86fc657c1ca7a2fd8ec10aaa29adf6468d"
+ }
+}
