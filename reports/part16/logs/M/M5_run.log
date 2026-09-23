@@ -1,0 +1,48 @@
+[states] <local data dir>/paper1_local_runs/probe2/pitt_states.npz
+[states] ans (468, 33, 4096) -> X (468, 4096)  (stage 32 of 33)  n=468 n_spk=228 pos=290 neg=178
+[arms] manifests/pitt_conflict_manifest_468.csv  conflict=146 (100 spk)  agreement=322 (175 spk)
+[folds] no saved fold file found under <local data dir>/Desktop/release or <local data dir>/paper1_local_runs (searched *fold*.csv/json/npz and the fold column of every *_oof.csv in probe2/ and part15/ - none carry one); folds recomputed deterministically with GroupKFold(n_splits=5) grouped by speaker on the clips in npz order, which is the same scheme p15/direction_q3o.py and part15/H_readout_arms.py used, so the three backbones stay comparable
+[lm_head] untied language_model.lm_head.weight, read directly from model-00005-of-00005.safetensors (the shard holds that one tensor and nothing else); config carries no tie_word_embeddings key (value=None), and a distinct lm_head tensor is present in the checkpoint index, so the head is NOT tied to the input embedding
+[lm_head] W (156032, 4096) from <local data dir>/.cache/huggingface/hub/models--Qwen--Qwen2-Audio-7B-Instruct/snapshots/0a095220c30b7b31434169c3086508ef3ea5bf0a/model-00005-of-00005.safetensors
+[tokens] yes ids [7414, 9454, 9693, 9834, 14004, 14080]
+[tokens] no  ids [902, 2152, 2308, 2753, 5664, 8996]
+[softmax] mean total Yes mass 0.699691  mean total No mass 0.296416
+
+[run] all 468 ...
+[run] conflict arm 146 (own direction, own folds) ...
+[run] agreement arm 322 (own direction, own folds) ...
+[dirs] cos(d_all,d_conflict)=1.0000  cos(d_all,d_agreement)=1.0000  cos(d_conflict,d_agreement)=1.0000
+[sanity] spearman(X@dvec, saved p_yes) = 1.0000   auc(saved p_yes) = 0.6173
+
+======================================================================================================================
+DIR n=468 cos=0.0145 rand_mean_abs=0.0124 rand_ci=[0.0005,0.0343] auc_probe=0.8223 auc_d=0.6174 auc_without_d=0.8327
+
+Qwen2-Audio: cos=0.0145, rand mean|cos|=0.0124 [0.0005,0.0343], auc_probe=0.8223, auc_d=0.6174, auc_without_d=0.8327 | n=468, n_speakers=228 | scores/part16/M/M5_readout_direction_q2a.csv
+
+[all                  ] n=468 n_spk=228  cos=0.0145  auc_probe=0.8223 [0.7742,0.8671]  auc_d=0.6174 [0.5539,0.6800]  auc_without_d=0.8327 [0.7857,0.8759]  auc_without_d_Xproj=0.8223 [0.7743,0.8672]
+[conflict_refit       ] n=146 n_spk=100  cos=0.0054  auc_probe=0.6757 [0.5685,0.7761]  auc_d=0.4136 [0.3010,0.5424]  auc_without_d=0.6869 [0.5806,0.7872]  auc_without_d_Xproj=0.6759 [0.5687,0.7766]
+[agreement_refit      ] n=322 n_spk=175  cos=0.0147  auc_probe=0.9317 [0.9020,0.9578]  auc_d=0.6984 [0.6373,0.7592]  auc_without_d=0.9346 [0.9057,0.9603]  auc_without_d_Xproj=0.9325 [0.9027,0.9583]
+[conflict_restricted  ] n=146 n_spk=100  cos=  n/a   auc_probe=0.6178 [0.5123,0.7222]  auc_d=0.4136 [0.3010,0.5424]  auc_without_d=0.6326 [0.5277,0.7336]  auc_without_d_Xproj=0.6180 [0.5128,0.7213]
+[agreement_restricted ] n=322 n_spk=175  cos=  n/a   auc_probe=0.8988 [0.8598,0.9328]  auc_d=0.6984 [0.6373,0.7592]  auc_without_d=0.9070 [0.8702,0.9383]  auc_without_d_Xproj=0.8988 [0.8593,0.9326]
+
+[paired] auc_probe            conflict-agreement = -0.2810 [-0.3799,-0.1762]  usable draws 2000/2000
+[paired] auc_d                conflict-agreement = -0.2847 [-0.3947,-0.1475]  usable draws 2000/2000
+[paired] auc_without_d        conflict-agreement = -0.2745 [-0.3754,-0.1707]  usable draws 2000/2000
+
+[draws] bootstrap usable draws, all-cell: auc_probe=2000/2000, auc_d=2000/2000, auc_without_d=2000/2000, auc_without_d_Xproj=2000/2000, random-floor=2000/2000
+[folds] all-cell fold sizes [94, 94, 94, 93, 93] speakers/fold [45, 46, 46, 45, 46]
+
+WROTE scores/part16/M/M5_readout_direction_q2a.csv
+WROTE scores/part16/M/M5_readout_direction_q2a_summary.csv
+WROTE scores/part16/M/M5_readout_direction_q2a.json
+WROTE reports/part16/rows/M5.tsv
+[done] 12.7s
+Exception ignored in atexit callback: <function dump_compile_times at 0x16fae1ea0>
+Traceback (most recent call last):
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 910, in dump_compile_times
+    log.info(compile_times(repr="str", aggregate=True))
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 896, in compile_times
+    out += tabulate(rows, headers=("Function", "Runtimes (s)"))
+  File "<local data dir>/Library/Python/3.10/lib/python/site-packages/torch/_dynamo/utils.py", line 246, in tabulate
+    return tabulate.tabulate(rows, headers=headers)
+AttributeError: module 'tabulate' has no attribute 'tabulate'

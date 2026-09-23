@@ -1,0 +1,10 @@
+id	what	value	lo	hi	n	n_spk	file
+3b_fix	Qwen3-Omni Pitt all: probe	0.8307	0.7833	0.8741	468	228	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt all: along readout direction	0.7656	0.7088	0.8179	468	228	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt all: probe minus readout dir (CANONICAL)	0.8276	0.7795	0.8696	468	228	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt conflict: probe	0.6394	0.5323	0.7418	146	100	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt conflict: along readout direction	0.6029	0.4965	0.7025	146	100	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt conflict: probe minus readout dir (CANONICAL)	0.6532	0.5483	0.7527	146	100	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt agreement: probe	0.9032	0.8626	0.9374	322	175	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt agreement: along readout direction	0.8264	0.7741	0.8731	322	175	part16/pod_sync/q3o_perp_cols.npz
+3b_fix	Qwen3-Omni Pitt agreement: probe minus readout dir (CANONICAL)	0.8937	0.8522	0.9312	322	175	part16/pod_sync/q3o_perp_cols.npz

@@ -1,0 +1,19 @@
+{
+ "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "n": 468,
+ "n_speakers": 228,
+ "cosine_w_d": 0.0051,
+ "cosine_random_mean_abs": 0.0177,
+ "cosine_random_ci": [
+  0.0008,
+  0.0498
+ ],
+ "auc_probe_oof": 0.8307,
+ "auc_d": 0.7656,
+ "auc_probe_without_d": 0.8305,
+ "seed": 0,
+ "draws": 2000,
+ "states": "/workspace/out/q3o_pitt_states.npz",
+ "direction": "mass-weighted Yes minus No lm_head rows",
+ "folds": "GroupKFold(5) by speaker, scaler fit inside the training fold"
+}

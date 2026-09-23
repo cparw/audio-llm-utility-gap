@@ -1,0 +1,4 @@
+model,arm,n,n_speakers,n_positive,cosine,cosine_random,cos_rand_lo,cos_rand_hi,auc_probe,auc_probe_lo,auc_probe_hi,auc_d,auc_d_lo,auc_d_hi,auc_probe_without_d,auc_wo_lo,auc_wo_hi,boot_draws
+Qwen/Qwen3-Omni-30B-A3B-Instruct,all,468,228,290,0.0051,0.0177,0.0008,0.0498,0.8307,0.7833,0.8741,0.7656,0.7088,0.8179,0.8305,0.7826,0.8737,2000
+Qwen/Qwen3-Omni-30B-A3B-Instruct,conflict,146,100,101,-0.0067,0.0177,0.0008,0.0516,0.6145,0.5021,0.7246,0.6029,0.4965,0.7025,0.6196,0.5094,0.7283,2000
+Qwen/Qwen3-Omni-30B-A3B-Instruct,agreement,322,175,189,0.0086,0.0172,0.0007,0.048,0.9349,0.9034,0.9614,0.8264,0.7741,0.8731,0.9341,0.9021,0.9604,2000
