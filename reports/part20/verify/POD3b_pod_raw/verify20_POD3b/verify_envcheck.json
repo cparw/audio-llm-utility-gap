@@ -1,0 +1,131 @@
+{
+ "report": {
+  "manifest_rows": 966,
+  "manifest_pairs": 483,
+  "manifest_speakers": 138,
+  "perclip_rows": 966,
+  "perclip_unique_keys": 794,
+  "perclip_dup_key_max_score_spread": 0.0,
+  "manifest_keys_missing_in_perclip": 0,
+  "perclip_keys_not_in_manifest": 0,
+  "missing_examples": [],
+  "nan_scores_after_join": 0,
+  "mismatch_label": 0,
+  "mismatch_speaker_id": 0,
+  "mismatch_set": 0,
+  "mass_median": 0.99669097365,
+  "mass_min": 0.9913757145,
+  "p_yes_range": [
+   0.0140733021,
+   0.9820234568
+  ],
+  "sidecar_prompt_verbatim": true,
+  "sidecar_prompt": null,
+  "sidecar_checkpoint": null,
+  "sidecar_window": 30,
+  "perclip_prompts": [
+   "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+  ],
+  "perclip_prompt_verbatim": true
+ },
+ "results": {
+  "conflict": {
+   "auc": 0.22100368485699246,
+   "trap": 0.22100368485699246,
+   "lo": 0.1818276670448792,
+   "hi": 0.2624393539069762,
+   "n": 483,
+   "n_spk": 138,
+   "bad": 0,
+   "n_pos": 205,
+   "n_neg": 278,
+   "n_distinct_seg": 483
+  },
+  "agreement_all": {
+   "auc": 0.9467099491138796,
+   "trap": 0.9467099491138796,
+   "lo": 0.9016645853972666,
+   "hi": 0.9826995262938378,
+   "n": 483,
+   "n_spk": 138,
+   "bad": 0,
+   "n_pos": 205,
+   "n_neg": 278,
+   "n_distinct_seg": 311
+  },
+  "agreement_distinct": {
+   "auc": 0.9635358602749907,
+   "trap": 0.9635358602749907,
+   "lo": 0.9352454596088279,
+   "hi": 0.9856052653399668,
+   "n": 311,
+   "n_spk": 138,
+   "bad": 0,
+   "n_pos": 104,
+   "n_neg": 207,
+   "n_distinct_seg": 311
+  },
+  "conflict_distinct": {
+   "auc": 0.22100368485699246,
+   "trap": 0.22100368485699246,
+   "lo": 0.1818276670448792,
+   "hi": 0.2624393539069762,
+   "n": 483,
+   "n_spk": 138,
+   "bad": 0,
+   "n_pos": 205,
+   "n_neg": 278,
+   "n_distinct_seg": 483
+  },
+  "pooled_all": {
+   "auc": 0.6342867169678891,
+   "trap": 0.6342867169678892,
+   "lo": 0.5960346907192792,
+   "hi": 0.6714477969291713,
+   "n": 966,
+   "n_spk": 138,
+   "bad": 0,
+   "n_pos": 410,
+   "n_neg": 556,
+   "n_distinct_seg": 794
+  },
+  "pooled_distinct": {
+   "auc": 0.5545457578487305,
+   "trap": 0.5545457578487305,
+   "lo": 0.5163691733262072,
+   "hi": 0.5942873466896592,
+   "n": 794,
+   "n_spk": 138,
+   "bad": 0,
+   "n_pos": 309,
+   "n_neg": 485,
+   "n_distinct_seg": 794
+  },
+  "paired_all": {
+   "conflict": 0.22100368485699246,
+   "c_lo": 0.1818276670448792,
+   "c_hi": 0.2624393539069762,
+   "agreement": 0.9467099491138796,
+   "a_lo": 0.9016645853972666,
+   "a_hi": 0.9826995262938378,
+   "delta": -0.7257062642568872,
+   "d_lo": -0.7800163276914754,
+   "d_hi": -0.663667717894316,
+   "n_spk": 138,
+   "bad": 0
+  },
+  "paired_distinct": {
+   "conflict": 0.22100368485699246,
+   "c_lo": 0.1818276670448792,
+   "c_hi": 0.2624393539069762,
+   "agreement": 0.9635358602749907,
+   "a_lo": 0.9352454596088279,
+   "a_hi": 0.9856052653399668,
+   "delta": -0.7425321754179983,
+   "d_lo": -0.7880338657626503,
+   "d_hi": -0.6929629445811423,
+   "n_spk": 138,
+   "bad": 0
+  }
+ }
+}

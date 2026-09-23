@@ -1,0 +1,17 @@
+id	what	value	lo	hi	n	n_spk	file	two_dp	vs_half
+POD3b_sst2_o25_audio_conflict	conflict arm AUC	0.4619	0.4165	0.5102	1334	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	0.46 [0.42, 0.51]	below 0.5
+POD3b_sst2_o25_audio_agreement_all	agreement arm AUC, all rows	0.8316	0.7766	0.8795	1334	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	0.83 [0.78, 0.88]	above 0.5
+POD3b_sst2_o25_audio_agreement_distinct	agreement arm AUC, distinct segments	0.8554	0.8199	0.8885	799	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	0.86 [0.82, 0.89]	above 0.5
+POD3b_sst2_o25_audio_diff_conflict_minus_agreement_all	paired conflict minus agreement (all rows)	-0.3697	-0.4269	-0.3073	2668	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	-0.37 [-0.43, -0.31]	interval excludes zero
+POD3b_sst2_o25_audio_diff_conflict_minus_agreement_distinct	paired conflict minus agreement (distinct agreement segments)	-0.3934	-0.4420	-0.3410	2133	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	-0.39 [-0.44, -0.34]	interval excludes zero
+POD3b_p14_rescore_envcheck_conflict	conflict arm AUC	0.2210	0.1818	0.2624	483	138	scores/part20/POD3b/p14_rescore_o25_audio_envcheck.csv	0.22 [0.18, 0.26]	below 0.5
+POD3b_p14_rescore_envcheck_agreement_all	agreement arm AUC, all rows	0.9467	0.9017	0.9827	483	138	scores/part20/POD3b/p14_rescore_o25_audio_envcheck.csv	0.95 [0.90, 0.98]	above 0.5
+POD3b_p14_rescore_envcheck_agreement_distinct	agreement arm AUC, distinct segments	0.9635	0.9352	0.9856	311	138	scores/part20/POD3b/p14_rescore_o25_audio_envcheck.csv	0.96 [0.94, 0.99]	above 0.5
+POD3b_p14_rescore_envcheck_diff_conflict_minus_agreement_all	paired conflict minus agreement (all rows)	-0.7257	-0.7800	-0.6637	966	138	scores/part20/POD3b/p14_rescore_o25_audio_envcheck.csv	-0.73 [-0.78, -0.66]	interval excludes zero
+POD3b_p14_rescore_envcheck_diff_conflict_minus_agreement_distinct	paired conflict minus agreement (distinct agreement segments)	-0.7425	-0.7880	-0.6930	794	138	scores/part20/POD3b/p14_rescore_o25_audio_envcheck.csv	-0.74 [-0.79, -0.69]	interval excludes zero
+POD3b_diag_conflict_robconflict	M2 conflict rows whose RoBERTa rule arm is also conflict (diagnostic)	0.1951	0.1545	0.2413	420	137	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.20 [0.15, 0.24]	below 0.5
+POD3b_diag_conflict_robnone	M2 conflict rows whose RoBERTa rule arm is none (diagnostic)	0.6150	0.5593	0.6755	855	160	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.62 [0.56, 0.68]	above 0.5
+POD3b_diag_agreement_robagreement_distinct	M2 agreement distinct segments whose RoBERTa rule arm is also agreement (diagnostic)	0.9680	0.9425	0.9877	391	145	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.97 [0.94, 0.99]	above 0.5
+POD3b_diag_agreement_robnone_distinct	M2 agreement distinct segments whose RoBERTa rule arm is none (diagnostic)	0.7518	0.6818	0.8100	379	141	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.75 [0.68, 0.81]	above 0.5
+POD3b_diag_conflict_p14speakers	M2 conflict rows, 138 Part 14 speakers only (diagnostic)	0.4489	0.4011	0.4982	1236	138	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.45 [0.40, 0.50]	below 0.5
+POD3b_diag_agreement_distinct_p14speakers	M2 agreement distinct segments, 138 Part 14 speakers only (diagnostic)	0.8587	0.8201	0.8912	737	138	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.86 [0.82, 0.89]	above 0.5

@@ -1,0 +1,5 @@
+POD3b_sst2_o25_audio_conflict	conflict arm AUC	0.4619	0.4165	0.5102	1334	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	0.46 [0.42, 0.51]	below 0.5
+POD3b_sst2_o25_audio_agreement_all	agreement arm AUC, all rows	0.8316	0.7766	0.8795	1334	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	0.83 [0.78, 0.88]	above 0.5
+POD3b_sst2_o25_audio_agreement_distinct	agreement arm AUC, distinct segments	0.8554	0.8199	0.8885	799	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	0.86 [0.82, 0.89]	above 0.5
+POD3b_sst2_o25_audio_diff_conflict_minus_agreement_all	paired conflict minus agreement (all rows)	-0.3697	-0.4269	-0.3073	2668	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	-0.37 [-0.43, -0.31]	interval excludes zero
+POD3b_sst2_o25_audio_diff_conflict_minus_agreement_distinct	paired conflict minus agreement (distinct agreement segments)	-0.3934	-0.4420	-0.3410	2133	162	scores/part20/POD3b/sst2_pairs_o25_audio.csv	-0.39 [-0.44, -0.34]	interval excludes zero

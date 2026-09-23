@@ -1,0 +1,6 @@
+POD3b_diag_conflict_robconflict	M2 conflict rows whose RoBERTa rule arm is also conflict (diagnostic)	0.1951	0.1545	0.2413	420	137	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.20 [0.15, 0.24]	below 0.5
+POD3b_diag_conflict_robnone	M2 conflict rows whose RoBERTa rule arm is none (diagnostic)	0.6150	0.5593	0.6755	855	160	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.62 [0.56, 0.68]	above 0.5
+POD3b_diag_agreement_robagreement_distinct	M2 agreement distinct segments whose RoBERTa rule arm is also agreement (diagnostic)	0.9680	0.9425	0.9877	391	145	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.97 [0.94, 0.99]	above 0.5
+POD3b_diag_agreement_robnone_distinct	M2 agreement distinct segments whose RoBERTa rule arm is none (diagnostic)	0.7518	0.6818	0.8100	379	141	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.75 [0.68, 0.81]	above 0.5
+POD3b_diag_conflict_p14speakers	M2 conflict rows, 138 Part 14 speakers only (diagnostic)	0.4489	0.4011	0.4982	1236	138	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.45 [0.40, 0.50]	below 0.5
+POD3b_diag_agreement_distinct_p14speakers	M2 agreement distinct segments, 138 Part 14 speakers only (diagnostic)	0.8587	0.8201	0.8912	737	138	scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv	0.86 [0.82, 0.89]	above 0.5
