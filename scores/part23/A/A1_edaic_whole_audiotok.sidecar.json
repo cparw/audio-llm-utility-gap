@@ -1,0 +1,92 @@
+{
+ "result_file": "scores/part23/A/A1_edaic_whole_audiotok.csv",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "bootstrap": {
+  "n_draws": 2000,
+  "seed": "numpy default_rng(0), fresh per cell",
+  "unit": "speaker (one clip per speaker)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "draw_code": "rng.choice(len(uspk), size=len(uspk), replace=True)"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "dtype": "bfloat16",
+ "auc": "rank formula (probe_boot.py auc_rank)",
+ "sources": {
+  "/workspace/p23a/edaicfull/windows_full.csv": {
+   "sha256_first1MB": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017",
+   "bytes": 11179
+  },
+  "/workspace/p23a/edaicfull/build_report.csv": {
+   "sha256_first1MB": "3643ed6d9698ac442973dc8c4c572ada39e978d9ce1d91fa1947964e316f9af3",
+   "bytes": 18949
+  },
+  "/workspace/p23a/build_windows_p23a.py": {
+   "sha256_first1MB": "66713e1b8b253eddd0aea44bcad5d2750c7f26cd8d6f631a2fa4a6f370cbf301",
+   "bytes": 3435
+  },
+  "/workspace/p23a/A_extract_perclip.csv": {
+   "sha256_first1MB": "c3610f3e71fb28f4271d05ed81bf4d9ed356d7d4c1df640a8529c6bfad9bed65",
+   "bytes": 62515
+  },
+  "/workspace/p23a/ref/edaic_lifted_perclip.csv": {
+   "sha256_first1MB": "2a9ab09a08f9a879a8cabca8f628da3501be53ac5d186b52a8a57b288a9f49cc",
+   "bytes": 39018
+  },
+  "/workspace/p23a/p23a_extract.py": {
+   "sha256_first1MB": "6c25a1b0fe821da9af6eb1d5e3f824ea7c31aafdff950d6111ce6e06aa22b0eb",
+   "bytes": 9449
+  }
+ },
+ "command": "cd /workspace/p23a && python3 p23a_report.py items12",
+ "library_versions": {
+  "python": "3.12.3",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "pandas": "3.0.6",
+  "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+  "extract_transformers": "5.17.0",
+  "extract_torch": "2.8.0+cu128",
+  "extract_numpy": "2.1.2",
+  "extract_librosa": "1.0.0",
+  "extract_python": "3.12.3",
+  "extract_cuda": "12.8",
+  "extract_gpu": "NVIDIA H100 NVL",
+  "extract_attn": "sdpa"
+ },
+ "results": {
+  "n_built": 275,
+  "max_abs_d_stitch_s": 0.0,
+  "max_abs_d_win_s": 0.0001,
+  "n_tok_equal_formula": 275,
+  "n_tok_equal_formula_on_nsamples_floor160": 270,
+  "max_abs_tok_minus_formula_on_nsamples_floor160": 1,
+  "n_mel_frames_cover_whole_wave": 275,
+  "n_tok_ge_floor_25_per_s": 275,
+  "n_tok_below_formula_ie_cut": 0,
+  "n_at_22500": 89,
+  "n_capped_in_table": 89,
+  "n_capped_and_at_22500": 89,
+  "n_fit_in_32k": 275,
+  "max_seq_len": 22548,
+  "min_audio_tok": 1648,
+  "median_audio_tok": 14795.0,
+  "max_audio_tok": 22500,
+  "n_proj_positions_equal_audio_tok": 275,
+  "n_enc_positions_equal_2x_minus": 178,
+  "n_feat_frames_equal_formula": 249,
+  "n_agree_part22_audio_tok": 275,
+  "n_agree_part22_seq_len": 275
+ },
+ "written_utc": "2026-09-23T14:17:40Z",
+ "extract_command": "cd /workspace/p23a && nohup python3 p23a_extract.py > extract.log 2>&1 &",
+ "build_command": "python3 build_windows_p23a.py  (= edaic_rerun/part16/EDAICFULL/build_windows.py with D=/workspace/p23a/edaicfull)",
+ "formula": "audio_tok_expected_from_formula = ((F-1)//2+1 - 2)//2+1 with F = the processor's mel-frame count (feature_attention_mask sum); 900 s -> F 90000 -> 22500. Column audio_tok_formula_on_nsamples_floor160 uses F = n_samples//160 instead (can be one frame short of the processor's count for non-multiple lengths)."
+}
