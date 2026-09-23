@@ -1,0 +1,37 @@
+{
+ "result": "item 3 figure verifier (checks/final_2325Z/figure)",
+ "command": "<local scratch dir>/figtrack_2325Z/vvenv/bin/python checks/final_2325Z/figure/verify_fig1_v4_whole.py checks/final_2325Z/figure/fig1_gap_whole.pdf checks/final_2325Z/figure/fig1_gap_whole_86mm.pdf",
+ "script_sha256": "467eaa608c27ba8506f1ded51eae083da8992938bdb23778ed44a48ae25821cc",
+ "seed": null,
+ "gpu": null,
+ "bootstrap_rule": "none (figure checks)",
+ "n": 275,
+ "n_speakers": 275,
+ "model_id": "Qwen/Qwen2.5-Omni-7B (curves only)",
+ "library_versions": {
+  "python": "3.14.6",
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "sklearn": "1.9.1",
+  "pymupdf": "1.28.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O"
+ },
+ "inputs": {
+  "scores/part23/pull/p23-a-probes/p23a/out/o25_whole_encoder_perlayer.csv": "80b11fb36ce0c43f42b94d5bf5a9991e0b7eadcc4e4080cde2a611ee76f82322",
+  "scores/part23/pull/p23-a-probes/p23a/out/o25_whole_llm_perlayer.csv": "e4eeddbc614f2265e9519c80f81fcb569a6608759d3f86bdf6776dedebd76b2c",
+  "scores/part23/verify/curves_linux191_pid.csv": "268e141fac9e594cee26e8cdabbe08a5e0362bb11536641798f48cfad79c37d2",
+  "scores/part23/pull/p23-a-probes/p23a/out/A2_edaic_whole_zeroshot_perclip.csv": "e13f360198811ff3061a222d9d9862aadc7a5de730f4e793f59b1139094e0e30",
+  "<local data dir>/release/overnight/curves/omni/pcgita_encoder.csv": "e1bfa76d3bdc3e2ab621aa571ce469f210c6f0dc04cef3d11113474af11c47a8",
+  "<local data dir>/release/overnight/curves/omni/pcgita_llm.csv": "f9732d576fcfd391f4991c5b72df3dd61bbdc748054f78914e38d0026d0ce084",
+  "<local data dir>/release/overnight/curves/omni/pitt_encoder.csv": "fa06f84fd856a1b2fe78069ec5ccbd1a81aa95574fb7817800d09d506a28c685",
+  "<local data dir>/release/overnight/curves/omni/pitt_llm.csv": "e2773b5278383615b6d280ab4a4fc92e464f28f10c654de18509b82c45009cdb",
+  "<local data dir>/paper1_submission_23sep/final_overleaf_2325Z/figures/fig1_gap.pdf": "3e3d60718405a4571087ddd519c1aea26c05d625281f629d769df57d2b786944",
+  "<local data dir>/paper1_submission_23sep/final_overleaf_2325Z/spconf.sty": "dc5d632639040cb183f2ab62780f314845aa021be73048c8a9ec9c2072d64a86",
+  "checks/final_2325Z/figure/fig1_gap_whole.pdf": "1c687112130d440f1d641604b813ddc6457338984261701d1dbe4f970da3ebaa",
+  "checks/final_2325Z/figure/fig1_gap_whole_86mm.pdf": "6788cd5a00ee128fdb237b4e160b49a303b141d52093265d1c5ac49ac1de4386"
+ },
+ "outputs": [
+  "checks/final_2325Z/figure/verify_fig1_v4_whole_perlayer.csv",
+  "checks/final_2325Z/figure/verify_fig1_v4_whole.out"
+ ]
+}

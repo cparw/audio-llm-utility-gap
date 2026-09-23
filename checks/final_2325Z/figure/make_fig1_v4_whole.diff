@@ -1,0 +1,138 @@
+--- <local data dir>/release/edaic_rerun/make_fig1_v4.py	2026-09-22 22:25:12
++++ checks/final_2325Z/figure/make_fig1_v4_whole.py	2026-09-23 16:35:22
+@@ -1,4 +1,18 @@
+-#!/usr/bin/env python3.10
++#!/usr/local/bin/python3
++# make_fig1_v4_whole.py (23 Sep 2026): copy of
++# <local data dir>/release/edaic_rerun/make_fig1_v4.py
++# (sha256 0806d85429c1d9c9b6178c84fdb08e83c33cc61cf10d9d28f54911f3fc8fe20d).
++# The drawing code is v4's own. Changed, and nothing else in the drawing:
++#   1. E-DAIC data paths -> PART 23 whole interview run, column auc_oof
++#      (o25_whole_encoder_perlayer.csv, o25_whole_llm_perlayer.csv).
++#   2. E-DAIC answer line -> 0.8366 (whole interview zero shot); it keeps v4's
++#      E-DAIC style ls=":" (dotted).
++#   3. Font sizes: the two 8 pt notes ("audio encoder", "language model") -> 9 pt.
++#      Everything else was already 9 or 10 pt and is unchanged.
++#   4. Font: STIXGeneral only (v4 listed Times New Roman first); pdf.fonttype 42 kept.
++# Output handling only (no drawing change): default output is under
++# checks/final_2325Z/figure, an existing output is never overwritten, the png is
++# 200 dpi, and the arrays each Line2D holds are dumped to <OUT>_plotted.csv.
+ """Figure 1, v2 spec (22 Sep 2026).
+ 
+ One axes. Three datasets, one probe curve each, drawn across the full depth of
+@@ -30,7 +44,7 @@
+ import matplotlib
+ matplotlib.use("Agg")
+ matplotlib.rcParams["font.family"] = "serif"
+-matplotlib.rcParams["font.serif"] = ["Times New Roman", "Times", "STIXGeneral", "DejaVu Serif"]
++matplotlib.rcParams["font.serif"] = ["STIXGeneral"]
+ matplotlib.rcParams["mathtext.fontset"] = "stix"
+ matplotlib.rcParams["pdf.fonttype"] = 42        # TrueType, not Type 3
+ matplotlib.rcParams["ps.fonttype"] = 42
+@@ -42,13 +56,14 @@
+ matplotlib.rcParams["legend.fontsize"] = 9
+ import matplotlib.pyplot as plt
+ 
+-RERUN = "<local data dir>/release/edaic_rerun/variants"
++RERUN = ("scores/part23/pull/"
++         "p23-a-probes/p23a/out")
+ MIRROR = "<local data dir>/release/overnight/curves/omni"
+ 
+ # zero-shot answer AUCs. E-DAIC from the variant run json, PC-GITA and Pitt from
+ # release/master/master_lookup.csv (Qwen2.5-Omni, "zero shot answer").
+-EDAIC_ANSWER = {"full": 0.8285, "mid30": 0.7205, "mid300": 0.8122}
+-EDAIC_WINDOW = {"full": "900 s cap", "mid30": "middle 30 s", "mid300": "middle 300 s"}
++EDAIC_ANSWER = {"whole": 0.8366}   # part23 A2_edaic_whole_zeroshot_perclip.csv, PART23_VERIFIED.tsv row 1_whole
++EDAIC_WINDOW = {"whole": "whole interview (PART 23, 900 s cap on 89 of 275)"}
+ PCGITA_ANSWER = 0.5635
+ PITT_ANSWER = 0.6578
+ 
+@@ -66,11 +81,17 @@
+ 
+ 
+ def main():
+-    variant = sys.argv[1] if len(sys.argv) > 1 else "full"
++    variant = sys.argv[1] if len(sys.argv) > 1 else "whole"
+     if variant not in EDAIC_ANSWER:
+         sys.exit(f"variant must be one of {sorted(EDAIC_ANSWER)}")
+     out = sys.argv[2] if len(sys.argv) > 2 else (
+-        "<local data dir>/paper1_final/figures/fig1_gap.pdf")
++        "checks/final_2325Z/"
++        "figure/fig1_gap_whole.pdf")
++    png = out.replace(".pdf", ".png")
++    plotted = out.replace(".pdf", "_plotted.csv")
++    for p in (out, png, plotted):
++        if os.path.exists(p):
++            sys.exit(f"refusing to overwrite {p}")
+ 
+     pc_enc, pc_llm, pc = curve(f"{MIRROR}/pcgita_encoder.csv", "auc",
+                                f"{MIRROR}/pcgita_llm.csv", "auc")
+@@ -95,13 +116,13 @@
+     fig, ax = plt.subplots(figsize=(3.39, 2.0), dpi=300)
+ 
+     for s in series:                      # answer lines, thinner, dataset style
+-        ax.axhline(s["ans"], color=s["color"], ls=s["ls"], lw=0.8,
+-                   alpha=0.9, zorder=2)
++        s["ansline"] = ax.axhline(s["ans"], color=s["color"], ls=s["ls"], lw=0.8,
++                                  alpha=0.9, zorder=2)
+     for s in series:                      # probe curves
+-        ax.plot(x, s["y"], color=s["color"], ls=s["ls"], lw=1.3,
+-                marker=s["marker"], markevery=4, ms=3.0,
+-                markerfacecolor="white", markeredgewidth=0.9,
+-                markeredgecolor=s["color"], zorder=4)
++        s["line"], = ax.plot(x, s["y"], color=s["color"], ls=s["ls"], lw=1.3,
++                             marker=s["marker"], markevery=4, ms=3.0,
++                             markerfacecolor="white", markeredgewidth=0.9,
++                             markeredgecolor=s["color"], zorder=4)
+ 
+     ax.axvline(n_enc - 0.5, color="#bbbbbb", lw=0.7, zorder=1)
+     ax.set_xlim(-1, n)
+@@ -128,9 +149,9 @@
+                           boxstyle="square,pad=0.12", alpha=0.95))
+ 
+     ax.text((n_enc - 1) / 2.0, 0.462, "audio encoder", ha="center", va="bottom",
+-            fontsize=8, color="#666666")
++            fontsize=9, color="#666666")
+     ax.text(n_enc + (n_llm - 1) / 2.0, 0.462, "language model", ha="center",
+-            va="bottom", fontsize=8, color="#666666")
++            va="bottom", fontsize=9, color="#666666")
+ 
+     ax.grid(axis="y", color="#ececec", lw=0.5, zorder=0)
+     for side in ("top", "right"):
+@@ -149,12 +170,34 @@
+     fig.subplots_adjust(bottom=0.32)
+     os.makedirs(os.path.dirname(out), exist_ok=True)
+     fig.savefig(out)
+-    fig.savefig(out.replace(".pdf", ".png"))
++    fig.savefig(png, dpi=200)
+ 
++    # arrays each Line2D actually holds, after drawing
++    with open(plotted, "w", newline="") as fh:
++        w = csv.writer(fh)
++        w.writerow(["dataset", "stream", "index", "x_plot", "auc_plotted"])
++        for s in series:
++            xs = [float(v) for v in s["line"].get_xdata()]
++            ys = [float(v) for v in s["line"].get_ydata()]
++            for i, (xx, yy) in enumerate(zip(xs, ys)):
++                stream, idx = ("encoder", i) if i < n_enc else ("llm", i - n_enc)
++                w.writerow([s["key"], stream, idx, repr(xx), repr(yy)])
++            for yy in sorted(set(float(v) for v in s["ansline"].get_ydata())):
++                w.writerow([s["key"], "answer_line", "", "", repr(yy)])
++
++    # every visible text element, as matplotlib sizes it
++    fig.canvas.draw()
++    sizes = sorted((t.get_fontsize(), t.get_text())
++                   for t in fig.findobj(matplotlib.text.Text)
++                   if t.get_visible() and t.get_text().strip())
++    print(f"text elements {len(sizes)}  min {sizes[0][0]} pt  max {sizes[-1][0]} pt")
++    for fs, txt in sizes:
++        print(f"  {fs:>5} pt  {txt!r}")
++
+     print(f"variant {variant}  E-DAIC window {EDAIC_WINDOW[variant]}")
+     for s in series:
+         print(f"  {s['key']:<8} curve min {min(s['y']):.4f}  max {max(s['y']):.4f}  "
+-              f"dashed answer {s['ans']:.4f}")
++              f"answer line {s['ans']:.4f}")
+     print(f"wrote {out}")
+ 
+ 
