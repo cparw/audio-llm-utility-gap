@@ -1,0 +1,18 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/workspace/mf_pitt_all.csv",
+ "condition": "ad",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 708,
+ "n_speakers": 266,
+ "folds": 5,
+ "epochs": 3,
+ "lr": 0.0001,
+ "trained": "projector only",
+ "auc_oof": 0.7904,
+ "arms": {},
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "minutes": 23.3,
+ "date": "2026-09-23"
+}

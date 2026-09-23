@@ -1,0 +1,20 @@
+{
+ "part": "14",
+ "scorer": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+ "threshold": 0.7,
+ "rules_kept_from_px_build": "speech_s>=5, nw>=25, span>=8; conflict = (y==1 & sev>=15 & clearly positive) or (y==0 & sev<=4 & clearly negative); agreement = same speaker's closest-span segment whose sentiment matches the label",
+ "n_conflict": 483,
+ "n_agreement": 483,
+ "n_pairs": 483,
+ "unmatched": 5,
+ "speakers": 138,
+ "depressed_positive": 205,
+ "control_negative": 278,
+ "overlap_same_arm_and_seg": 162,
+ "overlap_seg_any_arm": 162,
+ "new_only_segments": 632,
+ "old_only_segments": 135,
+ "sentiment_vs_old_lexicon_agreement_on_390": 0.9359,
+ "sentiment_vs_old_lexicon_kappa_on_390": 0.8718,
+ "AFFECTED": "D13 dq_lex unavailable; this is the citable replacement"
+}

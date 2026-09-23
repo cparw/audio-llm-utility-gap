@@ -1,0 +1,7 @@
+model,yes_rate_conflict,yes_rate_agreement,yes_rate_all,median_answer_mass,over_80pct,n
+Qwen2.5-Omni,0.2236,0.2919,0.2578,0.9967,False,966
+Qwen2-Audio,0.94,0.8675,0.9037,0.9989,True,966
+Qwen3-Omni-30B,0.3892,0.4182,0.4037,0.9997,False,966
+Audio Flamingo 3,0.7039,0.6687,0.6863,0.9311,False,966
+Kimi-Audio,0.8364,0.7578,0.7971,0.9992,False,966
+Audio Flamingo 2,0.971,0.9834,0.9772,0.9423,True,966

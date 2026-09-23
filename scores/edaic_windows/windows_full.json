@@ -1,0 +1,18 @@
+{
+ "variant": "full",
+ "cap_s": 900.0,
+ "n": 275,
+ "window_dur": {
+  "min": 65.9001,
+  "median": 591.8,
+  "max": 900.0001
+ },
+ "start_s": {
+  "min": 0.0,
+  "median": 0.0,
+  "max": 973.7
+ },
+ "n_capped": 89,
+ "source": "dcaps_proc (STITCHED, see DISCREPANCIES.md D2) \u2014 window positions are in stitched time",
+ "AFFECTED": "D1 context limit, D2 stitched timeline"
+}
