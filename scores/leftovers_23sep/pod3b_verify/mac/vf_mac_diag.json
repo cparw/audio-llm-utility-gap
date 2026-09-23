@@ -1,0 +1,23 @@
+{
+ "sklearn": "1.7.2",
+ "numpy": "2.2.6",
+ "machine": "arm64",
+ "all": {
+  "auc_macfit_linuxfolds": 0.8306857807051529,
+  "auc_macfit_macfolds": 0.7863618752421542,
+  "oof_macfit_linuxfolds_vs_pod3_maxabs": 1.6550815659099882e-06,
+  "ci_macfit_macfolds": [
+   0.7335260362693529,
+   0.8358947088994075,
+   2000
+  ]
+ },
+ "conflict": {
+  "auc_macfit_linuxfolds": 0.6145214521452146,
+  "auc_macfit_macfolds": 0.552035203520352
+ },
+ "agreement": {
+  "auc_macfit_linuxfolds": 0.9348768747264988,
+  "auc_macfit_macfolds": 0.9313760591956081
+ }
+}
