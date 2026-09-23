@@ -1,0 +1,52 @@
+key,what,value,lo,hi,n,n_spk,usable,trap
+text_conflict483,Q3O text AUC conflict483,0.22428496227408318,0.17567670125086302,0.2742270350564468,483.0,138.0,2000.0,0.22428496227408318
+text_agree483,Q3O text AUC agree483,0.9470082470608878,0.9130581378113735,0.975711706715578,483.0,138.0,2000.0,0.9470082470608878
+text_agree311,Q3O text AUC agree311,0.9522946859903382,0.9249386313275203,0.9749757659547419,311.0,138.0,2000.0,0.9522946859903382
+text_pooled966,Q3O text AUC pooled966,0.6283909457799614,0.5897377124438972,0.6658913778509001,966.0,138.0,2000.0,0.6283909457799615
+text_pooled794,Q3O text AUC pooled794,0.5425683114803322,0.49852555659476927,0.5860800081346516,794.0,138.0,2000.0,0.5425683114803324
+audio_conflict483,Q3O audio AUC conflict483,0.30075451833655026,0.24541840607781334,0.36412393684799244,483.0,138.0,2000.0,0.3007545183365503
+audio_agree483,Q3O audio AUC agree483,0.9637655729075276,0.9335719854622999,0.9864173654244307,483.0,138.0,2000.0,0.9637655729075276
+audio_agree311,Q3O audio AUC agree311,0.9726867335562988,0.9507233379191542,0.9903566831495668,311.0,138.0,2000.0,0.9726867335562988
+audio_pooled966,Q3O audio AUC pooled966,0.6867125811545886,0.6464398381905311,0.728734943309121,966.0,138.0,2000.0,0.6867125811545886
+audio_pooled794,Q3O audio AUC pooled794,0.612150935842258,0.5677391696527558,0.6618057014001155,794.0,138.0,2000.0,0.612150935842258
+text_conflict_minus_agree483,Q3O text paired conflict minus agree483,-0.7227232847868046,-0.7803407449051767,-0.6620310446806186,966.0,138.0,2000.0,
+text_conflict_minus_agree311,Q3O text paired conflict minus agree311,-0.728009723716255,-0.7804890257641232,-0.6730946298182154,794.0,138.0,2000.0,
+audio_conflict_minus_agree483,Q3O audio paired conflict minus agree483,-0.6630110545709773,-0.7192080439115682,-0.6029558941918016,966.0,138.0,2000.0,
+audio_conflict_minus_agree311,Q3O audio paired conflict minus agree311,-0.6719322152197484,-0.7266207921961361,-0.6105302443655257,794.0,138.0,2000.0,
+text_minus_audio_conflict483,Q3O paired transcript minus audio conflict483,-0.07646955606246708,-0.1285564536927752,-0.02956852663778842,483.0,138.0,2000.0,
+text_minus_audio_agree483,Q3O paired transcript minus audio agree483,-0.016757325846639803,-0.03992618757168559,0.003910074218758918,483.0,138.0,2000.0,
+text_minus_audio_agree311,Q3O paired transcript minus audio agree311,-0.02039204756596058,-0.040159829665469146,-0.0033771018062722386,311.0,138.0,2000.0,
+text_minus_audio_pooled966,Q3O paired transcript minus audio pooled966,-0.0583216353746272,-0.09509069110145295,-0.02219789816611338,966.0,138.0,2000.0,
+text_minus_audio_pooled794,Q3O paired transcript minus audio pooled794,-0.06958262436192575,-0.10843215358517393,-0.032041073159101166,794.0,138.0,2000.0,
+gapdiff_text_minus_audio_agree483,(text conflict-agree483) minus (audio conflict-agree483),-0.05971223021582728,-0.11309631079096016,-0.00905137122184625,,138.0,2000.0,
+gapdiff_text_minus_audio_agree311,(text conflict-agree311) minus (audio conflict-agree311),-0.05607750849650661,-0.10821630086662917,-0.004502875655911835,,138.0,2000.0,
+pearson_pooled966,Pearson r text vs audio p_yes pooled966,0.7634008944165049,,,966.0,138.0,,
+samedec_ge05_pooled966,same decision share (p>=0.5) pooled966,0.8312629399585921,,,966.0,138.0,,
+samedec_gt05_pooled966,same decision share (p>0.5) pooled966,0.8312629399585921,,,966.0,138.0,,
+yesrate_text_pooled966,text yes rate (p>=0.5) pooled966,0.3219461697722567,,,966.0,,,
+yesrate_audio_pooled966,audio yes rate (p>=0.5) pooled966,0.40372670807453415,,,966.0,,,
+meanp_text_pooled966,text mean p_yes pooled966,0.3270909891928174,,,966.0,,,
+pearson_pooled794,Pearson r text vs audio p_yes pooled794,0.7398534865662696,,,794.0,138.0,,
+samedec_ge05_pooled794,same decision share (p>=0.5) pooled794,0.8224181360201511,,,794.0,138.0,,
+samedec_gt05_pooled794,same decision share (p>0.5) pooled794,0.8224181360201511,,,794.0,138.0,,
+yesrate_text_pooled794,text yes rate (p>=0.5) pooled794,0.29219143576826195,,,794.0,,,
+yesrate_audio_pooled794,audio yes rate (p>=0.5) pooled794,0.3690176322418136,,,794.0,,,
+meanp_text_pooled794,text mean p_yes pooled794,0.30095712672634617,,,794.0,,,
+pearson_conflict483,Pearson r text vs audio p_yes conflict483,0.6487535451858648,,,483.0,138.0,,
+samedec_ge05_conflict483,same decision share (p>=0.5) conflict483,0.7784679089026915,,,483.0,138.0,,
+samedec_gt05_conflict483,same decision share (p>0.5) conflict483,0.7784679089026915,,,483.0,138.0,,
+yesrate_text_conflict483,text yes rate (p>=0.5) conflict483,0.31262939958592134,,,483.0,,,
+yesrate_audio_conflict483,audio yes rate (p>=0.5) conflict483,0.38923395445134573,,,483.0,,,
+meanp_text_conflict483,text mean p_yes conflict483,0.3168358905162973,,,483.0,,,
+pearson_agree483,Pearson r text vs audio p_yes agree483,0.8475341703814959,,,483.0,138.0,,
+samedec_ge05_agree483,same decision share (p>=0.5) agree483,0.8840579710144928,,,483.0,138.0,,
+samedec_gt05_agree483,same decision share (p>0.5) agree483,0.8840579710144928,,,483.0,138.0,,
+yesrate_text_agree483,text yes rate (p>=0.5) agree483,0.33126293995859213,,,483.0,,,
+yesrate_audio_agree483,audio yes rate (p>=0.5) agree483,0.41821946169772256,,,483.0,,,
+meanp_text_agree483,text mean p_yes agree483,0.33734608786933756,,,483.0,,,
+pearson_agree311,Pearson r text vs audio p_yes agree311,0.8516144992958173,,,311.0,138.0,,
+samedec_ge05_agree311,same decision share (p>=0.5) agree311,0.8906752411575563,,,311.0,138.0,,
+samedec_gt05_agree311,same decision share (p>0.5) agree311,0.8906752411575563,,,311.0,138.0,,
+yesrate_text_agree311,text yes rate (p>=0.5) agree311,0.2604501607717042,,,311.0,,,
+yesrate_audio_agree311,audio yes rate (p>=0.5) agree311,0.33762057877813506,,,311.0,,,
+meanp_text_agree311,text mean p_yes agree311,0.27629653858954095,,,311.0,,,

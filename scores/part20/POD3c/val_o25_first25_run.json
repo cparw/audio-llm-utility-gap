@@ -1,0 +1,49 @@
+{
+ "model": "Qwen/Qwen2.5-Omni-7B",
+ "prompt": "Based only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "rendered_example": "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\nTranscript: \"<participant transcript removed>\"\n\nBased only on this transcript of what the person said, does this speaker show signs of depression? Answer with one word, Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+ "yes_ids_rule3": {
+  "Yes": 9454,
+  " Yes": 7414,
+  "yes": 9693,
+  " yes": 9834,
+  "YES": 14004,
+  " YES": 14080
+ },
+ "no_ids_rule3": {
+  "No": 2753,
+  " No": 2308,
+  "no": 2152,
+  " no": 902,
+  "NO": 8996,
+  " NO": 5664
+ },
+ "yes_ids_textscore": {
+  "Yes": 9454,
+  " Yes": 7414,
+  "yes": 9693,
+  " yes": 9834,
+  "YES": 14004,
+  " YES": 14080,
+  "Yeah": 23336,
+  " Yeah": 21607,
+  "yeah": 75415,
+  " yeah": 21639
+ },
+ "no_ids_textscore": {
+  "No": 2753,
+  " No": 2308,
+  "no": 2152,
+  " no": 902,
+  "NO": 8996,
+  " NO": 5664,
+  " Nope": 85719
+ },
+ "n": 25,
+ "input": "/workspace/p20/p14_text_input.csv",
+ "dtype": "bfloat16",
+ "transformers": "5.17.0",
+ "torch": "2.8.0+cu128",
+ "gpu": "NVIDIA H100 NVL",
+ "seconds": 10.8
+}

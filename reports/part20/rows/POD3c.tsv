@@ -1,0 +1,50 @@
+id	what	value_computed	value_verified	lo	hi	n	n_spk	file	two_dp	vs_half	agree_4dp
+POD3c_q3o_transcript_conflict483	Qwen3-Omni transcript AUC, conflict483	0.224285	0.224285	0.1757	0.2742	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.22 [0.18, 0.27]	below 0.5; CI excludes 0.5	True
+POD3c_q3o_transcript_agreement483	Qwen3-Omni transcript AUC, agreement483	0.947008	0.947008	0.9131	0.9757	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.95 [0.91, 0.98]	above 0.5; CI excludes 0.5	True
+POD3c_q3o_transcript_agreement311	Qwen3-Omni transcript AUC, agreement311	0.952295	0.952295	0.9249	0.9750	311	138	scores/part20/POD3c/p14_q3o_text.csv	0.95 [0.92, 0.97]	above 0.5; CI excludes 0.5	True
+POD3c_q3o_audio_conflict483	Qwen3-Omni audio AUC, conflict483	0.300755	0.300755	0.2454	0.3641	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.30 [0.25, 0.36]	below 0.5; CI excludes 0.5	True
+POD3c_q3o_audio_agreement483	Qwen3-Omni audio AUC, agreement483	0.963766	0.963766	0.9336	0.9864	483	138	scores/part20/POD3c/p14_q3o_text.csv	0.96 [0.93, 0.99]	above 0.5; CI excludes 0.5	True
+POD3c_q3o_audio_agreement311	Qwen3-Omni audio AUC, agreement311	0.972687	0.972687	0.9507	0.9904	311	138	scores/part20/POD3c/p14_q3o_text.csv	0.97 [0.95, 0.99]	above 0.5; CI excludes 0.5	True
+POD3c_q3o_transcript_conf_minus_agree483	Qwen3-Omni transcript, conflict483 minus agreement483 (paired)	-0.722723	-0.722723	-0.7803	-0.6620	966	138	scores/part20/POD3c/p14_q3o_text.csv	-0.72 [-0.78, -0.66]	delta; CI excludes 0	True
+POD3c_q3o_transcript_conf_minus_agree311	Qwen3-Omni transcript, conflict483 minus agreement311 (paired)	-0.728010	-0.728010	-0.7805	-0.6731	794	138	scores/part20/POD3c/p14_q3o_text.csv	-0.73 [-0.78, -0.67]	delta; CI excludes 0	True
+POD3c_q3o_audio_conf_minus_agree483	Qwen3-Omni audio, conflict483 minus agreement483 (paired)	-0.663011	-0.663011	-0.7192	-0.6030	966	138	scores/part20/POD3c/p14_q3o_text.csv	-0.66 [-0.72, -0.60]	delta; CI excludes 0	True
+POD3c_q3o_audio_conf_minus_agree311	Qwen3-Omni audio, conflict483 minus agreement311 (paired)	-0.671932	-0.671932	-0.7266	-0.6105	794	138	scores/part20/POD3c/p14_q3o_text.csv	-0.67 [-0.73, -0.61]	delta; CI excludes 0	True
+POD3c_q3o_text_minus_audio_conflict483	Qwen3-Omni transcript minus audio AUC, conflict483 (paired)	-0.076470	-0.076470	-0.1286	-0.0296	483	138	scores/part20/POD3c/p14_q3o_text.csv	-0.08 [-0.13, -0.03]	delta; CI excludes 0	True
+POD3c_q3o_text_minus_audio_agreement483	Qwen3-Omni transcript minus audio AUC, agreement483 (paired)	-0.016757	-0.016757	-0.0399	0.0039	483	138	scores/part20/POD3c/p14_q3o_text.csv	-0.02 [-0.04, 0.00]	delta; CI includes 0	True
+POD3c_q3o_text_minus_audio_agreement311	Qwen3-Omni transcript minus audio AUC, agreement311 (paired)	-0.020392	-0.020392	-0.0402	-0.0034	311	138	scores/part20/POD3c/p14_q3o_text.csv	-0.02 [-0.04, -0.00]	delta; CI excludes 0	True
+POD3c_pearson_r_all966	Pearson r, Q3O transcript p_yes vs Q3O audio p_yes, all966	0.763401	0.763401			966	138	scores/part20/POD3c/p14_q3o_text.csv	0.76	n/a	True
+POD3c_same_decision_share_all966	same decision share (p_yes>=0.5), transcript vs audio, all966	0.831263	0.831263			966	138	scores/part20/POD3c/p14_q3o_text.csv	0.83	n/a	True
+POD3c_text_yes_rate_all966	transcript yes rate (p_yes>=0.5), all966	0.321946	0.321946			966	138	scores/part20/POD3c/p14_q3o_text.csv	0.32	n/a	True
+POD3c_audio_yes_rate_all966	audio yes rate (p_yes>=0.5), all966	0.403727	0.403727			966	138	scores/part20/POD3c/p14_q3o_text.csv	0.40	n/a	True
+POD3c_pearson_r_distinct794	Pearson r, Q3O transcript p_yes vs Q3O audio p_yes, distinct794	0.739853	0.739853			794	138	scores/part20/POD3c/p14_q3o_text.csv	0.74	n/a	True
+POD3c_same_decision_share_distinct794	same decision share (p_yes>=0.5), transcript vs audio, distinct794	0.822418	0.822418			794	138	scores/part20/POD3c/p14_q3o_text.csv	0.82	n/a	True
+POD3c_text_yes_rate_distinct794	transcript yes rate (p_yes>=0.5), distinct794	0.292191	0.292191			794	138	scores/part20/POD3c/p14_q3o_text.csv	0.29	n/a	True
+POD3c_audio_yes_rate_distinct794	audio yes rate (p_yes>=0.5), distinct794	0.369018	0.369018			794	138	scores/part20/POD3c/p14_q3o_text.csv	0.37	n/a	True
+POD3c_pearson_r_conflict483	Pearson r, Q3O transcript p_yes vs Q3O audio p_yes, conflict483	0.648754	0.648754			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.65	n/a	True
+POD3c_same_decision_share_conflict483	same decision share (p_yes>=0.5), transcript vs audio, conflict483	0.778468	0.778468			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.78	n/a	True
+POD3c_text_yes_rate_conflict483	transcript yes rate (p_yes>=0.5), conflict483	0.312629	0.312629			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.31	n/a	True
+POD3c_audio_yes_rate_conflict483	audio yes rate (p_yes>=0.5), conflict483	0.389234	0.389234			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.39	n/a	True
+POD3c_pearson_r_agreement483	Pearson r, Q3O transcript p_yes vs Q3O audio p_yes, agreement483	0.847534	0.847534			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.85	n/a	True
+POD3c_same_decision_share_agreement483	same decision share (p_yes>=0.5), transcript vs audio, agreement483	0.884058	0.884058			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.88	n/a	True
+POD3c_text_yes_rate_agreement483	transcript yes rate (p_yes>=0.5), agreement483	0.331263	0.331263			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.33	n/a	True
+POD3c_audio_yes_rate_agreement483	audio yes rate (p_yes>=0.5), agreement483	0.418219	0.418219			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.42	n/a	True
+POD3c_pearson_r_agreement311	Pearson r, Q3O transcript p_yes vs Q3O audio p_yes, agreement311	0.851614	0.851614			311	138	scores/part20/POD3c/p14_q3o_text.csv	0.85	n/a	True
+POD3c_same_decision_share_agreement311	same decision share (p_yes>=0.5), transcript vs audio, agreement311	0.890675	0.890675			311	138	scores/part20/POD3c/p14_q3o_text.csv	0.89	n/a	True
+POD3c_text_yes_rate_agreement311	transcript yes rate (p_yes>=0.5), agreement311	0.260450	0.260450			311	138	scores/part20/POD3c/p14_q3o_text.csv	0.26	n/a	True
+POD3c_audio_yes_rate_agreement311	audio yes rate (p_yes>=0.5), agreement311	0.337621	0.337621			311	138	scores/part20/POD3c/p14_q3o_text.csv	0.34	n/a	True
+POD3c_tokenset_max_abs_p_yes_ts_minus_rule3	token set sensitivity (Yeah/Nope added): max_abs_p_yes_ts_minus_rule3	8.85161e-06	8.85161e-06			966	138	scores/part20/POD3c/p14_q3o_text.csv	n/a	n/a	True
+POD3c_tokenset_conflict483_auc_ts	token set sensitivity (Yeah/Nope added): conflict483_auc_ts	0.224829	0.224829			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.22	below 0.5; no interval	True
+POD3c_tokenset_agreement483_auc_ts	token set sensitivity (Yeah/Nope added): agreement483_auc_ts	0.947096	0.947096			483	138	scores/part20/POD3c/p14_q3o_text.csv	0.95	above 0.5; no interval	True
+POD3c_tokenset_agreement311_auc_ts	token set sensitivity (Yeah/Nope added): agreement311_auc_ts	0.952202	0.952202			311	138	scores/part20/POD3c/p14_q3o_text.csv	0.95	above 0.5; no interval	True
+POD3c_tokenset_all966_auc_rule3	token set sensitivity (Yeah/Nope added): all966_auc_rule3	0.628391	0.628391			966	138	scores/part20/POD3c/p14_q3o_text.csv	0.63	above 0.5; no interval	True
+POD3c_tokenset_all966_auc_ts	token set sensitivity (Yeah/Nope added): all966_auc_ts	0.628540	0.628540			966	138	scores/part20/POD3c/p14_q3o_text.csv	0.63	above 0.5; no interval	True
+POD3c_median_mass_text_all966	transcript Yes+No answer mass, median, all966	0.999894	0.999894			966	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_min_mass_text_all966	transcript Yes+No answer mass, min, all966	0.996862	0.996862			966	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_median_mass_text_distinct794	transcript Yes+No answer mass, median, distinct794	0.999893	0.999893			794	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_min_mass_text_distinct794	transcript Yes+No answer mass, min, distinct794	0.996862	0.996862			794	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_median_mass_text_conflict483	transcript Yes+No answer mass, median, conflict483	0.999835	0.999835			483	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_min_mass_text_conflict483	transcript Yes+No answer mass, min, conflict483	0.996862	0.996862			483	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_median_mass_text_agreement483	transcript Yes+No answer mass, median, agreement483	0.999936	0.999936			483	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_min_mass_text_agreement483	transcript Yes+No answer mass, min, agreement483	0.998982	0.998982			483	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_median_mass_text_agreement311	transcript Yes+No answer mass, median, agreement311	0.999941	0.999941			311	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
+POD3c_min_mass_text_agreement311	transcript Yes+No answer mass, min, agreement311	0.998982	0.998982			311	138	scores/part20/POD3c/p14_q3o_text.csv	1.00	n/a	True
