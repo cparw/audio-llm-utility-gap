@@ -1,0 +1,11 @@
+clip,speaker,p_yes,mass,n_audio_tok,seq_len,fit_in_context,dur_s,sec,prompt
+305.wav,305,0.577617711052789,0.9939565360546112,7500,7548,1,900.0,2.76,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+679.wav,679,0.2339097854731636,0.994180828332901,7500,7548,1,900.0,1.38,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+466.wav,466,0.706314575488364,0.9940349161624908,7500,7548,1,900.0,1.37,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+705.wav,705,0.9604466103597945,0.9983506351709366,4957,5005,1,198.3,0.81,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+300.wav,300,0.09012648339238387,0.9957385584712029,7500,7548,1,759.8,1.26,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+301.wav,301,0.06016855039552881,0.995842132717371,7500,7548,1,900.0,1.34,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+310.wav,310,0.13309448181473538,0.9952801913022995,7445,7493,1,297.8,0.94,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+320.wav,320,0.39341839853750976,0.9949171841144562,6227,6275,1,249.1,0.64,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+330.wav,330,0.636897729444262,0.9964182078838348,4540,4588,1,181.6,0.72,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+346.wav,346,0.97967570323723,0.9985600784420967,7500,7548,1,699.5,1.25,"Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
