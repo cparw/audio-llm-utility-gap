@@ -1,0 +1,212 @@
+[
+ {
+  "id": "P22_s2_305_tok_full",
+  "what": "pid 305 (900.0 s window) audio tokens, paper processor call, full window",
+  "value_computed": 7500,
+  "value_verified": 7500,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_305_tok_cut300",
+  "what": "pid 305 audio tokens, paper processor call, window cut to first 300 s",
+  "value_computed": 7500,
+  "value_verified": 7500,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_305_pyes_full",
+  "what": "pid 305 p_yes (paper 5+5 id set), full window",
+  "value_computed": "0.577618",
+  "value_verified": "0.577618",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_305_pyes_cut300",
+  "what": "pid 305 p_yes (paper 5+5 id set), first 300 s",
+  "value_computed": "0.577618",
+  "value_verified": "0.577618",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_305_inputs_identical",
+  "what": "pid 305 full vs 300 s cut: input_ids, feature mask and input_features tensors byte-identical",
+  "value_computed": "True",
+  "value_verified": "True",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_679_tok_full",
+  "what": "pid 679 (900.0 s window) audio tokens, paper processor call, full window",
+  "value_computed": 7500,
+  "value_verified": 7500,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_679_tok_cut300",
+  "what": "pid 679 audio tokens, paper processor call, window cut to first 300 s",
+  "value_computed": 7500,
+  "value_verified": 7500,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_679_pyes_full",
+  "what": "pid 679 p_yes (paper 5+5 id set), full window",
+  "value_computed": "0.233910",
+  "value_verified": "0.233910",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_679_pyes_cut300",
+  "what": "pid 679 p_yes (paper 5+5 id set), first 300 s",
+  "value_computed": "0.233910",
+  "value_verified": "0.233910",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_679_inputs_identical",
+  "what": "pid 679 full vs 300 s cut: input_ids, feature mask and input_features tensors byte-identical",
+  "value_computed": "True",
+  "value_verified": "True",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_466_tok_full",
+  "what": "pid 466 (900.0 s window) audio tokens, paper processor call, full window",
+  "value_computed": 7500,
+  "value_verified": 7500,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_466_tok_cut300",
+  "what": "pid 466 audio tokens, paper processor call, window cut to first 300 s",
+  "value_computed": 7500,
+  "value_verified": 7500,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_466_pyes_full",
+  "what": "pid 466 p_yes (paper 5+5 id set), full window",
+  "value_computed": "0.706315",
+  "value_verified": "0.706315",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_466_pyes_cut300",
+  "what": "pid 466 p_yes (paper 5+5 id set), first 300 s",
+  "value_computed": "0.706315",
+  "value_verified": "0.706315",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_466_inputs_identical",
+  "what": "pid 466 full vs 300 s cut: input_ids, feature mask and input_features tensors byte-identical",
+  "value_computed": "True",
+  "value_verified": "True",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_705_tok_full",
+  "what": "pid 705 (198.3 s window) audio tokens, paper processor call, full window",
+  "value_computed": 4957,
+  "value_verified": 4957,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_705_tok_cut300",
+  "what": "pid 705 audio tokens, paper processor call, window cut to first 300 s",
+  "value_computed": 4957,
+  "value_verified": 4957,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_705_pyes_full",
+  "what": "pid 705 p_yes (paper 5+5 id set), full window",
+  "value_computed": "0.960447",
+  "value_verified": "0.960447",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_705_pyes_cut300",
+  "what": "pid 705 p_yes (paper 5+5 id set), first 300 s",
+  "value_computed": "0.960447",
+  "value_verified": "0.960447",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_705_inputs_identical",
+  "what": "pid 705 full vs 300 s cut: input_ids, feature mask and input_features tensors byte-identical",
+  "value_computed": "True",
+  "value_verified": "True",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s2_overall",
+  "what": "step 2 verdict on the 3 longest windows (305, 679, 466): tokens identical and p_yes equal to 6 dp, full vs 300 s cut",
+  "value_computed": "TRUNCATION PROVEN",
+  "value_verified": "TRUNCATION PROVEN",
+  "n": 3,
+  "n_spk": 3,
+  "file": "scores/part22/p22_step2_truncation_proof.json ; verify/out/s2_default.csv, s2_cut300.csv, tokens_mine.json",
+  "agree_4dp": "True"
+ }
+]

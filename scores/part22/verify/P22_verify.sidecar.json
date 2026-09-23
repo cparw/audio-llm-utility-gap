@@ -1,0 +1,75 @@
+{
+ "result": "scores/part22/rows/P22_verified.tsv (and verifier columns in rows/P22.tsv)",
+ "role": "PART 22 independent verifier; own code only, nothing imported from the pod job",
+ "code": {
+  "P22_verify.py": "6ca3cbd5363066302bb18f12965b77d70ef7759d9823f2a25ee3a55d0957539d",
+  "P22_verify_auc.py": "8ebe28719a21b43f86bdeba12d2c851aa763e8b1638ae081f3fa671dc6c8bb8b",
+  "P22_verify_step1.py": "f711d646cafebd0b3c9da1e066ff50775fe811525f105948d9306d8585d515b1",
+  "P22_rows.py": "a8c8a582b1109967b184eabe8404ac38c42e819c8543d52bc930d332c24558de",
+  "P22_pod_rows_check.py": "03f7e187622a1b227b466ffeae52ec86667e63a5b14132028e7d9900848507eb"
+ },
+ "sources": {
+  "scores/part22/verify/out/all_lift_merged.csv": "0a3e0d41f0a697b78c585285162edae5b361751b19edda79f4383f1292c4c1dd",
+  "scores/part22/verify/out/all_default.csv": "bbe3118108c86832b32f810ad56dede8350220807ace6102afec8a8561650088",
+  "scores/part22/verify/out/lift_fix5.csv": "d8af62360408feea761ffddc475b082c89944d3496325c60343217eb586f5605",
+  "scores/part22/verify/out/all_lift.csv": "28b433ec4235287bfa392908af926a93c1e48b388717eac996e19688361af8ac",
+  "scores/part22/verify/out/s2_default.csv": "39f463d70c71e75bfdc4f9e476d772c14a60a79ef7f35bea480dba7cc5e96168",
+  "scores/part22/verify/out/s2_cut300.csv": "f6f78fa347f6301ef080aed13f7b373d83fbb3352f72c79351f87b1a19b416b3",
+  "scores/part22/verify/out/tokens_mine.json": "0c135425e2425165c0fb53eb14acd74f66c61a843be622333617982eba05f14a",
+  "scores/part22/verify/out/build_mine.log": "afff5aa1f24f55c581653cb4742f20edb16508547e5892adfe778ea9a24dffa6",
+  "scores/part22/pod/sync/lifted_all275.csv": "478c6394d5c934e5f352ecc388fc5bb2476545056afb461159a9a24e214feb79",
+  "scores/part22/verify/out/auc_mine_p_yes_paper.json": "ac25aec3af18a3ef39ff0ea897b105056ce89e5a005f6af08897ee13a9468eeb",
+  "scores/part22/verify/out/auc_mine_p_yes_rule.json": "93164fb4a47746c073afc29f64429bbd692c8b30cc31a3c284541ae6d2033f10",
+  "scores/part22/verify/out/step1_check_pod.json": "eddd14f754d103844db43dbfd00dc3eb61c28778df9c88de3b9d2ee228e8a34c",
+  "scores/part22/verify/out/step1_check_mac_negcontrol.json": "75fb3dedd42bbe69cdc668fbb26f55d1736b1a514be87f5d53ee7d2ff58bd436",
+  "scores/part16/EDAICFULL/edaic_full_perclip.csv": "7566ae55337efc0f8fb0770918f3a31cc82518e04040cffc58ca2295da377770",
+  "manifests/edaic_windows_full.csv": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017",
+  "scores/part22/P22_step1_processor_config.md": "15ccd780174eecaf7e1aa1755d7da30ec91a0f0942d0cb533f32c79ec2191c45",
+  "scores/part22/edaic_lifted_auc.json": "d33be1d3d6f659583ed25ddae1ba9fd7f47ed442dfb8b3099cdb3a03c1d1fd1b",
+  "scores/part22/p22_step2_truncation_proof.json": "2cc09311dd766ec5935dee4233c15e1bd0cc1e223730d056a5ae49329da9d404",
+  "scores/part22/p22_step3_probe.json": "16b4ba0380082cd414dddce3f2ffcceffce1eb8f936e4b1bce0066d6b5d637c4",
+  "scores/part22/pod_final_sync/verify22/pod_cut_wav_sha256.txt": "8c8acb5cfda681c8aacde9184b5a68b8c0c19e1219222ce3f278526de3915c5c",
+  "scores/part22/pod_final_sync/verify22/mine_cut_wav_sha256.txt": "8c8acb5cfda681c8aacde9184b5a68b8c0c19e1219222ce3f278526de3915c5c",
+  "scores/part22/pod_final_sync/verify22/pod_env_and_tf_hashes.txt": "0f8e573dfdd153ec15c8f43fcd33ff3aec1ae14a2355e5cbc70a28a8ba13b436"
+ },
+ "n": 275,
+ "n_speakers": 275,
+ "n_pos": 66,
+ "subsets": {
+  "gt300": 217,
+  "capped900": 89,
+  "le300": 58
+ },
+ "seed": "numpy default_rng(0) fresh per cell; 2000 draws; speakers resampled with replacement; 2.5/97.5; paired = one draw per replicate",
+ "auc": "explicit Mann-Whitney over all pos x neg pairs (ties 0.5), cross-checked by trapezoid ROC (agree to 1e-9)",
+ "model_id": "Qwen/Qwen2.5-Omni-7B (HF snapshot ae9e1690543ffd5c0221dc27f79834d0294cba00), bf16, sdpa, thinker only",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the last input position, float32 softmax; paper id set Yes [7414, 9454, 9693, 9834, 14004] No [902, 2152, 2308, 2753, 8996]; rule id set adds ' YES' 14080 and ' NO' 5664 (all single-token); answer_mass recorded",
+ "processor_calls": {
+  "default": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True)",
+  "cut300": "same call on x[:300 * 16000]",
+  "lift": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True, audio_kwargs={\"truncation\": False})"
+ },
+ "exact_commands": [
+  "pod: python3 /workspace/verify22/P22_verify.py build --pidfile pids_all.txt --out build_mine.json",
+  "pod: python3 /workspace/verify22/P22_verify.py tokens 305 679 466 705 326 340 --out tokens_mine.json",
+  "pod: HF_HOME=/workspace/hf python3 P22_verify.py score {305 679 466 705 | --pidfile pids_all.txt} --mode {default|cut300|lift} --out <csv>",
+  "pod: python3 P22_verify_step1.py P22_step1_processor_config.md transformers/=/usr/local/lib/python3.12/dist-packages/transformers/ src/hf/=<snapshot>/",
+  "mac: python3 scripts/part22/verify/P22_verify_auc.py --labels edaic_full_perclip.csv --windows windows_full.csv --mine_lift all_lift_merged.csv --mine_default all_default.csv --pod lifted_all275.csv --col {p_yes_paper|p_yes_rule} --out auc_mine_<col>.json",
+  "mac: python3 scripts/part22/verify/P22_pod_rows_check.py ; python3 scripts/part22/verify/P22_rows.py <rows.json>"
+ ],
+ "libs_pod": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "soundfile": "0.14.0",
+  "python": "3.12.3",
+  "gpu": "NVIDIA H200, driver 570.195.03"
+ },
+ "libs_mac": {
+  "python": "3.14 (homebrew python3)",
+  "numpy": "2.4.2"
+ },
+ "pod": "RunPod 8flz9sdjujokel, stopped 2026-09-23 12:59:21 UTC (not terminated), 0.5556 h x 4.59 = 2.55 USD"
+}

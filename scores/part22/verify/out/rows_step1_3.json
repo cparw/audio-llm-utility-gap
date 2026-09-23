@@ -1,0 +1,240 @@
+[
+ {
+  "id": "P22_s1_quotes",
+  "what": "step 1 md: quoted code blocks equal to the source files line for line (29 transformers 5.17.0 + HF snapshot ae9e1690 on the pod, 2 scoring scripts on the Mac); negative control vs Mac transformers 5.5.4 gives 25 mismatches",
+  "value_computed": "31 blocks quoted",
+  "value_verified": "31/31 OK, 0 mismatch",
+  "n": 31,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/step1_check_pod.json, step1_check_mac_negcontrol.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s1_tf_version",
+  "what": "transformers version used by the paper pod and this pod",
+  "value_computed": "5.17.0",
+  "value_verified": "5.17.0",
+  "n": 1,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s1_fe_class",
+  "what": "Qwen2_5OmniProcessor feature extractor class",
+  "value_computed": "WhisperFeatureExtractor",
+  "value_verified": "WhisperFeatureExtractor",
+  "n": 1,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s1_chunk_length",
+  "what": "feature extractor chunk_length (preprocessor_config.json:2)",
+  "value_computed": "300",
+  "value_verified": "300",
+  "n": 1,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s1_sampling_rate",
+  "what": "feature extractor sampling_rate",
+  "value_computed": "16000",
+  "value_verified": "16000",
+  "n": 1,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s1_max_length",
+  "what": "effective max_length = n_samples = chunk_length x sampling_rate (feature_extraction_whisper.py:91, :303)",
+  "value_computed": "4800000",
+  "value_verified": "4800000",
+  "n": 1,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s1_truncation_default",
+  "what": "WhisperFeatureExtractor.__call__ truncation default (feature_extraction_whisper.py:196)",
+  "value_computed": "True",
+  "value_verified": "True",
+  "n": 1,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s1_cut_line",
+  "what": "line that cuts the waveform",
+  "value_computed": "feature_extraction_sequence_utils.py:333",
+  "value_verified": "feature_extraction_sequence_utils.py:333",
+  "n": 1,
+  "n_spk": "",
+  "file": "scores/part22/P22_step1_processor_config.md ; verify/out/tokens_mine.json, step1_check_pod.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s3_probe_tok_lifted",
+  "what": "pid 305 900 s window audio tokens, truncation off (audio_kwargs or flat truncation=False, or max_length 900 s)",
+  "value_computed": 22500,
+  "value_verified": 22500,
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step3_probe.json ; verify/out/tokens_mine.json",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s3_probe_pyes_lifted",
+  "what": "pid 305 p_yes, truncation off, model ran on seq_len 22548",
+  "value_computed": "0.173336",
+  "value_verified": "0.173336",
+  "n": 1,
+  "n_spk": 1,
+  "file": "scores/part22/p22_step3_probe.json ; verify/out/all_lift_merged.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s3_tokens_all275",
+  "what": "lifted audio tokens per clip, pod job vs my rerun (275/275 equal); 89 capped windows all 22500; 217 windows above 7500; max seq_len 22548",
+  "value_computed": "275 equal",
+  "value_verified": "275/275 equal",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s3_short58_unchanged",
+  "what": "58 windows <= 300 s: p_yes truncation off minus default, max abs (inputs identical)",
+  "value_computed": "0.0",
+  "value_verified": "0.0",
+  "n": 58,
+  "n_spk": 58,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_s3_perclip_lift_pod_vs_mine",
+  "what": "lifted p_yes per clip, pod job vs my independent rescore: max abs diff (0 pos-neg order flips)",
+  "value_computed": "",
+  "value_verified": "5.61e-08",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_all275_trunc",
+  "what": "E-DAIC zero-shot answer AUC, 300 s cut (paper call; reference per-clip file), all 275 E-DAIC windows",
+  "value_computed": "0.8278",
+  "value_verified": "0.8278",
+  "lo": "0.7703",
+  "hi": "0.8822",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_all275_lift",
+  "what": "E-DAIC zero-shot answer AUC, whole window (truncation off), all 275 E-DAIC windows",
+  "value_computed": "0.8379",
+  "value_verified": "0.8379",
+  "lo": "0.7805",
+  "hi": "0.8876",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_all275_diff",
+  "what": "paired AUC difference, whole window minus 300 s cut (one draw per replicate), all 275 E-DAIC windows",
+  "value_computed": "0.0101",
+  "value_verified": "0.0101",
+  "lo": "-0.0309",
+  "hi": "0.0518",
+  "n": 275,
+  "n_spk": 275,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_long217_trunc",
+  "what": "E-DAIC zero-shot answer AUC, 300 s cut (paper call; reference per-clip file), 217 windows longer than 300 s",
+  "value_computed": "0.8380",
+  "value_verified": "0.8380",
+  "lo": "0.7758",
+  "hi": "0.8930",
+  "n": 217,
+  "n_spk": 217,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_long217_lift",
+  "what": "E-DAIC zero-shot answer AUC, whole window (truncation off), 217 windows longer than 300 s",
+  "value_computed": "0.8571",
+  "value_verified": "0.8571",
+  "lo": "0.8028",
+  "hi": "0.9062",
+  "n": 217,
+  "n_spk": 217,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_long217_diff",
+  "what": "paired AUC difference, whole window minus 300 s cut (one draw per replicate), 217 windows longer than 300 s",
+  "value_computed": "0.0192",
+  "value_verified": "0.0192",
+  "lo": "-0.0309",
+  "hi": "0.0703",
+  "n": 217,
+  "n_spk": 217,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_capped89_trunc",
+  "what": "E-DAIC zero-shot answer AUC, 300 s cut (paper call; reference per-clip file), 89 windows capped at 900 s",
+  "value_computed": "0.8169",
+  "value_verified": "0.8169",
+  "lo": "0.6985",
+  "hi": "0.9161",
+  "n": 89,
+  "n_spk": 89,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_capped89_lift",
+  "what": "E-DAIC zero-shot answer AUC, whole window (truncation off), 89 windows capped at 900 s",
+  "value_computed": "0.8552",
+  "value_verified": "0.8552",
+  "lo": "0.7513",
+  "hi": "0.9414",
+  "n": 89,
+  "n_spk": 89,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ },
+ {
+  "id": "P22_capped89_diff",
+  "what": "paired AUC difference, whole window minus 300 s cut (one draw per replicate), 89 windows capped at 900 s",
+  "value_computed": "0.0383",
+  "value_verified": "0.0383",
+  "lo": "-0.0424",
+  "hi": "0.1360",
+  "n": 89,
+  "n_spk": 89,
+  "file": "scores/part22/edaic_lifted_auc.json ; verify/out/auc_mine_p_yes_paper.json, all_lift_merged.csv, all_default.csv",
+  "agree_4dp": "True"
+ }
+]
