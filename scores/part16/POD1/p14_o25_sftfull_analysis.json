@@ -1,0 +1,25 @@
+{
+ "conflict": {
+  "auc": 0.22825057027548692,
+  "n": 483,
+  "n_spk": 138,
+  "n_pos": 205,
+  "lo": 0.16504570148439937,
+  "hi": 0.298012329379585
+ },
+ "agreement": {
+  "auc": 0.7929636778382172,
+  "n": 483,
+  "n_spk": 138,
+  "n_pos": 205,
+  "lo": 0.7061515588437673,
+  "hi": 0.8669244964182496
+ },
+ "usable_draws": 2000,
+ "n": 966,
+ "n_speakers": 138,
+ "n_pairs": 483,
+ "median_answer_mass": 0.997213,
+ "pooled_auc": 0.519332,
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No."
+}
