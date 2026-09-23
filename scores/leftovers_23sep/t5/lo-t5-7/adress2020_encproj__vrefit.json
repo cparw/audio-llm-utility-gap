@@ -1,0 +1,16 @@
+{
+ "job": "adress2020_encproj",
+ "fold_file": "folds/adress2020_groupkfold5_pod.csv",
+ "n": 156,
+ "fold_sizes": [
+  32,
+  31,
+  31,
+  31,
+  31
+ ],
+ "keys": [
+  "enc",
+  "proj"
+ ]
+}
