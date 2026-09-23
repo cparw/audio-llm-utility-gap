@@ -1,0 +1,204 @@
+PASTE P20.POD6.A.tfidf.pcgita | language saliency TF-IDF LR AUC PC-GITA | 0.6196 [0.5700, 0.6681] | n=1100 n_speakers=100 | scores/part20/POD6/A_language_saliency/A_tfidf_pcgita_oof.csv | two-dp 0.62 [0.57, 0.67] above 0.5
+PASTE P20.POD6.A.tfidf.neurovoz | language saliency TF-IDF LR AUC NeuroVoz | 0.5814 [0.5422, 0.6206] | n=1270 n_speakers=107 | scores/part20/POD6/A_language_saliency/A_tfidf_neurovoz_oof.csv | two-dp 0.58 [0.54, 0.62] above 0.5
+PASTE P20.POD6.A.tfidf.kcl | language saliency TF-IDF LR AUC MDVR-KCL | 0.4315 [0.2560, 0.6287] | n=37 n_speakers=37 | scores/part20/POD6/A_language_saliency/A_tfidf_kcl_oof.csv | two-dp 0.43 [0.26, 0.63] interval includes 0.5
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+PASTE P20.POD6.A.tfidf.edaic30 | language saliency TF-IDF LR AUC E-DAIC first 30 s | 0.4844 [0.4028, 0.5624] | n=275 n_speakers=275 | scores/part20/POD6/A_language_saliency/A_tfidf_edaic30_oof.csv | two-dp 0.48 [0.40, 0.56] interval includes 0.5
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+PASTE P20.POD6.A.tfidf.edaicfull | language saliency TF-IDF LR AUC E-DAIC full interview | 0.6778 [0.5973, 0.7549] | n=275 n_speakers=275 | scores/part20/POD6/A_language_saliency/A_tfidf_edaicfull_oof.csv | two-dp 0.68 [0.60, 0.75] above 0.5
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+PASTE P20.POD6.A.tfidf.pitt | language saliency TF-IDF LR AUC Pitt 468 | 0.8353 [0.7865, 0.8862] | n=468 n_speakers=228 | scores/part20/POD6/A_language_saliency/A_tfidf_pitt_oof.csv | two-dp 0.84 [0.79, 0.89] above 0.5
+PASTE P20.POD6.A.tfidf.adresso | language saliency TF-IDF LR AUC ADReSSo | 0.8471 [0.7961, 0.8922] | n=237 n_speakers=237 | scores/part20/POD6/A_language_saliency/A_tfidf_adresso_oof.csv | two-dp 0.85 [0.80, 0.89] above 0.5
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: divide by zero encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: overflow encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/linear_model/_linear_loss.py:209: RuntimeWarning: invalid value encountered in matmul
+  norm2_w = weights @ weights if weights.ndim == 1 else squared_norm(weights)
+PASTE P20.POD6.A.tfidf.adress2020 | language saliency TF-IDF LR AUC ADReSS-2020 | 0.9254 [0.8866, 0.9587] | n=156 n_speakers=156 | scores/part20/POD6/A_language_saliency/A_tfidf_adress2020_oof.csv | two-dp 0.93 [0.89, 0.96] above 0.5
+{
+ "pcgita": {
+  "auc": 0.6195768595041322,
+  "lo": 0.5700374834356697,
+  "hi": 0.6680788739896268,
+  "n": 1100,
+  "n_spk": 100,
+  "labels_ok": 1100,
+  "pitt_text_same": null,
+  "secs": 0.2
+ },
+ "neurovoz": {
+  "auc": 0.5814234211433916,
+  "lo": 0.5421893835058569,
+  "hi": 0.6206387582942401,
+  "n": 1270,
+  "n_spk": 107,
+  "labels_ok": 1270,
+  "pitt_text_same": null,
+  "secs": 0.2
+ },
+ "kcl": {
+  "auc": 0.43154761904761907,
+  "lo": 0.2559506302521008,
+  "hi": 0.6286961722488036,
+  "n": 37,
+  "n_spk": 37,
+  "labels_ok": 37,
+  "pitt_text_same": null,
+  "secs": 0.1
+ },
+ "edaic30": {
+  "auc": 0.4844135131216471,
+  "lo": 0.402769116109563,
+  "hi": 0.56241549682713,
+  "n": 275,
+  "n_spk": 275,
+  "labels_ok": 275,
+  "pitt_text_same": null,
+  "secs": 0.6
+ },
+ "edaicfull": {
+  "auc": 0.6777584457010294,
+  "lo": 0.5973472330323361,
+  "hi": 0.7549459930313589,
+  "n": 275,
+  "n_spk": 275,
+  "labels_ok": 275,
+  "pitt_text_same": null,
+  "secs": 0.9
+ },
+ "pitt": {
+  "auc": 0.8353157690817513,
+  "lo": 0.7864873037857802,
+  "hi": 0.8862106723536965,
+  "n": 468,
+  "n_spk": 228,
+  "labels_ok": 468,
+  "pitt_text_same": 0,
+  "secs": 0.4
+ },
+ "adresso": {
+  "auc": 0.8471133285816108,
+  "lo": 0.7960508161371885,
+  "hi": 0.8921638941143651,
+  "n": 237,
+  "n_spk": 237,
+  "labels_ok": 237,
+  "pitt_text_same": null,
+  "secs": 0.5
+ },
+ "adress2020": {
+  "auc": 0.9253780407626562,
+  "lo": 0.8866156964490165,
+  "hi": 0.9587484734925201,
+  "n": 156,
+  "n_spk": 156,
+  "labels_ok": 156,
+  "pitt_text_same": null,
+  "secs": 0.5
+ }
+}

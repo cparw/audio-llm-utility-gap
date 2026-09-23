@@ -1,0 +1,16 @@
+[
+ {
+  "id": "A_tfidf_pitt_rawCHAT",
+  "what": "TF-IDF transcript LR, out-of-fold AUC, Pitt 468 on raw CHAT manifest text (sensitivity; not the transcript-condition input)",
+  "value_computed": "0.8452",
+  "value_verified": "0.8452",
+  "lo": "0.7975",
+  "hi": "0.8918",
+  "n": 468,
+  "n_spk": 228,
+  "file": "scores/part20/POD6/A_language_saliency/A_tfidf_pitt_rawCHAT_oof.csv",
+  "two_dp": "0.85 [0.80, 0.89]",
+  "vs_half": "above",
+  "agree_4dp": "yes"
+ }
+]
