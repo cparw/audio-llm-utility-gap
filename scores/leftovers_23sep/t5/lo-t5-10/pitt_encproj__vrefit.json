@@ -1,0 +1,16 @@
+{
+ "job": "pitt_encproj",
+ "fold_file": "folds/pitt_groupkfold5_pod.csv",
+ "n": 468,
+ "fold_sizes": [
+  94,
+  94,
+  94,
+  93,
+  93
+ ],
+ "keys": [
+  "enc",
+  "proj"
+ ]
+}

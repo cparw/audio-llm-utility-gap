@@ -1,0 +1,15 @@
+{
+ "job": "edaic30_ans",
+ "fold_file": "folds/edaic_groupkfold5_pod.csv",
+ "n": 275,
+ "fold_sizes": [
+  55,
+  55,
+  55,
+  55,
+  55
+ ],
+ "keys": [
+  "ans"
+ ]
+}

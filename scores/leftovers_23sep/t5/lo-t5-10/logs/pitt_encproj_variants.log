@@ -1,0 +1,10 @@
+VARIANT DONE pitt_encproj podfile 4.6 s
+VARIANT DONE pitt_encproj macfile 4.5 s
+VARIANT DONE pitt_encproj podfile_f64 4.8 s
+VARIANT DONE pitt_encproj podfile_thr8 284.2 s
+VARIANT DONE pitt_encproj podfile_ctHaswell 4.3 s
+VARIANT DONE pitt_encproj podfile_ctSkylakeX 4.5 s
+VARIANT DONE pitt_encproj podfile_ctZen 4.4 s
+VARIANT DONE pitt_encproj podfile_ctSapphireRapids 4.8 s
+VARIANT DONE pitt_encproj podfile_ctSandybridge 4.4 s
+VARIANT DONE pitt_encproj podfile_ctPrescott 4.9 s

@@ -1,0 +1,9 @@
+22:22:14 START pod lo-t5-6 mode main variants basic jobs edaic30_ans host a8bbd9275871
+22:22:28 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                              AMD EPYC 9965 192-Core Processor'] SkylakeX
+22:22:41 edaic30_ans exact script rc 0 | ans: 29 points, best auc_oof 0.6833 at 28, last 0.6833;
+22:22:42 edaic30_ans foldcheck rc 0
+22:22:52 edaic30_ans variant podfile rc 0
+22:23:02 edaic30_ans variant macfile rc 0
+22:23:06 edaic30_ans same-pod verifier refit rc 0
+22:23:06 ALL DONE
