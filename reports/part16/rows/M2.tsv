@@ -1,0 +1,18 @@
+id	what	value	lo	hi	n	n_spk	file
+M2.label_all.agreement	sentiment label (pos/neu/neg at 0.70), all segments | raw agreement po	0.4248	0.4107	0.4393	6214	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.label_all.kappa	sentiment label (pos/neu/neg at 0.70), all segments | Cohen kappa	0.2481	0.2360	0.2605	6214	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.label_elig.agreement	sentiment label (pos/neu/neg at 0.70), eligible segments | raw agreement po	0.4286	0.4130	0.4446	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.label_elig.kappa	sentiment label (pos/neu/neg at 0.70), eligible segments | Cohen kappa	0.2510	0.2377	0.2653	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_rule.agreement	rule arm (conflict/agreement/none), eligible segments | raw agreement po	0.5524	0.5286	0.5754	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_rule.kappa	rule arm (conflict/agreement/none), eligible segments | Cohen kappa	0.3438	0.3224	0.3665	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_selected.agreement	selected arm (conflict/agreement/none), eligible segments | raw agreement po	0.7045	0.6674	0.7391	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_selected.kappa	selected arm (conflict/agreement/none), eligible segments | Cohen kappa	0.3362	0.3008	0.3717	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_rule_matched.agreement	rule arm, distilbert at matched threshold 0.995 | raw agreement po	0.7290	0.7128	0.7460	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_rule_matched.kappa	rule arm, distilbert at matched threshold 0.995 | Cohen kappa	0.4978	0.4728	0.5234	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_selected_matched.agreement	selected arm, distilbert at matched threshold 0.995 | raw agreement po	0.8356	0.8146	0.8560	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.arm_selected_matched.kappa	selected arm, distilbert at matched threshold 0.995 | Cohen kappa	0.4366	0.3989	0.4755	5523	275	scores/part16/M/M2_distilbert_sentiment.csv
+M2.matched_threshold	distilbert threshold whose conflict count is closest to RoBERTa's 488	0.995			644	149	reports/part16/M2_REPORT.txt
+M2.pairs	distilbert SST-2 rebuild of the Part 14 selection | pairs	1334			2668	162	scores/part16/M/M2_distilbert_sentiment.csv
+M2.clips	distilbert SST-2 rebuild of the Part 14 selection | clips	2668			2668	162	scores/part16/M/M2_distilbert_sentiment.csv
+M2.speakers	distilbert SST-2 rebuild of the Part 14 selection | speakers	162			2668	162	scores/part16/M/M2_distilbert_sentiment.csv
+M2.same_arm_seg_uid	segments with the same (arm, seg_uid) in both selections	625			2302	162	scores/part16/M/M2_distilbert_sentiment.csv

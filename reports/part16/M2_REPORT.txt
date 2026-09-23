@@ -1,0 +1,92 @@
+====================================================================================================
+PART16 / M2  distilbert-base-uncased-finetuned-sst-2-english vs cardiffnlp/twitter-roberta-base-sentiment-latest
+====================================================================================================
+
+--- M2.label_all  sentiment label (pos/neu/neg at 0.70), all segments
+    n=6214  n_speakers=275
+    agreement po=0.4248 [0.4107, 0.4393]  usable draws 2000/2000
+    pe=0.2351   kappa=0.2481 [0.2360, 0.2605]  usable draws 2000/2000
+    confusion matrix (rows RoBERTa, cols DistilBERT), order ['negative', 'neutral', 'positive']:
+             negative     neutral    positive      rowsum
+    negative          901          22          81        1004
+    neutral          1893         170        1398        3461
+    positive          141          39        1569        1749
+    colsum           2935         231        3048        6214
+
+--- M2.label_elig  sentiment label (pos/neu/neg at 0.70), eligible segments
+    n=5523  n_speakers=275
+    agreement po=0.4286 [0.4130, 0.4446]  usable draws 2000/2000
+    pe=0.2371   kappa=0.2510 [0.2377, 0.2653]  usable draws 2000/2000
+    confusion matrix (rows RoBERTa, cols DistilBERT), order ['negative', 'neutral', 'positive']:
+             negative     neutral    positive      rowsum
+    negative          817          21          74         912
+    neutral          1674         154        1224        3052
+    positive          127          36        1396        1559
+    colsum           2618         211        2694        5523
+
+--- M2.arm_rule  rule arm (conflict/agreement/none), eligible segments
+    n=5523  n_speakers=275
+    agreement po=0.5524 [0.5286, 0.5754]  usable draws 2000/2000
+    pe=0.3179   kappa=0.3438 [0.3224, 0.3665]  usable draws 2000/2000
+    confusion matrix (rows RoBERTa, cols DistilBERT), order ['agreement', 'conflict', 'none']:
+            agreement    conflict        none      rowsum
+    agreement        1414          59          84        1557
+    conflict           55         420          13         488
+    none             1406         855        1217        3478
+    colsum           2875        1334        1314        5523
+
+--- M2.arm_selected  selected arm (conflict/agreement/none), eligible segments
+    n=5523  n_speakers=275
+    agreement po=0.7045 [0.6674, 0.7391]  usable draws 2000/2000
+    pe=0.5548   kappa=0.3362 [0.3008, 0.3717]  usable draws 2000/2000
+    confusion matrix (rows RoBERTa, cols DistilBERT), order ['agreement', 'conflict', 'none']:
+            agreement    conflict        none      rowsum
+    agreement         210          16          85         311
+    conflict           29         415          39         483
+    none              560         903        3266        4729
+    colsum            799        1334        3390        5523
+
+--- arm counts
+    roberta     pairs=483   clips=966   speakers=138   unmatched=5    conflict_rule=488   pool_rule=1557  dep_pos=205  ctrl_neg=278
+    distilbert  pairs=1334  clips=2668  speakers=162   unmatched=0    conflict_rule=1334  pool_rule=2875  dep_pos=358  ctrl_neg=976
+    part14 manifest on disk: rows=966 pairs=483 speakers=138
+    replication of Part 14 from saved RoBERTa columns exact: True
+
+--- selection overlap (RoBERTa arms vs DistilBERT arms)
+    same (arm, seg_uid): 625
+    segment in both selections regardless of arm: 670
+    distilbert-only segments: 1463   roberta-only segments: 124
+    speakers: roberta 138, distilbert 162, shared 138
+
+--- distilbert threshold sweep (does a higher cut reproduce the RoBERTa-sized set?)
+       thr  clearly_pos  clearly_neg  conflict_rule   pairs   spk
+       0.7         3048         2935           1334    1334   162
+       0.8         2963         2858           1300    1300   162
+       0.9         2842         2708           1230    1229   161
+      0.95         2690         2518           1143    1142   160
+      0.99         2190         1834            826     823   156
+     0.995         1870         1390            644     640   149
+     0.999         1093          435            249     220    90
+    0.9995          757          170            130      90    48
+    0.9999            0            0              0       0     0
+    closest to the RoBERTa conflict count (488): thr=0.995 -> conflict_rule=644 pairs=640 speakers=149
+
+--- M2.arm_rule_matched  rule arm, distilbert at matched threshold 0.995
+    n=5523  n_speakers=275
+    agreement po=0.7290 [0.7128, 0.7460]  usable draws 2000/2000
+    pe=0.4602   kappa=0.4978 [0.4728, 0.5234]  usable draws 2000/2000
+    confusion matrix (rows RoBERTa, cols DistilBERT@0.995), order ['agreement', 'conflict', 'none']:
+            agreement    conflict        none      rowsum
+    agreement        1118           6         433        1557
+    conflict           13         313         162         488
+    none              558         325        2595        3478
+
+--- M2.arm_selected_matched  selected arm, distilbert at matched threshold 0.995
+    n=5523  n_speakers=275
+    agreement po=0.8356 [0.8146, 0.8560]  usable draws 2000/2000
+    pe=0.7082   kappa=0.4366 [0.3989, 0.4755]  usable draws 2000/2000
+    confusion matrix (rows RoBERTa, cols DistilBERT@0.995), order ['agreement', 'conflict', 'none']:
+            agreement    conflict        none      rowsum
+    agreement         154           0         157         311
+    conflict            9         308         166         483
+    none              244         332        4153        4729

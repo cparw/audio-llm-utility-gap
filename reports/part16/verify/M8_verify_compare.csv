@@ -1,0 +1,43 @@
+model,tag,set,arm,their_auc,my_auc,my_auc_trapz,auc_agree,their_lo,my_lo,their_hi,my_hi,ci_agree,n_agree,their_n,my_n,their_nspk,my_nspk,their_npos,my_npos,boot_usable
+Qwen2.5-Omni,primary,A_edaic_part14,conflict,0.2218,0.2218,0.2218,True,0.1829,0.1829,0.2632,0.2632,True,True,483,483,138,138,205,205,2000
+Qwen2.5-Omni,primary,A_edaic_part14,agreement,0.9482,0.9482,0.9482,True,0.9039,0.9039,0.9828,0.9828,True,True,483,483,138,138,205,205,2000
+Qwen2.5-Omni,primary,A_edaic_part14,conflict_minus_agreement,-0.7264,-0.7264,,True,-0.7786,-0.7786,-0.6655,-0.6655,True,True,966,966,138,138,410,410,2000
+Qwen2-Audio,primary,A_edaic_part14,conflict,0.2280,0.2280,0.2280,True,0.1816,0.1816,0.2782,0.2782,True,True,483,483,138,138,205,205,2000
+Qwen2-Audio,primary,A_edaic_part14,agreement,0.9478,0.9478,0.9478,True,0.9128,0.9128,0.9762,0.9762,True,True,483,483,138,138,205,205,2000
+Qwen2-Audio,primary,A_edaic_part14,conflict_minus_agreement,-0.7198,-0.7198,,True,-0.7689,-0.7689,-0.6679,-0.6679,True,True,966,966,138,138,410,410,2000
+Qwen3-Omni-30B-A3B,primary,A_edaic_part14,conflict,0.3008,0.3008,0.3008,True,0.2454,0.2454,0.3641,0.3641,True,True,483,483,138,138,205,205,2000
+Qwen3-Omni-30B-A3B,primary,A_edaic_part14,agreement,0.9638,0.9638,0.9638,True,0.9336,0.9336,0.9864,0.9864,True,True,483,483,138,138,205,205,2000
+Qwen3-Omni-30B-A3B,primary,A_edaic_part14,conflict_minus_agreement,-0.6630,-0.6630,,True,-0.7192,-0.7192,-0.6030,-0.6030,True,True,966,966,138,138,410,410,2000
+Audio Flamingo 2,primary,A_edaic_part14,conflict,0.5286,0.5286,0.5286,True,0.4512,0.4512,0.6015,0.6015,True,True,483,483,138,138,205,205,2000
+Audio Flamingo 2,primary,A_edaic_part14,agreement,0.6083,0.6083,0.6083,True,0.5126,0.5126,0.6997,0.6997,True,True,483,483,138,138,205,205,2000
+Audio Flamingo 2,primary,A_edaic_part14,conflict_minus_agreement,-0.0797,-0.0797,,True,-0.1488,-0.1488,-0.0104,-0.0104,True,True,966,966,138,138,410,410,2000
+Audio Flamingo 3,primary,A_edaic_part14,conflict,0.4235,0.4235,0.4235,True,0.3606,0.3606,0.4880,0.4880,True,True,483,483,138,138,205,205,2000
+Audio Flamingo 3,primary,A_edaic_part14,agreement,0.8095,0.8095,0.8095,True,0.7447,0.7447,0.8696,0.8696,True,True,483,483,138,138,205,205,2000
+Audio Flamingo 3,primary,A_edaic_part14,conflict_minus_agreement,-0.3860,-0.3860,,True,-0.4675,-0.4675,-0.3018,-0.3018,True,True,966,966,138,138,410,410,2000
+Kimi-Audio,primary,A_edaic_part14,conflict,0.5258,0.5258,0.5258,True,0.4501,0.4501,0.5977,0.5977,True,True,483,483,138,138,205,205,2000
+Kimi-Audio,primary,A_edaic_part14,agreement,0.8744,0.8744,0.8744,True,0.8172,0.8172,0.9223,0.9223,True,True,483,483,138,138,205,205,2000
+Kimi-Audio,primary,A_edaic_part14,conflict_minus_agreement,-0.3486,-0.3486,,True,-0.4248,-0.4248,-0.2795,-0.2795,True,True,966,966,138,138,410,410,2000
+Qwen2.5-Omni,primary,B_pitt,conflict,0.5322,0.5322,0.5322,True,0.4216,0.4215,0.6447,0.6447,True,True,146,146,100,100,101,101,2000
+Qwen2.5-Omni,primary,B_pitt,agreement,0.7054,0.7054,0.7054,True,0.6431,0.6431,0.7658,0.7658,True,True,322,322,175,175,189,189,2000
+Qwen2.5-Omni,primary,B_pitt,conflict_minus_agreement,-0.1731,-0.1731,,True,-0.2958,-0.2958,-0.0392,-0.0392,True,True,468,468,228,228,290,290,2000
+Qwen2-Audio,primary,B_pitt,conflict,0.4132,0.4132,0.4132,True,0.3005,0.3005,0.5423,0.5423,True,True,146,146,100,100,101,101,2000
+Qwen2-Audio,primary,B_pitt,agreement,0.6985,0.6985,0.6985,True,0.6372,0.6372,0.7597,0.7597,True,True,322,322,175,175,189,189,2000
+Qwen2-Audio,primary,B_pitt,conflict_minus_agreement,-0.2853,-0.2853,,True,-0.3950,-0.3950,-0.1485,-0.1485,True,True,468,468,228,228,290,290,2000
+Qwen3-Omni-30B-A3B,primary,B_pitt,conflict,0.6066,0.6066,0.6066,True,0.4956,0.4956,0.7123,0.7123,True,True,146,146,100,100,101,101,2000
+Qwen3-Omni-30B-A3B,primary,B_pitt,agreement,0.8231,0.8231,0.8231,True,0.7664,0.7664,0.8720,0.8720,True,True,322,322,175,175,189,189,2000
+Qwen3-Omni-30B-A3B,primary,B_pitt,conflict_minus_agreement,-0.2165,-0.2165,,True,-0.3242,-0.3242,-0.1052,-0.1052,True,True,468,468,228,228,290,290,2000
+Audio Flamingo 2,af2_pitt468,B_pitt,conflict,0.6310,0.6310,0.6310,True,0.5336,0.5336,0.7260,0.7260,True,True,146,146,100,100,101,101,2000
+Audio Flamingo 2,af2_pitt468,B_pitt,agreement,0.5544,0.5544,0.5544,True,0.4760,0.4760,0.6296,0.6296,True,True,322,322,175,175,189,189,2000
+Audio Flamingo 2,af2_pitt468,B_pitt,conflict_minus_agreement,0.0766,0.0766,,True,-0.0307,-0.0307,0.1869,0.1869,True,True,468,468,228,228,290,290,2000
+Audio Flamingo 2,af2_pitt_audio,B_pitt,conflict,0.6691,0.6691,0.6691,True,0.5650,0.5650,0.7654,0.7654,True,True,146,146,100,100,101,101,2000
+Audio Flamingo 2,af2_pitt_audio,B_pitt,agreement,0.4895,0.4895,0.4895,True,0.4182,0.4182,0.5591,0.5591,True,True,322,322,175,175,189,189,2000
+Audio Flamingo 2,af2_pitt_audio,B_pitt,conflict_minus_agreement,0.1796,0.1796,,True,0.0702,0.0702,0.2825,0.2825,True,True,468,468,228,228,290,290,2000
+Audio Flamingo 3,primary,B_pitt,conflict,0.6169,0.6169,0.6169,True,0.5188,0.5188,0.7209,0.7209,True,True,146,146,100,100,101,101,2000
+Audio Flamingo 3,primary,B_pitt,agreement,0.5822,0.5822,0.5822,True,0.5080,0.5080,0.6528,0.6528,True,True,322,322,175,175,189,189,2000
+Audio Flamingo 3,primary,B_pitt,conflict_minus_agreement,0.0347,0.0347,,True,-0.0698,-0.0698,0.1474,0.1474,True,True,468,468,228,228,290,290,2000
+Kimi-Audio,primary,B_pitt,conflict,0.7197,0.7197,0.7197,True,0.6201,0.6201,0.8147,0.8147,True,True,146,146,100,100,101,101,2000
+Kimi-Audio,primary,B_pitt,agreement,0.7227,0.7227,0.7227,True,0.6560,0.6560,0.7896,0.7896,True,True,322,322,175,175,189,189,2000
+Kimi-Audio,primary,B_pitt,conflict_minus_agreement,-0.0030,-0.0030,,True,-0.1134,-0.1134,0.1065,0.1065,True,True,468,468,228,228,290,290,2000
+Kimi-Audio,alt_overnight_copy,B_pitt,conflict,0.7078,0.7078,0.7078,True,0.6037,0.6037,0.8083,0.8083,True,True,146,146,100,100,101,101,2000
+Kimi-Audio,alt_overnight_copy,B_pitt,agreement,0.7014,0.7014,0.7014,True,0.6309,0.6309,0.7730,0.7730,True,True,322,322,175,175,189,189,2000
+Kimi-Audio,alt_overnight_copy,B_pitt,conflict_minus_agreement,0.0064,0.0064,,True,-0.1140,-0.1140,0.1224,0.1224,True,True,468,468,228,228,290,290,2000

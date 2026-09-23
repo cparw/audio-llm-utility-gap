@@ -1,0 +1,31 @@
+id	what	value	lo	hi	n	n_spk	file
+M4	yes_rate_Qwen2.5-Omni_conflict	0.2236	0.1792	0.2736	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Qwen2.5-Omni_conflict	0.9965			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_Qwen2.5-Omni_agreement	0.2919	0.2073	0.3771	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Qwen2.5-Omni_agreement	0.9969			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_diff_conflict_minus_agreement_Qwen2.5-Omni	-0.0683	-0.1788	0.0474	966	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_Qwen2-Audio_conflict	0.9400	0.9199	0.9612	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Qwen2-Audio_conflict	0.9990			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_Qwen2-Audio_agreement	0.8675	0.8159	0.9102	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Qwen2-Audio_agreement	0.9988			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_diff_conflict_minus_agreement_Qwen2-Audio	0.0725	0.0200	0.1330	966	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_Qwen3-Omni-30B-A3B_conflict	0.3892	0.3347	0.4500	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Qwen3-Omni-30B-A3B_conflict	0.9996			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_Qwen3-Omni-30B-A3B_agreement	0.4182	0.3188	0.5097	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Qwen3-Omni-30B-A3B_agreement	0.9998			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_diff_conflict_minus_agreement_Qwen3-Omni-30B-A3B	-0.0290	-0.1540	0.1078	966	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_AudioFlamingo2_conflict	0.9710	0.9502	0.9887	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_AudioFlamingo2_conflict	0.9424			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_AudioFlamingo2_agreement	0.9834	0.9629	0.9979	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_AudioFlamingo2_agreement	0.9423			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_diff_conflict_minus_agreement_AudioFlamingo2	-0.0124	-0.0280	0.0020	966	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_AudioFlamingo3_conflict	0.7039	0.6533	0.7554	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_AudioFlamingo3_conflict	0.9249			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_AudioFlamingo3_agreement	0.6687	0.5937	0.7371	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_AudioFlamingo3_agreement	0.9403			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_diff_conflict_minus_agreement_AudioFlamingo3	0.0352	-0.0491	0.1281	966	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_Kimi-Audio_conflict	0.8364	0.7976	0.8727	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Kimi-Audio_conflict	0.9992			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_Kimi-Audio_agreement	0.7578	0.6869	0.8221	483	138	scores/part16/M/M4_yes_rates.csv
+M4	median_answer_mass_Kimi-Audio_agreement	0.9992			483	138	scores/part16/M/M4_yes_rates.csv
+M4	yes_rate_diff_conflict_minus_agreement_Kimi-Audio	0.0787	0.0160	0.1461	966	138	scores/part16/M/M4_yes_rates.csv

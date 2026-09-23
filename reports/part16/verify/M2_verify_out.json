@@ -1,0 +1,366 @@
+{
+ "n_eligible": 5523,
+ "n_eligible_speakers": 275,
+ "roberta_arms": {
+  "tag": "roberta",
+  "n_conflict_rule": 488,
+  "n_pool_rule": 1557,
+  "n_pairs": 483,
+  "unmatched": 5,
+  "n_rows": 966,
+  "n_keys": 794,
+  "n_speakers": 138,
+  "depressed_positive": 205,
+  "control_negative": 278,
+  "uniq_conflict_seg": 483,
+  "uniq_agreement_seg": 311
+ },
+ "manifest_rows_disk": 966,
+ "manifest_pairs_disk": 483,
+ "manifest_speakers_disk": 138,
+ "manifest_keys_disk": 794,
+ "my_roberta_rebuild_matches_disk_manifest": true,
+ "distilbert_arms": {
+  "tag": "distilbert@0.7",
+  "n_conflict_rule": 1334,
+  "n_pool_rule": 2875,
+  "n_pairs": 1334,
+  "unmatched": 0,
+  "n_rows": 2668,
+  "n_keys": 2133,
+  "n_speakers": 162,
+  "depressed_positive": 358,
+  "control_negative": 976,
+  "uniq_conflict_seg": 1334,
+  "uniq_agreement_seg": 799
+ },
+ "sweep": [
+  {
+   "thr": 0.7,
+   "n_conflict_rule": 1334,
+   "n_pool_rule": 2875,
+   "n_pairs": 1334,
+   "unmatched": 0,
+   "n_speakers": 162
+  },
+  {
+   "thr": 0.8,
+   "n_conflict_rule": 1300,
+   "n_pool_rule": 2795,
+   "n_pairs": 1300,
+   "unmatched": 0,
+   "n_speakers": 162
+  },
+  {
+   "thr": 0.9,
+   "n_conflict_rule": 1230,
+   "n_pool_rule": 2675,
+   "n_pairs": 1229,
+   "unmatched": 1,
+   "n_speakers": 161
+  },
+  {
+   "thr": 0.95,
+   "n_conflict_rule": 1143,
+   "n_pool_rule": 2531,
+   "n_pairs": 1142,
+   "unmatched": 1,
+   "n_speakers": 160
+  },
+  {
+   "thr": 0.99,
+   "n_conflict_rule": 826,
+   "n_pool_rule": 2030,
+   "n_pairs": 823,
+   "unmatched": 3,
+   "n_speakers": 156
+  },
+  {
+   "thr": 0.995,
+   "n_conflict_rule": 644,
+   "n_pool_rule": 1689,
+   "n_pairs": 640,
+   "unmatched": 4,
+   "n_speakers": 149
+  },
+  {
+   "thr": 0.999,
+   "n_conflict_rule": 249,
+   "n_pool_rule": 893,
+   "n_pairs": 220,
+   "unmatched": 29,
+   "n_speakers": 90
+  },
+  {
+   "thr": 0.9995,
+   "n_conflict_rule": 130,
+   "n_pool_rule": 570,
+   "n_pairs": 90,
+   "unmatched": 40,
+   "n_speakers": 48
+  },
+  {
+   "thr": 0.9999,
+   "n_conflict_rule": 0,
+   "n_pool_rule": 0,
+   "n_pairs": 0,
+   "unmatched": 0,
+   "n_speakers": 0
+  }
+ ],
+ "my_closest_threshold": 0.995,
+ "matched_arms_stats": {
+  "tag": "distilbert@0.995",
+  "n_conflict_rule": 644,
+  "n_pool_rule": 1689,
+  "n_pairs": 640,
+  "unmatched": 4,
+  "n_rows": 1280,
+  "n_keys": 1047,
+  "n_speakers": 149,
+  "depressed_positive": 209,
+  "control_negative": 431,
+  "uniq_conflict_seg": 640,
+  "uniq_agreement_seg": 407
+ },
+ "overlap_same_arm_seg_uid": 625,
+ "overlap_seg_any_arm": 670,
+ "roberta_conflict_483_under_distilbert_selected": {
+  "conflict": 415,
+  "none": 39,
+  "agreement": 29
+ },
+ "conflict_survival_frac": 0.8592132505175983,
+ "roberta_conflict_483_under_distilbert_rule": {
+  "conflict": 415,
+  "agreement": 55,
+  "none": 13
+ },
+ "builder_sentiment_csv_rows": 5523,
+ "score_max_abs_diff": 4.172325134277344e-06,
+ "score_corr": 0.9999999999999509,
+ "score_n_flips_at_0.70": 0,
+ "score_n_flips_at_0.30": 0,
+ "builder_manifest_csv_rows": 2668,
+ "builder_manifest_pairs": 1334,
+ "builder_manifest_speakers": 162,
+ "my_distilbert_manifest_matches_builder": true,
+ "cells": {
+  "label_all": {
+   "name": "label_all",
+   "n": 6214,
+   "n_speakers": 275,
+   "po": 0.42484711940778885,
+   "pe": 0.23507616293409744,
+   "kappa": 0.24809130958922063,
+   "po_lo": 0.4106695696321175,
+   "po_hi": 0.43932125494478735,
+   "kappa_lo": 0.23598270878337466,
+   "kappa_hi": 0.2605458327685545,
+   "usable_po": 2000,
+   "usable_kappa": 2000,
+   "cats": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "confusion": [
+    [
+     901,
+     22,
+     81
+    ],
+    [
+     1893,
+     170,
+     1398
+    ],
+    [
+     141,
+     39,
+     1569
+    ]
+   ]
+  },
+  "label_elig": {
+   "name": "label_elig",
+   "n": 5523,
+   "n_speakers": 275,
+   "po": 0.42857142857142855,
+   "pe": 0.23707204500830054,
+   "kappa": 0.25100585489125443,
+   "po_lo": 0.4129674160852364,
+   "po_hi": 0.44460729338881455,
+   "kappa_lo": 0.23768893282615505,
+   "kappa_hi": 0.26531008507378867,
+   "usable_po": 2000,
+   "usable_kappa": 2000,
+   "cats": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "confusion": [
+    [
+     817,
+     21,
+     74
+    ],
+    [
+     1674,
+     154,
+     1224
+    ],
+    [
+     127,
+     36,
+     1396
+    ]
+   ]
+  },
+  "arm_rule": {
+   "name": "arm_rule",
+   "n": 5523,
+   "n_speakers": 275,
+   "po": 0.552417164584465,
+   "pe": 0.3179126913479421,
+   "kappa": 0.3438041879124698,
+   "po_lo": 0.5286074314817867,
+   "po_hi": 0.5754494489350247,
+   "kappa_lo": 0.3224476382361747,
+   "kappa_hi": 0.36650375398910245,
+   "usable_po": 2000,
+   "usable_kappa": 2000,
+   "cats": [
+    "agreement",
+    "conflict",
+    "none"
+   ],
+   "confusion": [
+    [
+     1414,
+     59,
+     84
+    ],
+    [
+     55,
+     420,
+     13
+    ],
+    [
+     1406,
+     855,
+     1217
+    ]
+   ]
+  },
+  "arm_selected": {
+   "name": "arm_selected",
+   "n": 5523,
+   "n_speakers": 275,
+   "po": 0.7045084193373167,
+   "pe": 0.5548250171316244,
+   "kappa": 0.33623498167224963,
+   "po_lo": 0.6674103379904449,
+   "po_hi": 0.7391154046350137,
+   "kappa_lo": 0.300769728159068,
+   "kappa_hi": 0.37172056272455184,
+   "usable_po": 2000,
+   "usable_kappa": 2000,
+   "cats": [
+    "agreement",
+    "conflict",
+    "none"
+   ],
+   "confusion": [
+    [
+     210,
+     16,
+     85
+    ],
+    [
+     29,
+     415,
+     39
+    ],
+    [
+     560,
+     903,
+     3266
+    ]
+   ]
+  },
+  "arm_rule_matched": {
+   "name": "arm_rule_matched",
+   "n": 5523,
+   "n_speakers": 275,
+   "po": 0.7289516567083107,
+   "pe": 0.4602374040065987,
+   "kappa": 0.4978378544499907,
+   "po_lo": 0.7128158703496257,
+   "po_hi": 0.7460232566239149,
+   "kappa_lo": 0.4728297542307062,
+   "kappa_hi": 0.5233552214167844,
+   "usable_po": 2000,
+   "usable_kappa": 2000,
+   "cats": [
+    "agreement",
+    "conflict",
+    "none"
+   ],
+   "confusion": [
+    [
+     1118,
+     6,
+     433
+    ],
+    [
+     13,
+     313,
+     162
+    ],
+    [
+     558,
+     325,
+     2595
+    ]
+   ]
+  },
+  "arm_selected_matched": {
+   "name": "arm_selected_matched",
+   "n": 5523,
+   "n_speakers": 275,
+   "po": 0.8355965960528698,
+   "pe": 0.708203336079573,
+   "kappa": 0.43658230447774077,
+   "po_lo": 0.8145882884323586,
+   "po_hi": 0.8560283300935687,
+   "kappa_lo": 0.39892326702790604,
+   "kappa_hi": 0.4754860671446636,
+   "usable_po": 2000,
+   "usable_kappa": 2000,
+   "cats": [
+    "agreement",
+    "conflict",
+    "none"
+   ],
+   "confusion": [
+    [
+     154,
+     0,
+     157
+    ],
+    [
+     9,
+     308,
+     166
+    ],
+    [
+     244,
+     332,
+     4153
+    ]
+   ]
+  }
+ }
+}

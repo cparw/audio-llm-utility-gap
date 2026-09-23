@@ -1,0 +1,43 @@
+model,tag,set,arm,n,n_spk,n_pos,auc_ucount,auc_trapz,lo,hi,boot_usable,source_file
+Qwen2.5-Omni,primary,A_edaic_part14,conflict,483,138,205,0.221776,0.221776,0.182865,0.263211,2000,scores/edaic_conflict_v2/p14_o25_zeroshot_scores.csv
+Qwen2.5-Omni,primary,A_edaic_part14,agreement,483,138,205,0.948166,0.948166,0.903882,0.982787,2000,scores/edaic_conflict_v2/p14_o25_zeroshot_scores.csv
+Qwen2.5-Omni,primary,A_edaic_part14,conflict_minus_agreement,966,138,410,-0.726391,,-0.778622,-0.665498,2000,scores/edaic_conflict_v2/p14_o25_zeroshot_scores.csv
+Qwen2-Audio,primary,A_edaic_part14,conflict,483,138,205,0.228022,0.228022,0.181628,0.278164,2000,scores/edaic_conflict_v2/p14_q2a_zeroshot_scores.csv
+Qwen2-Audio,primary,A_edaic_part14,agreement,483,138,205,0.94778,0.94778,0.912791,0.976158,2000,scores/edaic_conflict_v2/p14_q2a_zeroshot_scores.csv
+Qwen2-Audio,primary,A_edaic_part14,conflict_minus_agreement,966,138,410,-0.719758,,-0.768865,-0.667877,2000,scores/edaic_conflict_v2/p14_q2a_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,primary,A_edaic_part14,conflict,483,138,205,0.300755,0.300755,0.245418,0.364124,2000,scores/edaic_conflict_v2/p14_q3o_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,primary,A_edaic_part14,agreement,483,138,205,0.963766,0.963766,0.933572,0.986417,2000,scores/edaic_conflict_v2/p14_q3o_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,primary,A_edaic_part14,conflict_minus_agreement,966,138,410,-0.663011,,-0.719208,-0.602956,2000,scores/edaic_conflict_v2/p14_q3o_zeroshot_scores.csv
+Audio Flamingo 2,primary,A_edaic_part14,conflict,483,138,205,0.528566,0.528566,0.451151,0.601477,2000,scores/edaic_conflict_v2/p14_af2.csv
+Audio Flamingo 2,primary,A_edaic_part14,agreement,483,138,205,0.6083,0.6083,0.512642,0.699718,2000,scores/edaic_conflict_v2/p14_af2.csv
+Audio Flamingo 2,primary,A_edaic_part14,conflict_minus_agreement,966,138,410,-0.079733,,-0.148799,-0.010356,2000,scores/edaic_conflict_v2/p14_af2.csv
+Audio Flamingo 3,primary,A_edaic_part14,conflict,483,138,205,0.42353,0.42353,0.360586,0.48801,2000,scores/edaic_conflict_v2/p14_af3.csv
+Audio Flamingo 3,primary,A_edaic_part14,agreement,483,138,205,0.809528,0.809528,0.744675,0.869645,2000,scores/edaic_conflict_v2/p14_af3.csv
+Audio Flamingo 3,primary,A_edaic_part14,conflict_minus_agreement,966,138,410,-0.385998,,-0.467513,-0.301779,2000,scores/edaic_conflict_v2/p14_af3.csv
+Kimi-Audio,primary,A_edaic_part14,conflict,483,138,205,0.525847,0.525847,0.450066,0.597714,2000,scores/edaic_conflict_v2/p14_kimi_zeroshot_scores.csv
+Kimi-Audio,primary,A_edaic_part14,agreement,483,138,205,0.874417,0.874417,0.817242,0.922334,2000,scores/edaic_conflict_v2/p14_kimi_zeroshot_scores.csv
+Kimi-Audio,primary,A_edaic_part14,conflict_minus_agreement,966,138,410,-0.34857,,-0.424833,-0.279517,2000,scores/edaic_conflict_v2/p14_kimi_zeroshot_scores.csv
+Qwen2.5-Omni,primary,B_pitt,conflict,146,100,101,0.532233,0.532233,0.42155,0.644694,2000,<local data dir>/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv
+Qwen2.5-Omni,primary,B_pitt,agreement,322,175,189,0.705375,0.705375,0.643122,0.765773,2000,<local data dir>/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv
+Qwen2.5-Omni,primary,B_pitt,conflict_minus_agreement,468,228,290,-0.173141,,-0.29581,-0.039184,2000,<local data dir>/Desktop/release/omni_final/omni_pitt_zeroshot_scores.csv
+Qwen2-Audio,primary,B_pitt,conflict,146,100,101,0.413201,0.413201,0.300507,0.5423,2000,<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv
+Qwen2-Audio,primary,B_pitt,agreement,322,175,189,0.698452,0.698452,0.63723,0.759682,2000,<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv
+Qwen2-Audio,primary,B_pitt,conflict_minus_agreement,468,228,290,-0.285251,,-0.394969,-0.148477,2000,<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,primary,B_pitt,conflict,146,100,101,0.606601,0.606601,0.495568,0.712291,2000,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,primary,B_pitt,agreement,322,175,189,0.823129,0.823129,0.766395,0.871971,2000,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv
+Qwen3-Omni-30B-A3B,primary,B_pitt,conflict_minus_agreement,468,228,290,-0.216529,,-0.324226,-0.105171,2000,<local data dir>/Desktop/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv
+Audio Flamingo 2,af2_pitt468,B_pitt,conflict,146,100,101,0.631023,0.631023,0.533585,0.725997,2000,<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv
+Audio Flamingo 2,af2_pitt468,B_pitt,agreement,322,175,189,0.554442,0.554442,0.476015,0.629642,2000,<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv
+Audio Flamingo 2,af2_pitt468,B_pitt,conflict_minus_agreement,468,228,290,0.076581,,-0.030712,0.186912,2000,<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv
+Audio Flamingo 2,af2_pitt_audio,B_pitt,conflict,146,100,101,0.669087,0.669087,0.565017,0.765442,2000,<local data dir>/paper1_local_runs/af2_pitt_audio.csv
+Audio Flamingo 2,af2_pitt_audio,B_pitt,agreement,322,175,189,0.489478,0.489478,0.418152,0.559108,2000,<local data dir>/paper1_local_runs/af2_pitt_audio.csv
+Audio Flamingo 2,af2_pitt_audio,B_pitt,conflict_minus_agreement,468,228,290,0.179609,,0.070182,0.282513,2000,<local data dir>/paper1_local_runs/af2_pitt_audio.csv
+Audio Flamingo 3,primary,B_pitt,conflict,146,100,101,0.616942,0.616942,0.518757,0.720865,2000,<local data dir>/Desktop/release/overnight2/part3/af3_pitt.csv
+Audio Flamingo 3,primary,B_pitt,agreement,322,175,189,0.582209,0.582209,0.508005,0.652847,2000,<local data dir>/Desktop/release/overnight2/part3/af3_pitt.csv
+Audio Flamingo 3,primary,B_pitt,conflict_minus_agreement,468,228,290,0.034732,,-0.069833,0.14741,2000,<local data dir>/Desktop/release/overnight2/part3/af3_pitt.csv
+Kimi-Audio,primary,B_pitt,conflict,146,100,101,0.719692,0.719692,0.620068,0.814731,2000,<local data dir>/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+Kimi-Audio,primary,B_pitt,agreement,322,175,189,0.72268,0.72268,0.65603,0.789573,2000,<local data dir>/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+Kimi-Audio,primary,B_pitt,conflict_minus_agreement,468,228,290,-0.002988,,-0.113389,0.106529,2000,<local data dir>/Desktop/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv
+Kimi-Audio,alt_overnight_copy,B_pitt,conflict,146,100,101,0.707811,0.707811,0.603733,0.808336,2000,<local data dir>/Desktop/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv
+Kimi-Audio,alt_overnight_copy,B_pitt,agreement,322,175,189,0.701436,0.701436,0.630933,0.773036,2000,<local data dir>/Desktop/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv
+Kimi-Audio,alt_overnight_copy,B_pitt,conflict_minus_agreement,468,228,290,0.006375,,-0.113988,0.122392,2000,<local data dir>/Desktop/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv
