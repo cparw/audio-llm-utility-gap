@@ -1,0 +1,44 @@
+[
+ {
+  "id": "C_af3_part10_conflict",
+  "what": "Pitt AF3 zero-shot answer AUC, conflict arm (alternative copy overnight2/part10; matches paper Table 2)",
+  "value_computed": "0.6075",
+  "value_verified": "0.6075",
+  "lo": "0.5063",
+  "hi": "0.7129",
+  "n": 146,
+  "n_spk": 100,
+  "file": "release/overnight2/part10/af3_pitt.csv (collected as scores/part20/POD6/C_landed/C_af3_pitt_part10_arms.csv)",
+  "two_dp": "0.61 [0.51, 0.71]",
+  "vs_half": "above",
+  "agree_4dp": "yes"
+ },
+ {
+  "id": "C_af3_part10_agreement",
+  "what": "Pitt AF3 zero-shot answer AUC, agreement arm (alternative copy overnight2/part10; matches paper Table 2)",
+  "value_computed": "0.5855",
+  "value_verified": "0.5855",
+  "lo": "0.5144",
+  "hi": "0.6554",
+  "n": 322,
+  "n_spk": 175,
+  "file": "release/overnight2/part10/af3_pitt.csv (collected as scores/part20/POD6/C_landed/C_af3_pitt_part10_arms.csv)",
+  "two_dp": "0.59 [0.51, 0.66]",
+  "vs_half": "above",
+  "agree_4dp": "yes"
+ },
+ {
+  "id": "C_af3_part10_conflict_minus_agreement",
+  "what": "Pitt AF3 conflict minus agreement AUC, one speaker draw per replicate (overnight2/part10 copy)",
+  "value_computed": "0.0220",
+  "value_verified": "0.0220",
+  "lo": "-0.0846",
+  "hi": "0.1357",
+  "n": 468,
+  "n_spk": 228,
+  "file": "release/overnight2/part10/af3_pitt.csv (collected as scores/part20/POD6/C_landed/C_af3_pitt_part10_arms.csv)",
+  "two_dp": "0.02 [-0.08, 0.14]",
+  "vs_half": "spans 0",
+  "agree_4dp": "yes"
+ }
+]

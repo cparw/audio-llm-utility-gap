@@ -1,0 +1,50 @@
+{
+ "result": "COLLECTED, NOT RERUN: Pitt conflict-minus-agreement six models (M8 B_pitt rows, verified 55/55 on the Mac) and Pitt transcript by arm on the Sep 20 run (T6)",
+ "m8_rows": 24,
+ "models": [
+  "Audio Flamingo 2",
+  "Audio Flamingo 3",
+  "Kimi-Audio",
+  "Qwen2-Audio",
+  "Qwen2.5-Omni",
+  "Qwen3-Omni-30B-A3B"
+ ],
+ "sources": [
+  "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+  "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv",
+  "<local data dir>/release/overnight2/part3/af3_pitt.csv",
+  "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv",
+  "<local data dir>/paper1_local_runs/af2_pitt_audio.csv",
+  "<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv",
+  "<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+  "<local data dir>/release/edaic_rerun/part16/M8_conflict_cells.csv",
+  "<local data dir>/release/edaic_rerun/part17/T6_pitt_text_sep20_arms.csv",
+  "<local data dir>/release/edaic_rerun/part17/T6_pitt_text_sep20_arms.json",
+  "<local data dir>/release/edaic_rerun/part17/T6_pitt_text_sep20_arms.py",
+  "<local data dir>/release/edaic_rerun/part17/rows/T6.tsv",
+  "<local data dir>/release/edaic_rerun/part17/T6_run.log"
+ ],
+ "command": "/usr/local/bin/python3 scripts/c_collect.py scores/part20/POD6/C_landed",
+ "sources_sha256_first_1MB": {
+  "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+  "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv": "8023fd5845b7c4d89b4c4e1ef66aab9b77373cb67cca46496eb6a673359a89ad",
+  "<local data dir>/release/overnight2/part3/af3_pitt.csv": "675eab0366cb0506ee8fcec01b623e587278dd7251613325d96ee12e19909c4f",
+  "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365",
+  "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv": "9d7348cb925b6ed060f72bba32de4773c40af0a59b61c93e60c92fabc38d42d6",
+  "<local data dir>/release/edaic_rerun/part16/M8_conflict_cells.csv": "d56d1202786a7f9d35aca658020ca40c08a4798a43780a02c9627a955cf5169d",
+  "<local data dir>/release/edaic_rerun/part17/T6_pitt_text_sep20_arms.csv": "4534c06cfbf982db6db5d8d8ed702b8179d4cdbc35b24bcb549078197bd9a454",
+  "<local data dir>/release/edaic_rerun/part17/T6_pitt_text_sep20_arms.json": "19ff31c6a59fc07812c4faddf63f5ecbe953fa0d4d3ac345fa3804cc62945107",
+  "<local data dir>/release/edaic_rerun/part17/T6_pitt_text_sep20_arms.py": "4dc55dda42266d98f30d848ff28d210ae7d50618c8c181ca0c6001c2b3494a3a",
+  "<local data dir>/release/edaic_rerun/part17/rows/T6.tsv": "8139dc728f1b6d0c5c391d753f5f222dd2fd5d08743242ac1b19241dba1da14e",
+  "<local data dir>/release/edaic_rerun/part17/T6_run.log": "f0281793f07f6f549baf216df452020fb7cbf3a82303870e896c27c5d24bdfaf",
+  "<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv": "7b1120ad367341954adc1722aef739227a51f514b4bbeeb5a1db7c1044527a35",
+  "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv": "f70f37696cd46110933d452037a038253c13c0c1b0ec09a86c06832ba4787e25",
+  "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv": "9cd9800ed47adee9d9912219bf31db487d4941128364d80babf3d0488fbfff6c"
+ },
+ "moved_paths_today": {
+  "<local data dir>/paper1_local_runs/af2_pitt_audio.csv": "<local data dir>/paper work/paper1_local_runs/af2_pitt_audio.csv",
+  "<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv": "<local data dir>/paper work/paper1_local_runs/af2_results/af2_pitt468.csv",
+  "<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv": "<local data dir>/paper work/paper1_local_runs/probe2/pitt_zeroshot_scores.csv"
+ }
+}
