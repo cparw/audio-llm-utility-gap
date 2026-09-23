@@ -1,0 +1,16 @@
+paper_vs_omni: scores/part17/paper_vs_omni.csv
+tex: scores/part17/part12_prep/pasted_tex_dryrun.tex
+added basis: added since Sep 14 tex (superset of the 23 Sep additions; the input equals the pasted tex)
+
+group         MATCH  MISMATCH  UNMATCHED   (of UNMATCHED: method/design constants)
+red               8         2          0   (0)
+added_23sep     103         4         18   (16)
+other             3         0          1   (1)
+
+MISMATCH rows:
+  [red] line 154  paper 0.06 on PC-GITA to 0.18  file 0.0095 to 0.1810  egemaps_adress2020_oof.csv
+  [red] line 248  paper (claim, no number)  file pcgita +0.3227 [0.2391, 0.404]; neurovoz  C_intervals.csv
+  [added_23sep] line 104  paper 0.92  file 0.7082  pitt_all_segments.csv
+  [added_23sep] line 154  paper 0.69  file 0.7088  edaic_full_perclip.csv
+  [added_23sep] line 177  paper 0.61  file 0.6169  af3_pitt.csv
+  [added_23sep] line 177  paper 0.59  file 0.5822  af3_pitt.csv
