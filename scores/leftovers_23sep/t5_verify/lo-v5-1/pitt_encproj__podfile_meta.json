@@ -1,0 +1,22 @@
+{
+ "npz": "in/pitt_encproj.npz",
+ "tag": "pitt_encproj__podfile",
+ "folds": "folds/pitt_groupkfold5_pod.csv",
+ "dtype": "f32",
+ "nproc": 30,
+ "n": 468,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": null
+ },
+ "fold_sizes": [
+  94,
+  94,
+  94,
+  93,
+  93
+ ],
+ "seconds": 0.7
+}
