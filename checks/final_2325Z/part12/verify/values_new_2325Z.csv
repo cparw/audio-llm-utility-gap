@@ -1,0 +1,22 @@
+id,value,lo,hi,n,n_spk,file,how
+edaic_whole_zs,0.8366,0.7786,0.8866,275,275.0,scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv,AUC p_yes_whole
+edaic_whole_llm_meanof5,0.7437,,,275,275.0,scores/part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv,mean of five per-repeat AUCs of oof_llm_r0..r4
+edaic_whole_enc_meanof5,0.5981,,,275,275.0,scores/part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv,mean of five per-repeat AUCs of oof_enc_r0..r4
+edaic_whole_ans_meanof5,0.8359,,,275,275.0,scores/part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv,mean of five per-repeat AUCs of oof_ans_r0..r4
+edaic_whole_ans_minus_zs,-0.0007,-0.0455,0.0436,275,275.0,scores/part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv,"answer-state mean of five minus p_yes_whole, paired"
+edaic_ft_seed0,0.8589,0.805,0.9029,275,275.0,scores/part24/FT/FT24_whole_seed0_perclip.csv,AUC p_yes pooled OOF
+edaic_ft_seed0_minus_zs,0.0223,-0.0064,0.0547,275,275.0,scores/part24/FT/FT24_whole_seed0_perclip.csv + A2,"paired, join on pid"
+edaic_ft_seed1,0.8184,0.7496,0.8758,275,275.0,scores/part24/FT/FT24_whole_seed1all_perclip.csv,AUC p_yes pooled OOF
+edaic_zs_first30,0.662,0.5831,0.7315,275,275.0,<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv,AUC p_yes
+edaic_zs_mid30,0.7205,0.6531,0.7917,275,275.0,<local data dir>/release/edaic_rerun/variants/o25_mid30_zeroshot_scores.csv,AUC p_yes
+edaic_zs_mid300,0.8122,0.7479,0.8707,275,275.0,<local data dir>/release/edaic_rerun/variants/o25_mid300_zeroshot_scores.csv,AUC p_yes
+edaic_zs_first300,0.8285,0.7708,0.8827,275,275.0,<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv,AUC p_yes
+edaic_enc_NR30_MAC,0.5966,,,275,,<local data dir>/release/omni_final/omni_edaic_nested_repeats.json,"mean of enc.per_repeat [0.5795, 0.6283, 0.5626, 0.6301, 0.5825]"
+edaic_enc_NR30_GD,0.5966,,,275,,<local data dir>/paper1_local_runs/omni_final/omni_edaic_nested_repeats.json,"mean of enc.per_repeat [0.5795, 0.6283, 0.5626, 0.6301, 0.5825]"
+edaic_enc_NRMID30,0.5771,,,275,,<local data dir>/release/edaic_rerun/variants/o25_mid30_nested_repeats.json,"mean of enc.per_repeat [0.5695, 0.5689, 0.5485, 0.5805, 0.6179]"
+edaic_enc_NRMID300,0.6168,,,275,,<local data dir>/release/edaic_rerun/variants/o25_mid300_nested_repeats.json,"mean of enc.per_repeat [0.6403, 0.5629, 0.5916, 0.6233, 0.6657]"
+edaic_enc_first300,0.5884,,,275,,<local data dir>/release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv,mean of five oof_enc
+pairs_ft_conflict,0.5932,0.5087,0.6831,483,138.0,<local data dir>/release/scores/part20/POD3/p14_ft966_oof.csv,"AUC p_yes, 483 conflict rows"
+pairs_ft_agree_distinct,0.6686,0.5727,0.7586,311,138.0,<local data dir>/release/scores/part20/POD3/p14_ft966_oof.csv,"AUC p_yes, distinct agreement seg_uid"
+pairs_zs_agree_distinct,0.9647,0.9376,0.9857,311,138.0,<local data dir>/release/edaic_rerun/part17/T1_perclip_distinct_agreement.csv,"AUC p_o25, 311 distinct agreement"
+pairs_zs_conflict,0.2218,0.1829,0.2632,483,138.0,<local data dir>/release/edaic_rerun/part14/p14_o25_zeroshot_scores.csv,"AUC p_yes, conflict rows"
