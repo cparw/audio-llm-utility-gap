@@ -1,0 +1,2 @@
+stage,stage_name,auc_mean,auc_std,ci_lo,ci_hi,boot_draws,per_repeat,n,n_speakers
+0,projected_audio_input,0.782013,0.0,0.722757,0.836818,2000,0.782013,468,228
