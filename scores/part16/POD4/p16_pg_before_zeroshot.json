@@ -1,0 +1,16 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/workspace/p16pod4/pg/mf_pg.csv",
+ "condition": "pd",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "n": 1100,
+ "n_positive": 550,
+ "auc": 0.5728,
+ "median_mass": 0.9951,
+ "window_seconds": 30.0,
+ "dtype": "bfloat16",
+ "device": "cuda",
+ "encoder_layers": 32,
+ "llm_stages": 29,
+ "date": "2026-09-23"
+}

@@ -1,0 +1,38 @@
+[
+ {
+  "id": "POD4_4a_nv_5f_before",
+  "reported": 0.7977,
+  "verify": 0.7977,
+  "match": true,
+  "lo": 0.7248,
+  "hi": 0.8611,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_nv_5f_after",
+  "reported": 0.6025,
+  "verify": 0.6025,
+  "match": true,
+  "lo": 0.5479,
+  "hi": 0.658,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_pg_5f_before",
+  "reported": 0.6657,
+  "verify": 0.6657,
+  "match": true,
+  "lo": 0.5851,
+  "hi": 0.7452,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_pg_5f_after",
+  "reported": 0.559,
+  "verify": 0.559,
+  "match": true,
+  "lo": 0.4922,
+  "hi": 0.6213,
+  "usable_draws": 2000
+ }
+]

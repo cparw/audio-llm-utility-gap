@@ -1,0 +1,56 @@
+[
+ {
+  "id": "POD4_4a_pg_zs_before",
+  "reported": 0.5728,
+  "verify": 0.5728,
+  "match": true,
+  "lo": 0.5002,
+  "hi": 0.644,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_pg_enc_before",
+  "reported": 0.8959,
+  "verify": 0.8959,
+  "match": true,
+  "lo": 0.8339,
+  "hi": 0.9448,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_pg_zs_after",
+  "reported": 0.5674,
+  "verify": 0.5674,
+  "match": true,
+  "lo": 0.5054,
+  "hi": 0.6304,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_pg_enc_after",
+  "reported": 0.8298,
+  "verify": 0.8298,
+  "match": true,
+  "lo": 0.7546,
+  "hi": 0.8968,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_pg_pd_zs",
+  "reported": -0.0054,
+  "verify": -0.0054,
+  "match": true,
+  "lo": -0.0437,
+  "hi": 0.0357,
+  "usable_draws": 2000
+ },
+ {
+  "id": "POD4_4a_pg_pd_enc",
+  "reported": -0.0661,
+  "verify": -0.0661,
+  "match": true,
+  "lo": -0.1181,
+  "hi": -0.018,
+  "usable_draws": 2000
+ }
+]
