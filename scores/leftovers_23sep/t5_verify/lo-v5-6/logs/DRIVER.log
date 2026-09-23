@@ -1,0 +1,7 @@
+23:04:17 START lo-v5-6 host dcbfc73b7c4f nproc 32
+23:04:17 pip: rc 0
+23:09:27 upload done
+23:09:28 envfolds rc 0
+23:09:30 edaic30_llm__exact rc 0 REFIT DONE edaic30_llm__exact 1.7
+23:09:33 edaic30_ans__exact rc 0 REFIT DONE edaic30_ans__exact 1.3
+23:09:33 ALL DONE

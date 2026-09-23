@@ -1,0 +1,7 @@
+23:03:46 START lo-v5-8 host c8d81c05b37f nproc 32
+23:03:46 pip: rc 0
+23:06:19 upload done
+23:06:21 envfolds rc 0
+23:06:24 pitt_encproj__exact rc 0 REFIT DONE pitt_encproj__exact 2.0
+23:06:27 edaic30_encproj__exact rc 0 REFIT DONE edaic30_encproj__exact 1.4
+23:06:27 ALL DONE

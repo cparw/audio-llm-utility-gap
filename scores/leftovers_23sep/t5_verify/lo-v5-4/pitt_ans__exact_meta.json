@@ -1,0 +1,22 @@
+{
+ "npz": "in/pitt_ans.npz",
+ "tag": "pitt_ans__exact",
+ "folds": "mine",
+ "dtype": "f32",
+ "nproc": 30,
+ "n": 468,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": null
+ },
+ "fold_sizes": [
+  94,
+  94,
+  94,
+  93,
+  93
+ ],
+ "seconds": 2.2
+}

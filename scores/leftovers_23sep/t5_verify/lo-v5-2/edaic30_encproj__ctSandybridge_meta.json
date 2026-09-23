@@ -1,0 +1,22 @@
+{
+ "npz": "in/edaic30_encproj.npz",
+ "tag": "edaic30_encproj__ctSandybridge",
+ "folds": "mine",
+ "dtype": "f32",
+ "nproc": 30,
+ "n": 275,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": "Sandybridge"
+ },
+ "fold_sizes": [
+  55,
+  55,
+  55,
+  55,
+  55
+ ],
+ "seconds": 0.8
+}

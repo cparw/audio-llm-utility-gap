@@ -1,0 +1,17 @@
+23:04:09 START lo-v5-2 host c388c00ee12c nproc 32
+23:04:09 pip: rc 0
+23:08:10 upload done
+23:08:11 envfolds rc 0
+23:08:14 edaic30_encproj__exact rc 0 REFIT DONE edaic30_encproj__exact 1.6
+23:08:16 edaic30_encproj__podfile rc 0 REFIT DONE edaic30_encproj__podfile 0.9
+23:08:19 edaic30_encproj__macfile rc 0 REFIT DONE edaic30_encproj__macfile 0.9
+23:08:21 edaic30_encproj__f64 rc 0 REFIT DONE edaic30_encproj__f64 1.0
+23:08:35 edaic30_encproj__thr8 rc 0 REFIT DONE edaic30_encproj__thr8 12.8
+23:08:38 edaic30_encproj__ctHaswell rc 0 REFIT DONE edaic30_encproj__ctHaswell 1.1
+23:08:40 edaic30_encproj__ctZen rc 0 REFIT DONE edaic30_encproj__ctZen 0.8
+23:08:42 edaic30_encproj__ctSandybridge rc 0 REFIT DONE edaic30_encproj__ctSandybridge 0.8
+23:08:45 edaic30_encproj__ctPrescott rc 0 REFIT DONE edaic30_encproj__ctPrescott 1.3
+23:08:48 edaic30_encproj__ctSkylakeX rc 0 REFIT DONE edaic30_encproj__ctSkylakeX 1.2
+23:08:50 edaic30_encproj__ctSapphireRapids rc 0 REFIT DONE edaic30_encproj__ctSapphireRapids 1.2
+23:08:53 edaicfull_encproj__exact rc 0 REFIT DONE edaicfull_encproj__exact 1.7
+23:08:53 ALL DONE

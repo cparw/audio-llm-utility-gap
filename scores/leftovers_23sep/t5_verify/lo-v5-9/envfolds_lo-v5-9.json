@@ -1,0 +1,62 @@
+{
+ "threadpool": [
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 1,
+   "prefix": "libscipy_openblas",
+   "filepath": "/usr/local/lib/python3.12/dist-packages/scipy.libs/libscipy_openblas-5f890258.so",
+   "version": "0.3.31.dev",
+   "threading_layer": "pthreads",
+   "architecture": "Haswell"
+  },
+  {
+   "user_api": "openmp",
+   "internal_api": "openmp",
+   "num_threads": 1,
+   "prefix": "libgomp",
+   "filepath": "/usr/local/lib/python3.12/dist-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+   "version": null
+  },
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 1,
+   "prefix": "libscipy_openblas",
+   "filepath": "/usr/local/lib/python3.12/dist-packages/numpy.libs/libscipy_openblas64_-ff651d7f.so",
+   "version": "0.3.27",
+   "threading_layer": "pthreads",
+   "architecture": "Haswell"
+  }
+ ],
+ "avx512f": false,
+ "cpu": "AMD EPYC 7713 64-Core Processor",
+ "python": "3.12.3",
+ "numpy": "2.1.2",
+ "scipy": "1.18.1",
+ "sklearn": "1.9.1",
+ "groupkfold_argsort_lines": [
+  "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+ ],
+ "pitt": {
+  "n": 468,
+  "n_speakers": 228,
+  "argsort_default_equals_stable": false,
+  "sklearn_eq_mine_stable": 468,
+  "sklearn_eq_mine_default": 125,
+  "pod_file": {
+   "n_file": 468,
+   "missing": 0,
+   "sklearn_here_eq": 468,
+   "mine_stable_eq": 468,
+   "mine_default_eq": 125
+  },
+  "mac_file": {
+   "n_file": 468,
+   "missing": 0,
+   "sklearn_here_eq": 125,
+   "mine_stable_eq": 125,
+   "mine_default_eq": 96
+  }
+ }
+}

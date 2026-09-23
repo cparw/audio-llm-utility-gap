@@ -1,0 +1,22 @@
+{
+ "npz": "in/adress2020_encproj.npz",
+ "tag": "adress2020_encproj__exact",
+ "folds": "mine",
+ "dtype": "f32",
+ "nproc": 30,
+ "n": 156,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": null
+ },
+ "fold_sizes": [
+  32,
+  31,
+  31,
+  31,
+  31
+ ],
+ "seconds": 0.7
+}

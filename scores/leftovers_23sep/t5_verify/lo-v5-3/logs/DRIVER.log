@@ -1,0 +1,7 @@
+23:04:08 START lo-v5-3 host f0dea11d99bf nproc 32
+23:04:08 pip: rc 0
+23:10:42 upload done
+23:10:43 envfolds rc 0
+23:10:47 pitt_llm__exact rc 0 REFIT DONE pitt_llm__exact 2.6
+23:10:51 neurovoz_encproj__exact rc 0 REFIT DONE neurovoz_encproj__exact 2.8
+23:10:51 ALL DONE

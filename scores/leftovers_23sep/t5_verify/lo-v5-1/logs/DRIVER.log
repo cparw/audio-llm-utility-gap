@@ -1,0 +1,17 @@
+23:04:07 START lo-v5-1 host a9586d3e5aaa nproc 32
+23:04:07 pip: rc 0
+23:08:10 upload done
+23:08:11 envfolds rc 0
+23:08:14 pitt_encproj__exact rc 0 REFIT DONE pitt_encproj__exact 1.3
+23:08:15 pitt_encproj__podfile rc 0 REFIT DONE pitt_encproj__podfile 0.7
+23:08:17 pitt_encproj__macfile rc 0 REFIT DONE pitt_encproj__macfile 0.8
+23:08:19 pitt_encproj__f64 rc 0 REFIT DONE pitt_encproj__f64 1.0
+23:10:19 pitt_encproj__thr8 rc 0 REFIT DONE pitt_encproj__thr8 118.7
+23:10:20 pitt_encproj__ctHaswell rc 0 REFIT DONE pitt_encproj__ctHaswell 0.7
+23:10:22 pitt_encproj__ctZen rc 0 REFIT DONE pitt_encproj__ctZen 0.7
+23:10:23 pitt_encproj__ctSandybridge rc 0 REFIT DONE pitt_encproj__ctSandybridge 0.7
+23:10:25 pitt_encproj__ctPrescott rc 0 REFIT DONE pitt_encproj__ctPrescott 0.9
+23:10:27 pitt_encproj__ctSkylakeX rc 0 REFIT DONE pitt_encproj__ctSkylakeX 0.7
+23:10:29 pitt_encproj__ctSapphireRapids rc 0 REFIT DONE pitt_encproj__ctSapphireRapids 0.7
+23:10:30 adress2020_encproj__exact rc 0 REFIT DONE adress2020_encproj__exact 0.7
+23:10:30 ALL DONE
