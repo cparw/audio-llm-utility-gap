@@ -1,0 +1,28 @@
+python 3.12.3 torch 2.8.0+cu128 transformers 4.46.3
+/workspace/af2code/af2/af2_code/src/helpers.py:178: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/workspace/af2code/af2/af2_code/src/helpers.py:203: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+/usr/local/lib/python3.12/dist-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Finetuning CLAP encoder as well!
+loaded NVCLAP model: /workspace/hf/hub/models--nvidia--audio-flamingo-2/snapshots/3a7f4aea17e72c7367940affea6749069a7095fc/clap_ckpt/epoch_16.pt
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:25<00:25, 25.34s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:41<00:00, 19.84s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:41<00:00, 20.66s/it]
+Flamingo model initialized with 2,024,176,031 trainable parameters (audio transformer has 75,538,432, LM has 1,669,867,592)
+AF2 READY 580s dtype torch.float32
+canonical YES (7414, 9454, 9834, 9693) [' Yes', 'Yes', ' yes', 'yes'] NO (2308, 2753, 902, 2152) [' No', 'No', ' no', 'no']
+rule3 YES [7414, 9454, 9693, 9834, 14004, 14080] [' Yes', 'Yes', 'yes', ' yes', 'YES', ' YES'] NO [902, 2152, 2308, 2753, 5664, 8996] [' no', 'no', ' No', 'No', ' NO', 'NO']
+468 rows, 0 already done
+/usr/local/lib/python3.12/dist-packages/torchaudio/transforms/_transforms.py:581: UserWarning: Argument 'onesided' has been deprecated and has no influence on the behavior of this module.
+  warnings.warn(
+50/468 p_yes 0.6295 mass 0.9609 178s
+100/468 p_yes 0.6432 mass 0.9749 270s
+150/468 p_yes 0.5592 mass 0.9611 374s
+200/468 p_yes 0.5686 mass 0.9611 469s
+250/468 p_yes 0.3436 mass 0.9752 584s
+300/468 p_yes 0.5798 mass 0.9737 690s
+350/468 p_yes 0.5707 mass 0.9773 783s
+400/468 p_yes 0.6830 mass 0.9785 867s
+450/468 p_yes 0.5768 mass 0.9598 1000s
+468/468 p_yes 0.6107 mass 0.9789 1060s
+AF2_DONE work/af2_noinv468.csv

@@ -1,0 +1,18 @@
+/workspace/analyze.py:106: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "date_utc": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")}
+PASTE af3_noinv_all: 0.5920 [0.5293, 0.6577] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af3_noinv_all.csv | 0.59 above 0.5
+PASTE af3_orig_part3_all: 0.5885 [0.5285, 0.6489] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af3_orig_part3_all.csv | 0.59 above 0.5
+PASTE af3_diff_part3_minus_noinv_all: -0.0034 [-0.0611, 0.0542] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af3_diff_part3_minus_noinv_all.csv | -0.00 interval includes zero
+PASTE af3_orig_part10_all: 0.5894 [0.5302, 0.6476] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af3_orig_part10_all.csv | 0.59 above 0.5
+PASTE af3_diff_part10_minus_noinv_all: -0.0026 [-0.0600, 0.0548] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af3_diff_part10_minus_noinv_all.csv | -0.00 interval includes zero
+PASTE af3_noinv_conflict: 0.5417 [0.4202, 0.6621] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af3_noinv_conflict.csv | 0.54 above 0.5
+PASTE af3_orig_part3_conflict: 0.6169 [0.5188, 0.7209] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af3_orig_part3_conflict.csv | 0.62 above 0.5
+PASTE af3_diff_part3_minus_noinv_conflict: 0.0752 [-0.0240, 0.1752] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af3_diff_part3_minus_noinv_conflict.csv | 0.08 interval includes zero
+PASTE af3_orig_part10_conflict: 0.6075 [0.5063, 0.7129] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af3_orig_part10_conflict.csv | 0.61 above 0.5
+PASTE af3_diff_part10_minus_noinv_conflict: 0.0658 [-0.0359, 0.1653] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af3_diff_part10_minus_noinv_conflict.csv | 0.07 interval includes zero
+PASTE af3_noinv_agreement: 0.6140 [0.5427, 0.6798] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af3_noinv_agreement.csv | 0.61 above 0.5
+PASTE af3_orig_part3_agreement: 0.5822 [0.5080, 0.6528] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af3_orig_part3_agreement.csv | 0.58 above 0.5
+PASTE af3_diff_part3_minus_noinv_agreement: -0.0318 [-0.0984, 0.0395] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af3_diff_part3_minus_noinv_agreement.csv | -0.03 interval includes zero
+PASTE af3_orig_part10_agreement: 0.5855 [0.5144, 0.6554] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af3_orig_part10_agreement.csv | 0.59 above 0.5
+PASTE af3_diff_part10_minus_noinv_agreement: -0.0285 [-0.0959, 0.0404] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af3_diff_part10_minus_noinv_agreement.csv | -0.03 interval includes zero
+SUMMARY {'noinv_all': 0.592, 'part3_all': 0.5885, 'part10_all': 0.5894, 'noinv_conflict': 0.5417, 'part3_conflict': 0.6169, 'part10_conflict': 0.6075, 'noinv_agreement': 0.614, 'part3_agreement': 0.5822, 'part10_agreement': 0.5855}
