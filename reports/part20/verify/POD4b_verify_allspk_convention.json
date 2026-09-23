@@ -1,0 +1,246 @@
+{
+ "report": {
+  "n_new_rows": 468,
+  "new_unique_clips": 468,
+  "missing_new": 0,
+  "missing_orig": 0,
+  "missing_rerun": 0,
+  "label_mismatch_new_vs_spine": 0,
+  "speaker_partition_identical": true,
+  "n": 468,
+  "n_speakers_spine": 228,
+  "n_speakers_newcsv": 228,
+  "n_pos": 290,
+  "n_neg": 178,
+  "arm_counts": {
+   "agreement": 322,
+   "conflict": 146
+  },
+  "prompts_in_csv": [
+   "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+  ],
+  "prompt_verbatim_ok": true
+ },
+ "point": {
+  "new_overall": {
+   "auc": 0.7801627276249515,
+   "auc_trapz": 0.7801627276249515,
+   "trapz_agree": true,
+   "n": 468
+  },
+  "new_conflict": {
+   "auc": 0.6187018701870187,
+   "auc_trapz": 0.6187018701870187,
+   "trapz_agree": true,
+   "n": 146
+  },
+  "new_agreement": {
+   "auc": 0.8438556709233401,
+   "auc_trapz": 0.84385567092334,
+   "trapz_agree": true,
+   "n": 322
+  },
+  "orig_overall": {
+   "auc": 0.7619333591631151,
+   "auc_trapz": 0.7619333591631152,
+   "trapz_agree": true,
+   "n": 468
+  },
+  "orig_conflict": {
+   "auc": 0.6066006600660065,
+   "auc_trapz": 0.6066006600660065,
+   "trapz_agree": true,
+   "n": 146
+  },
+  "orig_agreement": {
+   "auc": 0.8231292517006803,
+   "auc_trapz": 0.8231292517006803,
+   "trapz_agree": true,
+   "n": 322
+  },
+  "rerun_overall": {
+   "auc": 0.7673188686555599,
+   "auc_trapz": 0.7673188686555599,
+   "n": 468
+  }
+ },
+ "deltas_orig_minus_new": {
+  "overall": -0.018229368461836426,
+  "conflict": -0.012101210121012174,
+  "agreement": -0.02072641922265983
+ },
+ "boot": {
+  "spkkey": {
+   "new_overall": [
+    0.7265333764486116,
+    0.8270440352670377
+   ],
+   "new_conflict": [
+    0.5130658547301322,
+    0.7249580993426494
+   ],
+   "new_agreement": [
+    0.7924772776313026,
+    0.8875794310581794
+   ],
+   "orig_overall": [
+    0.7054204914377186,
+    0.8129666473847232
+   ],
+   "orig_conflict": [
+    0.5008326256034329,
+    0.7153956538527232
+   ],
+   "orig_agreement": [
+    0.7683587935107352,
+    0.8692767156513018
+   ],
+   "delta_orig_minus_new_overall": [
+    -0.04553171203253691,
+    0.008345289563507831
+   ],
+   "delta_orig_minus_new_conflict": [
+    -0.06765434906592614,
+    0.044037017176142855
+   ],
+   "delta_orig_minus_new_agreement": [
+    -0.05157679671969857,
+    0.010604531154574022
+   ],
+   "new_conflict_minus_agreement": [
+    -0.32832139252305653,
+    -0.11612081929249084
+   ],
+   "orig_conflict_minus_agreement": [
+    -0.32422614340770245,
+    -0.10517054551378692
+   ],
+   "_K": 228,
+   "_bad": 0,
+   "_alt": {
+    "new_conflict_armonly": [
+     0.5145386872713744,
+     0.721902693616273,
+     100,
+     0
+    ],
+    "new_agreement_armonly": [
+     0.7958077130987719,
+     0.8879822406138195,
+     175,
+     0
+    ],
+    "new_overall_single": [
+     0.7265333764486116,
+     0.8270440352670377,
+     228,
+     0
+    ],
+    "orig_conflict_armonly": [
+     0.49556770314340065,
+     0.7122913306035745,
+     100,
+     0
+    ],
+    "orig_agreement_armonly": [
+     0.7663946957534767,
+     0.8719714861400167,
+     175,
+     0
+    ],
+    "orig_overall_single": [
+     0.7054204914377186,
+     0.8129666473847232,
+     228,
+     0
+    ]
+   }
+  },
+  "spk_new": {
+   "new_overall": [
+    0.7265333764486116,
+    0.8270440352670377
+   ],
+   "new_conflict": [
+    0.5130658547301322,
+    0.7249580993426494
+   ],
+   "new_agreement": [
+    0.7924772776313026,
+    0.8875794310581794
+   ],
+   "orig_overall": [
+    0.7054204914377186,
+    0.8129666473847232
+   ],
+   "orig_conflict": [
+    0.5008326256034329,
+    0.7153956538527232
+   ],
+   "orig_agreement": [
+    0.7683587935107352,
+    0.8692767156513018
+   ],
+   "delta_orig_minus_new_overall": [
+    -0.04553171203253691,
+    0.008345289563507831
+   ],
+   "delta_orig_minus_new_conflict": [
+    -0.06765434906592614,
+    0.044037017176142855
+   ],
+   "delta_orig_minus_new_agreement": [
+    -0.05157679671969857,
+    0.010604531154574022
+   ],
+   "new_conflict_minus_agreement": [
+    -0.32832139252305653,
+    -0.11612081929249084
+   ],
+   "orig_conflict_minus_agreement": [
+    -0.32422614340770245,
+    -0.10517054551378692
+   ],
+   "_K": 228,
+   "_bad": 0,
+   "_alt": {
+    "new_conflict_armonly": [
+     0.5145386872713744,
+     0.721902693616273,
+     100,
+     0
+    ],
+    "new_agreement_armonly": [
+     0.7958077130987719,
+     0.8879822406138195,
+     175,
+     0
+    ],
+    "new_overall_single": [
+     0.7265333764486116,
+     0.8270440352670377,
+     228,
+     0
+    ],
+    "orig_conflict_armonly": [
+     0.49556770314340065,
+     0.7122913306035745,
+     100,
+     0
+    ],
+    "orig_agreement_armonly": [
+     0.7663946957534767,
+     0.8719714861400167,
+     175,
+     0
+    ],
+    "orig_overall_single": [
+     0.7054204914377186,
+     0.8129666473847232,
+     228,
+     0
+    ]
+   }
+  }
+ }
+}
