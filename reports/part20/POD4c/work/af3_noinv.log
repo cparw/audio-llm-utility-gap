@@ -1,0 +1,16 @@
+transformers 5.17.0 torch 2.8.0+cu128
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/830 [00:00<?, ?it/s]Loading weights:  10%|█         | 83/830 [00:00<00:00, 822.30it/s]Loading weights:  20%|██        | 166/830 [00:01<00:05, 131.79it/s]Loading weights:  25%|██▍       | 205/830 [00:01<00:04, 131.86it/s]Loading weights:  30%|███       | 250/830 [00:01<00:04, 137.41it/s]Loading weights:  33%|███▎      | 273/830 [00:01<00:04, 131.15it/s]Loading weights:  36%|███▌      | 297/830 [00:02<00:04, 116.23it/s]Loading weights:  40%|███▉      | 331/830 [00:02<00:03, 145.12it/s]Loading weights:  43%|████▎     | 360/830 [00:02<00:02, 165.19it/s]Loading weights:  46%|████▌     | 383/830 [00:02<00:04, 103.18it/s]Loading weights:  49%|████▊     | 404/830 [00:03<00:03, 116.85it/s]Loading weights:  51%|█████     | 423/830 [00:03<00:03, 109.67it/s]Loading weights:  57%|█████▋    | 475/830 [00:03<00:02, 154.65it/s]Loading weights:  60%|█████▉    | 495/830 [00:03<00:02, 121.57it/s]Loading weights:  62%|██████▏   | 511/830 [00:03<00:02, 126.57it/s]Loading weights:  63%|██████▎   | 527/830 [00:04<00:02, 110.65it/s]Loading weights:  65%|██████▌   | 541/830 [00:04<00:03, 86.48it/s] Loading weights:  67%|██████▋   | 558/830 [00:04<00:03, 87.33it/s]Loading weights:  69%|██████▊   | 569/830 [00:04<00:02, 90.19it/s]Loading weights:  72%|███████▏  | 598/830 [00:04<00:02, 93.15it/s]Loading weights:  73%|███████▎  | 609/830 [00:05<00:03, 72.33it/s]Loading weights:  78%|███████▊  | 650/830 [00:05<00:01, 94.92it/s]Loading weights:  80%|███████▉  | 660/830 [00:05<00:02, 83.23it/s]Loading weights:  81%|████████  | 671/830 [00:05<00:01, 86.68it/s]Loading weights:  82%|████████▏ | 684/830 [00:05<00:01, 81.31it/s]Loading weights:  83%|████████▎ | 693/830 [00:06<00:02, 60.64it/s]Loading weights:  89%|████████▉ | 740/830 [00:06<00:00, 123.54it/s]Loading weights:  91%|█████████▏| 758/830 [00:06<00:00, 115.08it/s]Loading weights:  96%|█████████▌| 793/830 [00:06<00:00, 132.58it/s]Loading weights:  97%|█████████▋| 809/830 [00:06<00:00, 117.25it/s]Loading weights: 100%|██████████| 830/830 [00:06<00:00, 118.60it/s]
+YES ids [7414, 9454, 9693, 9834, 14004, 14080] [' Yes', 'Yes', 'yes', ' yes', 'YES', ' YES'] NO ids [902, 2152, 2308, 2753, 5664, 8996] [' no', 'no', ' No', 'No', ' NO', 'NO']
+468 rows, 0 already done, WINDOW_S=30.0
+50/468 p_yes 0.6227 mass 0.9359 53s
+100/468 p_yes 0.4382 mass 0.9339 118s
+150/468 p_yes 0.5624 mass 0.9183 180s
+200/468 p_yes 0.6227 mass 0.9491 243s
+250/468 p_yes 0.5929 mass 0.9689 306s
+300/468 p_yes 0.7550 mass 0.9567 370s
+350/468 p_yes 0.5313 mass 0.9685 433s
+400/468 p_yes 0.5930 mass 0.9448 482s
+450/468 p_yes 0.5624 mass 0.9415 582s
+468/468 p_yes 0.7312 mass 0.9406 638s
+AF3_DONE work/af3_noinv468.csv

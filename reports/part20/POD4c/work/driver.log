@@ -1,0 +1,10 @@
+start 12:35:28
+extracted 468
+clips 468 sha256_ok 468 bad 0 []
+arms Counter({'agreement': 322, 'conflict': 146}) labels Counter({'1': 290, '0': 178}) speakers 228
+launched af3 3979 af2 3980 12:35:33
+af3 exit 0 12:48:01
+analyze af3 exit 0 12:48:50
+af2 exit 0 13:03:02
+analyze af2 exit 0 13:03:31
+DRIVER_DONE 13:03:31

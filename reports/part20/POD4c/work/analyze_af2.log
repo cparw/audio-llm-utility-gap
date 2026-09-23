@@ -1,0 +1,12 @@
+/workspace/analyze.py:106: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "date_utc": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")}
+PASTE af2_noinv_all: 0.4655 [0.4038, 0.5265] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af2_noinv_all.csv | 0.47 below 0.5
+PASTE af2_orig_af2pitt468_all: 0.5724 [0.5066, 0.6424] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af2_orig_af2pitt468_all.csv | 0.57 above 0.5
+PASTE af2_diff_af2pitt468_minus_noinv_all: 0.1068 [0.0595, 0.1529] n=468 n_spk=228 file=/workspace/scores/part20/POD4c/af2_diff_af2pitt468_minus_noinv_all.csv | 0.11 interval excludes zero
+PASTE af2_noinv_conflict: 0.6477 [0.5357, 0.7444] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af2_noinv_conflict.csv | 0.65 above 0.5
+PASTE af2_orig_af2pitt468_conflict: 0.6310 [0.5336, 0.7260] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af2_orig_af2pitt468_conflict.csv | 0.63 above 0.5
+PASTE af2_diff_af2pitt468_minus_noinv_conflict: -0.0167 [-0.1068, 0.0759] n=146 n_spk=100 file=/workspace/scores/part20/POD4c/af2_diff_af2pitt468_minus_noinv_conflict.csv | -0.02 interval includes zero
+PASTE af2_noinv_agreement: 0.3966 [0.3305, 0.4657] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af2_noinv_agreement.csv | 0.40 below 0.5
+PASTE af2_orig_af2pitt468_agreement: 0.5544 [0.4760, 0.6296] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af2_orig_af2pitt468_agreement.csv | 0.55 above 0.5
+PASTE af2_diff_af2pitt468_minus_noinv_agreement: 0.1579 [0.1052, 0.2093] n=322 n_spk=175 file=/workspace/scores/part20/POD4c/af2_diff_af2pitt468_minus_noinv_agreement.csv | 0.16 interval excludes zero
+SUMMARY {'noinv_all': 0.4655, 'af2pitt468_all': 0.5724, 'noinv_conflict': 0.6477, 'af2pitt468_conflict': 0.631, 'noinv_agreement': 0.3966, 'af2pitt468_agreement': 0.5544}
