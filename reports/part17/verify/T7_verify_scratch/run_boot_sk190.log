@@ -1,0 +1,22 @@
+=== answer ===
+=== published per-clip (AUC of mean OOF, NOT USED rows) ===
+--- probe llm: mine [0.692, 0.6982, 0.6894, 0.7055, 0.7074] pod [0.6918, 0.7062, 0.6893, 0.7055, 0.7078] picks match 24/25 mismatch [(1, 1, 14, 18)]
+probe_llm_meanof5                  0.6985 (trap 0.6985) [0.6215, 0.7706] trap[0.6215, 0.7706]  diff -0.1293 [-0.2010, -0.0629] trap[-0.2010, -0.0629] excl0 yes
+    flip margins llm: [{'rep': 1, 'fold': 1, 'mine_layer': 14, 'mine_inner': 0.8022972502610511, 'pod_layer': 18, 'pod_layer_inner_on_mac': 0.8006729318946514, 'gap': 0.0016243183663997574}]
+--- probe enc: mine [0.5963, 0.5829, 0.5968, 0.5606, 0.6059] pod [0.5964, 0.5826, 0.5962, 0.5608, 0.606] picks match 25/25 mismatch []
+probe_enc_meanof5                  0.5885 (trap 0.5885) [0.5268, 0.6526] trap[0.5268, 0.6526]  diff -0.2393 [-0.3186, -0.1571] trap[-0.3186, -0.1571] excl0 yes
+    flip margins enc: []
+--- probe ans: mine [0.7564, 0.73, 0.7415, 0.7221, 0.7682] pod [0.755, 0.7302, 0.7418, 0.7225, 0.7679] picks match 25/25 mismatch []
+probe_ans_meanof5                  0.7436 (trap 0.7436) [0.6794, 0.8064] trap[0.6794, 0.8064]  diff -0.0841 [-0.1340, -0.0368] trap[-0.1340, -0.0368] excl0 yes
+    flip margins ans: []
+--- probe proj: mine [0.5506, 0.5618, 0.5793, 0.5653, 0.5472] pod [0.551, 0.5618, 0.5795, 0.5653, 0.5474] picks match 25/25 mismatch []
+probe_proj_meanof5                 0.5608 (trap 0.5608) [0.4869, 0.6335] trap[0.4869, 0.6335]  diff -0.2669 [-0.3494, -0.1811] trap[-0.3494, -0.1811] excl0 yes
+--- forced llm: mine [0.692, 0.7065, 0.6894, 0.7055, 0.7074] pod [0.6918, 0.7062, 0.6893, 0.7055, 0.7078] picks match 25/25 mismatch []
+forced_llm_meanof5                 0.7001 (trap 0.7001) [0.6234, 0.7723] trap[0.6234, 0.7723]  diff -0.1276 [-0.1990, -0.0629] trap[-0.1990, -0.0629] excl0 yes
+--- forced enc: mine [0.5963, 0.5829, 0.5968, 0.5606, 0.6059] pod [0.5964, 0.5826, 0.5962, 0.5608, 0.606] picks match 25/25 mismatch []
+forced_enc_meanof5                 0.5885 (trap 0.5885) [0.5268, 0.6526] trap[0.5268, 0.6526]  diff -0.2393 [-0.3186, -0.1571] trap[-0.3186, -0.1571] excl0 yes
+--- forced ans: mine [0.7564, 0.73, 0.7415, 0.7221, 0.7682] pod [0.755, 0.7302, 0.7418, 0.7225, 0.7679] picks match 25/25 mismatch []
+forced_ans_meanof5                 0.7436 (trap 0.7436) [0.6794, 0.8064] trap[0.6794, 0.8064]  diff -0.0841 [-0.1340, -0.0368] trap[-0.1340, -0.0368] excl0 yes
+--- forced proj: mine [0.5506, 0.5618, 0.5793, 0.5653, 0.5472] pod [0.551, 0.5618, 0.5795, 0.5653, 0.5474] picks match 25/25 mismatch []
+forced_proj_meanof5                0.5608 (trap 0.5608) [0.4869, 0.6335] trap[0.4869, 0.6335]  diff -0.2669 [-0.3494, -0.1811] trap[-0.3494, -0.1811] excl0 yes
+wrote scores/part17/verify/T7_verify_sk190.json

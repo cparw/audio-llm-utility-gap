@@ -1,0 +1,24 @@
+=== forced llm ===
+  forced llm rep 0: AUC_mw 0.691533 trap 0.691533 picks [15, 15, 28, 17, 16] pod [15, 15, 28, 17, 16]  t=0s
+  forced llm rep 1: AUC_mw 0.705524 trap 0.705524 picks [23, 18, 15, 28, 28] pod [23, 18, 15, 28, 28]  t=0s
+  forced llm rep 2: AUC_mw 0.688705 trap 0.688705 picks [15, 17, 14, 15, 28] pod [15, 17, 14, 15, 28]  t=1s
+  forced llm rep 3: AUC_mw 0.705669 trap 0.705669 picks [14, 14, 16, 28, 14] pod [14, 14, 16, 28, 14]  t=1s
+  forced llm rep 4: AUC_mw 0.707192 trap 0.707192 picks [14, 23, 28, 28, 23] pod [14, 23, 28, 28, 23]  t=1s
+=== forced enc ===
+  forced enc rep 0: AUC_mw 0.596274 trap 0.596274 picks [24, 24, 8, 25, 8] pod [24, 24, 8, 25, 8]  t=0s
+  forced enc rep 1: AUC_mw 0.582645 trap 0.582645 picks [21, 1, 19, 2, 25] pod [21, 1, 19, 2, 25]  t=1s
+  forced enc rep 2: AUC_mw 0.596636 trap 0.596636 picks [25, 8, 25, 2, 16] pod [25, 8, 25, 2, 16]  t=1s
+  forced enc rep 3: AUC_mw 0.560969 trap 0.560969 picks [2, 19, 8, 25, 25] pod [2, 19, 8, 25, 25]  t=1s
+  forced enc rep 4: AUC_mw 0.606061 trap 0.606061 picks [24, 19, 25, 19, 28] pod [24, 19, 25, 19, 28]  t=1s
+=== forced ans ===
+  forced ans rep 0: AUC_mw 0.756343 trap 0.756343 picks [28, 28, 27, 28, 28] pod [28, 28, 27, 28, 28]  t=0s
+  forced ans rep 1: AUC_mw 0.730390 trap 0.730390 picks [28, 18, 20, 18, 27] pod [28, 18, 20, 18, 27]  t=1s
+  forced ans rep 2: AUC_mw 0.741989 trap 0.741989 picks [28, 28, 28, 26, 19] pod [28, 28, 28, 26, 19]  t=1s
+  forced ans rep 3: AUC_mw 0.722633 trap 0.722633 picks [27, 17, 21, 27, 20] pod [27, 17, 21, 27, 20]  t=2s
+  forced ans rep 4: AUC_mw 0.766565 trap 0.766565 picks [28, 27, 27, 28, 28] pod [28, 27, 27, 28, 28]  t=2s
+=== forced proj ===
+  forced proj rep 0: AUC_mw 0.551327 trap 0.551327 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=1s
+  forced proj rep 1: AUC_mw 0.561838 trap 0.561838 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=1s
+  forced proj rep 2: AUC_mw 0.579382 trap 0.579382 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=1s
+  forced proj rep 3: AUC_mw 0.565536 trap 0.565536 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=2s
+  forced proj rep 4: AUC_mw 0.547194 trap 0.547194 picks [0, 0, 0, 0, 0] pod [0, 0, 0, 0, 0]  t=2s
