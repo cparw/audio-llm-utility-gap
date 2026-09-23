@@ -1,0 +1,53 @@
+{
+ "libs": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.1.2",
+  "librosa": "1.0.0",
+  "python": "3.12.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA H100 NVL",
+  "attn": "sdpa"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "dtype": "bfloat16",
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "rule_yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004,
+  14080
+ ],
+ "rule_no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996,
+  5664
+ ],
+ "audio_token_id": 151646,
+ "max_position_embeddings": 32768,
+ "n_enc": 32,
+ "n_llm": 29,
+ "processor_call": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True, truncation=False)",
+ "audio_load": "librosa.load(cut_wav, sr=16000)",
+ "pooling": "enc/proj: forward hook h.reshape(-1,d).mean(0).float(); llm: hidden_states[s][0][audio_mask].mean(0).float(); ans: hidden_states[s][0][-1].float()",
+ "command": "cd /workspace/p23a && nohup python3 p23a_extract.py > extract.log 2>&1 &"
+}

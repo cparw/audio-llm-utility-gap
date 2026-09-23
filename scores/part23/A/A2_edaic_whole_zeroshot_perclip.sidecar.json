@@ -1,0 +1,112 @@
+{
+ "result_file": "scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv",
+ "n": 275,
+ "n_speakers": 275,
+ "n_positive": 66,
+ "bootstrap": {
+  "n_draws": 2000,
+  "seed": "numpy default_rng(0), fresh per cell",
+  "unit": "speaker (one clip per speaker)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "draw_code": "rng.choice(len(uspk), size=len(uspk), replace=True)"
+ },
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "dtype": "bfloat16",
+ "auc": "rank formula (probe_boot.py auc_rank)",
+ "sources": {
+  "/workspace/p23a/A_extract_perclip.csv": {
+   "sha256_first1MB": "c3610f3e71fb28f4271d05ed81bf4d9ed356d7d4c1df640a8529c6bfad9bed65",
+   "bytes": 62515
+  },
+  "/workspace/p23a/ref/edaic_lifted_perclip.csv": {
+   "sha256_first1MB": "2a9ab09a08f9a879a8cabca8f628da3501be53ac5d186b52a8a57b288a9f49cc",
+   "bytes": 39018
+  },
+  "/workspace/p23a/ref/T7b_edaic300_meanof5_perclip.csv": {
+   "sha256_first1MB": "4ec65125609317c9d119a7eb03cd3d4090fec86ff362c458f5bcc8b171c6393e",
+   "bytes": 120374
+  },
+  "/workspace/p23a/p23a_extract.py": {
+   "sha256_first1MB": "6c25a1b0fe821da9af6eb1d5e3f824ea7c31aafdff950d6111ce6e06aa22b0eb",
+   "bytes": 9449
+  }
+ },
+ "command": "cd /workspace/p23a && python3 p23a_report.py items12",
+ "library_versions": {
+  "python": "3.12.3",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0",
+  "pandas": "3.0.6",
+  "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+  "extract_transformers": "5.17.0",
+  "extract_torch": "2.8.0+cu128",
+  "extract_numpy": "2.1.2",
+  "extract_librosa": "1.0.0",
+  "extract_python": "3.12.3",
+  "extract_cuda": "12.8",
+  "extract_gpu": "NVIDIA H100 NVL",
+  "extract_attn": "sdpa"
+ },
+ "results": {
+  "auc_whole": 0.8365956212846165,
+  "ci_whole": [
+   0.7785777395969262,
+   0.886634568107391
+  ],
+  "usable": 2000,
+  "auc_300s_recomputed": 0.8277511961722488,
+  "ci_300s_recomputed": [
+   0.7702680190413039,
+   0.882162099811676
+  ],
+  "reference_300s": "0.8278 [0.7703, 0.8822]",
+  "paired_whole_minus_300": 0.008844425112367715,
+  "ci_paired": [
+   -0.032003163731245954,
+   0.051002716867530114
+  ],
+  "auc_whole_rule_set": 0.8365956212846165,
+  "ci_rule_set": [
+   0.7785777395969262,
+   0.886634568107391
+  ],
+  "auc_part22_lifted_recomputed": 0.8379005364651297,
+  "max_abs_diff_vs_part22": 0.06171250652711857,
+  "mean_abs_diff_vs_part22": 0.004529778022924127,
+  "pearson_r_vs_part22": 0.9997488258936218,
+  "n_absdiff_gt_1e4": 172,
+  "matches_part22_to_1e4_every_clip": false,
+  "answer_mass_min": 0.9881615042686462,
+  "answer_mass_median": 0.9969337396323681,
+  "max_abs_mass_vs_part22": 0.0010173916816711426,
+  "answer_mass_rule_median": 0.9969357624650002
+ },
+ "written_utc": "2026-09-23T14:17:42Z",
+ "extract_command": "cd /workspace/p23a && nohup python3 p23a_extract.py > extract.log 2>&1 &",
+ "yes_ids": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "rule_set_adds": [
+  14080,
+  5664
+ ],
+ "p_yes": "P(Yes)/(P(Yes)+P(No)) at the first answer position (softmax over the full vocabulary, float32)",
+ "processor_call": "proc(text=text, audio=[x], sampling_rate=16000, return_tensors=\"pt\", padding=True, truncation=False)"
+}
