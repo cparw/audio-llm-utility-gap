@@ -1,0 +1,4 @@
+all {"n": 468, "n_speakers": 228, "n_pos": 290, "cosine": 0.0051, "auc_probe": 0.8307, "auc_d": 0.7656, "auc_wo_d_trainz": 0.8305, "boot_usable": 2000, "fold_test_sizes": [94, 94, 94, 93, 93]} ci [0.7833, 0.8741] [0.7826, 0.8737]
+conflict {"n": 146, "n_speakers": 100, "n_pos": 101, "cosine": -0.0067, "auc_probe": 0.6145, "auc_d": 0.6029, "auc_wo_d_trainz": 0.6196, "boot_usable": 2000, "fold_test_sizes": [30, 29, 29, 29, 29]} ci [0.5021, 0.7246] [0.5094, 0.7283]
+agreement {"n": 322, "n_speakers": 175, "n_pos": 189, "cosine": 0.0086, "auc_probe": 0.9349, "auc_d": 0.8264, "auc_wo_d_trainz": 0.9341, "boot_usable": 2000, "fold_test_sizes": [65, 65, 64, 64, 64]} ci [0.9034, 0.9614] [0.9021, 0.9604]
+DONE 31.8

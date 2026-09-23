@@ -1,0 +1,338 @@
+{
+ "M3_pitt_speaker": {
+  "value": 0.6770833333333334,
+  "ci": [
+   0.60960468413089,
+   0.7494210973243938
+  ],
+  "n_spk": 228,
+  "draws": 2000,
+  "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+  "labels_consistent": true,
+  "clip_auc": 0.6577683068578071
+ },
+ "M3_pitt_clip_minus_speaker": {
+  "value": -0.019315026475526298,
+  "ci": [
+   -0.05654083490780851,
+   0.017247437281261706
+  ],
+  "draws": 2000,
+  "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv"
+ },
+ "M3_pcgita_speaker": {
+  "value": 0.5948,
+  "ci": [
+   0.47782969428860156,
+   0.7088653037766827
+  ],
+  "n_spk": 100,
+  "draws": 2000,
+  "file": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+  "labels_consistent": true,
+  "clip_auc": 0.5634776859504133
+ },
+ "M3_pcgita_clip_minus_speaker": {
+  "value": -0.03132231404958674,
+  "ci": [
+   -0.08198937040031405,
+   0.017903647637453394
+  ],
+  "draws": 2000,
+  "file": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv"
+ },
+ "M3_neurovoz_speaker": {
+  "value": 0.7947552447552447,
+  "ci": [
+   0.7045421500745701,
+   0.8733375310196674
+  ],
+  "n_spk": 107,
+  "draws": 2000,
+  "file": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+  "labels_consistent": true,
+  "clip_auc": 0.6950814953762633
+ },
+ "M3_neurovoz_clip_minus_speaker": {
+  "value": -0.09967374937898144,
+  "ci": [
+   -0.13248337022862514,
+   -0.061297799437302986
+  ],
+  "draws": 2000,
+  "file": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv"
+ },
+ "M7fix#01 Pitt encoder probe mean of 5": {
+  "value": 0.7705695466873305,
+  "ci": [
+   0.7156926699364878,
+   0.8219678044301659
+  ],
+  "per_repeat": [
+   0.7598024021697016,
+   0.7724719101123596,
+   0.7458930647036033,
+   0.7903332041844247,
+   0.7843471522665634
+  ],
+  "draws": 2000
+ },
+ "M7fix#02 Pitt paired probe minus zero-shot": {
+  "value": 0.11280123982952339,
+  "ci": [
+   0.04550149479611408,
+   0.1768100605302147
+  ],
+  "zeroshot": 0.6577683068578071,
+  "draws": 2000,
+  "zs_files_identical": true
+ },
+ "M7_pitt_probe_rep5": {
+  "value": 0.7916892677256877,
+  "ci": [
+   0.7324452864688041,
+   0.8480293239779454
+  ],
+  "draws": 2000
+ },
+ "M7_pitt_gap_rep5": {
+  "value": 0.13392096086788063,
+  "ci": [
+   0.06407005517666717,
+   0.20190232262934266
+  ],
+  "draws": 2000
+ },
+ "POD4_4b_resolved": {
+  "value": 468,
+  "rows": 468,
+  "unique_clips": 468
+ },
+ "POD4_4b_invwin": {
+  "value": 158
+ },
+ "POD4_4b_invshare": {
+  "value": 0.019971866096866096,
+  "from_col": 0.019971858974358974
+ },
+ "POD4_4b_parshare": {
+  "value": 0.5871166666666666,
+  "from_col": 0.5871168162393162
+ },
+ "POD4_4b_pardur": {
+  "value": 17.613500000000002,
+  "n_cuts": 468,
+  "n_rows": 468
+ },
+ "POD4_4b_under10s": {
+  "value": 68
+ },
+ "M9.FILES": {
+  "value": 307,
+  "of": 608,
+  "opened": 608,
+  "missing": 0,
+  "with_score_col": 608,
+  "disagree_with_flag": 0
+ },
+ "M9.SWEEPMIN": {
+  "value": 0.8661956191062927,
+  "file": "<local data dir>/paper1_local_runs/af2_kcl30b_audio.csv",
+  "n": 37,
+  "files_swept": 305,
+  "next": [
+   [
+    0.8693,
+    "af2_kcl_audio.csv"
+   ],
+   [
+    0.8694,
+    "af2_smoke.csv"
+   ],
+   [
+    0.8866,
+    "omni_kcl30b_audio.csv"
+   ]
+  ]
+ },
+ "M5_all_auc_without_d": {
+  "value": 0.8326811313444401,
+  "ci": [
+   0.7857139864011161,
+   0.8758753145565592
+  ],
+  "n": 468,
+  "draws": 2000,
+  "column": "z_probe_oof_without_d_all"
+ },
+ "M5_all_auc_without_d_Xproj": {
+  "value": 0.8223363037582332,
+  "ci": [
+   0.7743012728806178,
+   0.8671967415167668
+  ],
+  "n": 468,
+  "draws": 2000,
+  "column": "p_probe_oof_without_d_Xproj_all"
+ },
+ "M5_conflict_refit_auc_without_d": {
+  "value": 0.6869086908690869,
+  "ci": [
+   0.5806467144487828,
+   0.7872157189363514
+  ],
+  "n": 146,
+  "draws": 2000,
+  "column": "z_probe_oof_without_d_armrefit"
+ },
+ "M5_agreement_refit_auc_without_d": {
+  "value": 0.9346381827584835,
+  "ci": [
+   0.9056508569295026,
+   0.9603221930412797
+  ],
+  "n": 322,
+  "draws": 2000,
+  "column": "z_probe_oof_without_d_armrefit"
+ },
+ "M5_conflict_restricted_auc_without_d": {
+  "value": 0.6325632563256326,
+  "ci": [
+   0.5276664297971471,
+   0.7335895453736127
+  ],
+  "n": 146,
+  "draws": 2000,
+  "column": "z_probe_oof_without_d_all"
+ },
+ "M5_conflict_restricted_auc_without_d_Xproj": {
+  "value": 0.6180418041804181,
+  "ci": [
+   0.512842280601561,
+   0.7213310206410334
+  ],
+  "n": 146,
+  "draws": 2000,
+  "column": "p_probe_oof_without_d_Xproj_all"
+ },
+ "M5_agreement_restricted_auc_without_d": {
+  "value": 0.9070294784580499,
+  "ci": [
+   0.8701820094595826,
+   0.9383208446716511
+  ],
+  "n": 322,
+  "draws": 2000,
+  "column": "z_probe_oof_without_d_all"
+ },
+ "M5_agreement_restricted_auc_without_d_Xproj": {
+  "value": 0.8987548235668537,
+  "ci": [
+   0.8592859022853624,
+   0.9325748374175665
+  ],
+  "n": 322,
+  "draws": 2000,
+  "column": "p_probe_oof_without_d_Xproj_all"
+ },
+ "M5_paired_auc_without_d_conflict_minus_agreement": {
+  "value": -0.27446622213241734,
+  "ci": [
+   -0.3753870433548733,
+   -0.17067133572656612
+  ],
+  "n_spk": 228,
+  "draws": 2000
+ },
+ "MEDAIC_full_llm_nested_NOCI": {
+  "value": 0.6853,
+  "log_printed_mean": 0.6853,
+  "per_repeat_log": [
+   0.6664,
+   0.6748,
+   0.7107,
+   0.6765,
+   0.6981
+  ]
+ },
+ "MEDAIC_full_llm_minus_answer_POINT": {
+  "value": -0.14317614905031173,
+  "answer_auc": 0.8284761490503117,
+  "n_answer": 275
+ },
+ "MEDAIC_full_enc_nested_NOCI": {
+  "value": 0.5930000000000001,
+  "log_printed_mean": 0.593,
+  "per_repeat_log": [
+   0.5734,
+   0.5671,
+   0.6197,
+   0.56,
+   0.6448
+  ]
+ },
+ "MEDAIC_full_enc_minus_answer_POINT": {
+  "value": -0.23547614905031167,
+  "answer_auc": 0.8284761490503117,
+  "n_answer": 275
+ },
+ "MEDAIC_full_ans_nested_NOCI": {
+  "value": 0.7542200000000001,
+  "log_printed_mean": 0.7542,
+  "per_repeat_log": [
+   0.7296,
+   0.7469,
+   0.7909,
+   0.7599,
+   0.7438
+  ]
+ },
+ "MEDAIC_full_ans_minus_answer_POINT": {
+  "value": -0.07425614905031164,
+  "answer_auc": 0.8284761490503117,
+  "n_answer": 275
+ },
+ "MEDAIC_full_proj_nested_NOCI": {
+  "value": 0.5293,
+  "log_printed_mean": 0.5293,
+  "per_repeat_log": [
+   0.5293
+  ]
+ },
+ "MEDAIC_full_proj_minus_answer_POINT": {
+  "value": -0.29917614905031176,
+  "answer_auc": 0.8284761490503117,
+  "n_answer": 275
+ },
+ "_MEDAIC_json_keys": {
+  "keys": [
+   "enc",
+   "proj",
+   "llm",
+   "ans"
+  ]
+ },
+ "P16.POD2.L5": {
+  "value": "4.13;4.07;4.05;4.03;4.00",
+  "folds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "P16.POD2.L6": {
+  "value": 21.013,
+  "per_fold": [
+   21.011,
+   21.013,
+   21.013,
+   21.013,
+   21.013
+  ]
+ },
+ "_POD2_json": {
+  "text": "{\n \"model_id\": \"Qwen/Qwen2.5-Omni-7B\",\n \"total_params_full_model\": 10732225408,\n \"total_params_thinker_audio_plus_lm\": 8255263744,\n \"lora_trainable_params\": 5046272,\n \"lora_pct_of_full_model\": 0.04702,\n \"lora_pct_of_thinker\": 0.061128,\n \"projector_trainable_params\": 4591104,\n \"projector_module\": \"Linear\",\n \"projector_pct_of_full_model\": 0.042779,\n \"projector_pct_of_thinker\": 0.055614,\n \"lm_layers\": 28,\n \"lora_target_modules\": 112,\n \"rank\": 8,\n \"alpha\": 16,\n \"dropout\": 0.05,\n \"clip_list\": \"/workspace/p16/mf_pitt468_pod.csv\",\n \"folds_file\": \"/workspace/p16/pitt468_folds.csv\",\n \"condition\": \"ad\",\n \"prompt\": \"Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.\",\n \"n\": 468,\n \"n_speakers\": 228,\n \"epochs\": 3,\n \"lr\": 0.0001,\n \"batch_size\": 1,\n \"trained\": \"LoRA on LM q,k,v,o only; audio encoder and projector frozen\",\n \"window_seconds\": 30,\n \"dtype\": \"bfloat16\",\n \"minutes_per_fold\": {\n  \"0\": 4.13,\n  \"1\": 4.07,\n  \"2\": 4.05,\n  \"3\": 4.03,\n  \"4\": 4.0\n },\n \"steps_per_fold\": {\n  \"0\": 1122,\n  \"1\": 1122,\n  \"2\": 1122,\n  \"3\": 1125,\n  \"4\": 1125\n },\n \"peak_gpu_gb\": 21.013,\n \"minutes_total\": 20.29,\n \"command\": \"python3 lora_pitt.py mf_pitt468_pod.csv pitt468_folds.csv lora_pitt Qwen/Qwen2.5-Omni-7B\",\n \"date\": \"2026-09-23\"\n}"
+ }
+}
