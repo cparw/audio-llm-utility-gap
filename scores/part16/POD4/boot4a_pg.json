@@ -1,0 +1,72 @@
+[
+ {
+  "id": "4a_pg_before_zs",
+  "what": "pg zero-shot before",
+  "value": 0.5728,
+  "lo": 0.5002,
+  "hi": 0.644,
+  "n": 1100,
+  "n_spk": 100,
+  "usable_draws": 2000,
+  "file": "/workspace/p16pod4/out/p16_pg_before_zeroshot_scores.csv"
+ },
+ {
+  "id": "4a_pg_before_enc",
+  "what": "pg encoder probe before",
+  "value": 0.8959,
+  "lo": 0.8339,
+  "hi": 0.9448,
+  "n": 1100,
+  "n_spk": 100,
+  "usable_draws": 2000,
+  "file": "/workspace/p16pod4/out/p16_pg_before_enc_nested_oof.csv"
+ },
+ {
+  "id": "4a_pg_after_zs",
+  "what": "pg zero-shot after",
+  "value": 0.5674,
+  "lo": 0.5054,
+  "hi": 0.6304,
+  "n": 1100,
+  "n_spk": 100,
+  "usable_draws": 2000,
+  "file": "/workspace/p16pod4/out/p16_pg_after_zeroshot_scores.csv"
+ },
+ {
+  "id": "4a_pg_after_enc",
+  "what": "pg encoder probe after",
+  "value": 0.8298,
+  "lo": 0.7546,
+  "hi": 0.8968,
+  "n": 1100,
+  "n_spk": 100,
+  "usable_draws": 2000,
+  "file": "/workspace/p16pod4/out/p16_pg_after_enc_nested_oof.csv"
+ },
+ {
+  "id": "4a_pg_pd_zs",
+  "what": "pg PAIRED zero-shot before->after",
+  "value": -0.0054,
+  "lo": -0.0437,
+  "hi": 0.0357,
+  "n": 1100,
+  "n_spk": 100,
+  "usable_draws": 2000,
+  "file": "4a_pg_before_zs->4a_pg_after_zs",
+  "a_auc": 0.5728,
+  "b_auc": 0.5674
+ },
+ {
+  "id": "4a_pg_pd_enc",
+  "what": "pg PAIRED encoder probe before->after",
+  "value": -0.0661,
+  "lo": -0.1181,
+  "hi": -0.018,
+  "n": 1100,
+  "n_spk": 100,
+  "usable_draws": 2000,
+  "file": "4a_pg_before_enc->4a_pg_after_enc",
+  "a_auc": 0.8959,
+  "b_auc": 0.8298
+ }
+]

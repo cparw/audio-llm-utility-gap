@@ -1,0 +1,42 @@
+{
+ "cells": [
+  {
+   "id": "4a_pg_before_zs",
+   "what": "pg zero-shot before",
+   "file": "/workspace/p16pod4/out/p16_pg_before_zeroshot_scores.csv",
+   "col": "p_yes"
+  },
+  {
+   "id": "4a_pg_before_enc",
+   "what": "pg encoder probe before",
+   "file": "/workspace/p16pod4/out/p16_pg_before_enc_nested_oof.csv",
+   "col": "p_probe"
+  },
+  {
+   "id": "4a_pg_after_zs",
+   "what": "pg zero-shot after",
+   "file": "/workspace/p16pod4/out/p16_pg_after_zeroshot_scores.csv",
+   "col": "p_yes"
+  },
+  {
+   "id": "4a_pg_after_enc",
+   "what": "pg encoder probe after",
+   "file": "/workspace/p16pod4/out/p16_pg_after_enc_nested_oof.csv",
+   "col": "p_probe"
+  }
+ ],
+ "paired": [
+  {
+   "id": "4a_pg_pd_zs",
+   "what": "pg PAIRED zero-shot before->after",
+   "a": "4a_pg_before_zs",
+   "b": "4a_pg_after_zs"
+  },
+  {
+   "id": "4a_pg_pd_enc",
+   "what": "pg PAIRED encoder probe before->after",
+   "a": "4a_pg_before_enc",
+   "b": "4a_pg_after_enc"
+  }
+ ]
+}

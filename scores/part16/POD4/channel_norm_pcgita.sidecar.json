@@ -1,0 +1,200 @@
+{
+ "part": "POD4 4a - channel normalisation on PCGITA",
+ "model_id": "Qwen/Qwen2.5-Omni-7B",
+ "dtype": "bfloat16",
+ "device": "cuda (H200)",
+ "window_seconds": 30.0,
+ "prompt_verbatim": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "prompt_source": "<local data dir>/Desktop/release/omni_final/omni_pcgita_zeroshot.json (condition pd), reproduced by extract_probe_layers.py COND=pd",
+ "n": 1100,
+ "n_speakers": 100,
+ "source_audio": "/tmp/pcgita_zip/** (extracted from <local data dir>/paper1_local_runs/drive_data/PC-GITA/OneDrive_1_12-11-2023.zip), folders 'read text', 'sentences', 'sentences2', all 'sin normalizar'/'non-normalized'",
+ "clip_list_source": "<local data dir>/Desktop/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+ "audio_preparation": "decoded to 16 kHz mono FLAC with ffmpeg before any measurement. 16 kHz is exactly what the encoder receives (extract_probe_layers.py does librosa.load(sr=16000)), so the channel is measured at the encoder's own bandwidth.",
+ "quiet_frame_definition": "frame RMS at or below the file's 10th percentile; 25 ms window, 10 ms hop",
+ "speech_frame_definition": "frame RMS above the file's median",
+ "five_features": [
+  "noise_floor (mean RMS over quiet frames, dBFS)",
+  "snr (10log10(mean power speech frames / mean power quiet frames), dB)",
+  "centroid (mean spectral centroid over quiet frames, Hz)",
+  "rolloff (mean 85% spectral roll-off over quiet frames, Hz)",
+  "tilt (slope of a linear fit of the quiet-frame mean log-power spectrum vs frequency over 100-7800 Hz, dB/kHz)"
+ ],
+ "normalisation": {
+  "step1": "loudness-normalise to -23.0 LUFS with pyloudnorm",
+  "step2": "add FIR-shaped Gaussian noise so the quiet-frame noise floor AND tilt hit the dataset's 90th percentile of each, computed AFTER the LUFS step",
+  "shaping_method": "the file's quiet-frame mean power spectrum P_file(f) is estimated from its quiet frames; the target composite spectrum is P_tgt(f)=10**((c+m*f)/10) with m the dataset 90th-percentile tilt and c set so the band power equals the dataset 90th-percentile noise floor; the noise to ADD is P_add(f)=max(0,P_tgt(f)-P_file(f)); white Gaussian noise is multiplied by sqrt(P_add) in the frequency domain, inverse-transformed and added. Noise can only be added, never subtracted, so bands already above target are left alone and counted as residual error.",
+  "noise_floor_target_db": 4.655696976221072,
+  "tilt_target_db_per_khz": -0.8501081350093744,
+  "band_hz": [
+   100.0,
+   7800.0
+  ],
+  "nfft": 512,
+  "verification": {
+   "residual_noise_floor_mean_db": 1.1523,
+   "residual_noise_floor_sd_db": 1.1481,
+   "residual_tilt_mean_db_per_khz": -0.05807,
+   "residual_tilt_sd_db_per_khz": 0.12439
+  }
+ },
+ "five_feature_probe": "GroupKFold(5) grouped by speaker, StandardScaler + LogisticRegression(max_iter=5000, class_weight=balanced), out-of-fold",
+ "encoder_probe": "nested layer selection: outer GroupKFold(5) by speaker, inner GroupKFold(4) on training speakers picks the encoder layer, refit, out-of-fold",
+ "folds": "GroupKFold(5) by speaker over the source csv order. No saved fold file found (logged MEDIUM in DISCREPANCIES.md). Identical folds before and after, so the before/after contrast is exact.",
+ "auc": "rank formula with tie-averaged ranks, recomputed from per-clip scores; independently re-verified with explicit pairwise Mann-Whitney counting (VERIFY_POD4*.json)",
+ "bootstrap": "2000 draws, numpy.random.default_rng(0) reseeded per cell, SPEAKERS resampled with replacement, percentile 2.5/97.5",
+ "published_reference": {
+  "zeroshot": 0.5635,
+  "enc_nested_oof": 0.9089,
+  "enc_repeats_mean": 0.8941
+ },
+ "results": {
+  "single_feature": {
+   "before": {
+    "noise_floor": {
+     "auc_raw": 0.6627,
+     "auc_dirfree": 0.6627,
+     "lo": 0.5885,
+     "hi": 0.7362,
+     "usable_draws": 2000
+    },
+    "snr": {
+     "auc_raw": 0.4127,
+     "auc_dirfree": 0.5873,
+     "lo": 0.5261,
+     "hi": 0.6464,
+     "usable_draws": 2000
+    },
+    "centroid": {
+     "auc_raw": 0.4461,
+     "auc_dirfree": 0.5539,
+     "lo": 0.4997,
+     "hi": 0.6104,
+     "usable_draws": 2000
+    },
+    "rolloff": {
+     "auc_raw": 0.4467,
+     "auc_dirfree": 0.5533,
+     "lo": 0.5,
+     "hi": 0.6081,
+     "usable_draws": 2000
+    },
+    "tilt": {
+     "auc_raw": 0.439,
+     "auc_dirfree": 0.561,
+     "lo": 0.5048,
+     "hi": 0.6194,
+     "usable_draws": 2000
+    }
+   },
+   "after": {
+    "noise_floor": {
+     "auc_raw": 0.5734,
+     "auc_dirfree": 0.5734,
+     "lo": 0.5113,
+     "hi": 0.6341,
+     "usable_draws": 2000
+    },
+    "snr": {
+     "auc_raw": 0.4265,
+     "auc_dirfree": 0.5735,
+     "lo": 0.5158,
+     "hi": 0.6286,
+     "usable_draws": 2000
+    },
+    "centroid": {
+     "auc_raw": 0.4409,
+     "auc_dirfree": 0.5591,
+     "lo": 0.5029,
+     "hi": 0.6136,
+     "usable_draws": 2000
+    },
+    "rolloff": {
+     "auc_raw": 0.4343,
+     "auc_dirfree": 0.5657,
+     "lo": 0.5102,
+     "hi": 0.6189,
+     "usable_draws": 2000
+    },
+    "tilt": {
+     "auc_raw": 0.4474,
+     "auc_dirfree": 0.5526,
+     "lo": 0.4987,
+     "hi": 0.603,
+     "usable_draws": 2000
+    }
+   }
+  },
+  "five_together": {
+   "before": {
+    "auc": 0.6657,
+    "lo": 0.5851,
+    "hi": 0.7452,
+    "usable_draws": 2000
+   },
+   "after": {
+    "auc": 0.559,
+    "lo": 0.4922,
+    "hi": 0.6213,
+    "usable_draws": 2000
+   }
+  },
+  "acceptance_test": {
+   "threshold": 0.6,
+   "five_feature_auc_after": 0.559,
+   "passed": true
+  }
+ },
+ "commands": [
+  "python3 chan4a.py <manifest> /workspace/p16pod4/pg pg",
+  "WINDOW_S=30 python3 extract_probe_layers.py <manifest> /workspace/p16pod4/out/p16_pg_<before|after> pd \"Qwen/Qwen2.5-Omni-7B\"",
+  "python3 nested_oof.py /workspace/p16pod4/out/p16_pg_<before|after>_states.npz /workspace/p16pod4/out/p16_pg_<before|after> enc",
+  "python3 feat_probe.py pg/channel_norm_pg.csv pg out/featprobe_pg.json"
+ ],
+ "encoder_probe_results": {
+  "zeroshot_before": [
+   0.5728,
+   0.5002,
+   0.644
+  ],
+  "zeroshot_after": [
+   0.5674,
+   0.5054,
+   0.6304
+  ],
+  "encoder_before": [
+   0.8959,
+   0.8339,
+   0.9448
+  ],
+  "encoder_after": [
+   0.8298,
+   0.7546,
+   0.8968
+  ],
+  "paired_zeroshot": [
+   -0.0054,
+   -0.0437,
+   0.0357
+  ],
+  "paired_encoder": [
+   -0.0661,
+   -0.1181,
+   -0.018
+  ],
+  "five_feature_before": [
+   0.6657,
+   0.5851,
+   0.7452
+  ],
+  "five_feature_after": [
+   0.559,
+   0.4922,
+   0.6213
+  ],
+  "acceptance": "PASSED: five-feature AUC after normalisation is 0.5590, below 0.60",
+  "usable_after_probe": true,
+  "statement": "PC-GITA is only mildly channel-confounded and the normalisation closed it to the agreed bar. With the channel closed, the Omni encoder probe still reaches 0.8298 [0.7546, 0.8968] while zero-shot stays at 0.5674. On PC-GITA the representation utility gap survives the channel objection."
+ },
+ "verification": "every value re-derived from the per-clip csv with an independent pairwise Mann-Whitney implementation; see VERIFY_POD4_SUMMARY.tsv (38/38 agree to 4 decimals)"
+}
