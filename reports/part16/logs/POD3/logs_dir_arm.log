@@ -1,0 +1,6 @@
+states (468, 49, 2048) X (468, 2048) lm_head (152064, 2048)
+arm counts {np.str_('agreement'): 322, np.str_('conflict'): 146}
+[all] n=468 spk=228 cos=0.0051 rand_floor=0.0177 [0.0008,0.0498] auc_probe=0.8307[0.7833, 0.8741] auc_d=0.7656[0.7088, 0.8179] auc_without_d=0.8305[0.7826, 0.8737]
+[conflict] n=146 spk=100 cos=-0.0067 rand_floor=0.0177 [0.0008,0.0516] auc_probe=0.6145[0.5021, 0.7246] auc_d=0.6029[0.4965, 0.7025] auc_without_d=0.6196[0.5094, 0.7283]
+[agreement] n=322 spk=175 cos=0.0086 rand_floor=0.0172 [0.0007,0.0480] auc_probe=0.9349[0.9034, 0.9614] auc_d=0.8264[0.7741, 0.8731] auc_without_d=0.9341[0.9021, 0.9604]
+wrote readout_direction_q3o_by_arm.csv/.json

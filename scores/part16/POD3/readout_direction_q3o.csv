@@ -1,0 +1,2 @@
+model,n,n_speakers,cosine,cosine_random,auc_probe,auc_d,auc_probe_without_d
+Qwen/Qwen3-Omni-30B-A3B-Instruct,468,228,0.0051,0.0177,0.8307,0.7656,0.8305

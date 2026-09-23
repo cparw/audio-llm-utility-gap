@@ -1,0 +1,34 @@
+{
+ "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "n": 468,
+ "n_speakers": 228,
+ "cosine": 0.0051,
+ "cosine_random_mean_abs": 0.0177,
+ "cosine_random_ci": [
+  0.0008,
+  0.0498
+ ],
+ "results": {
+  "auc_probe": 0.8307,
+  "auc_d": 0.7656,
+  "auc_without_d_CANONICAL_foldz": 0.8276,
+  "auc_without_d_raw_pooled": 0.8298,
+  "auc_without_d_mean_of_folds": 0.8318,
+  "auc_without_d_TRAINZ_as_shipped": 0.8305,
+  "per_fold_auc_d_removed": [
+   0.8512,
+   0.7835,
+   0.7899,
+   0.8674,
+   0.8669
+  ]
+ },
+ "arms": {
+  "error": "list index out of range"
+ },
+ "seed": 0,
+ "draws": 2000,
+ "canonical_definition": "per training fold w_perp = w_fold - (w_fold.d/d.d) d, projected on that fold's HELD-OUT speakers, standardised WITHIN the held-out fold, then pooled (release/omni/readout_direction.json)",
+ "defect_corrected": "direction_q3o.py standardised the held-out projection with the TRAINING fold mean/std; that value is reported as auc_without_d_TRAINZ_as_shipped",
+ "states": "/workspace/out/q3o_pitt_states.npz"
+}

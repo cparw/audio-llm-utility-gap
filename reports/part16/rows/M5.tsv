@@ -1,0 +1,30 @@
+id	what	value	lo	hi	n	n_spk	file
+M5_all_cos	Qwen2-Audio cos(probe_dir, readout_dir) [all]	0.0145			468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_all_randfloor	Qwen2-Audio random-direction floor mean|cos| [all]	0.0124	0.0005	0.0343	468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_all_auc_probe	Qwen2-Audio auc probe out-of-fold [all]	0.8223	0.7742	0.8671	468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_all_auc_d	Qwen2-Audio auc along readout direction [all]	0.6174	0.5539	0.6800	468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_all_auc_without_d	Qwen2-Audio auc probe with readout direction removed (coef proj) [all]	0.8327	0.7857	0.8759	468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_all_auc_without_d_Xproj	Qwen2-Audio auc probe with readout direction removed (X proj) [all]	0.8223	0.7743	0.8672	468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_refit_cos	Qwen2-Audio cos(probe_dir, readout_dir) [conflict_refit]	0.0054			146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_refit_randfloor	Qwen2-Audio random-direction floor mean|cos| [conflict_refit]	0.0123	0.0005	0.0350	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_refit_auc_probe	Qwen2-Audio auc probe out-of-fold [conflict_refit]	0.6757	0.5685	0.7761	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_refit_auc_d	Qwen2-Audio auc along readout direction [conflict_refit]	0.4136	0.3010	0.5424	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_refit_auc_without_d	Qwen2-Audio auc probe with readout direction removed (coef proj) [conflict_refit]	0.6869	0.5806	0.7872	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_refit_auc_without_d_Xproj	Qwen2-Audio auc probe with readout direction removed (X proj) [conflict_refit]	0.6759	0.5687	0.7766	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_refit_cos	Qwen2-Audio cos(probe_dir, readout_dir) [agreement_refit]	0.0147			322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_refit_randfloor	Qwen2-Audio random-direction floor mean|cos| [agreement_refit]	0.0126	0.0005	0.0359	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_refit_auc_probe	Qwen2-Audio auc probe out-of-fold [agreement_refit]	0.9317	0.9020	0.9578	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_refit_auc_d	Qwen2-Audio auc along readout direction [agreement_refit]	0.6984	0.6373	0.7592	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_refit_auc_without_d	Qwen2-Audio auc probe with readout direction removed (coef proj) [agreement_refit]	0.9346	0.9057	0.9603	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_refit_auc_without_d_Xproj	Qwen2-Audio auc probe with readout direction removed (X proj) [agreement_refit]	0.9325	0.9027	0.9583	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_restricted_auc_probe	Qwen2-Audio auc probe out-of-fold [conflict_restricted]	0.6178	0.5123	0.7222	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_restricted_auc_d	Qwen2-Audio auc along readout direction [conflict_restricted]	0.4136	0.3010	0.5424	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_restricted_auc_without_d	Qwen2-Audio auc probe with readout direction removed (coef proj) [conflict_restricted]	0.6326	0.5277	0.7336	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_conflict_restricted_auc_without_d_Xproj	Qwen2-Audio auc probe with readout direction removed (X proj) [conflict_restricted]	0.6180	0.5128	0.7213	146	100	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_restricted_auc_probe	Qwen2-Audio auc probe out-of-fold [agreement_restricted]	0.8988	0.8598	0.9328	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_restricted_auc_d	Qwen2-Audio auc along readout direction [agreement_restricted]	0.6984	0.6373	0.7592	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_restricted_auc_without_d	Qwen2-Audio auc probe with readout direction removed (coef proj) [agreement_restricted]	0.9070	0.8702	0.9383	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_agreement_restricted_auc_without_d_Xproj	Qwen2-Audio auc probe with readout direction removed (X proj) [agreement_restricted]	0.8988	0.8593	0.9326	322	175	scores/part16/M/M5_readout_direction_q2a.csv
+M5_paired_auc_probe_conflict_minus_agreement	Qwen2-Audio auc_probe conflict minus agreement (paired speaker bootstrap)	-0.2810	-0.3799	-0.1762	468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_paired_auc_d_conflict_minus_agreement	Qwen2-Audio auc_d conflict minus agreement (paired speaker bootstrap)	-0.2847	-0.3947	-0.1475	468	228	scores/part16/M/M5_readout_direction_q2a.csv
+M5_paired_auc_without_d_conflict_minus_agreement	Qwen2-Audio auc_without_d conflict minus agreement (paired speaker bootstrap)	-0.2745	-0.3754	-0.1707	468	228	scores/part16/M/M5_readout_direction_q2a.csv

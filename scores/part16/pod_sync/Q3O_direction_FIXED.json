@@ -1,0 +1,21 @@
+{
+ "part": "3b corrected + arm split",
+ "canonical": "standardise the held-out projection WITHIN the held-out fold (release/omni/readout_direction.json)",
+ "shipped_defect": "direction_q3o.py standardised with the TRAINING fold mean/std",
+ "conventions": {
+  "CANONICAL_foldz": 0.8276,
+  "raw_pooled": 0.8298,
+  "mean_of_folds": 0.8318,
+  "TRAINZ_as_shipped": 0.8305
+ },
+ "per_fold_auc_d_removed": [
+  0.8512,
+  0.7835,
+  0.7899,
+  0.8674,
+  0.8669
+ ],
+ "source": "part16/pod_sync/q3o_perp_cols.npz",
+ "seed": 0,
+ "n_boot": 2000
+}
