@@ -1,0 +1,82 @@
+{
+ "what": "one nvidia/audio-flamingo-3-hf forward on the longest window (716, 900 s); hooks count the audio feature rows produced and the sequence length entering the first text decoder layer",
+ "versions": {
+  "transformers": "5.17.0",
+  "torch": "2.8.0+cu128",
+  "librosa": "1.0.0",
+  "python": "3.12.3"
+ },
+ "pod": {
+  "name": "p23-c-trunc",
+  "runpod_id": "11aml69gucg4a4",
+  "gpu": "H100 80GB HBM3",
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404"
+ },
+ "sources": {
+  "windows_full.csv": {
+   "path": "manifests/edaic_windows_full.csv",
+   "sha256": "15b98c557883836ab79125daef2328bcbc727aa80c8608434ad8d7f3ee7e0017"
+  },
+  "build_windows.py": {
+   "path": "scripts/edaic_full/build_windows.py",
+   "sha256": "a8f2597678459494b18902538678c9a156ab09d5855f2f62e90f249205488c84"
+  },
+  "tarballs": "https://dcapswoz.ict.usc.edu/wwwedaic/data/<pid>_P.tar.gz for pid 716 300 359 417 612 (sha256 in pod_tgz_sha256.txt)",
+  "build_report": "pod /workspace/edaicfull/build_report.csv: stitched vs src_dur_s max|d| 0.0000, window vs win_dur_s max|d| 0.0001, 5/5",
+  "wheel_copy": "<local data dir>/scores/part22/src/tf5170/transformers",
+  "installed_vs_wheel_sha256": {
+   "models/qwen3_omni_moe/processing_qwen3_omni_moe.py": {
+    "pod_installed": "6371b86629dec798c3334b7ca82833a0c4d5c0b65bdb042d8a209f9704fef035",
+    "wheel_copy": "6371b86629dec798c3334b7ca82833a0c4d5c0b65bdb042d8a209f9704fef035",
+    "equal": true
+   },
+   "models/qwen3_omni_moe/modeling_qwen3_omni_moe.py": {
+    "pod_installed": "1c1fc322dfa547c697576e8ad3c88b817aa382abc9db5d966755be3d9fabf7ce",
+    "wheel_copy": "1c1fc322dfa547c697576e8ad3c88b817aa382abc9db5d966755be3d9fabf7ce",
+    "equal": true
+   },
+   "models/whisper/feature_extraction_whisper.py": {
+    "pod_installed": "dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb",
+    "wheel_copy": "dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb",
+    "equal": true
+   },
+   "feature_extraction_sequence_utils.py": {
+    "pod_installed": "db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d",
+    "wheel_copy": "db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d",
+    "equal": true
+   },
+   "processing_utils.py": {
+    "pod_installed": "53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5",
+    "wheel_copy": "53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5",
+    "equal": true
+   },
+   "models/audioflamingo3/processing_audioflamingo3.py": {
+    "pod_installed": "99f026a2d7074fcabdafe2d1775386d69db7b0441374222247055c3ccb1bca2f",
+    "wheel_copy": "99f026a2d7074fcabdafe2d1775386d69db7b0441374222247055c3ccb1bca2f",
+    "equal": true
+   },
+   "models/audioflamingo3/modeling_audioflamingo3.py": {
+    "pod_installed": "d1aa0faa2d8e79c841028b7f0837cae80a66154916082f6f01c6addef89f00d9",
+    "wheel_copy": "d1aa0faa2d8e79c841028b7f0837cae80a66154916082f6f01c6addef89f00d9",
+    "equal": true
+   }
+  },
+  "paper_run": {
+   "sidecar": "scores/edaic_windows/af3_full.json",
+   "scores": "scores/edaic_windows/af3_full.csv",
+   "log": "<local data dir>/edaic_rerun/logs/podA/af3_full.log",
+   "script": "the podA AF3 script itself is NOT on disk; the call used here is af3_zs.py:40-48 (scores/part20/verify/POD4c_pull/POD4c/scripts/af3_zs.py, 'Same pipeline as p15/af3_score.py') with WINDOW_S=0",
+   "transformers_on_podA": "5.17.0 (same pod, SETUP3.log)",
+   "model_revision_on_podA": "7d4bae64ee29878af6504ae6f6bb3e40492838ad (edaic_rerun/logs/podA/dl_af3.log)"
+  }
+ },
+ "command": "HF_HOME=/workspace/hf python3 /workspace/p23c/p23c_model.py af3",
+ "scripts": {
+  "p23c_proc.py": "scripts/part23/C/p23c_proc.py",
+  "p23c_model.py": "scripts/part23/C/p23c_model.py",
+  "p23c_assemble.py": "<local data dir>/scores/part23/C/scripts/p23c_assemble.py",
+  "build_windows.py": "scripts/edaic_full/build_windows.py",
+  "dl5.sh": "<local data dir>/scores/part23/C/scripts/dl5.sh"
+ },
+ "date_utc": "2026-09-23T14:18:36Z"
+}

@@ -1,0 +1,34 @@
+{
+ "which": "af3",
+ "pid": "716",
+ "transformers": "5.17.0",
+ "torch": "2.8.0+cu128",
+ "gpu": "NVIDIA H100 80GB HBM3",
+ "date_utc": "2026-09-23T14:13:28",
+ "samples_in": 14400000,
+ "audio_s_in": 900.0,
+ "placeholder_tokens_in_input_ids": 15000,
+ "input_ids_len": 15046,
+ "input_features_shape": [
+  20,
+  128,
+  3000
+ ],
+ "feature_frames": 60000,
+ "forward_ok": 1,
+ "p_yes": 0.9326642302214784,
+ "answer_mass": 0.9501244425773621,
+ "audio_features_rows": 15000,
+ "text_layer0_input_shape": [
+  1,
+  15046,
+  3584
+ ],
+ "model": "nvidia/audio-flamingo-3-hf",
+ "revision": "7d4bae64ee29878af6504ae6f6bb3e40492838ad",
+ "peak_gpu_gb": 21.41,
+ "seconds": 85.2,
+ "paper_p_yes_716": 0.9401014764038601,
+ "paper_mass_716": 0.9497851766645908,
+ "d_p_yes_vs_paper": -0.0074
+}

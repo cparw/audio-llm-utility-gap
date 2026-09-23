@@ -1,0 +1,23 @@
+{
+ "q3o": {
+  "n": 275,
+  "n_cut": 0,
+  "max_heard_s": 900.0,
+  "max_audio_tokens": 11700,
+  "n_over_300s": 217
+ },
+ "af3": {
+  "n": 275,
+  "n_cut": 136,
+  "cut_at_s": 600,
+  "max_heard_s": 600.0,
+  "max_audio_tokens": 15000,
+  "paper_log_warnings": 136,
+  "paper_log_multiset_match": true,
+  "heard_s_of_cut_windows": [
+   600.0
+  ],
+  "lost_s_total": 32599.2,
+  "median_lost_s_of_cut": 300.0
+ }
+}

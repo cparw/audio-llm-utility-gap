@@ -1,0 +1,248 @@
+{
+ "model": "nvidia/audio-flamingo-3-hf",
+ "transformers": "5.17.0",
+ "torch": "2.8.0+cu128",
+ "librosa": "1.0.0",
+ "date_utc": "2026-09-23T14:11:30",
+ "files": [
+  {
+   "pid": "612",
+   "window_s": 286.5,
+   "samples_in": 4584000,
+   "audio_s_in": 286.5,
+   "input_features_shape": [
+    10,
+    128,
+    3000
+   ],
+   "feature_frames": 28650,
+   "feature_frames_if_uncut": 28650,
+   "heard_s": 286.5,
+   "audio_placeholder_tokens": 7162,
+   "tokens_if_uncut": 7162,
+   "input_ids_len": 7208,
+   "cut": 0
+  },
+  {
+   "pid": "417",
+   "window_s": 451.4999,
+   "samples_in": 7223998,
+   "audio_s_in": 451.4999,
+   "input_features_shape": [
+    16,
+    128,
+    3000
+   ],
+   "feature_frames": 45150,
+   "feature_frames_if_uncut": 45150,
+   "heard_s": 451.5,
+   "audio_placeholder_tokens": 11287,
+   "tokens_if_uncut": 11287,
+   "input_ids_len": 11333,
+   "cut": 0
+  },
+  {
+   "pid": "359",
+   "window_s": 605.3001,
+   "samples_in": 9684801,
+   "audio_s_in": 605.3001,
+   "input_features_shape": [
+    20,
+    128,
+    3000
+   ],
+   "feature_frames": 60000,
+   "feature_frames_if_uncut": 60531,
+   "heard_s": 600.0,
+   "audio_placeholder_tokens": 15000,
+   "tokens_if_uncut": 15133,
+   "input_ids_len": 15046,
+   "cut": 1
+  },
+  {
+   "pid": "300",
+   "window_s": 759.8001,
+   "samples_in": 12156801,
+   "audio_s_in": 759.8001,
+   "input_features_shape": [
+    20,
+    128,
+    3000
+   ],
+   "feature_frames": 60000,
+   "feature_frames_if_uncut": 75981,
+   "heard_s": 600.0,
+   "audio_placeholder_tokens": 15000,
+   "tokens_if_uncut": 18995,
+   "input_ids_len": 15046,
+   "cut": 1
+  },
+  {
+   "pid": "716",
+   "window_s": 900.0001,
+   "samples_in": 14400000,
+   "audio_s_in": 900.0,
+   "input_features_shape": [
+    20,
+    128,
+    3000
+   ],
+   "feature_frames": 60000,
+   "feature_frames_if_uncut": 90000,
+   "heard_s": 600.0,
+   "audio_placeholder_tokens": 15000,
+   "tokens_if_uncut": 22500,
+   "input_ids_len": 15046,
+   "cut": 1
+  }
+ ],
+ "revision": "7d4bae64ee29878af6504ae6f6bb3e40492838ad",
+ "installed_src_sha256": {
+  "models/audioflamingo3/processing_audioflamingo3.py": "99f026a2d7074fcabdafe2d1775386d69db7b0441374222247055c3ccb1bca2f",
+  "models/audioflamingo3/modeling_audioflamingo3.py": "d1aa0faa2d8e79c841028b7f0837cae80a66154916082f6f01c6addef89f00d9",
+  "models/whisper/feature_extraction_whisper.py": "dcce2e7820be059e657a9e12a60e8a55cfd37b1a82ee202ca15fc7d0934374cb",
+  "feature_extraction_sequence_utils.py": "db6b08c4847ba853194066ae00d438bed672acbefcad6011a424824dca04e12d",
+  "processing_utils.py": "53ffe4236eca38eea4142315c0b98bfebc18859812df620b136bac928723d6b5"
+ },
+ "hub_files": {
+  "preprocessor_config.json": {
+   "error": "RemoteEntryNotFoundError('404 Client Error. (Request ID: Root=1-6ab3de18-73e4bf0c73369ab1163b96b0;abd3f460-d859-4098-bebd-eecc80220093)\\n\\nEntry Not Found for url: https://huggingface.co/nvidia/audio-"
+  },
+  "processor_config.json": {
+   "sha256": "0fda61e0f2a823aa5a1f0dd0ded8d0ced97ed0861ecaf9072c5b50758de5c23a",
+   "json": {
+    "audio_token": "<sound>",
+    "feature_extractor": {
+     "chunk_length": 30,
+     "dither": 0.0,
+     "feature_extractor_type": "WhisperFeatureExtractor",
+     "feature_size": 128,
+     "hop_length": 160,
+     "n_fft": 400,
+     "n_samples": 480000,
+     "nb_max_frames": 3000,
+     "padding_side": "right",
+     "padding_value": 0.0,
+     "processor_class": "AudioFlamingo3Processor",
+     "return_attention_mask": true,
+     "sampling_rate": 16000
+    },
+    "processor_class": "AudioFlamingo3Processor"
+   }
+  },
+  "config.json": {
+   "sha256": "547254e919aad4846ddd90340f30a9a935c3c4d033fead9cc1121ecdd3b13ef7",
+   "json": {
+    "architectures": [
+     "AudioFlamingo3ForConditionalGeneration"
+    ],
+    "audio_config": {
+     "activation_dropout": 0.0,
+     "activation_function": "gelu",
+     "attention_dropout": 0.0,
+     "dropout": 0.0,
+     "hidden_size": 1280,
+     "initializer_range": 0.02,
+     "intermediate_size": 5120,
+     "layerdrop": 0.0,
+     "max_source_positions": 1500,
+     "model_type": "audioflamingo3_encoder",
+     "num_attention_heads": 20,
+     "num_hidden_layers": 32,
+     "num_mel_bins": 128,
+     "scale_embedding": false
+    },
+    "audio_token_id": 151669,
+    "dtype": "float32",
+    "model_type": "audioflamingo3",
+    "projector_bias": true,
+    "projector_hidden_act": "gelu",
+    "text_config": {
+     "attention_dropout": 0.0,
+     "bos_token_id": 151670,
+     "eos_token_id": 151645,
+     "hidden_act": "silu",
+     "hidden_size": 3584,
+     "initializer_range": 0.02,
+     "intermediate_size": 18944,
+     "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention"
+     ],
+     "max_position_embeddings": 32768,
+     "max_window_layers": 28,
+     "model_max_length": 32768,
+     "model_type": "qwen2",
+     "num_attention_heads": 28,
+     "num_hidden_layers": 28,
+     "num_key_value_heads": 4,
+     "pad_token_id": 151671,
+     "rms_norm_eps": 1e-06,
+     "rope_parameters": {
+      "rope_theta": 1000000.0,
+      "rope_type": "default"
+     },
+     "sliding_window": null,
+     "use_cache": false,
+     "use_sliding_window": false,
+     "vocab_size": 151672
+    },
+    "transformers_version": "5.0.0rc1"
+   }
+  }
+ },
+ "processor_class": "AudioFlamingo3Processor",
+ "feature_extractor_class": "WhisperFeatureExtractor",
+ "fe_attrs": {
+  "chunk_length": 30,
+  "n_samples": 480000,
+  "nb_max_frames": 3000,
+  "hop_length": 160,
+  "sampling_rate": 16000,
+  "feature_size": 128,
+  "n_fft": 400
+ },
+ "proc_attrs": {
+  "max_audio_len": 600,
+  "audio_token": "<sound>"
+ },
+ "audio_token_id": 151669,
+ "processor_kwargs_defaults_audio": {
+  "sampling_rate": 16000,
+  "return_attention_mask": true,
+  "padding": "max_length"
+ },
+ "merged_audio_kwargs": {
+  "sampling_rate": 16000,
+  "return_attention_mask": true,
+  "padding": "max_length",
+  "return_tensors": "pt",
+  "padding_side": "left"
+ }
+}
