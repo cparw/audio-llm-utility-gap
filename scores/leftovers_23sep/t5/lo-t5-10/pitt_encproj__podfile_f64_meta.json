@@ -1,0 +1,14 @@
+{
+ "job": "pitt_encproj",
+ "tag": "podfile_f64",
+ "fold_file": "folds/pitt_groupkfold5_pod.csv",
+ "dtype": "f64",
+ "n_jobs": 190,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": null
+ },
+ "seconds": 4.8
+}

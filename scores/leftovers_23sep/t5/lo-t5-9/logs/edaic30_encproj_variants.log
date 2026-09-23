@@ -1,0 +1,10 @@
+VARIANT DONE edaic30_encproj podfile 4.1 s
+VARIANT DONE edaic30_encproj macfile 4.2 s
+VARIANT DONE edaic30_encproj podfile_f64 4.3 s
+VARIANT DONE edaic30_encproj podfile_thr8 2.7 s
+VARIANT DONE edaic30_encproj podfile_ctHaswell 4.2 s
+VARIANT DONE edaic30_encproj podfile_ctSkylakeX 4.2 s
+VARIANT DONE edaic30_encproj podfile_ctZen 4.3 s
+VARIANT DONE edaic30_encproj podfile_ctSapphireRapids 4.2 s
+VARIANT DONE edaic30_encproj podfile_ctSandybridge 4.2 s
+VARIANT DONE edaic30_encproj podfile_ctPrescott 4.5 s

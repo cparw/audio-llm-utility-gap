@@ -1,0 +1,9 @@
+22:25:57 START pod lo-t5-2 mode main variants basic jobs pitt_llm host 4a4e878ad5dd
+22:26:14 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                         AMD EPYC 9754 128-Core Processor'] SkylakeX
+22:26:28 pitt_llm exact script rc 0 | llm: 29 points, best auc_oof 0.8396 at 27, last 0.8253;
+22:26:30 pitt_llm foldcheck rc 0
+22:26:39 pitt_llm variant podfile rc 0
+22:26:48 pitt_llm variant macfile rc 0
+22:26:51 pitt_llm same-pod verifier refit rc 0
+22:26:51 ALL DONE

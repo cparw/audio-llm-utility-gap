@@ -1,0 +1,26 @@
+22:19:01 START pod lo-t5-9 mode main variants basic jobs edaicfull_encproj host f4eeae4614e7
+22:19:11 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                         AMD EPYC 9654 96-Core Processor'] SkylakeX
+22:19:18 edaicfull_encproj exact script rc 0 | enc: 32 points, best auc_oof 0.6922 at 21, last 0.6172;proj: 1 points, best auc_oof 0.5903 at 0, last 0.5903;
+22:19:19 edaicfull_encproj foldcheck rc 0
+22:19:25 edaicfull_encproj variant podfile rc 0
+22:19:31 edaicfull_encproj variant macfile rc 0
+22:19:32 edaicfull_encproj same-pod verifier refit rc 0
+22:19:32 ALL DONE
+22:21:11 START pod lo-t5-9 mode main variants full jobs edaic30_encproj host f4eeae4614e7
+22:21:11 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                         AMD EPYC 9654 96-Core Processor'] None
+22:21:18 edaic30_encproj exact script rc 0 | enc: 32 points, best auc_oof 0.6686 at 1, last 0.4814;proj: 1 points, best auc_oof 0.5182 at 0, last 0.5182;
+22:21:19 edaic30_encproj foldcheck rc 0
+22:21:24 edaic30_encproj variant podfile rc 0
+22:21:30 edaic30_encproj variant macfile rc 0
+22:21:35 edaic30_encproj variant podfile_f64 rc 0
+22:21:39 edaic30_encproj variant podfile_thr8 rc 0
+22:21:45 edaic30_encproj variant podfile_ctHaswell rc 0
+22:21:50 edaic30_encproj variant podfile_ctSkylakeX rc 0
+22:21:56 edaic30_encproj variant podfile_ctZen rc 0
+22:22:01 edaic30_encproj variant podfile_ctSapphireRapids rc 0
+22:22:07 edaic30_encproj variant podfile_ctSandybridge rc 0
+22:22:13 edaic30_encproj variant podfile_ctPrescott rc 0
+22:22:14 edaic30_encproj same-pod verifier refit rc 0
+22:22:14 ALL DONE
