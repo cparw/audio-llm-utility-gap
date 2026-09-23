@@ -1,0 +1,10 @@
+22:17:49 START pod lo-t5-7 mode main variants basic jobs adress2020_encproj host 9887e7cfda4f
+22:18:07 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                              AMD EPYC 9654 96-Core Processor'] SkylakeX
+22:18:24 adress2020_encproj exact script rc 0 | enc: 32 points, best auc_oof 0.8254 at 25, last 0.7857;proj: 1 points, best auc_oof 0.7659 at 0, last 0.7659;
+22:18:27 adress2020_encproj foldcheck rc 0
+22:18:39 adress2020_encproj variant podfile rc 0
+22:18:53 adress2020_encproj variant macfile rc 0
+22:26:30 driver stopped after the driver file was replaced mid run (Mac side edit); finishing by hand: same-pod verifier refit then ALL DONE
+22:26:33 adress2020_encproj same-pod verifier refit rc 0
+22:26:33 ALL DONE

@@ -1,0 +1,16 @@
+{
+ "job": "neurovoz_encproj",
+ "fold_file": "folds/neurovoz_groupkfold5_pod.csv",
+ "n": 1270,
+ "fold_sizes": [
+  256,
+  251,
+  251,
+  251,
+  261
+ ],
+ "keys": [
+  "enc",
+  "proj"
+ ]
+}

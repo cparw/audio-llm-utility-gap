@@ -1,0 +1,9 @@
+22:27:27 START pod lo-t5-8 mode main variants basic jobs neurovoz_encproj host 58bc8e8446de
+22:27:37 pip rc 0
+ENV 2.1.2 1.18.1 1.9.1 ['Model name:                           AMD EPYC 9655P 96-Core Processor'] SkylakeX
+22:27:45 neurovoz_encproj exact script rc 0 | enc: 32 points, best auc_oof 0.9343 at 25, last 0.9201;proj: 1 points, best auc_oof 0.9095 at 0, last 0.9095;
+22:27:45 neurovoz_encproj foldcheck rc 0
+22:27:52 neurovoz_encproj variant podfile rc 0
+22:27:58 neurovoz_encproj variant macfile rc 0
+22:28:00 neurovoz_encproj same-pod verifier refit rc 0
+22:28:00 ALL DONE
