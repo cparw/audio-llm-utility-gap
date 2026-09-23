@@ -1,0 +1,4214 @@
+[
+ {
+  "clip": "conflict_Con_015-0_67805.wav",
+  "ok": 1,
+  "par_s": 18.678,
+  "orig_s": 33.38,
+  "heard_s": 30.0,
+  "inv_ms": 550,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_015-1_4987.wav",
+  "ok": 1,
+  "par_s": 10.308,
+  "orig_s": 55.17,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_015-1_60159.wav",
+  "ok": 1,
+  "par_s": 8.001,
+  "orig_s": 31.2,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Con_017-4_6597.wav",
+  "ok": 1,
+  "par_s": 15.692,
+  "orig_s": 35.39,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Con_021-1_38448.wav",
+  "ok": 1,
+  "par_s": 15.518,
+  "orig_s": 39.51,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Con_034-1_7639.wav",
+  "ok": 1,
+  "par_s": 9.755,
+  "orig_s": 50.51,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_034-4_46285.wav",
+  "ok": 1,
+  "par_s": 19.04,
+  "orig_s": 30.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Con_042-2_2251.wav",
+  "ok": 1,
+  "par_s": 15.607,
+  "orig_s": 33.51,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_045-0_35325.wav",
+  "ok": 1,
+  "par_s": 11.969,
+  "orig_s": 37.99,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_045-2_39349.wav",
+  "ok": 1,
+  "par_s": 20.567,
+  "orig_s": 32.34,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Con_052-0_3822.wav",
+  "ok": 1,
+  "par_s": 13.283,
+  "orig_s": 33.23,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_068-0_1810.wav",
+  "ok": 1,
+  "par_s": 18.917,
+  "orig_s": 41.61,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_068-2_6578.wav",
+  "ok": 1,
+  "par_s": 16.163,
+  "orig_s": 36.4,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_068-3_1311.wav",
+  "ok": 1,
+  "par_s": 24.725,
+  "orig_s": 45.44,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_071-1_2091.wav",
+  "ok": 1,
+  "par_s": 12.033,
+  "orig_s": 31.46,
+  "heard_s": 30.0,
+  "inv_ms": 1621,
+  "n_par": 13
+ },
+ {
+  "clip": "conflict_Con_073-3_37636.wav",
+  "ok": 1,
+  "par_s": 21.817,
+  "orig_s": 39.46,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Con_086-0_5140.wav",
+  "ok": 1,
+  "par_s": 18.255,
+  "orig_s": 32.44,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Con_086-0_37577.wav",
+  "ok": 1,
+  "par_s": 17.654,
+  "orig_s": 33.58,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_105-2_38053.wav",
+  "ok": 1,
+  "par_s": 16.364,
+  "orig_s": 43.0,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Con_121-0_64117.wav",
+  "ok": 1,
+  "par_s": 26.506,
+  "orig_s": 30.3,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_121-1_32497.wav",
+  "ok": 1,
+  "par_s": 2.544,
+  "orig_s": 45.52,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Con_124-1_36933.wav",
+  "ok": 1,
+  "par_s": 10.201,
+  "orig_s": 34.35,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Con_128-3_800.wav",
+  "ok": 1,
+  "par_s": 20.193,
+  "orig_s": 32.94,
+  "heard_s": 30.0,
+  "inv_ms": 440,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Con_139-0_36206.wav",
+  "ok": 1,
+  "par_s": 5.06,
+  "orig_s": 31.17,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Con_140-0_35581.wav",
+  "ok": 1,
+  "par_s": 15.813,
+  "orig_s": 31.22,
+  "heard_s": 30.0,
+  "inv_ms": 1226,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_141-1_1470.wav",
+  "ok": 1,
+  "par_s": 14.227,
+  "orig_s": 35.91,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Con_158-3_2170.wav",
+  "ok": 1,
+  "par_s": 20.158,
+  "orig_s": 34.08,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Con_192-0_820.wav",
+  "ok": 1,
+  "par_s": 8.635,
+  "orig_s": 33.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Con_209-2_2013.wav",
+  "ok": 1,
+  "par_s": 25.447,
+  "orig_s": 30.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_210-1_35543.wav",
+  "ok": 1,
+  "par_s": 17.616,
+  "orig_s": 33.32,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_225-0_4203.wav",
+  "ok": 1,
+  "par_s": 26.443,
+  "orig_s": 38.13,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Con_227-0_460.wav",
+  "ok": 1,
+  "par_s": 8.145,
+  "orig_s": 33.27,
+  "heard_s": 30.0,
+  "inv_ms": 2860,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Con_229-1_1420.wav",
+  "ok": 1,
+  "par_s": 14.218,
+  "orig_s": 34.03,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Con_229-2_390.wav",
+  "ok": 1,
+  "par_s": 12.861,
+  "orig_s": 32.37,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_242-2_64112.wav",
+  "ok": 1,
+  "par_s": 18.896,
+  "orig_s": 30.03,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_243-0_73861.wav",
+  "ok": 1,
+  "par_s": 18.429,
+  "orig_s": 35.39,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Con_245-2_25300.wav",
+  "ok": 1,
+  "par_s": 23.943,
+  "orig_s": 33.38,
+  "heard_s": 30.0,
+  "inv_ms": 824,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Con_256-1_5587.wav",
+  "ok": 1,
+  "par_s": 12.394,
+  "orig_s": 30.98,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_280-2_9925.wav",
+  "ok": 1,
+  "par_s": 20.192,
+  "orig_s": 30.35,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Con_297-2_1520.wav",
+  "ok": 1,
+  "par_s": 15.663,
+  "orig_s": 30.7,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_302-0_7124.wav",
+  "ok": 1,
+  "par_s": 8.065,
+  "orig_s": 36.11,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Con_323-0_39906.wav",
+  "ok": 1,
+  "par_s": 19.541,
+  "orig_s": 32.7,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Con_332-0_120.wav",
+  "ok": 1,
+  "par_s": 5.618,
+  "orig_s": 30.83,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Con_691-0_2463.wav",
+  "ok": 1,
+  "par_s": 25.203,
+  "orig_s": 36.74,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 14
+ },
+ {
+  "clip": "conflict_Con_709-2_760.wav",
+  "ok": 1,
+  "par_s": 21.991,
+  "orig_s": 30.56,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_003-0_6255.wav",
+  "ok": 1,
+  "par_s": 17.21,
+  "orig_s": 36.5,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_003-0_76644.wav",
+  "ok": 1,
+  "par_s": 5.241,
+  "orig_s": 31.07,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 1
+ },
+ {
+  "clip": "conflict_Dem_003-0_145294.wav",
+  "ok": 1,
+  "par_s": 20.65,
+  "orig_s": 34.7,
+  "heard_s": 30.0,
+  "inv_ms": 137,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_007-1_15997.wav",
+  "ok": 1,
+  "par_s": 14.111,
+  "orig_s": 30.74,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_007-3_4014.wav",
+  "ok": 1,
+  "par_s": 23.427,
+  "orig_s": 30.63,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_010-2_4647.wav",
+  "ok": 1,
+  "par_s": 24.391,
+  "orig_s": 35.11,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 12
+ },
+ {
+  "clip": "conflict_Dem_016-4_40791.wav",
+  "ok": 1,
+  "par_s": 22.85,
+  "orig_s": 31.2,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_018-0_41994.wav",
+  "ok": 1,
+  "par_s": 24.168,
+  "orig_s": 31.95,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_024-1_990.wav",
+  "ok": 1,
+  "par_s": 19.892,
+  "orig_s": 35.99,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_029-0_41581.wav",
+  "ok": 1,
+  "par_s": 13.107,
+  "orig_s": 31.94,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_030-0_38630.wav",
+  "ok": 1,
+  "par_s": 25.766,
+  "orig_s": 32.08,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_030-1_2020.wav",
+  "ok": 1,
+  "par_s": 29.041,
+  "orig_s": 35.87,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_030-1_37890.wav",
+  "ok": 1,
+  "par_s": 24.854,
+  "orig_s": 30.99,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_033-0_2543.wav",
+  "ok": 1,
+  "par_s": 27.312,
+  "orig_s": 31.22,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_033-2_2861.wav",
+  "ok": 1,
+  "par_s": 21.155,
+  "orig_s": 31.32,
+  "heard_s": 30.0,
+  "inv_ms": 1243,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_033-3_290.wav",
+  "ok": 1,
+  "par_s": 29.235,
+  "orig_s": 30.77,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_033-3_31062.wav",
+  "ok": 1,
+  "par_s": 23.767,
+  "orig_s": 31.13,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_033-4_10719.wav",
+  "ok": 1,
+  "par_s": 26.518,
+  "orig_s": 30.66,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_033-4_41376.wav",
+  "ok": 1,
+  "par_s": 25.119,
+  "orig_s": 30.6,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_039-0_2456.wav",
+  "ok": 1,
+  "par_s": 22.699,
+  "orig_s": 30.6,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_039-0_33062.wav",
+  "ok": 1,
+  "par_s": 14.491,
+  "orig_s": 32.19,
+  "heard_s": 30.0,
+  "inv_ms": 661,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Dem_043-0_5095.wav",
+  "ok": 1,
+  "par_s": 15.801,
+  "orig_s": 33.87,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_043-0_38959.wav",
+  "ok": 1,
+  "par_s": 5.113,
+  "orig_s": 42.02,
+  "heard_s": 30.0,
+  "inv_ms": 781,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_049-0_3811.wav",
+  "ok": 1,
+  "par_s": 19.965,
+  "orig_s": 33.07,
+  "heard_s": 30.0,
+  "inv_ms": 1306,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Dem_057-0_5565.wav",
+  "ok": 1,
+  "par_s": 23.943,
+  "orig_s": 44.2,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_058-0_7315.wav",
+  "ok": 1,
+  "par_s": 14.924,
+  "orig_s": 31.08,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_058-1_45600.wav",
+  "ok": 1,
+  "par_s": 10.042,
+  "orig_s": 32.46,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Dem_058-4_4619.wav",
+  "ok": 1,
+  "par_s": 27.498,
+  "orig_s": 33.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 2
+ },
+ {
+  "clip": "conflict_Dem_067-1_1996.wav",
+  "ok": 1,
+  "par_s": 15.59,
+  "orig_s": 39.98,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_067-2_38997.wav",
+  "ok": 1,
+  "par_s": 13.9,
+  "orig_s": 31.18,
+  "heard_s": 30.0,
+  "inv_ms": 4085,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_076-0_37244.wav",
+  "ok": 1,
+  "par_s": 14.566,
+  "orig_s": 32.22,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_076-2_4304.wav",
+  "ok": 1,
+  "par_s": 20.644,
+  "orig_s": 30.28,
+  "heard_s": 30.0,
+  "inv_ms": 1500,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Dem_089-0_35974.wav",
+  "ok": 1,
+  "par_s": 12.896,
+  "orig_s": 35.69,
+  "heard_s": 30.0,
+  "inv_ms": 149,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_094-1_3944.wav",
+  "ok": 1,
+  "par_s": 4.928,
+  "orig_s": 40.03,
+  "heard_s": 30.0,
+  "inv_ms": 1434,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_120-0_2632.wav",
+  "ok": 1,
+  "par_s": 22.513,
+  "orig_s": 30.53,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_120-2_560.wav",
+  "ok": 1,
+  "par_s": 23.565,
+  "orig_s": 35.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_157-1_5428.wav",
+  "ok": 1,
+  "par_s": 25.872,
+  "orig_s": 32.3,
+  "heard_s": 30.0,
+  "inv_ms": 1189,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_157-1_37725.wav",
+  "ok": 1,
+  "par_s": 18.279,
+  "orig_s": 34.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_157-1_72489.wav",
+  "ok": 1,
+  "par_s": 23.417,
+  "orig_s": 33.98,
+  "heard_s": 30.0,
+  "inv_ms": 480,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_157-1_106467.wav",
+  "ok": 1,
+  "par_s": 21.746,
+  "orig_s": 37.23,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_172-1_4136.wav",
+  "ok": 1,
+  "par_s": 17.817,
+  "orig_s": 30.91,
+  "heard_s": 30.0,
+  "inv_ms": 340,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_172-3_290.wav",
+  "ok": 1,
+  "par_s": 22.189,
+  "orig_s": 31.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "conflict_Dem_178-1_41524.wav",
+  "ok": 1,
+  "par_s": 12.773,
+  "orig_s": 32.46,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_181-1_20393.wav",
+  "ok": 1,
+  "par_s": 17.789,
+  "orig_s": 31.53,
+  "heard_s": 30.0,
+  "inv_ms": 299,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Dem_181-3_3835.wav",
+  "ok": 1,
+  "par_s": 14.136,
+  "orig_s": 30.9,
+  "heard_s": 30.0,
+  "inv_ms": 2726,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_181-3_34728.wav",
+  "ok": 1,
+  "par_s": 10.196,
+  "orig_s": 31.05,
+  "heard_s": 30.0,
+  "inv_ms": 36,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_184-1_6665.wav",
+  "ok": 1,
+  "par_s": 21.288,
+  "orig_s": 30.94,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_184-1_37607.wav",
+  "ok": 1,
+  "par_s": 21.812,
+  "orig_s": 30.78,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_207-0_11767.wav",
+  "ok": 1,
+  "par_s": 15.823,
+  "orig_s": 30.08,
+  "heard_s": 30.0,
+  "inv_ms": 676,
+  "n_par": 14
+ },
+ {
+  "clip": "conflict_Dem_212-1_3814.wav",
+  "ok": 1,
+  "par_s": 21.677,
+  "orig_s": 36.04,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "conflict_Dem_216-1_4942.wav",
+  "ok": 1,
+  "par_s": 18.207,
+  "orig_s": 30.11,
+  "heard_s": 30.0,
+  "inv_ms": 2642,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_221-0_34574.wav",
+  "ok": 1,
+  "par_s": 23.989,
+  "orig_s": 30.14,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_221-0_64706.wav",
+  "ok": 1,
+  "par_s": 9.849,
+  "orig_s": 44.95,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_221-1_4497.wav",
+  "ok": 1,
+  "par_s": 24.133,
+  "orig_s": 35.2,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_221-1_39698.wav",
+  "ok": 1,
+  "par_s": 19.211,
+  "orig_s": 32.38,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_221-2_32438.wav",
+  "ok": 1,
+  "par_s": 11.508,
+  "orig_s": 30.07,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_221-3_1812.wav",
+  "ok": 1,
+  "par_s": 26.446,
+  "orig_s": 31.15,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_223-1_50032.wav",
+  "ok": 1,
+  "par_s": 9.61,
+  "orig_s": 30.06,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_235-0_14264.wav",
+  "ok": 1,
+  "par_s": 13.348,
+  "orig_s": 42.31,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_237-2_540.wav",
+  "ok": 1,
+  "par_s": 25.914,
+  "orig_s": 31.4,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_247-0_66858.wav",
+  "ok": 1,
+  "par_s": 4.38,
+  "orig_s": 39.4,
+  "heard_s": 30.0,
+  "inv_ms": 1477,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Dem_257-2_6395.wav",
+  "ok": 1,
+  "par_s": 25.767,
+  "orig_s": 32.51,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_270-0_2654.wav",
+  "ok": 1,
+  "par_s": 20.728,
+  "orig_s": 34.25,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_270-2_4285.wav",
+  "ok": 1,
+  "par_s": 13.455,
+  "orig_s": 31.12,
+  "heard_s": 30.0,
+  "inv_ms": 5145,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_282-0_4729.wav",
+  "ok": 1,
+  "par_s": 15.606,
+  "orig_s": 35.12,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_282-1_4044.wav",
+  "ok": 1,
+  "par_s": 17.962,
+  "orig_s": 30.82,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_282-2_8300.wav",
+  "ok": 1,
+  "par_s": 21.124,
+  "orig_s": 32.22,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_291-1_3713.wav",
+  "ok": 1,
+  "par_s": 11.742,
+  "orig_s": 34.49,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_291-2_7388.wav",
+  "ok": 1,
+  "par_s": 12.719,
+  "orig_s": 32.05,
+  "heard_s": 30.0,
+  "inv_ms": 2523,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_329-0_68391.wav",
+  "ok": 1,
+  "par_s": 13.511,
+  "orig_s": 33.48,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_342-1_320.wav",
+  "ok": 1,
+  "par_s": 22.83,
+  "orig_s": 33.3,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_346-0_1921.wav",
+  "ok": 1,
+  "par_s": 19.997,
+  "orig_s": 31.98,
+  "heard_s": 30.0,
+  "inv_ms": 2863,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_349-0_5627.wav",
+  "ok": 1,
+  "par_s": 13.768,
+  "orig_s": 39.77,
+  "heard_s": 30.0,
+  "inv_ms": 2421,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_349-1_5632.wav",
+  "ok": 1,
+  "par_s": 13.41,
+  "orig_s": 37.49,
+  "heard_s": 30.0,
+  "inv_ms": 1166,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_350-0_32781.wav",
+  "ok": 1,
+  "par_s": 16.723,
+  "orig_s": 31.55,
+  "heard_s": 30.0,
+  "inv_ms": 4536,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_355-0_3543.wav",
+  "ok": 1,
+  "par_s": 21.67,
+  "orig_s": 33.77,
+  "heard_s": 30.0,
+  "inv_ms": 260,
+  "n_par": 11
+ },
+ {
+  "clip": "conflict_Dem_355-1_2694.wav",
+  "ok": 1,
+  "par_s": 23.103,
+  "orig_s": 37.52,
+  "heard_s": 30.0,
+  "inv_ms": 413,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_357-0_40046.wav",
+  "ok": 1,
+  "par_s": 18.484,
+  "orig_s": 31.44,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_358-0_1290.wav",
+  "ok": 1,
+  "par_s": 24.506,
+  "orig_s": 30.19,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_360-0_4872.wav",
+  "ok": 1,
+  "par_s": 18.751,
+  "orig_s": 30.71,
+  "heard_s": 30.0,
+  "inv_ms": 650,
+  "n_par": 12
+ },
+ {
+  "clip": "conflict_Dem_368-0_5232.wav",
+  "ok": 1,
+  "par_s": 13.521,
+  "orig_s": 30.54,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Dem_450-1_6771.wav",
+  "ok": 1,
+  "par_s": 16.577,
+  "orig_s": 30.71,
+  "heard_s": 30.0,
+  "inv_ms": 1423,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_458-0_2681.wav",
+  "ok": 1,
+  "par_s": 20.186,
+  "orig_s": 30.25,
+  "heard_s": 30.0,
+  "inv_ms": 2830,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_461-0_8662.wav",
+  "ok": 1,
+  "par_s": 18.116,
+  "orig_s": 32.12,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_461-0_40779.wav",
+  "ok": 1,
+  "par_s": 6.695,
+  "orig_s": 39.9,
+  "heard_s": 30.0,
+  "inv_ms": 1870,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_472-0_42516.wav",
+  "ok": 1,
+  "par_s": 3.854,
+  "orig_s": 37.18,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Dem_488-0_3463.wav",
+  "ok": 1,
+  "par_s": 9.42,
+  "orig_s": 35.42,
+  "heard_s": 30.0,
+  "inv_ms": 4076,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_492-0_26825.wav",
+  "ok": 1,
+  "par_s": 19.947,
+  "orig_s": 37.41,
+  "heard_s": 30.0,
+  "inv_ms": 420,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_493-0_6150.wav",
+  "ok": 1,
+  "par_s": 17.709,
+  "orig_s": 32.37,
+  "heard_s": 30.0,
+  "inv_ms": 1022,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Dem_504-0_2260.wav",
+  "ok": 1,
+  "par_s": 24.068,
+  "orig_s": 32.26,
+  "heard_s": 30.0,
+  "inv_ms": 190,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_506-0_5443.wav",
+  "ok": 1,
+  "par_s": 11.253,
+  "orig_s": 44.01,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_530-0_7771.wav",
+  "ok": 1,
+  "par_s": 19.268,
+  "orig_s": 41.04,
+  "heard_s": 30.0,
+  "inv_ms": 1222,
+  "n_par": 6
+ },
+ {
+  "clip": "conflict_Dem_559-0_11027.wav",
+  "ok": 1,
+  "par_s": 18.801,
+  "orig_s": 31.42,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "conflict_Dem_573-0_7395.wav",
+  "ok": 1,
+  "par_s": 24.887,
+  "orig_s": 30.34,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "conflict_Dem_578-0_2913.wav",
+  "ok": 1,
+  "par_s": 24.184,
+  "orig_s": 35.61,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "conflict_Dem_578-0_38520.wav",
+  "ok": 1,
+  "par_s": 24.176,
+  "orig_s": 32.81,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "conflict_Dem_620-0_5500.wav",
+  "ok": 1,
+  "par_s": 18.829,
+  "orig_s": 30.72,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "conflict_Dem_624-0_13811.wav",
+  "ok": 1,
+  "par_s": 21.983,
+  "orig_s": 31.42,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "conflict_Dem_635-0_15048.wav",
+  "ok": 1,
+  "par_s": 11.168,
+  "orig_s": 39.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "conflict_Dem_639-0_9189.wav",
+  "ok": 1,
+  "par_s": 14.276,
+  "orig_s": 55.56,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "conflict_Dem_698-0_4222.wav",
+  "ok": 1,
+  "par_s": 11.453,
+  "orig_s": 40.2,
+  "heard_s": 30.0,
+  "inv_ms": 1030,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Con_002-1_3044.wav",
+  "ok": 1,
+  "par_s": 14.337,
+  "orig_s": 37.02,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_002-2_11623.wav",
+  "ok": 1,
+  "par_s": 25.69,
+  "orig_s": 33.94,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_002-3_12270.wav",
+  "ok": 1,
+  "par_s": 25.428,
+  "orig_s": 37.91,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Con_002-3_50179.wav",
+  "ok": 1,
+  "par_s": 24.42,
+  "orig_s": 30.35,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Con_006-4_37223.wav",
+  "ok": 1,
+  "par_s": 23.987,
+  "orig_s": 36.58,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_013-0_6039.wav",
+  "ok": 1,
+  "par_s": 17.041,
+  "orig_s": 43.67,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_013-2_3373.wav",
+  "ok": 1,
+  "par_s": 20.054,
+  "orig_s": 32.36,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_013-3_5680.wav",
+  "ok": 1,
+  "par_s": 17.872,
+  "orig_s": 38.51,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_013-4_8853.wav",
+  "ok": 1,
+  "par_s": 18.121,
+  "orig_s": 32.39,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 13
+ },
+ {
+  "clip": "agreement_Con_015-0_2695.wav",
+  "ok": 1,
+  "par_s": 23.496,
+  "orig_s": 31.57,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_015-2_49054.wav",
+  "ok": 1,
+  "par_s": 24.053,
+  "orig_s": 33.48,
+  "heard_s": 30.0,
+  "inv_ms": 557,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_017-4_41988.wav",
+  "ok": 1,
+  "par_s": 2.612,
+  "orig_s": 40.48,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_022-0_6924.wav",
+  "ok": 1,
+  "par_s": 22.885,
+  "orig_s": 36.48,
+  "heard_s": 30.0,
+  "inv_ms": 476,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_022-2_4290.wav",
+  "ok": 1,
+  "par_s": 24.315,
+  "orig_s": 39.12,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_028-1_5398.wav",
+  "ok": 1,
+  "par_s": 11.439,
+  "orig_s": 30.51,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_028-4_8667.wav",
+  "ok": 1,
+  "par_s": 27.03,
+  "orig_s": 33.13,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Con_034-2_4839.wav",
+  "ok": 1,
+  "par_s": 20.551,
+  "orig_s": 34.19,
+  "heard_s": 30.0,
+  "inv_ms": 1343,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_034-3_4119.wav",
+  "ok": 1,
+  "par_s": 21.863,
+  "orig_s": 30.25,
+  "heard_s": 30.0,
+  "inv_ms": 311,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_042-1_5846.wav",
+  "ok": 1,
+  "par_s": 25.24,
+  "orig_s": 31.17,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Con_042-3_2720.wav",
+  "ok": 1,
+  "par_s": 24.89,
+  "orig_s": 31.3,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_042-4_510.wav",
+  "ok": 1,
+  "par_s": 16.844,
+  "orig_s": 32.63,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_045-2_5070.wav",
+  "ok": 1,
+  "par_s": 20.145,
+  "orig_s": 34.28,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_054-0_3830.wav",
+  "ok": 1,
+  "par_s": 22.648,
+  "orig_s": 45.63,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_056-0_4235.wav",
+  "ok": 1,
+  "par_s": 18.712,
+  "orig_s": 31.47,
+  "heard_s": 30.0,
+  "inv_ms": 1698,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_056-3_4315.wav",
+  "ok": 1,
+  "par_s": 19.325,
+  "orig_s": 35.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_059-3_170.wav",
+  "ok": 1,
+  "par_s": 22.676,
+  "orig_s": 31.46,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_071-2_340.wav",
+  "ok": 1,
+  "par_s": 19.474,
+  "orig_s": 31.73,
+  "heard_s": 30.0,
+  "inv_ms": 620,
+  "n_par": 13
+ },
+ {
+  "clip": "agreement_Con_071-3_2133.wav",
+  "ok": 1,
+  "par_s": 22.014,
+  "orig_s": 33.18,
+  "heard_s": 30.0,
+  "inv_ms": 500,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Con_073-1_5065.wav",
+  "ok": 1,
+  "par_s": 20.686,
+  "orig_s": 33.15,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Con_086-0_71155.wav",
+  "ok": 1,
+  "par_s": 14.55,
+  "orig_s": 32.96,
+  "heard_s": 30.0,
+  "inv_ms": 1617,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_086-2_4188.wav",
+  "ok": 1,
+  "par_s": 25.015,
+  "orig_s": 30.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_086-4_34979.wav",
+  "ok": 1,
+  "par_s": 23.545,
+  "orig_s": 34.02,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_092-0_7255.wav",
+  "ok": 1,
+  "par_s": 17.055,
+  "orig_s": 33.7,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_093-0_6739.wav",
+  "ok": 1,
+  "par_s": 10.914,
+  "orig_s": 30.45,
+  "heard_s": 30.0,
+  "inv_ms": 820,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_096-2_510.wav",
+  "ok": 1,
+  "par_s": 25.961,
+  "orig_s": 30.73,
+  "heard_s": 30.0,
+  "inv_ms": 140,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_105-0_2779.wav",
+  "ok": 1,
+  "par_s": 19.967,
+  "orig_s": 30.48,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_105-1_12019.wav",
+  "ok": 1,
+  "par_s": 17.517,
+  "orig_s": 34.36,
+  "heard_s": 30.0,
+  "inv_ms": 702,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_105-2_3372.wav",
+  "ok": 1,
+  "par_s": 13.935,
+  "orig_s": 34.68,
+  "heard_s": 30.0,
+  "inv_ms": 6613,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_109-1_4336.wav",
+  "ok": 1,
+  "par_s": 23.759,
+  "orig_s": 30.36,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_109-3_4932.wav",
+  "ok": 1,
+  "par_s": 26.344,
+  "orig_s": 32.33,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_113-0_7053.wav",
+  "ok": 1,
+  "par_s": 12.944,
+  "orig_s": 34.22,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_113-2_6076.wav",
+  "ok": 1,
+  "par_s": 23.264,
+  "orig_s": 30.4,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_113-3_8288.wav",
+  "ok": 1,
+  "par_s": 22.657,
+  "orig_s": 35.62,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_114-1_5893.wav",
+  "ok": 1,
+  "par_s": 14.918,
+  "orig_s": 31.66,
+  "heard_s": 30.0,
+  "inv_ms": 860,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_118-0_4796.wav",
+  "ok": 1,
+  "par_s": 23.006,
+  "orig_s": 32.04,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_118-1_6475.wav",
+  "ok": 1,
+  "par_s": 26.236,
+  "orig_s": 30.01,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_118-2_4554.wav",
+  "ok": 1,
+  "par_s": 15.311,
+  "orig_s": 33.67,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_118-4_6655.wav",
+  "ok": 1,
+  "par_s": 24.419,
+  "orig_s": 31.11,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_121-0_1850.wav",
+  "ok": 1,
+  "par_s": 28.937,
+  "orig_s": 31.15,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_121-3_7712.wav",
+  "ok": 1,
+  "par_s": 22.887,
+  "orig_s": 35.0,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_121-3_42714.wav",
+  "ok": 1,
+  "par_s": 27.509,
+  "orig_s": 32.05,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_124-0_4246.wav",
+  "ok": 1,
+  "par_s": 14.528,
+  "orig_s": 39.24,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_124-1_2407.wav",
+  "ok": 1,
+  "par_s": 15.38,
+  "orig_s": 34.52,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_128-1_4025.wav",
+  "ok": 1,
+  "par_s": 25.313,
+  "orig_s": 30.03,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_128-1_34057.wav",
+  "ok": 1,
+  "par_s": 21.087,
+  "orig_s": 33.52,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_128-2_600.wav",
+  "ok": 1,
+  "par_s": 24.523,
+  "orig_s": 32.62,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_128-2_65196.wav",
+  "ok": 1,
+  "par_s": 25.468,
+  "orig_s": 33.65,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_128-2_98853.wav",
+  "ok": 1,
+  "par_s": 22.316,
+  "orig_s": 31.18,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_128-3_67278.wav",
+  "ok": 1,
+  "par_s": 25.834,
+  "orig_s": 31.73,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_128-3_99009.wav",
+  "ok": 1,
+  "par_s": 24.112,
+  "orig_s": 34.64,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_128-3_133648.wav",
+  "ok": 1,
+  "par_s": 24.152,
+  "orig_s": 31.71,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Con_132-0_3652.wav",
+  "ok": 1,
+  "par_s": 17.541,
+  "orig_s": 33.49,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_137-0_9369.wav",
+  "ok": 1,
+  "par_s": 19.361,
+  "orig_s": 34.68,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_137-2_140.wav",
+  "ok": 1,
+  "par_s": 23.793,
+  "orig_s": 30.38,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_138-1_3792.wav",
+  "ok": 1,
+  "par_s": 26.407,
+  "orig_s": 30.48,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_139-0_4376.wav",
+  "ok": 1,
+  "par_s": 21.48,
+  "orig_s": 31.83,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_139-1_4164.wav",
+  "ok": 1,
+  "par_s": 11.724,
+  "orig_s": 39.14,
+  "heard_s": 30.0,
+  "inv_ms": 660,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_140-3_12248.wav",
+  "ok": 1,
+  "par_s": 15.251,
+  "orig_s": 39.72,
+  "heard_s": 30.0,
+  "inv_ms": 1031,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_141-2_2551.wav",
+  "ok": 1,
+  "par_s": 23.586,
+  "orig_s": 39.67,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_142-0_9398.wav",
+  "ok": 1,
+  "par_s": 8.254,
+  "orig_s": 33.79,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_142-1_8331.wav",
+  "ok": 1,
+  "par_s": 15.838,
+  "orig_s": 37.22,
+  "heard_s": 30.0,
+  "inv_ms": 196,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_145-3_7488.wav",
+  "ok": 1,
+  "par_s": 25.536,
+  "orig_s": 43.56,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_150-1_5476.wav",
+  "ok": 1,
+  "par_s": 24.966,
+  "orig_s": 32.66,
+  "heard_s": 30.0,
+  "inv_ms": 721,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_150-2_4727.wav",
+  "ok": 1,
+  "par_s": 23.125,
+  "orig_s": 30.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_150-2_35487.wav",
+  "ok": 1,
+  "par_s": 15.617,
+  "orig_s": 31.54,
+  "heard_s": 30.0,
+  "inv_ms": 3001,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_158-0_950.wav",
+  "ok": 1,
+  "par_s": 25.802,
+  "orig_s": 32.68,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Con_166-1_1250.wav",
+  "ok": 1,
+  "par_s": 23.016,
+  "orig_s": 31.0,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_166-2_3665.wav",
+  "ok": 1,
+  "par_s": 25.147,
+  "orig_s": 30.08,
+  "heard_s": 30.0,
+  "inv_ms": 232,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_167-1_1550.wav",
+  "ok": 1,
+  "par_s": 26.62,
+  "orig_s": 30.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_167-3_7936.wav",
+  "ok": 1,
+  "par_s": 23.037,
+  "orig_s": 30.91,
+  "heard_s": 30.0,
+  "inv_ms": 56,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_172-0_4567.wav",
+  "ok": 1,
+  "par_s": 21.512,
+  "orig_s": 31.25,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Con_175-0_1772.wav",
+  "ok": 1,
+  "par_s": 24.684,
+  "orig_s": 32.34,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 13
+ },
+ {
+  "clip": "agreement_Con_175-1_500.wav",
+  "ok": 1,
+  "par_s": 26.695,
+  "orig_s": 33.96,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Con_175-1_34456.wav",
+  "ok": 1,
+  "par_s": 21.823,
+  "orig_s": 36.84,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_175-2_6669.wav",
+  "ok": 1,
+  "par_s": 23.485,
+  "orig_s": 32.03,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_182-3_8522.wav",
+  "ok": 1,
+  "par_s": 12.485,
+  "orig_s": 35.74,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_196-0_6136.wav",
+  "ok": 1,
+  "par_s": 21.971,
+  "orig_s": 33.63,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_196-1_4236.wav",
+  "ok": 1,
+  "par_s": 26.941,
+  "orig_s": 33.6,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_208-2_3373.wav",
+  "ok": 1,
+  "par_s": 22.014,
+  "orig_s": 33.31,
+  "heard_s": 30.0,
+  "inv_ms": 250,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_208-2_36676.wav",
+  "ok": 1,
+  "par_s": 16.307,
+  "orig_s": 36.33,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_209-1_4071.wav",
+  "ok": 1,
+  "par_s": 20.808,
+  "orig_s": 33.11,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_210-1_5066.wav",
+  "ok": 1,
+  "par_s": 23.646,
+  "orig_s": 30.47,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_210-2_10174.wav",
+  "ok": 1,
+  "par_s": 22.579,
+  "orig_s": 33.21,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_210-2_43382.wav",
+  "ok": 1,
+  "par_s": 20.502,
+  "orig_s": 33.65,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_211-1_8015.wav",
+  "ok": 1,
+  "par_s": 18.234,
+  "orig_s": 30.59,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_211-1_38612.wav",
+  "ok": 1,
+  "par_s": 1.81,
+  "orig_s": 34.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 2
+ },
+ {
+  "clip": "agreement_Con_225-0_42326.wav",
+  "ok": 1,
+  "par_s": 24.947,
+  "orig_s": 39.25,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Con_225-0_81579.wav",
+  "ok": 1,
+  "par_s": 14.045,
+  "orig_s": 31.26,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_225-2_3634.wav",
+  "ok": 1,
+  "par_s": 23.357,
+  "orig_s": 33.15,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_232-0_7964.wav",
+  "ok": 1,
+  "par_s": 17.238,
+  "orig_s": 40.88,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_232-1_5114.wav",
+  "ok": 1,
+  "par_s": 26.16,
+  "orig_s": 32.36,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_232-1_37474.wav",
+  "ok": 1,
+  "par_s": 25.823,
+  "orig_s": 31.18,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_242-2_1480.wav",
+  "ok": 1,
+  "par_s": 24.851,
+  "orig_s": 32.02,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Con_243-0_2930.wav",
+  "ok": 1,
+  "par_s": 26.949,
+  "orig_s": 31.06,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_243-0_33988.wav",
+  "ok": 1,
+  "par_s": 25.452,
+  "orig_s": 39.87,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_243-1_7000.wav",
+  "ok": 1,
+  "par_s": 23.376,
+  "orig_s": 31.36,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_243-1_38361.wav",
+  "ok": 1,
+  "par_s": 23.881,
+  "orig_s": 32.25,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_245-1_1750.wav",
+  "ok": 1,
+  "par_s": 26.261,
+  "orig_s": 37.26,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_248-1_38618.wav",
+  "ok": 1,
+  "par_s": 24.116,
+  "orig_s": 30.22,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Con_248-2_500.wav",
+  "ok": 1,
+  "par_s": 25.335,
+  "orig_s": 31.17,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_255-0_610.wav",
+  "ok": 1,
+  "par_s": 18.988,
+  "orig_s": 30.68,
+  "heard_s": 30.0,
+  "inv_ms": 1300,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_256-2_3945.wav",
+  "ok": 1,
+  "par_s": 24.348,
+  "orig_s": 35.99,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 13
+ },
+ {
+  "clip": "agreement_Con_266-0_3593.wav",
+  "ok": 1,
+  "par_s": 22.221,
+  "orig_s": 31.68,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_266-1_5687.wav",
+  "ok": 1,
+  "par_s": 17.754,
+  "orig_s": 32.0,
+  "heard_s": 30.0,
+  "inv_ms": 240,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_266-2_1630.wav",
+  "ok": 1,
+  "par_s": 24.302,
+  "orig_s": 32.39,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_267-2_7645.wav",
+  "ok": 1,
+  "par_s": 24.02,
+  "orig_s": 30.54,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_274-0_4046.wav",
+  "ok": 1,
+  "par_s": 16.694,
+  "orig_s": 43.78,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_275-0_14059.wav",
+  "ok": 1,
+  "par_s": 14.302,
+  "orig_s": 32.47,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_280-0_3251.wav",
+  "ok": 1,
+  "par_s": 18.835,
+  "orig_s": 37.13,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_292-1_3433.wav",
+  "ok": 1,
+  "par_s": 17.214,
+  "orig_s": 32.25,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Con_296-0_6844.wav",
+  "ok": 1,
+  "par_s": 24.445,
+  "orig_s": 31.78,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_296-1_13132.wav",
+  "ok": 1,
+  "par_s": 24.976,
+  "orig_s": 38.37,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_296-2_39346.wav",
+  "ok": 1,
+  "par_s": 15.053,
+  "orig_s": 33.45,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_298-1_8380.wav",
+  "ok": 1,
+  "par_s": 22.165,
+  "orig_s": 32.06,
+  "heard_s": 30.0,
+  "inv_ms": 1172,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_304-2_8196.wav",
+  "ok": 1,
+  "par_s": 23.522,
+  "orig_s": 34.27,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_322-1_8430.wav",
+  "ok": 1,
+  "par_s": 22.322,
+  "orig_s": 32.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Con_340-0_280.wav",
+  "ok": 1,
+  "par_s": 21.675,
+  "orig_s": 37.54,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Con_612-0_9985.wav",
+  "ok": 1,
+  "par_s": 20.777,
+  "orig_s": 37.49,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_661-0_5683.wav",
+  "ok": 1,
+  "par_s": 25.245,
+  "orig_s": 33.73,
+  "heard_s": 30.0,
+  "inv_ms": 540,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Con_668-0_7332.wav",
+  "ok": 1,
+  "par_s": 21.289,
+  "orig_s": 35.11,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_678-0_13431.wav",
+  "ok": 1,
+  "par_s": 16.31,
+  "orig_s": 34.3,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Con_684-0_7809.wav",
+  "ok": 1,
+  "par_s": 13.928,
+  "orig_s": 35.11,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Con_686-0_9827.wav",
+  "ok": 1,
+  "par_s": 26.363,
+  "orig_s": 31.68,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_001-0_2821.wav",
+  "ok": 1,
+  "par_s": 21.873,
+  "orig_s": 31.64,
+  "heard_s": 30.0,
+  "inv_ms": 2624,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_001-2_36504.wav",
+  "ok": 1,
+  "par_s": 18.448,
+  "orig_s": 34.36,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_003-0_42748.wav",
+  "ok": 1,
+  "par_s": 19.407,
+  "orig_s": 33.89,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_003-0_179994.wav",
+  "ok": 1,
+  "par_s": 22.642,
+  "orig_s": 42.2,
+  "heard_s": 30.0,
+  "inv_ms": 493,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_005-2_8186.wav",
+  "ok": 1,
+  "par_s": 4.438,
+  "orig_s": 35.1,
+  "heard_s": 30.0,
+  "inv_ms": 907,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_010-0_5477.wav",
+  "ok": 1,
+  "par_s": 22.689,
+  "orig_s": 30.45,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_010-0_71332.wav",
+  "ok": 1,
+  "par_s": 8.07,
+  "orig_s": 32.27,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_010-2_39756.wav",
+  "ok": 1,
+  "par_s": 21.21,
+  "orig_s": 30.69,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_010-2_70446.wav",
+  "ok": 1,
+  "par_s": 19.498,
+  "orig_s": 31.77,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_010-3_490.wav",
+  "ok": 1,
+  "par_s": 26.41,
+  "orig_s": 36.13,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_014-2_3253.wav",
+  "ok": 1,
+  "par_s": 14.817,
+  "orig_s": 35.41,
+  "heard_s": 30.0,
+  "inv_ms": 488,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_014-2_38662.wav",
+  "ok": 1,
+  "par_s": 12.7,
+  "orig_s": 46.95,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_014-2_85608.wav",
+  "ok": 1,
+  "par_s": 7.193,
+  "orig_s": 33.8,
+  "heard_s": 30.0,
+  "inv_ms": 2591,
+  "n_par": 2
+ },
+ {
+  "clip": "agreement_Dem_018-0_6074.wav",
+  "ok": 1,
+  "par_s": 21.149,
+  "orig_s": 35.92,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_018-0_73944.wav",
+  "ok": 1,
+  "par_s": 16.372,
+  "orig_s": 35.05,
+  "heard_s": 30.0,
+  "inv_ms": 1312,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_018-0_108990.wav",
+  "ok": 1,
+  "par_s": 13.861,
+  "orig_s": 31.36,
+  "heard_s": 30.0,
+  "inv_ms": 166,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_018-0_140355.wav",
+  "ok": 1,
+  "par_s": 8.605,
+  "orig_s": 42.36,
+  "heard_s": 30.0,
+  "inv_ms": 2105,
+  "n_par": 2
+ },
+ {
+  "clip": "agreement_Dem_023-0_50384.wav",
+  "ok": 1,
+  "par_s": 1.64,
+  "orig_s": 46.61,
+  "heard_s": 30.0,
+  "inv_ms": 437,
+  "n_par": 1
+ },
+ {
+  "clip": "agreement_Dem_023-2_4765.wav",
+  "ok": 1,
+  "par_s": 17.982,
+  "orig_s": 33.76,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_023-2_38520.wav",
+  "ok": 1,
+  "par_s": 11.412,
+  "orig_s": 34.91,
+  "heard_s": 30.0,
+  "inv_ms": 861,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_023-2_73430.wav",
+  "ok": 1,
+  "par_s": 14.42,
+  "orig_s": 38.79,
+  "heard_s": 30.0,
+  "inv_ms": 2030,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_029-1_30833.wav",
+  "ok": 1,
+  "par_s": 23.74,
+  "orig_s": 32.86,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_029-1_63690.wav",
+  "ok": 1,
+  "par_s": 16.778,
+  "orig_s": 36.48,
+  "heard_s": 30.0,
+  "inv_ms": 1290,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_029-1_100173.wav",
+  "ok": 1,
+  "par_s": 24.187,
+  "orig_s": 33.71,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_030-0_3596.wav",
+  "ok": 1,
+  "par_s": 26.494,
+  "orig_s": 35.03,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Dem_035-0_8859.wav",
+  "ok": 1,
+  "par_s": 25.044,
+  "orig_s": 32.41,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_035-0_41273.wav",
+  "ok": 1,
+  "par_s": 9.429,
+  "orig_s": 30.59,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_035-1_5336.wav",
+  "ok": 1,
+  "par_s": 14.644,
+  "orig_s": 42.32,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_046-2_80385.wav",
+  "ok": 1,
+  "par_s": 10.641,
+  "orig_s": 38.93,
+  "heard_s": 30.0,
+  "inv_ms": 2341,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_049-0_36876.wav",
+  "ok": 1,
+  "par_s": 6.2,
+  "orig_s": 31.62,
+  "heard_s": 30.0,
+  "inv_ms": 8331,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_049-1_3550.wav",
+  "ok": 1,
+  "par_s": 7.551,
+  "orig_s": 36.29,
+  "heard_s": 30.0,
+  "inv_ms": 671,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_050-0_1030.wav",
+  "ok": 1,
+  "par_s": 6.626,
+  "orig_s": 34.81,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_051-2_52815.wav",
+  "ok": 1,
+  "par_s": 7.576,
+  "orig_s": 34.57,
+  "heard_s": 30.0,
+  "inv_ms": 1387,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_051-2_87383.wav",
+  "ok": 1,
+  "par_s": 13.447,
+  "orig_s": 31.47,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_051-3_80.wav",
+  "ok": 1,
+  "par_s": 23.707,
+  "orig_s": 31.31,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_051-3_31393.wav",
+  "ok": 1,
+  "par_s": 18.845,
+  "orig_s": 30.55,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_051-3_61939.wav",
+  "ok": 1,
+  "par_s": 16.6,
+  "orig_s": 41.53,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_053-1_17186.wav",
+  "ok": 1,
+  "par_s": 15.799,
+  "orig_s": 42.15,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_053-1_93896.wav",
+  "ok": 1,
+  "par_s": 19.637,
+  "orig_s": 33.3,
+  "heard_s": 30.0,
+  "inv_ms": 3502,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_057-1_870.wav",
+  "ok": 1,
+  "par_s": 23.554,
+  "orig_s": 31.37,
+  "heard_s": 30.0,
+  "inv_ms": 126,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_057-1_70491.wav",
+  "ok": 1,
+  "par_s": 3.742,
+  "orig_s": 30.98,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_057-2_13203.wav",
+  "ok": 1,
+  "par_s": 24.908,
+  "orig_s": 32.8,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_057-2_46003.wav",
+  "ok": 1,
+  "par_s": 18.714,
+  "orig_s": 34.71,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_065-0_5720.wav",
+  "ok": 1,
+  "par_s": 26.052,
+  "orig_s": 35.18,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_065-0_40897.wav",
+  "ok": 1,
+  "par_s": 17.095,
+  "orig_s": 35.44,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_065-1_3129.wav",
+  "ok": 1,
+  "par_s": 7.498,
+  "orig_s": 34.35,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_065-1_37483.wav",
+  "ok": 1,
+  "par_s": 23.085,
+  "orig_s": 31.77,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_065-2_2525.wav",
+  "ok": 1,
+  "par_s": 23.345,
+  "orig_s": 39.44,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_065-2_41958.wav",
+  "ok": 1,
+  "par_s": 24.591,
+  "orig_s": 35.27,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_065-2_77231.wav",
+  "ok": 1,
+  "par_s": 25.34,
+  "orig_s": 30.39,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_070-2_2244.wav",
+  "ok": 1,
+  "par_s": 14.499,
+  "orig_s": 40.49,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_076-4_892.wav",
+  "ok": 1,
+  "par_s": 19.935,
+  "orig_s": 45.67,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_078-0_37140.wav",
+  "ok": 1,
+  "par_s": 8.654,
+  "orig_s": 30.77,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_078-1_4403.wav",
+  "ok": 1,
+  "par_s": 20.738,
+  "orig_s": 33.33,
+  "heard_s": 30.0,
+  "inv_ms": 275,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_087-1_3780.wav",
+  "ok": 1,
+  "par_s": 11.23,
+  "orig_s": 31.2,
+  "heard_s": 30.0,
+  "inv_ms": 3361,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_087-1_34985.wav",
+  "ok": 1,
+  "par_s": 12.414,
+  "orig_s": 36.86,
+  "heard_s": 30.0,
+  "inv_ms": 2627,
+  "n_par": 2
+ },
+ {
+  "clip": "agreement_Dem_091-0_1370.wav",
+  "ok": 1,
+  "par_s": 14.786,
+  "orig_s": 41.54,
+  "heard_s": 30.0,
+  "inv_ms": 1320,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_091-1_17061.wav",
+  "ok": 1,
+  "par_s": 8.575,
+  "orig_s": 34.61,
+  "heard_s": 30.0,
+  "inv_ms": 501,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_091-2_5196.wav",
+  "ok": 1,
+  "par_s": 11.542,
+  "orig_s": 43.55,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_094-2_38689.wav",
+  "ok": 1,
+  "par_s": 16.579,
+  "orig_s": 43.45,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_122-0_1100.wav",
+  "ok": 1,
+  "par_s": 21.37,
+  "orig_s": 31.33,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_122-1_24104.wav",
+  "ok": 1,
+  "par_s": 8.268,
+  "orig_s": 31.07,
+  "heard_s": 30.0,
+  "inv_ms": 2930,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_125-0_38775.wav",
+  "ok": 1,
+  "par_s": 2.228,
+  "orig_s": 35.18,
+  "heard_s": 30.0,
+  "inv_ms": 1022,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_127-0_6524.wav",
+  "ok": 1,
+  "par_s": 10.183,
+  "orig_s": 30.25,
+  "heard_s": 30.0,
+  "inv_ms": 2770,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_134-3_6540.wav",
+  "ok": 1,
+  "par_s": 13.835,
+  "orig_s": 40.54,
+  "heard_s": 30.0,
+  "inv_ms": 4489,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_144-0_4173.wav",
+  "ok": 1,
+  "par_s": 23.771,
+  "orig_s": 31.31,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_144-1_3757.wav",
+  "ok": 1,
+  "par_s": 27.333,
+  "orig_s": 33.49,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_148-0_1820.wav",
+  "ok": 1,
+  "par_s": 6.273,
+  "orig_s": 33.62,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_154-0_9136.wav",
+  "ok": 1,
+  "par_s": 8.842,
+  "orig_s": 35.14,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_154-0_44281.wav",
+  "ok": 1,
+  "par_s": 0.681,
+  "orig_s": 46.58,
+  "heard_s": 30.0,
+  "inv_ms": 726,
+  "n_par": 1
+ },
+ {
+  "clip": "agreement_Dem_154-1_4445.wav",
+  "ok": 1,
+  "par_s": 11.759,
+  "orig_s": 36.65,
+  "heard_s": 30.0,
+  "inv_ms": 2835,
+  "n_par": 2
+ },
+ {
+  "clip": "agreement_Dem_157-0_3215.wav",
+  "ok": 1,
+  "par_s": 6.026,
+  "orig_s": 43.24,
+  "heard_s": 30.0,
+  "inv_ms": 262,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_157-2_740.wav",
+  "ok": 1,
+  "par_s": 22.861,
+  "orig_s": 32.05,
+  "heard_s": 30.0,
+  "inv_ms": 1160,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_164-1_4443.wav",
+  "ok": 1,
+  "par_s": 11.128,
+  "orig_s": 31.97,
+  "heard_s": 30.0,
+  "inv_ms": 120,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_164-2_830.wav",
+  "ok": 1,
+  "par_s": 16.519,
+  "orig_s": 34.86,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_164-3_5177.wav",
+  "ok": 1,
+  "par_s": 19.833,
+  "orig_s": 33.97,
+  "heard_s": 30.0,
+  "inv_ms": 232,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_168-1_11320.wav",
+  "ok": 1,
+  "par_s": 19.89,
+  "orig_s": 42.3,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_173-1_16994.wav",
+  "ok": 1,
+  "par_s": 4.259,
+  "orig_s": 38.74,
+  "heard_s": 30.0,
+  "inv_ms": 8110,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_184-0_6076.wav",
+  "ok": 1,
+  "par_s": 20.376,
+  "orig_s": 30.3,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_184-2_19258.wav",
+  "ok": 1,
+  "par_s": 22.819,
+  "orig_s": 35.55,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_203-0_3742.wav",
+  "ok": 1,
+  "par_s": 11.165,
+  "orig_s": 31.12,
+  "heard_s": 30.0,
+  "inv_ms": 294,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_203-0_34860.wav",
+  "ok": 1,
+  "par_s": 8.533,
+  "orig_s": 39.14,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_203-1_53682.wav",
+  "ok": 1,
+  "par_s": 18.111,
+  "orig_s": 35.85,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_206-0_12245.wav",
+  "ok": 1,
+  "par_s": 17.909,
+  "orig_s": 30.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_206-0_43142.wav",
+  "ok": 1,
+  "par_s": 14.73,
+  "orig_s": 31.64,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_206-0_74777.wav",
+  "ok": 1,
+  "par_s": 10.992,
+  "orig_s": 30.33,
+  "heard_s": 30.0,
+  "inv_ms": 280,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_207-0_77936.wav",
+  "ok": 1,
+  "par_s": 11.309,
+  "orig_s": 31.1,
+  "heard_s": 30.0,
+  "inv_ms": 4182,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_207-0_145489.wav",
+  "ok": 1,
+  "par_s": 11.545,
+  "orig_s": 33.82,
+  "heard_s": 30.0,
+  "inv_ms": 4040,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_207-0_179305.wav",
+  "ok": 1,
+  "par_s": 16.22,
+  "orig_s": 31.39,
+  "heard_s": 30.0,
+  "inv_ms": 1378,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_212-0_41528.wav",
+  "ok": 1,
+  "par_s": 14.919,
+  "orig_s": 40.01,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_212-2_6993.wav",
+  "ok": 1,
+  "par_s": 23.004,
+  "orig_s": 32.97,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Dem_212-2_39960.wav",
+  "ok": 1,
+  "par_s": 21.873,
+  "orig_s": 31.21,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_213-1_6436.wav",
+  "ok": 1,
+  "par_s": 12.654,
+  "orig_s": 40.65,
+  "heard_s": 30.0,
+  "inv_ms": 107,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_213-1_47089.wav",
+  "ok": 1,
+  "par_s": 2.446,
+  "orig_s": 52.21,
+  "heard_s": 30.0,
+  "inv_ms": 450,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_213-3_11161.wav",
+  "ok": 1,
+  "par_s": 10.133,
+  "orig_s": 44.11,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_218-0_12740.wav",
+  "ok": 1,
+  "par_s": 11.011,
+  "orig_s": 32.92,
+  "heard_s": 30.0,
+  "inv_ms": 799,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_218-0_45664.wav",
+  "ok": 1,
+  "par_s": 5.255,
+  "orig_s": 49.12,
+  "heard_s": 30.0,
+  "inv_ms": 129,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_218-1_10098.wav",
+  "ok": 1,
+  "par_s": 11.803,
+  "orig_s": 30.27,
+  "heard_s": 30.0,
+  "inv_ms": 8454,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_221-2_430.wav",
+  "ok": 1,
+  "par_s": 27.131,
+  "orig_s": 32.01,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_222-0_7432.wav",
+  "ok": 1,
+  "par_s": 24.94,
+  "orig_s": 35.07,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_222-0_42498.wav",
+  "ok": 1,
+  "par_s": 3.047,
+  "orig_s": 37.07,
+  "heard_s": 30.0,
+  "inv_ms": 2110,
+  "n_par": 1
+ },
+ {
+  "clip": "agreement_Dem_222-1_3556.wav",
+  "ok": 1,
+  "par_s": 14.209,
+  "orig_s": 43.71,
+  "heard_s": 30.0,
+  "inv_ms": 341,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_222-1_78473.wav",
+  "ok": 1,
+  "par_s": 5.955,
+  "orig_s": 30.64,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_223-0_3271.wav",
+  "ok": 1,
+  "par_s": 18.015,
+  "orig_s": 34.78,
+  "heard_s": 30.0,
+  "inv_ms": 2274,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_223-1_17328.wav",
+  "ok": 1,
+  "par_s": 4.041,
+  "orig_s": 32.7,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_226-0_870.wav",
+  "ok": 1,
+  "par_s": 21.414,
+  "orig_s": 36.43,
+  "heard_s": 30.0,
+  "inv_ms": 257,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Dem_235-0_56569.wav",
+  "ok": 1,
+  "par_s": 2.582,
+  "orig_s": 39.27,
+  "heard_s": 30.0,
+  "inv_ms": 2686,
+  "n_par": 1
+ },
+ {
+  "clip": "agreement_Dem_235-0_95842.wav",
+  "ok": 1,
+  "par_s": 7.574,
+  "orig_s": 38.56,
+  "heard_s": 30.0,
+  "inv_ms": 2799,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_235-2_10188.wav",
+  "ok": 1,
+  "par_s": 23.796,
+  "orig_s": 30.71,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_235-2_40903.wav",
+  "ok": 1,
+  "par_s": 17.209,
+  "orig_s": 33.37,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_236-0_4531.wav",
+  "ok": 1,
+  "par_s": 8.788,
+  "orig_s": 31.92,
+  "heard_s": 30.0,
+  "inv_ms": 2008,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_236-0_36451.wav",
+  "ok": 1,
+  "par_s": 19.525,
+  "orig_s": 35.85,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_236-0_72301.wav",
+  "ok": 1,
+  "par_s": 10.408,
+  "orig_s": 35.23,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_238-0_3240.wav",
+  "ok": 1,
+  "par_s": 14.14,
+  "orig_s": 31.49,
+  "heard_s": 30.0,
+  "inv_ms": 598,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_244-0_5980.wav",
+  "ok": 1,
+  "par_s": 15.203,
+  "orig_s": 37.9,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_244-0_43875.wav",
+  "ok": 1,
+  "par_s": 18.427,
+  "orig_s": 35.75,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_244-0_79628.wav",
+  "ok": 1,
+  "par_s": 13.205,
+  "orig_s": 39.56,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_257-0_4432.wav",
+  "ok": 1,
+  "par_s": 22.482,
+  "orig_s": 31.15,
+  "heard_s": 30.0,
+  "inv_ms": 1227,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_257-2_38898.wav",
+  "ok": 1,
+  "par_s": 11.884,
+  "orig_s": 30.28,
+  "heard_s": 30.0,
+  "inv_ms": 3365,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Dem_264-0_4035.wav",
+  "ok": 1,
+  "par_s": 14.119,
+  "orig_s": 45.59,
+  "heard_s": 30.0,
+  "inv_ms": 727,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_268-0_3396.wav",
+  "ok": 1,
+  "par_s": 20.477,
+  "orig_s": 46.86,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_268-0_145775.wav",
+  "ok": 1,
+  "par_s": 6.793,
+  "orig_s": 34.03,
+  "heard_s": 30.0,
+  "inv_ms": 3413,
+  "n_par": 2
+ },
+ {
+  "clip": "agreement_Dem_268-0_219420.wav",
+  "ok": 1,
+  "par_s": 8.651,
+  "orig_s": 34.0,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_269-0_69154.wav",
+  "ok": 1,
+  "par_s": 14.084,
+  "orig_s": 33.02,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_269-0_102167.wav",
+  "ok": 1,
+  "par_s": 17.413,
+  "orig_s": 34.56,
+  "heard_s": 30.0,
+  "inv_ms": 722,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_269-1_3314.wav",
+  "ok": 1,
+  "par_s": 26.335,
+  "orig_s": 37.51,
+  "heard_s": 30.0,
+  "inv_ms": 720,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_269-1_40822.wav",
+  "ok": 1,
+  "par_s": 11.282,
+  "orig_s": 32.52,
+  "heard_s": 30.0,
+  "inv_ms": 2220,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_270-2_35412.wav",
+  "ok": 1,
+  "par_s": 17.687,
+  "orig_s": 31.01,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_276-0_0.wav",
+  "ok": 1,
+  "par_s": 3.221,
+  "orig_s": 31.75,
+  "heard_s": 30.0,
+  "inv_ms": 7283,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_276-0_31747.wav",
+  "ok": 1,
+  "par_s": 8.507,
+  "orig_s": 41.35,
+  "heard_s": 30.0,
+  "inv_ms": 722,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_276-0_73102.wav",
+  "ok": 1,
+  "par_s": 6.458,
+  "orig_s": 32.83,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_293-1_6963.wav",
+  "ok": 1,
+  "par_s": 7.44,
+  "orig_s": 34.19,
+  "heard_s": 30.0,
+  "inv_ms": 3627,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_306-0_8284.wav",
+  "ok": 1,
+  "par_s": 20.39,
+  "orig_s": 31.07,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_319-0_6970.wav",
+  "ok": 1,
+  "par_s": 9.923,
+  "orig_s": 30.97,
+  "heard_s": 30.0,
+  "inv_ms": 3584,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_329-0_32987.wav",
+  "ok": 1,
+  "par_s": 8.107,
+  "orig_s": 35.4,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_334-1_12616.wav",
+  "ok": 1,
+  "par_s": 22.836,
+  "orig_s": 32.21,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_339-0_580.wav",
+  "ok": 1,
+  "par_s": 13.296,
+  "orig_s": 37.43,
+  "heard_s": 30.0,
+  "inv_ms": 534,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_341-0_1120.wav",
+  "ok": 1,
+  "par_s": 10.054,
+  "orig_s": 31.3,
+  "heard_s": 30.0,
+  "inv_ms": 32,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_341-0_32421.wav",
+  "ok": 1,
+  "par_s": 12.663,
+  "orig_s": 35.65,
+  "heard_s": 30.0,
+  "inv_ms": 4013,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_342-0_130.wav",
+  "ok": 1,
+  "par_s": 18.612,
+  "orig_s": 37.56,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_344-2_7060.wav",
+  "ok": 1,
+  "par_s": 22.166,
+  "orig_s": 30.32,
+  "heard_s": 30.0,
+  "inv_ms": 2262,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_350-1_2522.wav",
+  "ok": 1,
+  "par_s": 17.635,
+  "orig_s": 36.91,
+  "heard_s": 30.0,
+  "inv_ms": 395,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_350-1_39428.wav",
+  "ok": 1,
+  "par_s": 16.018,
+  "orig_s": 33.31,
+  "heard_s": 30.0,
+  "inv_ms": 5228,
+  "n_par": 12
+ },
+ {
+  "clip": "agreement_Dem_354-0_7201.wav",
+  "ok": 1,
+  "par_s": 20.597,
+  "orig_s": 32.09,
+  "heard_s": 30.0,
+  "inv_ms": 244,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_358-1_3664.wav",
+  "ok": 1,
+  "par_s": 14.754,
+  "orig_s": 32.41,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_361-0_5616.wav",
+  "ok": 1,
+  "par_s": 17.941,
+  "orig_s": 33.16,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_361-0_38778.wav",
+  "ok": 1,
+  "par_s": 4.349,
+  "orig_s": 35.53,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_362-0_4002.wav",
+  "ok": 1,
+  "par_s": 8.591,
+  "orig_s": 41.95,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_369-0_2373.wav",
+  "ok": 1,
+  "par_s": 20.66,
+  "orig_s": 41.68,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_369-0_44049.wav",
+  "ok": 1,
+  "par_s": 5.447,
+  "orig_s": 40.33,
+  "heard_s": 30.0,
+  "inv_ms": 1403,
+  "n_par": 1
+ },
+ {
+  "clip": "agreement_Dem_369-0_84379.wav",
+  "ok": 1,
+  "par_s": 19.87,
+  "orig_s": 33.6,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 2
+ },
+ {
+  "clip": "agreement_Dem_381-1_3733.wav",
+  "ok": 1,
+  "par_s": 23.462,
+  "orig_s": 35.22,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_468-0_3750.wav",
+  "ok": 1,
+  "par_s": 4.998,
+  "orig_s": 50.94,
+  "heard_s": 30.0,
+  "inv_ms": 144,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_470-1_33399.wav",
+  "ok": 1,
+  "par_s": 11.829,
+  "orig_s": 32.08,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 10
+ },
+ {
+  "clip": "agreement_Dem_472-0_11796.wav",
+  "ok": 1,
+  "par_s": 5.865,
+  "orig_s": 30.72,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_497-1_7046.wav",
+  "ok": 1,
+  "par_s": 22.049,
+  "orig_s": 30.3,
+  "heard_s": 30.0,
+  "inv_ms": 2085,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_508-1_3854.wav",
+  "ok": 1,
+  "par_s": 19.961,
+  "orig_s": 37.84,
+  "heard_s": 30.0,
+  "inv_ms": 2563,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_515-1_3914.wav",
+  "ok": 1,
+  "par_s": 18.742,
+  "orig_s": 31.23,
+  "heard_s": 30.0,
+  "inv_ms": 4344,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_526-1_4024.wav",
+  "ok": 1,
+  "par_s": 23.813,
+  "orig_s": 30.28,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_526-1_34300.wav",
+  "ok": 1,
+  "par_s": 19.496,
+  "orig_s": 30.95,
+  "heard_s": 30.0,
+  "inv_ms": 1981,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_539-0_6242.wav",
+  "ok": 1,
+  "par_s": 16.238,
+  "orig_s": 33.01,
+  "heard_s": 30.0,
+  "inv_ms": 156,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_539-0_39253.wav",
+  "ok": 1,
+  "par_s": 6.672,
+  "orig_s": 33.17,
+  "heard_s": 30.0,
+  "inv_ms": 3264,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_539-0_72423.wav",
+  "ok": 1,
+  "par_s": 17.483,
+  "orig_s": 32.6,
+  "heard_s": 30.0,
+  "inv_ms": 5894,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_551-0_15631.wav",
+  "ok": 1,
+  "par_s": 12.445,
+  "orig_s": 32.15,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_562-0_8157.wav",
+  "ok": 1,
+  "par_s": 13.599,
+  "orig_s": 33.55,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_563-0_37090.wav",
+  "ok": 1,
+  "par_s": 12.234,
+  "orig_s": 32.26,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_579-0_9828.wav",
+  "ok": 1,
+  "par_s": 9.951,
+  "orig_s": 34.59,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_580-0_12718.wav",
+  "ok": 1,
+  "par_s": 27.604,
+  "orig_s": 30.03,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_581-0_4134.wav",
+  "ok": 1,
+  "par_s": 25.327,
+  "orig_s": 31.57,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_581-0_35704.wav",
+  "ok": 1,
+  "par_s": 12.798,
+  "orig_s": 41.75,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_585-0_4976.wav",
+  "ok": 1,
+  "par_s": 23.216,
+  "orig_s": 30.22,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_585-0_35202.wav",
+  "ok": 1,
+  "par_s": 8.111,
+  "orig_s": 35.14,
+  "heard_s": 30.0,
+  "inv_ms": 78,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_587-0_4007.wav",
+  "ok": 1,
+  "par_s": 20.826,
+  "orig_s": 30.62,
+  "heard_s": 30.0,
+  "inv_ms": 3928,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_591-0_11948.wav",
+  "ok": 1,
+  "par_s": 21.865,
+  "orig_s": 35.58,
+  "heard_s": 30.0,
+  "inv_ms": 5623,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_595-0_12367.wav",
+  "ok": 1,
+  "par_s": 18.382,
+  "orig_s": 36.25,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_607-0_9933.wav",
+  "ok": 1,
+  "par_s": 22.421,
+  "orig_s": 31.63,
+  "heard_s": 30.0,
+  "inv_ms": 515,
+  "n_par": 8
+ },
+ {
+  "clip": "agreement_Dem_609-0_47479.wav",
+  "ok": 1,
+  "par_s": 8.733,
+  "orig_s": 35.23,
+  "heard_s": 30.0,
+  "inv_ms": 3646,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_610-0_11507.wav",
+  "ok": 1,
+  "par_s": 10.039,
+  "orig_s": 41.14,
+  "heard_s": 30.0,
+  "inv_ms": 2472,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_636-0_19173.wav",
+  "ok": 1,
+  "par_s": 7.692,
+  "orig_s": 33.78,
+  "heard_s": 30.0,
+  "inv_ms": 3238,
+  "n_par": 6
+ },
+ {
+  "clip": "agreement_Dem_648-0_10861.wav",
+  "ok": 1,
+  "par_s": 15.089,
+  "orig_s": 31.51,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 9
+ },
+ {
+  "clip": "agreement_Dem_650-0_721.wav",
+  "ok": 1,
+  "par_s": 22.217,
+  "orig_s": 32.24,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_651-0_11635.wav",
+  "ok": 1,
+  "par_s": 24.986,
+  "orig_s": 32.82,
+  "heard_s": 30.0,
+  "inv_ms": 498,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_681-0_14887.wav",
+  "ok": 1,
+  "par_s": 15.341,
+  "orig_s": 35.82,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 3
+ },
+ {
+  "clip": "agreement_Dem_689-0_4626.wav",
+  "ok": 1,
+  "par_s": 21.686,
+  "orig_s": 33.38,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_690-0_16320.wav",
+  "ok": 1,
+  "par_s": 24.432,
+  "orig_s": 31.85,
+  "heard_s": 30.0,
+  "inv_ms": 1171,
+  "n_par": 5
+ },
+ {
+  "clip": "agreement_Dem_695-0_1971.wav",
+  "ok": 1,
+  "par_s": 17.55,
+  "orig_s": 41.2,
+  "heard_s": 30.0,
+  "inv_ms": 6400,
+  "n_par": 7
+ },
+ {
+  "clip": "agreement_Dem_704-0_8735.wav",
+  "ok": 1,
+  "par_s": 10.529,
+  "orig_s": 30.58,
+  "heard_s": 30.0,
+  "inv_ms": 1646,
+  "n_par": 4
+ },
+ {
+  "clip": "agreement_Dem_711-0_6508.wav",
+  "ok": 1,
+  "par_s": 19.5,
+  "orig_s": 32.12,
+  "heard_s": 30.0,
+  "inv_ms": 3052,
+  "n_par": 11
+ },
+ {
+  "clip": "agreement_Dem_714-0_13211.wav",
+  "ok": 1,
+  "par_s": 12.84,
+  "orig_s": 42.98,
+  "heard_s": 30.0,
+  "inv_ms": 0,
+  "n_par": 2
+ }
+]
