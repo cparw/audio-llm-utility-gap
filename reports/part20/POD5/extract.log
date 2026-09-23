@@ -1,0 +1,49 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  43%|████▎     | 1051/2447 [00:00<00:00, 10505.25it/s]Loading weights:  86%|████████▌ | 2102/2447 [00:00<00:00, 10103.66it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 9765.33it/s] 
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+rule ids yes [7414, 9454, 9693, 9834, 14004, 14080] no [902, 2152, 2308, 2753, 5664, 8996] | forms {'Yes': [9454], ' Yes': [7414], 'yes': [9693], ' yes': [9834], 'YES': [14004], ' YES': [14080], 'No': [2753], ' No': [2308], 'no': [2152], ' no': [902], 'NO': [8996], ' NO': [5664]} | legacy yes [7414, 9454, 9693, 9834, 14004] no [902, 2152, 2308, 2753, 8996]
+MODEL Qwen/Qwen2.5-Omni-7B loaded in 12s | enc 32 +proj | llm stages 29 | audio token 151646
+1/468 noinv_conflict_Con_015-0_67805.wav p_yes 0.500 mass 0.997 14s
+26/468 noinv_conflict_Con_141-1_1470.wav p_yes 0.308 mass 0.997 21s
+CHECKPOINT chunk 0 saved 27s
+51/468 noinv_conflict_Dem_010-2_4647.wav p_yes 0.295 mass 0.996 28s
+76/468 noinv_conflict_Dem_076-0_37244.wav p_yes 0.363 mass 0.998 35s
+CHECKPOINT chunk 50 saved 42s
+101/468 noinv_conflict_Dem_221-2_32438.wav p_yes 0.532 mass 0.997 43s
+126/468 noinv_conflict_Dem_368-0_5232.wav p_yes 0.257 mass 0.996 48s
+CHECKPOINT chunk 100 saved 53s
+151/468 noinv_agreement_Con_006-4_37223.wav p_yes 0.500 mass 0.996 54s
+176/468 noinv_agreement_Con_086-0_71155.wav p_yes 0.378 mass 0.998 59s
+CHECKPOINT chunk 150 saved 64s
+201/468 noinv_agreement_Con_128-1_34057.wav p_yes 0.321 mass 0.997 64s
+226/468 noinv_agreement_Con_167-3_7936.wav p_yes 0.349 mass 0.997 70s
+CHECKPOINT chunk 200 saved 75s
+251/468 noinv_agreement_Con_243-0_33988.wav p_yes 0.408 mass 0.996 75s
+276/468 noinv_agreement_Con_668-0_7332.wav p_yes 0.282 mass 0.997 80s
+CHECKPOINT chunk 250 saved 85s
+301/468 noinv_agreement_Dem_029-1_30833.wav p_yes 0.335 mass 0.996 85s
+326/468 noinv_agreement_Dem_065-1_37483.wav p_yes 0.378 mass 0.996 91s
+CHECKPOINT chunk 300 saved 96s
+351/468 noinv_agreement_Dem_157-0_3215.wav p_yes 0.363 mass 0.998 96s
+376/468 noinv_agreement_Dem_218-0_45664.wav p_yes 0.335 mass 0.998 101s
+CHECKPOINT chunk 350 saved 105s
+401/468 noinv_agreement_Dem_268-0_145775.wav p_yes 0.321 mass 0.998 105s
+426/468 noinv_agreement_Dem_361-0_38778.wav p_yes 0.282 mass 0.998 110s
+CHECKPOINT chunk 400 saved 115s
+451/468 noinv_agreement_Dem_585-0_35202.wav p_yes 0.593 mass 0.997 115s
+CHECKPOINT chunk 450 saved 119s
+RESULT zero-shot n=468 AUC=0.7231 121s
+STATES {'enc': [468, 32, 1280], 'proj': [468, 1, 3584], 'llm': [468, 29, 3584], 'ans': [468, 29, 3584]}
+EXTRACT DONE

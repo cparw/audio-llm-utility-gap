@@ -1,0 +1,46 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/root/p20/val25/val25_manifest.csv",
+ "condition": "ad",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 25,
+ "n_positive": 0,
+ "auc_rule_pyes": NaN,
+ "auc_legacy_pyes": NaN,
+ "median_answer_mass": 0.9968,
+ "window_seconds": 30.0,
+ "dtype": "bfloat16",
+ "yes_ids_rule": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004,
+  14080
+ ],
+ "no_ids_rule": [
+  902,
+  2152,
+  2308,
+  2753,
+  5664,
+  8996
+ ],
+ "yes_ids_legacy": [
+  7414,
+  9454,
+  9693,
+  9834,
+  14004
+ ],
+ "no_ids_legacy": [
+  902,
+  2152,
+  2308,
+  2753,
+  8996
+ ],
+ "encoder_layers": 32,
+ "llm_stages": 29,
+ "date": "2026-09-23"
+}
