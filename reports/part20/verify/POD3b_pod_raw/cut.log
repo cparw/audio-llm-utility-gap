@@ -1,0 +1,10 @@
+segments 2133, speakers 162, speakers still to do 162
+20/162 speakers  13s  fails 0
+40/162 speakers  48s  fails 0
+60/162 speakers  80s  fails 0
+80/162 speakers  117s  fails 0
+100/162 speakers  143s  fails 0
+120/162 speakers  163s  fails 0
+140/162 speakers  181s  fails 0
+160/162 speakers  215s  fails 0
+DONE speakers ok 162 fails 0 wavs on disk 2133  216s
