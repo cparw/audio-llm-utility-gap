@@ -1,0 +1,25 @@
+[transformers] Model config: tts_text_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151860. This may result in unexpected behavior.
+[transformers] Model config: tts_text_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151861. This may result in unexpected behavior.
+[transformers] Model config: tts_text_pad_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151859. This may result in unexpected behavior.
+[transformers] Model config: vision_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151652. This may result in unexpected behavior.
+[transformers] Model config: vision_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151653. This may result in unexpected behavior.
+[transformers] Model config: audio_start_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151647. This may result in unexpected behavior.
+[transformers] Model config: audio_end_token_id must be `None` or an integer within the vocabulary (between 0 and 8447), got 151648. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/2447 [00:00<?, ?it/s]Loading weights:  54%|█████▍    | 1329/2447 [00:00<00:00, 13261.78it/s]Loading weights: 100%|██████████| 2447/2447 [00:00<00:00, 13276.36it/s]
+[transformers] [1mQwen2_5OmniForConditionalGeneration LOAD REPORT[0m from: Qwen/Qwen2.5-Omni-7B
+Key                                                | Status     |  | 
+---------------------------------------------------+------------+--+-
+token2wav.code2wav_dit_model.rotary_embed.inv_freq | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+load s 6 text model Qwen2_5OmniThinkerTextModel attn sdpa fe 4800000
+900s trunc audio tok 7500 seq 7548 feat (1, 128, 30000) torch.float32
+900s truncation=False audio tok 22500 seq 22548 feat (1, 128, 90000) torch.float32
+fp32 vs bf16 features: max|dlogit| 0.0 p_yes 0.1755380630493164 0.1755380630493164
+gc False rep 0 fwd+bwd 22.5k tok 3.40s peak alloc 128.5 GB reserved 129.7 GB gradsum 1196
+gc False rep 1 fwd+bwd 22.5k tok 3.36s peak alloc 128.5 GB reserved 136.1 GB gradsum 1195
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+gc True rep 0 fwd+bwd 22.5k tok 4.24s peak alloc 39.5 GB reserved 40.8 GB gradsum 1196
+gc True rep 1 fwd+bwd 22.5k tok 3.93s peak alloc 39.5 GB reserved 41.2 GB gradsum 1196
+SMOKE_DONE 23
