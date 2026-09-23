@@ -1,0 +1,39 @@
+{
+ "track": "part12 (items 1 and 2)",
+ "date": "2026-09-23T16:51:14",
+ "tex": "<local data dir>/paper1_submission_23sep/final_overleaf_2325Z/AudioLLMHealthUtilityGap.tex",
+ "tex_sha256": "6c886f3513e93de7f78a7324f608091e7cdc24f257089bb5bd0a5c40638e4a20",
+ "pdf": "<local data dir>/final.pdf",
+ "pdf_sha256": "a7d320b2801a2f4355ed89fe1e419a87979bf9cda089a90a65390b999a236132",
+ "commands": {
+  "part12_and_pdf_checks": "bash 'checks/final_2325Z/part12/final_check_2325Z.sh' '<local data dir>/paper1_submission_23sep/final_overleaf_2325Z/AudioLLMHealthUtilityGap.tex' '<local data dir>/final.pdf'  (copy of scores/part24/part12/final_check.sh; only line 24, the run folder, changed)",
+  "compile": "pod ft-part12 lqaqycga9d9p89 (cpu5c, 16 vCPU, runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404): apt-get install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science texlive-publishers texlive-lang-greek texlive-plain-generic texlive-pictures lmodern latexmk poppler-utils; cd /workspace/final; latexmk -pdf -interaction=nonstopmode -file-line-error AudioLLMHealthUtilityGap.tex  (exit 0; pdfTeX 3.141592653-2.6-1.40.25, TeX Live 2023/Debian, latexmk 4.83, BibTeX 0.99d)",
+  "page5": "pdftotext -f 5 -l 5 -layout final.pdf page5_layout.txt  (pdftotext 26.04.0)",
+  "fonts": "'scores/part24/part12/venv/bin/python' spans_under9.py final.pdf spans_under9pt.csv  (PyMuPDF 1.28.2)",
+  "verifier_152": "/usr/local/bin/python3 files.py verify/bundle_fresh; /usr/local/bin/python3 verify_values.py verify/bundle_fresh values.csv verify/values_reverified_mac.csv  (scripts in scores/leftovers_23sep/tex/verify; 152 of 152 equal to values_verified.csv)",
+  "verifier_new": "/usr/local/bin/python3 verify/verify_new_2325Z.py verify/values_new_2325Z.csv",
+  "triage": "/usr/local/bin/python3 build_triage_2325Z.py final_runs/AudioLLMHealthUtilityGap_20260923_163127/flagged_rows_triaged.csv .; /usr/local/bin/python3 build_unmatched_2325Z.py (same args)"
+ },
+ "pod": {
+  "id": "lqaqycga9d9p89",
+  "created": "2026-09-23T23:28:08Z",
+  "deleted": "DELETE 204 then GET 404; not in the pod list"
+ },
+ "side_effects": [
+  "run_part12.sh wrote work dirs part12_prep/runs/AudioLLMHealthUtilityGap_20260923_162826 and _163131 and refreshed part12_prep/value_index.csv and handcheck_values.csv on the Mac, as it always does"
+ ],
+ "not_touched": [
+  "<local data dir>/paper1_submission_23sep/final_overleaf_2325Z",
+  "any omni_final folder",
+  "<local data dir>/paper1_final",
+  "git"
+ ],
+ "bootstrap": "2000 draws, numpy default_rng(0) per cell, rng.choice(N,N,replace=True) over sorted unique speaker ids, 2.5/97.5 percentiles, paired = same idx",
+ "versions": {
+  "mac_python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "pandas": "2.3.3",
+  "pymupdf": "1.28.2"
+ }
+}

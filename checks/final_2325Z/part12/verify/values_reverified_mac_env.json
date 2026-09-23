@@ -1,0 +1,9 @@
+{
+ "python": "3.10.2",
+ "numpy": "2.2.6",
+ "sklearn": "1.7.2",
+ "scipy": "1.15.3",
+ "pandas": "2.3.3",
+ "n_draws": 2000,
+ "rule": "default_rng(0) per cell; rng.choice(N,N,replace=True) over unique sorted speaker ids; 2.5/97.5 percentiles; paired = same idx"
+}

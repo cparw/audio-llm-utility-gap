@@ -1,0 +1,87 @@
+paper_vs_omni: checks/final_2325Z/part12/final_runs/AudioLLMHealthUtilityGap_20260923_163127/paper_vs_omni.csv
+tex: <local data dir>/paper1_submission_23sep/final_overleaf_2325Z/AudioLLMHealthUtilityGap.tex
+added basis: sentences in AudioLLMHealthUtilityGap.tex not in pasted_tex_dryrun.tex
+
+group         MATCH  MISMATCH  UNMATCHED   (of UNMATCHED: method/design constants)
+red               4         0          0   (0)
+added_23sep      69        75         58   (20)
+other            51         2          4   (4)
+
+MISMATCH rows:
+  [added_23sep] line 67  paper 0.89  file 0.5635  omni_pcgita_zeroshot_scores.csv
+  [added_23sep] line 77  paper 0.43 to 0.62  file 0.5246 to 0.7634  o25_kcl_text.csv
+  [added_23sep] line 77  paper 0.68  file 0.823  o25_edaicfull_text.json
+  [added_23sep] line 77  paper 0.84 to 0.93  file 0.5246 to 0.7634  o25_kcl_text.csv
+  [added_23sep] line 92  paper 0.07  file 0.8285  o25_full_zeroshot.json
+  [added_23sep] line 97  paper 30 to 56  file 0.5635 to 0.7143  omni_kcl_zeroshot.json
+  [added_23sep] line 125  paper 0.84  file 0.8285  o25_full_zeroshot.json
+  [added_23sep] line 125  paper 0.86  file 0.6421  sft_full_sft.json
+  [added_23sep] line 140  paper 0.72  file 0.633  q2a_full_zeroshot.json
+  [added_23sep] line 149  paper 0.77 to 0.88  file 0.7768 to 0.9160  omni_kcl_enc_nested_oof.csv
+  [added_23sep] line 149  paper 0.11  file 0.7506  omni_kcl_nested_repeats.json
+  [added_23sep] line 149  paper 0.05, 0.18  file 0.7506  omni_kcl_nested_repeats.json
+  [added_23sep] line 149  paper 0.33  file 0.8941  omni_pcgita_nested_repeats.json
+  [added_23sep] line 149  paper 0.60  file 0.7619  q3o_pitt_zeroshot_scores.csv
+  [added_23sep] line 149  paper 0.05  file -0.2165  q3o_pitt_zeroshot_scores.csv
+  [added_23sep] line 149  paper 0.01 on MDVR-KCL to 0.18  file 0.5916 to 0.9213  edaic_full_perclip.csv
+  [added_23sep] line 149  paper 0.27  file -0.0997  M3_speaker_level.csv
+  [added_23sep] line 149  paper 0.15  file 0.6951  omni_neurovoz_zeroshot_scores.csv
+  [added_23sep] line 149  paper 0.67  file 0.6872  confound_auc.csv
+  [added_23sep] line 149  paper 0.56  file 0.6872  confound_auc.csv
+  [added_23sep] line 149  paper 0.07  file 0.8941  omni_pcgita_nested_repeats.json
+  [added_23sep] line 149  paper 0.12  file 0.8941  omni_pcgita_nested_repeats.json
+  [added_23sep] line 149  paper 0.02  file 0.8941  omni_pcgita_nested_repeats.json
+  [added_23sep] line 149  paper 0.60  file 0.6951  omni_neurovoz_zeroshot_scores.csv
+  [added_23sep] line 149  paper 0.03  file 0.9213  omni_neurovoz_nested_repeats.json
+  [added_23sep] line 149  paper 0.061  file 0.9213  omni_neurovoz_nested_repeats.json
+  [added_23sep] line 149  paper 0.001  file 0.9213  omni_neurovoz_nested_repeats.json
+  [added_23sep] line 149  paper 0.90  file 0.7953  pitt_enc_nested5_oof.npz
+  [added_23sep] line 149  paper 0.63  file 0.654  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 149  paper 0.66  file -0.0109  readout_direction.csv
+  [added_23sep] line 149  paper 0.77  file -0.0109  readout_direction.csv
+  [added_23sep] line 149  paper 0.77  file -0.0109  readout_direction.csv
+  [added_23sep] line 149  paper 0.01  file -0.0109  readout_direction.csv
+  [added_23sep] line 149  paper 0.62  file 0.9372  q3o_neurovoz_nested_repeats.json
+  [added_23sep] line 149  paper 0.74  file 0.5828  q3o_edaic_nested_repeats.json
+  [added_23sep] line 149  paper 0.60  file 0.5828  q3o_edaic_nested_repeats.json
+  [added_23sep] line 149  paper 0.84  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 149  paper 0.09  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 149  paper 0.16  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 149  paper 0.03  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 149  paper 0.24  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 149  paper 0.32  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 149  paper 0.15  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 149  paper 0.84  file 0.8741  q3o_full_zeroshot.json
+  [added_23sep] line 171  paper 0.58  file 0.631  af2_pitt468.csv
+  [added_23sep] line 171  paper 0.53  file 0.5544  af2_pitt468.csv
+  [added_23sep] line 180  paper 0.15  file 0.455  omni_pitt_text.csv
+  [added_23sep] line 180  paper 0.96  file 0.455  omni_pitt_text.csv
+  [added_23sep] line 180  paper 0.22  file 0.7987  omni_pitt_text.csv
+  [added_23sep] line 180  paper 0.95  file 0.7987  omni_pitt_text.csv
+  [added_23sep] line 180  paper 0.46  file 0.5189  omnisft_pitt_oof.csv
+  [added_23sep] line 180  paper 0.42, 0.51  file 0.5189  omnisft_pitt_oof.csv
+  [added_23sep] line 180  paper 0.39  file 0.8593  omnisft_pitt_oof.csv
+  [added_23sep] line 180  paper 0.20  file 0.5189  omnisft_pitt_oof.csv
+  [added_23sep] line 180  paper 0.62  file 0.5189  omnisft_pitt_oof.csv
+  [added_23sep] line 180  paper 0.53 to 0.61  file 0.1800 to 0.2900  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 180  paper 0.01  file 0.6578  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 180  paper 0.04  file 0.6578  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 180  paper 0.02  file 0.6578  omni_pitt_zeroshot_scores.csv
+  [added_23sep] line 226  paper 0.74 to 0.81  file 0.7507 to 0.8612  omni_adress2020_nested_repeats.json
+  [added_23sep] line 226  paper 0.45 to 0.57  file 0.6083 to 0.9028  omnisft_adress2020_sft.json
+  [added_23sep] line 226  paper 0.5  file 0.7673  omnisft_pitt_oof.csv
+  [added_23sep] line 226  paper 0.82 to 0.90  file 0.7673 to 0.9028  omnisft_adress2020_sft.json
+  [added_23sep] line 226  paper 5.0  file 0.8032  omni_pitt_nested_repeats.json
+  [added_23sep] line 226  paper 4.6  file 0.8032  omni_pitt_nested_repeats.json
+  [added_23sep] line 226  paper 0.825  file 0.8032  omni_pitt_nested_repeats.json
+  [added_23sep] line 226  paper 0.06  file 0.8032  omni_pitt_nested_repeats.json
+  [added_23sep] line 226  paper 0.02, 0.10  file 0.8032  omni_pitt_nested_repeats.json
+  [added_23sep] line 226  paper 0.77  file 0.8032  omni_pitt_nested_repeats.json
+  [added_23sep] line 226  paper +0.02  file 0.1664  o25_full_zeroshot_scores.csv
+  [added_23sep] line 226  paper 0.01  file 0.8285  o25_full_zeroshot.json
+  [added_23sep] line 226  paper 0.05  file 0.8285  o25_full_zeroshot.json
+  [added_23sep] line 226  paper 0.82  file 0.8285  o25_full_zeroshot.json
+  [added_23sep] line 226  paper 0.59 (after)  file 0.2283  p14_o25_sftfull.csv
+  [added_23sep] line 226  paper 0.67 (after)  file 0.793  p14_o25_sftfull.csv
+  [other] line 172  paper 0.61  file 0.6169  af3_pitt.csv
+  [other] line 172  paper 0.59  file 0.5822  af3_pitt.csv

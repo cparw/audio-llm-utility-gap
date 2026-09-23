@@ -1,0 +1,62 @@
+#!/usr/local/bin/python3
+"""Check note for every UNMATCHED row of the final-tex Part 12 run. usage: build_unmatched_2325Z.py FLAGGED.csv OUT_DIR"""
+import sys, pandas as pd
+R = "<local data dir>/release"
+N = {
+ "L26_773": ("result", "5 of 6 PD/AD sets with FT minus zero-shot interval above zero", R + "/edaic_rerun/part15/C_intervals.csv"),
+ "L53_177": ("result", "5 (the same five sets; E-DAIC and MDVR-KCL do not move)", R + "/edaic_rerun/part15/C_intervals.csv"),
+ "L74_739": ("count", "47 speaker labels in both arms", "<local data dir>/DementiaBank/pitt_conflict_manifest.csv"),
+ "L81_400": ("design", "PHQ-8 threshold 10 (constant)", ""),
+ "L81_408": ("count", "20 participants with label 0 and PHQ-8 >= 10", R + "/edaic_rerun/part16/M2_distilbert_sentiment.csv"),
+ "L81_551": ("design", "900 s cap (constant)", ""),
+ "L81_570": ("count", "89 windows capped at 900 s", "part23/A/A2_edaic_whole_zeroshot_perclip.csv (capped)"),
+ "L83_821": ("design", "30 s window (constant)", ""),
+ "L87_110": ("design", "C=1 (constant)", ""), "L87_141": ("design", "2000 iterations (constant)", ""),
+ "L87_249": ("design", "5 folds (constant)", ""), "L87_268": ("design", "4 inner folds (constant)", ""),
+ "L88_123": ("design", "29 LM stages (architecture)", ""), "L88_228": ("design", "28 LM layers (architecture)", ""),
+ "L88_81": ("design", "32 encoder states (architecture)", ""),
+ "L92_681": ("result", "0.9917 of conflict clips (greedy word agrees with logit decision); 966 clips, all Yes/No", R + "/edaic_rerun/part16/POD1/p14_o25_greedy.csv"),
+ "L95_154": ("design", "25 words (constant)", ""), "L95_167": ("design", "5 s (constant)", ""),
+ "L95_369": ("design", "0.70 sentiment threshold (constant)", ""), "L95_411": ("design", "PHQ-8 >= 15 (constant)", ""),
+ "L95_486": ("design", "PHQ-8 <= 4 (constant)", ""),
+ "L97_823": ("result", "median 33.3 s", "<local data dir>/DementiaBank/pitt_conflict_manifest.csv"),
+ "L97_860": ("design", "30 s heard (constant)", ""),
+ "L101_219": ("result", "7.5386 years (per speaker label)", "<local data dir>/DementiaBank/pitt_conflict_manifest.csv"),
+ "L101_395": ("count", "81 pairs", "<local data dir>/DementiaBank/pitt_agematched_manifest.csv"),
+ "L101_443": ("design", "95 percent (constant)", ""), "L101_480": ("design", "2000 draws (constant)", ""),
+ "L140_431": ("design", "30 s (constant)", ""),
+ "L140_493": ("result", "0.6620 [0.5831, 0.7315] (first 30 s)", R + "/omni_final/omni_edaic_zeroshot_scores.csv"),
+ "L140_511": ("design", "30 s (constant)", ""), "L140_566": ("design", "30 s (constant)", ""),
+ "L140_573": ("result", "0.8122 [0.7479, 0.8707] (middle 300 s)", R + "/edaic_rerun/variants/o25_mid300_zeroshot_scores.csv"),
+ "L140_607": ("result", "0.8366 [0.7786, 0.8866] (whole interview)", "part23/A/A2_edaic_whole_zeroshot_perclip.csv"),
+ "L140_674": ("result", "encoder probe max over windows 0.6168 (mid 300 s); first 30 s 0.5966, mid 30 s 0.5771, first 300 s 0.5884, whole 0.5981", R + "/edaic_rerun/variants/o25_mid300_nested_repeats.json and the files in verify/values_new_2325Z.csv"),
+ "L149_1433": ("count", "38 pairs", R + "/scores/part20/POD6/B_neurovoz_matched/nv_matched_pairs.csv"),
+ "L149_1472": ("count", "907 clips", R + "/scores/part20/POD6/B_neurovoz_matched/B_encprobe_nested5_nvmatched_oof.csv"),
+ "L149_1595": ("result", "0.7112 (five recording features on the matched subset)", R + "/scores/part20/POD6/B_neurovoz_matched/B_channel5_nvmatched.csv"),
+ "L149_735": ("result", "0.5309 to 0.8439 over seven sets", R + "/overnight/egemaps_baseline.csv"),
+ "L160_33": ("design", "30 s (constant)", ""),
+ "L180_1096": ("result", "0.8634 same decision (Qwen2.5-Omni transcript vs audio, 966 clips)", R + "/edaic_rerun/part16/POD1/p14_1a_completion.json"),
+ "L180_1309": ("result", "0.3439 [0.2900, 0.3979] (wording p2, conflict arm)", R + "/edaic_rerun/part16/POD1/p14_o25_audio_p2_analysis.json"),
+ "L180_1318": ("result", "0.2392 [0.1940, 0.2865] (wording p3, conflict arm)", R + "/edaic_rerun/part16/POD1/p14_o25_audio_p3_analysis.json"),
+ "L180_1358": ("design", "sentiment threshold 0.60 (constant)", ""), "L180_1367": ("design", "sentiment threshold 0.80 (constant)", ""),
+ "L180_1373": ("count", "646 pairs", R + "/edaic_rerun/part16/POD1/p14_thr060_omni.csv"),
+ "L180_1381": ("count", "281 pairs", R + "/edaic_rerun/part16/POD1/p14_thr080_omni.csv"),
+ "L180_1396": ("result", "0.2619", R + "/edaic_rerun/part16/POD1/p14_thr060_omni.csv"),
+ "L180_1405": ("result", "0.1936", R + "/edaic_rerun/part16/POD1/p14_thr080_omni.csv"),
+ "L180_1443": ("design", "PHQ-8 15 (constant)", ""), "L180_1450": ("design", "PHQ-8 4 (constant)", ""), "L180_1472": ("design", "PHQ-8 10 (constant)", ""),
+ "L180_1543": ("result", "0.1759 [0.1448, 0.2095]; 924 pairs, 237 speakers", R + "/edaic_rerun/part16/POD1/p14_phq10_omni.csv"),
+ "L180_1605": ("artifact", "the '2' of 'SST-2' (extractor split)", ""),
+ "L180_1616": ("artifact", "the '1' of '1,334' (extractor split); 1,334 pairs verified", R + "/scores/part20/POD3b/sst2_pairs_o25_audio.csv"),
+ "L180_1618": ("artifact", "the '334' of '1,334' (extractor split); 1,334 pairs verified", R + "/scores/part20/POD3b/sst2_pairs_o25_audio.csv"),
+ "L180_1780": ("count", "420 segments", R + "/scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv"),
+ "L180_1845": ("count", "855 segments", R + "/scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv"),
+ "L180_2058": ("result", "AF2 Yes share on the E-DAIC pairs: conflict 0.9710, agreement 0.9834 (on Pitt 30 s only 0.8356 / 0.8571)", R + "/edaic_rerun/part14/p14_af2.csv; scores/part20/POD4c/af2_orig30_*.csv"),
+ "L180_2110": ("result", "Qwen2-Audio Yes share on the E-DAIC pairs: agreement 0.8675, conflict 0.9400 (on Pitt 0.7991)", R + "/edaic_rerun/part14/p14_q2a_zeroshot_scores.csv; paper1_local_runs/probe2/pitt_zeroshot_scores.csv"),
+ "L226_1020": ("result", "0.5520 (LoRA conflict arm)", R + "/edaic_rerun/part16/POD2/lora_pitt_oof.csv"),
+ "L226_841": ("design", "rank 8 (constant)", ""), "L226_877": ("design", "28 layers (architecture)", ""),
+}
+d = pd.read_csv(sys.argv[1]); u = d[d.status == "UNMATCHED"].copy(); miss = set(u.item_id) - set(N); assert not miss, miss
+u["kind_2325Z"] = u.item_id.map(lambda k: N[k][0]); u["checked_value"] = u.item_id.map(lambda k: N[k][1]); u["checked_file"] = u.item_id.map(lambda k: N[k][2])
+u = u.sort_values(["line", "item_id"])
+u[["status", "line", "item_id", "paper_value", "reason", "kind_2325Z", "checked_value", "checked_file", "context"]].to_csv(sys.argv[2] + "/unmatched_final_2325Z.csv", index=False)
+print(u.kind_2325Z.value_counts().to_string())

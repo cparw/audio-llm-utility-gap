@@ -1,0 +1,157 @@
+id,printed,value,lo,hi,file,what,closes,recomputed,r_lo,r_hi,check,ci_check,method
+edaic_zs_300s,0.83,0.8278,0.7703,0.8822,A2,"Qwen2.5-Omni zero-shot AUC, E-DAIC first 300 s (abstract, Table 1, text)",B1; B8,0.8278,0.7703,0.8822,agree_4dp,ci_agree_4dp,AUC of p_yes_300s_T7b
+edaic_zs_whole,"(0.84, not printed)",0.8366,0.7786,0.8866,A2,"zero-shot AUC, cut lifted, 900 s cap (PART 23 item 2)",B1; LEFT authors 5 (window choice),0.8366,0.7786,0.8866,agree_4dp,ci_agree_4dp,AUC of p_yes_whole
+edaic_whole_minus_300s,"+0.01 [-0.03, 0.05]",0.0088,-0.0320,0.0510,A2,"whole minus 300 s zero-shot, paired speaker bootstrap",B1; LEFT authors 5; brief E-DAIC rule,0.0088,-0.0320,0.0510,agree_4dp,ci_agree_4dp,"paired, same speaker draws"
+edaic_n_cut_300s,217 of the 275,217,,,A2,windows longer than 300 s (cut by the Qwen2.5-Omni processor),B1,217,,,agree_4dp,,count win_dur_s > 300 s
+edaic_n_capped_900s,15 minute cap,89,,,A2,windows capped at 900 s in the whole run (max heard 900 s),B1,89,,,agree_4dp,,count capped; max win_dur_s 900.0001
+edaic_whole_enc_minus_zs,still beats both probes,-0.2385,-0.3244,-0.1505,A3,"whole window: encoder mean-of-5 minus whole zero-shot, paired",B1; brief 'gap survives',-0.2385,-0.3244,-0.1505,agree_4dp,ci_agree_4dp,"mean of five per-repeat AUCs minus whole zero-shot, paired"
+edaic_whole_llm_minus_zs,still beats both probes,-0.0929,-0.1609,-0.0257,A3,"whole window: LM mean-of-5 minus whole zero-shot, paired",B1; brief 'gap survives',-0.0929,-0.1609,-0.0257,agree_4dp,ci_agree_4dp,"mean of five per-repeat AUCs minus whole zero-shot, paired"
+edaic_llm_meanof5,0.70,0.7001,,,T7b,"E-DAIC 300 s LM probe, mean of five per-repeat AUCs",M11; B8,0.7001,,,agree_4dp,,mean of five per-repeat AUCs
+edaic_enc_meanof5,0.59,0.5884,,,T7b,"E-DAIC 300 s encoder probe, mean of five",M11; B8,0.5884,,,agree_4dp,,mean of five per-repeat AUCs
+edaic_ans_meanof5,0.74,0.7435,,,T7b,"E-DAIC 300 s answer-state probe, mean of five",M11,0.7435,,,agree_4dp,,mean of five per-repeat AUCs
+edaic_llm_minus_answer,"-0.13 [-0.20, -0.06]",-0.1276,-0.1993,-0.0629,T7b,"LM probe minus answer, paired",M11; M15,-0.1276,-0.1993,-0.0629,agree_4dp,ci_agree_4dp,"mean of five minus answer, paired"
+edaic_enc_minus_answer,"-0.24 [-0.32, -0.16]",-0.2394,-0.32,-0.16,T7b,"encoder probe minus answer, paired",M11; M15,-0.2394,-0.3188,-0.1572,agree_4dp,ci_agree_4dp,"mean of five minus answer, paired"
+q3o_edaic_cut,Qwen3-Omni hears up to 15 minutes,0,,,CTRUNC,Qwen3-Omni windows cut (max heard 900 s),M21,0,,,agree_4dp,,q3o max heard 900.0 s
+af3_edaic_cut,Audio Flamingo 3 hears up to 10,136,,,CTRUNC,AF3 windows cut at 600 s,M21,136,,,agree_4dp,,af3 max heard 600.0 s
+q3o_edaic_full,0.87,0.8741,,,Q3OFULL,Qwen3-Omni zero-shot on the same E-DAIC windows,M21,0.8741,,,agree_4dp,,"AUC of p_yes, n=275"
+af3_edaic_full,0.86,0.8565,,,AF3FULL,AF3 zero-shot on the same E-DAIC windows,M21,0.8565,,,agree_4dp,,"AUC of p_yes, n=275"
+q2a_edaic_full,0.63,0.633,,,Q2AFULL,Qwen2-Audio zero-shot on the same E-DAIC windows,M21,0.6330,,,agree_3dp (claim given at 3 dp),,"AUC of p_yes, n=275"
+pitt_n_segments,468,468,,,PITTMAN,Pitt conflict-set segments,B9,468,,,agree_4dp,,
+pitt_n_participants,227 participants,227,,,PITTMAN,distinct participant numbers,M20,227,,,agree_4dp,,
+pitt_n_speaker_labels,228 speaker labels,228,,,PITTMAN,distinct group+participant labels,M20; B9,228,,,agree_4dp,,
+pitt_n_conflict,146,146,,,PITTMAN,conflict segments,B9; B7,146,,,agree_4dp,,
+pitt_n_agreement,322,322,,,PITTMAN,agreement segments,B9,322,,,agree_4dp,,
+pitt_spk_conflict,100,100,,,PITTMAN,speakers in the conflict arm,B9,100,,,agree_4dp,,
+pitt_spk_agreement,175,175,,,PITTMAN,speakers in the agreement arm,B9,175,,,agree_4dp,,
+pitt_spk_both,47,47,,,PITTMAN,speakers in both arms,B9,47,,,agree_4dp,,
+pitt_dur_min,30,30.0,,,PITTMAN,shortest segment (s),B6,30.0000,,,agree_1dp (claim given at 1 dp),,
+pitt_dur_median,33,33.3,,,PITTMAN,median segment (s),B6,33.3000,,,agree_1dp (claim given at 1 dp),,
+pitt_dur_max,56,55.6,,,PITTMAN,longest segment (s),B6,55.6000,,,agree_1dp (claim given at 1 dp),,
+pitt_rate_auc,0.71,0.7082,,,PITTALL,"speaking rate alone, direction free, 468 segments",B5,0.7082,,,agree_4dp,,n=468 raw 0.2918; all 708: 0.6970
+pitt_age_gap_per_speaker,7.5 years,7.54,,,PITTMAN,"dementia minus control mean age, one value per speaker label",M22; m11,7.5386,,,agree_2dp (claim given at 2 dp),,per clip 6.58
+pitt_inv_windows,at least 158 of the 468,158,,,PITTINV,windows with interviewer speech inside the heard window,M6,158,,,agree_4dp,,"mean inv ms dementia 853, control 186; column inv_ms_win of pitt_no_interviewer.csv"
+edaic_n_conflict_pool,488,488,,,M2SEG,conflict segments before pairing,B7,488,,,agree_4dp,,arm_roberta == conflict (pool before pairing)
+edaic_n_pairs,483,483,,,T1,pairs (sum of agreement repeats),B7,483,,,agree_4dp,,
+edaic_pair_speakers,138,138,,,T1,speakers in the pairs,B7,138,,,agree_4dp,,
+edaic_n_distinct_agree,311,311,,,T1,distinct agreement segments,B7,311,,,agree_4dp,,
+af3_dep_agree_311,0.84,0.8425,0.7963,0.8854,T1,AF3 agreement AUC on the 311 distinct segments,B4,0.8425,0.7963,0.8854,agree_4dp,ci_agree_4dp,AUC p_af3 on distinct agreement rows
+af2_pitt30_conflict,0.58,0.5835,0.4730,0.6913,AF2C,"AF2 Pitt conflict, windows cut to 30 s",M12,0.5835,0.4730,0.6913,agree_4dp,ci_agree_4dp,AUC p_yes
+af2_pitt30_agreement,0.53,0.5337,0.4574,0.6116,AF2A,"AF2 Pitt agreement, windows cut to 30 s",M12,0.5337,0.4574,0.6116,agree_4dp,ci_agree_4dp,AUC p_yes
+af3_pitt_conflict,0.61,0.6075,0.5063,0.7129,AF3PITT,AF3 Pitt conflict (part10 copy),M12; LEFT authors 6,0.6075,0.5063,0.7129,agree_4dp,ci_agree_4dp,"AUC p_yes, part10"
+af3_pitt_agreement,0.59,0.5855,0.5144,0.6554,AF3PITT,AF3 Pitt agreement (part10 copy),M12; LEFT authors 6,0.5855,0.5144,0.6554,agree_4dp,ci_agree_4dp,"AUC p_yes, part10"
+zs_pcgita,0.56 to 0.71 (range),0.5635,,,ZS_pcgita,"Qwen2.5-Omni zero-shot AUC, pcgita",B8,0.5635,,,agree_4dp,,n=1100
+zs_neurovoz,0.56 to 0.71 (range),0.6951,,,ZS_neurovoz,"Qwen2.5-Omni zero-shot AUC, neurovoz",B8,0.6951,,,agree_4dp,,n=1270
+zs_kcl,0.56 to 0.71 (range),0.7143,,,ZS_kcl,"Qwen2.5-Omni zero-shot AUC, kcl",B8,0.7143,,,agree_4dp,,n=37
+zs_pitt,0.56 to 0.71 (range),0.6578,,,ZS_pitt,"Qwen2.5-Omni zero-shot AUC, pitt",B8,0.6578,,,agree_4dp,,n=468
+zs_adresso,0.56 to 0.71 (range),0.6150,,,ZS_adresso,"Qwen2.5-Omni zero-shot AUC, adresso",B8,0.6150,,,agree_4dp,,n=237
+zs_adress2020,0.56 to 0.71 (range),0.6241,,,ZS_adress2020,"Qwen2.5-Omni zero-shot AUC, adress2020",B8,0.6241,,,agree_4dp,,n=156
+enc_pcgita,0.75 to 0.92 / 0.77 to 0.88 (ranges),0.8941,,,ML,"encoder probe mean of five, pcgita (master_lookup)",B8; M26,0.8941,,,agree_4dp,,"mean of json repeats [0.8882, 0.89, 0.8926, 0.8954, 0.9044]; master_lookup [0.8941]"
+enc_neurovoz,0.75 to 0.92 / 0.77 to 0.88 (ranges),0.9213,,,ML,"encoder probe mean of five, neurovoz (master_lookup)",B8; M26,0.9213,,,agree_4dp,,"mean of json repeats [0.9275, 0.9154, 0.928, 0.9124, 0.9232]; master_lookup [0.9213]"
+enc_kcl,0.75 to 0.92 / 0.77 to 0.88 (ranges),0.7506,,,ML,"encoder probe mean of five, kcl (master_lookup)",B8; M26,0.7506,,,agree_4dp,,"mean of json repeats [0.744, 0.8304, 0.7768, 0.625, 0.7768]; master_lookup [0.7506]"
+enc_pitt,0.75 to 0.92 / 0.77 to 0.88 (ranges),0.7706,,,ML,"encoder probe mean of five, pitt (master_lookup)",B8; M26,0.7706,,,agree_4dp,,same as pitt_enc_meanof5 (npz)
+enc_adresso,0.75 to 0.92 / 0.77 to 0.88 (ranges),0.8752,,,ML,"encoder probe mean of five, adresso (master_lookup)",B8; M26,0.8752,,,agree_4dp,,"mean of json repeats [0.8722, 0.8665, 0.8825, 0.874, 0.881]; master_lookup [0.8752]"
+enc_adress2020,0.75 to 0.92 / 0.77 to 0.88 (ranges),0.8043,,,ML,"encoder probe mean of five, adress2020 (master_lookup)",B8; M26,0.8043,,,agree_4dp,,"mean of json repeats [0.8161, 0.7936, 0.8051, 0.8062, 0.8005]; master_lookup [0.8043]"
+pitt_gap,"0.11 [0.05, 0.18]",0.1128,0.0455,0.1768,PITTNPZ,"Pitt encoder mean-of-5 minus zero-shot, paired",M2; ledger spot check 2 (no twin file),0.1128,0.0455,0.1768,agree_4dp,ci_agree_4dp,"mean-of-five probe minus zero-shot, paired, same draws"
+pitt_enc_meanof5,0.77,0.7706,,,PITTNPZ,"Pitt encoder probe, mean of five per-repeat AUCs (Mac splits)",M16,0.7706,,,agree_4dp,,mean of five per-repeat AUCs from pitt_enc_nested5_oof.npz
+pcgita_gap,0.33,0.3306,,,ML,PC-GITA encoder mean-of-5 (0.8941) minus zero-shot (0.5635),M2; LEFT check 6; LEFT authors 2 (0.35 to 0.33),0.3306,,,agree_4dp,,enc mean-of-5 minus zero-shot
+q3o_pitt_enc,0.81,0.8122,,,Q3OENC,"Qwen3-Omni Pitt encoder, mean of five",M3,0.8122,,,agree_4dp,,mean of five
+q3o_pitt_zs,0.76,0.7619,,,Q3OPITT,Qwen3-Omni Pitt zero-shot (shipped file),M3,0.7619,,,agree_4dp,,
+q3o_pitt_gap,0.05,0.0503,,,Q3OENC,Qwen3-Omni Pitt gap,M3,0.0503,,,agree_4dp,,
+egemaps_range,0.53 to 0.84,0.5309;0.8439,,,EGEMAPS,eGeMAPS baseline min and max over seven sets,M4,0.5309;0.8439,,,agree,,"{'kcl': 0.7411, 'adress2020': 0.7122, 'adresso': 0.6942, 'edaic': 0.5309, 'pitt': 0.6547, 'pcgita': 0.8332, 'neurovoz': 0.8439}"
+egemaps_margin_min_kcl,0.01,0.0095,,,EGEMAPS,"encoder probe minus eGeMAPS, KCL (smallest)",M4,0.0095,,,agree_4dp,,"argmin kcl; margins {'kcl': 0.0095, 'adress2020': 0.0921, 'adresso': 0.181, 'edaic': 0.0657, 'pitt': 0.1214, 'pcgita': 0.0609, 'neurovoz': 0.0774}"
+egemaps_margin_max_adresso,0.18,0.1810,,,EGEMAPS,"encoder probe minus eGeMAPS, ADReSSo (largest)",M4,0.1810,,,agree_4dp,,argmax adresso
+egemaps_minus_zs_pcgita,0.27,0.2697,,,EGEMAPS,"eGeMAPS minus zero-shot, PC-GITA",M4,0.2697,,,agree_4dp,,
+egemaps_minus_zs_neurovoz,0.15,0.1488,,,EGEMAPS,"eGeMAPS minus zero-shot, NeuroVoz",M4,0.1488,,,agree_4dp,,
+nv_5feat_before,0.80,0.7977,,,CHNV,"five recording features, NeuroVoz, before normalising",M5,0.7977,,,agree_4dp,,
+pg_5feat_before,0.67,0.6657,,,CHPG,"five recording features, PC-GITA, before",M5,0.6657,,,agree_4dp,,
+pg_5feat_after,0.56,0.5590,,,CHPG,"five recording features, PC-GITA, after",M5,0.5590,,,agree_4dp,,
+nv_5feat_after,0.60,0.6025,,,CHNV,"five recording features, NeuroVoz, after",M5,0.6025,,,agree_4dp,,
+pg_probe_after,0.83,0.8298,,,CHPG,PC-GITA encoder probe after normalising,M5,0.8298,,,agree_4dp,,before 0.8959
+pg_probe_after_minus_before,"-0.07 [-0.12, -0.02]",-0.0661,-0.1181,-0.0180,CHPG,"PC-GITA probe after minus before, paired",M5,-0.0661,-0.1181,-0.0180,agree_4dp,ci_agree_4dp,"after minus before, paired"
+pg_zs_after,0.57,0.5674,,,PGZSAFTER,PC-GITA zero-shot after normalising,M5,0.5674,,,agree_4dp,,
+nv_probe_after,0.89,0.8924,,,CHNV,NeuroVoz encoder probe after normalising,M5,0.8924,,,agree_4dp,,before 0.9233
+nv_probe_after_minus_before,"-0.03 [-0.061, -0.001]",-0.0308,-0.0608,-0.0012,CHNV,"NeuroVoz probe after minus before, paired",M5,-0.0308,-0.0608,-0.0012,agree_4dp,ci_agree_4dp,"after minus before, paired"
+nvm_n_clips,907 clips,907,,,NVMENC,clips of the 38 matched NeuroVoz pairs,M5; m8,907,,,agree_4dp,,
+nvm_n_pairs,38,38,,,NVMPAIRS,matched NeuroVoz pairs,M5,38,,,agree_4dp,,
+nvm_probe,0.90,0.8986,,,NVMENC,"encoder probe on matched pairs, mean of five seeds",M5,0.8986,,,agree_4dp,,mean of five seeds
+nvm_zs,0.63,0.6282,,,NVMZS,zero-shot on matched pairs,M5,0.6282,,,agree_4dp,,n=907
+nvm_5feat,0.71,0.7112,,,NVMCH,five recording features on matched pairs,M5; m8,0.7112,,,agree_4dp,,
+pitt_noinv_zs,0.72,0.7230,,,NOINV,"Qwen2.5-Omni Pitt zero-shot, interviewer removed",M6,0.7230,,,agree_4dp,,paper file 0.6578
+pitt_noinv_minus_paper,"+0.07 [0.02, 0.11]",0.0652,0.0228,0.1081,NOINV,"interviewer-free minus paper answer, paired",M6,0.0652,0.0228,0.1081,agree_4dp,ci_agree_4dp,paired
+pitt_noinv_enc,0.76,0.7643,,,POD5,"encoder probe on interviewer-free audio, mean of five (Mac splits)",M6,0.7643,,,agree_4dp,,paper-split probe on the same file 0.7706
+pitt_noinv_enc_minus_paper,"-0.01 [-0.04, 0.02]",-0.0063,-0.0375,0.0232,POD5,"interviewer-free minus paper encoder probe, paired",M6,-0.0063,-0.0375,0.0232,agree_4dp,ci_agree_4dp,paired
+pitt_noinv_gap,0.04,0.0413,,,POD5,participant-only Pitt gap (0.7643 minus 0.7230),M6,0.0413,,,agree_4dp,,
+readout_auc_d,0.66,0.6608,,,READOUT,Qwen2.5-Omni Pitt state projected on the readout direction,M10,0.6608,,,agree_4dp,,read from file (no per-clip vector on disk)
+readout_probe,0.77,0.7709,,,READOUT,probe on the answer state,M10; m12,0.7709,,,agree_4dp,,read from file
+readout_without_d,0.77,0.7662,,,READOUT,probe with the readout direction removed,M10,0.7662,,,agree_4dp,,read from file
+readout_cos,0.01,-0.0109,,,READOUT,"cosine, probe direction vs readout direction (magnitude)",M10,-0.0109,,,agree_4dp,,read from file; random 0.0135
+q2a_readout_auc_d,0.62,0.6174,,,T3Q2A,Qwen2-Audio readout direction,M10; m10,0.6174,,,agree_4dp,,AUC proj_d (direction free if below 0.5)
+q2a_readout_probe,0.82,0.8223,,,T3Q2A,Qwen2-Audio answer-state probe,M10; m10,0.8223,,,agree_4dp,,
+q2a_readout_without,0.81,0.8114,,,T3Q2A,Qwen2-Audio probe without the direction,M10,0.8114,,,agree_4dp,,
+q3o_readout_auc_d,0.77,0.7656,,,Q3ORD,Qwen3-Omni readout direction,M10,0.7656,,,agree_4dp,,read from file (pod file)
+q3o_readout_probe,0.83,0.8307,,,Q3ORD,"Qwen3-Omni answer-state probe (pod file; Mac refit 0.7864, ledger 5.3)",M10,0.8307,,,agree_4dp,,read from file; Mac refit 0.7864 per ledger
+q3o_readout_without,0.83,0.8305,,,Q3ORD,Qwen3-Omni probe without the direction,M10,0.8305,,,agree_4dp,,read from file
+phq10_conflict,0.18,0.1759,0.1448,0.2095,PHQ10,PHQ-8 cut at 10: conflict arm,M13,0.1759,0.1448,0.2095,agree_4dp,ci_agree_4dp,AUC p_yes conflict rows
+phq10_pairs,924 pairs,924,,,PHQ10,pairs under the PHQ-8 cut at 10,M13,924,,,agree_4dp,,
+phq10_speakers,237 speakers,237,,,PHQ10,speakers under the PHQ-8 cut at 10,M13,237,,,agree_4dp,,
+thr060_pairs,646,646,,,THR060,pairs at sentiment threshold 0.60,m6,646,,,agree_4dp,,"columns ['id', 'speaker', 'arm', 'label', 'p_yes', 'answer_mass']"
+thr080_pairs,281,281,,,THR080,pairs at sentiment threshold 0.80,m6,281,,,agree_4dp,,"columns ['id', 'speaker', 'arm', 'label', 'p_yes', 'answer_mass']"
+thr060_conflict,0.26,0.2619,,,THR060,conflict arm at threshold 0.60,m6,0.2619,,,agree_4dp,,
+thr080_conflict,0.19,0.1936,,,THR080,conflict arm at threshold 0.80,m6,0.1936,,,agree_4dp,,
+sst2_pairs,"1,334",1334,,,SST2,pairs selected by the DistilBERT SST-2 scorer,M14,1334,,,agree_4dp,,
+sst2_conflict,"0.46 [0.42, 0.51]",0.4619,0.4165,0.5102,SST2,conflict arm under the second scorer,M14,0.4619,0.4165,0.5102,agree_4dp,ci_agree_4dp,AUC conflict rows
+sst2_agree_distinct,0.39 below,0.8554,,,SST2,agreement arm on distinct segments (0.8554 minus 0.4619 = 0.39),M14,0.8554,,,agree_4dp,,distinct n=799; all agreement rows 0.8316
+sst2_both_conflict_n,420,420,,,SST2DIAG,segments both scorers call conflicting,M14,420,,,agree_4dp,,
+sst2_both_conflict_auc,0.20,0.1951,,,SST2DIAG,AUC on those 420,M14,0.1951,,,agree_4dp,,
+sst2_rob_neutral_n,855,855,,,SST2DIAG,segments the first scorer calls neutral,M14,855,,,agree_4dp,,
+sst2_rob_neutral_auc,0.62,0.6150,,,SST2DIAG,AUC on those 855,M14,0.6150,,,agree_4dp,,
+pitt_text_conflict,0.56,0.5560,,,PITTTEXT,"Qwen2.5-Omni Pitt transcript, conflict arm",M7; m5,0.5560,,,agree_4dp,,
+pitt_text_agreement,0.71,0.7078,,,PITTTEXT,"Qwen2.5-Omni Pitt transcript, agreement arm",M7; m5,0.7078,,,agree_4dp,,
+omni_pitt_drop,0.17,0.1731,0.0392,0.2958,ZS_pitt,Qwen2.5-Omni Pitt agreement minus conflict,m3,0.1731,0.0392,0.2958,agree_4dp,ci_agree_4dp,"agreement minus conflict, speaker draws over all labels"
+q3o_pitt_drop,(0.17 to 0.29),0.2165,,,Q3OPITT,Qwen3-Omni Pitt agreement minus conflict,m3; M15,0.2165,0.1052,0.3242,agree_4dp,,agreement minus conflict
+q2a_pitt_drop,0.29,0.2853,,,Q2APITT,Qwen2-Audio Pitt agreement minus conflict,m3; M15,0.2853,0.1485,0.3950,agree_4dp,,agreement minus conflict
+q2a_pitt_conflict_hi,none significantly below chance,0.4132,0.3056,0.5412,Q2APITT,lowest Qwen Pitt conflict arm; its upper bound must exceed 0.5 (claimed interval from C_intervals.csv),M12; B8,0.4132,0.3005,0.5423,agree_4dp,"CI DIFF [0.3005, 0.5423]",conflict arm; interval must contain 0.5
+kimi_noinv_agree,0.56,0.5612,,,KIMINOINVA,"Kimi-Audio Pitt agreement arm, interviewer removed",M6; m33,0.5612,,,agree_4dp,,
+kimi_orig_minus_noinv,0.12,0.1199,,,KIMIPAIR,"Kimi-Audio overall answer, original minus interviewer-free",M6; m33,0.1199,,,agree_4dp,,
+voice_minus_recording,"-0.01 [-0.04, 0.02]",-0.0104,-0.0356,0.0155,VOICE,"Qwen2.5-Omni Pitt, voice wording minus recording wording, paired",m13,-0.0104,-0.0356,0.0155,agree_4dp,ci_agree_4dp,paired
+ft_seed1,0.74 (range 0.74 to 0.81),0.7396,,,FTS1,"projector FT seed 1, Pitt overall",M8,0.7396,,,agree_4dp,,
+ft_seed2,0.81 (range),0.8085,,,FTS2,"projector FT seed 2, Pitt overall",M8,0.8085,,,agree_4dp,,
+ft_seed3,(range),0.7975,,,FTS3,"projector FT seed 3, Pitt overall",M8,0.7975,,,agree_4dp,,
+ft_conflict_min,0.45,0.4490,,,FTR2,lowest FT conflict arm over runs (rerun 2),M8,0.4490,,,agree_4dp,,"{'FTPAPER': 0.5189, 'FTR1': 0.4697, 'FTR2': 0.449, 'FTS1': 0.5364, 'FTS2': 0.5636, 'FTS3': 0.5666}"
+ft_conflict_max,0.57,0.5666,,,FTS*,highest FT conflict arm over runs,M8,0.5666,,,agree_4dp,,
+ft_agree_min,0.82,0.8213,,,FTS*,lowest FT agreement arm over runs,M8,0.8213,,,agree_4dp,,"{'FTPAPER': 0.8593, 'FTR1': 0.8895, 'FTR2': 0.8967, 'FTS1': 0.8213, 'FTS2': 0.9022, 'FTS3': 0.8844}"
+ft_agree_max,0.90,0.9022,,,FTS*,highest FT agreement arm over runs,M8,0.9022,,,agree_4dp,,
+ft_conflict_ci_all_include_half,every interval including 0.5,yes,,,FT*,every FT run's conflict-arm interval contains 0.5,M8,yes,,,agree,,"{'FTPAPER': [0.5189, 0.4151, 0.63], 'FTR1': [0.4697, 0.3613, 0.5906], 'FTR2': [0.449, 0.3385, 0.5682], 'FTS1': [0.5364, 0.4306, 0.6426], 'FTS2': [0.5636, 0.4593, 0.6779], 'FTS3': [0.5666, 0.466, 0.6746], 'FTBAL': [0.4693, 0.3686, 0.5854]}"
+ft_balanced_conflict,a class-balanced loss does not change this,0.4693,,,FTBAL,balanced-loss FT conflict arm,M8,0.4693,,,agree_4dp,,overall 0.7301
+lora_pitt,0.825,0.8250,,,LORA,LoRA Pitt overall,m2,0.8250,,,agree_4dp,,p_yes_multivariant gives 0.8220
+lora_minus_proj,"0.06 [0.02, 0.10]",0.0577,0.0154,0.1044,LORA,"LoRA minus projector FT, paired",M8; m2,0.0577,0.0154,0.1044,agree_4dp,ci_agree_4dp,"paired, LoRA minus paper projector run"
+lora_conflict,0.55,0.55,,,LORA,LoRA conflict arm,M8,0.5520,,,agree_2dp (claim given at 2 dp),,
+both_pitt,0.77,0.7696,,,BOTH,"LoRA plus projector, Pitt overall",M8,0.7696,,,agree_4dp,,
+ft_sig_5_of_6,significantly on five of six,5,,,CINT,PD/AD sets whose FT minus zero-shot interval excludes zero,B2; B8; M8,5.0000,,,agree_4dp,,"pcgita +0.3227 [0.2391, 0.4040] n=1100; neurovoz +0.2078 [0.1588, 0.2578] n=1270; kcl -0.0149 [-0.2709, 0.2364] n=37; pitt +0.1095 [0.0454, 0.1728] n=468; adresso +0.2096 [0.1294, 0.2867] n=237; adress2020 +0.1443 [0.0490, 0.2370] n=156"
+answer_mass_min_median,at least 0.89,0.8968,,,M9,smallest median Yes+No mass over zero-shot cells,M17,0.8968,,,agree_4dp,,"over 70 zero-shot cells; argmin ['Audio Flamingo 3', 'pcgita']"
+tfidf_kcl,0.43 to 0.62 / 0.68 / 0.84 to 0.93,0.43,,,TFIDF_kcl,"TF-IDF logistic regression on transcripts, kcl",m9,0.4315,,,agree_2dp (claim given at 2 dp),,n=37
+tfidf_neurovoz,0.43 to 0.62 / 0.68 / 0.84 to 0.93,0.58,,,TFIDF_neurovoz,"TF-IDF logistic regression on transcripts, neurovoz",m9,0.5814,,,agree_2dp (claim given at 2 dp),,n=1270
+tfidf_pcgita,0.43 to 0.62 / 0.68 / 0.84 to 0.93,0.62,,,TFIDF_pcgita,"TF-IDF logistic regression on transcripts, pcgita",m9,0.6196,,,agree_2dp (claim given at 2 dp),,n=1100
+tfidf_edaicfull,0.43 to 0.62 / 0.68 / 0.84 to 0.93,0.68,,,TFIDF_edaicfull,"TF-IDF logistic regression on transcripts, edaicfull",m9,0.6778,,,agree_2dp (claim given at 2 dp),,n=275
+tfidf_pitt,0.43 to 0.62 / 0.68 / 0.84 to 0.93,0.84,,,TFIDF_pitt,"TF-IDF logistic regression on transcripts, pitt",m9,0.8353,,,agree_2dp (claim given at 2 dp),,n=468
+tfidf_adresso,0.43 to 0.62 / 0.68 / 0.84 to 0.93,0.85,,,TFIDF_adresso,"TF-IDF logistic regression on transcripts, adresso",m9,0.8471,,,agree_2dp (claim given at 2 dp),,n=237
+tfidf_adress2020,0.43 to 0.62 / 0.68 / 0.84 to 0.93,0.93,,,TFIDF_adress2020,"TF-IDF logistic regression on transcripts, adress2020",m9,0.9254,,,agree_2dp (claim given at 2 dp),,n=156
+prompt_mean_shift,0.02,0.024,,,PROMPTS,"mean abs change of two other wordings vs Table 1 audio, 14 runs",M29,0.0240,,,agree_3dp (claim given at 3 dp),,14 runs
+prompt_max_shift,0.07,0.066,,,PROMPTS,max abs change,M29,0.0664,,,agree_3dp (claim given at 3 dp),,
+greedy_n,966,966,,,GREEDY,depression pair clips decoded greedily,m14,966,,,agree_4dp,,
+greedy_yesno_all,all,1.0,,,GREEDY,share whose first word is Yes or No,m14,1.0000,,,agree_1dp (claim given at 1 dp),,
+greedy_agree_conflict,99 percent,0.9917,,,GREEDY,logit decision agreement on conflict clips,m14,0.9917,,,agree_4dp,,overall 0.9865
+nv_speakers,"107 of its 108 speakers, 1270 clips",107,,,NVFOLDS,NeuroVoz speakers and clips in the folds file,M19; M30,107,,,agree_4dp,,"rows 1270 cols ['clip_id', 'speaker_id', 'fold']"
+pcgita_clips,"1100 clips, ten sentences and one read text",1100,,,PGFOLDS,PC-GITA clips (100 speakers x 11),M19,1100,,,agree_4dp,,"cols ['clip_id', 'speaker_id', 'fold']"
+kcl_passages,most reading one of two passages,32 of 37,,,KCLWER,KCL speakers reading North Wind or the light-scattering passage,M19,32 of 37,,,agree,,"{'north_wind': 23, 'light_scattering': 9, 'neither': 5}"
+edaic_label_vs_phq10,20 participants,20,,,M2SEG,participants whose released label differs from PHQ-8 >= 10,m16; M27,20,,,agree_4dp,,label 0 with PHQ-8 (sev) >= 10; label 1 with PHQ-8 < 10: 0
+age_matched_clips,275 clips of the 129 speakers,275;129,,,AGEEST,age and sex matched subset,M22,275;129,,,agree,,n_clips;n_speakers of the matched rows in pitt_probe_estimators.csv
+age_matched_pairs,81 pairs,81,,,AGEMAN,pairs matched on the whole corpus,M22,81,,,agree,,"matched speakers per group {'Control': 81, 'Dementia': 81} (pairs = speakers per group)"
+age_matched_probe,0.80,0.7953,,,AGEEST,encoder probe on the matched clips,M22,0.7953,,,agree_4dp,,"read from pitt_probe_estimators.csv:                     measure level     subset  n_clips  n_speakers    auc                          source
+encoder probe 5split nested  clip agematched      275         129 0.7953 part10/pitt_enc_nested5_oof.npz"
+age_matched_zs,0.65,0.654,,,AGEEST,zero-shot on the matched clips,M22,0.6540,,,agree_3dp (claim given at 3 dp),,"read from pitt_probe_estimators.csv:          measure level     subset  n_clips  n_speakers   auc                                   source
+zero shot answer  clip agematched      275         129 0.654 omni_final/omni_pitt_zeroshot_scores.csv"
+age_alone_full,0.71,0.7111,,,AGEEST,"age alone, full set",M22; m1,0.7111,,,agree_4dp,,"read from pitt_probe_estimators.csv:   measure level subset  n_clips  n_speakers    auc                         source
+age alone  clip   full      468         228 0.7111 DementiaBank/pitt_manifest.csv"
+age_alone_matched,0.39,0.3866,,,AGEEST,"age alone, matched clips",M22; m1,0.3866,,,agree_4dp,,"read from pitt_probe_estimators.csv:   measure level     subset  n_clips  n_speakers    auc                         source
+age alone  clip agematched      275         129 0.3866 DementiaBank/pitt_manifest.csv"

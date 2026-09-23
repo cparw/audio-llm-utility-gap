@@ -1,0 +1,80 @@
+[2] N. P. Narendra, Björn Schuller, and Paavo Alku, “The detection
+of Parkinson’s disease from speech using voice source information,” IEEE/ACM Trans. Audio, Speech, Lang. Process., vol. 29,
+pp. 1925-1936, 2021.
+[3] Erfan Loweimi, Sofia de la Fuente Garcia, and Saturnino Luz,
+“Zero-shot speech-based depression and anxiety assessment with
+LLMs,” in Proc. Interspeech, 2025, pp. 489-493.
+[4] Sejal Bhalla et al., “SpeechDx: A multi-task benchmark for
+clinical speech AI,” arXiv:2606.17339, 2026.
+[5] Zhongren Dong et al., “Foundation model-based evaluation of
+neuropsychiatric disorders: A lifespan-inclusive, multi-modal,
+and multi-lingual study,” IEEE J. Sel. Topics Signal Process.,
+vol. 19, no. 5, pp. 796-809, 2025.
+[6] Jingyi Chen et al., “Do audio LLMs really LISTEN, or just transcribe? Measuring lexical vs. acoustic emotion cues reliance,”
+in Proc. EACL, 2026, pp. 5848-5877.
+[7] Jiacheng Pang, Ashutosh Chaubey, and Mohammad Soleymani,
+“Do audio LLMs listen or read? Analyzing and mitigating
+paralinguistic failures with VoxParadox,” in Proc. ICML, 2026.
+[8] Yunfei Chu et al.,
+“Qwen2-Audio technical report,”
+arXiv:2407.10759, 2024.
+[9] Jin Xu et al.,
+“Qwen2.5-Omni technical report,”
+arXiv:2503.20215, 2025.
+[10] Jin Xu et al.,
+“Qwen3-Omni technical report,”
+arXiv:2509.17765, 2025.
+[11] Sreyan Ghosh et al., “Audio Flamingo 2: An audio-language
+model with long-audio understanding and expert reasoning abilities,” in Proc. ICML, 2025, pp. 19358-19405.
+[12] Arushi Goel et al., “Audio Flamingo 3: Advancing audio
+intelligence with fully open large audio language models,” in
+Proc. NeurIPS, 2025.
+[13] Kimi Team et al.,
+“Kimi-Audio technical report,”
+arXiv:2504.18425, 2025.
+[14] Juan Rafael Orozco-Arroyave et al., “New Spanish speech corpus database for the analysis of people suffering from Parkinson’s disease,” in Proc. LREC, 2014, pp. 342-347.
+[15] Janaı́na Mendes-Laureano et al., “NeuroVoz: A Castillian
+Spanish corpus of parkinsonian speech,” Sci. Data, vol. 11, no.
+1, pp. 1367, 2024.
+[16] Hagen Jaeger, Dhaval Trivedi, and Michael Stadtschnitzer, “Mobile device voice recordings at King’s College London (MDVRKCL) from both early and advanced Parkinson’s disease patients
+and healthy controls,” Zenodo, doi:10.5281/zenodo.2867216,
+2019.
+[17] Fabien Ringeval et al., “AVEC 2019 workshop and challenge:
+State-of-mind, detecting depression with AI, and cross-cultural
+affect recognition,” in Proc. Audio/Visual Emotion Challenge
+and Workshop (AVEC), 2019, pp. 3-12.
+[18] Kurt Kroenke et al., “The PHQ-8 as a measure of current
+depression in the general population,” J. Affect. Disord., vol.
+114, no. 1-3, pp. 163-173, 2009.
+[19] James T. Becker et al., “The natural history of Alzheimer’s
+disease: Description of study cohort and accuracy of diagnosis,”
+Arch. Neurol., vol. 51, no. 6, pp. 585-594, 1994.
+[20] Saturnino Luz et al., “Detecting cognitive decline using speech
+only: The ADReSSo challenge,” in Proc. Interspeech, 2021, pp.
+3780-3784.
+[21] Saturnino Luz et al., “Multilingual Alzheimer’s dementia recognition through spontaneous speech: A signal processing grand
+challenge,” in Proc. ICASSP, 2023, pp. 1-2.
+[22] Saturnino Luz et al., “Alzheimer’s dementia recognition through
+spontaneous speech: The ADReSS challenge,” in Proc. Inter-
+
+speech, 2020, pp. 2172-2176.
+[23] Ilya Loshchilov and Frank Hutter, “Decoupled weight decay
+regularization,” in Proc. ICLR, 2019.
+[24] Francesco Barbieri et al., “TweetEval: Unified benchmark and
+comparative evaluation for tweet classification,” in Findings of
+EMNLP, 2020, pp. 1644-1650.
+[25] Brian MacWhinney, The CHILDES Project: Tools for Analyzing Talk, Lawrence Erlbaum, 3rd edition, 2000.
+[26] Kathleen C. Fraser, Jed A. Meltzer, and Frank Rudzicz, “Linguistic features identify Alzheimer’s disease in narrative speech,”
+J. Alzheimer’s Dis., vol. 49, no. 2, pp. 407-422, 2016.
+[27] Alec Radford et al., “Robust speech recognition via large-scale
+weak supervision,” in Proc. ICML, 2023, pp. 28492-28518.
+[28] Florian Eyben et al., “The Geneva minimalistic acoustic parameter set (GeMAPS) for voice research and affective computing,”
+IEEE Trans. Affective Comput., vol. 7, no. 2, pp. 190-202, 2016.
+[29] Benjamin Elizalde et al., “CLAP learning audio concepts from
+natural language supervision,” in Proc. ICASSP, 2023, pp. 1-5.
+[30] Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu,
+Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen, “LoRA:
+Low-rank adaptation of large language models,” in Proc. ICLR,
+2022.
+
+
