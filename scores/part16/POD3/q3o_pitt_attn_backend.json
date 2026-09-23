@@ -1,0 +1,26 @@
+{
+ "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "manifest": "/workspace/mf_pitt468.csv",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "window_seconds": 30.0,
+ "n": 468,
+ "transformers": "5.17.0",
+ "torch": "2.8.0+cu128",
+ "gpu": "NVIDIA H200",
+ "date": "2026-09-23T07:50:31",
+ "auc_sdpa": 0.767319,
+ "auc_eager": 0.767919,
+ "compared": [
+  "sdpa",
+  "eager"
+ ],
+ "identical_clips": 0,
+ "frac_diff_gt_0.001": 0.8077,
+ "frac_diff_gt_0.1": 0.047,
+ "max_abs_dp_yes": 0.1826,
+ "mean_abs_dp_yes": 0.0347,
+ "mean_abs_dlogit": 0.2019,
+ "mean_signed_dlogit": -0.0048,
+ "spearman": 0.983,
+ "auc_delta": 0.0006
+}
