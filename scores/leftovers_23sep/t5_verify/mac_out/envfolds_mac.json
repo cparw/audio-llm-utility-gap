@@ -1,0 +1,104 @@
+{
+ "threadpool": [
+  {
+   "user_api": "openmp",
+   "internal_api": "openmp",
+   "num_threads": 1,
+   "prefix": "libomp",
+   "filepath": "<local data dir>/Library/Python/3.10/lib/python/site-packages/sklearn/.dylibs/libomp.dylib",
+   "version": null
+  }
+ ],
+ "cpu": "Apple M4 Max",
+ "python": "3.10.2",
+ "numpy": "2.2.6",
+ "scipy": "1.15.3",
+ "sklearn": "1.7.2",
+ "groupkfold_argsort_lines": [
+  "indices = np.argsort(n_samples_per_group)[::-1]"
+ ],
+ "pitt": {
+  "n": 468,
+  "n_speakers": 228,
+  "argsort_default_equals_stable": false,
+  "sklearn_eq_mine_stable": 125,
+  "sklearn_eq_mine_default": 468,
+  "pod_file": {
+   "n_file": 468,
+   "missing": 0,
+   "sklearn_here_eq": 125,
+   "mine_stable_eq": 468,
+   "mine_default_eq": 125
+  },
+  "mac_file": {
+   "n_file": 468,
+   "missing": 0,
+   "sklearn_here_eq": 468,
+   "mine_stable_eq": 125,
+   "mine_default_eq": 468
+  }
+ },
+ "edaic": {
+  "n": 275,
+  "n_speakers": 275,
+  "argsort_default_equals_stable": false,
+  "sklearn_eq_mine_stable": 20,
+  "sklearn_eq_mine_default": 275,
+  "pod_file": {
+   "n_file": 275,
+   "missing": 0,
+   "sklearn_here_eq": 20,
+   "mine_stable_eq": 275,
+   "mine_default_eq": 20
+  },
+  "mac_file": {
+   "n_file": 275,
+   "missing": 0,
+   "sklearn_here_eq": 275,
+   "mine_stable_eq": 20,
+   "mine_default_eq": 275
+  }
+ },
+ "adress2020": {
+  "n": 156,
+  "n_speakers": 156,
+  "argsort_default_equals_stable": false,
+  "sklearn_eq_mine_stable": 33,
+  "sklearn_eq_mine_default": 156,
+  "pod_file": {
+   "n_file": 156,
+   "missing": 0,
+   "sklearn_here_eq": 33,
+   "mine_stable_eq": 156,
+   "mine_default_eq": 33
+  },
+  "mac_file": {
+   "n_file": 156,
+   "missing": 0,
+   "sklearn_here_eq": 156,
+   "mine_stable_eq": 33,
+   "mine_default_eq": 156
+  }
+ },
+ "neurovoz": {
+  "n": 1270,
+  "n_speakers": 107,
+  "argsort_default_equals_stable": false,
+  "sklearn_eq_mine_stable": 303,
+  "sklearn_eq_mine_default": 1270,
+  "pod_file": {
+   "n_file": 1270,
+   "missing": 0,
+   "sklearn_here_eq": 303,
+   "mine_stable_eq": 1270,
+   "mine_default_eq": 303
+  },
+  "mac_file": {
+   "n_file": 1270,
+   "missing": 0,
+   "sklearn_here_eq": 1270,
+   "mine_stable_eq": 303,
+   "mine_default_eq": 1270
+  }
+ }
+}

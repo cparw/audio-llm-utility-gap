@@ -1,0 +1,22 @@
+{
+ "npz": "inputs/edaic30_encproj.npz",
+ "tag": "edaic30_encproj__mac_podfile",
+ "folds": "folds/edaic_groupkfold5_pod.csv",
+ "dtype": "f32",
+ "nproc": 10,
+ "n": 275,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": null,
+  "OPENBLAS_CORETYPE": null
+ },
+ "fold_sizes": [
+  55,
+  55,
+  55,
+  55,
+  55
+ ],
+ "seconds": 3.7
+}

@@ -1,0 +1,4 @@
+pitt_encproj {'enc': (468, 32, 1280), 'proj': (468, 1, 3584), 'label': (468,), 'spk': (468,), 'name': (468,)} 27 MB
+pitt_llm {'llm': (468, 29, 3584), 'label': (468,), 'spk': (468,), 'name': (468,)} 88 MB
+pitt_ans {'ans': (468, 29, 3584), 'label': (468,), 'spk': (468,), 'name': (468,)} 87 MB
+PREP DONE ['pitt']

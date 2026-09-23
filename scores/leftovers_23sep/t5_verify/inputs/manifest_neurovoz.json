@@ -1,0 +1,52 @@
+{
+ "src_neurovoz": {
+  "file": "<local data dir>/release_from_mac/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_states.npz",
+  "sha256": "812a627198bd5ee2335592f6000208ea704217fca636d671c2a68f2d0a41664a"
+ },
+ "neurovoz_encproj": {
+  "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/neurovoz_encproj.npz",
+  "source": "<local data dir>/release_from_mac/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_states.npz",
+  "sha256": "71098e529ba8ec6c782dfb781ce2e3c887aa2ec2c39a25fee7556ef28889fb52",
+  "arrays": {
+   "enc": [
+    [
+     1270,
+     32,
+     1280
+    ],
+    "float32",
+    "055c19140fc33acb080e9369a124c713983917a7be9afd26e5adb53798ba19f4"
+   ],
+   "proj": [
+    [
+     1270,
+     1,
+     3584
+    ],
+    "float32",
+    "225d428001dc38657c60a4cd0cc06e26141d642bdf5dda72a67ea5649c8c9b19"
+   ],
+   "label": [
+    [
+     1270
+    ],
+    "int64",
+    "bdf3bea1e81f018d40616d616ac35e515f97eb65b2339a9175cae29a320f09f5"
+   ],
+   "spk": [
+    [
+     1270
+    ],
+    "<U3",
+    "54a68165b01f61005e67f22f7a02372af7ebe0efc5fdf890ebe86ae4c3f57bb2"
+   ],
+   "name": [
+    [
+     1270
+    ],
+    "<U21",
+    "0e1a611b53067abb4aac8579f42e3eaf9d9928386654717fe30c44da1dd46328"
+   ]
+  }
+ }
+}
