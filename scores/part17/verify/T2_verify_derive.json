@@ -1,0 +1,1493 @@
+{
+ "pitt_pod_seed0": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   94,
+   94,
+   94,
+   93,
+   93
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pitt_pod_seed1": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   94,
+   94,
+   94,
+   93,
+   93
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pitt_pod_seed2": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   94,
+   94,
+   94,
+   93,
+   93
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pitt_pod_seed3": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   94,
+   94,
+   94,
+   93,
+   93
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pitt_pod_seed4": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   94,
+   94,
+   94,
+   93,
+   93
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adresso_pod_seed0": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   48,
+   48,
+   47,
+   47,
+   47
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adresso_pod_seed1": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   48,
+   48,
+   47,
+   47,
+   47
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adresso_pod_seed2": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   48,
+   48,
+   47,
+   47,
+   47
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adresso_pod_seed3": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   48,
+   48,
+   47,
+   47,
+   47
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adresso_pod_seed4": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   48,
+   48,
+   47,
+   47,
+   47
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adress2020_pod_seed0": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adress2020_pod_seed1": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adress2020_pod_seed2": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adress2020_pod_seed3": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "adress2020_pod_seed4": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pcgita_pod_seed0": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   220,
+   220,
+   220,
+   220,
+   220
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pcgita_pod_seed1": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   220,
+   220,
+   220,
+   220,
+   220
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pcgita_pod_seed2": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   220,
+   220,
+   220,
+   220,
+   220
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pcgita_pod_seed3": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   220,
+   220,
+   220,
+   220,
+   220
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "pcgita_pod_seed4": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   220,
+   220,
+   220,
+   220,
+   220
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "neurovoz_pod_seed0": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   256,
+   251,
+   251,
+   251,
+   261
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "neurovoz_pod_seed1": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   256,
+   251,
+   251,
+   251,
+   261
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "neurovoz_pod_seed2": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   256,
+   251,
+   251,
+   251,
+   261
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "neurovoz_pod_seed3": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   256,
+   251,
+   251,
+   251,
+   261
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "neurovoz_pod_seed4": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   256,
+   251,
+   251,
+   251,
+   261
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "kcl_pod_seed0": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   8,
+   8,
+   7,
+   7,
+   7
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "kcl_pod_seed1": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   8,
+   8,
+   7,
+   7,
+   7
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "kcl_pod_seed2": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   8,
+   8,
+   7,
+   7,
+   7
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "kcl_pod_seed3": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   8,
+   8,
+   7,
+   7,
+   7
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "kcl_pod_seed4": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   8,
+   8,
+   7,
+   7,
+   7
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "edaic_pod_seed0": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   55,
+   55,
+   55,
+   55,
+   55
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "edaic_pod_seed1": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   55,
+   55,
+   55,
+   55,
+   55
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "edaic_pod_seed2": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   55,
+   55,
+   55,
+   55,
+   55
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "edaic_pod_seed3": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   55,
+   55,
+   55,
+   55,
+   55
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "edaic_pod_seed4": {
+  "equals_my_stable": true,
+  "equals_my_mac": false,
+  "fold_sizes": [
+   55,
+   55,
+   55,
+   55,
+   55
+  ],
+  "speakers_across_folds": 0,
+  "speaker_ids_match_run": true
+ },
+ "participant172": {
+  "pitt_groupkfold5_mac.csv": {
+   "Control172": [
+    "1"
+   ],
+   "Dementia172": [
+    "3"
+   ]
+  },
+  "pitt_groupkfold5_mac_seed0.csv": {
+   "Control172": [
+    "1"
+   ],
+   "Dementia172": [
+    "4"
+   ]
+  },
+  "pitt_groupkfold5_mac_seed1.csv": {
+   "Control172": [
+    "0"
+   ],
+   "Dementia172": [
+    "2"
+   ]
+  },
+  "pitt_groupkfold5_mac_seed2.csv": {
+   "Control172": [
+    "1"
+   ],
+   "Dementia172": [
+    "0"
+   ]
+  },
+  "pitt_groupkfold5_mac_seed3.csv": {
+   "Control172": [
+    "3"
+   ],
+   "Dementia172": [
+    "1"
+   ]
+  },
+  "pitt_groupkfold5_mac_seed4.csv": {
+   "Control172": [
+    "2"
+   ],
+   "Dementia172": [
+    "3"
+   ]
+  },
+  "pitt_groupkfold5_pod.csv": {
+   "Control172": [
+    "0"
+   ],
+   "Dementia172": [
+    "3"
+   ]
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed0.csv": {
+   "Control172": [
+    "3"
+   ],
+   "Dementia172": [
+    "3"
+   ]
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed1.csv": {
+   "Control172": [
+    "4"
+   ],
+   "Dementia172": [
+    "3"
+   ]
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed2.csv": {
+   "Control172": [
+    "0"
+   ],
+   "Dementia172": [
+    "3"
+   ]
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed3.csv": {
+   "Control172": [
+    "4"
+   ],
+   "Dementia172": [
+    "1"
+   ]
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed4.csv": {
+   "Control172": [
+    "4"
+   ],
+   "Dementia172": [
+    "4"
+   ]
+  },
+  "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "Control172": [
+    "1"
+   ],
+   "Dementia172": [
+    "1"
+   ]
+  },
+  "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "Control172": [
+    "4"
+   ],
+   "Dementia172": [
+    "1"
+   ]
+  },
+  "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "Control172": [
+    "4"
+   ],
+   "Dementia172": [
+    "1"
+   ]
+  },
+  "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "Control172": [
+    "4"
+   ],
+   "Dementia172": [
+    "1"
+   ]
+  },
+  "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "Control172": [
+    "2"
+   ],
+   "Dementia172": [
+    "0"
+   ]
+  }
+ },
+ "all_files": {
+  "adress2020_groupkfold5_mac.csv": {
+   "rows": 156,
+   "unique_clips": true,
+   "n_spk": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adress2020_groupkfold5_pod.csv": {
+   "rows": 156,
+   "unique_clips": true,
+   "n_spk": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "rows": 156,
+   "unique_clips": true,
+   "n_spk": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "rows": 156,
+   "unique_clips": true,
+   "n_spk": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "rows": 156,
+   "unique_clips": true,
+   "n_spk": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "rows": 156,
+   "unique_clips": true,
+   "n_spk": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "rows": 156,
+   "unique_clips": true,
+   "n_spk": 156,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adresso_groupkfold5_mac.csv": {
+   "rows": 237,
+   "unique_clips": true,
+   "n_spk": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adresso_groupkfold5_pod.csv": {
+   "rows": 237,
+   "unique_clips": true,
+   "n_spk": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adresso_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "rows": 237,
+   "unique_clips": true,
+   "n_spk": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adresso_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "rows": 237,
+   "unique_clips": true,
+   "n_spk": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adresso_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "rows": 237,
+   "unique_clips": true,
+   "n_spk": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adresso_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "rows": 237,
+   "unique_clips": true,
+   "n_spk": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "adresso_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "rows": 237,
+   "unique_clips": true,
+   "n_spk": 237,
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_full_groupkfold5_shuffle_rs0.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_full_groupkfold5_shuffle_rs1.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_full_groupkfold5_shuffle_rs2.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_full_groupkfold5_shuffle_rs3.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_full_groupkfold5_shuffle_rs4.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_groupkfold5_mac.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_groupkfold5_pod.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "rows": 275,
+   "unique_clips": true,
+   "n_spk": 275,
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "kcl_groupkfold5_mac.csv": {
+   "rows": 37,
+   "unique_clips": true,
+   "n_spk": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "kcl_groupkfold5_pod.csv": {
+   "rows": 37,
+   "unique_clips": true,
+   "n_spk": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "rows": 37,
+   "unique_clips": true,
+   "n_spk": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "rows": 37,
+   "unique_clips": true,
+   "n_spk": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "rows": 37,
+   "unique_clips": true,
+   "n_spk": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "rows": 37,
+   "unique_clips": true,
+   "n_spk": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "rows": 37,
+   "unique_clips": true,
+   "n_spk": 37,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "neurovoz_groupkfold5_mac.csv": {
+   "rows": 1270,
+   "unique_clips": true,
+   "n_spk": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "neurovoz_groupkfold5_pod.csv": {
+   "rows": 1270,
+   "unique_clips": true,
+   "n_spk": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "rows": 1270,
+   "unique_clips": true,
+   "n_spk": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "rows": 1270,
+   "unique_clips": true,
+   "n_spk": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "rows": 1270,
+   "unique_clips": true,
+   "n_spk": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "rows": 1270,
+   "unique_clips": true,
+   "n_spk": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "rows": 1270,
+   "unique_clips": true,
+   "n_spk": 107,
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pcgita_groupkfold5_mac.csv": {
+   "rows": 1100,
+   "unique_clips": true,
+   "n_spk": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pcgita_groupkfold5_pod.csv": {
+   "rows": 1100,
+   "unique_clips": true,
+   "n_spk": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pcgita_groupkfold5_pod_seed0.csv": {
+   "rows": 1100,
+   "unique_clips": true,
+   "n_spk": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pcgita_groupkfold5_pod_seed1.csv": {
+   "rows": 1100,
+   "unique_clips": true,
+   "n_spk": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pcgita_groupkfold5_pod_seed2.csv": {
+   "rows": 1100,
+   "unique_clips": true,
+   "n_spk": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pcgita_groupkfold5_pod_seed3.csv": {
+   "rows": 1100,
+   "unique_clips": true,
+   "n_spk": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pcgita_groupkfold5_pod_seed4.csv": {
+   "rows": 1100,
+   "unique_clips": true,
+   "n_spk": 100,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_mac.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_mac_seed0.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_mac_seed1.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_mac_seed2.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_mac_seed3.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_mac_seed4.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed0.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed1.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed2.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed3.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_Control15ids_seed4.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  },
+  "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "rows": 468,
+   "unique_clips": true,
+   "n_spk": 228,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "folds_range_ok": true
+  }
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "kimi_kcl_llm": {
+  "states": "<local data dir>/release/overnight2/kimi_new/kimi_kcl_states.npz",
+  "saved_per_repeat": [
+   0.75,
+   0.6339,
+   0.756,
+   0.6815,
+   0.8333
+  ],
+  "refit_pod": [
+   0.75,
+   0.6339,
+   0.756,
+   0.6815,
+   0.8333
+  ],
+  "refit_mac_seed0": 0.8065,
+  "maxabs_dauc_pod": 0.0,
+  "dauc_mac_seed0": 0.056499999999999995
+ },
+ "q2a_kcl_enc": {
+  "states": "<local data dir>/paper work/paper1_local_runs/probe2/kcl_states.npz",
+  "saved_per_repeat": [
+   0.8065,
+   0.8095,
+   0.6786,
+   0.7679,
+   0.7946
+  ],
+  "refit_pod": [
+   0.8065,
+   0.8095,
+   0.6786,
+   0.7679,
+   0.7946
+  ],
+  "refit_mac_seed0": 0.7946,
+  "maxabs_dauc_pod": 0.0,
+  "dauc_mac_seed0": 0.011900000000000022
+ },
+ "omni_edaic_enc": {
+  "states": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+  "saved_per_repeat": [
+   0.5795,
+   0.6283,
+   0.5626,
+   0.6301,
+   0.5825
+  ],
+  "refit_pod": [
+   0.5796,
+   0.6285,
+   0.5629,
+   0.63,
+   0.5828
+  ],
+  "refit_mac_seed0": 0.6363,
+  "maxabs_dauc_pod": 0.00029999999999996696,
+  "dauc_mac_seed0": 0.05679999999999996
+ },
+ "kimi_adresso_llm": {
+  "states": "<local data dir>/release/overnight2/kimi_new/kimi_adresso_states.npz",
+  "saved_per_repeat": [
+   0.8897,
+   0.9029,
+   0.8932,
+   0.9145,
+   0.8964
+  ],
+  "refit_pod": [
+   0.8897,
+   0.903,
+   0.8932,
+   0.9145,
+   0.8964
+  ],
+  "refit_mac_seed0": 0.9124,
+  "maxabs_dauc_pod": 9.999999999998899e-05,
+  "dauc_mac_seed0": 0.022699999999999942
+ }
+}

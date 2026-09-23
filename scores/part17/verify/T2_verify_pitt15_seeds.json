@@ -1,0 +1,613 @@
+{
+ "states": "<local data dir>/paper work/paper1_local_runs/part16_POD3_states/q3o_pitt_states.npz",
+ "seeds": {
+  "0": {
+   "file_check": {
+    "file": "pitt_groupkfold5_pod_Control15ids_seed0.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "8670bd716a831c70a63222038bd26b6bbd88d65a971890150bd2e646f879966f"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      30,
+      29,
+      26,
+      29,
+      29
+     ],
+     "maxabs_refit_vs_saved": 0.024835487943619006,
+     "median_abs": 0.00010453221612189085,
+     "maxabs_other_tie": 0.9528534251432215,
+     "auc_saved_summary": 0.8199,
+     "auc_saved_oof": {
+      "mw": 0.819915,
+      "trap": 0.819915,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.81976,
+      "trap": 0.81976,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      30,
+      29,
+      26,
+      29,
+      29
+     ],
+     "layers_match": true
+    },
+    "proj": {
+     "saved_layers": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "maxabs_refit_vs_saved": 0.013849679216421773,
+     "median_abs": 0.00011995360572010548,
+     "maxabs_other_tie": 0.9377714212474184,
+     "auc_saved_summary": 0.782,
+     "auc_saved_oof": {
+      "mw": 0.782013,
+      "trap": 0.782013,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.781926,
+      "trap": 0.781926,
+      "agree_4dp": true
+     }
+    },
+    "llm": {
+     "saved_layers": [
+      17,
+      39,
+      38,
+      16,
+      25
+     ],
+     "maxabs_refit_vs_saved": 0.030824095281782316,
+     "median_abs": 9.22306177602028e-05,
+     "maxabs_other_tie": 0.9906226121791375,
+     "auc_saved_summary": 0.8397,
+     "auc_saved_oof": {
+      "mw": 0.839742,
+      "trap": 0.839742,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.839907,
+      "trap": 0.839907,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      17,
+      39,
+      38,
+      16,
+      25
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      48,
+      26,
+      31,
+      26,
+      34
+     ],
+     "maxabs_refit_vs_saved": 0.016034723212914714,
+     "median_abs": 4.676837781102529e-05,
+     "maxabs_other_tie": 0.9934557026145039,
+     "auc_saved_summary": 0.8144,
+     "auc_saved_oof": {
+      "mw": 0.814355,
+      "trap": 0.814355,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.814471,
+      "trap": 0.814471,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      48,
+      26,
+      31,
+      26,
+      34
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "1": {
+   "file_check": {
+    "file": "pitt_groupkfold5_pod_Control15ids_seed1.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "e20abadbea29e5c8e7b785a30b3d1060b8bcaf715872d23b8596883efff1392d"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      30,
+      30,
+      30,
+      26,
+      30
+     ],
+     "maxabs_refit_vs_saved": 0.009761670648095355,
+     "median_abs": 3.6306830646259947e-05,
+     "maxabs_other_tie": 0.9841795250617753,
+     "auc_saved_summary": 0.8016,
+     "auc_saved_oof": {
+      "mw": 0.801569,
+      "trap": 0.801569,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.80155,
+      "trap": 0.80155,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      30,
+      30,
+      30,
+      26,
+      30
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      38,
+      25,
+      25,
+      17,
+      40
+     ],
+     "maxabs_refit_vs_saved": 0.03229603637515577,
+     "median_abs": 7.105517191195211e-05,
+     "maxabs_other_tie": 0.9918613557996067,
+     "auc_saved_summary": 0.846,
+     "auc_saved_oof": {
+      "mw": 0.846029,
+      "trap": 0.846029,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.845622,
+      "trap": 0.845622,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      38,
+      25,
+      25,
+      17,
+      40
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      36,
+      29,
+      24,
+      35,
+      26
+     ],
+     "maxabs_refit_vs_saved": 0.053625771501655706,
+     "median_abs": 8.579865662055111e-05,
+     "maxabs_other_tie": 0.9927851618160566,
+     "auc_saved_summary": 0.818,
+     "auc_saved_oof": {
+      "mw": 0.817958,
+      "trap": 0.817958,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.818326,
+      "trap": 0.818326,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      36,
+      29,
+      24,
+      35,
+      26
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "2": {
+   "file_check": {
+    "file": "pitt_groupkfold5_pod_Control15ids_seed2.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "dce7e9e474eaf88843d12aa4deda78a723d5441693ef5e62317124b8980bbf68"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      26,
+      29,
+      28,
+      30,
+      29
+     ],
+     "maxabs_refit_vs_saved": 0.024635584552191392,
+     "median_abs": 0.00012657206342293068,
+     "maxabs_other_tie": 0.9914853714127775,
+     "auc_saved_summary": 0.8142,
+     "auc_saved_oof": {
+      "mw": 0.814161,
+      "trap": 0.814161,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.814316,
+      "trap": 0.814316,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      26,
+      29,
+      28,
+      30,
+      29
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      12,
+      38,
+      48,
+      39,
+      25
+     ],
+     "maxabs_refit_vs_saved": 0.032610961399831995,
+     "median_abs": 0.00012112447012200774,
+     "maxabs_other_tie": 0.9059317929079842,
+     "auc_saved_summary": 0.8393,
+     "auc_saved_oof": {
+      "mw": 0.839287,
+      "trap": 0.839287,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.839016,
+      "trap": 0.839016,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      12,
+      38,
+      48,
+      39,
+      25
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      26,
+      30,
+      30,
+      30,
+      25
+     ],
+     "maxabs_refit_vs_saved": 0.021526199143087177,
+     "median_abs": 4.1845166456777605e-05,
+     "maxabs_other_tie": 0.9939300533534742,
+     "auc_saved_summary": 0.8221,
+     "auc_saved_oof": {
+      "mw": 0.822065,
+      "trap": 0.822065,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.822201,
+      "trap": 0.822201,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      26,
+      30,
+      30,
+      30,
+      25
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "3": {
+   "file_check": {
+    "file": "pitt_groupkfold5_pod_Control15ids_seed3.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "5bf539200d4521083ff12d58df789f9f22d8ddd3f2b38cac50da269656380a29"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      30,
+      30,
+      24,
+      30,
+      20
+     ],
+     "maxabs_refit_vs_saved": 0.017499137891433314,
+     "median_abs": 6.650232644478393e-05,
+     "maxabs_other_tie": 0.9887018606321986,
+     "auc_saved_summary": 0.8342,
+     "auc_saved_oof": {
+      "mw": 0.834212,
+      "trap": 0.834212,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.834328,
+      "trap": 0.834328,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      30,
+      30,
+      24,
+      30,
+      20
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      13,
+      4,
+      31,
+      13,
+      6
+     ],
+     "maxabs_refit_vs_saved": 0.03881621330373142,
+     "median_abs": 2.578653099089001e-05,
+     "maxabs_other_tie": 0.9751656624546116,
+     "auc_saved_summary": 0.8505,
+     "auc_saved_oof": {
+      "mw": 0.850504,
+      "trap": 0.850504,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.85091,
+      "trap": 0.85091,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      13,
+      4,
+      31,
+      13,
+      6
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      36,
+      34,
+      34,
+      26,
+      26
+     ],
+     "maxabs_refit_vs_saved": 0.041754014964074576,
+     "median_abs": 6.897794992654716e-05,
+     "maxabs_other_tie": 0.9405517541151711,
+     "auc_saved_summary": 0.8442,
+     "auc_saved_oof": {
+      "mw": 0.844246,
+      "trap": 0.844246,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.844692,
+      "trap": 0.844692,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      36,
+      34,
+      34,
+      26,
+      26
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "4": {
+   "file_check": {
+    "file": "pitt_groupkfold5_pod_Control15ids_seed4.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "5d01b58c61caed9647250b631756114bc46828b7686810e573d47cbed154aec5"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      20,
+      19,
+      30,
+      30,
+      30
+     ],
+     "maxabs_refit_vs_saved": 0.02589983591063605,
+     "median_abs": 0.00014928643869157346,
+     "maxabs_other_tie": 0.9810800783075424,
+     "auc_saved_summary": 0.7914,
+     "auc_saved_oof": {
+      "mw": 0.791379,
+      "trap": 0.791379,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.791147,
+      "trap": 0.791147,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      20,
+      19,
+      30,
+      30,
+      30
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      24,
+      38,
+      13,
+      13,
+      31
+     ],
+     "maxabs_refit_vs_saved": 0.03023577390715365,
+     "median_abs": 8.098672621526415e-05,
+     "maxabs_other_tie": 0.9765624247783694,
+     "auc_saved_summary": 0.8468,
+     "auc_saved_oof": {
+      "mw": 0.846804,
+      "trap": 0.846804,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.84659,
+      "trap": 0.84659,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      24,
+      38,
+      13,
+      13,
+      31
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      28,
+      30,
+      34,
+      34,
+      25
+     ],
+     "maxabs_refit_vs_saved": 0.03923095101332974,
+     "median_abs": 0.00012819866089233646,
+     "maxabs_other_tie": 0.988890605433951,
+     "auc_saved_summary": 0.82,
+     "auc_saved_oof": {
+      "mw": 0.819954,
+      "trap": 0.819954,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.820593,
+      "trap": 0.820593,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      28,
+      30,
+      34,
+      34,
+      25
+     ],
+     "layers_match": true
+    }
+   }
+  }
+ }
+}

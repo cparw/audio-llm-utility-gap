@@ -1,0 +1,933 @@
+{
+ "pitt": {
+  "file_check": {
+   "file": "pitt_groupkfold5_mac.csv",
+   "rows": 468,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "b6e2416288fd59208dc7efbac643509ba20c46561e73ec3670f89ca48e7111c9"
+  },
+  "equals_sklearn_here": true,
+  "equals_my_mac_rule": true,
+  "pod_file_equals_my_stable_rule": true,
+  "clips_in_different_fold_mac_vs_pod": 343,
+  "streams": {
+   "enc": {
+    "saved_layers": [
+     20,
+     30,
+     24,
+     27,
+     31
+    ],
+    "rederived_layers": [
+     20,
+     30,
+     24,
+     27,
+     31
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9909238607595147,
+    "auc_saved_json": 0.8040294459511816,
+    "auc_saved_oof": {
+     "mw": 0.804029,
+     "trap": 0.804029,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.804029,
+     "trap": 0.804029,
+     "agree_4dp": true
+    }
+   },
+   "llm": {
+    "saved_layers": [
+     19,
+     29,
+     28,
+     28,
+     32
+    ],
+    "rederived_layers": [
+     19,
+     29,
+     28,
+     28,
+     32
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9056412805907431,
+    "auc_saved_json": 0.8520147229755908,
+    "auc_saved_oof": {
+     "mw": 0.852015,
+     "trap": 0.852015,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.852015,
+     "trap": 0.852015,
+     "agree_4dp": true
+    }
+   },
+   "ans": {
+    "saved_layers": [
+     23,
+     22,
+     23,
+     16,
+     23
+    ],
+    "rederived_layers": [
+     23,
+     22,
+     23,
+     16,
+     23
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9553281058841171,
+    "auc_saved_json": 0.8295040681906238,
+    "auc_saved_oof": {
+     "mw": 0.829504,
+     "trap": 0.829504,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.829504,
+     "trap": 0.829504,
+     "agree_4dp": true
+    }
+   }
+  },
+  "egemaps": {
+   "n": 468,
+   "file_check_speakers": true,
+   "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+   "maxabs_other_tie_file": 0.8022304248645883,
+   "auc_saved": {
+    "mw": 0.654727,
+    "trap": 0.654727,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.654727,
+    "trap": 0.654727,
+    "agree_4dp": true
+   }
+  }
+ },
+ "adresso": {
+  "file_check": {
+   "file": "adresso_groupkfold5_mac.csv",
+   "rows": 237,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    48,
+    48,
+    47,
+    47,
+    47
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "6511987b76d4e40bb36aac4607ae34df17af892f3075dfa2eccb53d16b89989b"
+  },
+  "equals_sklearn_here": true,
+  "equals_my_mac_rule": true,
+  "pod_file_equals_my_stable_rule": true,
+  "clips_in_different_fold_mac_vs_pod": 206,
+  "streams": {
+   "enc": {
+    "saved_layers": [
+     29,
+     27,
+     20,
+     20,
+     26
+    ],
+    "rederived_layers": [
+     29,
+     27,
+     20,
+     20,
+     26
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9771672061931957,
+    "auc_saved_json": 0.8590163934426229,
+    "auc_saved_oof": {
+     "mw": 0.859016,
+     "trap": 0.859016,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.859016,
+     "trap": 0.859016,
+     "agree_4dp": true
+    }
+   },
+   "llm": {
+    "saved_layers": [
+     26,
+     17,
+     28,
+     21,
+     26
+    ],
+    "rederived_layers": [
+     26,
+     17,
+     28,
+     21,
+     26
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.874917176706258,
+    "auc_saved_json": 0.888168210976479,
+    "auc_saved_oof": {
+     "mw": 0.888168,
+     "trap": 0.888168,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.888168,
+     "trap": 0.888168,
+     "agree_4dp": true
+    }
+   },
+   "ans": {
+    "saved_layers": [
+     1,
+     24,
+     15,
+     30,
+     12
+    ],
+    "rederived_layers": [
+     1,
+     24,
+     15,
+     30,
+     12
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9951194982271219,
+    "auc_saved_json": 0.8193157519600855,
+    "auc_saved_oof": {
+     "mw": 0.819316,
+     "trap": 0.819316,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.819316,
+     "trap": 0.819316,
+     "agree_4dp": true
+    }
+   }
+  },
+  "egemaps": {
+   "n": 237,
+   "file_check_speakers": true,
+   "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+   "maxabs_other_tie_file": 0.9181820211887887,
+   "auc_saved": {
+    "mw": 0.694155,
+    "trap": 0.694155,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.694155,
+    "trap": 0.694155,
+    "agree_4dp": true
+   }
+  }
+ },
+ "adress2020": {
+  "file_check": {
+   "file": "adress2020_groupkfold5_mac.csv",
+   "rows": 156,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "71982b814aaf451a45dd6a3728dd6b90200c4fad9e6370a69e8c26265c0031f6"
+  },
+  "equals_sklearn_here": true,
+  "equals_my_mac_rule": true,
+  "pod_file_equals_my_stable_rule": true,
+  "clips_in_different_fold_mac_vs_pod": 123,
+  "streams": {
+   "enc": {
+    "saved_layers": [
+     32,
+     20,
+     24,
+     31,
+     32
+    ],
+    "rederived_layers": [
+     32,
+     20,
+     24,
+     31,
+     32
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9864168321837486,
+    "auc_saved_json": 0.8078566732412885,
+    "auc_saved_oof": {
+     "mw": 0.807857,
+     "trap": 0.807857,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.807857,
+     "trap": 0.807857,
+     "agree_4dp": true
+    }
+   },
+   "llm": {
+    "saved_layers": [
+     17,
+     25,
+     23,
+     25,
+     22
+    ],
+    "rederived_layers": [
+     17,
+     25,
+     23,
+     25,
+     22
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.7570371385938219,
+    "auc_saved_json": 0.8819855358316898,
+    "auc_saved_oof": {
+     "mw": 0.881986,
+     "trap": 0.881986,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.881986,
+     "trap": 0.881986,
+     "agree_4dp": true
+    }
+   },
+   "ans": {
+    "saved_layers": [
+     17,
+     12,
+     15,
+     15,
+     11
+    ],
+    "rederived_layers": [
+     17,
+     12,
+     15,
+     15,
+     11
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.7976885212850264,
+    "auc_saved_json": 0.8560157790927021,
+    "auc_saved_oof": {
+     "mw": 0.856016,
+     "trap": 0.856016,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.856016,
+     "trap": 0.856016,
+     "agree_4dp": true
+    }
+   }
+  },
+  "egemaps": {
+   "n": 156,
+   "file_check_speakers": true,
+   "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+   "maxabs_other_tie_file": 0.7978153821147369,
+   "auc_saved": {
+    "mw": 0.712196,
+    "trap": 0.712196,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.712196,
+    "trap": 0.712196,
+    "agree_4dp": true
+   }
+  }
+ },
+ "pcgita": {
+  "file_check": {
+   "file": "pcgita_groupkfold5_mac.csv",
+   "rows": 1100,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "a5abf1fb41ba4c6c165cb0eb2348791201edef6720f0d563accf919f6ec6dd29"
+  },
+  "equals_sklearn_here": true,
+  "equals_my_mac_rule": true,
+  "pod_file_equals_my_stable_rule": true,
+  "clips_in_different_fold_mac_vs_pod": 814,
+  "streams": {
+   "enc": {
+    "saved_layers": [
+     16,
+     18,
+     13,
+     16,
+     3
+    ],
+    "rederived_layers": [
+     16,
+     18,
+     13,
+     16,
+     3
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9986693723167901,
+    "auc_saved_json": 0.9132561983471073,
+    "auc_saved_oof": {
+     "mw": 0.913256,
+     "trap": 0.913256,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.913256,
+     "trap": 0.913256,
+     "agree_4dp": true
+    }
+   },
+   "llm": {
+    "saved_layers": [
+     19,
+     16,
+     18,
+     16,
+     32
+    ],
+    "rederived_layers": [
+     19,
+     16,
+     18,
+     16,
+     32
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9958692313521318,
+    "auc_saved_json": 0.8369322314049588,
+    "auc_saved_oof": {
+     "mw": 0.836932,
+     "trap": 0.836932,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.836932,
+     "trap": 0.836932,
+     "agree_4dp": true
+    }
+   },
+   "ans": {
+    "saved_layers": [
+     4,
+     8,
+     12,
+     12,
+     11
+    ],
+    "rederived_layers": [
+     4,
+     8,
+     12,
+     12,
+     11
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9776803797077322,
+    "auc_saved_json": 0.8448727272727272,
+    "auc_saved_oof": {
+     "mw": 0.844873,
+     "trap": 0.844873,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.844873,
+     "trap": 0.844873,
+     "agree_4dp": true
+    }
+   }
+  },
+  "egemaps": {
+   "n": 1100,
+   "file_check_speakers": true,
+   "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+   "maxabs_other_tie_file": 0.9780787666221555,
+   "auc_saved": {
+    "mw": 0.833233,
+    "trap": 0.833233,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.833233,
+    "trap": 0.833233,
+    "agree_4dp": true
+   }
+  }
+ },
+ "neurovoz": {
+  "file_check": {
+   "file": "neurovoz_groupkfold5_mac.csv",
+   "rows": 1270,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "4306469a61362d3c89b484b4da6ed6274275f9584b96e65d594fb76b98bee67b"
+  },
+  "equals_sklearn_here": true,
+  "equals_my_mac_rule": true,
+  "pod_file_equals_my_stable_rule": true,
+  "clips_in_different_fold_mac_vs_pod": 967,
+  "streams": {
+   "enc": {
+    "saved_layers": [
+     20,
+     22,
+     25,
+     20,
+     20
+    ],
+    "rederived_layers": [
+     20,
+     22,
+     25,
+     20,
+     20
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9954763334441823,
+    "auc_saved_json": 0.93829476290788,
+    "auc_saved_oof": {
+     "mw": 0.938295,
+     "trap": 0.938295,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.938295,
+     "trap": 0.938295,
+     "agree_4dp": true
+    }
+   },
+   "llm": {
+    "saved_layers": [
+     8,
+     8,
+     9,
+     8,
+     8
+    ],
+    "rederived_layers": [
+     8,
+     8,
+     9,
+     8,
+     8
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9580408155128611,
+    "auc_saved_json": 0.8931094288500331,
+    "auc_saved_oof": {
+     "mw": 0.893109,
+     "trap": 0.893109,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.893109,
+     "trap": 0.893109,
+     "agree_4dp": true
+    }
+   },
+   "ans": {
+    "saved_layers": [
+     4,
+     3,
+     3,
+     4,
+     3
+    ],
+    "rederived_layers": [
+     4,
+     3,
+     3,
+     4,
+     3
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9992883769410725,
+    "auc_saved_json": 0.8940696575184416,
+    "auc_saved_oof": {
+     "mw": 0.89407,
+     "trap": 0.89407,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.89407,
+     "trap": 0.89407,
+     "agree_4dp": true
+    }
+   }
+  },
+  "egemaps": {
+   "n": 1270,
+   "file_check_speakers": true,
+   "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+   "maxabs_other_tie_file": 0.7277510927379388,
+   "auc_saved": {
+    "mw": 0.843909,
+    "trap": 0.843909,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.843909,
+    "trap": 0.843909,
+    "agree_4dp": true
+   }
+  }
+ },
+ "kcl": {
+  "file_check": {
+   "file": "kcl_groupkfold5_mac.csv",
+   "rows": 37,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "9d9dec90385004e8ae4c209faa9b4f5cb138f61dab9fd039621a814fbfe965b6"
+  },
+  "equals_sklearn_here": true,
+  "equals_my_mac_rule": true,
+  "pod_file_equals_my_stable_rule": true,
+  "clips_in_different_fold_mac_vs_pod": 34,
+  "streams": {
+   "enc": {
+    "saved_layers": [
+     26,
+     3,
+     5,
+     26,
+     11
+    ],
+    "rederived_layers": [
+     26,
+     3,
+     5,
+     26,
+     11
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9453341218929044,
+    "auc_saved_json": 0.8273809523809523,
+    "auc_saved_oof": {
+     "mw": 0.827381,
+     "trap": 0.827381,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.827381,
+     "trap": 0.827381,
+     "agree_4dp": true
+    }
+   },
+   "llm": {
+    "saved_layers": [
+     18,
+     9,
+     32,
+     17,
+     21
+    ],
+    "rederived_layers": [
+     18,
+     9,
+     32,
+     17,
+     21
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9524095339670321,
+    "auc_saved_json": 0.6458333333333334,
+    "auc_saved_oof": {
+     "mw": 0.645833,
+     "trap": 0.645833,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.645833,
+     "trap": 0.645833,
+     "agree_4dp": true
+    }
+   },
+   "ans": {
+    "saved_layers": [
+     25,
+     19,
+     31,
+     32,
+     30
+    ],
+    "rederived_layers": [
+     25,
+     19,
+     31,
+     32,
+     30
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.7166897815477641,
+    "auc_saved_json": 0.7946428571428572,
+    "auc_saved_oof": {
+     "mw": 0.794643,
+     "trap": 0.794643,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.794643,
+     "trap": 0.794643,
+     "agree_4dp": true
+    }
+   }
+  },
+  "egemaps": {
+   "n": 37,
+   "file_check_speakers": true,
+   "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+   "maxabs_other_tie_file": 0.5539998740932859,
+   "auc_saved": {
+    "mw": 0.741071,
+    "trap": 0.741071,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.741071,
+    "trap": 0.741071,
+    "agree_4dp": true
+   }
+  }
+ },
+ "edaic": {
+  "file_check": {
+   "file": "edaic_groupkfold5_mac.csv",
+   "rows": 275,
+   "cols": [
+    "clip_id",
+    "speaker_id",
+    "fold"
+   ],
+   "fold_sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "speakers_across_folds": 0,
+   "speaker_ids_match_run": true,
+   "sha256": "165f9bb80fd3d355ece22d75695e576f84bdfdd15fea4f2ede798b192fe0c6a8"
+  },
+  "equals_sklearn_here": true,
+  "equals_my_mac_rule": true,
+  "pod_file_equals_my_stable_rule": true,
+  "clips_in_different_fold_mac_vs_pod": 255,
+  "streams": {
+   "enc": {
+    "saved_layers": [
+     0,
+     0,
+     19,
+     6,
+     0
+    ],
+    "rederived_layers": [
+     0,
+     0,
+     19,
+     6,
+     0
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9973630665705172,
+    "auc_saved_json": 0.59366391184573,
+    "auc_saved_oof": {
+     "mw": 0.593664,
+     "trap": 0.593664,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.593664,
+     "trap": 0.593664,
+     "agree_4dp": true
+    }
+   },
+   "llm": {
+    "saved_layers": [
+     20,
+     7,
+     3,
+     22,
+     16
+    ],
+    "rederived_layers": [
+     20,
+     7,
+     3,
+     22,
+     16
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9602826997365908,
+    "auc_saved_json": 0.5229810062345948,
+    "auc_saved_oof": {
+     "mw": 0.522981,
+     "trap": 0.522981,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.522981,
+     "trap": 0.522981,
+     "agree_4dp": true
+    }
+   },
+   "ans": {
+    "saved_layers": [
+     30,
+     30,
+     3,
+     4,
+     3
+    ],
+    "rederived_layers": [
+     30,
+     30,
+     3,
+     4,
+     3
+    ],
+    "layers_match": true,
+    "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+    "maxabs_other_tie_file": 0.9935584586153213,
+    "auc_saved_json": 0.5650282731622444,
+    "auc_saved_oof": {
+     "mw": 0.565028,
+     "trap": 0.565028,
+     "agree_4dp": true
+    },
+    "auc_refit": {
+     "mw": 0.565028,
+     "trap": 0.565028,
+     "agree_4dp": true
+    }
+   }
+  },
+  "egemaps": {
+   "n": 275,
+   "file_check_speakers": true,
+   "maxabs_refit_vs_saved": 1.1102230246251565e-16,
+   "maxabs_other_tie_file": 0.7236901698772672,
+   "auc_saved": {
+    "mw": 0.530883,
+    "trap": 0.530883,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.530883,
+    "trap": 0.530883,
+    "agree_4dp": true
+   }
+  }
+ }
+}

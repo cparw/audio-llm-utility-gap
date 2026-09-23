@@ -1,0 +1,390 @@
+{
+ "seeds": {
+  "0": {
+   "file_check": {
+    "file": "pitt_groupkfold5_mac_seed0.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "f6f30311c50d1911e83eeeaef310bbc099c8fa60996591b9998a72bc53603079"
+   },
+   "equals_sklearn_renumbered": true,
+   "equals_my_mac_rule_renumbered": true,
+   "folds": {
+    "0": {
+     "best_match_layer": 23,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.5091553565859306
+    },
+    "1": {
+     "best_match_layer": 26,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.44488674237946024
+    },
+    "2": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6851553642071356
+    },
+    "3": {
+     "best_match_layer": 25,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.5750268553022
+    },
+    "4": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.4854957933288517
+    }
+   },
+   "best_match_layers": [
+    23,
+    26,
+    27,
+    25,
+    27
+   ],
+   "rederived_layers_mac": [
+    23,
+    26,
+    27,
+    25,
+    27
+   ],
+   "rederived_match": true,
+   "maxabs_refit_vs_saved": 0.0,
+   "maxabs_other_tie": 0.9906271934731913,
+   "auc_saved": {
+    "mw": 0.759802,
+    "trap": 0.759802,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.759802,
+    "trap": 0.759802,
+    "agree_4dp": true
+   }
+  },
+  "1": {
+   "file_check": {
+    "file": "pitt_groupkfold5_mac_seed1.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "cf7924e37721a0d71972bf433556f4f407850207d7ac3d2084518d642ff35e52"
+   },
+   "equals_sklearn_renumbered": true,
+   "equals_my_mac_rule_renumbered": true,
+   "folds": {
+    "0": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.4155355965845167
+    },
+    "1": {
+     "best_match_layer": 31,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6275174642045636
+    },
+    "2": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6240752391564783
+    },
+    "3": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.4418274476392889
+    },
+    "4": {
+     "best_match_layer": 21,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.5436416717878536
+    }
+   },
+   "best_match_layers": [
+    27,
+    31,
+    27,
+    27,
+    21
+   ],
+   "rederived_layers_mac": [
+    27,
+    31,
+    27,
+    27,
+    21
+   ],
+   "rederived_match": true,
+   "maxabs_refit_vs_saved": 0.0,
+   "maxabs_other_tie": 0.9609658913269121,
+   "auc_saved": {
+    "mw": 0.772472,
+    "trap": 0.772472,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.772472,
+    "trap": 0.772472,
+    "agree_4dp": true
+   }
+  },
+  "2": {
+   "file_check": {
+    "file": "pitt_groupkfold5_mac_seed2.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "32f56b183991a1e79a5cc2018613b4376157021544fd39b2d4dab4a1a2e67d60"
+   },
+   "equals_sklearn_renumbered": true,
+   "equals_my_mac_rule_renumbered": true,
+   "folds": {
+    "0": {
+     "best_match_layer": 21,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.4387174292116515
+    },
+    "1": {
+     "best_match_layer": 30,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.367163638577864
+    },
+    "2": {
+     "best_match_layer": 26,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.593906902669471
+    },
+    "3": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.5889335446818983
+    },
+    "4": {
+     "best_match_layer": 21,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.4840113300780094
+    }
+   },
+   "best_match_layers": [
+    21,
+    30,
+    26,
+    27,
+    21
+   ],
+   "rederived_layers_mac": [
+    21,
+    30,
+    26,
+    27,
+    21
+   ],
+   "rederived_match": true,
+   "maxabs_refit_vs_saved": 0.0,
+   "maxabs_other_tie": 0.9978642155020625,
+   "auc_saved": {
+    "mw": 0.745893,
+    "trap": 0.745893,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.745893,
+    "trap": 0.745893,
+    "agree_4dp": true
+   }
+  },
+  "3": {
+   "file_check": {
+    "file": "pitt_groupkfold5_mac_seed3.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "749228c028375da69790d9cd667636a4432e874daa58baf3e25ca0fc0f39b361"
+   },
+   "equals_sklearn_renumbered": true,
+   "equals_my_mac_rule_renumbered": true,
+   "folds": {
+    "0": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.43183454245781605
+    },
+    "1": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6254841676191778
+    },
+    "2": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6168421746324557
+    },
+    "3": {
+     "best_match_layer": 10,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6345255971637472
+    },
+    "4": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.42980430826737737
+    }
+   },
+   "best_match_layers": [
+    27,
+    27,
+    27,
+    10,
+    27
+   ],
+   "rederived_layers_mac": [
+    27,
+    27,
+    27,
+    10,
+    27
+   ],
+   "rederived_match": true,
+   "maxabs_refit_vs_saved": 0.0,
+   "maxabs_other_tie": 0.9921781587599982,
+   "auc_saved": {
+    "mw": 0.790333,
+    "trap": 0.790333,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.790333,
+    "trap": 0.790333,
+    "agree_4dp": true
+   }
+  },
+  "4": {
+   "file_check": {
+    "file": "pitt_groupkfold5_mac_seed4.csv",
+    "rows": 468,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     94,
+     94,
+     94,
+     93,
+     93
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "e1f94ab4b76de8e17509dd0a884e6a39ef58fb6e1ea5162f09b943bcc3e431d2"
+   },
+   "equals_sklearn_renumbered": true,
+   "equals_my_mac_rule_renumbered": true,
+   "folds": {
+    "0": {
+     "best_match_layer": 21,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.5287053578563342
+    },
+    "1": {
+     "best_match_layer": 28,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6167285443796219
+    },
+    "2": {
+     "best_match_layer": 24,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6781269943782113
+    },
+    "3": {
+     "best_match_layer": 27,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.44960842759476544
+    },
+    "4": {
+     "best_match_layer": 25,
+     "min_maxabs": 0.0,
+     "second_best_maxabs": 0.6174745925103424
+    }
+   },
+   "best_match_layers": [
+    21,
+    28,
+    24,
+    27,
+    25
+   ],
+   "rederived_layers_mac": [
+    21,
+    28,
+    24,
+    27,
+    25
+   ],
+   "rederived_match": true,
+   "maxabs_refit_vs_saved": 0.0,
+   "maxabs_other_tie": 0.9920313475905597,
+   "auc_saved": {
+    "mw": 0.784347,
+    "trap": 0.784347,
+    "agree_4dp": true
+   },
+   "auc_refit": {
+    "mw": 0.784347,
+    "trap": 0.784347,
+    "agree_4dp": true
+   }
+  }
+ },
+ "mean_auc_saved_mw": 0.7705695466873305
+}

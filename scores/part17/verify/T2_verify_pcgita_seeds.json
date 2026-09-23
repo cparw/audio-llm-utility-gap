@@ -1,0 +1,613 @@
+{
+ "states": "<local data dir>/paper work/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz",
+ "seeds": {
+  "0": {
+   "file_check": {
+    "file": "pcgita_groupkfold5_pod_seed0.csv",
+    "rows": 1100,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     220,
+     220,
+     220,
+     220,
+     220
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      14,
+      14,
+      15,
+      14,
+      15
+     ],
+     "maxabs_refit_vs_saved": 3.1481474166428214e-06,
+     "median_abs": 2.1908541123633052e-08,
+     "maxabs_other_tie": 0.9866367101136602,
+     "auc_saved_summary": 0.9223,
+     "auc_saved_oof": {
+      "mw": 0.922339,
+      "trap": 0.922339,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.922334,
+      "trap": 0.922334,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      14,
+      15,
+      14,
+      15
+     ],
+     "layers_match": true
+    },
+    "proj": {
+     "saved_layers": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "maxabs_refit_vs_saved": 0.07066651368092924,
+     "median_abs": 1.1531905568561147e-06,
+     "maxabs_other_tie": 0.9801787641466868,
+     "auc_saved_summary": 0.8872,
+     "auc_saved_oof": {
+      "mw": 0.887284,
+      "trap": 0.887284,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.886823,
+      "trap": 0.886823,
+      "agree_4dp": true
+     }
+    },
+    "llm": {
+     "saved_layers": [
+      14,
+      15,
+      1,
+      0,
+      44
+     ],
+     "maxabs_refit_vs_saved": 0.07066651368092924,
+     "median_abs": 1.2746562222347633e-06,
+     "maxabs_other_tie": 0.9815427299293018,
+     "auc_saved_summary": 0.8614,
+     "auc_saved_oof": {
+      "mw": 0.8614,
+      "trap": 0.8614,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.860965,
+      "trap": 0.860965,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      16,
+      1,
+      0,
+      44
+     ],
+     "layers_match": false
+    },
+    "ans": {
+     "saved_layers": [
+      27,
+      19,
+      15,
+      5,
+      18
+     ],
+     "maxabs_refit_vs_saved": 0.023262752556817035,
+     "median_abs": 1.6183365986188747e-07,
+     "maxabs_other_tie": 0.999343377940599,
+     "auc_saved_summary": 0.901,
+     "auc_saved_oof": {
+      "mw": 0.901041,
+      "trap": 0.901041,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.901081,
+      "trap": 0.901081,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      27,
+      19,
+      15,
+      5,
+      18
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "1": {
+   "file_check": {
+    "file": "pcgita_groupkfold5_pod_seed1.csv",
+    "rows": 1100,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     220,
+     220,
+     220,
+     220,
+     220
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      14,
+      14,
+      14,
+      6,
+      23
+     ],
+     "maxabs_refit_vs_saved": 0.03996038088058479,
+     "median_abs": 3.9787620867252904e-08,
+     "maxabs_other_tie": 0.9988149775715623,
+     "auc_saved_summary": 0.8697,
+     "auc_saved_oof": {
+      "mw": 0.869668,
+      "trap": 0.869668,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.86955,
+      "trap": 0.86955,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      14,
+      14,
+      6,
+      23
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      19,
+      14,
+      14,
+      32,
+      18
+     ],
+     "maxabs_refit_vs_saved": 0.02991394317031537,
+     "median_abs": 2.431846495187131e-05,
+     "maxabs_other_tie": 0.9576558742706928,
+     "auc_saved_summary": 0.8758,
+     "auc_saved_oof": {
+      "mw": 0.875749,
+      "trap": 0.875749,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.875845,
+      "trap": 0.875845,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      19,
+      14,
+      14,
+      32,
+      18
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      19,
+      2,
+      20,
+      5,
+      27
+     ],
+     "maxabs_refit_vs_saved": 0.02403536593359762,
+     "median_abs": 4.4685065272735604e-06,
+     "maxabs_other_tie": 0.9992371070487844,
+     "auc_saved_summary": 0.8801,
+     "auc_saved_oof": {
+      "mw": 0.88018,
+      "trap": 0.88018,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.880079,
+      "trap": 0.880079,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      19,
+      2,
+      20,
+      5,
+      27
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "2": {
+   "file_check": {
+    "file": "pcgita_groupkfold5_pod_seed2.csv",
+    "rows": 1100,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     220,
+     220,
+     220,
+     220,
+     220
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      16,
+      23,
+      16,
+      15,
+      15
+     ],
+     "maxabs_refit_vs_saved": 1.5410557452910645e-05,
+     "median_abs": 3.190764530185391e-08,
+     "maxabs_other_tie": 0.9684411765893145,
+     "auc_saved_summary": 0.8742,
+     "auc_saved_oof": {
+      "mw": 0.874248,
+      "trap": 0.874248,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.874261,
+      "trap": 0.874261,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      16,
+      23,
+      16,
+      15,
+      15
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      14,
+      15,
+      19,
+      1,
+      19
+     ],
+     "maxabs_refit_vs_saved": 0.02076412734220401,
+     "median_abs": 1.341435403875551e-06,
+     "maxabs_other_tie": 0.9981258316805309,
+     "auc_saved_summary": 0.8795,
+     "auc_saved_oof": {
+      "mw": 0.879483,
+      "trap": 0.879483,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.879633,
+      "trap": 0.879633,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      15,
+      19,
+      1,
+      19
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      18,
+      39,
+      39,
+      5,
+      18
+     ],
+     "maxabs_refit_vs_saved": 0.08310793253902626,
+     "median_abs": 2.4645873805406726e-06,
+     "maxabs_other_tie": 0.9942738403210973,
+     "auc_saved_summary": 0.8671,
+     "auc_saved_oof": {
+      "mw": 0.867051,
+      "trap": 0.867051,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.867127,
+      "trap": 0.867127,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      18,
+      39,
+      39,
+      5,
+      18
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "3": {
+   "file_check": {
+    "file": "pcgita_groupkfold5_pod_seed3.csv",
+    "rows": 1100,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     220,
+     220,
+     220,
+     220,
+     220
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      14,
+      14,
+      21,
+      17,
+      8
+     ],
+     "maxabs_refit_vs_saved": 1.4051831815908855e-06,
+     "median_abs": 1.740615707124249e-08,
+     "maxabs_other_tie": 0.9935852132064612,
+     "auc_saved_summary": 0.8988,
+     "auc_saved_oof": {
+      "mw": 0.898808,
+      "trap": 0.898808,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.898787,
+      "trap": 0.898787,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      14,
+      21,
+      17,
+      8
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      14,
+      14,
+      1,
+      18,
+      14
+     ],
+     "maxabs_refit_vs_saved": 0.028888645846886107,
+     "median_abs": 1.3133723512637197e-06,
+     "maxabs_other_tie": 0.9990072372891715,
+     "auc_saved_summary": 0.8756,
+     "auc_saved_oof": {
+      "mw": 0.87565,
+      "trap": 0.87565,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.875458,
+      "trap": 0.875458,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      14,
+      1,
+      18,
+      14
+     ],
+     "layers_match": true
+    },
+    "ans": {
+     "saved_layers": [
+      15,
+      10,
+      18,
+      10,
+      27
+     ],
+     "maxabs_refit_vs_saved": 0.051577005345421145,
+     "median_abs": 8.14549600436365e-07,
+     "maxabs_other_tie": 0.9923945661627563,
+     "auc_saved_summary": 0.8723,
+     "auc_saved_oof": {
+      "mw": 0.872268,
+      "trap": 0.872268,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.872374,
+      "trap": 0.872374,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      15,
+      10,
+      18,
+      10,
+      27
+     ],
+     "layers_match": true
+    }
+   }
+  },
+  "4": {
+   "file_check": {
+    "file": "pcgita_groupkfold5_pod_seed4.csv",
+    "rows": 1100,
+    "cols": [
+     "clip_id",
+     "speaker_id",
+     "fold"
+    ],
+    "fold_sizes": [
+     220,
+     220,
+     220,
+     220,
+     220
+    ],
+    "speakers_across_folds": 0,
+    "speaker_ids_match_run": true,
+    "sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af"
+   },
+   "equals_my_stable_rule_renumbered": true,
+   "streams": {
+    "enc": {
+     "saved_layers": [
+      14,
+      10,
+      13,
+      13,
+      15
+     ],
+     "maxabs_refit_vs_saved": 6.871753452375451e-06,
+     "median_abs": 2.2868615667803738e-08,
+     "maxabs_other_tie": 0.9117571479998283,
+     "auc_saved_summary": 0.9196,
+     "auc_saved_oof": {
+      "mw": 0.919572,
+      "trap": 0.919572,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.91962,
+      "trap": 0.91962,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      10,
+      13,
+      13,
+      15
+     ],
+     "layers_match": true
+    },
+    "llm": {
+     "saved_layers": [
+      14,
+      0,
+      21,
+      14,
+      12
+     ],
+     "maxabs_refit_vs_saved": 0.07241041009060098,
+     "median_abs": 1.0992399602985974e-05,
+     "maxabs_other_tie": 0.9856774782907883,
+     "auc_saved_summary": 0.8937,
+     "auc_saved_oof": {
+      "mw": 0.893704,
+      "trap": 0.893704,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.893646,
+      "trap": 0.893646,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      14,
+      0,
+      21,
+      14,
+      13
+     ],
+     "layers_match": false
+    },
+    "ans": {
+     "saved_layers": [
+      3,
+      15,
+      44,
+      17,
+      27
+     ],
+     "maxabs_refit_vs_saved": 0.06353592814718362,
+     "median_abs": 2.8191854216874646e-05,
+     "maxabs_other_tie": 0.9994275443525464,
+     "auc_saved_summary": 0.8864,
+     "auc_saved_oof": {
+      "mw": 0.886433,
+      "trap": 0.886433,
+      "agree_4dp": true
+     },
+     "auc_refit": {
+      "mw": 0.886132,
+      "trap": 0.886132,
+      "agree_4dp": true
+     },
+     "rederived_layers": [
+      3,
+      15,
+      42,
+      17,
+      27
+     ],
+     "layers_match": false
+    }
+   }
+  }
+ }
+}
