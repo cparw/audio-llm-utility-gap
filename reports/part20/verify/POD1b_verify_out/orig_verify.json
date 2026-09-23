@@ -1,0 +1,150 @@
+{
+ "file": "omni_final/omnisft_pitt_oof.csv",
+ "meta": {
+  "key": "path",
+  "score": "p_yes",
+  "speaker": "speaker",
+  "arm": "set",
+  "fold": null,
+  "cols": [
+   "path",
+   "speaker",
+   "label",
+   "p_yes",
+   "set",
+   "prompt"
+  ]
+ },
+ "checks": {
+  "n": 468,
+  "md5": "aed20af5f4f206b0c3346c27a00a4d76",
+  "nan_scores": 0,
+  "score_min_max": [
+   0.020645931363105774,
+   0.9949396848678589
+  ],
+  "prompts": [
+   "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+  ],
+  "prompt_verbatim_ok": true,
+  "n_spk": 228,
+  "n_pos": 290,
+  "n_neg": 178,
+  "arm_counts": {
+   "agreement": 322,
+   "conflict": 146
+  },
+  "arm_label_counts": {
+   "agreement": {
+    "pos": 189,
+    "neg": 133
+   },
+   "conflict": {
+    "pos": 101,
+    "neg": 45
+   }
+  },
+  "arm_spk": {
+   "agreement": 175,
+   "conflict": 100
+  },
+  "arm_from_prefix_agrees": true,
+  "fold_file": "folds/pitt_groupkfold5_pod.csv",
+  "fold_file_md5": "6c611f6822a29cc422bf90ffc03f3535",
+  "fold_file_same_clips": true,
+  "fold_file_speaker_mismatch": 0,
+  "fold_col_mismatch_vs_file": "no fold column in oof csv",
+  "sidecar_prompt_ok": true,
+  "sidecar_n": 468,
+  "sidecar_n_speakers": 228
+ },
+ "cells": [
+  {
+   "id": "overall",
+   "what": "overall OOF AUC",
+   "value": 0.7672801239829523,
+   "trap": 0.7672801239829523,
+   "lo": 0.7086163432415024,
+   "hi": 0.8231036112107747,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "conflict_poolall",
+   "what": "conflict arm OOF AUC (pool all)",
+   "value": 0.5189218921892189,
+   "trap": 0.5189218921892189,
+   "lo": 0.4135759630972272,
+   "hi": 0.6371796042172475,
+   "n": 146,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "conflict_poolarm",
+   "what": "conflict arm OOF AUC (pool arm)",
+   "value": 0.5189218921892189,
+   "trap": 0.5189218921892189,
+   "lo": 0.41506175011633817,
+   "hi": 0.6300319602272727,
+   "n": 146,
+   "n_spk": 100,
+   "degenerate": 0
+  },
+  {
+   "id": "agreement_poolall",
+   "what": "agreement arm OOF AUC (pool all)",
+   "value": 0.8593109758523292,
+   "trap": 0.8593109758523292,
+   "lo": 0.806562448615496,
+   "hi": 0.9059453196445574,
+   "n": 322,
+   "n_spk": 228,
+   "degenerate": 0
+  },
+  {
+   "id": "agreement_poolarm",
+   "what": "agreement arm OOF AUC (pool arm)",
+   "value": 0.8593109758523292,
+   "trap": 0.8593109758523292,
+   "lo": 0.8062665114307612,
+   "hi": 0.9069469899808266,
+   "n": 322,
+   "n_spk": 175,
+   "degenerate": 0
+  },
+  {
+   "id": "paired_conf_minus_agr",
+   "what": "paired conflict minus agreement (pool all)",
+   "value": -0.34038908366311027,
+   "trap": null,
+   "lo": -0.4467939190869156,
+   "hi": -0.22623267859903493,
+   "n": 468,
+   "n_spk": 228,
+   "degenerate": 0
+  }
+ ],
+ "sidecar": {
+  "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+  "clip_list": "/workspace/mf_pitt.csv",
+  "condition": "ad",
+  "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+  "n": 468,
+  "n_speakers": 228,
+  "folds": 5,
+  "epochs": 3,
+  "lr": 0.0001,
+  "trained": "projector only",
+  "auc_oof": 0.7673,
+  "arms": {
+   "agreement": 0.8593,
+   "conflict": 0.5189
+  },
+  "window_seconds": 30,
+  "dtype": "bfloat16",
+  "minutes": 30.9,
+  "date": "2026-09-18"
+ }
+}
