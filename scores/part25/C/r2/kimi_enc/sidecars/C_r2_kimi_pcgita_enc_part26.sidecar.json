@@ -1,0 +1,107 @@
+{
+ "model": "Kimi-Audio",
+ "dataset": "PC-GITA",
+ "ds_key": "pcgita",
+ "condition": "PD",
+ "created_utc": "2026-09-24T03:04:12Z",
+ "script": "scripts/part25/C/r2/C_r2_kimi_enc_supplement.py",
+ "status": "landed",
+ "not_master_lookup": "PART 26 new extraction; not a master_lookup row",
+ "part26_perclip": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_PC-GITA/Kimi-Audio_PC-GITA_perclip.csv",
+ "part26_perclip_sha256": "3cac47f2b5d8225dc99ed28504b1c3b4831e5d3f7182077b3dd015636373a29f",
+ "part26_sidecar": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_PC-GITA/Kimi-Audio_PC-GITA_perclip.sidecar.json",
+ "part26_per_repeat_lists": [
+  [
+   ".probe_per_repeat",
+   [
+    0.9028495867768594,
+    0.8477884297520659,
+    0.8616264462809918,
+    0.8797388429752067,
+    0.8918396694214875
+   ]
+  ],
+  [
+   ".probe_per_repeat_4dp",
+   [
+    0.9028,
+    0.8478,
+    0.8616,
+    0.8797,
+    0.8918
+   ]
+  ],
+  [
+   ".reference_kimi_lm_nested_repeats.content.llm.per_repeat",
+   [
+    0.8664,
+    0.8698,
+    0.8752,
+    0.8702,
+    0.8762
+   ]
+  ],
+  [
+   ".reference_kimi_lm_nested_repeats.content.ans.per_repeat",
+   [
+    0.8445,
+    0.8647,
+    0.8537,
+    0.8708,
+    0.8743
+   ]
+  ]
+ ],
+ "part26_gap_ci": [
+  [
+   ".gap_ci",
+   [
+    0.1810317734202187,
+    0.3364143153221301
+   ]
+  ]
+ ],
+ "per_repeat_recomputed": [
+  0.9028495867768594,
+  0.8477884297520659,
+  0.8616264462809918,
+  0.8797388429752067,
+  0.8918396694214875
+ ],
+ "per_repeat_recomputed_4dp": [
+  0.9028,
+  0.8478,
+  0.8616,
+  0.8797,
+  0.8918
+ ],
+ "per_repeat_equal_part26_4dp": true,
+ "probe_mean5": 0.8767685950413222,
+ "answer_row": 35,
+ "answer_master": 0.6147,
+ "answer_file": "<local data dir>/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv",
+ "answer_file_sha256": "ec3c684d1e4498fdde321a0f74be424d6c1871c8d394fd67226bec8ee5aef9e6",
+ "answer_recomputed": 0.6147041322314049,
+ "answer_verified": true,
+ "n": 1100,
+ "n_lost": 0,
+ "label_disagreements": 0,
+ "n_spk": 100,
+ "n_pos": 550,
+ "diff_point": 0.26206446280991735,
+ "diff_lo": 0.1810317734202187,
+ "diff_hi": 0.3364143153221301,
+ "boot_usable": 2000,
+ "excludes_zero": true,
+ "part26_interval_agrees_4dp": true,
+ "master_lm_probe": 0.8715,
+ "env": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "scipy": "1.15.3"
+ },
+ "perclip_file": "scores/part25/C/r2/kimi_enc/perclip/C_r2_kimi_pcgita_enc_part26_perclip.csv",
+ "draws_file": "scores/part25/C/r2/kimi_enc/draws/C_r2_kimi_pcgita_enc_part26_draws.npz",
+ "method": "PART 25 track C (r2) supplement: Kimi-Audio ENCODER probe from the PART 26 new extraction.\nNOT a master_lookup row. master_lookup rows 17..178 have no Kimi-Audio encoder probe, and the release Method says the Kimi\nencoder side is skipped. PART 26 added new hooks on the Whisper-large-v3 encoder inside Kimi-Audio (the continuous-feature\npath), 32 layers, mean pooled, first 30 s, then a five-repeat nested probe on a Linux CPU pod. Whether the paper uses these\ncells is the authors' decision; they are reported separately and never mixed into the master-row counts.\nFor each Kimi-Audio dataset whose PART 26 per-clip file AND sidecar exist (landed), own code:\n  - the five per-repeat probe AUCs (sklearn roc_auc_score) from the per-clip file, compared with the PART 26 sidecar at 4 dp;\n  - the answer = master_lookup Kimi-Audio \"zero shot answer\" row, recomputed from its per-clip csv;\n  - paired speaker bootstrap exactly as in C_r2_recheck.py (2000 draws, fresh default_rng(0), np.unique of the probe-file\n    speaker ids, idx = rng.choice(n_spk, size=n_spk, replace=True), mean of five per-repeat AUCs minus answer AUC per draw);\n  - compared with the PART 26 sidecar interval.\nWrites r2/kimi_enc/{perclip,sidecars,draws}/ and r2/kimi_enc/C_r2_kimi_enc_cells.json.\nusage: /usr/local/bin/python3 C_r2_kimi_enc_supplement.py"
+}
