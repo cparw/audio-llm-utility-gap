@@ -1,0 +1,5 @@
+n=468 hash_or_length_mismatch=0 sr=[16000] ch=[1]
+min 30.010 median 33.285 max 55.560 s; n over 30 s = 468
+near 30 s agreement_Con_118-1_6475.wav 30.010 s agreement
+near median conflict_Con_227-0_460.wav 33.270 s conflict
+longest conflict_Dem_639-0_9189.wav 55.560 s conflict

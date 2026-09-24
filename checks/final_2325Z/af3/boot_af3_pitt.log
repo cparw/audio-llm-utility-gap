@@ -1,0 +1,13 @@
+POD4c per-arm files match the source per-clip files: all noinv n=468 part10 n=468
+POD4c per-arm files match the source per-clip files: conflict noinv n=146 part10 n=146
+POD4c per-arm files match the source per-clip files: agreement noinv n=322 part10 n=322
+interviewer-free clips: dur_s min 0.681 median 18.548 max 29.235; scored_s max 29.235; clips cut by the 30 s window: 0
+part10_original_first30s     all       n=468 spk=228 AUC=0.5894 [0.5302, 0.6476] usable=2000
+noinv_interviewer_free       all       n=468 spk=228 AUC=0.5920 [0.5293, 0.6577] usable=2000
+noinv_minus_part10_paired    all       n=468 spk=228 AUC=0.0026 [-0.0548, 0.0600] usable=2000
+part10_original_first30s     conflict  n=146 spk=100 AUC=0.6075 [0.5063, 0.7129] usable=2000
+noinv_interviewer_free       conflict  n=146 spk=100 AUC=0.5417 [0.4202, 0.6621] usable=2000
+noinv_minus_part10_paired    conflict  n=146 spk=100 AUC=-0.0658 [-0.1653, 0.0359] usable=2000
+part10_original_first30s     agreement n=322 spk=175 AUC=0.5855 [0.5144, 0.6554] usable=2000
+noinv_interviewer_free       agreement n=322 spk=175 AUC=0.6140 [0.5427, 0.6798] usable=2000
+noinv_minus_part10_paired    agreement n=322 spk=175 AUC=0.0285 [-0.0404, 0.0959] usable=2000
