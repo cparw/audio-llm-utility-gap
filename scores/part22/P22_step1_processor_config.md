@@ -40,7 +40,7 @@ Same call, same line text, in the Part 16 rebuild:
 
 The same call line is present verbatim in every copy of the scoring script on disk: release_public/scripts/core/extract_probe_layers.py:63, scripts/extract_probe_layers.py:63, podD2_final/extract_probe_layers.py:76, release_public/scripts/core/extract_probe_layers_promptoverride.py:82, scripts/extract_probe_layers_promptoverride.py:82, edaic_rerun/part16/POD4B/scripts_recovered/extract_probe_layers.py:82, edaic_rerun/part16/EDAICFULL/extract_full.py:77. The published full-window json records `window_seconds: 0.0`, which only the WINDOW_S-patched copies write (the unpatched copies hard-code `x[:16000 * 30]` and write `window_seconds: 30`).
 
-The rendered text for this conversation (5.17.0, printed tonight) is `<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n<|audio_bos|><|AUDIO|><|audio_eos|>Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.<|im_end|>\n<|im_start|>assistant\n`; the processor expands the single `<|AUDIO|>` into N copies, so seq_len = N + 48.
+The rendered chat template for this prompt (transformers 5.17.0) is `<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n<|audio_bos|><|AUDIO|><|audio_eos|>Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.<|im_end|>\n<|im_start|>assistant\n`; the processor expands the single `<|AUDIO|>` into N copies, so seq_len = N + 48.
 
 ## 2. Processor class and its feature extractor class
 

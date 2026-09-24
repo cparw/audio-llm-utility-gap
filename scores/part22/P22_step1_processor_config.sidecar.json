@@ -64,10 +64,10 @@
  "exact_commands": [
   "/usr/local/bin/python3 -m pip download transformers==5.17.0 --no-deps -d /src && unzip -q -o /src/transformers-5.17.0-py3-none-any.whl -d /src/tf5170",
   "curl -sL -o /src/hf/<f> https://huggingface.co/Qwen/Qwen2.5-Omni-7B/resolve/main/<f>  for f in preprocessor_config.json chat_template.json config.json tokenizer_config.json (processor_config.json and chat_template.jinja: HTTP 404)",
-  "/usr/local/bin/python3 -m venv --system-site-packages <scratchpad>/venv22 && <scratchpad>/venv22/bin/python -m pip install -q transformers==5.17.0",
-  "HF_HUB_OFFLINE=1 <scratchpad>/venv22/bin/python scripts/p22_step1_proc_probe.py /P22_step1_proc_probe.json",
-  "HF_HUB_OFFLINE=1 <scratchpad>/venv22/bin/python scripts/p22_step1_loadtime_override.py",
-  "HF_HUB_OFFLINE=1 <scratchpad>/venv22/bin/python scripts/p22_step1_feature_equality.py",
+  "/usr/local/bin/python3 -m venv --system-site-packages <local dir>/venv22 && <local dir>/venv22/bin/python -m pip install -q transformers==5.17.0",
+  "HF_HUB_OFFLINE=1 <local dir>/venv22/bin/python scripts/p22_step1_proc_probe.py /P22_step1_proc_probe.json",
+  "HF_HUB_OFFLINE=1 <local dir>/venv22/bin/python scripts/p22_step1_loadtime_override.py",
+  "HF_HUB_OFFLINE=1 <local dir>/venv22/bin/python scripts/p22_step1_feature_equality.py",
   "LOADTIME_LINE=\"$(cat logs/loadtime_line.txt)\" /usr/local/bin/python3 scripts/p22_step1_write_md.py",
   "/usr/local/bin/python3 scripts/p22_step1_verify.py"
  ],
