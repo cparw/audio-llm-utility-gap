@@ -1,0 +1,803 @@
+[
+ {
+  "model": "Qwen2-Audio",
+  "dataset": "PC-GITA",
+  "zs_file": "<local data dir>/paper1_local_runs/probe2/pcgita_zeroshot_scores.csv",
+  "zs_n": 1100,
+  "zs_auc": 0.5369,
+  "zs_master": 0.5369,
+  "fold_files": [
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed1.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed2.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed3.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed4.csv"
+  ],
+  "folds_n": 1100,
+  "folds_nspk": 100,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/paper1_local_runs/probe2/pcgita_states.npz",
+  "states_keys": {
+   "enc": [
+    1100,
+    33,
+    1280
+   ],
+   "llm": [
+    1100,
+    33,
+    4096
+   ],
+   "ans": [
+    1100,
+    33,
+    4096
+   ]
+  },
+  "states_n": 1100,
+  "states_uniq": 1100,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 100,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 33,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen2-Audio",
+  "dataset": "NeuroVoz",
+  "zs_file": "<local data dir>/paper1_local_runs/probe2/neurovoz_zeroshot_scores.csv",
+  "zs_n": 1270,
+  "zs_auc": 0.5519,
+  "zs_master": 0.5519,
+  "fold_files": [
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 1270,
+  "folds_nspk": 107,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/paper1_local_runs/probe2/neurovoz_states.npz",
+  "states_keys": {
+   "enc": [
+    1270,
+    33,
+    1280
+   ],
+   "llm": [
+    1270,
+    33,
+    4096
+   ],
+   "ans": [
+    1270,
+    33,
+    4096
+   ]
+  },
+  "states_n": 1270,
+  "states_uniq": 1270,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 107,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 33,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen2-Audio",
+  "dataset": "MDVR-KCL",
+  "zs_file": "<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv",
+  "zs_n": 37,
+  "zs_auc": 0.5923,
+  "zs_master": 0.5923,
+  "fold_files": [
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 37,
+  "folds_nspk": 37,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/paper1_local_runs/probe2/kcl_states.npz",
+  "states_keys": {
+   "enc": [
+    37,
+    33,
+    1280
+   ],
+   "llm": [
+    37,
+    33,
+    4096
+   ],
+   "ans": [
+    37,
+    33,
+    4096
+   ]
+  },
+  "states_n": 37,
+  "states_uniq": 37,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 37,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 33,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen2-Audio",
+  "dataset": "E-DAIC",
+  "zs_file": "<local data dir>/paper1_local_runs/probe2/edaic_zeroshot_scores.csv",
+  "zs_n": 275,
+  "zs_auc": 0.6464,
+  "zs_master": 0.6464,
+  "fold_files": [
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 275,
+  "folds_nspk": 275,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/paper1_local_runs/probe2/edaic_states.npz",
+  "states_keys": {
+   "enc": [
+    275,
+    33,
+    1280
+   ],
+   "llm": [
+    275,
+    33,
+    4096
+   ],
+   "ans": [
+    275,
+    33,
+    4096
+   ]
+  },
+  "states_n": 275,
+  "states_uniq": 275,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 275,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 33,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen2-Audio",
+  "dataset": "Pitt",
+  "zs_file": "<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+  "zs_n": 468,
+  "zs_auc": 0.6173,
+  "zs_master": 0.6173,
+  "fold_files": [
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 468,
+  "folds_nspk": 228,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/paper1_local_runs/probe2/pitt_states.npz",
+  "states_keys": {
+   "enc": [
+    468,
+    33,
+    1280
+   ],
+   "llm": [
+    468,
+    33,
+    4096
+   ],
+   "ans": [
+    468,
+    33,
+    4096
+   ]
+  },
+  "states_n": 468,
+  "states_uniq": 468,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 228,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 33,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen2-Audio",
+  "dataset": "ADReSSo",
+  "zs_file": "<local data dir>/paper1_local_runs/probe2/adresso_zeroshot_scores.csv",
+  "zs_n": 237,
+  "zs_auc": 0.6649,
+  "zs_master": 0.6649,
+  "fold_files": [
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 237,
+  "folds_nspk": 237,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/paper1_local_runs/probe2/adresso_states.npz",
+  "states_keys": {
+   "enc": [
+    237,
+    33,
+    1280
+   ],
+   "llm": [
+    237,
+    33,
+    4096
+   ],
+   "ans": [
+    237,
+    33,
+    4096
+   ]
+  },
+  "states_n": 237,
+  "states_uniq": 237,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 237,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 33,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen2-Audio",
+  "dataset": "ADReSS-2020",
+  "zs_file": "<local data dir>/paper1_local_runs/probe2/adress2020_zeroshot_scores.csv",
+  "zs_n": 156,
+  "zs_auc": 0.6824,
+  "zs_master": 0.6824,
+  "fold_files": [
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 156,
+  "folds_nspk": 156,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/paper1_local_runs/probe2/adress2020_states.npz",
+  "states_keys": {
+   "enc": [
+    156,
+    33,
+    1280
+   ],
+   "llm": [
+    156,
+    33,
+    4096
+   ],
+   "ans": [
+    156,
+    33,
+    4096
+   ]
+  },
+  "states_n": 156,
+  "states_uniq": 156,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 156,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 33,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen3-Omni-30B-A3B",
+  "dataset": "PC-GITA",
+  "zs_file": "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv",
+  "zs_n": 1100,
+  "zs_auc": 0.5967,
+  "zs_master": 0.5967,
+  "fold_files": [
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed1.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed2.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed3.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed4.csv"
+  ],
+  "folds_n": 1100,
+  "folds_nspk": 100,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/release/overnight2/q3o/q3o_pcgita_states.npz",
+  "states_keys": {
+   "enc": [
+    1100,
+    32,
+    1280
+   ],
+   "proj": [
+    1100,
+    1,
+    2048
+   ],
+   "llm": [
+    1100,
+    49,
+    2048
+   ],
+   "ans": [
+    1100,
+    49,
+    2048
+   ]
+  },
+  "states_n": 1100,
+  "states_uniq": 1100,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 100,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 32,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen3-Omni-30B-A3B",
+  "dataset": "NeuroVoz",
+  "zs_file": "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_zeroshot_scores.csv",
+  "zs_n": 1270,
+  "zs_auc": 0.6393,
+  "zs_master": 0.6393,
+  "fold_files": [
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 1270,
+  "folds_nspk": 107,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/release/overnight2/q3o/q3o_neurovoz_states.npz",
+  "states_keys": {
+   "enc": [
+    1270,
+    32,
+    1280
+   ],
+   "proj": [
+    1270,
+    1,
+    2048
+   ],
+   "llm": [
+    1270,
+    49,
+    2048
+   ],
+   "ans": [
+    1270,
+    49,
+    2048
+   ]
+  },
+  "states_n": 1270,
+  "states_uniq": 1270,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 107,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 32,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen3-Omni-30B-A3B",
+  "dataset": "MDVR-KCL",
+  "zs_file": "<local data dir>/release/overnight2/q3o_new/q3o_kcl_zeroshot_scores.csv",
+  "zs_n": 37,
+  "zs_auc": 0.7738,
+  "zs_master": 0.7738,
+  "fold_files": [
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 37,
+  "folds_nspk": 37,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/release/overnight2/q3o/q3o_kcl_states.npz",
+  "states_keys": {
+   "enc": [
+    37,
+    32,
+    1280
+   ],
+   "proj": [
+    37,
+    1,
+    2048
+   ],
+   "llm": [
+    37,
+    49,
+    2048
+   ],
+   "ans": [
+    37,
+    49,
+    2048
+   ]
+  },
+  "states_n": 37,
+  "states_uniq": 37,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 37,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 32,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen3-Omni-30B-A3B",
+  "dataset": "E-DAIC",
+  "zs_file": "<local data dir>/release/overnight2/q3o_new/q3o_edaic_zeroshot_scores.csv",
+  "zs_n": 275,
+  "zs_auc": 0.629,
+  "zs_master": 0.629,
+  "fold_files": [
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 275,
+  "folds_nspk": 275,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ },
+ {
+  "model": "Qwen3-Omni-30B-A3B",
+  "dataset": "Pitt",
+  "zs_file": "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv",
+  "zs_n": 468,
+  "zs_auc": 0.7619,
+  "zs_master": 0.7619,
+  "fold_files": [
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed0.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed1.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed2.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed3.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_Control15ids_seed4.csv"
+  ],
+  "folds_n": 468,
+  "folds_nspk": 228,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_pitt_states.npz",
+  "states_keys": {
+   "enc": [
+    468,
+    32,
+    1280
+   ],
+   "proj": [
+    468,
+    1,
+    2048
+   ],
+   "llm": [
+    468,
+    49,
+    2048
+   ],
+   "ans": [
+    468,
+    49,
+    2048
+   ]
+  },
+  "states_n": 468,
+  "states_uniq": 468,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 228,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 0.3807880059460011,
+  "enc_layers": 32,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen3-Omni-30B-A3B",
+  "dataset": "ADReSSo",
+  "zs_file": "<local data dir>/release/overnight2/q3o_new/q3o_adresso_zeroshot_scores.csv",
+  "zs_n": 237,
+  "zs_auc": 0.7774,
+  "zs_master": 0.7774,
+  "fold_files": [
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 237,
+  "folds_nspk": 237,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/release/overnight2/q3o/q3o_adresso_states.npz",
+  "states_keys": {
+   "enc": [
+    237,
+    32,
+    1280
+   ],
+   "proj": [
+    237,
+    1,
+    2048
+   ],
+   "llm": [
+    237,
+    49,
+    2048
+   ],
+   "ans": [
+    237,
+    49,
+    2048
+   ]
+  },
+  "states_n": 237,
+  "states_uniq": 237,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 237,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 32,
+  "enc_finite": true
+ },
+ {
+  "model": "Qwen3-Omni-30B-A3B",
+  "dataset": "ADReSS-2020",
+  "zs_file": "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_zeroshot_scores.csv",
+  "zs_n": 156,
+  "zs_auc": 0.7097,
+  "zs_master": 0.7097,
+  "fold_files": [
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 156,
+  "folds_nspk": 156,
+  "folds_same_clips_as_zs": true,
+  "states_file": "<local data dir>/release/overnight2/q3o/q3o_adress2020_states.npz",
+  "states_keys": {
+   "enc": [
+    156,
+    32,
+    1280
+   ],
+   "proj": [
+    156,
+    1,
+    2048
+   ],
+   "llm": [
+    156,
+    49,
+    2048
+   ],
+   "ans": [
+    156,
+    49,
+    2048
+   ]
+  },
+  "states_n": 156,
+  "states_uniq": 156,
+  "states_same_set_zs": true,
+  "states_same_order_zs": true,
+  "states_same_set_folds": true,
+  "states_spk_eq_fold_spk": true,
+  "states_nspk": 156,
+  "labels_agree_zs": true,
+  "states_pyes_maxdiff_vs_zs": 1.1102230246251565e-16,
+  "enc_layers": 32,
+  "enc_finite": true
+ },
+ {
+  "model": "Kimi-Audio",
+  "dataset": "PC-GITA",
+  "zs_file": "<local data dir>/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv",
+  "zs_n": 1100,
+  "zs_auc": 0.6147,
+  "zs_master": 0.6147,
+  "fold_files": [
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed1.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed2.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed3.csv",
+   "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed4.csv"
+  ],
+  "folds_n": 1100,
+  "folds_nspk": 100,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ },
+ {
+  "model": "Kimi-Audio",
+  "dataset": "NeuroVoz",
+  "zs_file": "<local data dir>/release/overnight2/kimi_new/kimi_neurovoz_zeroshot_scores.csv",
+  "zs_n": 1270,
+  "zs_auc": 0.6204,
+  "zs_master": 0.6204,
+  "fold_files": [
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 1270,
+  "folds_nspk": 107,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ },
+ {
+  "model": "Kimi-Audio",
+  "dataset": "MDVR-KCL",
+  "zs_file": "<local data dir>/release/overnight2/kimi_new/kimi_kcl_zeroshot_scores.csv",
+  "zs_n": 37,
+  "zs_auc": 0.7113,
+  "zs_master": 0.7113,
+  "fold_files": [
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/kcl_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 37,
+  "folds_nspk": 37,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ },
+ {
+  "model": "Kimi-Audio",
+  "dataset": "E-DAIC",
+  "zs_file": "<local data dir>/release/overnight2/part3/kimi_edaic_zeroshot_scores.csv",
+  "zs_n": 275,
+  "zs_auc": 0.6293,
+  "zs_master": 0.6293,
+  "fold_files": [
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/edaic_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 275,
+  "folds_nspk": 275,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ },
+ {
+  "model": "Kimi-Audio",
+  "dataset": "Pitt",
+  "zs_file": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+  "zs_n": 468,
+  "zs_auc": 0.718,
+  "zs_master": 0.718,
+  "fold_files": [
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/pitt_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 468,
+  "folds_nspk": 228,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ },
+ {
+  "model": "Kimi-Audio",
+  "dataset": "ADReSSo",
+  "zs_file": "<local data dir>/release/overnight2/kimi_new/kimi_adresso_zeroshot_scores.csv",
+  "zs_n": 237,
+  "zs_auc": 0.7531,
+  "zs_master": 0.7531,
+  "fold_files": [
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 237,
+  "folds_nspk": 237,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ },
+ {
+  "model": "Kimi-Audio",
+  "dataset": "ADReSS-2020",
+  "zs_file": "<local data dir>/release/overnight2/kimi_new/kimi_adress2020_zeroshot_scores.csv",
+  "zs_n": 156,
+  "zs_auc": 0.7053,
+  "zs_master": 0.7053,
+  "fold_files": [
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  ],
+  "folds_n": 156,
+  "folds_nspk": 156,
+  "folds_same_clips_as_zs": true,
+  "states_file": null,
+  "states_n": 0
+ }
+]
