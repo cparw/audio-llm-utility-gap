@@ -1,0 +1,28 @@
+M07 A2 p_yes_whole: printed 0.84 | indep 0.8366 [0.7786, 0.8866] n=275 spk=275 rounds_to 0.84
+   A2 p_yes_300s_T7b AUC 0.8278
+   matcher file o25_full_zeroshot_scores.csv AUC 0.8285 json auc 0.8285
+   o25_full p_yes vs A2 p_yes_300s_T7b max abs diff 0.030250470877691393
+M08 FT24 seed0 pooled OOF: printed 0.86 | indep 0.8589 [0.8050, 0.9029] n=275 spk=275 rounds_to 0.86
+   matcher file sft_full_oof.csv AUC 0.6421 json 0.6421 window_seconds 30
+M25 readout_direction.csv pitt row: [{'cosine': -0.0109, 'cosine_random': 0.0135, 'auc_d': 0.6608, 'auc_probe': 0.7709, 'auc_probe_without_d': 0.7662}]
+M45 AF2 orig30 conflict: printed 0.58 | indep 0.5835 [0.4730, 0.6913] n=146 spk=100 rounds_to 0.58
+   scored_s unique [np.float64(30.0)] arm col ['conflict']
+   matcher af2_pitt468.csv conflict AUC 0.631 n 146
+M46 AF2 orig30 agreement: printed 0.53 | indep 0.5337 [0.4574, 0.6116] n=322 spk=175 rounds_to 0.53
+   scored_s unique [np.float64(30.0)] arm col ['agreement']
+   matcher af2_pitt468.csv agreement AUC 0.5544 n 322
+M47 AF3 part10 conflict: printed 0.61 | indep 0.6075 [0.5063, 0.7129] n=146 spk=100 rounds_to 0.61
+M48 AF3 part10 agreement: printed 0.59 | indep 0.5855 [0.5144, 0.6554] n=322 spk=175 rounds_to 0.59
+   arms {'agreement': 322, 'conflict': 146}
+   M47 matcher AF3 part3 conflict AUC 0.6169 n 146
+   M48 matcher AF3 part3 agreement AUC 0.5822 n 322
+   arms {'agreement': 322, 'conflict': 146}
+M01 M9 zero-shot rows 70 min median_mass 0.8968 ['Audio Flamingo 3', 'pcgita'] | printed 'at least 0.89'
+   whole-interview A2 median answer_mass_whole 0.9969
+M09 o25_mid30: printed 0.72 | indep 0.7205 [0.6531, 0.7917] n=275 spk=275 rounds_to 0.72
+M27 llm: mean of 5 per-repeat AUCs 0.7437; AUC of averaged score 0.7504; printed 0.74
+M28 enc: mean of 5 per-repeat AUCs 0.5981; AUC of averaged score 0.6058; printed 0.60
+M30 llm minus answer (averaged score): printed -0.09 [-0.16,-0.03] | indep -0.0862 [-0.1626, -0.0133] n=275 spk=275 rounds_to -0.09
+M33 enc minus answer (averaged score): printed -0.24 [-0.32,-0.15] | indep -0.2308 [-0.3299, -0.1341] n=275 spk=275 rounds_to -0.23
+   llm mean-of-5 minus answer -0.0929 [-0.1609, -0.0257]
+   enc mean-of-5 minus answer -0.2385 [-0.3244, -0.1505]
