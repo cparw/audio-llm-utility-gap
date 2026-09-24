@@ -1,0 +1,32 @@
+page,size_bp,nominal_bp,nominal_texpt,expansion,font,cls,x0,y0,x1,y1,text
+1,7.97,7.9701,8.0,1.0,NimbusRomNo9L-Regu,footnote,68.8,715.1,140.7,723.1,Corresponding author:
+1,7.97,7.9701,8.0,1.0,NimbusRomNo9L-Regu,footnote,143.2,715.1,219.3,723.1,soleymani@ict.usc.edu.
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,541.3,216.4,556.1,229.2,0.56
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,347.8,209.0,399.9,221.8,PC-GITA (PD)
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,541.3,256.5,556.1,269.3,0.66
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,347.8,234.9,379.6,247.7,Pitt (AD)
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,541.3,289.6,556.1,302.4,0.83
+1,7.491,7.4911,7.519,1.0,STIXGeneral-Italic,figure_text,437.5,318.7,451.9,330.0,proj.
+1,7.491,7.4911,7.519,1.0,STIXGeneral-Regular,figure_text,514.5,316.7,535.2,328.0,chance
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,347.8,283.8,404.1,296.6,E-DAIC (MDD)
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,124.8,113.6,138.4,119.5,probe
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,124.8,120.4,127.9,126.4,ℓ
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,192.6,113.4,198.4,119.4,⊤
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,192.5,119.4,195.6,125.4,ℓ
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,204.8,118.9,207.9,124.9,ℓ
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,223.6,118.9,226.7,124.9,ℓ
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,149.4,139.8,152.5,145.8,ℓ
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,96.4,191.6,113.4,197.6,answer
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,242.8,191.6,245.6,197.6,t
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,245.6,191.6,255.5,197.5,∈Y
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,263.4,189.9,266.2,195.9,t
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,236.8,204.6,239.7,210.6,t
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,239.7,204.5,261.1,210.5,∈Y∪N
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,269.3,202.9,272.2,208.8,t
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,178.6,285.4,181.7,291.4,ℓ
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,214.7,280.1,228.3,286.1,probe
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,214.7,286.9,217.8,292.9,ℓ
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,260.3,280.7,277.2,286.6,answer
+2,5.978,5.9776,6.0,1.0,CMR6,math_sub_or_superscript,517.5,361.0,521.2,367.0,2
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,324.0,513.1,329.7,519.1,−
+2,5.978,5.9776,6.0,1.0,CMR6,math_sub_or_superscript,329.7,513.2,333.4,519.2,4

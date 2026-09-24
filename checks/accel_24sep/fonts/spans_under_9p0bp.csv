@@ -1,0 +1,730 @@
+page,size_bp,nominal_bp,nominal_texpt,expansion,font,cls,x0,y0,x1,y1,text
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,152.3,186.9,200.6,195.8,ABSTRACT
+1,8.998,8.9664,9.0,1.007,NimbusRomNo9L-Regu,body_text,54.4,211.7,298.4,220.7,"output depends on paralinguistic and linguistic cues, so it is unclear"
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.1,243.0,299.5,251.9,with its answers under three conditions of different language saliency:
+1,8.944,8.9664,9.0,0.995,NimbusRomNo9L-Regu,body_text,54.4,253.4,299.7,262.3,"Parkinson’s read-speech, depression interviews and Alzheimer’s pic-"
+1,8.975,8.9664,9.0,1.002,NimbusRomNo9L-Regu,body_text,54.4,305.4,226.0,314.4,"diagnosis, four of six models fall below chance."
+1,8.975,8.9664,9.0,1.002,NimbusRomNo9L-Regu,body_text,228.8,305.4,298.2,314.4,Retraining only the
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.1,326.3,114.5,335.2,Alzheimer’s sets.
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,117.2,326.3,298.2,335.2,Evaluations scored only where words and diagnosis
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,336.6,259.4,345.6,agree cannot tell a model that listens from one that reads.
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-MediItal,body_text,69.4,351.5,114.2,360.4,Index Terms
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Medi,body_text,114.2,351.5,123.0,360.4,, 1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,126.2,351.6,308.6,360.5,"audio language models, clinical speech, Alzheimer’s"
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,361.9,197.5,370.9,"disease, Parkinson’s disease, depression"
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,134.2,386.1,140.9,395.1,1.
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,146.3,386.1,217.8,395.1,INTRODUCTION
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,126.7,426.7,131.2,435.7,1
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,263.1,426.7,267.6,435.7,2
+1,8.885,8.9664,9.0,0.982,NimbusRomNo9L-Regu,body_text,54.4,437.2,298.2,446.1,language models (Audio LLMs) now answer clinical questions about
+1,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,54.4,447.5,298.2,456.5,a recording in natural language and can reason about their decisions
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,57.5,458.0,62.0,466.9,3
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,468.4,177.5,477.3,evidence has not been established.
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,489.3,298.2,498.1,on their accuracy and little attention is given to what the models use to
+1,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,body_text,54.4,499.7,129.2,508.6,reach their decisions.
+1,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,body_text,132.0,499.7,298.2,508.6,Audio LLMs in particular can use the words as
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.1,510.1,298.4,519.0,"well as the voice, because most of their audio encoders are trained for"
+1,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,54.4,520.5,298.2,529.4,"speech recognition, so the words are available even when the prompt"
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,562.1,168.7,571.0,presence of a clinical condition.
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,69.4,572.6,298.4,581.4,There is a wide body of research in deep speech-based models for
+1,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,body_text,54.4,582.9,127.0,591.8,clinical assessment [
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,127.0,582.9,131.5,591.9,1
+1,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,body_text,131.5,582.9,136.7,591.8,].
+1,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,body_text,139.5,582.9,299.7,591.8,"Recently, large pre-trained models and multi-"
+1,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,54.4,603.7,99.7,612.7,assessment [
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,99.7,603.7,104.1,612.7,3
+1,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,104.1,603.7,106.4,612.7,","
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,106.4,603.7,113.1,612.7, 4
+1,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,113.1,603.7,115.4,612.7,","
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,115.4,603.7,122.1,612.7, 5
+1,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,122.1,603.7,127.3,612.7,].
+1,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,130.1,603.7,173.3,612.7,Bhalla et al.
+1,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,176.1,603.7,179.1,612.7,[
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,179.1,603.7,183.6,612.7,4
+1,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,183.6,603.7,298.2,612.7,] benchmarked pretrained audio
+1,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,body_text,54.4,614.2,299.7,623.1,encoders on clinical conditions and found that no single encoder gen-
+1,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,body_text,54.4,624.6,127.9,633.5,eralizes across them.
+1,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,body_text,130.7,624.6,169.7,633.5,Dong et al.
+1,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,body_text,172.5,624.6,175.5,633.5,[
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,175.5,624.5,179.9,633.5,5
+1,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,body_text,179.9,624.6,298.2,633.5,] built a multilingual Alzheimer’s
+1,8.957,8.9664,9.0,0.998,NimbusRomNo9L-Regu,body_text,54.4,635.0,298.2,643.9,disease (AD) benchmark and found that fusing speech and language
+1,8.948,8.9664,9.0,0.996,NimbusRomNo9L-Regu,body_text,54.4,666.2,298.4,675.1,"measure how well a representation encodes a condition, not whether"
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,200.5,676.6,205.0,685.6,6
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,269.7,676.6,274.2,685.6,7
+1,7.97,7.9701,8.0,1.0,NimbusRomNo9L-Regu,footnote,68.8,715.1,140.7,723.1,Corresponding author:
+1,7.97,7.9701,8.0,1.0,NimbusRomNo9L-Regu,footnote,143.2,715.1,219.3,723.1,soleymani@ict.usc.edu.
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,222.7,340.5,236.3,0.5
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,204.2,340.5,217.8,0.7
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,185.7,340.5,199.3,0.9
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,541.3,216.4,556.1,229.2,0.56
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,347.8,209.0,399.9,221.8,PC-GITA (PD)
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,271.6,340.5,285.1,0.5
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,253.1,340.5,266.6,0.7
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,234.6,340.5,248.1,0.9
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,315.8,248.1,329.4,267.1,AUC
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,541.3,256.5,556.1,269.3,0.66
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,347.8,234.9,379.6,247.7,Pitt (AD)
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,344.6,329.3,349.1,342.9,0
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,390.5,329.3,399.5,342.9,16
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,435.7,329.3,451.4,342.9,31 0
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,486.8,329.3,495.8,342.9,14
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,528.9,329.3,537.9,342.9,28
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,320.4,340.5,334.0,0.5
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,301.9,340.5,315.5,0.7
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,329.2,283.4,340.5,297.0,0.9
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,541.3,289.6,556.1,302.4,0.83
+1,7.491,7.4911,7.519,1.0,STIXGeneral-Italic,figure_text,437.5,318.7,451.9,330.0,proj.
+1,7.491,7.4911,7.519,1.0,STIXGeneral-Regular,figure_text,514.5,316.7,535.2,328.0,chance
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,358.1,335.5,428.9,349.1,audio encoder layer
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,452.6,335.5,530.0,349.1,language model layer
+1,8.49,8.4899,8.522,1.0,STIXGeneral-Regular,figure_text,347.8,283.8,404.1,296.6,E-DAIC (MDD)
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,353.3,352.1,396.4,365.7,linear probe
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,434.2,352.1,495.4,365.7,zero-shot answer
+1,8.989,8.9893,9.023,1.0,STIXGeneral-Regular,figure_text,533.1,352.1,546.1,365.7,gap
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,caption,315.2,394.8,559.0,403.7,dataset per condition. Each point is that layer’s representation probing
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,caption,315.2,405.1,431.0,414.1,performance (AUC) out-of-fold.
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,436.5,549.1,445.4,linguistic and paralinguistic signals that arise naturally in speech.
+1,8.917,8.9664,9.0,0.989,NimbusRomNo9L-Regu,body_text,330.2,447.4,559.0,456.4,"In this paper, we compare what an Audio LLM’s representations"
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,478.7,429.4,487.6,different shares of the diagnosis:
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,432.1,478.7,559.0,487.6,"Parkinson’s read-speech, depression"
+1,8.998,8.9664,9.0,1.007,NimbusRomNo9L-Regu,body_text,315.2,489.0,519.0,498.0,interviews and Alzheimer’s picture descriptions (Fig. 1).
+1,8.998,8.9664,9.0,1.007,NimbusRomNo9L-Regu,body_text,521.8,489.0,559.1,498.0,The major
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,499.5,461.9,508.4,contributions of this work are as follows.
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,510.4,321.9,519.3,1.
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,326.5,510.5,559.0,519.3,We construct a set of samples with conflicting audio and language
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,326.9,520.9,559.3,529.7,content from real clinical recordings that allows a systematic study
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,326.9,531.2,554.3,540.2,of Audio LLMs’ reliance on linguistic vs paralinguistic speech.
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,541.6,321.9,550.6,2.
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,326.5,541.7,559.0,550.6,We compare what an Audio LLM encodes against what it answers
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,326.9,552.1,559.0,561.0,"on seven clinical datasets, evaluate six Audio LLMs on the conflict"
+1,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,326.9,562.4,559.3,571.4,"sets to test whether the paralinguistic signal is utilized, and show"
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,326.9,583.3,512.6,592.2,set except MDVR-KCL and reverses on depression.
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,593.7,321.9,602.6,3.
+1,8.993,8.9664,9.0,1.006,NimbusRomNo9L-Regu,body_text,326.5,593.6,560.5,602.6,"We show that the signal survives to the answer position, in direc-"
+1,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,326.9,604.1,559.0,613.0,"tions the Yes/No readout does not use, and that retraining only the"
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,326.9,624.9,464.9,633.9,leaves the conflict segments at chance.
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,410.6,652.0,417.3,660.9,2.
+1,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,422.7,652.0,463.6,660.9,METHOD
+1,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,315.2,683.1,560.5,692.1,clinical diagnosis is grounded in the auditory evidence its representa-
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,155.9,75.0,159.7,83.9,ℓ
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,96.0,165.2,105.0,under the ROC curve (AUC) is
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,104.6,115.5,124.8,124.4,AUC
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,124.8,113.6,138.4,119.5,probe
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,124.8,120.4,127.9,126.4,ℓ
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,141.5,115.5,171.4,124.4,= AUC
+2,8.966,8.9664,9.0,1.0,CMEX9,math_inline_or_display_9pt,171.4,114.7,175.6,123.6, 
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,175.6,115.5,180.9,124.4,σ
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,181.2,115.5,184.8,124.4,(
+2,8.966,8.9664,9.0,1.0,CMBX9,math_inline_or_display_9pt,184.8,115.5,192.5,124.4,w
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,192.6,113.4,198.4,119.4,⊤
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,192.5,119.4,195.6,125.4,ℓ
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,199.5,113.1,204.1,122.1,¯
+2,8.966,8.9664,9.0,1.0,CMBX9,math_inline_or_display_9pt,198.9,115.5,204.8,124.4,h
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,204.8,118.9,207.9,124.9,ℓ
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,210.4,115.5,217.6,124.4,+
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,217.6,115.5,223.6,124.4, b
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,223.6,118.9,226.7,124.9,ℓ
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,227.2,115.5,230.8,124.4,)
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,230.8,115.5,233.3,124.4,","
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,236.4,115.5,240.9,124.4,y
+2,8.966,8.9664,9.0,1.0,CMEX9,math_inline_or_display_9pt,241.3,114.7,245.5,123.6,
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,245.5,115.5,248.0,124.4,","
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,288.4,115.7,298.8,124.7,(1)
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,76.4,136.4,83.3,145.4, y
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,144.1,134.0,148.7,143.0,¯
+2,8.966,8.9664,9.0,1.0,CMBX9,math_inline_or_display_9pt,143.5,136.4,149.4,145.4,h
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,149.4,139.8,152.5,145.8,ℓ
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,147.1,298.4,155.9,ask the model the same prompt (clinical question) and read its answer
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.1,167.8,123.6,176.8,"with no generation,"
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,76.2,193.5,96.4,202.4,AUC
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,96.4,191.6,113.4,197.6,answer
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,116.4,193.5,150.0,202.4,= AUC(
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,150.0,193.5,154.6,202.4,p
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,154.6,193.5,158.2,202.4,(
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,158.2,193.7,164.6,202.6,Y
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,164.6,193.5,168.2,202.4,)
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,168.2,193.5,170.8,202.4,","
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,173.9,193.5,178.4,202.4,y
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,178.7,193.5,182.3,202.4,)
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,182.3,193.5,184.9,202.4,","
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,195.4,193.5,200.0,202.4,p
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,200.0,193.5,203.6,202.4,(
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,203.6,193.7,210.0,202.6,Y
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,210.0,193.5,223.4,202.4,) =
+2,8.966,8.9664,9.0,1.0,CMEX9,math_inline_or_display_9pt,233.1,186.3,242.8,195.2,P
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,242.8,191.6,245.6,197.6,t
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,245.6,191.6,255.5,197.5,∈Y
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,258.1,186.6,263.4,195.5,π
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,263.4,189.9,266.2,195.9,t
+2,8.966,8.9664,9.0,1.0,CMEX9,math_inline_or_display_9pt,227.1,199.2,236.8,208.2,P
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,236.8,204.6,239.7,210.6,t
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,239.7,204.5,261.1,210.5,∈Y∪N
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,264.0,199.5,269.3,208.5,π
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,269.3,202.9,272.2,208.8,t
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,272.2,193.5,276.4,209.5," ,"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,288.4,193.7,298.8,202.6,(2)
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.1,219.5,75.6,228.4,where
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,75.6,219.3,82.8,228.2, π
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,82.8,219.5,298.2,228.4, is the softmax over the vocabulary at the first answer position
+2,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,67.6,229.6,76.2,238.5, Y
+2,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,79.2,229.6,89.2,238.5, N
+2,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,54.4,240.3,91.3,249.2,"release, so"
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,91.3,240.1,98.2,249.0, p
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,98.2,240.1,101.8,249.0,(
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,101.8,240.3,108.3,249.3,Y
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,108.3,240.1,111.9,249.0,)
+2,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,111.9,240.3,183.8,249.2, is the probability of
+2,8.912,8.9664,9.0,0.988,NimbusRomNo9L-ReguItal,body_text,183.8,240.2,197.5,249.1, Yes
+2,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,197.5,240.3,298.2,249.2, given that the answer is one
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,250.8,298.5,259.6,of the two; the two sets hold a median of at least 0.89 of the probability
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,271.5,266.2,280.5,"position, the vector from which the model reads its answer."
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,69.4,282.2,168.7,291.2,The utility gap is defined as
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,168.7,282.0,178.6,291.0, ∆
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,178.6,285.4,181.7,291.4,ℓ
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,184.8,282.0,214.7,291.0,= AUC
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,214.7,280.1,228.3,286.1,probe
+2,5.978,5.9776,6.0,1.0,CMMI6,math_sub_or_superscript,214.7,286.9,217.8,292.9,ℓ
+2,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,230.9,281.9,238.0,290.8,−
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,240.1,282.0,260.3,291.0,AUC
+2,5.978,5.9776,6.0,1.0,NimbusRomNo9L-Regu,math_sub_or_superscript,260.3,280.7,277.2,286.6,answer
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,277.7,282.2,280.0,291.2,.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,69.4,293.0,298.2,301.8,We ask the same question of six Audio LLMs that share the same
+2,8.881,8.9664,9.0,0.981,NimbusRomNo9L-Regu,body_text,54.4,324.2,281.7,333.1,establish whether the utility gap is common across architectures.
+2,8.881,8.9664,9.0,0.981,NimbusRomNo9L-Regu,body_text,284.5,324.2,298.2,333.1,The
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,334.6,149.3,343.5,models are Qwen2-Audio [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,149.3,334.5,153.8,343.5,8
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,153.8,334.6,220.6,343.5,"], Qwen2.5-Omni ["
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,220.6,334.5,225.1,343.5,9
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,225.1,334.6,285.2,343.5,"], Qwen3-Omni ["
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,285.2,334.5,294.2,343.5,10
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,294.2,334.6,299.3,343.5,"],"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.1,344.9,253.1,353.9,"Audio Flamingo 2 and 3 [11, 12] and Kimi-Audio [13]."
+2,8.993,8.9664,9.0,1.006,NimbusRomNo9L-Regu,body_text,54.4,386.8,298.2,395.8,"conditions, depression and Alzheimer’s disease, in which the words"
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,397.3,229.4,406.2,and the diagnosis can point in opposite directions.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,232.2,397.3,298.2,406.2,A conflict segment
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,407.8,298.2,416.6,"is speech whose words point away from the speaker’s diagnosis, such"
+2,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,54.4,428.5,152.8,437.5,dementia speaking fluently.
+2,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,155.6,428.5,298.2,437.5,An agreement segment is speech whose
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.1,449.4,298.4,458.3,"with an agreement segment of the same speaker, so the two arms differ"
+2,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,body_text,54.1,470.2,298.2,479.1,"(47 speakers appear in both), and fluency markers such as pauses are"
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,480.6,246.2,489.5,"heard as well as read, so the Pitt test is the weaker one."
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,248.9,480.6,298.2,489.5,Given that the
+2,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,54.4,501.4,299.3,510.4,"run a transcript-only baseline where the model gets the words alone,"
+2,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,54.4,522.3,211.7,531.2,decision can be attributed to language alone.
+2,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,214.5,522.3,298.4,531.2,"Finally, we ask whether"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,532.6,289.0,541.6,the gap closes when the projector alone is retrained (Section 4.4).
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,107.9,558.4,114.6,567.4,3.
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,120.0,558.4,244.8,567.4,IMPLEMENTATION DETAILS
+2,8.962,8.9664,9.0,0.999,NimbusRomNo9L-Regu,body_text,54.4,610.0,139.0,618.9,nosis in each condition.
+2,8.962,8.9664,9.0,0.999,NimbusRomNo9L-Regu,body_text,141.8,610.0,298.2,618.9,As a measure of how much the words alone
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,620.4,299.3,629.3,"carry, a TF-IDF logistic regression on the transcripts, speaker-disjoint,"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,641.2,240.5,650.2,transcripts and 0.84 to 0.93 on the Alzheimer’s sets.
+2,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,body_text,54.4,683.1,94.0,692.1,PC-GITA [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,94.0,683.1,102.9,692.1,14
+2,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,body_text,102.9,683.1,299.3,692.1,"] (Spanish, ten sentences and one read text per speaker,"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,142.8,693.5,151.7,702.5,15
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,704.0,208.3,712.9,clips from 107 speakers) and MDVR-KCL [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,208.3,703.9,217.3,712.9,16
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,217.3,704.0,299.3,712.9,"] (English, 37 speakers,"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,714.3,180.3,723.3,most reading one of two passages).
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,421.6,96.0,430.6,105.0,17
+2,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,315.2,116.8,560.5,125.8,dataset’s released label based on the eight-item Patient Health Ques-
+2,8.881,8.9664,9.0,0.981,NimbusRomNo9L-Regu,body_text,315.2,127.3,384.7,136.2,tionnaire (PHQ-8) [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,384.7,127.2,393.6,136.2,18
+2,8.881,8.9664,9.0,0.981,NimbusRomNo9L-Regu,body_text,393.6,127.3,469.9,136.2,"], stricter than PHQ-8"
+2,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,469.9,126.9,479.3,135.9, ≥
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,481.9,127.0,491.1,136.0,10
+2,8.881,8.9664,9.0,0.981,NimbusRomNo9L-Regu,body_text,491.1,127.3,560.1,136.2," for 20 participants,"
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,314.9,148.1,559.0,157.0,"whole interview, interviewer turns removed and capped at 15 minutes"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,179.3,388.7,188.2,the whole transcript.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,211.4,476.9,220.3,DementiaBank Pitt cookie-theft descriptions [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,476.9,211.3,485.8,220.3,19
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,485.8,211.4,559.0,220.3,"], with 468 segments"
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,221.8,559.0,230.7,from 227 participants (one has sessions in both groups and is grouped
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,242.6,559.0,251.5,"fined under Conflict set construction below, the ADReSSo recordings"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,318.2,253.0,327.2,261.9,20
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,263.4,318.1,272.3,[
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,318.1,263.4,327.1,272.3,21
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,327.1,263.4,477.3,272.3,"], and the ADReSS-2020 benchmark split ["
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,477.3,263.4,486.3,272.3,22
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,486.3,263.4,560.5,272.3,] including 108 train-
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,273.9,559.0,282.7,ing and 48 test recordings. Each Pitt segment starts at the participant’s
+2,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,body_text,315.2,284.3,559.0,293.1,"first timed utterance, and the ADReSSo and ADReSS-2020 windows"
+2,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,body_text,315.2,294.6,559.0,303.6,"start at the beginning of the recording, so interviewer prompts inside"
+2,8.98,8.9664,9.0,1.003,NimbusRomNo9L-Regu,body_text,314.9,315.4,559.0,324.4,"Audio cannot take more, so the conflict test of Section 2 runs on the"
+2,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,body_text,315.2,325.9,419.2,334.8,same clips for all six models.
+2,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,body_text,421.9,325.9,559.3,334.8,"The three sets share speakers, so every"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,346.7,413.8,355.6,transfer claim among them.
+2,8.957,8.9664,9.0,0.998,NimbusRomNo9L-Medi,body_text,315.2,357.8,348.0,366.8,Probing.
+2,8.957,8.9664,9.0,0.998,NimbusRomNo9L-Regu,body_text,350.8,357.9,511.5,366.9,The probe in Eq. 1 is logistic regression with
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,511.5,357.7,517.5,366.7, ℓ
+2,5.978,5.9776,6.0,1.0,CMR6,math_sub_or_superscript,517.5,361.0,521.2,367.0,2
+2,8.957,8.9664,9.0,0.998,NimbusRomNo9L-Regu,body_text,523.9,357.9,559.0,366.9,penalty at
+2,8.966,8.9664,9.0,1.0,CMMI9,math_inline_or_display_9pt,315.2,368.1,321.8,377.1,C
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,325.0,368.1,339.3,377.1,= 1
+2,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,339.3,368.3,560.5,377.3,", balanced class weights and 2000 iterations, on features stan-"
+2,8.885,8.9664,9.0,0.982,NimbusRomNo9L-Regu,body_text,315.2,378.8,430.1,387.7,dardized inside the training fold.
+2,8.885,8.9664,9.0,0.982,NimbusRomNo9L-Regu,body_text,432.9,378.8,560.5,387.7,Folds are speaker-disjoint (GroupK-
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,420.4,487.3,429.3,file behind every probe value and paired interval.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,490.1,420.4,559.0,429.3,Layer-wise probing
+2,8.998,8.9664,9.0,1.007,NimbusRomNo9L-Regu,body_text,315.2,430.8,436.2,439.7,is performed on Qwen2.5-Omni [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,436.2,430.8,440.7,439.7,9
+2,8.998,8.9664,9.0,1.007,NimbusRomNo9L-Regu,body_text,440.7,430.8,559.0,439.7,"], end-to-end on 32 hidden states"
+2,8.93,8.9664,9.0,0.992,NimbusRomNo9L-Regu,body_text,315.2,441.2,560.5,450.1,"in its audio encoder and 29 in its language model, taken at the audio-"
+2,8.881,8.9664,9.0,0.981,NimbusRomNo9L-Regu,body_text,315.2,472.5,559.0,481.4,"Omni models, so every clip passes through the same weights, and we"
+2,8.926,8.9664,9.0,0.991,NimbusRomNo9L-Regu,body_text,315.2,482.9,392.7,491.8,report Qwen3-Omni [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,392.7,482.8,401.7,491.8,10
+2,8.926,8.9664,9.0,0.991,NimbusRomNo9L-Regu,body_text,401.7,482.9,559.0,491.8,"], a Mixture-of-Experts model, as a check in"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,493.2,357.8,502.2,Section 4.2.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Medi,body_text,315.2,504.5,361.2,513.3,Fine-tuning.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,361.2,504.5,499.1,513.4, The projector is trained with AdamW [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,499.1,504.5,508.1,513.4,23
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,508.1,504.5,559.0,513.4,"], learning rate"
+2,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,314.8,514.7,324.0,523.6,10
+2,5.978,5.9776,6.0,1.0,CMSY6,math_sub_or_superscript,324.0,513.1,329.7,519.1,−
+2,5.978,5.9776,6.0,1.0,CMR6,math_sub_or_superscript,329.7,513.2,333.4,519.2,4
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,546.1,413.3,555.1,reports the range over runs.
+2,8.912,8.9664,9.0,0.988,NimbusRomNo9L-ReguItal,body_text,315.2,567.6,479.7,576.6,"signs of X? Answer with one word, Yes or No”"
+2,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,479.7,567.8,559.7,576.7,", with X the condition;"
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,578.2,560.6,587.1,"on the Parkinson’s and depression datasets, the phrase “this recording”"
+2,8.917,8.9664,9.0,0.989,NimbusRomNo9L-Regu,body_text,315.2,588.6,493.8,597.5,is replaced with “how this person’s voice sounds”.
+2,8.917,8.9664,9.0,0.989,NimbusRomNo9L-Regu,body_text,496.5,588.6,560.5,597.5,For the transcript-
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,599.1,559.0,607.9,"only baseline, “this recording” is replaced with “this transcript of what"
+2,8.948,8.9664,9.0,0.996,NimbusRomNo9L-Regu,body_text,315.2,630.2,406.2,639.2,average and 0.07 at most.
+2,8.948,8.9664,9.0,0.996,NimbusRomNo9L-Regu,body_text,408.9,630.2,559.0,639.2,"Under greedy decoding, Qwen2.5-Omni’s"
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,651.0,501.5,660.0,the logit decision on 99 percent of the conflict clips.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,672.8,559.0,681.6,"the interviewer removed, we take every participant segment of at least"
+2,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,315.2,693.6,465.8,702.5,sentiment classifier trained on TweetEval [
+2,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,465.8,693.5,474.8,702.5,24
+2,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,474.8,693.6,479.9,702.5,].
+2,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,482.7,693.6,559.0,702.5,A segment is counted
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,704.0,550.3,712.9,as positive or negative if that class has a probability of at least 0.70.
+2,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,553.0,704.0,559.3,712.9,A
+2,8.93,8.9664,9.0,0.992,NimbusRomNo9L-Regu,body_text,315.2,714.4,559.1,723.3,"participant with a PHQ-8 score of 15 or more speaking positively, or"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,caption,54.4,102.2,289.0,111.1,model after retraining only its projector on speaker-disjoint folds.
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,202.2,116.0,237.1,124.9,Zero-shot
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,259.4,116.0,298.2,124.9,Fine-tuned
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,131.2,81.3,140.2,Dataset
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,122.0,131.2,179.9,140.2,Clips (speakers)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,193.7,131.2,216.1,140.2,Audio
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,131.2,245.6,140.2,Text
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,267.6,131.2,290.0,140.2,Audio
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,table,54.4,146.4,125.3,155.4,Parkinson’s disease
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,157.0,89.0,166.0,PC-GITA
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,140.3,157.0,179.9,166.0,1100 (100)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.1,157.0,212.8,166.0,0.56
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,157.0,245.6,166.0,0.52
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,270.9,157.0,286.6,166.0,0.89
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,167.4,90.6,176.4,NeuroVoz
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,140.3,167.4,179.9,176.4,1270 (107)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.1,167.4,212.8,176.4,0.70
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,167.4,245.6,176.4,0.54
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,270.9,167.4,286.6,176.4,0.90
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,177.8,101.9,186.8,MDVR-KCL
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,153.8,177.8,179.9,186.8,37 (37)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.1,177.8,212.8,186.8,0.71
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,177.8,245.6,186.8,0.76
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,270.9,177.8,286.6,186.8,0.70
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,table,54.4,191.1,148.9,200.0,Major depressive disorder
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,201.6,84.4,210.6,E-DAIC
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,144.8,201.6,179.9,210.6,275 (275)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.1,201.6,212.8,210.6,0.84
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,201.6,245.6,210.6,0.82
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,270.9,201.6,286.6,210.6,0.86
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,table,54.4,214.9,125.5,223.9,Alzheimer’s disease
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,225.5,66.9,234.4,Pitt
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,144.8,225.5,179.9,234.4,468 (227)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.1,225.5,212.8,234.4,0.66
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,225.5,245.6,234.4,0.66
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,270.9,225.5,286.6,234.4,0.77
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,235.9,91.8,244.8,ADReSSo
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,144.8,235.9,179.9,244.8,237 (237)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.1,235.9,212.8,244.8,0.62
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,235.9,245.6,244.8,0.55
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,270.9,235.9,286.6,244.8,0.82
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,246.3,108.2,255.2,ADReSS-2020
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,144.8,246.3,179.9,255.2,156 (156)
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.1,246.3,212.8,255.2,0.62
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,229.9,246.3,245.6,255.2,0.75
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,270.9,246.3,286.6,255.2,0.77
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,271.2,299.3,280.1,"a healthy control with a PHQ-8 score of 4 or less speaking negatively,"
+3,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,body_text,54.4,281.6,162.9,290.5,constitutes a conflict segment.
+3,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,body_text,165.7,281.6,298.2,290.5,"This yields 488 conflict segments, of"
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.1,292.1,298.2,300.9,"which 483 have an agreement segment from the same speaker, giving"
+3,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,body_text,54.1,302.4,157.3,311.4,483 pairs from 138 speakers.
+3,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,body_text,160.1,302.4,298.2,311.4,Agreement segments are reused across
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,312.9,298.2,321.8,"pairs, so the agreement arm holds 311 distinct segments and is scored"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,323.2,86.8,332.2,on those.
+3,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,body_text,69.4,334.3,298.2,343.2,"For Alzheimer’s disease, we score the words of each segment in"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,113.1,344.7,122.0,353.7,19
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,225.6,355.1,234.6,364.1,25
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,240.0,355.1,249.0,364.1,26
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,396.8,298.2,405.7,"trained on five speaker-disjoint folds, and segments whose out-of-fold"
+3,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,body_text,54.4,417.6,298.2,426.5,"dementia scored as fluent, or a healthy control scored as impaired, is"
+3,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,body_text,54.4,438.4,246.8,447.4,leaves 146 segments in conflict and 322 in agreement.
+3,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,body_text,249.6,438.4,298.2,447.4,Segments run
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,459.2,73.1,468.2,each.
+3,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Medi,body_text,54.1,470.2,100.6,479.2,Transcripts.
+3,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,103.4,470.3,192.3,479.3,Pitt and ADReSS-2020 [
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,192.3,470.3,201.3,479.3,22
+3,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,201.3,470.3,298.5,479.3,] come with manual CHAT
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,149.3,480.7,158.3,489.7,17
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,491.1,298.2,500.1,"scripts, used with the annotation codes stripped, and ADReSSo [20]"
+3,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,body_text,54.4,501.5,298.2,510.5,and the three Parkinson’s sets are transcribed with whisper-large-v3
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,511.9,71.6,520.9,[27].
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Medi,body_text,54.4,523.0,84.0,531.9,Checks.
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,86.7,523.1,298.2,531.9,"As an acoustic baseline, we train a logistic regression on the"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,57.5,543.8,66.4,552.8,28
+3,8.962,8.9664,9.0,0.999,NimbusRomNo9L-Regu,body_text,54.4,564.6,298.2,573.6,answer restricted to the 275 clips of the 129 speakers kept by an age
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,575.1,264.9,584.0,and sex matched selection (81 pairs over the whole dataset).
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,267.7,575.1,298.2,584.0,Intervals
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,616.7,134.1,625.7,multiple comparisons.
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,112.8,644.5,119.5,653.4,4.
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,124.9,644.5,239.6,653.4,EXPERIMENTAL RESULTS
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,54.1,665.4,67.6,674.3,4.1.
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,72.9,665.4,169.9,674.3,Audio LLM performance
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.0,683.2,298.2,692.0,We prompt Audio LLMs with a clinical question and a speech excerpt
+3,8.971,8.9664,9.0,1.001,NimbusRomNo9L-Regu,body_text,54.4,703.9,298.2,712.9,"between 0.56 and 0.71 on the Parkinson’s and Alzheimer’s sets, and"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,714.3,172.9,723.3,only E-DAIC is higher (Table 1).
+3,8.993,8.9664,9.0,1.006,NimbusRomNo9L-Regu,body_text,315.2,127.2,389.1,136.2,the whole transcript.
+3,8.993,8.9664,9.0,1.006,NimbusRomNo9L-Regu,body_text,391.9,127.2,559.0,136.2,"Qwen3-Omni, which also hears the interviews"
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,314.9,168.9,559.0,177.8,"which is mostly session setup, 0.72 on a middle 30 s, 0.81 on a middle"
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,179.3,559.0,188.2,"five minutes and 0.84 on the whole interview, while the encoder probe"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,189.7,442.0,198.6,never exceeds 0.63 on any window.
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,314.9,232.1,328.3,241.0,4.2.
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,333.7,232.1,394.6,241.0,Probing Results
+3,8.966,8.9664,9.0,1.0,CMR9,math_inline_or_display_9pt,314.4,286.4,322.1,295.4,∆
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,317.9,560.5,326.8,encoder probe reaches 0.80 and the zero-shot answer 0.67. On Qwen3-
+3,8.93,8.9664,9.0,0.992,NimbusRomNo9L-Regu,body_text,315.2,338.7,559.0,347.7,"against zero-shot answers of 0.60 and 0.76, so its Alzheimer’s gap is"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,349.1,351.3,358.1,only 0.05.
+3,8.948,8.9664,9.0,0.996,NimbusRomNo9L-Medi,body_text,314.9,363.2,448.7,372.1,"Acoustic, channel and age controls."
+3,8.948,8.9664,9.0,0.996,NimbusRomNo9L-Regu,body_text,451.6,363.3,559.0,372.2,The eGeMAPS baseline reads
+3,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,body_text,315.2,384.1,559.0,393.1,"MDVR-KCL to 0.18 on ADReSSo, and on PC-GITA and NeuroVoz"
+3,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,body_text,315.2,394.5,540.5,403.5,the baseline itself beats the zero-shot answer by 0.27 and 0.15.
+3,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,body_text,543.3,394.5,559.0,403.5,Five
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,405.0,559.0,413.9,"recording features from the quietest frames (noise floor, SNR, spectral"
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,364.8,456.6,372.0,465.6,−
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,393.6,456.6,400.8,465.6,−
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,419.1,456.6,429.0,465.6, −
+3,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,315.2,467.4,536.1,476.3,"and only to 0.60 on NeuroVoz, where the probe falls to 0.89 ("
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,536.1,467.1,543.2,476.0,−
+3,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,543.2,467.4,559.0,476.3,0.03
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,477.9,318.1,486.7,[
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,318.1,477.5,325.3,486.4,−
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,325.3,477.9,347.3,486.7,"0.061,"
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,347.3,477.5,356.7,486.4, −
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,356.7,477.9,384.5,486.7,0.001]).
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,387.3,477.9,559.4,486.7,On 38 age and sex matched NeuroVoz pairs (907
+3,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,body_text,315.2,509.1,430.1,518.0,separates the Pitt groups at 0.71.
+3,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,body_text,432.9,509.1,559.0,518.0,On the age-matched clips age alone
+3,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,body_text,315.2,519.4,559.0,528.4,"falls to 0.39, while the encoder probe reaches 0.80 and the zero-shot"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,529.8,360.8,538.8,answer 0.65.
+3,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Medi,body_text,314.8,543.9,396.6,552.9,Where the signal sits.
+3,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,399.4,544.0,559.0,553.0,The information also survives past the audio
+3,8.908,8.9664,9.0,0.987,NimbusRomNo9L-Regu,body_text,315.2,554.5,344.9,563.4,encoder.
+3,8.908,8.9664,9.0,0.987,NimbusRomNo9L-Regu,body_text,347.7,554.5,559.0,563.4,On the Pitt dataset the probe on the language model’s states
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,575.3,397.6,584.2,layer answer state 0.77.
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,400.4,575.3,559.0,584.2,The answer state holds more than the readout
+3,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,body_text,315.2,606.5,559.0,615.4,"level of the answer, while a probe on the same vector reads 0.77 and"
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,637.8,559.0,646.6,Qwen2-Audio and Qwen3-Omni the readout direction gives 0.62 and
+3,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,648.2,559.0,657.1,"0.77 and the probe 0.82 and 0.83, and 0.81 and 0.83 with the direction"
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,658.5,348.6,667.5,removed.
+3,8.885,8.9664,9.0,0.982,NimbusRomNo9L-Medi,body_text,315.2,672.7,391.5,681.6,Depression reverses.
+3,8.885,8.9664,9.0,0.982,NimbusRomNo9L-Regu,body_text,394.3,672.8,559.0,681.6,On E-DAIC the language model probe reaches
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,318.0,693.2,325.1,702.2,−
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,346.6,693.2,353.7,702.2,−
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,372.0,693.2,381.6,702.2, −
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,416.2,693.2,425.8,702.2, −
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,447.2,693.2,454.4,702.2,−
+3,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,472.7,693.2,482.2,702.2, −
+3,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,body_text,315.2,704.0,479.8,712.9,on the answer state matches the answer (0.84).
+3,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,body_text,482.6,704.0,559.0,712.9,The reversal says that
+3,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,714.3,531.4,723.3,"the words carry this task, not that the audio states are empty."
+4,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Medi,caption,54.1,81.3,81.5,90.2,Table 2
+4,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,caption,81.5,81.4,83.7,90.3,.
+4,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,caption,86.5,81.4,298.2,90.3,Zero-shot AUC on 30 s segments whose words conflict with
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,caption,54.4,91.8,299.3,100.7,"the diagnosis and on segments whose words agree with it. Depression,"
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,caption,54.4,102.2,89.0,111.1,E-DAIC [
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,caption,89.0,102.2,97.9,111.1,17
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,caption,97.9,102.2,103.3,111.1,]:
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,caption,106.1,102.2,298.2,111.1,483 conflict segments paired with agreement segments
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,caption,57.5,123.0,66.4,132.0,19
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,caption,54.4,133.4,87.4,142.4,speakers.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,caption,90.2,133.4,215.2,142.4,Intervals per cell are in the release.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,164.2,147.2,204.6,156.2,Depression
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,240.9,147.2,284.8,156.2,Alzheimer’s
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,162.4,77.8,171.4,Model
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,151.1,162.4,180.0,171.4,Conflict
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,193.6,162.4,217.8,171.4,Agree.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,231.5,162.4,260.4,171.4,Conflict
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,274.1,162.4,298.2,171.4,Agree.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,177.8,118.4,186.8,Qwen2-Audio [8]
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,157.7,177.8,173.3,186.8,0.23
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.9,177.8,213.6,186.8,0.96
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,238.1,177.8,253.8,186.8,0.41
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,278.3,177.8,294.0,186.8,0.70
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,188.2,123.2,197.2,Qwen2.5-Omni [9]
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,157.7,188.2,173.3,197.2,0.22
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.9,188.2,213.6,197.2,0.96
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,238.1,188.2,253.8,197.2,0.53
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,278.3,188.2,294.0,197.2,0.71
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,198.7,120.9,207.6,Qwen3-Omni [10]
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,157.7,198.7,173.3,207.6,0.30
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.9,198.7,213.6,207.6,0.97
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,238.1,198.7,253.8,207.6,0.61
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,278.3,198.7,294.0,207.6,0.82
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,209.1,137.4,218.0,Audio Flamingo 2 [11]
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,157.7,209.1,173.3,218.0,0.53
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.9,209.1,213.6,218.0,0.63
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,238.1,209.1,253.8,218.0,0.58
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,278.3,209.1,294.0,218.0,0.53
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,219.5,137.4,228.4,Audio Flamingo 3 [12]
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,157.7,219.5,173.3,228.4,0.42
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.9,219.5,213.6,228.4,0.84
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,238.1,219.5,253.8,228.4,0.61
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,278.3,219.5,294.0,228.4,0.59
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,54.4,229.9,115.4,238.9,Kimi-Audio [13]
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,157.7,229.9,173.3,238.9,0.53
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,197.9,229.9,213.6,238.9,0.89
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,238.1,229.9,253.8,238.9,0.72
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,table,278.3,229.9,294.0,238.9,0.72
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,54.1,255.0,67.6,264.0,4.3.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,72.9,255.0,151.3,264.0,Conflict Test Results
+4,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,body_text,54.4,335.6,129.8,344.5,fixed by the protocol.
+4,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,body_text,132.6,335.6,299.8,344.5,Results in Table 2 show a strong language bias.
+4,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,54.4,346.0,298.2,354.9,On the depression segments four of the six models fall below chance
+4,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,body_text,54.1,356.4,298.2,365.3,"when the words point away from the label, while every model except"
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,398.1,163.0,406.9,the three Qwen models on Pitt.
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,165.8,398.1,298.2,406.9,On the same pairs the transcript alone
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,408.5,298.2,417.4,scores 0.15 on conflict and 0.96 on agreement for Qwen2.5-Omni and
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,418.9,298.2,427.8,"0.22 and 0.95 for Qwen3-Omni, and for Qwen2.5-Omni the transcript"
+4,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,body_text,54.4,439.7,298.2,448.6,Pitt dataset the transcript alone shows the same arm gap as the audio
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,481.4,104.4,490.2,0.26 and 0.19.
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,107.1,481.4,298.2,490.2,Replacing the severity gates of 15 and 4 with a PHQ-8
+4,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,body_text,54.4,502.1,113.5,511.1,arm scores 0.18.
+4,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,body_text,116.3,502.1,298.2,511.1,A second sentiment scorer (DistilBERT fine-tuned
+4,8.98,8.9664,9.0,1.003,NimbusRomNo9L-Regu,body_text,54.4,512.5,298.2,521.5,"on SST-2) selects 1,334 pairs, on which the conflict arm scores 0.46"
+4,8.917,8.9664,9.0,0.989,NimbusRomNo9L-Regu,body_text,54.4,543.8,298.2,552.7,scorers call conflicting (0.20) and not on the 855 the first scorer calls
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,116.7,564.6,125.6,573.5,29
+4,8.962,8.9664,9.0,0.999,NimbusRomNo9L-Regu,body_text,54.4,585.4,298.2,594.4,"of the clips, and Qwen2-Audio on 87 percent or more, so their AUC"
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.4,606.3,298.2,615.2,Qwen models drop by 0.17 to 0.29 from the agreement to the conflict
+4,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,54.4,637.5,125.9,646.4,both arms (Table 2).
+4,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,128.7,637.5,298.2,646.4,Asking Qwen2.5-Omni to judge the voice alone
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,54.4,647.9,141.8,656.8,moves its Pitt answer by
+4,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,141.8,647.5,151.2,656.5, −
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,151.2,647.9,172.2,656.8,0.01 [
+4,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,172.2,647.5,179.3,656.5,−
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,179.3,647.9,220.4,656.8,"0.04, 0.02]."
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,54.1,675.5,67.6,684.4,4.4.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,72.9,675.5,162.3,684.4,Supervised Fine-tuning
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,54.1,693.6,298.4,702.5,"To narrow the gap, we retrain the projector between the audio encoder"
+4,8.926,8.9664,9.0,0.991,NimbusRomNo9L-Regu,body_text,314.9,85.6,560.6,94.5,"which has 37 speakers, and E-DAIC, which does not move (Table 1)."
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,158.5,440.1,167.4,this. Low-rank adaptation (LoRA) [
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,440.1,158.4,449.1,167.4,30
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,449.1,158.5,560.1,167.4,"] of the language model (rank 8,"
+4,8.984,8.9664,9.0,1.004,NimbusRomNo9L-Regu,body_text,315.2,168.8,559.0,177.8,"all attention projections of the 28 layers, 5.0 M trainable parameters"
+4,8.975,8.9664,9.0,1.002,NimbusRomNo9L-Regu,body_text,315.2,189.7,559.0,198.7,"0.10] above the projector run, and 0.55 on its conflict segments, and"
+4,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,315.2,200.1,432.6,209.0,training both together gives 0.77.
+4,8.912,8.9664,9.0,0.988,NimbusRomNo9L-Regu,body_text,435.4,200.1,559.1,209.0,On E-DAIC the retrained projector
+4,8.966,8.9664,9.0,1.0,CMSY9,math_inline_or_display_9pt,447.6,210.2,454.8,219.1,−
+4,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,body_text,315.0,231.4,336.3,240.3,voice.
+4,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,body_text,339.1,231.4,559.0,240.3,Retraining it on the E-DAIC pairs themselves lifts the conflict
+4,8.957,8.9664,9.0,0.998,NimbusRomNo9L-Regu,body_text,315.2,283.4,559.1,292.3,since the signal is present at every depth and retraining the projector
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,293.9,353.9,302.7,recovers it.
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,356.6,293.9,560.6,302.7,On Alzheimer’s what is recovered is at least partly lexical.
+4,8.93,8.9664,9.0,0.992,NimbusRomNo9L-Regu,body_text,315.2,314.6,527.2,323.6,"lists, fold assignments, scripts and per-clip answer scores at"
+4,8.966,8.9664,9.0,1.0,NimbusMonL-Regu,body_text,527.2,314.2,561.7,323.1, https:
+4,8.966,8.9664,9.0,1.0,NimbusMonL-Regu,body_text,314.7,324.6,547.5,333.5,//github.com/parw8649/audio-llm-utility-gap
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,547.5,325.0,549.7,334.0,.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,398.2,352.0,404.9,361.0,5.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,410.3,352.0,476.0,361.0,CONCLUSIONS
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,372.7,559.0,381.6,"In this paper, we showed how Audio LLMs could underperform when"
+4,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,body_text,315.2,414.3,455.8,423.3,"results demonstrated a wide utility gap,"
+4,8.953,8.9664,9.0,0.997,NimbusRomNo9L-ReguItal,body_text,455.8,414.2,468.8,423.1, i.e.
+4,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,body_text,468.8,414.3,560.5,423.3,", the LLM does not effec-"
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,535.5,435.1,539.9,444.1,7
+4,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,body_text,315.2,445.6,559.3,454.5,found a strong language bias in Audio LLMs as they are more likely
+4,8.93,8.9664,9.0,0.992,NimbusRomNo9L-Regu,body_text,315.2,476.8,559.0,485.7,"supervised fine-tuning limited to the projector layer, keeping the rest"
+4,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,body_text,315.2,487.2,559.0,496.2,"of the model’s weights frozen, resulting in a significant performance"
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,528.8,551.2,537.8,and future work should focus on further narrowing the utility gap.
+4,8.89,8.9664,9.0,0.983,NimbusRomNo9L-Regu,body_text,315.2,552.2,559.0,561.1,Cooperative Agreement Number W911NF-25-2-0040 and the NIMH
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,573.0,560.6,581.9,contained in this document are those of the authors and not of the U.S.
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,583.5,361.1,592.3,Government.
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,363.8,583.5,559.0,592.3,The Pitt corpus was supported by NIA grants AG03705
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,593.8,367.6,602.8,and AG05133.
+4,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Medi,body_text,315.2,604.7,448.3,613.6,Compliance with ethical standards.
+4,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,body_text,451.1,604.8,560.5,613.7,This study is a secondary anal-
+4,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,body_text,315.0,615.1,559.0,624.1,"ysis of existing recordings, all obtained under each distributor’s data"
+4,8.962,8.9664,9.0,0.999,NimbusRomNo9L-Regu,body_text,315.2,625.5,354.8,634.5,agreement.
+4,8.962,8.9664,9.0,0.999,NimbusRomNo9L-Regu,body_text,357.5,625.5,560.1,634.5,"No new recordings were made, no audio is redistributed,"
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,315.2,636.0,542.6,644.9,and no ethical approval was required for this secondary analysis.
+4,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,body_text,545.3,636.0,559.0,644.9,The
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,315.2,646.4,450.7,655.3,authors declare no conflict of interest.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,400.9,673.3,407.6,682.3,6.
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Medi,body_text,413.0,673.3,473.3,682.3,REFERENCES
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,body_text,319.7,693.5,330.2,702.5,[1]
+4,8.98,8.9664,9.0,1.003,NimbusRomNo9L-Regu,reference,335.1,693.5,426.3,702.5,"Nicholas Cummins et al.,"
+4,8.98,8.9664,9.0,1.003,NimbusRomNo9L-Regu,reference,429.6,693.5,559.0,702.5,“A review of depression and suicide
+4,8.998,8.9664,9.0,1.007,NimbusRomNo9L-Regu,reference,335.1,703.9,476.6,712.9,"risk assessment using speech analysis,”"
+4,8.998,8.9664,9.0,1.007,NimbusRomNo9L-ReguItal,reference,479.9,703.7,542.4,712.7,Speech Commun.
+4,8.998,8.9664,9.0,1.007,NimbusRomNo9L-Regu,reference,542.4,703.9,560.6,712.9,", vol."
+4,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,334.9,714.3,408.9,723.3,"71, pp. 10-49, 2015."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,75.2,69.4,84.1,[2]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,75.2,138.5,84.1,"N. P. Narendra, Bj"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,139.3,75.1,142.3,84.1,¨
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,138.5,75.2,243.3,84.1,"orn Schuller, and Paavo Alku,"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,246.3,75.2,298.2,84.1,“The detection
+5,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,reference,74.3,85.6,299.7,94.5,of Parkinson’s disease from speech using voice source informa-
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,96.1,93.5,104.9,"tion,”"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-ReguItal,reference,96.5,95.9,268.6,104.8,"IEEE/ACM Trans. Audio, Speech, Lang. Process."
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,268.6,96.1,299.3,104.9,", vol. 29,"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,106.4,152.8,115.4,"pp. 1925-1936, 2021."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,116.8,69.4,125.8,[3]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,73.2,127.3,299.1,136.2,“Zero-shot speech-based depression and anxiety assessment with
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,137.6,102.4,146.6,"LLMs,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,105.6,137.6,112.6,146.6,in
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,112.6,137.5,177.9,146.4, Proc. Interspeech
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,177.9,137.6,251.9,146.6,", 2025, pp. 489-493."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,148.0,69.4,157.0,[4]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,158.4,144.7,167.4,"clinical speech AI,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,147.9,158.3,213.4,167.3,arXiv:2606.17339
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,213.4,158.4,238.1,167.4,", 2026."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,168.9,69.4,177.8,[5]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,168.9,153.3,177.8,"Zhongren Dong et al.,"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,156.6,168.9,298.2,177.8,“Foundation model-based evaluation of
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.1,200.1,195.2,209.1,"vol. 19, no. 5, pp. 796-809, 2025."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,210.5,69.4,219.5,[6]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,210.6,137.5,219.4,"Jingyi Chen et al.,"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,140.3,210.6,299.7,219.4,"“Do audio LLMs really LISTEN, or just tran-"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,231.3,81.3,240.3,in
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,81.3,231.2,126.7,240.1, Proc. EACL
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,126.7,231.3,209.7,240.3,", 2026, pp. 5848-5877."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,241.7,69.4,250.7,[7]
+5,8.885,8.9664,9.0,0.982,NimbusRomNo9L-Regu,reference,74.3,241.8,299.3,250.7,"Jiacheng Pang, Ashutosh Chaubey, and Mohammad Soleymani,"
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,reference,74.3,262.6,220.3,271.5,"paralinguistic failures with VoxParadox,”"
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,reference,223.6,262.6,230.5,271.5,in
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-ReguItal,reference,230.5,262.4,275.2,271.4, Proc. ICML
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,reference,275.2,262.6,299.7,271.5,", 2026."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,273.0,69.4,281.9,[8]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,74.3,283.2,139.8,292.2,arXiv:2407.10759
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,139.8,283.4,164.5,292.3,", 2024."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,58.9,293.8,69.4,302.8,[9]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,74.3,304.0,139.8,313.0,arXiv:2503.20215
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,139.8,304.2,164.5,313.2,", 2025."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,314.6,69.4,323.6,[10]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,74.3,324.9,139.8,333.8,arXiv:2509.17765
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,139.8,325.0,164.5,334.0,", 2025."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,335.4,69.4,344.4,[11]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,345.9,299.7,354.8,model with long-audio understanding and expert reasoning abil-
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,356.3,94.9,365.2,"ities,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,98.1,356.3,105.1,365.2,in
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,105.1,356.1,150.3,365.1, Proc. ICML
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,150.3,356.3,242.2,365.2,", 2025, pp. 19358-19405."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,366.7,69.4,375.6,[12]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,74.1,387.3,126.5,396.3,Proc. NeurIPS
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,126.5,387.5,151.1,396.5,", 2025."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,397.9,69.4,406.9,[13]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,74.3,408.2,139.8,417.1,arXiv:2504.18425
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,139.8,408.3,164.5,417.3,", 2025."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,418.7,69.4,427.7,[14]
+5,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,reference,74.3,418.7,202.6,427.7,"Juan Rafael Orozco-Arroyave et al.,"
+5,8.939,8.9664,9.0,0.994,NimbusRomNo9L-Regu,reference,205.8,418.7,299.7,427.7,“New Spanish speech cor-
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,439.5,126.5,448.5,"son’s disease,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,129.7,439.5,136.7,448.5,in
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,136.7,439.4,182.4,448.4, Proc. LREC
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,182.4,439.5,256.4,448.5,", 2014, pp. 342-347."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,450.0,69.4,458.9,[15]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,90.3,449.9,93.3,458.9,´
+5,8.944,8.9664,9.0,0.995,NimbusRomNo9L-Regu,reference,74.3,460.4,218.7,469.3,"Spanish corpus of parkinsonian speech,”"
+5,8.944,8.9664,9.0,0.995,NimbusRomNo9L-ReguItal,reference,221.9,460.2,255.1,469.2,Sci. Data
+5,8.944,8.9664,9.0,0.995,NimbusRomNo9L-Regu,reference,255.1,460.4,299.8,469.3,", vol. 11, no."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,73.7,470.8,138.7,479.7,"1, pp. 1367, 2024."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,481.2,69.4,490.2,[16]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,481.3,299.7,490.1,"Hagen Jaeger, Dhaval Trivedi, and Michael Stadtschnitzer, “Mo-"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,491.7,299.7,500.5,bile device voice recordings at King’s College London (MDVR-
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,502.1,298.2,511.0,KCL) from both early and advanced Parkinson’s disease patients
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,522.8,94.5,531.8,2019.
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,533.2,69.4,542.2,[17]
+5,8.917,8.9664,9.0,0.989,NimbusRomNo9L-Regu,reference,74.3,543.7,298.2,552.6,"State-of-mind, detecting depression with AI, and cross-cultural"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,74.3,564.3,155.3,573.3,and Workshop (AVEC)
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,155.3,564.5,215.8,573.4,", 2019, pp. 3-12."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,574.9,69.4,583.9,[18]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,73.7,595.7,192.5,604.7,"114, no. 1-3, pp. 163-173, 2009."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,606.1,69.4,615.1,[19]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,616.6,102.2,625.5,disease:
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,104.9,616.6,299.8,625.5,"Description of study cohort and accuracy of diagnosis,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,73.8,626.8,122.0,635.8,Arch. Neurol.
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,122.0,626.9,247.6,635.9,", vol. 51, no. 6, pp. 585-594, 1994."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,637.4,69.4,646.3,[20]
+5,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,reference,74.3,637.4,146.4,646.3,"Saturnino Luz et al.,"
+5,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,reference,149.6,637.4,298.2,646.3,“Detecting cognitive decline using speech
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,647.8,92.4,656.7,only:
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,95.1,647.8,188.8,656.7,"The ADReSSo challenge,”"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,191.8,647.8,198.6,656.7,in
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-ReguItal,reference,198.6,647.7,262.5,656.6, Proc. Interspeech
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,262.5,647.8,299.8,656.7,", 2021, pp."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,658.2,116.9,667.1,3780-3784.
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,668.6,69.4,677.6,[21]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,668.7,145.4,677.5,"Saturnino Luz et al.,"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,148.2,668.7,299.7,677.5,“Multilingual Alzheimer’s dementia recog-
+5,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,reference,74.3,679.0,201.7,688.0,nition through spontaneous speech:
+5,8.989,8.9664,9.0,1.005,NimbusRomNo9L-Regu,reference,204.4,679.0,298.2,688.0,A signal processing grand
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,74.3,689.4,114.3,698.4,"challenge,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,117.5,689.4,124.5,698.4,in
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,124.5,689.3,177.1,698.2, Proc. ICASSP
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,177.1,689.4,233.2,698.4,", 2023, pp. 1-2."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,54.4,699.8,69.4,708.8,[22]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,74.3,699.9,298.2,708.8,"Saturnino Luz et al., “Alzheimer’s dementia recognition through"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,335.1,75.0,359.4,84.0,speech
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,359.4,75.2,442.3,84.1,", 2020, pp. 2172-2176."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,85.6,330.2,94.5,[23]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,335.1,96.0,390.4,105.0,"regularization,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,393.6,96.0,400.6,105.0,in
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,400.6,95.8,443.8,104.8, Proc. ICLR
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,443.8,96.0,468.4,105.0,", 2019."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,106.4,330.2,115.4,[24]
+5,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,reference,335.1,106.4,424.8,115.4,"Francesco Barbieri et al.,"
+5,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,reference,428.0,106.4,472.3,115.4,“TweetEval:
+5,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,reference,475.1,106.4,559.0,115.4,Unified benchmark and
+5,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,reference,335.1,116.8,506.1,125.8,"comparative evaluation for tweet classification,”"
+5,8.935,8.9664,9.0,0.993,NimbusRomNo9L-Regu,reference,509.4,116.8,516.3,125.8,in
+5,8.935,8.9664,9.0,0.993,NimbusRomNo9L-ReguItal,reference,516.3,116.7,559.0,125.6, Findings of
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,334.9,127.1,364.2,136.0,EMNLP
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,364.2,127.2,447.2,136.2,", 2020, pp. 1644-1650."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,137.6,330.2,146.6,[25]
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,335.1,147.9,363.9,156.8,ing Talk
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,363.9,148.0,366.2,157.0,","
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,369.4,148.0,506.0,157.0,"Lawrence Erlbaum, 3rd edition, 2000."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,158.4,330.2,167.4,[26]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,335.1,168.9,561.0,177.8,"guistic features identify Alzheimer’s disease in narrative speech,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,334.7,179.1,402.4,188.1,J. Alzheimer’s Dis.
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,402.4,179.3,528.0,188.2,", vol. 49, no. 2, pp. 407-422, 2016."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,189.7,330.2,198.6,[27]
+5,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,reference,335.1,189.7,404.7,198.6,"Alec Radford et al.,"
+5,8.903,8.9664,9.0,0.986,NimbusRomNo9L-Regu,reference,408.0,189.7,559.0,198.6,“Robust speech recognition via large-scale
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,334.8,200.1,402.9,209.1,"weak supervision,”"
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,406.1,200.1,413.1,209.1,in
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-ReguItal,reference,413.1,199.9,458.3,208.9, Proc. ICML
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,458.3,200.1,550.2,209.1,", 2023, pp. 28492-28518."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,210.5,330.2,219.5,[28]
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,335.1,210.6,406.8,219.4,"Florian Eyben et al.,"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,410.0,210.6,560.5,219.4,“The Geneva minimalistic acoustic param-
+5,8.881,8.9664,9.0,0.981,NimbusRomNo9L-Regu,reference,335.1,221.0,560.6,229.9,"eter set (GeMAPS) for voice research and affective computing,”"
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-ReguItal,reference,335.0,231.2,442.8,240.1,IEEE Trans. Affective Comput.
+5,8.876,8.9664,9.0,0.98,NimbusRomNo9L-Regu,reference,442.8,231.4,560.6,240.3,", vol. 7, no. 2, pp. 190-202, 2016."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,241.7,330.2,250.7,[29]
+5,8.93,8.9664,9.0,0.992,NimbusRomNo9L-Regu,reference,335.1,241.8,422.9,250.7,"Benjamin Elizalde et al.,"
+5,8.93,8.9664,9.0,0.992,NimbusRomNo9L-Regu,reference,426.1,241.8,559.0,250.7,“CLAP learning audio concepts from
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,reference,335.1,252.2,442.8,261.1,"natural language supervision,”"
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,reference,446.0,252.2,452.9,261.1,in
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-ReguItal,reference,452.9,252.0,505.0,260.9, Proc. ICASSP
+5,8.921,8.9664,9.0,0.99,NimbusRomNo9L-Regu,reference,505.0,252.2,560.6,261.1,", 2023, pp. 1-5."
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,315.2,262.6,330.2,271.5,[30]
+5,8.953,8.9664,9.0,0.997,NimbusRomNo9L-Regu,reference,335.1,262.6,560.1,271.5,"Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu,"
+5,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,reference,334.6,273.0,528.5,281.9,"Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen,"
+5,8.899,8.9664,9.0,0.985,NimbusRomNo9L-Regu,reference,531.8,273.0,560.2,281.9,“LoRA:
+5,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,reference,335.1,283.4,505.3,292.3,"Low-rank adaptation of large language models,”"
+5,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,reference,508.5,283.4,515.4,292.3,in
+5,8.894,8.9664,9.0,0.984,NimbusRomNo9L-ReguItal,reference,515.4,283.3,557.9,292.2, Proc. ICLR
+5,8.894,8.9664,9.0,0.984,NimbusRomNo9L-Regu,reference,557.9,283.4,560.1,292.3,","
+5,8.966,8.9664,9.0,1.0,NimbusRomNo9L-Regu,reference,335.1,293.8,355.3,302.8,2022.

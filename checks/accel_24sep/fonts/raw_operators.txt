@@ -1,0 +1,53 @@
+== page 1 content stream
+  Tf size 7.9701   font MIXQUO+NimbusRomNo9L-Regu        x1
+  Tf size 8.9664   font MWDDEN+NimbusRomNo9L-Medi        x5
+  Tf size 8.9664   font MIXQUO+NimbusRomNo9L-Regu        x5
+  Tf size 8.9664   font SJISBO+NimbusRomNo9L-MediItal    x1
+  Tf size 11.9552  font MWDDEN+NimbusRomNo9L-Medi        x1
+  Tf size 11.9552  font EYYXUK+NimbusRomNo9L-ReguItal    x1
+  Tf size 11.9552  font MIXQUO+NimbusRomNo9L-Regu        x1
+  Tm: 98 ops, horizontal a in [0.98, 1.02], vertical d values [1.0], (b,c) values [(0.0, 0.0)]
+  cm (1.0, 0.0, 0.0, 1.0) x4
+  cm (0.99881, 0.0, 0.0, 0.99881) x1
+== page 1 form XObject xref 47 (Im1) bbox (0.0, 0.0, 244.08, 187.2)
+  Tf size 7.5      font FTXWZA+STIXGeneral-Italic        x1
+  Tf size 7.5      font CZRBLR+STIXGeneral-Regular       x1
+  Tf size 8.5      font CZRBLR+STIXGeneral-Regular       x6
+  Tf size 9.0      font CZRBLR+STIXGeneral-Regular       x21
+  cm (1.0, 0.0, -0.0, 1.0) x52
+  cm (0.0, 1.0, -1.0, 0.0) x1
+== page 2 content stream
+  Tf size 5.9776   font MIXQUO+NimbusRomNo9L-Regu        x4
+  Tf size 5.9776   font XYIOGK+CMMI6                     x11
+  Tf size 5.9776   font OMUNMB+CMSY6                     x4
+  Tf size 5.9776   font GHLMXT+CMR6                      x2
+  Tf size 8.9664   font MIXQUO+NimbusRomNo9L-Regu        x26
+  Tf size 8.9664   font XKKNSN+CMMI9                     x16
+  Tf size 8.9664   font NMDFZC+CMR9                      x22
+  Tf size 8.9664   font JJHDEO+CMEX9                     x4
+  Tf size 8.9664   font VPWISB+CMBX9                     x3
+  Tf size 8.9664   font LQUIEJ+CMSY9                     x4
+  Tf size 8.9664   font EYYXUK+NimbusRomNo9L-ReguItal    x4
+  Tf size 8.9664   font MWDDEN+NimbusRomNo9L-Medi        x5
+  Tm: 177 ops, horizontal a in [0.98, 1.02], vertical d values [1.0], (b,c) values [(0.0, 0.0)]
+  cm (1.0, 0.0, 0.0, 1.0) x1
+== page 3 content stream
+  Tf size 8.9664   font MWDDEN+NimbusRomNo9L-Medi        x8
+  Tf size 8.9664   font MIXQUO+NimbusRomNo9L-Regu        x27
+  Tf size 8.9664   font EYYXUK+NimbusRomNo9L-ReguItal    x3
+  Tf size 8.9664   font NMDFZC+CMR9                      x1
+  Tf size 8.9664   font LQUIEJ+CMSY9                     x12
+  Tm: 141 ops, horizontal a in [0.98, 1.02], vertical d values [1.0], (b,c) values [(0.0, 0.0)]
+  cm (1.0, 0.0, 0.0, 1.0) x5
+== page 4 content stream
+  Tf size 8.9664   font MWDDEN+NimbusRomNo9L-Medi        x7
+  Tf size 8.9664   font MIXQUO+NimbusRomNo9L-Regu        x16
+  Tf size 8.9664   font LQUIEJ+CMSY9                     x3
+  Tf size 8.9664   font IMVLKZ+NimbusMonL-Regu           x1
+  Tf size 8.9664   font EYYXUK+NimbusRomNo9L-ReguItal    x2
+  Tm: 120 ops, horizontal a in [0.98, 1.02], vertical d values [1.0], (b,c) values [(0.0, 0.0)]
+  cm (1.0, 0.0, 0.0, 1.0) x5
+== page 5 content stream
+  Tf size 8.9664   font MIXQUO+NimbusRomNo9L-Regu        x29
+  Tf size 8.9664   font EYYXUK+NimbusRomNo9L-ReguItal    x28
+  Tm: 111 ops, horizontal a in [0.98, 1.02], vertical d values [1.0], (b,c) values [(0.0, 0.0)]
