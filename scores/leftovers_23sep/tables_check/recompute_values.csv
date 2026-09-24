@@ -1,0 +1,23 @@
+id,claimed,claimed_lo,claimed_hi,mine,mine_lo,mine_hi,agree_4dp,source
+T7b_llm_meanof5,0.7001,0.6231,0.7727,0.7001,0.6231,0.7727,yes,release/edaic_rerun/part17/T7b/T7b_edaic300_meanof5_perclip.csv
+T7b_llm_meanof5_minus_answer,-0.1276,-0.1993,-0.0629,-0.1276,-0.1993,-0.0629,yes,same
+T7b_enc_meanof5,0.5884,0.5268,0.6523,0.5884,0.5268,0.6523,yes,same
+T7b_enc_meanof5_minus_answer,-0.2394,-0.3188,-0.1572,-0.2394,-0.3188,-0.1572,yes,same
+T7b_ans_meanof5,0.7435,0.6793,0.8065,0.7435,0.6793,0.8065,yes,same
+T7b_proj_meanof5,0.5610,0.4871,0.6339,0.5610,0.4871,0.6339,yes,same
+P23_zs_whole,0.8366,0.7786,0.8866,0.8366,0.7786,0.8866,yes,part23/A/A2_edaic_whole_zeroshot_perclip.csv
+P23_zs_whole_minus_300s,0.0088,-0.0320,0.0510,0.0088,-0.0320,0.0510,yes,same
+zs_300s_rebuild,0.8278,0.7703,0.8822,0.8278,0.7703,0.8822,yes,same (p_yes_300s_T7b)
+P23_enc,0.5981,0.5267,0.6672,0.5981,0.5267,0.6672,yes,part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv
+P23_enc_minus_zs_whole,-0.2385,-0.3244,-0.1505,-0.2385,-0.3244,-0.1505,yes,same
+P23_proj,0.5866,0.5166,0.6585,0.5866,0.5166,0.6585,yes,same
+P23_proj_minus_zs_whole,-0.2500,-0.3339,-0.1623,-0.2500,-0.3339,-0.1623,yes,same
+P23_llm,0.7437,0.6752,0.8097,0.7437,0.6752,0.8097,yes,same
+P23_llm_minus_zs_whole,-0.0929,-0.1609,-0.0257,-0.0929,-0.1609,-0.0257,yes,same
+P23_ans,0.8359,0.7819,0.8832,0.8359,0.7819,0.8832,yes,same
+P23_ans_minus_zs_whole,-0.0007,-0.0455,0.0436,-0.0007,-0.0455,0.0436,yes,same
+P23_ft_whole,0.7931,0.7263,0.8536,0.7931,0.7263,0.8536,yes,part23/FT/FT_whole_fold*_oof.csv (p_yes)
+P23_ft_whole_minus_zs_whole,-0.0435,-0.0939,0.0027,-0.0435,-0.0939,0.0027,yes,same
+P23_ft_whole_minus_ctrl300,-0.0219,-0.0783,0.0356,-0.0219,-0.0783,0.0356,yes,same + part23/pull/p23-ft*/out/FT_ctrl300_fold*_oof.csv
+P23_ft_ctrl300,0.8150,0.7465,0.8776,0.8150,0.7465,0.8776,yes,part23/pull/p23-ft*/out/FT_ctrl300_fold*_oof.csv (p_yes)
+P23_ft_ctrl300_minus_zs300,-0.0128,-0.0483,0.0214,-0.0128,-0.0483,0.0214,yes,same

@@ -1,0 +1,31 @@
+{
+ "generated_utc": "2026-09-24T00:12:20Z",
+ "rows": 1532,
+ "rows_patched": [
+  "3a_pcgita_ans_best_stage",
+  "3a_pcgita_llm_best_stage",
+  "M11#04:B_xsys_disagree_diff_PD_minus_control",
+  "M11#10:C_mean_token_logprob_diff_PD_minus_control",
+  "M11#16:C_compression_ratio_diff_PD_minus_control",
+  "M11#22:D_n_words_30s_diff_PD_minus_control",
+  "M11#33:B_xsys_disagree_MEDIAN_diff_PD_minus_control",
+  "M11#36:B_xsys_disagree_ge20w_MEAN_diff_PD_minus_control"
+ ],
+ "agree_4dp_by_part_first_clause": {
+  "16 no twin": 14,
+  "16 yes": 556,
+  "16 yes, second record only": 10,
+  "17 no twin": 36,
+  "17 yes": 254
+ },
+ "agree_4dp_full_text_counts": {
+  "16 yes (twin file)": 548,
+  "16 no twin": 14,
+  "16 yes (twin file); interval: differs": 8,
+  "16 yes (second record only, not a recompute)": 10,
+  "17 yes (twin file)": 254,
+  "17 no twin": 36
+ },
+ "md5_old": "d429468aa32bf4575f41fedb9bac4a49",
+ "md5_out": "8d2c24e7d031ab81dd075244e162d4e1"
+}

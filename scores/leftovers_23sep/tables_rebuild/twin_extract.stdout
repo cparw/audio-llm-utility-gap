@@ -1,0 +1,4 @@
+rows 870
+matched 763 of which CI yes 579
+no match 107 disagree-candidates 9
+Counter({('M9', True): 100, ('POD4', True): 60, ('T5', True): 50, ('POD4B', True): 48, ('M8', True): 42, ('T3', True): 39, ('M11', False): 36, ('POD1', True): 35, ('T1', True): 32, ('T2', False): 32, ('T4', True): 31, ('M4', True): 30, ('T2', True): 30, ('T6', True): 30, ('T7', True): 29, ('MEDAIC', True): 23, ('M5', True): 22, ('M7', True): 22, ('POD2', True): 22, ('POD3', True): 20, ('M2', True): 17, ('T7b', True): 17, ('SEED', True): 16, ('M1', True): 14, ('EDAICFULL', True): 12, ('POD3', False): 12, ('Q3Ofix', True): 9, ('POD4', False): 8, ('M5', False): 7, ('M10', True): 5, ('M3', True): 5, ('M3', False): 4, ('M11', True): 2, ('M7', False): 2, ('M9', False): 2, ('POD2', False): 2, ('M7fix', True): 1, ('M7fix', False): 1, ('SEED', False): 1})
