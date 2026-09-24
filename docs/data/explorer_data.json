@@ -105,40 +105,40 @@
     "language": "English",
     "clips": 275,
     "speakers": 275,
-    "audio_heard": "first 300 s of the participant's turns",
+    "audio_heard": "the participant's turns up to 900 s, processor cut lifted",
     "zero_shot": {
-     "auc": 0.8278,
+     "auc": 0.8366,
      "ci": [
-      0.7703,
-      0.8822
+      0.7786,
+      0.8866
      ]
     },
     "probe_encoder": {
-     "auc": 0.5884,
+     "auc": 0.5981,
      "ci": [
-      0.5268,
-      0.6523
+      0.5267,
+      0.6672
      ]
     },
     "probe_lm": {
-     "auc": 0.7001,
+     "auc": 0.7437,
      "ci": [
-      0.6231,
-      0.7727
+      0.6752,
+      0.8097
      ],
      "minus_answer": {
-      "value": -0.1276,
+      "value": -0.0929,
       "ci": [
-       -0.1993,
-       -0.0629
+       -0.1609,
+       -0.0257
       ]
      }
     },
     "gap": {
-     "value": -0.2394,
+     "value": -0.2385,
      "ci": [
-      -0.3188,
-      -0.1572
+      -0.3244,
+      -0.1505
      ],
      "excludes_zero": true,
      "interval_basis": "Paired interval, probe averaged over five fold assignments."

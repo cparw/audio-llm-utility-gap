@@ -62,7 +62,7 @@ Qwen2.5-Omni Pitt middle tertile zero shot            0.6665   0.5799   0.7479  
      Pitt all-708     enc 0.7968 (5 repeats)   proj 0.7632 (1)   llm 0.8125 (5)   ans 0.7744 (5)   n=708
         source /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_nested_repeats.json
   Also skipped: Pitt all-708 projector fine-tune. edaic_rerun/pitt_all/sft_pitt_all_state.json has
-     "done": [0, 1] — 2 of 5 folds — and no sft_pitt_all_oof.csv exists. Incomplete, so no CI.
+     "done": [0, 1], 2 of 5 folds, and no sft_pitt_all_oof.csv exists. Incomplete, so no CI.
   Also skipped: the middle-tertile subset of the four Pitt probes, same reason as the probes above.
 
 ====================================================================================================================================
