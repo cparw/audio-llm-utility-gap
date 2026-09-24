@@ -1,0 +1,107 @@
+id	claimed	recomputed	verified
+T5_pitt_enc_pod10_maxabs	0	0	yes
+T5_pitt_enc_pod10_match4dp	32/32	32/32	yes
+T5_pitt_enc_pod10_meanstd_match4dp	32/32 and 32/32	32/32 and 32/32	yes
+T5_pitt_enc_pod10_layers_above	31/32 vs 31/32	31/32 vs 31/32	yes
+T5_pitt_proj_pod10_maxabs	0	0	yes
+T5_pitt_proj_pod10_match4dp	1/1	1/1	yes
+T5_pitt_proj_pod10_meanstd_match4dp	1/1 and 1/1	1/1 and 1/1	yes
+T5_pitt_llm_pod2_maxabs	0	0	yes
+T5_pitt_llm_pod2_match4dp	29/29	29/29	yes
+T5_pitt_llm_pod2_meanstd_match4dp	29/29 and 29/29	29/29 and 29/29	yes
+T5_pitt_ans_pod13_maxabs	0	0	yes
+T5_pitt_ans_pod13_match4dp	29/29	29/29	yes
+T5_pitt_ans_pod13_meanstd_match4dp	29/29 and 29/29	29/29 and 29/29	yes
+T5_edaic_first30_enc_pod10_maxabs	0	0	yes
+T5_edaic_first30_enc_pod10_match4dp	32/32	32/32	yes
+T5_edaic_first30_enc_pod10_meanstd_match4dp	32/32 and 32/32	32/32 and 32/32	yes
+T5_edaic_first30_enc_pod10_layers_above	2/32 vs 2/32	2/32 vs 2/32	yes
+T5_edaic_first30_enc_pod9_maxabs	0	0	yes
+T5_edaic_first30_enc_pod9_match4dp	32/32	32/32	yes
+T5_edaic_first30_enc_pod9_meanstd_match4dp	32/32 and 32/32	32/32 and 32/32	yes
+T5_edaic_first30_enc_pod9_layers_above	2/32 vs 2/32	2/32 vs 2/32	yes
+T5_edaic_first30_proj_pod10_maxabs	0	0	yes
+T5_edaic_first30_proj_pod10_match4dp	1/1	1/1	yes
+T5_edaic_first30_proj_pod10_meanstd_match4dp	1/1 and 1/1	1/1 and 1/1	yes
+T5_edaic_first30_proj_pod9_maxabs	0	0	yes
+T5_edaic_first30_proj_pod9_match4dp	1/1	1/1	yes
+T5_edaic_first30_proj_pod9_meanstd_match4dp	1/1 and 1/1	1/1 and 1/1	yes
+T5_edaic_first30_llm_pod5_maxabs	0	0	yes
+T5_edaic_first30_llm_pod5_match4dp	29/29	29/29	yes
+T5_edaic_first30_llm_pod5_meanstd_match4dp	29/29 and 29/29	29/29 and 29/29	yes
+T5_edaic_first30_ans_pod6_maxabs	0	0	yes
+T5_edaic_first30_ans_pod6_match4dp	29/29	29/29	yes
+T5_edaic_first30_ans_pod6_meanstd_match4dp	29/29 and 29/29	29/29 and 29/29	yes
+T5_adress2020_enc_pod7_maxabs	2.88e-03	2.88e-03	yes
+T5_adress2020_enc_pod7_match4dp	1/32	1/32	yes
+T5_adress2020_enc_pod7_meanstd_match4dp	5/32 and 1/32	5/32 and 1/32	yes
+T5_adress2020_enc_pod7_layers_above	32/32 vs 32/32	32/32 vs 32/32	yes
+T5_adress2020_proj_pod7_maxabs	1.31e-03	1.31e-03	yes
+T5_adress2020_proj_pod7_match4dp	0/1	0/1	yes
+T5_adress2020_proj_pod7_meanstd_match4dp	0/1 and 0/1	0/1 and 0/1	yes
+T5_neurovoz_enc_pod8_maxabs	1.09e-03	1.09e-03	yes
+T5_neurovoz_enc_pod8_match4dp	5/32	5/32	yes
+T5_neurovoz_enc_pod8_meanstd_match4dp	1/32 and 4/32	1/32 and 4/32	yes
+T5_neurovoz_enc_pod8_layers_above	32/32 vs 32/32	32/32 vs 32/32	yes
+T5_neurovoz_proj_pod8_maxabs	4.96e-06	4.96e-06	yes
+T5_neurovoz_proj_pod8_match4dp	0/1	0/1	yes
+T5_neurovoz_proj_pod8_meanstd_match4dp	0/1 and 0/1	0/1 and 0/1	yes
+T5_edaic_full_enc_pod9_maxabs	2.97e-03	2.97e-03	yes
+T5_edaic_full_enc_pod9_match4dp	2/32	2/32	yes
+T5_edaic_full_enc_pod9_meanstd_match4dp	0/32 and 0/32	0/32 and 0/32	yes
+T5_edaic_full_enc_pod9_layers_above	0/32 vs 0/32	0/32 vs 0/32	yes
+T5_edaic_full_proj_pod9_maxabs	7.25e-04	7.25e-04	yes
+T5_edaic_full_proj_pod9_match4dp	0/1	0/1	yes
+T5_edaic_full_proj_pod9_meanstd_match4dp	0/1 and 0/1	0/1 and 0/1	yes
+T5_adresso_enc_refit	not possible	see not_possible check	yes
+T5_pcgita_enc_refit	not possible	see not_possible check	yes
+T5_kcl_enc_refit	not possible	see not_possible check	yes
+T5_edaic_mid300_enc_refit	not possible	see not_possible check	yes
+T5_edaic_mid30_enc_refit	not possible	see not_possible check	yes
+T5_diag_pitt_enc_macfile_pod10	5.37e-02; 0/32	5.37e-02; 0/32	yes
+T5_diag_pitt_enc_mac_macfile_mac	5.34e-02; 0/32	5.34e-02; 0/32	yes
+T5_diag_pitt_enc_mac_podfile_mac	5.62e-04; 11/32	5.62e-04; 11/32	yes
+T5_diag_pitt_enc_exact_script_pod1	6.78e-04; 8/32	6.78e-04; 8/32	yes
+T5_diag_pitt_enc_podfile_f64_pod10	4.65e-04; 8/32	4.65e-04; 8/32	yes
+T5_diag_pitt_enc_podfile_thr8_pod10	5.62e-04; 4/32	5.62e-04; 4/32	yes
+T5_diag_pitt_enc_podfile_ctHaswell_pod10	6.78e-04; 8/32	6.78e-04; 8/32	yes
+T5_diag_pitt_enc_podfile_ctZen_pod10	6.78e-04; 8/32	6.78e-04; 8/32	yes
+T5_diag_pitt_enc_podfile_ctSandybridge_pod10	4.84e-04; 8/32	4.84e-04; 8/32	yes
+T5_diag_pitt_enc_podfile_ctPrescott_pod10	5.42e-04; 5/32	5.42e-04; 5/32	yes
+T5_diag_pitt_enc_podfile_ctSkylakeX_pod10	0; 32/32	0; 32/32	yes
+T5_diag_pitt_enc_vrefit_pod10	1.11e-16; 32/32	1.11e-16; 32/32	yes
+T5_diag_edaic_first30_enc_macfile_pod10	8.79e-02; 0/32	8.79e-02; 0/32	yes
+T5_diag_edaic_first30_enc_macfile_pod9	8.79e-02; 0/32	8.79e-02; 0/32	yes
+T5_diag_edaic_first30_enc_mac_macfile_mac	8.77e-02; 0/32	8.77e-02; 0/32	yes
+T5_diag_edaic_first30_enc_mac_podfile_mac	8.70e-04; 4/32	8.70e-04; 4/32	yes
+T5_diag_edaic_first30_enc_exact_script_pod4	5.07e-04; 7/32	5.07e-04; 7/32	yes
+T5_diag_edaic_first30_enc_podfile_f64_pod10	1.09e-03; 5/32	1.09e-03; 5/32	yes
+T5_diag_edaic_first30_enc_podfile_f64_pod9	1.09e-03; 5/32	1.09e-03; 5/32	yes
+T5_diag_edaic_first30_enc_podfile_thr8_pod10	0; 32/32	0; 32/32	yes
+T5_diag_edaic_first30_enc_podfile_thr8_pod9	0; 32/32	0; 32/32	yes
+T5_diag_edaic_first30_enc_podfile_ctHaswell_pod10	5.07e-04; 7/32	5.07e-04; 7/32	yes
+T5_diag_edaic_first30_enc_podfile_ctHaswell_pod9	5.07e-04; 7/32	5.07e-04; 7/32	yes
+T5_diag_edaic_first30_enc_podfile_ctZen_pod10	5.07e-04; 7/32	5.07e-04; 7/32	yes
+T5_diag_edaic_first30_enc_podfile_ctZen_pod9	5.07e-04; 7/32	5.07e-04; 7/32	yes
+T5_diag_edaic_first30_enc_podfile_ctSandybridge_pod10	6.52e-04; 3/32	6.52e-04; 3/32	yes
+T5_diag_edaic_first30_enc_podfile_ctSandybridge_pod9	6.52e-04; 3/32	6.52e-04; 3/32	yes
+T5_diag_edaic_first30_enc_podfile_ctPrescott_pod10	5.80e-04; 6/32	5.80e-04; 6/32	yes
+T5_diag_edaic_first30_enc_podfile_ctPrescott_pod9	5.80e-04; 6/32	5.80e-04; 6/32	yes
+T5_diag_edaic_first30_enc_podfile_ctSkylakeX_pod10	0; 32/32	0; 32/32	yes
+T5_diag_edaic_first30_enc_podfile_ctSkylakeX_pod9	0; 32/32	0; 32/32	yes
+T5_diag_edaic_first30_enc_vrefit_pod10	1.11e-16; 32/32	1.11e-16; 32/32	yes
+T5_diag_edaic_first30_enc_vrefit_pod9	1.11e-16; 32/32	1.11e-16; 32/32	yes
+T5_folds_pitt_encproj_pod1	pod file 468/468; Mac file 125/468	pod file 468/468; Mac file 125/468	yes
+T5_folds_edaic30_encproj_pod10	pod file 275/275; Mac file 20/275	pod file 275/275; Mac file 20/275	yes
+T5_folds_pitt_encproj_pod10	pod file 468/468; Mac file 125/468	pod file 468/468; Mac file 125/468	yes
+T5_folds_pitt_ans_pod13	pod file 468/468; Mac file 125/468	pod file 468/468; Mac file 125/468	yes
+T5_folds_pitt_llm_pod2	pod file 468/468; Mac file 125/468	pod file 468/468; Mac file 125/468	yes
+T5_folds_pitt_ans_pod3	pod file 468/468; Mac file 125/468	pod file 468/468; Mac file 125/468	yes
+T5_folds_edaic30_encproj_pod4	pod file 275/275; Mac file 20/275	pod file 275/275; Mac file 20/275	yes
+T5_folds_edaic30_llm_pod5	pod file 275/275; Mac file 20/275	pod file 275/275; Mac file 20/275	yes
+T5_folds_edaic30_ans_pod6	pod file 275/275; Mac file 20/275	pod file 275/275; Mac file 20/275	yes
+T5_folds_edaic30_encproj_pod9	pod file 275/275; Mac file 20/275	pod file 275/275; Mac file 20/275	yes
+T5_folds_edaic30_encproj_mac	pod file 20/275; Mac file 275/275	pod file 20/275; Mac file 275/275	yes
+T5_folds_pitt_encproj_mac	pod file 125/468; Mac file 468/468	pod file 125/468; Mac file 468/468	yes
+T5_diag_pitt_enc_p17_verifier_refit_explained	1.11e-16	1.11e-16	yes
+T5_diag_edaic_first30_enc_p17_verifier_refit_explained	1.11e-16	1.11e-16	yes

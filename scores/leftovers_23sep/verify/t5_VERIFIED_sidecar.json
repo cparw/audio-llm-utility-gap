@@ -1,0 +1,1706 @@
+{
+ "task": "leftovers_23sep verify t5 (independent verifier)",
+ "date": "2026-09-24T00:08:03.753415Z",
+ "outputs": [
+  "scores/leftovers_23sep/verify/t5_VERIFIED.tsv",
+  "scores/leftovers_23sep/t5_verify/t5_VERIFIED_rows.tsv",
+  "scores/leftovers_23sep/verify/t5_VERIFIED_sidecar.json"
+ ],
+ "method": [
+  "File level: every one of the 106 rows of t5/t5_values.tsv recomputed from the raw per-layer files the task pulled (own csv reader, own saved-curve lookup, own 4 dp string rule, answers from the zero-shot score files with own midrank AUC); 106 of 106 agree (t5v/t5_VERIFIED_rows.tsv).",
+  "Own refit: states subsets built by my own prep from the ORIGINAL sources (not the t5 inputs), own refit code (own GroupKFold reimplementation with stable tie order, checked equal to sklearn 1.9.1 GroupKFold and to folds/*_pod.csv clip for clip; per layer StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'); own midrank AUC, plus sklearn roc_auc_score on the pooled vector for the bit-level check), 1 BLAS thread, on 7 RunPod CPU pods with sklearn 1.9.1, numpy 2.1.2, scipy 1.18.1, Python 3.12.3.",
+  "Mac runs: same code with the Mac libraries (sklearn 1.7.2, numpy 2.2.6, scipy 1.15.3, Accelerate) for the Mac-lib and P17-verifier diagnostics.",
+  "Not-possible check: scanned every npz over 300 kB under Desktop/release and G-Drive paper work for arrays with an encoder stream and clip names, compared clip sets and p_yes with the 5 saved zero-shot runs."
+ ],
+ "scripts": {
+  "upload_one.sh": "51fe6a75c0153fccf2b691be51fb23edccb9901bf3cda1a9353ee06c638742aa",
+  "v5_compare.py": "7a14c56ea69e3d452d6fbce26e3c6284ac6f4b8a009118c86bc51a4dc8af30f6",
+  "v5_driver.sh": "cc3e99e2daa26617e2720ef9dd2ba28c4f908e6a4a8f249d11975a31a623589a",
+  "v5_envfolds.py": "34d9d90ebce861aa19a522e3bfbd4bb55a2303a3a773d926bf834f35735bb0c5",
+  "v5_mine.py": "42ed1db4ca7cd6e31007c971e026bf79f257ee84c84832c1b6474c8b94d8c099",
+  "v5_notpossible.py": "94edfbf547ac72ba121882719da24be11fc1cc39815c3fa7d26145bc9eb66222",
+  "v5_prep.py": "43b6283a295045c9cf95402f570e31ce90498d5da55766a75470a50f3cfdbbb5",
+  "v5_refit.py": "ced9793dfcb770c247898ef513e4419fc25edf7488c29ce90c7fcc3fab5fd36f",
+  "v5_refit_mac.py": "88dc1dd7bc1f588b4114a70d3d99e8e12bba1317bd26e55e0cbbeff2a399e526",
+  "v5_sidecar.py": "425033be51074c14246189d0fe5b03dc513735a6972367b3c158655ff95d4a83"
+ },
+ "inputs": {
+  "src_adress2020": {
+   "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+   "sha256": "669e745eae2c98de9db33486f7c6ff1d05627a22c2a6b5992ce7dee8ce3c2501"
+  },
+  "adress2020_encproj": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/adress2020_encproj.npz",
+   "source": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adress2020_orig_states.npz",
+   "sha256": "a92b4ab037ad0899c8d46e6aa82235a5bf0899ff9c6f9360326cbab9e069a40b",
+   "arrays": {
+    "enc": [
+     [
+      156,
+      32,
+      1280
+     ],
+     "float32",
+     "6d0ab6357b3a713380a51a955908e9a2b65efc247b3e30d494713332be8357f7"
+    ],
+    "proj": [
+     [
+      156,
+      1,
+      3584
+     ],
+     "float32",
+     "4c7ad426279fb05a16cf4552f44e58436b5f42dabdbde9fbd7d783a7177d64bb"
+    ],
+    "label": [
+     [
+      156
+     ],
+     "int64",
+     "43e3856be3ac16f960074b62f339ab47b449fca5164647f04258adfe1052fdfa"
+    ],
+    "spk": [
+     [
+      156
+     ],
+     "<U4",
+     "0f2f9011a34cd1958c1ab459e73b562b26118e8d28c5a3c4125d619264e7d6c0"
+    ],
+    "name": [
+     [
+      156
+     ],
+     "<U8",
+     "1f57d590abf1159f7510035e9d98f48d36b95b5e79424a84ef83ca9c6d7fd067"
+    ]
+   }
+  },
+  "src_neurovoz": {
+   "file": "<local data dir>/release_from_mac/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_states.npz",
+   "sha256": "812a627198bd5ee2335592f6000208ea704217fca636d671c2a68f2d0a41664a"
+  },
+  "neurovoz_encproj": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/neurovoz_encproj.npz",
+   "source": "<local data dir>/release_from_mac/scores/part20/POD6/B_neurovoz_full_check/omni_nvfull_states.npz",
+   "sha256": "71098e529ba8ec6c782dfb781ce2e3c887aa2ec2c39a25fee7556ef28889fb52",
+   "arrays": {
+    "enc": [
+     [
+      1270,
+      32,
+      1280
+     ],
+     "float32",
+     "055c19140fc33acb080e9369a124c713983917a7be9afd26e5adb53798ba19f4"
+    ],
+    "proj": [
+     [
+      1270,
+      1,
+      3584
+     ],
+     "float32",
+     "225d428001dc38657c60a4cd0cc06e26141d642bdf5dda72a67ea5649c8c9b19"
+    ],
+    "label": [
+     [
+      1270
+     ],
+     "int64",
+     "bdf3bea1e81f018d40616d616ac35e515f97eb65b2339a9175cae29a320f09f5"
+    ],
+    "spk": [
+     [
+      1270
+     ],
+     "<U3",
+     "54a68165b01f61005e67f22f7a02372af7ebe0efc5fdf890ebe86ae4c3f57bb2"
+    ],
+    "name": [
+     [
+      1270
+     ],
+     "<U21",
+     "0e1a611b53067abb4aac8579f42e3eaf9d9928386654717fe30c44da1dd46328"
+    ]
+   }
+  },
+  "src_edaicfull": {
+   "file": "<local data dir>/release_from_mac/edaic_rerun/part17/T7_scratch/shards",
+   "order": "<local data dir>/release/edaic_rerun/part16/EDAICFULL/full_zeroshot_scores.csv",
+   "order_sha256": "9ec70d6cf53de8933489927f2610ae4abd48bff75646cddde370bc2b0c589d68",
+   "n": 275
+  },
+  "edaicfull_encproj": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaicfull_encproj.npz",
+   "source": "<local data dir>/release_from_mac/edaic_rerun/part17/T7_scratch/shards",
+   "sha256": "49a116ccef4d8deffa68064a057693c78bd47f3475a77385b9b3af8be7061d0f",
+   "arrays": {
+    "enc": [
+     [
+      275,
+      32,
+      1280
+     ],
+     "float32",
+     "a9913f3ad5b2d63c24d25851f0faf6616e44be47f1409cf665aa534e7cb3ef8b"
+    ],
+    "proj": [
+     [
+      275,
+      1,
+      3584
+     ],
+     "float32",
+     "bc4b41d637a03445de56e91ce3918c4ad2e0a3486aa15aff01f0ed8023680154"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64",
+     "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3",
+     "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7",
+     "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+    ]
+   }
+  },
+  "src_edaic30": {
+   "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+   "sha256": "996ac37dd4fb24ae0d2563694ea29222d25a215fedd9df92b1ec9beec77aae2f"
+  },
+  "edaic30_encproj": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaic30_encproj.npz",
+   "source": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+   "sha256": "e7f5b634748d3e7437e6fd1b2fa3fba904b6ae99e211b4780edd27f9ca57e0b2",
+   "arrays": {
+    "enc": [
+     [
+      275,
+      32,
+      1280
+     ],
+     "float32",
+     "12ecbbdd128e02624db3e031384be57accb70bbaed4422645a5db41a910def59"
+    ],
+    "proj": [
+     [
+      275,
+      1,
+      3584
+     ],
+     "float32",
+     "68cae631693850811918098dc9d8bc3c1f5dc7458673ad7b1425ed9e21d949ca"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64",
+     "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3",
+     "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7",
+     "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+    ]
+   }
+  },
+  "edaic30_llm": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaic30_llm.npz",
+   "source": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+   "sha256": "fdaf7e19fae9a33ca30d20ed4a38475a45ca370d2502538719383e900569688e",
+   "arrays": {
+    "llm": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32",
+     "daa6e9676427388f10233245e3003da850504e9ed36955ca4234133bcfd5413c"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64",
+     "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3",
+     "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7",
+     "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+    ]
+   }
+  },
+  "edaic30_ans": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/edaic30_ans.npz",
+   "source": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+   "sha256": "80705fd9930e97140a40b8a28eb401c1dbba51ed948c9bcaf561930832de424e",
+   "arrays": {
+    "ans": [
+     [
+      275,
+      29,
+      3584
+     ],
+     "float32",
+     "6e9174b5c11f9f6904e75834ea3fd45009d0d77cd0dbc41b8a58da6f49f5f097"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64",
+     "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3",
+     "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7",
+     "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+    ]
+   }
+  },
+  "src_pitt": {
+   "file": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256": "e65e69c8d83d785599d63ed767a1e242b73f4bde6997f3daeae5cd6aca3992b4"
+  },
+  "pitt_encproj": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/pitt_encproj.npz",
+   "source": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256": "92ad9f6dcd95446f1eac8ad3acf4e6348ed02c4d1912135993d0832cb01a0052",
+   "arrays": {
+    "enc": [
+     [
+      468,
+      32,
+      1280
+     ],
+     "float32",
+     "facec46379f74f9ebfb7946215364ad057f77748e68c4f71264b1d1e944c0097"
+    ],
+    "proj": [
+     [
+      468,
+      1,
+      3584
+     ],
+     "float32",
+     "14b4ece0320a1b731178840129450d7fae7a0b77e2deef444e214f6885f680e5"
+    ],
+    "label": [
+     [
+      468
+     ],
+     "int64",
+     "02488e14397dcdad674eabf0ad180018dac87f1ea16dd16517bc1942376b9162"
+    ],
+    "spk": [
+     [
+      468
+     ],
+     "<U11",
+     "efaf08a58664d47760ee7e6a2c8649bdf82c9722b7de7f62c278df35035ad795"
+    ],
+    "name": [
+     [
+      468
+     ],
+     "<U30",
+     "8c4bd22bf64a3ba9545fa0edbddd903c70a5e0137ecb822bb11a552983b1a736"
+    ]
+   }
+  },
+  "pitt_llm": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/pitt_llm.npz",
+   "source": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256": "e5f13b7425e7b377e4e3cb5b280615da37f6d03714ee578ea5b41e91d9f3c3c7",
+   "arrays": {
+    "llm": [
+     [
+      468,
+      29,
+      3584
+     ],
+     "float32",
+     "165a381278a34ef91fbfadb4d1ef5d9b8930219883c9bdcd64f6f6f2a9b5e0d1"
+    ],
+    "label": [
+     [
+      468
+     ],
+     "int64",
+     "02488e14397dcdad674eabf0ad180018dac87f1ea16dd16517bc1942376b9162"
+    ],
+    "spk": [
+     [
+      468
+     ],
+     "<U11",
+     "efaf08a58664d47760ee7e6a2c8649bdf82c9722b7de7f62c278df35035ad795"
+    ],
+    "name": [
+     [
+      468
+     ],
+     "<U30",
+     "8c4bd22bf64a3ba9545fa0edbddd903c70a5e0137ecb822bb11a552983b1a736"
+    ]
+   }
+  },
+  "pitt_ans": {
+   "file": "<local data dir>/leftovers_23sep/verify/t5v/inputs/pitt_ans.npz",
+   "source": "<local data dir>/release/overnight2/part10/o25_pitt_states.npz",
+   "sha256": "4b3877f84a6dfef87aaf250291ddec931d723aece6416384d9bf33ecedac6b67",
+   "arrays": {
+    "ans": [
+     [
+      468,
+      29,
+      3584
+     ],
+     "float32",
+     "4e894427862b6e5b97c75c1b771ffbb7bc2e559fba9966bfa14faa46fe3ec78c"
+    ],
+    "label": [
+     [
+      468
+     ],
+     "int64",
+     "02488e14397dcdad674eabf0ad180018dac87f1ea16dd16517bc1942376b9162"
+    ],
+    "spk": [
+     [
+      468
+     ],
+     "<U11",
+     "efaf08a58664d47760ee7e6a2c8649bdf82c9722b7de7f62c278df35035ad795"
+    ],
+    "name": [
+     [
+      468
+     ],
+     "<U30",
+     "8c4bd22bf64a3ba9545fa0edbddd903c70a5e0137ecb822bb11a552983b1a736"
+    ]
+   }
+  }
+ },
+ "saved_curves": {
+  "pitt_enc": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_encoder_perlayer.csv",
+   "sha256": "1e4a885cc2ddff92622ca3b94298f7f8ac5538fa955fd0f7fe93cbe5c2aafb18"
+  },
+  "pitt_proj": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_proj_perlayer.csv",
+   "sha256": "592d3db3a27e57fd7f3b6429826aafb026871fed71db47cb80de66441ce4343d"
+  },
+  "pitt_llm": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_llm_perlayer.csv",
+   "sha256": "4300f8d3869276687d98fd6d4116598cb73610009139269cf924e4ddc79cab24"
+  },
+  "pitt_ans": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_ans_perlayer.csv",
+   "sha256": "ca0dd2575907aa53ecedc52ab35b43b25856815090abc5eebf0125623ce254c2"
+  },
+  "edaic_first30_enc": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv",
+   "sha256": "aa45ad8a6a030ed70538b113f9a38d6fa1d810c466c42183a8f0fe0b0bc4dafd"
+  },
+  "edaic_first30_proj": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_proj_perlayer.csv",
+   "sha256": "a2035a1bd51860bbbc6eaa460233067ee9ba1bccf5942c66ecebbda7c66c3458"
+  },
+  "edaic_first30_llm": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_llm_perlayer.csv",
+   "sha256": "a453d88a88334729094be7fb1d5dd775431dcbaac3d43c8db52239caa931bf95"
+  },
+  "edaic_first30_ans": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_ans_perlayer.csv",
+   "sha256": "fb7a767939b4ba6a34756523c5af4c77bd0935dbf598f1bf80844b76379f5bcc"
+  },
+  "adress2020_enc": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_encoder_perlayer.csv",
+   "sha256": "e56202f096162382cdc1a0a5d4451bbb7676e5b3f3649d1b5676b8b9f3b29752"
+  },
+  "adress2020_proj": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_proj_perlayer.csv",
+   "sha256": "f6cd9d1928ce9d2a571dd2a03a16cb8411e8f39a24747c7c96de503927ca6bd7"
+  },
+  "adress2020_llm": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_llm_perlayer.csv",
+   "sha256": "77ec34eb94b808736bebc336caebb884952c377f80a580200201212a4532c547"
+  },
+  "adress2020_ans": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_ans_perlayer.csv",
+   "sha256": "90f6b6fc4740213123712dea05506eadf22819f67cc636eb290ab77243604034"
+  },
+  "neurovoz_enc": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_encoder_perlayer.csv",
+   "sha256": "126fa3cee99739a5c875ebf2d35fcbe9eebb048db7ac5cb98ad27d046f9b0e55"
+  },
+  "neurovoz_proj": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_proj_perlayer.csv",
+   "sha256": "8e27c321fed1afe68b9d62509198392d307ad6fa87c27f8cf30ced0fa55c8894"
+  },
+  "neurovoz_llm": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_llm_perlayer.csv",
+   "sha256": "7cb0b860d7c7c5aae1da2dfc33670da9555d84243326efda11019b632cad1d23"
+  },
+  "neurovoz_ans": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_ans_perlayer.csv",
+   "sha256": "d547a72980e0f7e3245f340ad2fc6da2686824e9a06b39db84b35e44241df5fc"
+  },
+  "edaic_full_enc": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv",
+   "sha256": "adbbb86b58d2d0bba56c1467a6a9ccd0206c1c1219d4fc69f2116ecc8b53fc3b"
+  },
+  "edaic_full_proj": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_proj_perlayer.csv",
+   "sha256": "13df004f06c9dccec923455248d9997578ffc556956c3756a5a20720b58081c0"
+  },
+  "edaic_full_llm": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_llm_perlayer.csv",
+   "sha256": "1e235070dd4e81e17625fcfc37444afe895230301bb089167841fe44b4fc8f52"
+  },
+  "edaic_full_ans": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_ans_perlayer.csv",
+   "sha256": "23b319d4aa57e67716ab1974073ae70b706c1cf3cd0ef38ca7a709a743312ea2"
+  }
+ },
+ "zeroshot": {
+  "pitt": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+   "answer_auc": 0.6577683068578071
+  },
+  "edaic_first30": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv",
+   "sha256": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f",
+   "answer_auc": 0.662026968247064
+  },
+  "adress2020": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "sha256": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+   "answer_auc": 0.6240959894806049
+  },
+  "neurovoz": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "sha256": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+   "answer_auc": 0.6950814953762633
+  },
+  "edaic_full": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv",
+   "sha256": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+   "answer_auc": 0.8284761490503117
+  }
+ },
+ "pyes_maxdiff": {
+  "pitt": [
+   0.0,
+   468,
+   468
+  ],
+  "edaic_first30": [
+   0.0,
+   275,
+   275
+  ],
+  "adress2020": [
+   0.03836380753010504,
+   156,
+   156
+  ],
+  "neurovoz": [
+   0.04680777214932552,
+   1270,
+   1270
+  ],
+  "edaic_full": [
+   0.030250470877691393,
+   275,
+   275
+  ]
+ },
+ "answer_edaicfull_states_run": 0.8277511961722488,
+ "pitt_figure_file_vs_omni_final_maxabs": 0.0,
+ "verifier_pods": {
+  "created": {
+   "lo-v5-1": {
+    "id": "8oud5usrhzz6lw",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:31.359 +0000 UTC"
+   },
+   "lo-v5-2": {
+    "id": "dz8vl1vmtsz0qh",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:40.085 +0000 UTC"
+   },
+   "lo-v5-3": {
+    "id": "1l2m53bcfz36uk",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:41.877 +0000 UTC"
+   },
+   "lo-v5-4": {
+    "id": "z7npjbb7u3dh7d",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:43.456 +0000 UTC"
+   },
+   "lo-v5-5": {
+    "id": "lvnqsmrj8h02co",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:31.873 +0000 UTC"
+   },
+   "lo-v5-6": {
+    "id": "ob25d2yrj20dsa",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:45.197 +0000 UTC"
+   },
+   "lo-v5-7": {
+    "id": "fjc3l7gpgr6sf2",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:47.215 +0000 UTC"
+   },
+   "lo-v5-8": {
+    "id": "ir211yli9rsl1i",
+    "costPerHr": 1.28,
+    "created": "2026-09-23 22:57:32.242 +0000 UTC"
+   },
+   "lo-v5-9": {
+    "id": "2wje2964nzgi61",
+    "costPerHr": 0.96,
+    "created": "2026-09-23 22:57:32.254 +0000 UTC"
+   }
+  },
+  "cpus": {
+   "lo-v5-1": "AMD EPYC 9654 96-Core",
+   "lo-v5-2": "AMD EPYC 9754 128-Core",
+   "lo-v5-3": "AMD EPYC 9754 128-Core",
+   "lo-v5-4": "AMD EPYC 9754 128-Core",
+   "lo-v5-6": "AMD EPYC 9654 96-Core",
+   "lo-v5-8": "AMD EPYC 7713 64-Core",
+   "lo-v5-9": "AMD EPYC 7713 64-Core"
+  },
+  "note": "lo-v5-5 and lo-v5-7 landed on AMD EPYC 7702P (Zen 2, no AVX-512) and were deleted unused at 22:59Z; lo-v5-8 and lo-v5-9 (EPYC 7713, Zen 3) ran the Zen 3 host check; the watchdog (watchdog_v5.sh, one test loop, then nohup and disown) pulled and deleted the other 7 between 23:09Z and 23:14Z and exited; all 9 ids return 404 on REST",
+  "cost_estimate_usd": 1.72
+ },
+ "not_possible": {
+  "n_npz_scanned": 1461,
+  "targets": {
+   "adresso": 237,
+   "pcgita": 1100,
+   "kcl": 37,
+   "edaic_mid300": 275,
+   "edaic_mid30": 275
+  },
+  "candidates": [
+   {
+    "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+    "target": "edaic_mid300",
+    "n_states": 275,
+    "overlap": 275,
+    "curve_n": 275,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.927450734190251
+   },
+   {
+    "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+    "target": "edaic_mid30",
+    "n_states": 275,
+    "overlap": 275,
+    "curve_n": 275,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.8927387668184535
+   },
+   {
+    "file": "<local data dir>/release/overnight2/q3o/q3o_adresso_states.npz",
+    "target": "adresso",
+    "n_states": 237,
+    "overlap": 237,
+    "curve_n": 237,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.622620029830596
+   },
+   {
+    "file": "<local data dir>/release/overnight2/q3o/q3o_kcl_states.npz",
+    "target": "kcl",
+    "n_states": 37,
+    "overlap": 37,
+    "curve_n": 37,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.6754685630057568
+   },
+   {
+    "file": "<local data dir>/release/overnight2/q3o/q3o_pcgita_states.npz",
+    "target": "pcgita",
+    "n_states": 1100,
+    "overlap": 1100,
+    "curve_n": 1100,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.6020776649852272
+   },
+   {
+    "file": "<local data dir>/ashutosh_batch2/probe/pcgita_states.npz",
+    "target": "pcgita",
+    "n_states": 1100,
+    "overlap": 1100,
+    "curve_n": 1100,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.855927384401265
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/kcl_probe_recut/kcl_states.npz",
+    "target": "kcl",
+    "n_states": 37,
+    "overlap": 37,
+    "curve_n": 37,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.8195838321500133
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz",
+    "target": "pcgita",
+    "n_states": 1100,
+    "overlap": 1100,
+    "curve_n": 1100,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.60442358497371
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/probe2/adresso_states.npz",
+    "target": "adresso",
+    "n_states": 237,
+    "overlap": 237,
+    "curve_n": 237,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.7460876712308773
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/probe2/edaic_states.npz",
+    "target": "edaic_mid300",
+    "n_states": 275,
+    "overlap": 275,
+    "curve_n": 275,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.9555961133970929
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/probe2/edaic_states.npz",
+    "target": "edaic_mid30",
+    "n_states": 275,
+    "overlap": 275,
+    "curve_n": 275,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.9359689644980689
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/probe2/kcl_states.npz",
+    "target": "kcl",
+    "n_states": 37,
+    "overlap": 37,
+    "curve_n": 37,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.8195838321500133
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/probe2/pcgita_ash_states.npz",
+    "target": "pcgita",
+    "n_states": 1100,
+    "overlap": 1100,
+    "curve_n": 1100,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.855927384401265
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/probe2/pcgita_states.npz",
+    "target": "pcgita",
+    "n_states": 1100,
+    "overlap": 1100,
+    "curve_n": 1100,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.8558984156086396
+   },
+   {
+    "file": "<local data dir>/paper1_local_runs/probe2/pcgita_states_leakyspk.npz",
+    "target": "pcgita",
+    "n_states": 1100,
+    "overlap": 1100,
+    "curve_n": 1100,
+    "enc_layers": 33,
+    "max_abs_p_yes_diff_on_overlap": 0.8558984156086396
+   },
+   {
+    "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adresso_durmatch_states.npz",
+    "target": "adresso",
+    "n_states": 161,
+    "overlap": 161,
+    "curve_n": 237,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.2186992877494
+   },
+   {
+    "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adresso_orig_states.npz",
+    "target": "adresso",
+    "n_states": 161,
+    "overlap": 161,
+    "curve_n": 237,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.04130541099081303
+   },
+   {
+    "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adresso_paronly_states.npz",
+    "target": "adresso",
+    "n_states": 161,
+    "overlap": 161,
+    "curve_n": 237,
+    "enc_layers": 32,
+    "max_abs_p_yes_diff_on_overlap": 0.2807861961766776
+   }
+  ],
+  "exact_matches": [],
+  "unnamed_encoder_files": [
+   {
+    "file": "<local data dir>/Hard drive data for paper/DementiaBank/ad_encoder_states.npz",
+    "n": 468,
+    "enc_layers": 33,
+    "omni_shaped": false,
+    "same_n_as": []
+   },
+   {
+    "file": "<local data dir>/Hard drive data for paper/adress2020/adress2020_encoder_states.npz",
+    "n": 156,
+    "enc_layers": 33,
+    "omni_shaped": false,
+    "same_n_as": []
+   },
+   {
+    "file": "<local data dir>/Hard drive data for paper/adress2020/adress2020_encoder_states_patient.npz",
+    "n": 156,
+    "enc_layers": 33,
+    "omni_shaped": false,
+    "same_n_as": []
+   },
+   {
+    "file": "<local data dir>/Hard drive data for paper/adresso/adresso_encoder_states.npz",
+    "n": 237,
+    "enc_layers": 33,
+    "omni_shaped": false,
+    "same_n_as": [
+     "adresso"
+    ]
+   },
+   {
+    "file": "<local data dir>/Hard drive data for paper/adresso/adresso_encoder_states_patient.npz",
+    "n": 237,
+    "enc_layers": 33,
+    "omni_shaped": false,
+    "same_n_as": [
+     "adresso"
+    ]
+   }
+  ],
+  "unnamed_omni_shaped_same_n": [],
+  "by_target": {
+   "edaic_mid300": [
+    "275 clips, overlap 275/275, p_yes diff 0.927",
+    "275 clips, overlap 275/275, p_yes diff 0.956"
+   ],
+   "edaic_mid30": [
+    "275 clips, overlap 275/275, p_yes diff 0.893",
+    "275 clips, overlap 275/275, p_yes diff 0.936"
+   ],
+   "adresso": [
+    "237 clips, overlap 237/237, p_yes diff 0.623",
+    "237 clips, overlap 237/237, p_yes diff 0.746",
+    "161 clips, overlap 161/237, p_yes diff 0.219",
+    "161 clips, overlap 161/237, p_yes diff 0.0413",
+    "161 clips, overlap 161/237, p_yes diff 0.281"
+   ],
+   "kcl": [
+    "37 clips, overlap 37/37, p_yes diff 0.675",
+    "37 clips, overlap 37/37, p_yes diff 0.82",
+    "37 clips, overlap 37/37, p_yes diff 0.82"
+   ],
+   "pcgita": [
+    "1100 clips, overlap 1100/1100, p_yes diff 0.602",
+    "1100 clips, overlap 1100/1100, p_yes diff 0.856",
+    "1100 clips, overlap 1100/1100, p_yes diff 0.604",
+    "1100 clips, overlap 1100/1100, p_yes diff 0.856",
+    "1100 clips, overlap 1100/1100, p_yes diff 0.856",
+    "1100 clips, overlap 1100/1100, p_yes diff 0.856"
+   ]
+  },
+  "ok": true,
+  "note": "237-clip ADReSSo states on disk are the Qwen3-Omni run (q3o) and a 33-layer encoder run (Qwen2-Audio shape); the Qwen2.5-Omni ADReSSo states (part16 POD4B) hold 161 clips",
+  "summary": "scanned 1461 npz files (>300 kB) under Desktop/release and G-Drive paper work: no states match any of the 5 saved zero-shot runs (exact matches 0); ADReSSo states found hold [161, 237] clips vs 237 in the curve; the 237-clip files are q3o_adresso_states.npz (32 encoder layers, p_yes diff 0.62), adresso_states.npz (33 encoder layers, p_yes diff 0.75), so not the Qwen2.5-Omni run; Qwen2.5-Omni ADReSSo states (part16 POD4B) are 161-clip subsets; every full-overlap file differs in p_yes by 0.60 to 0.96; adresso: 5 overlapping files; pcgita: 6 overlapping files; kcl: 3 overlapping files; edaic_mid300: 2 overlapping files; edaic_mid30: 2 overlapping files; 5 files without clip names all have [33] encoder layers (Qwen2.5-Omni has 32), unresolved 0; not fully scanned: paper1_local_runs/ports (conda envs) and the old CSCI535-SER-Final course project",
+  "summary_rebuilt_from_saved_scan": true,
+  "not_scanned": [
+   "G-Drive paper work/paper1_local_runs/ports (conda envs and model code for Kimi-Audio and Audio Flamingo) and G-Drive paper work/CSCI535-SER-Final (the older course SER project): the find did not finish in about 45 minutes and was stopped"
+  ]
+ },
+ "task_vrefit_vs_saved": {
+  "lo-t5-1:pitt_encproj__vrefit_enc.csv": {
+   "maxabs": 0.0006780317706315264,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-1:pitt_encproj__vrefit_proj.csv": {
+   "maxabs": 5.8117008911340307e-05,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-10:edaic30_encproj__vrefit_enc.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-10:edaic30_encproj__vrefit_proj.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-10:pitt_encproj__vrefit_enc.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-10:pitt_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-13:pitt_ans__vrefit_ans.csv": {
+   "maxabs": 2.220446049250313e-16,
+   "cpu": "AMD EPYC 9575F"
+  },
+  "lo-t5-2:pitt_llm__vrefit_llm.csv": {
+   "maxabs": 2.220446049250313e-16,
+   "cpu": "AMD EPYC 9754"
+  },
+  "lo-t5-3:pitt_ans__vrefit_ans.csv": {
+   "maxabs": 0.000794265788454096,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-4:edaic30_encproj__vrefit_enc.csv": {
+   "maxabs": 0.0005074670146441029,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-4:edaic30_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0003624764390314228,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-5:edaic30_llm__vrefit_llm.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9965"
+  },
+  "lo-t5-6:edaic30_ans__vrefit_ans.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9965"
+  },
+  "lo-t5-7:adress2020_encproj__vrefit_enc.csv": {
+   "maxabs": 0.002876397107166362,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-7:adress2020_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0013149243918473275,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-8:neurovoz_encproj__vrefit_enc.csv": {
+   "maxabs": 0.001091732852970706,
+   "cpu": "AMD EPYC 9655P"
+  },
+  "lo-t5-8:neurovoz_encproj__vrefit_proj.csv": {
+   "maxabs": 4.9624220589405965e-06,
+   "cpu": "AMD EPYC 9655P"
+  },
+  "lo-t5-9:edaic30_encproj__vrefit_enc.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-9:edaic30_encproj__vrefit_proj.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-9:edaicfull_encproj__vrefit_enc.csv": {
+   "maxabs": 0.002972306800058111,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-9:edaicfull_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0007249528780629566,
+   "cpu": "AMD EPYC 9654"
+  }
+ },
+ "details": {
+  "T5_pitt_enc_pod10_maxabs": {
+   "n": 32,
+   "maxabs": 0.0,
+   "m4": 32,
+   "rank_maxabs": 1.1102230246251565e-16,
+   "m4m": 32,
+   "m4s": 32,
+   "ab": 31,
+   "abs": 31
+  },
+  "T5_pitt_enc_pod10_match4dp": {
+   "n": 32,
+   "maxabs": 0.0,
+   "m4": 32,
+   "rank_maxabs": 1.1102230246251565e-16,
+   "m4m": 32,
+   "m4s": 32,
+   "ab": 31,
+   "abs": 31
+  },
+  "T5_pitt_enc_pod10_layers_above": {
+   "n": 32,
+   "maxabs": 0.0,
+   "m4": 32,
+   "rank_maxabs": 1.1102230246251565e-16,
+   "m4m": 32,
+   "m4s": 32,
+   "ab": 31,
+   "abs": 31
+  },
+  "T5_edaic_first30_enc_pod9_pod10_maxabs": {
+   "n": 32,
+   "maxabs": 0.0,
+   "m4": 32,
+   "rank_maxabs": 1.1102230246251565e-16,
+   "m4m": 32,
+   "m4s": 32,
+   "ab": 2,
+   "abs": 2
+  },
+  "T5_edaic_first30_enc_match4dp": {
+   "n": 32,
+   "maxabs": 0.0,
+   "m4": 32,
+   "rank_maxabs": 1.1102230246251565e-16,
+   "m4m": 32,
+   "m4s": 32,
+   "ab": 2,
+   "abs": 2
+  },
+  "T5_pitt_proj_llm_ans_maxabs": {
+   "proj": {
+    "n": 1,
+    "maxabs": 0.0,
+    "m4": 1,
+    "rank_maxabs": 0.0,
+    "m4m": 1,
+    "m4s": 1
+   },
+   "llm": {
+    "n": 29,
+    "maxabs": 0.0,
+    "m4": 29,
+    "rank_maxabs": 2.220446049250313e-16,
+    "m4m": 29,
+    "m4s": 29
+   },
+   "ans": {
+    "n": 29,
+    "maxabs": 0.0,
+    "m4": 29,
+    "rank_maxabs": 2.220446049250313e-16,
+    "m4m": 29,
+    "m4s": 29
+   }
+  },
+  "T5_edaic_first30_proj_llm_ans_maxabs": {
+   "proj": {
+    "n": 1,
+    "maxabs": 0.0,
+    "m4": 1,
+    "rank_maxabs": 1.1102230246251565e-16,
+    "m4m": 1,
+    "m4s": 1
+   },
+   "llm": {
+    "n": 29,
+    "maxabs": 0.0,
+    "m4": 29,
+    "rank_maxabs": 1.1102230246251565e-16,
+    "m4m": 29,
+    "m4s": 29
+   },
+   "ans": {
+    "n": 29,
+    "maxabs": 0.0,
+    "m4": 29,
+    "rank_maxabs": 1.1102230246251565e-16,
+    "m4m": 29,
+    "m4s": 29
+   }
+  },
+  "T5_adress2020_enc_pod7": {
+   "n": 32,
+   "maxabs": 0.002876397107166251,
+   "m4": 1,
+   "rank_maxabs": 0.002876397107166362,
+   "m4m": 5,
+   "m4s": 1,
+   "ab": 32,
+   "abs": 32
+  },
+  "T5_neurovoz_enc_pod8": {
+   "n": 32,
+   "maxabs": 0.001091732852970706,
+   "m4": 5,
+   "rank_maxabs": 0.001091732852970706,
+   "m4m": 1,
+   "m4s": 4,
+   "ab": 32,
+   "abs": 32
+  },
+  "T5_edaic_full_enc_pod9": {
+   "n": 32,
+   "maxabs": 0.002972306800058,
+   "m4": 2,
+   "rank_maxabs": 0.002972306800058111,
+   "m4m": 0,
+   "m4s": 0,
+   "ab": 0,
+   "abs": 0
+  },
+  "T5_adresso_pcgita_kcl_mid300_mid30_enc_refit": {
+   "n_npz_scanned": 1461,
+   "targets": {
+    "adresso": 237,
+    "pcgita": 1100,
+    "kcl": 37,
+    "edaic_mid300": 275,
+    "edaic_mid30": 275
+   },
+   "candidates": [
+    {
+     "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+     "target": "edaic_mid300",
+     "n_states": 275,
+     "overlap": 275,
+     "curve_n": 275,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.927450734190251
+    },
+    {
+     "file": "<local data dir>/release/overnight2/part10/o25_edaic_states.npz",
+     "target": "edaic_mid30",
+     "n_states": 275,
+     "overlap": 275,
+     "curve_n": 275,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.8927387668184535
+    },
+    {
+     "file": "<local data dir>/release/overnight2/q3o/q3o_adresso_states.npz",
+     "target": "adresso",
+     "n_states": 237,
+     "overlap": 237,
+     "curve_n": 237,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.622620029830596
+    },
+    {
+     "file": "<local data dir>/release/overnight2/q3o/q3o_kcl_states.npz",
+     "target": "kcl",
+     "n_states": 37,
+     "overlap": 37,
+     "curve_n": 37,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.6754685630057568
+    },
+    {
+     "file": "<local data dir>/release/overnight2/q3o/q3o_pcgita_states.npz",
+     "target": "pcgita",
+     "n_states": 1100,
+     "overlap": 1100,
+     "curve_n": 1100,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.6020776649852272
+    },
+    {
+     "file": "<local data dir>/ashutosh_batch2/probe/pcgita_states.npz",
+     "target": "pcgita",
+     "n_states": 1100,
+     "overlap": 1100,
+     "curve_n": 1100,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.855927384401265
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/kcl_probe_recut/kcl_states.npz",
+     "target": "kcl",
+     "n_states": 37,
+     "overlap": 37,
+     "curve_n": 37,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.8195838321500133
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz",
+     "target": "pcgita",
+     "n_states": 1100,
+     "overlap": 1100,
+     "curve_n": 1100,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.60442358497371
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/probe2/adresso_states.npz",
+     "target": "adresso",
+     "n_states": 237,
+     "overlap": 237,
+     "curve_n": 237,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.7460876712308773
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/probe2/edaic_states.npz",
+     "target": "edaic_mid300",
+     "n_states": 275,
+     "overlap": 275,
+     "curve_n": 275,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.9555961133970929
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/probe2/edaic_states.npz",
+     "target": "edaic_mid30",
+     "n_states": 275,
+     "overlap": 275,
+     "curve_n": 275,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.9359689644980689
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/probe2/kcl_states.npz",
+     "target": "kcl",
+     "n_states": 37,
+     "overlap": 37,
+     "curve_n": 37,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.8195838321500133
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/probe2/pcgita_ash_states.npz",
+     "target": "pcgita",
+     "n_states": 1100,
+     "overlap": 1100,
+     "curve_n": 1100,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.855927384401265
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/probe2/pcgita_states.npz",
+     "target": "pcgita",
+     "n_states": 1100,
+     "overlap": 1100,
+     "curve_n": 1100,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.8558984156086396
+    },
+    {
+     "file": "<local data dir>/paper1_local_runs/probe2/pcgita_states_leakyspk.npz",
+     "target": "pcgita",
+     "n_states": 1100,
+     "overlap": 1100,
+     "curve_n": 1100,
+     "enc_layers": 33,
+     "max_abs_p_yes_diff_on_overlap": 0.8558984156086396
+    },
+    {
+     "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adresso_durmatch_states.npz",
+     "target": "adresso",
+     "n_states": 161,
+     "overlap": 161,
+     "curve_n": 237,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.2186992877494
+    },
+    {
+     "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adresso_orig_states.npz",
+     "target": "adresso",
+     "n_states": 161,
+     "overlap": 161,
+     "curve_n": 237,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.04130541099081303
+    },
+    {
+     "file": "<local data dir>/release_from_mac/edaic_rerun/part16/POD4B/states/p16_adresso_paronly_states.npz",
+     "target": "adresso",
+     "n_states": 161,
+     "overlap": 161,
+     "curve_n": 237,
+     "enc_layers": 32,
+     "max_abs_p_yes_diff_on_overlap": 0.2807861961766776
+    }
+   ],
+   "exact_matches": [],
+   "unnamed_encoder_files": [
+    {
+     "file": "<local data dir>/Hard drive data for paper/DementiaBank/ad_encoder_states.npz",
+     "n": 468,
+     "enc_layers": 33,
+     "omni_shaped": false,
+     "same_n_as": []
+    },
+    {
+     "file": "<local data dir>/Hard drive data for paper/adress2020/adress2020_encoder_states.npz",
+     "n": 156,
+     "enc_layers": 33,
+     "omni_shaped": false,
+     "same_n_as": []
+    },
+    {
+     "file": "<local data dir>/Hard drive data for paper/adress2020/adress2020_encoder_states_patient.npz",
+     "n": 156,
+     "enc_layers": 33,
+     "omni_shaped": false,
+     "same_n_as": []
+    },
+    {
+     "file": "<local data dir>/Hard drive data for paper/adresso/adresso_encoder_states.npz",
+     "n": 237,
+     "enc_layers": 33,
+     "omni_shaped": false,
+     "same_n_as": [
+      "adresso"
+     ]
+    },
+    {
+     "file": "<local data dir>/Hard drive data for paper/adresso/adresso_encoder_states_patient.npz",
+     "n": 237,
+     "enc_layers": 33,
+     "omni_shaped": false,
+     "same_n_as": [
+      "adresso"
+     ]
+    }
+   ],
+   "unnamed_omni_shaped_same_n": [],
+   "by_target": {
+    "edaic_mid300": [
+     "275 clips, overlap 275/275, p_yes diff 0.927",
+     "275 clips, overlap 275/275, p_yes diff 0.956"
+    ],
+    "edaic_mid30": [
+     "275 clips, overlap 275/275, p_yes diff 0.893",
+     "275 clips, overlap 275/275, p_yes diff 0.936"
+    ],
+    "adresso": [
+     "237 clips, overlap 237/237, p_yes diff 0.623",
+     "237 clips, overlap 237/237, p_yes diff 0.746",
+     "161 clips, overlap 161/237, p_yes diff 0.219",
+     "161 clips, overlap 161/237, p_yes diff 0.0413",
+     "161 clips, overlap 161/237, p_yes diff 0.281"
+    ],
+    "kcl": [
+     "37 clips, overlap 37/37, p_yes diff 0.675",
+     "37 clips, overlap 37/37, p_yes diff 0.82",
+     "37 clips, overlap 37/37, p_yes diff 0.82"
+    ],
+    "pcgita": [
+     "1100 clips, overlap 1100/1100, p_yes diff 0.602",
+     "1100 clips, overlap 1100/1100, p_yes diff 0.856",
+     "1100 clips, overlap 1100/1100, p_yes diff 0.604",
+     "1100 clips, overlap 1100/1100, p_yes diff 0.856",
+     "1100 clips, overlap 1100/1100, p_yes diff 0.856",
+     "1100 clips, overlap 1100/1100, p_yes diff 0.856"
+    ]
+   },
+   "ok": true,
+   "note": "237-clip ADReSSo states on disk are the Qwen3-Omni run (q3o) and a 33-layer encoder run (Qwen2-Audio shape); the Qwen2.5-Omni ADReSSo states (part16 POD4B) hold 161 clips",
+   "summary": "scanned 1461 npz files (>300 kB) under Desktop/release and G-Drive paper work: no states match any of the 5 saved zero-shot runs (exact matches 0); ADReSSo states found hold [161, 237] clips vs 237 in the curve; the 237-clip files are q3o_adresso_states.npz (32 encoder layers, p_yes diff 0.62), adresso_states.npz (33 encoder layers, p_yes diff 0.75), so not the Qwen2.5-Omni run; Qwen2.5-Omni ADReSSo states (part16 POD4B) are 161-clip subsets; every full-overlap file differs in p_yes by 0.60 to 0.96; adresso: 5 overlapping files; pcgita: 6 overlapping files; kcl: 3 overlapping files; edaic_mid300: 2 overlapping files; edaic_mid30: 2 overlapping files; 5 files without clip names all have [33] encoder layers (Qwen2.5-Omni has 32), unresolved 0; not fully scanned: paper1_local_runs/ports (conda envs) and the old CSCI535-SER-Final course project",
+   "summary_rebuilt_from_saved_scan": true,
+   "not_scanned": [
+    "G-Drive paper work/paper1_local_runs/ports (conda envs and model code for Kimi-Audio and Audio Flamingo) and G-Drive paper work/CSCI535-SER-Final (the older course SER project): the find did not finish in about 45 minutes and was stopped"
+   ]
+  },
+  "T5_diag_p17_verifier_refit_explained": {
+   "dp": 1.1102230246251565e-16,
+   "de": 1.1102230246251565e-16,
+   "cp": {
+    "n": 32,
+    "maxabs": 0.053409531189461346,
+    "m4": 0,
+    "rank_maxabs": 0.053409531189461346,
+    "m4m": 0,
+    "m4s": 0
+   },
+   "ce": {
+    "n": 32,
+    "maxabs": 0.08771929824561403,
+    "m4": 0,
+    "rank_maxabs": 0.08771929824561403,
+    "m4m": 0,
+    "m4s": 0
+   }
+  },
+  "T5_diag_folds": {
+   "pods": {
+    "pitt": [
+     [
+      "lo-v5-1",
+      "1.9.1",
+      468,
+      468,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ],
+     [
+      "lo-v5-3",
+      "1.9.1",
+      468,
+      468,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ],
+     [
+      "lo-v5-4",
+      "1.9.1",
+      468,
+      468,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ],
+     [
+      "lo-v5-8",
+      "1.9.1",
+      468,
+      468,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ],
+     [
+      "lo-v5-9",
+      "1.9.1",
+      468,
+      468,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ]
+    ],
+    "edaic": [
+     [
+      "lo-v5-2",
+      "1.9.1",
+      275,
+      275,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ],
+     [
+      "lo-v5-6",
+      "1.9.1",
+      275,
+      275,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ],
+     [
+      "lo-v5-8",
+      "1.9.1",
+      275,
+      275,
+      false,
+      [
+       "indices = np.argsort(n_samples_per_group, kind=\"stable\")[::-1]"
+      ]
+     ]
+    ]
+   },
+   "mac": {
+    "pitt": {
+     "n": 468,
+     "n_speakers": 228,
+     "argsort_default_equals_stable": false,
+     "sklearn_eq_mine_stable": 125,
+     "sklearn_eq_mine_default": 468,
+     "pod_file": {
+      "n_file": 468,
+      "missing": 0,
+      "sklearn_here_eq": 125,
+      "mine_stable_eq": 468,
+      "mine_default_eq": 125
+     },
+     "mac_file": {
+      "n_file": 468,
+      "missing": 0,
+      "sklearn_here_eq": 468,
+      "mine_stable_eq": 125,
+      "mine_default_eq": 468
+     }
+    },
+    "edaic": {
+     "n": 275,
+     "n_speakers": 275,
+     "argsort_default_equals_stable": false,
+     "sklearn_eq_mine_stable": 20,
+     "sklearn_eq_mine_default": 275,
+     "pod_file": {
+      "n_file": 275,
+      "missing": 0,
+      "sklearn_here_eq": 20,
+      "mine_stable_eq": 275,
+      "mine_default_eq": 20
+     },
+     "mac_file": {
+      "n_file": 275,
+      "missing": 0,
+      "sklearn_here_eq": 275,
+      "mine_stable_eq": 20,
+      "mine_default_eq": 275
+     }
+    },
+    "groupkfold_argsort_lines": [
+     "indices = np.argsort(n_samples_per_group)[::-1]"
+    ],
+    "sklearn": "1.7.2"
+   }
+  },
+  "T5_diag_pod_lib_mac_folds": {
+   "a": {
+    "n": 32,
+    "maxabs": 0.05371948857032138,
+    "m4": 0,
+    "rank_maxabs": 0.053719488570321494,
+    "m4m": 0,
+    "m4s": 0
+   },
+   "b": {
+    "n": 32,
+    "maxabs": 0.08793678410903288,
+    "m4": 0,
+    "rank_maxabs": 0.08793678410903294,
+    "m4m": 0,
+    "m4s": 0
+   }
+  },
+  "T5_diag_mac_lib_pod_folds": {
+   "a": {
+    "n": 32,
+    "maxabs": 0.0005617977528088458,
+    "m4": 11,
+    "rank_maxabs": 0.0005617977528089568,
+    "m4m": 2,
+    "m4s": 4
+   },
+   "b": {
+    "n": 32,
+    "maxabs": 0.0008699434536754147,
+    "m4": 4,
+    "rank_maxabs": 0.0008699434536754147,
+    "m4m": 8,
+    "m4s": 6
+   }
+  },
+  "T5_diag_zen3_host": {
+   "a": {
+    "n": 32,
+    "maxabs": 0.0006780317706315264,
+    "m4": 8,
+    "rank_maxabs": 0.0006780317706315264,
+    "m4m": 3,
+    "m4s": 5
+   },
+   "b": {
+    "n": 32,
+    "maxabs": 0.0005074670146441029,
+    "m4": 7,
+    "rank_maxabs": 0.0005074670146441029,
+    "m4m": 12,
+    "m4s": 11
+   },
+   "c": {
+    "n": 29,
+    "maxabs": 0.000794265788454096,
+    "m4": 4,
+    "rank_maxabs": 0.000794265788454096,
+    "m4m": 3,
+    "m4s": 3
+   }
+  },
+  "T5_diag_blas_coretype": {
+   "pitt_SkylakeX": [
+    "0",
+    32
+   ],
+   "pitt_Haswell": [
+    "6.78e-04",
+    8
+   ],
+   "pitt_Zen": [
+    "6.78e-04",
+    8
+   ],
+   "pitt_Sandybridge": [
+    "4.84e-04",
+    8
+   ],
+   "pitt_Prescott": [
+    "5.42e-04",
+    5
+   ],
+   "pitt_SapphireRapids": [
+    "0",
+    32
+   ],
+   "edaic_first30_SkylakeX": [
+    "0",
+    32
+   ],
+   "edaic_first30_Haswell": [
+    "5.07e-04",
+    7
+   ],
+   "edaic_first30_Zen": [
+    "5.07e-04",
+    7
+   ],
+   "edaic_first30_Sandybridge": [
+    "6.52e-04",
+    3
+   ],
+   "edaic_first30_Prescott": [
+    "5.80e-04",
+    6
+   ],
+   "edaic_first30_SapphireRapids": [
+    "0",
+    32
+   ]
+  },
+  "T5_diag_dtype_threads": {
+   "f64p": {
+    "n": 32,
+    "maxabs": 0.00046493607129027836,
+    "m4": 8,
+    "rank_maxabs": 0.00046493607129027836,
+    "m4m": 2,
+    "m4s": 5
+   },
+   "f64e": {
+    "n": 32,
+    "maxabs": 0.0010874293170942684,
+    "m4": 5,
+    "rank_maxabs": 0.0010874293170943794,
+    "m4m": 7,
+    "m4s": 6
+   },
+   "t8p": {
+    "n": 32,
+    "maxabs": 0.0005617977528089568,
+    "m4": 4,
+    "rank_maxabs": 0.0005617977528089568,
+    "m4m": 5,
+    "m4s": 6
+   },
+   "t8e": {
+    "n": 32,
+    "maxabs": 0.0,
+    "m4": 32,
+    "rank_maxabs": 1.1102230246251565e-16,
+    "m4m": 32,
+    "m4s": 32
+   }
+  },
+  "T5_verifier": {
+   "avx": {
+    "lo-t5-10:edaic30_encproj__vrefit_enc.csv": {
+     "maxabs": 1.1102230246251565e-16,
+     "cpu": "AMD EPYC 9654"
+    },
+    "lo-t5-10:edaic30_encproj__vrefit_proj.csv": {
+     "maxabs": 1.1102230246251565e-16,
+     "cpu": "AMD EPYC 9654"
+    },
+    "lo-t5-10:pitt_encproj__vrefit_enc.csv": {
+     "maxabs": 1.1102230246251565e-16,
+     "cpu": "AMD EPYC 9654"
+    },
+    "lo-t5-10:pitt_encproj__vrefit_proj.csv": {
+     "maxabs": 0.0,
+     "cpu": "AMD EPYC 9654"
+    },
+    "lo-t5-13:pitt_ans__vrefit_ans.csv": {
+     "maxabs": 2.220446049250313e-16,
+     "cpu": "AMD EPYC 9575F"
+    },
+    "lo-t5-2:pitt_llm__vrefit_llm.csv": {
+     "maxabs": 2.220446049250313e-16,
+     "cpu": "AMD EPYC 9754"
+    },
+    "lo-t5-5:edaic30_llm__vrefit_llm.csv": {
+     "maxabs": 1.1102230246251565e-16,
+     "cpu": "AMD EPYC 9965"
+    },
+    "lo-t5-6:edaic30_ans__vrefit_ans.csv": {
+     "maxabs": 1.1102230246251565e-16,
+     "cpu": "AMD EPYC 9965"
+    },
+    "lo-t5-9:edaic30_encproj__vrefit_enc.csv": {
+     "maxabs": 1.1102230246251565e-16,
+     "cpu": "AMD EPYC 9654"
+    },
+    "lo-t5-9:edaic30_encproj__vrefit_proj.csv": {
+     "maxabs": 1.1102230246251565e-16,
+     "cpu": "AMD EPYC 9654"
+    }
+   }
+  }
+ },
+ "caveats": [
+  "T5_diag_blas_coretype: the claimed numbers are right; its description says only SkylakeX 'and SapphireRapids on E-DAIC' reproduce exactly, but SapphireRapids is also exact on Pitt (0, 32/32) in the task's own pod10 file and in my refit.",
+  "T5 LM/answer and proj rows were checked on different AVX-512 hosts than the task (9654/9754 here vs 9754/9575F/9965 there); all exact, which supports the SkylakeX-kernel explanation.",
+  "Nothing written under omni_final, variants or folds; tex untouched; nothing pushed."
+ ]
+}
