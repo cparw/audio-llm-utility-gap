@@ -1,0 +1,83 @@
+   cell                             name                                                    quantity   value   ci_lo   ci_hi excludes_zero
+0    C1                      Qwen2-Audio                                       Pitt conflict arm AUC  0.4132  0.3056  0.5412           NaN
+1    C1                      Qwen2-Audio                                      Pitt agreement arm AUC  0.6985  0.6370  0.7581           NaN
+2    C1                      Qwen2-Audio                  Pitt conflict MINUS agreement paired delta -0.2853 -0.3950 -0.1485          True
+3    C1                     Qwen2.5-Omni                                       Pitt conflict arm AUC  0.5322  0.4208  0.6596           NaN
+4    C1                     Qwen2.5-Omni                                      Pitt agreement arm AUC  0.7054  0.6474  0.7637           NaN
+5    C1                     Qwen2.5-Omni                  Pitt conflict MINUS agreement paired delta -0.1731 -0.2958 -0.0392          True
+6    C1               Qwen3-Omni-30B-A3B                                       Pitt conflict arm AUC  0.6066  0.5008  0.7154           NaN
+7    C1               Qwen3-Omni-30B-A3B                                      Pitt agreement arm AUC  0.8231  0.7684  0.8693           NaN
+8    C1               Qwen3-Omni-30B-A3B                  Pitt conflict MINUS agreement paired delta -0.2165 -0.3242 -0.1052          True
+9    C1                 Audio Flamingo 2                                       Pitt conflict arm AUC  0.6310  0.5300  0.7283           NaN
+10   C1                 Audio Flamingo 2                                      Pitt agreement arm AUC  0.5544  0.4757  0.6348           NaN
+11   C1                 Audio Flamingo 2                  Pitt conflict MINUS agreement paired delta  0.0766 -0.0307  0.1869         False
+12   C1           Audio Flamingo 2 [ALT]                                       Pitt conflict arm AUC  0.6691  0.5679  0.7618           NaN
+13   C1           Audio Flamingo 2 [ALT]                                      Pitt agreement arm AUC  0.4895  0.4202  0.5598           NaN
+14   C1           Audio Flamingo 2 [ALT]                  Pitt conflict MINUS agreement paired delta  0.1796  0.0702  0.2825          True
+15   C1                 Audio Flamingo 3                                       Pitt conflict arm AUC  0.6169  0.5185  0.7176           NaN
+16   C1                 Audio Flamingo 3                                      Pitt agreement arm AUC  0.5822  0.5104  0.6495           NaN
+17   C1                 Audio Flamingo 3                  Pitt conflict MINUS agreement paired delta  0.0347 -0.0698  0.1474         False
+18   C1          Audio Flamingo 3 [ALT1]                                       Pitt conflict arm AUC  0.6075  0.5098  0.7111           NaN
+19   C1          Audio Flamingo 3 [ALT1]                                      Pitt agreement arm AUC  0.5855  0.5138  0.6519           NaN
+20   C1          Audio Flamingo 3 [ALT1]                  Pitt conflict MINUS agreement paired delta  0.0220 -0.0846  0.1357         False
+21   C1          Audio Flamingo 3 [ALT2]                                       Pitt conflict arm AUC  0.6075  0.5098  0.7111           NaN
+22   C1          Audio Flamingo 3 [ALT2]                                      Pitt agreement arm AUC  0.5855  0.5138  0.6519           NaN
+23   C1          Audio Flamingo 3 [ALT2]                  Pitt conflict MINUS agreement paired delta  0.0220 -0.0846  0.1357         False
+24   C1          Audio Flamingo 3 [ALT3]                                       Pitt conflict arm AUC  0.6031  0.5038  0.7078           NaN
+25   C1          Audio Flamingo 3 [ALT3]                                      Pitt agreement arm AUC  0.5752  0.5040  0.6427           NaN
+26   C1          Audio Flamingo 3 [ALT3]                  Pitt conflict MINUS agreement paired delta  0.0279 -0.0800  0.1417         False
+27   C1                       Kimi-Audio                                       Pitt conflict arm AUC  0.7197  0.6153  0.8159           NaN
+28   C1                       Kimi-Audio                                      Pitt agreement arm AUC  0.7227  0.6519  0.7875           NaN
+29   C1                       Kimi-Audio                  Pitt conflict MINUS agreement paired delta -0.0030 -0.1134  0.1065         False
+30   C2              Qwen2.5-Omni pcgita                                 projector fine-tune OOF AUC  0.8862  0.8233  0.9369           NaN
+31   C2              Qwen2.5-Omni pcgita                                               zero shot AUC  0.5635  0.4931  0.6331           NaN
+32   C2              Qwen2.5-Omni pcgita                                      projector gain, paired  0.3227  0.2391  0.4040          True
+33   C2            Qwen2.5-Omni neurovoz                                 projector fine-tune OOF AUC  0.9028  0.8604  0.9399           NaN
+34   C2            Qwen2.5-Omni neurovoz                                               zero shot AUC  0.6951  0.6356  0.7519           NaN
+35   C2            Qwen2.5-Omni neurovoz                                      projector gain, paired  0.2078  0.1588  0.2578          True
+36   C2                 Qwen2.5-Omni kcl                                 projector fine-tune OOF AUC  0.6994  0.4971  0.8767           NaN
+37   C2                 Qwen2.5-Omni kcl                                               zero shot AUC  0.7143  0.5210  0.8810           NaN
+38   C2                 Qwen2.5-Omni kcl                                      projector gain, paired -0.0149 -0.2709  0.2364         False
+39   C2               Qwen2.5-Omni edaic                                 projector fine-tune OOF AUC  0.6083  0.5240  0.6870           NaN
+40   C2               Qwen2.5-Omni edaic                                               zero shot AUC  0.6620  0.5831  0.7315           NaN
+41   C2               Qwen2.5-Omni edaic                                      projector gain, paired -0.0537 -0.1221  0.0152         False
+42   C2                Qwen2.5-Omni pitt                                 projector fine-tune OOF AUC  0.7673  0.7086  0.8231           NaN
+43   C2                Qwen2.5-Omni pitt                                               zero shot AUC  0.6578  0.6033  0.7125           NaN
+44   C2                Qwen2.5-Omni pitt                                      projector gain, paired  0.1095  0.0454  0.1728          True
+45   C2             Qwen2.5-Omni adresso                                 projector fine-tune OOF AUC  0.8246  0.7700  0.8750           NaN
+46   C2             Qwen2.5-Omni adresso                                               zero shot AUC  0.6150  0.5432  0.6890           NaN
+47   C2             Qwen2.5-Omni adresso                                      projector gain, paired  0.2096  0.1294  0.2867          True
+48   C2          Qwen2.5-Omni adress2020                                 projector fine-tune OOF AUC  0.7684  0.6893  0.8407           NaN
+49   C2          Qwen2.5-Omni adress2020                                               zero shot AUC  0.6241  0.5348  0.7148           NaN
+50   C2          Qwen2.5-Omni adress2020                                      projector gain, paired  0.1443  0.0490  0.2370          True
+51   C3  Qwen2.5-Omni E-DAIC full window                            E-DAIC full-window zero shot AUC  0.8285  0.7708  0.8827           NaN
+52   C3  Qwen2.5-Omni E-DAIC full window              E-DAIC full-window projector fine-tune OOF AUC  0.6421  0.5593  0.7188           NaN
+53   C3  Qwen2.5-Omni E-DAIC full window  E-DAIC full-window drop, zero shot minus fine-tune, paired  0.1863  0.1098  0.2696          True
+2 L74_739 47 47 OK speaker-label units in both arms (raw speaker IDs: 48); per arm {'agreement': 175, 'conflict': 100}; total spk 227; spk x label 228
+21 L97_823 33 33.3 OK median dur
+23 L101_219 7.5 7.5386 OK mean age dementia minus control per speaker label (228 spk-label units); clip level 6.5763
+24 L101_395 81 {0: 81, 1: 81} OK speaker-label units per label in the whole-dataset matched manifest (rows 330)
+pitt_agematched.csv cols ['model', 'measure', 'scope', 'level', 'n', 'auc', 'ci_lo', 'ci_hi', 'file'] 20
+M2 cols ['id', 'pid', 'label_y', 'sev', 'text_sha', 'roberta_label', 'roberta_score', 'roberta_p_neg', 'roberta_p_neu', 'distilbert_label', 'distilbert_score', 'distilbert_p_neg', 'arm_roberta', 'arm_distilbert', 'arm_roberta_selected', 'arm_distilbert_selected']
+6 L81_570 89 89 OK sum capped; max win_dur 900.0001 s; n 275
+15 L92_681 99 99.17 OK conflict clips where greedy first word equals the logit decision (p_yes>0.5): 0.9917; file 'agrees' col 0.9917; Yes/No first word on all 966: 1.0000
+28 L140_493 0.66 0.662 OK AUC [0.5831, 0.7315] n=275
+31 L140_573 0.81 0.8122 OK AUC [0.7479, 0.8707] n=275
+32 L140_607 0.84 0.8366 OK AUC p_yes_whole
+33 L140_674 0.63 0.6168 OK mean-of-5 enc per window (mean, max single repeat): first30 0.5966 (0.6301); mid30 0.5771 (0.6179); mid300 0.6168 (0.6657); full_json 0.5930 (0.6448); first300 0.5884 (0.6060); whole 0.5981 (0.6210)
+34 L149_1433 38 38 OK pairs; max |age_diff| 5.0
+35 L149_1472 907 907 OK clips; speakers 76
+36 L149_1595 0.71 0.7112 OK AUC p_five_feature_oof
+37 L149_735 0.53 to 0.84 0.5309 to 0.8439 OK egemaps_auc over 7 sets (summary csv)
+39 L180_1096 86 86.34 OK text decision equals audio decision at 0.5 on 966 clips
+40 L180_1309 0.34 0.3439 OK conflict arm n=483 [0.2900, 0.3979]
+41 L180_1318 0.24 0.2392 OK conflict arm n=483 [0.1940, 0.2865]
+44 L180_1373/L180_1396 646 pairs, 0.26 646 conflict rows, 147 spk, AUC 0.2619 OK conflict arm [0.2188, 0.3075]; total rows 1292; all speakers 147
+45 L180_1381/L180_1405 281 pairs, 0.19 281 conflict rows, 104 spk, AUC 0.1936 OK conflict arm [0.1501, 0.2438]; total rows 562; all speakers 104
+51 L180_1472/L180_1543 924 pairs, 0.18 924 conflict rows, 237 spk, AUC 0.1759 OK conflict arm [0.1448, 0.2095]; total rows 1848; all speakers 237
+53 L180_1616/1618 1,334 1334 OK conflict pairs
+55 L180_1780 420 420 OK conflict & RoBERTa conflict
+56 L180_1845 855 855 OK conflict & RoBERTa none
+57 L180_2058 97 {'agreement': 0.9834, 'conflict': 0.971} OK share p_yes>0.5 per arm, E-DAIC pairs (rows incl. repeats)
+58 L180_2110 87 {'agreement': 0.8675, 'conflict': 0.94} OK share p_yes>0.5 per arm, E-DAIC pairs
+59 L226_1020 0.55 0.552 OK LoRA conflict arm n=146

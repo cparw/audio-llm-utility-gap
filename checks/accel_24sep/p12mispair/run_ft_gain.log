@@ -1,0 +1,7 @@
+pcgita: FT 0.8862 ZS 0.5635 gain +0.3227 [+0.2391, +0.4040] n=1100 spk=100 excludes0=True
+neurovoz: FT 0.9028 ZS 0.6951 gain +0.2078 [+0.1588, +0.2578] n=1270 spk=107 excludes0=True
+kcl: FT 0.6994 ZS 0.7143 gain -0.0149 [-0.2709, +0.2364] n=37 spk=37 excludes0=False
+pitt: FT 0.7673 ZS 0.6578 gain +0.1095 [+0.0454, +0.1728] n=468 spk=228 excludes0=True
+adresso: FT 0.8246 ZS 0.6150 gain +0.2096 [+0.1294, +0.2867] n=237 spk=237 excludes0=True
+adress2020: FT 0.7684 ZS 0.6241 gain +0.1443 [+0.0490, +0.2370] n=156 spk=156 excludes0=True
+0.34538677685950425 [0.26363164 0.42747674]
