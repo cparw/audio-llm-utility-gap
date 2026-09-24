@@ -1,0 +1,8 @@
+PC-GITA     enc(P26) 0.8768 per-rep eq P26 True ans 0.6147/0.6147 diff +0.2621 [+0.1810, +0.3364] P26 ci [('.gap_ci', [0.1810317734202187, 0.3364143153221301])] agree True n=1100 spk=100
+NeuroVoz    enc(P26) 0.9319 per-rep eq P26 True ans 0.6204/0.6204 diff +0.3115 [+0.2515, +0.3674] P26 ci [('.gap_ci', [0.25147782533966806, 0.3673550380967104])] agree True n=1270 spk=107
+MDVR-KCL    enc(P26) 0.7631 per-rep eq P26 True ans 0.7113/0.7113 diff +0.0518 [-0.1637, +0.2901] P26 ci [('.gap.ci_2p5_97p5', [-0.1636750841750841, 0.29006663292847495])] agree True n=37 spk=37
+E-DAIC      enc(P26) 0.5823 per-rep eq P26 True ans 0.6293/0.6293 diff -0.0469 [-0.1393, +0.0533] P26 ci [('.gap_ci95', [-0.1392675421033583, 0.05327596273804302])] agree True n=275 spk=275
+Pitt        enc(P26) 0.8112 per-rep eq P26 True ans 0.7180/0.718 diff +0.0932 [+0.0331, +0.1547] P26 ci [('.gap.ci95', [0.03305832448174661, 0.154687551262835]), ('.gap.ci95_4dp', [0.0331, 0.1547])] agree True n=468 spk=228
+ADReSSo     enc(P26) 0.8682 per-rep eq P26 True ans 0.7531/0.7531 diff +0.1151 [+0.0481, +0.1831] P26 ci [('.gap.ci_2p5_97p5', [0.04813201894045922, 0.1830847953216375])] agree True n=237 spk=237
+ADReSS-2020 NOT LANDED at 2026-09-24T03:04:12Z: per-clip files 0, sidecars 0 in <local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSS-2020
+KIMI ENC SUPPLEMENT DONE 6 landed of 7

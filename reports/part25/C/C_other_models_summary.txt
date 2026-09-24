@@ -1,0 +1,45 @@
+PART 25 track C (second attempt, r2), written 2026-09-24T03:06:12Z from scores/part25/C/C_other_models.tsv
+probe = master_lookup encoder probe (mean of five per-repeat nested AUCs); answer = master_lookup zero-shot answer AUC; diff = probe minus answer.
+interval = paired speaker bootstrap, 2000 draws, fresh default_rng(0) per cell, mean of the five per-repeat AUCs per draw, 2.5/97.5 percentiles.
+
+Qwen2-Audio        PC-GITA     encoder             probe 0.9097 (verified)  answer 0.5369 (verified)  diff +0.3728 [+0.3104, +0.4271]
+Qwen2-Audio        NeuroVoz    encoder             probe 0.9324 (verified)  answer 0.5519 (verified)  diff +0.3805 [+0.3278, +0.4325]
+Qwen2-Audio        MDVR-KCL    encoder             probe 0.7714 (verified)  answer 0.5923 (verified)  diff +0.1791 [-0.0503, +0.4305]
+Qwen2-Audio        E-DAIC      encoder             probe 0.5673 (verified)  answer 0.6464 (verified)  diff -0.0791 [-0.1664, +0.0120]
+Qwen2-Audio        Pitt        encoder             probe 0.7846 (verified)  answer 0.6173 (verified)  diff +0.1673 [+0.0944, +0.2432]
+Qwen2-Audio        ADReSSo     encoder             probe 0.8537 (verified)  answer 0.6649 (verified)  diff +0.1888 [+0.1154, +0.2682]
+Qwen2-Audio        ADReSS-2020 encoder             probe 0.8315 (verified)  answer 0.6824 (verified)  diff +0.1491 [+0.0640, +0.2368]
+Qwen3-Omni-30B-A3B PC-GITA     encoder             probe 0.8969 (verified)  answer 0.5967 (verified)  diff +0.3002 [+0.2298, +0.3695]
+Qwen3-Omni-30B-A3B NeuroVoz    encoder             probe 0.9372 (verified)  answer 0.6393 (verified)  diff +0.2979 [+0.2360, +0.3578]
+Qwen3-Omni-30B-A3B MDVR-KCL    encoder             probe 0.7661 (verified)  answer 0.7738 (verified)  diff -0.0077 [-0.1618, +0.1385]
+Qwen3-Omni-30B-A3B E-DAIC      encoder             probe 0.5828 (verified)  answer 0.6290 (verified)  diff -0.0462 [-0.1412, +0.0527]
+Qwen3-Omni-30B-A3B Pitt        encoder             probe 0.8122 (verified)  answer 0.7619 (verified)  diff +0.0503 [-0.0087, +0.1095]
+Qwen3-Omni-30B-A3B ADReSSo     encoder             probe 0.8750 (verified)  answer 0.7774 (verified)  diff +0.0976 [+0.0362, +0.1616]
+Qwen3-Omni-30B-A3B ADReSS-2020 encoder             probe 0.8445 (verified)  answer 0.7097 (verified)  diff +0.1348 [+0.0417, +0.2335]
+Kimi-Audio         PC-GITA     LM (no encoder row) probe 0.8715 (verified)  answer 0.6147 (verified)  diff +0.2568 [+0.1839, +0.3284]
+Kimi-Audio         NeuroVoz    LM (no encoder row) probe 0.9334 (verified)  answer 0.6204 (verified)  diff +0.3130 [+0.2556, +0.3681]
+Kimi-Audio         MDVR-KCL    LM (no encoder row) probe 0.7310 (verified)  answer 0.7113 (verified)  diff +0.0197 [-0.1643, +0.2141]
+Kimi-Audio         E-DAIC      LM (no encoder row) probe 0.4840 (verified)  answer 0.6293 (verified)  diff -0.1453 [-0.2334, -0.0454]
+Kimi-Audio         Pitt        LM (no encoder row) probe 0.8374 (verified)  answer 0.7180 (verified)  diff +0.1194 [+0.0587, +0.1788]
+Kimi-Audio         ADReSSo     LM (no encoder row) probe 0.8993 (verified)  answer 0.7531 (verified)  diff +0.1462 [+0.0821, +0.2096]
+Kimi-Audio         ADReSS-2020 LM (no encoder row) probe 0.9200 (verified)  answer 0.7053 (verified)  diff +0.2147 [+0.1331, +0.3032]
+
+Kimi-Audio encoder probe, PART 26 new extraction (NOT master_lookup; the Method says the Kimi encoder side is skipped; the authors decide):
+  Kimi-Audio PC-GITA     encoder 0.8768  answer 0.6147  diff +0.2621 [+0.1810, +0.3364]  (PART 26 per-repeat reproduced: True; PART 26 interval agrees: True)
+  Kimi-Audio NeuroVoz    encoder 0.9319  answer 0.6204  diff +0.3115 [+0.2515, +0.3674]  (PART 26 per-repeat reproduced: True; PART 26 interval agrees: True)
+  Kimi-Audio MDVR-KCL    encoder 0.7631  answer 0.7113  diff +0.0518 [-0.1637, +0.2901]  (PART 26 per-repeat reproduced: True; PART 26 interval agrees: True)
+  Kimi-Audio E-DAIC      encoder 0.5823  answer 0.6293  diff -0.0469 [-0.1393, +0.0533]  (PART 26 per-repeat reproduced: True; PART 26 interval agrees: True)
+  Kimi-Audio Pitt        encoder 0.8112  answer 0.7180  diff +0.0932 [+0.0331, +0.1547]  (PART 26 per-repeat reproduced: True; PART 26 interval agrees: True)
+  Kimi-Audio ADReSSo     encoder 0.8682  answer 0.7531  diff +0.1151 [+0.0481, +0.1831]  (PART 26 per-repeat reproduced: True; PART 26 interval agrees: True)
+  Kimi-Audio ADReSS-2020 NOT LANDED at 2026-09-24T03:04:12Z: per-clip files 0, sidecars 0 in <local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSS-2020
+
+1. Encoder probe, Qwen2-Audio and Qwen3-Omni, 12 PD/AD cells: probe above answer in 11 of 12; interval excludes 0 in 9 of those 11.
+   Kimi-Audio has no encoder probe in master_lookup. With its LM probe in place: probe above answer in 6 of 6; interval excludes 0 in 5 of those 6.
+   All 18 PD/AD cells (encoder for the Qwen models, LM probe for Kimi-Audio): probe above answer in 17 of 18; interval excludes 0 in 14 of those 17.
+   Kimi-Audio PART 26 encoder probe (not master): landed for 5 of 6 PD/AD cells; probe above answer in 5 of 5; interval excludes 0 in 4 of those 5.
+
+2. E-DAIC (MDD):
+   Qwen2-Audio: encoder probe 0.5673 vs answer 0.6464, diff -0.0791 [-0.1664, +0.0120]; answer above probe; interval includes 0
+   Qwen3-Omni-30B-A3B: encoder probe 0.5828 vs answer 0.6290, diff -0.0462 [-0.1412, +0.0527]; answer above probe; interval includes 0
+   Kimi-Audio: LM probe 0.4840 vs answer 0.6293, diff -0.1453 [-0.2334, -0.0454]; answer above probe; interval excludes 0
+   Kimi-Audio PART 26 encoder (not master): 0.5823 vs answer 0.6293, diff -0.0469 [-0.1393, +0.0533]

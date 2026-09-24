@@ -1,0 +1,22 @@
+q2a  pcgita     enc probe 0.9097/0.9097 v=True ans 0.5369/0.5369 v=True n=1100 spk=100 diff +0.3728 [+0.3104, +0.4271] usable 2000 prev_draws_maxabs 0.0 spk_same False 
+q2a  neurovoz   enc probe 0.9324/0.9324 v=True ans 0.5519/0.5519 v=True n=1270 spk=107 diff +0.3805 [+0.3278, +0.4325] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q2a  kcl        enc probe 0.7714/0.7714 v=True ans 0.5923/0.5923 v=True n=37 spk=37 diff +0.1792 [-0.0503, +0.4305] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q2a  edaic      enc probe 0.5673/0.5673 v=True ans 0.6464/0.6464 v=True n=275 spk=275 diff -0.0791 [-0.1664, +0.0120] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q2a  pitt       enc probe 0.7846/0.7846 v=True ans 0.6173/0.6173 v=True n=468 spk=228 diff +0.1673 [+0.0944, +0.2432] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q2a  adresso    enc probe 0.8537/0.8537 v=True ans 0.6649/0.6649 v=True n=237 spk=237 diff +0.1888 [+0.1154, +0.2682] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q2a  adress2020 enc probe 0.8315/0.8315 v=True ans 0.6824/0.6824 v=True n=156 spk=156 diff +0.1491 [+0.0640, +0.2368] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q3o  pcgita     enc probe 0.8969/0.8969 v=True ans 0.5967/0.5967 v=True n=1100 spk=100 diff +0.3002 [+0.2298, +0.3695] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q3o  neurovoz   enc probe 0.9372/0.9372 v=True ans 0.6393/0.6393 v=True n=1270 spk=107 diff +0.2980 [+0.2360, +0.3578] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q3o  kcl        enc probe 0.7661/0.7661 v=True ans 0.7738/0.7738 v=True n=37 spk=37 diff -0.0077 [-0.1618, +0.1385] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q3o  edaic      enc probe 0.5828/0.5828 v=True ans 0.6290/0.629 v=True n=275 spk=275 diff -0.0462 [-0.1412, +0.0527] usable 2000 prev_draws_maxabs 0.11242937853107338 spk_same True 
+q3o  pitt       enc probe 0.8122/0.8122 v=True ans 0.7619/0.7619 v=True n=468 spk=228 diff +0.0503 [-0.0087, +0.1095] usable 2000 prev_draws_maxabs 0.0 spk_same False alt [-0.0058, +0.1108]
+q3o  adresso    enc probe 0.8750/0.875 v=True ans 0.7774/0.7774 v=True n=237 spk=237 diff +0.0976 [+0.0362, +0.1616] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+q3o  adress2020 enc probe 0.8445/0.8445 v=True ans 0.7097/0.7097 v=True n=156 spk=156 diff +0.1348 [+0.0417, +0.2335] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+kimi pcgita     llm probe 0.8715/0.8715 v=True ans 0.6147/0.6147 v=True n=1100 spk=100 diff +0.2568 [+0.1839, +0.3284] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+kimi neurovoz   llm probe 0.9334/0.9334 v=True ans 0.6204/0.6204 v=True n=1270 spk=107 diff +0.3129 [+0.2556, +0.3681] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+kimi kcl        llm probe 0.7310/0.731 v=True ans 0.7113/0.7113 v=True n=37 spk=37 diff +0.0196 [-0.1643, +0.2141] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+kimi edaic      llm probe 0.4840/0.484 v=True ans 0.6293/0.6293 v=True n=275 spk=275 diff -0.1453 [-0.2334, -0.0454] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+kimi pitt       llm probe 0.8374/0.8374 v=True ans 0.7180/0.718 v=True n=468 spk=228 diff +0.1194 [+0.0587, +0.1788] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+kimi adresso    llm probe 0.8993/0.8993 v=True ans 0.7531/0.7531 v=True n=237 spk=237 diff +0.1462 [+0.0821, +0.2096] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+kimi adress2020 llm probe 0.9200/0.92 v=True ans 0.7053/0.7053 v=True n=156 spk=156 diff +0.2147 [+0.1331, +0.3032] usable 2000 prev_draws_maxabs 0.0 spk_same True 
+R2 DONE 21
