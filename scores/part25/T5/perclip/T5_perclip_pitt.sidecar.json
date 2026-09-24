@@ -1,0 +1,203 @@
+{
+ "dataset": "pitt",
+ "display": "Pitt (extra, not asked)",
+ "condition": "AD",
+ "scope": "extra",
+ "n_clips": 468,
+ "n_speakers": 228,
+ "n_pos": 290,
+ "answer_auc": 0.6577683068578071,
+ "answer_lo": 0.6033242994024883,
+ "answer_hi": 0.7125368049704085,
+ "boot_usable": 2000,
+ "saved_above_answer": 31,
+ "saved_above_hi": 25,
+ "saved_min": 0.6517241379310345,
+ "saved_min_layer": 2,
+ "saved_max": 0.808330104610616,
+ "saved_max_layer": 27,
+ "saved_not_above_answer": "2",
+ "saved_not_above_hi": "0;1;2;3;4;5;6",
+ "answer_file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+ "answer_column": "p_yes",
+ "saved_curve": "<local data dir>/release/omni_final/omni_pitt_encoder_perlayer.csv",
+ "refit_status": "refit",
+ "refit_pod": "lo-t5-10",
+ "refit_cpu": "AMD EPYC 9654 96-Core Processor",
+ "refit_openblas": "SkylakeX",
+ "refit_env": "numpy 2.1.2 scipy 1.18.1 sklearn 1.9.1",
+ "refit_file": "<local data dir>/release_from_mac/scores/leftovers_23sep/t5/pull/lo-t5-10/out/pitt_encproj_encoder_perlayer.csv",
+ "refit_states": "same extraction run as the saved zero-shot file",
+ "refit_above_answer": 31,
+ "refit_above_hi": 25,
+ "refit_not_above_answer": "2",
+ "refit_not_above_hi": "0;1;2;3;4;5;6",
+ "refit_min": 0.6517241379310345,
+ "refit_min_layer": 2,
+ "refit_max": 0.808330104610616,
+ "refit_max_layer": 27,
+ "refit_min_minus_answer": -0.0060441689267726195,
+ "refit_min_minus_hi": -0.060812667039374046,
+ "refit_mean_above_answer": 32,
+ "refit_mean_above_hi": 25,
+ "range_above_answer_same_folds": "31 to 31 over 21 files",
+ "range_above_hi_same_folds": "25 to 25 over 21 files",
+ "range_above_answer_mac_folds": "32 to 32 over 2 files",
+ "range_above_hi_mac_folds": "25 to 25 over 2 files",
+ "paired_delta_lo_gt0": 18,
+ "paired_delta_hi_lt0": 0,
+ "paired_delta_min_lo": -0.09293775739838467,
+ "oof_recompute_maxabs": 0.0,
+ "refit_vs_saved_maxabs_oof": 0.0,
+ "refit_vs_saved_match4dp_oof": 32,
+ "refit_vs_saved_maxabs_mean": 0.0,
+ "every_layer_on_refit": "fails (31/32)",
+ "note": "",
+ "all_refit_file_counts": [
+  {
+   "pod": "lo-t5-1",
+   "tag": "exact_script",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile_ctHaswell",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile_ctPrescott",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile_ctSandybridge",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile_ctSapphireRapids",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile_ctZen",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile_f64",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "podfile_thr8",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "vrefit",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "exact_script",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_ctHaswell",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_ctPrescott",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_ctSandybridge",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_ctSapphireRapids",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_ctSkylakeX",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_ctZen",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_f64",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "podfile_thr8",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "vrefit",
+   "above_answer": 31,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-1",
+   "tag": "macfile",
+   "above_answer": 32,
+   "above_hi": 25
+  },
+  {
+   "pod": "lo-t5-10",
+   "tag": "macfile",
+   "above_answer": 32,
+   "above_hi": 25
+  }
+ ],
+ "perclip_csv": "scores/part25/T5/perclip/T5_perclip_pitt.csv",
+ "boot_npz": "scores/part25/T5/boot/T5_boot_pitt.npz",
+ "task": "PART 25 T5 r2 per dataset result",
+ "date_utc": "2026-09-24T02:53:21Z",
+ "perclip_sha256": "6bb7bb522213f181f8749e8d193458bf1097e29689c41f95884776c7e5e735a2",
+ "boot_sha256": "2f331dd7c1057991922e146a5417e5f3587f1480ac5ddfa2a19835f62fed1479",
+ "boot_contents": "answer_draws (2000), speaker_idx (2000 x n_spk, rng(0)), speakers; with a refit also probe_draws, delta_draws (2000 x 32, probe minus answer on the same draw), delta_lo, delta_hi"
+}
