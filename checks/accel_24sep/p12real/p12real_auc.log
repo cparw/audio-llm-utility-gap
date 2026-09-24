@@ -1,0 +1,17 @@
+ line  tex    role                  cell   n  n_spk  n_pos    auc  ci_lo  ci_hi  skipped_draws  rounds_to_tex
+  125 0.84   right        edaic_zs_whole 275    275     66 0.8366 0.7786 0.8866              0           True
+  125 0.84 matcher         edaic_zs_300s 275    275     66 0.8285 0.7708 0.8827              0          False
+  125 0.86   right     edaic_ft_whole_s0 275    275     66 0.8589 0.8050 0.9029              0           True
+  125 0.86 matcher         edaic_sft_30s 275    275     66 0.6421 0.5593 0.7188              0          False
+  171 0.58   right   af2_conflict_orig30 146    100    101 0.5835 0.4730 0.6913              0           True
+  171 0.58 matcher  af2_conflict_pitt468 146    100    101 0.6310 0.5336 0.7260              0          False
+  171 0.53   right  af2_agreement_orig30 322    175    189 0.5337 0.4574 0.6116              0           True
+  171 0.53 matcher af2_agreement_pitt468 322    175    189 0.5544 0.4760 0.6296              0          False
+  172 0.61   right   af3_conflict_part10 146    100    101 0.6075 0.5063 0.7129              0           True
+  172 0.61 matcher    af3_conflict_part3 146    100    101 0.6169 0.5188 0.7209              0          False
+  172 0.59   right  af3_agreement_part10 322    175    189 0.5855 0.5144 0.6554              0           True
+  172 0.59 matcher   af3_agreement_part3 322    175    189 0.5822 0.5080 0.6528              0          False
+A2 vs FT pid sets equal: True labels agree: True
+conflict orig30 clips == af2_pitt468 clips: True == af3 part10 clips: True 146 146 146
+agreement orig30 clips == af2_pitt468 clips: True == af3 part10 clips: True 322 322 322
+arm NaN counts 0 0 0

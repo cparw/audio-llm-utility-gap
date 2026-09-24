@@ -1,0 +1,13 @@
+line,tex,role,file,cell,n,n_spk,n_pos,auc,ci_lo,ci_hi,skipped_draws,rounds_to_tex
+125,0.84,right,scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv [p_yes_whole],edaic_zs_whole,275,275,66,0.8366,0.7786,0.8866,0,True
+125,0.84,matcher,<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv (json: o25_full_zeroshot.json auc 0.8285),edaic_zs_300s,275,275,66,0.8285,0.7708,0.8827,0,False
+125,0.86,right,scores/part24/FT/FT24_whole_seed0_perclip.csv [p_yes],edaic_ft_whole_s0,275,275,66,0.8589,0.805,0.9029,0,True
+125,0.86,matcher,<local data dir>/release/edaic_rerun/variants/sft_full_oof.csv (json: sft_full_sft.json auc_oof 0.6421),edaic_sft_30s,275,275,66,0.6421,0.5593,0.7188,0,False
+171,0.58,right,scores/part20/POD4c/af2_orig30_conflict.csv [p_yes],af2_conflict_orig30,146,100,101,0.5835,0.473,0.6913,0,True
+171,0.58,matcher,"<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv [p_yes, arm from clip_path]",af2_conflict_pitt468,146,100,101,0.631,0.5336,0.726,0,False
+171,0.53,right,scores/part20/POD4c/af2_orig30_agreement.csv [p_yes],af2_agreement_orig30,322,175,189,0.5337,0.4574,0.6116,0,True
+171,0.53,matcher,"<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv [p_yes, arm from clip_path]",af2_agreement_pitt468,322,175,189,0.5544,0.476,0.6296,0,False
+172,0.61,right,"<local data dir>/release/overnight2/part10/af3_pitt.csv [p_yes, arm from clip_path]",af3_conflict_part10,146,100,101,0.6075,0.5063,0.7129,0,True
+172,0.61,matcher,"<local data dir>/release/overnight2/part3/af3_pitt.csv [p_yes, arm from clip_path]",af3_conflict_part3,146,100,101,0.6169,0.5188,0.7209,0,False
+172,0.59,right,"<local data dir>/release/overnight2/part10/af3_pitt.csv [p_yes, arm from clip_path]",af3_agreement_part10,322,175,189,0.5855,0.5144,0.6554,0,True
+172,0.59,matcher,"<local data dir>/release/overnight2/part3/af3_pitt.csv [p_yes, arm from clip_path]",af3_agreement_part3,322,175,189,0.5822,0.508,0.6528,0,False
