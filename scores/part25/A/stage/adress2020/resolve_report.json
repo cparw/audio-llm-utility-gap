@@ -1,0 +1,11 @@
+{
+ "dataset": "adress2020",
+ "n_list": 156,
+ "missing": [],
+ "multi_same": 156,
+ "multi_diff": [],
+ "label_mismatch": 0,
+ "speaker_mismatch": 0,
+ "n_resolved": 156,
+ "n_multi_diff": 0
+}
