@@ -1,0 +1,5 @@
+train\test,kcl,italian,neurovoz,pcgita
+kcl,0.967,0.801,0.583,0.641
+italian,0.658,1.000,0.585,0.452
+neurovoz,0.744,0.677,0.948,0.657
+pcgita,0.860,0.498,0.458,0.932

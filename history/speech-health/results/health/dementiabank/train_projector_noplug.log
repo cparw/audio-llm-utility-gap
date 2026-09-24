@@ -1,0 +1,30 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1986.50it/s]
+Loading weights:   0%|          | 0/876 [00:00<?, ?it/s]Loading weights:  20%|█▉        | 174/876 [00:00<00:00, 1717.33it/s]Loading weights:  40%|████      | 354/876 [00:00<00:00, 1738.15it/s]Loading weights:  60%|██████    | 528/876 [00:01<00:01, 335.81it/s] Loading weights:  72%|███████▏  | 631/876 [00:01<00:00, 280.93it/s]Loading weights:  80%|████████  | 701/876 [00:02<00:00, 179.21it/s]Loading weights:  86%|████████▌ | 749/876 [00:03<00:00, 152.82it/s]Loading weights:  89%|████████▉ | 784/876 [00:05<00:01, 74.92it/s] Loading weights:  92%|█████████▏| 808/876 [00:05<00:01, 64.68it/s]Loading weights:  94%|█████████▍| 826/876 [00:05<00:00, 68.78it/s]Loading weights:  96%|█████████▌| 842/876 [00:06<00:00, 60.98it/s]Loading weights:  98%|█████████▊| 855/876 [00:06<00:00, 57.63it/s]Loading weights:  99%|█████████▊| 865/876 [00:06<00:00, 53.97it/s]Loading weights: 100%|██████████| 876/876 [00:06<00:00, 126.90it/s]
+468 segments, device mps
+/Users/chaitanyaparwatkar/Desktop/Hard drive data for paper/fewshot/train_projector_noplug.py:89: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:823.)
+  tot += float(loss); nb += 1
+fold 0 epoch 0 loss 0.6266  22 min
+fold 0 epoch 1 loss 0.2877  47 min
+fold 0 epoch 2 loss 0.1006  68 min
+fold 0 eval done
+fold 1 epoch 0 loss 0.6318  91 min
+fold 1 epoch 1 loss 0.3163  110 min
+fold 1 epoch 2 loss 0.1254  130 min
+fold 1 eval done
+fold 2 epoch 0 loss 0.6770  152 min
+fold 2 epoch 1 loss 0.2657  171 min
+fold 2 epoch 2 loss 0.0712  192 min
+fold 2 eval done
+fold 3 epoch 0 loss 0.6506  214 min
+fold 3 epoch 1 loss 0.3269  234 min
+fold 3 epoch 2 loss 0.0957  254 min
+fold 3 eval done
+fold 4 epoch 0 loss 0.6389  276 min
+fold 4 epoch 1 loss 0.2965  295 min
+fold 4 epoch 2 loss 0.1454  315 min
+fold 4 eval done
+RETRAINED PROJECTOR NO PLUG (layer 32) overall AUC 0.763  (baseline answer 0.618, untrained plug 0.488)
+  agreement: 0.865
+  conflict: 0.484

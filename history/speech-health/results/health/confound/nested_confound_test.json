@@ -1,0 +1,95 @@
+{
+  "italian:vowel": {
+    "n": 495,
+    "spk": 50,
+    "point": {
+      "rec": 0.858,
+      "enc": 0.976,
+      "both": 0.977
+    },
+    "ci": {
+      "rec": {
+        "auc_lo": 0.79,
+        "auc_hi": 0.922
+      },
+      "enc": {
+        "auc_lo": 0.933,
+        "auc_hi": 1.0,
+        "inc_mean": 0.118,
+        "inc_lo": 0.065,
+        "inc_hi": 0.178,
+        "inc_significant": true
+      },
+      "both": {
+        "auc_lo": 0.935,
+        "auc_hi": 1.0,
+        "inc_mean": 0.119,
+        "inc_lo": 0.066,
+        "inc_hi": 0.179,
+        "inc_significant": true
+      }
+    }
+  },
+  "neurovoz:vowel": {
+    "n": 1035,
+    "spk": 107,
+    "point": {
+      "rec": 0.658,
+      "enc": 0.764,
+      "both": 0.766
+    },
+    "ci": {
+      "rec": {
+        "auc_lo": 0.583,
+        "auc_hi": 0.727
+      },
+      "enc": {
+        "auc_lo": 0.695,
+        "auc_hi": 0.829,
+        "inc_mean": 0.108,
+        "inc_lo": 0.031,
+        "inc_hi": 0.183,
+        "inc_significant": true
+      },
+      "both": {
+        "auc_lo": 0.695,
+        "auc_hi": 0.83,
+        "inc_mean": 0.11,
+        "inc_lo": 0.032,
+        "inc_hi": 0.185,
+        "inc_significant": true
+      }
+    }
+  },
+  "pcgita:vowel": {
+    "n": 2000,
+    "spk": 100,
+    "point": {
+      "rec": 0.63,
+      "enc": 0.82,
+      "both": 0.823
+    },
+    "ci": {
+      "rec": {
+        "auc_lo": 0.564,
+        "auc_hi": 0.694
+      },
+      "enc": {
+        "auc_lo": 0.754,
+        "auc_hi": 0.878,
+        "inc_mean": 0.189,
+        "inc_lo": 0.114,
+        "inc_hi": 0.26,
+        "inc_significant": true
+      },
+      "both": {
+        "auc_lo": 0.759,
+        "auc_hi": 0.88,
+        "inc_mean": 0.192,
+        "inc_lo": 0.117,
+        "inc_hi": 0.265,
+        "inc_significant": true
+      }
+    }
+  }
+}

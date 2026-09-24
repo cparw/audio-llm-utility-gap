@@ -1,0 +1,201 @@
+% ICASSP 2027 submission. 4 pages technical + page 5 references only.
+% DRAFT v1 -- every number traced to VERIFIED_NUMBERS.md. Nothing here is unverified.
+\documentclass{article}
+\usepackage{spconf,amsmath,graphicx,booktabs,microtype}
+
+\title{Audio Language Models Encode Clinical Speech Signal They Do Not Use}
+
+\name{Chaitanya Parwatkar, Minoo Ahmadi, Nima Kelidari, Mohammad Soleymani}
+\address{University of Southern California, Los Angeles, CA, USA}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Audio language models are increasingly proposed for clinical speech screening, on the
+assumption that their answer reflects what they heard. We show it largely does not. Across
+nine audio LLMs and five clinical corpora, a linear probe on the audio encoder reaches
+0.92 AUC on Parkinson's read speech while the same model's own Yes/No answer reaches 0.63.
+To find out what the answer uses instead, we build a conflict set from real clinical
+interviews: 195 matched segments, 74 speakers, in which the spoken words point away from
+the diagnosis. Six of nine models score \emph{below chance} there (0.29--0.36) while scoring
+0.70--0.93 on matched segments where words and diagnosis agree. Given only the transcript and
+no audio, a model reproduces its own audio answer at $r=0.83$ and returns the identical Yes/No
+on 96\% of segments. Six interventions -- twelve prompts, layer mixing, prompt-conditioned
+mixing, contrastive tuning, threshold calibration and logit-space lexical subtraction -- fail
+to move the answer while leaving the probe unchanged, which places the deficit in the
+state-to-answer readout rather than the encoder. We release the matched conflict set.
+\end{abstract}
+
+\begin{keywords}
+audio language models, clinical speech, probing, lexical shortcut, Parkinson's disease, depression
+\end{keywords}
+
+\section{Introduction}\label{sec:intro}
+
+Speech carries measurable signs of Parkinson's disease and of depression, and audio language
+models now answer clinical questions about a recording directly, in natural language. That
+makes them attractive for screening: one model, one prompt, no task-specific training.
+
+The unexamined assumption is that the answer reflects the audio. Existing clinical evaluations
+report answer accuracy on data where the spoken words and the diagnosis point the same way, so
+a model that reads the transcript and a model that listens to the voice are indistinguishable
+by construction. For Parkinson's this matters more than usual: the disease is motor, the words
+carry no diagnostic content, and a model that follows them is provably wrong. Two recent
+studies reach a related conclusion on non-clinical audio \cite{listen2026,voxparadox2026}, and
+multi-corpus clinical benchmarks exist \cite{speechdx2026,fend2025}, but none asks the question
+inside a single audio LLM on clinical data.
+
+We make three measurements on the same segments. (i) We compare a linear probe on the audio
+encoder against the model's own emitted answer. (ii) We construct a conflict set from real
+clinical interviews in which the words contradict the diagnosis, and pair every conflict
+segment with a matched agreement segment. (iii) We replace the audio with its transcript under
+otherwise identical conditions. All evaluation is speaker-disjoint.
+
+The encoder carries the condition and the answer does not use it; on conflict segments the
+answer follows the words; and the transcript alone reproduces the answer. Six interventions
+fail to move it. We also report that one of our five corpora is separable from recording
+properties alone, and that two groups of \emph{healthy} speakers recorded on different days
+separate perfectly, which bounds what any result on that corpus can mean.
+
+\section{Setup}\label{sec:setup}
+
+\noindent\textbf{Models.} qwen2-audio, qwen2.5-omni, qwen3-omni, audio flamingo 2, audio
+flamingo 3, kimi-audio, salmonn, mimo-audio and diva. All frozen, no fine-tuning.
+
+\noindent\textbf{Corpora.} PC-GITA and Neurovoz (Spanish, Parkinson's), MDVR-KCL (English,
+Parkinson's), Italian PVS (Parkinson's), DAIC-WOZ (English, depression).
+
+\noindent\textbf{Prompt.} Verbatim, and no transcript is supplied in any audio condition:
+\emph{``Based only on this recording, does this speaker show signs of X? Answer with one word,
+Yes or No.''}
+
+\noindent\textbf{Metric.} $p_{\text{yes}} = P(\text{Yes})/(P(\text{Yes})+P(\text{No}))$ read
+from the logits at the first answer position, single forward pass, no generation. We also
+record the pre-normalisation mass $P(\text{Yes})+P(\text{No})$, because several models place
+almost none there and their AUCs are rankings rather than decisions.
+
+\noindent\textbf{Listening window.} Model audio front-ends differ: qwen2-audio accepts 30\,s,
+omni 300\,s, while DAIC interviews run 12--25 minutes. Uncontrolled, this alone produces
+apparent model differences. At a matched 300\,s window flamingo 3, omni and kimi reach 0.858,
+0.835 and 0.831 on depression and are statistically indistinguishable. All results below use a
+window that covers the whole clip.
+
+\noindent\textbf{Probe.} $\ell_2$-regularised logistic probe on pooled encoder states, with the
+layer chosen \emph{inside} the training folds. Selecting the layer after seeing the test fold
+inflates AUC by $+0.031$ on average across 18 cells, and by up to $+0.135$. Nested values move
+by up to 0.049 across seeds, so we report two decimals.
+
+\section{The gap}\label{sec:gap}
+
+On PC-GITA read speech the encoder probe reaches \textbf{0.92} while the model's own answer on
+the same clips reaches \textbf{0.63}. The information is present and the answer does not use
+it. Several models do not make a decision at all: qwen2-audio answers Yes on all 1117 clips and
+omni answers No on all of them, so their AUCs rank confidences that never cross the threshold.
+
+\section{What the answer uses instead}\label{sec:conflict}
+
+\noindent\textbf{Construction.} From the raw DAIC transcripts we take 26{,}000 participant
+turns, remove interviewer questions, and merge into $\sim$30\,s segments. We keep segments
+where a depressed participant says something positive or a control says something negative, and
+pair each with a matched segment from the same speaker where words and diagnosis agree. This
+yields 195 pairs over 74 speakers. Label and lexical direction are exactly independent
+($\phi=0.000$). Unlike synthetic conflict benchmarks, nothing is generated: the voices are real
+patients and the contradicting words occur naturally.
+
+\begin{table}[t]
+\centering\small
+\caption{AUC against the clinical label. Below 0.5 means the model follows the words rather
+than the diagnosis. No transcript is given in either arm.}
+\label{tab:conflict}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+model & conflict & agreement \\
+\midrule
+salmonn            & \textbf{0.29} & 0.85 \\
+diva               & \textbf{0.30} & 0.70 \\
+qwen2.5-omni       & \textbf{0.31} & 0.85 \\
+qwen3-omni         & \textbf{0.35} & 0.87 \\
+qwen2-audio        & \textbf{0.35} & 0.92 \\
+audio flamingo 3   & \textbf{0.36} & 0.93 \\
+mimo-audio         & 0.47 & 0.82 \\
+kimi-audio         & 0.52 & 0.87 \\
+audio flamingo 2   & 0.55 & 0.57 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Six of nine models score below chance (Table~\ref{tab:conflict}), across five independent
+labs. Audio flamingo 2 is flat on both arms and therefore has no signal to invert.
+
+\noindent\textbf{The transcript reproduces the answer.} Given only the Whisper transcript and
+no audio, under the same prompt, a model's answer correlates with its own audio answer at
+$r=0.83$ and is the identical Yes/No on 96\% of segments. Across the full grid of 30
+(model, corpus) cells, \emph{no model beats its own transcript on depression} (0 of 6; median
+text 0.81 vs audio 0.83). The 11 cells where audio wins are Parkinson's read tasks where the
+transcript is already near chance.
+
+\section{Six interventions, and what their failure shows}\label{sec:interventions}
+
+Twelve prompt wordings never lift conflict AUC above chance. Learned layer mixing reaches 0.909
+against 0.916 for honestly choosing one layer; conditioning the mixture on the prompt adds
+0.0004. Contrastive tuning and threshold calibration move the decision boundary without
+changing what is discriminated.
+
+\noindent\textbf{Lexical subtraction.} Two forward passes, one on audio and one on the
+transcript alone, subtracting text logits from audio logits at weight $\alpha$. At
+$\alpha=0.9$ the model stops following the words (agreement with the lexical direction falls
+$0.70\rightarrow0.50$) but conflict AUC only reaches 0.502; beyond that it overshoots into
+inversion. Fitted on held-out speakers, $\alpha=0$ is chosen in four of five folds.
+
+\noindent\textbf{Encoder steering.} We add a multiple of the difference-in-means diagnosis
+direction to the encoder output before the projector, keeping projector and LLM frozen. The
+agreement arm is already significantly damaged at the smallest coefficient while conflict has
+not moved, and a \emph{random direction of the same norm displaces the answer equally}. Across
+20 steered conditions, conflict AUC and lexical AUC correlate at $-0.916$: the apparent gain is
+the lexical signal being destroyed, not the voice emerging.
+
+\noindent\textbf{A published fix does not transfer.} PCLM+DPO \cite{voxparadox2026}, which
+lifts synthetic paralinguistic accuracy substantially, leaves conflict AUC at 0.365 against a
+base of 0.350, and every clinical delta falls inside the base model's bootstrap interval. The
+prompt-conditioned gate is close to a no-op on clinical prompts, placing 66\% of its mass on
+the final encoder layer against 37\% on VoxParadox-style prompts.
+
+Read together these are not six unrelated failures. Every intervention that leaves the encoder
+intact fails to move the answer, while the probe on that same encoder is unchanged. The deficit
+is in the state-to-answer readout, not in the representation.
+
+\section{Corpus validity}\label{sec:validity}
+
+Six recording measurements containing no speech content separate patients from controls at
+0.995 on Italian PVS; the silent portions alone reach 1.0, and the file container alone,
+with no audio at all, reaches 0.776. The nested probe selects layer 0 in every fold and seed.
+Decisively, \emph{two groups of healthy elderly controls from the same cohort, recorded on
+different days, separate at speaker-level AUC 1.000} ($p=0.039$), while other pairs of elderly
+sessions do not separate at all (0.11--0.82, n.s.). Published accuracies of 98--99\% on this
+corpus are therefore not evidence about pathology. We report Italian as a negative control and
+exclude it from all model claims. The other four corpora have floors of 0.45--0.80 from
+recording properties alone and retain signal above them.
+
+\section{Limitations}\label{sec:limits}
+
+The conflict set is depression only; Parkinson's tasks are fixed read sentences and sustained
+vowels, so no naturally contradicting words exist there. MDVR-KCL has 37 speakers and its
+intervals are correspondingly wide. Word-following is associated with whether the audio encoder
+was trained on a transcription objective (6 of 7 ASR-trained encoders invert vs 0 of 2
+non-ASR), but with nine models this is suggestive rather than significant (Fisher exact
+$p=0.08$), the predicate was chosen after seeing the results, and kimi-audio is a
+counterexample. Depression scores track PTSD severity as strongly as depression severity
+(0.602 vs 0.585), so the models detect distress rather than depression specifically.
+
+\section{Conclusion}\label{sec:conclusion}
+
+Across nine audio LLMs the clinical signal is present in the encoder and absent from the
+answer, and what the answer uses instead is the transcript. Six interventions that leave the
+encoder intact fail to change this. Evaluations that score these models only where words and
+diagnosis agree cannot distinguish a model that listens from one that reads.
+
+\bibliographystyle{IEEEbib}
+\bibliography{refs}
+
+\end{document}

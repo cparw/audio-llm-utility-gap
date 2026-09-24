@@ -1,0 +1,8 @@
+features,n_clips,speaker_disjoint_auc,session_disjoint_mean_auc,session_disjoint_median,session_disjoint_min,session_disjoint_max,n_folds,n_folds_le_chance
+silence PSD,589,0.9883,0.9091,0.9822,0.3657,1.0,24,2
+qwen2 encoder task=read (best layer 17),236,0.9997,0.9968,1.0,0.9278,1.0,24,0
+qwen2 encoder task=read (mean over all 33 layers),236,0.9962,0.9814,,,,24,
+qwen2 encoder task=vowel (best layer 17),495,0.9891,0.9783,1.0,0.847,1.0,20,0
+qwen2 encoder task=vowel (mean over all 33 layers),495,0.9538,0.9256,,,,20,
+qwen2 encoder task=ddk (best layer 12),100,1.0,0.9988,1.0,0.975,1.0,20,0
+qwen2 encoder task=ddk (mean over all 33 layers),100,0.9972,0.9939,,,,20,

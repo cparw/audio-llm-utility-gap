@@ -1,0 +1,33 @@
+analysis,condition,n_clips,n_spk,auc,spk_auc,shuf_mean,perm_p
+matched_subset,ALL,589,61,0.9883,1.0,0.4905,0.0196
+matched_subset,16 kHz only,471,51,0.9761,1.0,0.4896,0.0196
+matched_subset,bare fmt|data only,442,41,0.9944,0.9565,0.4662,0.0196
+matched_subset,bare fmt|data AND 16 kHz,442,41,0.9944,0.9565,0.4662,0.0196
+matched_subset,"bare+16k, elderly HC vs PD (age-matched)",441,40,0.9999,1.0,0.4963,0.0196
+removability,ALL files | raw,589,61,0.9883,1.0,0.4905,0.0196
+removability,ALL files | per-file mean removed (gain-invariant),589,61,0.9636,0.9989,0.4902,0.0196
+removability,ALL files | per-file mean+linear tilt removed,589,61,0.9809,1.0,0.4883,0.0196
+removability,ALL files | per-file z-scored (shape only),589,61,0.9916,1.0,0.4912,0.0196
+removability,ALL files | high-pass: drop <300 Hz,589,61,0.9093,0.9827,0.4909,0.0196
+removability,ALL files | telephone band 300-3400 only,589,61,0.8785,0.9827,0.4879,0.0196
+removability,ALL files | tel band + per-file mean removed,589,61,0.8424,0.9946,0.4971,0.0196
+removability,matched chain (bare+16k) | raw,442,41,0.9944,0.9565,0.4662,0.0196
+removability,matched chain (bare+16k) | per-file mean removed (gain-invariant),442,41,0.9962,0.971,0.4644,0.0196
+removability,matched chain (bare+16k) | per-file mean+linear tilt removed,442,41,0.9961,0.9686,0.4626,0.0196
+removability,matched chain (bare+16k) | per-file z-scored (shape only),442,41,0.9957,0.9783,0.4613,0.0196
+removability,matched chain (bare+16k) | high-pass: drop <300 Hz,442,41,0.9171,1.0,0.4669,0.0196
+removability,matched chain (bare+16k) | telephone band 300-3400 only,442,41,0.8538,0.9903,0.4775,0.0196
+removability,matched chain (bare+16k) | tel band + per-file mean removed,442,41,0.8264,0.9855,0.4776,0.0196
+single_scalar,sil_rms_dbfs,589,61,0.7589,0.9102,0.4706,0.0196
+single_scalar,dc_offset_lsb_sil,589,61,0.5886,0.6699,0.4594,0.1176
+single_scalar,dc_offset_lsb_full,589,61,0.5987,0.6136,0.4757,0.098
+single_scalar,n_distinct,589,61,0.6652,0.7219,0.4726,0.0196
+single_scalar,cutoff_hz,589,61,0.6788,0.8474,0.4816,0.0196
+single_scalar,frac_zero,589,61,0.7707,0.8517,0.4618,0.0196
+single_scalar,lsb_odd_frac,589,61,0.61,0.5357,0.4575,0.0392
+single_scalar,trail_zero_samples,589,61,0.7341,0.6851,0.4483,0.0196
+single_scalar,lead_zero_samples,589,61,0.8962,0.8063,0.4782,0.0196
+single_scalar,dyn_range_db,589,61,0.7877,0.9188,0.4768,0.0196
+single_scalar_matched,sil_rms_dbfs,442,41,0.6788,0.8551,0.488,0.0196
+single_scalar_matched,dc_offset_lsb_sil,442,41,0.6552,0.7874,0.4527,0.0196
+single_scalar_matched,n_distinct,442,41,0.6757,0.6787,0.4836,0.0392

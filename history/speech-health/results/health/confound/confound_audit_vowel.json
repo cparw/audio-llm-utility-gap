@@ -1,0 +1,134 @@
+{
+  "italian": {
+    "n_clips": 495,
+    "n_speakers": 50,
+    "n_PD": 275,
+    "n_HC": 220,
+    "AUC_from_recording_properties_only": 0.861,
+    "AUC_from_metadata_only_age_sex": NaN,
+    "AUC_recording_plus_metadata": NaN,
+    "AUC_label_shuffled_control": 0.51,
+    "mean_age_PD": NaN,
+    "mean_age_HC": NaN,
+    "frac_male_PD": NaN,
+    "frac_male_HC": NaN,
+    "per_class_means": {
+      "duration_s": {
+        "PD": 11.281,
+        "HC": 10.002
+      },
+      "rms": {
+        "PD": 0.068,
+        "HC": 0.036
+      },
+      "orig_sr": {
+        "PD": 16000.0,
+        "HC": 16000.0
+      },
+      "spec_centroid": {
+        "PD": 783.52,
+        "HC": 1067.578
+      },
+      "spec_rolloff": {
+        "PD": 1351.183,
+        "HC": 1897.146
+      },
+      "zcr": {
+        "PD": 0.049,
+        "HC": 0.078
+      },
+      "snr_est": {
+        "PD": 20.158,
+        "HC": 29.393
+      }
+    }
+  },
+  "neurovoz": {
+    "n_clips": 1035,
+    "n_speakers": 107,
+    "n_PD": 559,
+    "n_HC": 476,
+    "AUC_from_recording_properties_only": 0.679,
+    "AUC_from_metadata_only_age_sex": 0.707,
+    "AUC_recording_plus_metadata": 0.719,
+    "AUC_label_shuffled_control": 0.539,
+    "mean_age_PD": 71.4,
+    "mean_age_HC": 63.6,
+    "frac_male_PD": NaN,
+    "frac_male_HC": NaN,
+    "per_class_means": {
+      "duration_s": {
+        "PD": 3.899,
+        "HC": 4.376
+      },
+      "rms": {
+        "PD": 0.035,
+        "HC": 0.034
+      },
+      "orig_sr": {
+        "PD": 16000.0,
+        "HC": 16000.0
+      },
+      "spec_centroid": {
+        "PD": 808.247,
+        "HC": 749.182
+      },
+      "spec_rolloff": {
+        "PD": 1367.539,
+        "HC": 1259.215
+      },
+      "zcr": {
+        "PD": 0.054,
+        "HC": 0.045
+      },
+      "snr_est": {
+        "PD": 4.881,
+        "HC": 3.492
+      }
+    }
+  },
+  "pcgita": {
+    "n_clips": 2000,
+    "n_speakers": 100,
+    "n_PD": 1000,
+    "n_HC": 1000,
+    "AUC_from_recording_properties_only": 0.639,
+    "AUC_from_metadata_only_age_sex": NaN,
+    "AUC_recording_plus_metadata": NaN,
+    "AUC_label_shuffled_control": 0.49,
+    "mean_age_PD": NaN,
+    "mean_age_HC": NaN,
+    "frac_male_PD": NaN,
+    "frac_male_HC": NaN,
+    "per_class_means": {
+      "duration_s": {
+        "PD": 3.14,
+        "HC": 2.726
+      },
+      "rms": {
+        "PD": 0.03,
+        "HC": 0.031
+      },
+      "orig_sr": {
+        "PD": 16000.0,
+        "HC": 16000.0
+      },
+      "spec_centroid": {
+        "PD": 1092.783,
+        "HC": 1096.334
+      },
+      "spec_rolloff": {
+        "PD": 1962.927,
+        "HC": 1896.761
+      },
+      "zcr": {
+        "PD": 0.072,
+        "HC": 0.074
+      },
+      "snr_est": {
+        "PD": 8.938,
+        "HC": 6.627
+      }
+    }
+  }
+}
