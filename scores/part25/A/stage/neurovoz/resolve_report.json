@@ -1,0 +1,11 @@
+{
+ "dataset": "neurovoz",
+ "n_list": 1270,
+ "missing": [],
+ "multi_same": 0,
+ "multi_diff": [],
+ "label_mismatch": 0,
+ "speaker_mismatch": 0,
+ "n_resolved": 1270,
+ "n_multi_diff": 0
+}

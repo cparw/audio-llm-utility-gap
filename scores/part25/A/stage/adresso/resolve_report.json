@@ -1,0 +1,11 @@
+{
+ "dataset": "adresso",
+ "n_list": 237,
+ "missing": [],
+ "multi_same": 237,
+ "multi_diff": [],
+ "label_mismatch": 0,
+ "speaker_mismatch": 0,
+ "n_resolved": 237,
+ "n_multi_diff": 0
+}
