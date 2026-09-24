@@ -1,0 +1,285 @@
+{
+ "cell": "Qwen3-Omni-30B-A3B on E-DAIC",
+ "model": "Qwen3-Omni-30B-A3B",
+ "checkpoint": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "dataset": "E-DAIC",
+ "condition": "MDD",
+ "window": "first 30 s of dcaps_proc/<pid>.wav (x[:16000*30] in the extractor)",
+ "n": 275,
+ "n_speakers": 275,
+ "n_pos": 66,
+ "probe_per_repeat": [
+  0.5379875308104973,
+  0.6103378280411773,
+  0.5940988835725678,
+  0.6149050311729738,
+  0.5566913150645209
+ ],
+ "probe_mean5": 0.5828041177323474,
+ "probe_per_repeat_4dp": [
+  0.538,
+  0.6103,
+  0.5941,
+  0.6149,
+  0.5567
+ ],
+ "probe_mean5_4dp": 0.5828,
+ "zeroshot_auc": 0.6290416122952008,
+ "zeroshot_auc_4dp": 0.629,
+ "gap_point": -0.04623749456285342,
+ "gap_ci": [
+  -0.14124768722162817,
+  0.05267611084567592
+ ],
+ "gap_point_4dp": -0.0462,
+ "gap_ci_4dp": [
+  -0.1412,
+  0.0527
+ ],
+ "interval_above_zero": false,
+ "interval_excludes_zero": false,
+ "p_boot_one_sided_le0": 0.826,
+ "probe_mean5_ci": [
+  0.5199309364638657,
+  0.6475631090644404
+ ],
+ "zeroshot_ci": [
+  0.5468694943607938,
+  0.7042285889382564
+ ],
+ "usable_draws": 2000,
+ "n_draws": 2000,
+ "layers": {
+  "seed0": [
+   2,
+   4,
+   8,
+   3,
+   27
+  ],
+  "seed1": [
+   4,
+   8,
+   4,
+   1,
+   5
+  ],
+  "seed2": [
+   5,
+   4,
+   4,
+   3,
+   27
+  ],
+  "seed3": [
+   1,
+   0,
+   1,
+   6,
+   3
+  ],
+  "seed4": [
+   3,
+   0,
+   27,
+   8,
+   6
+  ],
+  "single": [
+   18,
+   6,
+   4,
+   4,
+   8
+  ]
+ },
+ "single_split_auc_rerun": 0.5843845150065247,
+ "single_split_auc_podD2_saved": 0.5843845150065247,
+ "single_split_layers_rerun": [
+  18,
+  6,
+  4,
+  4,
+  8
+ ],
+ "single_split_layers_podD2_saved": [
+  18,
+  6,
+  4,
+  4,
+  8
+ ],
+ "single_split_rank_corr_rerun_vs_podD2": 1.0,
+ "old_podD2_per_repeat_master_row144": [
+  0.538,
+  0.6103,
+  0.5941,
+  0.6149,
+  0.5567
+ ],
+ "old_podD2_mean5_master_row144": 0.5828,
+ "mean5_minus_old_master": 4.117732347430625e-06,
+ "zeroshot_rerun_extraction_auc": 0.6290416122952008,
+ "zeroshot_rerun_vs_saved_max_abs_p_yes_diff": 0.0,
+ "zeroshot_rerun_vs_saved_median_abs_p_yes_diff": 0.0,
+ "pod_pyes_check": {
+  "n": 275,
+  "max_abs_p_yes_diff": 0.0,
+  "median_abs_p_yes_diff": 0.0,
+  "n_over_1e-3": 0,
+  "n_over_1e-2": 0,
+  "auc_rerun": 0.6290416122952008,
+  "auc_ref": 0.6290416122952008
+ },
+ "podverify": {
+  "PASS": true,
+  "max_abs_pred_diff": 0.0,
+  "max_abs_inner_score_diff": 2.415918265441519e-08,
+  "layer_mismatches": [],
+  "mean5_rank_from_oof": 0.5828041177323474,
+  "abs_mean5_diff": 0.0
+ },
+ "probe_pod_versions": {
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0"
+ },
+ "probe_n_jobs": 32,
+ "probe_command": "p25a_nested5.py in/p26_q3o_edaic_encstates.npz edaic folds out/p26_q3o_edaic",
+ "states_on_pod": {
+  "file": "/workspace/in/p26_q3o_edaic_encstates.npz",
+  "sha256": "34b4918c6537281c8fbd4125b3245676a25f9e5ab3c5270e7bd89a757a00abd9",
+  "keys": {
+   "enc": [
+    [
+     275,
+     32,
+     1280
+    ],
+    "float32"
+   ],
+   "label": [
+    [
+     275
+    ],
+    "int64"
+   ],
+   "spk": [
+    [
+     275
+    ],
+    "<U3"
+   ],
+   "p_yes": [
+    [
+     275
+    ],
+    "float64"
+   ],
+   "name": [
+    [
+     275
+    ],
+    "<U7"
+   ]
+  }
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs and the zero-shot AUC on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.csv",
+  "draws_npz": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_podverify.json",
+  "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_edaic_zeroshot_scores.csv",
+  "rerun_zeroshot": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-gpu/out/p26_q3o_edaic_zeroshot_scores.csv",
+  "rerun_encstates": "<local data dir>/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-gpu/out/p26_q3o_edaic_encstates.npz",
+  "rerun_states_full": "<local data dir>/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-gpu/out/p26_q3o_edaic_states.npz",
+  "old_master_json": "<local data dir>/release/overnight2/final/q3o_edaic_nested_repeats.json",
+  "old_single_split_oof": "<local data dir>/release/overnight2/q3o_new/q3o_edaic_enc_nested_oof.csv"
+ },
+ "sha256": {
+  "pod_oof_csv": "658fdd38e37451664e75870bb5f9000a81c3687e81c90f7661a05c198f0c041f",
+  "pod_json": "8e92b795db1a0b6642eabd2e70e6236408593540e209e04277bf2310107ea0ac",
+  "zeroshot": "c54dcfee5e80c1ac208c673b22908c945e9da42cc4afead20a9ec5e0ea1a08a3",
+  "perclip_csv": "015e640395ff9a7c05afec84119783bbb4b1b003ab5c3dad0a0a419ef9f356e2",
+  "draws_npz": "1088dbd2dba18592cbcfca8f6842c32cc54d7edec3449e9d718615306067311f",
+  "rerun_encstates": "34b4918c6537281c8fbd4125b3245676a25f9e5ab3c5270e7bd89a757a00abd9"
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "scipy": "1.15.3",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/part26/Qwen3-Omni-30B-A3B_E-DAIC/scripts/p26_q3o_edaic_gap.py scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-gpu",
+ "created_utc": "2026-09-24T01:09:27Z",
+ "run": {
+  "gpu_pod": {
+   "id": "mspkz2hwf76o9f",
+   "gpu": "NVIDIA H100 80GB HBM3",
+   "cost_per_hr": 3.49,
+   "created_utc": "2026-09-24 00:47:41.752 +0000 UTC",
+   "deleted_utc": "2026-09-24 01:08:07 (watchdog, HTTP 204, then 404)",
+   "hours": 0.341,
+   "cost_usd": 1.19
+  },
+  "cpu_pod": {
+   "id": "6cy4hpql72vvio",
+   "flavor": "cpu5c",
+   "vcpu": 32,
+   "cost_per_hr": 1.12,
+   "created_utc": "2026-09-24 00:59:24.687 +0000 UTC",
+   "deleted_utc": "2026-09-24 01:08:54 (watchdog, HTTP 204, then 404)",
+   "hours": 0.158,
+   "cost_usd": 0.18
+  },
+  "total_pod_cost_usd": 1.37,
+  "extraction": {
+   "script": "release/podD2_final/extract_probe_layers.py (md5 08b968d96cd2023f0fdce8e8d4795372), unchanged",
+   "command": "WINDOW_S=30 python3 extract_probe_layers.py data/mf_edaic_full.csv out/p26_q3o_edaic mdd Qwen/Qwen3-Omni-30B-A3B-Instruct",
+   "libraries": "transformers 5.5.4 (the podD2 version), torch 2.8.0+cu128, librosa 1.0.0, H100 80GB HBM3, bf16",
+   "audio": "E-DAIC_audio.tar.gz fetched on the pod (the podD2 source); tarball sha256 83ea8873... equals drive_data/checksums.txt; all 275 dcaps_proc wavs equal the Mac G-Drive dcaps_proc files by sha256; the extractor cuts x[:16000*30] itself",
+   "manifest": "dcaps.csv order = the q3o_new zero-shot row order (checked: clip, label, speaker)",
+   "pyes_vs_q3o_new_max_abs_diff": 0.0,
+   "rerun_zeroshot_csv_sha256_equals_q3o_new": true,
+   "encoder_states": "enc [275, 32, 1280] float32, per-layer mean over time of each of the 32 encoder layer outputs, finite",
+   "note": "a first plan to upload Mac pre-cut 30 s audio was dropped (Mac upload ran at about 0.2 MB/s); the pre-cut files and the Mac librosa identity check stay in stage/ as a record"
+  },
+  "probe": {
+   "script": "part25/A/podfiles/p25a_nested5.py (md5 615ced0380cca2636ed7cc30c71810e6), unchanged",
+   "pod_check": "p25a_podverify.py PASS (max pred diff 0, inner score diff 2.4e-08, no layer mismatch)",
+   "fold_files": [
+    "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+    "edaic_groupkfold5_pod.csv (single split, reference only)"
+   ],
+   "fold_files_equal_pod_tie_rule": true
+  },
+  "reproduction_of_lost_podD2_states": {
+   "per_repeat_equals_master_row144_4dp": true,
+   "single_split_oof_max_abs_diff_vs_podD2_saved_file": 0.0,
+   "single_split_layers_equal": true
+  },
+  "mac_independent_check": true,
+  "verified": true,
+  "verified_means": "states re-extracted and proven equal in effect to podD2 (p_yes identical to 0.0, zero-shot csv byte-identical); probe refit and layer choice re-derived on the pod (podverify PASS); per-clip file, folds, point, draws and interval rebuilt independently on the Mac with rank AUCs (verify/Q3O_EDAIC_verify.json PASS)"
+ }
+}
