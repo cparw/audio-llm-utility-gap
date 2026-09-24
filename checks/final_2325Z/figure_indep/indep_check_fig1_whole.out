@@ -1,0 +1,82 @@
+indep_check_fig1_whole.py  python 3.10.2  (zlib + own PDF interpreter; no PyMuPDF, matplotlib or sklearn)
+figure checks/final_2325Z/figure/fig1_gap_whole.pdf
+  md5 b178e9d020758acf4d1c496889ccd7d6  (track report says b178e9d020758acf4d1c496889ccd7d6: same)
+  MediaBox [0.0, 0.0, 244.08, 144.0]  width 244.0800 bp = 3.3900 in, height 2.0000 in
+
+CHECK 1  smallest font size
+  fonts in resources: F1=CZRBLR+STIXGeneral-Regular (Type0)
+  font program embedded: [('F1', True)]
+  Type 3 fonts in file: 0
+  text drawn inside XObjects (markers): 0
+  text runs on the page: 20
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '0'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '0'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '0.5'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '0.6'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '0.7'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '0.8'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '0.9'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '1.0'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '14'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '16'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  '28'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  'E-DAIC'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  'PC-GITA'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  'Pitt'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  'audio encoder'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  'language model'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  'probe'
+    9.0000 pt (Tf 9, rot 0)  CZRBLR+STIXGeneral-Regular  'zero-shot answer'
+    10.0000 pt (Tf 10, rot 90)  CZRBLR+STIXGeneral-Regular  'AUC'
+    10.0000 pt (Tf 10, rot 0)  CZRBLR+STIXGeneral-Regular  'layer'
+  smallest 9.0000 pt, largest 10.0000 pt, runs under 9 pt: 0
+  pdffonts | name                                 type              encoding         emb sub uni object ID
+  pdffonts | ------------------------------------ ----------------- ---------------- --- --- --- ---------
+  pdffonts | CZRBLR+STIXGeneral-Regular           CID TrueType      Identity-H       yes yes yes     18  0
+  spconf.sty \textwidth 178.0 truemm, \columnsep 6.0 truemm -> \columnwidth 86.0 mm = 243.7795 bp
+  placed at width=\columnwidth: scale 0.998769, smallest prints at 8.9889 pt, largest at 9.9877 pt
+
+E-DAIC label fill colour (0.180392, 0.490196, 0.309804)
+  stroked page paths in that colour: 2 (polylines over 10 points 1, horizontal 2 point lines 1)
+  y calibration A: 6 tick marks paired with their labels [0.5, 0.6, 0.7, 0.8, 0.9, 1.0], max residual 2.23e-09
+  y calibration B: end ticks only (0.5 and 1.0)
+  x calibration: tick labels ['0', '16', '0', '14', '28'] -> plot index [0, 16, 32, 46, 60] (n_enc 32 from pod csv rows), max residual 1.17e-07
+
+CHECK 2  E-DAIC curves vs pod csvs (auc_oof)
+  pod encoder scores/part23/pull/p23-a-probes/p23a/out/o25_whole_encoder_perlayer.csv  sha256 80b11fb36ce0c43f42b94d5bf5a9991e0b7eadcc4e4080cde2a611ee76f82322  rows 32  file order is layer order: True
+  pod llm     scores/part23/pull/p23-a-probes/p23a/out/o25_whole_llm_perlayer.csv  sha256 e4eeddbc614f2265e9519c80f81fcb569a6608759d3f86bdf6776dedebd76b2c  rows 29  file order is stage order: True
+  curve vertices 61  (expected 61)
+  every plot index 0..60 hit once: True; max |x - nearest integer| 1.66e-07
+  encoder  max |PDF - pod| cal A 3.77e-09 (at 15: PDF 0.62403943, pod 0.62403944); cal B 3.33e-09
+  llm      max |PDF - pod| cal A 3.10e-09 (at 28: PDF 0.77526460, pod 0.77526461); cal B 3.18e-09
+  dash of the curve ([1.3, 2.145], 0.0), width 1.300
+  write precision floor: 1e-6 bp is 6.0e-09 AUC
+
+CHECK 3  E-DAIC answer line
+  line y 110.437038 bp -> AUC cal A 0.836600, cal B 0.836600
+  x from 28.4037 to 239.4660 bp; axes from 28.4037 to 239.4660 bp
+  dash ([0.8, 1.32], 0.0), width 0.800 (curve width 1.300)
+  rank AUC of p_yes_whole on A2_edaic_whole_zeroshot_perclip.csv: 0.836596 (n 275, positives 66) -> 0.8366
+  PART23_VERIFIED.tsv row 1_whole: claimed 0.8366, recomputed 0.8366, verified yes
+  dash on length <= line width (dotted look): True
+
+CHECK 4  no existing file overwritten
+  e05e5188fc39554024e8d5ef3cb31020  report e05e5188fc39554024e8d5ef3cb31020  same  scores/part24/fig/fig1_gap_whole.pdf
+  c3ee6d4d403e24aa68a1cdb202373973  report c3ee6d4d403e24aa68a1cdb202373973  same  scores/part24/fig/fig1_gap_whole_v4layout.pdf
+  bbefb559a5768dcb07d11ed5d440da18  report bbefb559a5768dcb07d11ed5d440da18  same  <local data dir>/paper1_submission_23sep/final_overleaf_2325Z/figures/fig1_gap.pdf
+  63c9ae9c510b0afee943dcaea0cc7343  report 63c9ae9c510b0afee943dcaea0cc7343  same  <local data dir>/paper1_submission_23sep/final_overleaf_2325Z/figures/fig1_gap1.pdf
+  upload zip <local data dir>/The_Representation_Utility_Gap_in_Audio_LLMs____ICASSP (2).zip  md5 32f4b95844b97b5651aed12fb5e0a5da  members 17
+  e05e5188fc39554024e8d5ef3cb31020  listed in report  fig1_gap_whole.pdf
+  c3ee6d4d403e24aa68a1cdb202373973  listed in report  fig1_gap_whole_v4layout.pdf
+  bbefb559a5768dcb07d11ed5d440da18  upload zip same; zip/figures same  fig1_gap.pdf
+  63c9ae9c510b0afee943dcaea0cc7343  upload zip same; zip/figures same  fig1_gap1.pdf
+  b31242714ffa4493d667c546e3f7cf20  upload zip same; zip/figures same  fig1old_gap.pdf
+  89f39d543ab1d63d9f3e7b624cd4b6af  upload zip same; zip/figures same  plot1_encoder_layers.pdf
+  238a2ece92df3ed6b7aa9af45d02222b  upload zip same; zip/figures same  qwen2audio_gap.pdf
+  all 17 Overleaf copy files byte identical to the upload zip: True
+  files in the Overleaf copy that are not in the upload: []
+
+RESULT check 1 smallest font size >= 9 pt in the file: yes
+RESULT check 2 E-DAIC curves equal the pod csvs: yes
+RESULT check 3 answer line at 0.8366: yes
+RESULT check 4 no existing file overwritten: yes
