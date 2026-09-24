@@ -1,0 +1,17 @@
+val10 clips: clip, dur_s, scored_s, |part10 - val10|, |fullseg - val10|
+  conflict_Con_015-0_67805.wav 33.38 30.0 1.59e-06 0.0000
+  conflict_Dem_003-0_145294.wav 34.70 30.0 2.44e-06 0.1532
+  conflict_Dem_212-1_3814.wav 36.04 30.0 2.10e-06 0.0000
+  conflict_Dem_620-0_5500.wav 30.72 30.0 1.75e-06 0.0586
+  agreement_Con_113-3_8288.wav 35.62 30.0 1.91e-06 0.0000
+  agreement_Con_208-2_36676.wav 36.33 30.0 2.29e-06 0.0891
+  agreement_Dem_003-0_179994.wav 42.20 30.0 2.85e-06 0.1856
+  agreement_Dem_070-2_2244.wav 40.49 30.0 1.59e-06 0.0566
+  agreement_Dem_218-1_10098.wav 30.27 30.0 2.77e-06 0.0926
+  agreement_Dem_358-1_3664.wav 32.41 30.0 2.16e-06 0.1479
+val10: max |part10 - val10| = 2.85e-06; max |fullseg - val10| = 0.1856; median |fullseg - val10| = 0.0739
+part10 vs fullseg, segments 30 to 30.5 s: n=37 median |dp_yes|=0.0567 share over 0.01=0.78
+part10 vs fullseg, segments 30.5 to 33.3 s: n=199 median |dp_yes|=0.0567 share over 0.01=0.84
+part10 vs fullseg, segments 33.3 to 40 s: n=178 median |dp_yes|=0.0621 share over 0.01=0.88
+part10 vs fullseg, segments 40 to 56 s: n=54 median |dp_yes|=0.0621 share over 0.01=0.89
+all 468: median |dp_yes| 0.0600, rank corr with duration 0.160

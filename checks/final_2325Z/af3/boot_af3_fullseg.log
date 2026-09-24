@@ -1,0 +1,6 @@
+fullseg_sep16                  all       n=468 spk=228 AUC=0.5751 [0.5136, 0.6347] usable=2000
+fullseg_minus_part10_paired    all       n=468 spk=228 AUC=-0.0142 [-0.0607, 0.0318] usable=2000
+fullseg_sep16                  conflict  n=146 spk=100 AUC=0.6202 [0.5135, 0.7209] usable=2000
+fullseg_minus_part10_paired    conflict  n=146 spk=100 AUC=0.0128 [-0.0797, 0.0947] usable=2000
+fullseg_sep16                  agreement n=322 spk=175 AUC=0.5619 [0.4931, 0.6278] usable=2000
+fullseg_minus_part10_paired    agreement n=322 spk=175 AUC=-0.0236 [-0.0792, 0.0291] usable=2000
