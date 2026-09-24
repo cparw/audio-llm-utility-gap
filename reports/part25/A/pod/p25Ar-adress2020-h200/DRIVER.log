@@ -1,0 +1,9 @@
+03:09:32 DRIVER START adress2020 ad NJ=126
+SETUP_END 03:11:16 PIP=ok HF=ok
+03:11:33 DATA CHECK OK 156 files
+03:12:32 EXTRACT DONE: RESULT zero-shot mf_adress2020.csv n=156 AUC=0.6241 median_mass=0.997  56s
+03:12:32 ZS_COMPARE {"n": 156, "p_yes_exact_equal": 156, "p_yes_max_abs_diff": 0.0, "p_yes_median_abs_diff": 0.0, "n_below_1e-9": 156, "n_below_1e-4": 156, "mass_max_abs_diff": 0.0, "labels_equal": true, "speakers_equal": true}
+03:13:23 PROBE DONE: NESTED5 DONE adress2020 mean5 0.804274 per [0.8161, 0.7936, 0.8051, 0.8062, 0.8005] single 0.787804
+03:13:23 ORIGINAL SCRIPT: enc: mean 0.8043 over 5 splits  [0.8161, 0.7936, 0.8051, 0.8062, 0.8005] ORIG_RC 0
+03:13:33 PODVERIFY: PODVERIFY adress2020 PASS=True max_pred_diff=0 max_inner_diff=2.52e-08 layer_mismatch=0 mean5 0.804274 vs 0.804274
+03:13:33 ALL DONE

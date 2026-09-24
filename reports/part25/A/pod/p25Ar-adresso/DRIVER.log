@@ -1,0 +1,9 @@
+02:52:33 DRIVER START adresso ad NJ=190
+SETUP_END 02:53:16 PIP=ok HF=ok
+02:56:49 DATA CHECK OK 237 files
+02:58:03 EXTRACT DONE: RESULT zero-shot mf_adresso.csv n=237 AUC=0.6150 median_mass=0.997  72s
+02:58:04 ZS_COMPARE {"n": 237, "p_yes_exact_equal": 237, "p_yes_max_abs_diff": 0.0, "p_yes_median_abs_diff": 0.0, "n_below_1e-9": 237, "n_below_1e-4": 237, "mass_max_abs_diff": 0.0, "labels_equal": true, "speakers_equal": true}
+02:58:50 PROBE DONE: NESTED5 DONE adresso mean5 0.875217 per [0.8722, 0.8665, 0.8825, 0.874, 0.881] single 0.889879
+02:58:50 ORIGINAL SCRIPT: enc: mean 0.8752 over 5 splits  [0.8722, 0.8665, 0.8825, 0.874, 0.881] ORIG_RC 0
+02:58:59 PODVERIFY: PODVERIFY adresso PASS=True max_pred_diff=0 max_inner_diff=2.37e-08 layer_mismatch=0 mean5 0.875217 vs 0.875217
+02:58:59 ALL DONE

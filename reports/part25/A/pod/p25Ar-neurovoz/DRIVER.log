@@ -1,0 +1,9 @@
+02:52:19 DRIVER START neurovoz pd NJ=190
+SETUP_END 02:53:09 PIP=ok HF=ok
+02:58:51 DATA CHECK OK 1270 files
+03:04:44 EXTRACT DONE: RESULT zero-shot mf_neurovoz.csv n=1270 AUC=0.6951 median_mass=0.995  350s
+03:04:44 ZS_COMPARE {"n": 1270, "p_yes_exact_equal": 1270, "p_yes_max_abs_diff": 0.0, "p_yes_median_abs_diff": 0.0, "n_below_1e-9": 1270, "n_below_1e-4": 1270, "mass_max_abs_diff": 0.0, "labels_equal": true, "speakers_equal": true}
+03:09:22 PROBE DONE: NESTED5 DONE neurovoz mean5 0.921277 per [0.9275, 0.9154, 0.928, 0.9124, 0.9232] single 0.915973
+03:09:47 ORIGINAL SCRIPT: enc: mean 0.9213 over 5 splits  [0.9275, 0.9154, 0.928, 0.9124, 0.9232] ORIG_RC 0
+03:10:15 PODVERIFY: PODVERIFY neurovoz PASS=True max_pred_diff=0 max_inner_diff=2.41e-08 layer_mismatch=0 mean5 0.921277 vs 0.921277
+03:10:15 ALL DONE

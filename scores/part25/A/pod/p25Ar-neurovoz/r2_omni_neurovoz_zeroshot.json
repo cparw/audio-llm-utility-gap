@@ -1,0 +1,16 @@
+{
+ "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+ "clip_list": "/workspace/data/mf_neurovoz.csv",
+ "condition": "pd",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "n": 1270,
+ "n_positive": 621,
+ "auc": 0.6951,
+ "median_mass": 0.9952,
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "device": "cuda",
+ "encoder_layers": 32,
+ "llm_stages": 29,
+ "date": "2026-09-24"
+}

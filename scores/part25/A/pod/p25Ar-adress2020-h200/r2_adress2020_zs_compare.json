@@ -1,0 +1,11 @@
+{
+ "n": 156,
+ "p_yes_exact_equal": 156,
+ "p_yes_max_abs_diff": 0.0,
+ "p_yes_median_abs_diff": 0.0,
+ "n_below_1e-9": 156,
+ "n_below_1e-4": 156,
+ "mass_max_abs_diff": 0.0,
+ "labels_equal": true,
+ "speakers_equal": true
+}
