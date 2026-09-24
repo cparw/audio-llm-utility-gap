@@ -1,0 +1,282 @@
+{
+ "hkgitzvp7db9z9": {
+  "cell": "Kimi-Audio_ADReSS-2020",
+  "name": "p26-kimi-adress2020",
+  "cost": 3.49,
+  "created": "2026-09-24 01:04:19.495 +0000 UTC",
+  "src": "Kimi-Audio_ADReSS-2020/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "wikwa0qc0uw1b9": {
+  "cell": "Kimi-Audio_ADReSS-2020",
+  "name": "p26-kimi-adress2020-g2",
+  "cost": 3.49,
+  "created": "2026-09-24 02:45:20.816 +0000 UTC",
+  "src": "Kimi-Audio_ADReSS-2020/try2/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "mmqahrpwpu0m00": {
+  "cell": "Kimi-Audio_ADReSS-2020",
+  "name": "p26-kimi-adress2020-g3",
+  "cost": 3.49,
+  "created": "2026-09-24 03:23:38.849 +0000 UTC",
+  "src": "Kimi-Audio_ADReSS-2020/try2/launch/create_gpu_g3_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "5dt4v6o0nffj1o": {
+  "cell": "Kimi-Audio_ADReSS-2020",
+  "name": "p26-kimi-adress2020-c2",
+  "cost": 0.96,
+  "created": "2026-09-24 03:35:44.354 +0000 UTC",
+  "src": "Kimi-Audio_ADReSS-2020/try2/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "yz8nyovce4nx08": {
+  "cell": "Kimi-Audio_ADReSSo",
+  "name": "p26-kimi-adresso-gpu",
+  "cost": 3.49,
+  "created": "2026-09-24 01:01:50.357 +0000 UTC",
+  "src": "Kimi-Audio_ADReSSo/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "n37xm21htbr44z": {
+  "cell": "Kimi-Audio_ADReSSo",
+  "name": "p26-kimi-adresso-cpu",
+  "cost": 0.96,
+  "created": "2026-09-24 01:25:39.058 +0000 UTC",
+  "src": "Kimi-Audio_ADReSSo/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "k9dkn8qzhw51a6": {
+  "cell": "Kimi-Audio_ADReSSo",
+  "name": "p26-kimi-adresso-cpu2",
+  "cost": 0.96,
+  "created": "2026-09-24 02:47:40.726 +0000 UTC",
+  "src": "Kimi-Audio_ADReSSo/launch2/create_cpu2_resp.json",
+  "gpu": "unknown"
+ },
+ "m42ljldnq92qmw": {
+  "cell": "Kimi-Audio_E-DAIC",
+  "name": "p26-kimi-edaic-gpu",
+  "cost": 3.49,
+  "created": "2026-09-24 01:05:48.844 +0000 UTC",
+  "src": "Kimi-Audio_E-DAIC/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "p6afmxz5ilpzr1": {
+  "cell": "Kimi-Audio_E-DAIC",
+  "name": "p26-kimi-edaic-cpu",
+  "cost": 0.96,
+  "created": "2026-09-24 01:15:28.763 +0000 UTC",
+  "src": "Kimi-Audio_E-DAIC/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "1b33rynkogtm3y": {
+  "cell": "Kimi-Audio_E-DAIC",
+  "name": "p26-kimi-edaic-cpu",
+  "cost": 0.96,
+  "created": "2026-09-24 01:22:22.499 +0000 UTC",
+  "src": "Kimi-Audio_E-DAIC/launch/create_cpu2_resp.json",
+  "gpu": "unknown"
+ },
+ "6zo60zbviepd7a": {
+  "cell": "Kimi-Audio_E-DAIC",
+  "name": "p26-kimi-edaic-cpu2",
+  "cost": 0.96,
+  "created": "2026-09-24 02:43:00.584 +0000 UTC",
+  "src": "Kimi-Audio_E-DAIC/launch/create_cpu_try2_resp.json",
+  "gpu": "unknown"
+ },
+ "vz0e628ewxabop": {
+  "cell": "Kimi-Audio_MDVR-KCL",
+  "name": "p26-kimi-kcl-gpu",
+  "cost": 3.49,
+  "created": "2026-09-24 01:05:55.733 +0000 UTC",
+  "src": "Kimi-Audio_MDVR-KCL/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "boyfheojko3eqb": {
+  "cell": "Kimi-Audio_MDVR-KCL",
+  "name": "p26-kimi-kcl-cpu",
+  "cost": 0.96,
+  "created": "2026-09-24 01:19:20.177 +0000 UTC",
+  "src": "Kimi-Audio_MDVR-KCL/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "pcg8t6ahr6bo4q": {
+  "cell": "Kimi-Audio_NeuroVoz",
+  "name": "p26-kimi-neurovoz-gpu",
+  "cost": 3.49,
+  "created": "2026-09-24 01:08:05.803 +0000 UTC",
+  "src": "Kimi-Audio_NeuroVoz/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "xm65txjjvqzq5q": {
+  "cell": "Kimi-Audio_NeuroVoz",
+  "name": "p26-kimi-neurovoz-cpu",
+  "cost": 0.96,
+  "created": "2026-09-24 01:22:44.928 +0000 UTC",
+  "src": "Kimi-Audio_NeuroVoz/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "o0ezblvilljrg0": {
+  "cell": "Kimi-Audio_NeuroVoz",
+  "name": "p26-kimi-neurovoz-cpu2",
+  "cost": 0.96,
+  "created": "2026-09-24 02:43:39.982 +0000 UTC",
+  "src": "Kimi-Audio_NeuroVoz/launch/create_cpu2_resp.json",
+  "gpu": "unknown"
+ },
+ "roj4j50j5vbk1a": {
+  "cell": "Kimi-Audio_PC-GITA",
+  "name": "p26-kimi-pcgita-gpu",
+  "cost": 3.49,
+  "created": "2026-09-24 01:01:42.746 +0000 UTC",
+  "src": "Kimi-Audio_PC-GITA/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "bg8a6dnjgyjyyh": {
+  "cell": "Kimi-Audio_PC-GITA",
+  "name": "p26-kimi-pcgita-cpu",
+  "cost": 0.96,
+  "created": "2026-09-24 02:43:19.725 +0000 UTC",
+  "src": "Kimi-Audio_PC-GITA/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "ykow87gaqraiqs": {
+  "cell": "Kimi-Audio_Pitt",
+  "name": "p26-kimi-pitt-gpu",
+  "cost": 3.49,
+  "created": "2026-09-24 01:06:02.613 +0000 UTC",
+  "src": "Kimi-Audio_Pitt/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "rvk1syvmw4l0x2": {
+  "cell": "Kimi-Audio_Pitt",
+  "name": "p26-kimi-pitt-cpu",
+  "cost": 1.12,
+  "created": "2026-09-24 01:14:52.755 +0000 UTC",
+  "src": "Kimi-Audio_Pitt/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "vyn4hnge5s8jn0": {
+  "cell": "Qwen2-Audio_ADReSS-2020",
+  "name": "p26-q2a-adress2020",
+  "cost": 0.96,
+  "created": "2026-09-24 00:47:39.396 +0000 UTC",
+  "src": "Qwen2-Audio_ADReSS-2020/launch/create_resp.json",
+  "gpu": "unknown"
+ },
+ "fx4m1lrp4exk6p": {
+  "cell": "Qwen2-Audio_ADReSSo",
+  "name": "p26-q2a-adresso",
+  "cost": 0.96,
+  "created": "2026-09-24 00:46:18.554 +0000 UTC",
+  "src": "Qwen2-Audio_ADReSSo/launch/create_resp.json",
+  "gpu": "unknown"
+ },
+ "k93fsuqg1hk1y7": {
+  "cell": "Qwen2-Audio_E-DAIC",
+  "name": "p26-q2a-edaic",
+  "cost": 0.96,
+  "created": "2026-09-24 00:47:05.93 +0000 UTC",
+  "src": "Qwen2-Audio_E-DAIC/launch/create_p26-q2a-edaic_resp.json",
+  "gpu": "unknown"
+ },
+ "l7pkzosi9j1glg": {
+  "cell": "Qwen2-Audio_MDVR-KCL",
+  "name": "p26-q2a-kcl",
+  "cost": 0.96,
+  "created": "2026-09-24 00:48:31.544 +0000 UTC",
+  "src": "Qwen2-Audio_MDVR-KCL/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "md42nsos0qf0ei": {
+  "cell": "Qwen2-Audio_NeuroVoz",
+  "name": "p26-q2a-neurovoz",
+  "cost": 0.96,
+  "created": "2026-09-24 00:48:55.014 +0000 UTC",
+  "src": "Qwen2-Audio_NeuroVoz/launch/create_resp.json",
+  "gpu": "unknown"
+ },
+ "j0g9l1t6s9r3vm": {
+  "cell": "Qwen2-Audio_PC-GITA",
+  "name": "p26-q2a-pcgita",
+  "cost": 0.96,
+  "created": "2026-09-24 00:48:40.861 +0000 UTC",
+  "src": "Qwen2-Audio_PC-GITA/launch/create_resp.json",
+  "gpu": "unknown"
+ },
+ "dow5f8gprrxhi2": {
+  "cell": "Qwen2-Audio_Pitt",
+  "name": "p26-q2a-pitt",
+  "cost": 0.96,
+  "created": "2026-09-24 00:47:49.092 +0000 UTC",
+  "src": "Qwen2-Audio_Pitt/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "marzjz3lnmpdhs": {
+  "cell": "Qwen3-Omni-30B-A3B_ADReSS-2020",
+  "name": "p26-q3o-adress2020",
+  "cost": 0.96,
+  "created": "2026-09-24 00:47:23.391 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_ADReSS-2020/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "bkrhdn09yvpf3h": {
+  "cell": "Qwen3-Omni-30B-A3B_ADReSSo",
+  "name": "p26-q3o-adresso",
+  "cost": 1.12,
+  "created": "2026-09-24 00:46:43.788 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_ADReSSo/launch/create_resp.json",
+  "gpu": "unknown"
+ },
+ "mspkz2hwf76o9f": {
+  "cell": "Qwen3-Omni-30B-A3B_E-DAIC",
+  "name": "p26-q3o-edaic-gpu",
+  "cost": 3.49,
+  "created": "2026-09-24 00:47:41.752 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_E-DAIC/launch/create_gpu_resp.json",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "6cy4hpql72vvio": {
+  "cell": "Qwen3-Omni-30B-A3B_E-DAIC",
+  "name": "p26-q3o-edaic-cpu",
+  "cost": 1.12,
+  "created": "2026-09-24 00:59:24.687 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_E-DAIC/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "psewpwt8nok4c0": {
+  "cell": "Qwen3-Omni-30B-A3B_MDVR-KCL",
+  "name": "p26-q3o-kcl",
+  "cost": 0.96,
+  "created": "2026-09-24 00:47:00.124 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_MDVR-KCL/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "fecp2sxone9uvn": {
+  "cell": "Qwen3-Omni-30B-A3B_NeuroVoz",
+  "name": "p26-q3o-neurovoz",
+  "cost": 0.96,
+  "created": "2026-09-24 00:48:40.461 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_NeuroVoz/launch/create_cpu_resp.json",
+  "gpu": "unknown"
+ },
+ "x8hcwgu4l1zzie": {
+  "cell": "Qwen3-Omni-30B-A3B_PC-GITA",
+  "name": "p26-q3o-pcgita",
+  "cost": 0.96,
+  "created": "2026-09-24 00:48:48.579 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_PC-GITA/launch/create_p26-q3o-pcgita_resp.json",
+  "gpu": "unknown"
+ },
+ "orph1m3rsbw8u2": {
+  "cell": "Qwen3-Omni-30B-A3B_Pitt",
+  "name": "p26-q3o-pitt",
+  "cost": 0.96,
+  "created": "2026-09-24 00:51:25.541 +0000 UTC",
+  "src": "Qwen3-Omni-30B-A3B_Pitt/launch/create_p26-q3o-pitt_resp.json",
+  "gpu": "unknown"
+ }
+}
