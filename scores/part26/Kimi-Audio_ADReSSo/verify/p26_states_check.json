@@ -1,0 +1,203 @@
+{
+ "date_utc": "2026-09-24T02:44:44.401958+00:00",
+ "states": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/out/kimi_adresso_enc_states.npz",
+ "states_sha256": "fc93d08a37b0ec7365eb11933216728dd3f2656ba33a1dbb4878fc2b8e4a4172",
+ "states_sha256_equals_pod": true,
+ "keys": {
+  "enc": [
+   [
+    237,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "enc_pad1500": [
+   [
+    237,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "enc_frames": [
+   [
+    237
+   ],
+   "int64"
+  ],
+  "n_samples": [
+   [
+    237
+   ],
+   "int64"
+  ],
+  "label": [
+   [
+    237
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    237
+   ],
+   "<U8"
+  ],
+  "p_yes": [
+   [
+    237
+   ],
+   "float64"
+  ],
+  "mass": [
+   [
+    237
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    237
+   ],
+   "<U12"
+  ]
+ },
+ "enc_shape": [
+  237,
+  32,
+  1280
+ ],
+ "enc_all_finite": true,
+ "n_unique_names": 237,
+ "n_unique_spk": 237,
+ "manifest_rows": 237,
+ "manifest_order_equals_states": true,
+ "zeroshot_file": "<local data dir>/release/overnight2/kimi_new/kimi_adresso_zeroshot_scores.csv",
+ "zeroshot_sha256": "1bb4595952813d1b86092f7cc73578e44089ce8dc0ee05f676536107526cb174",
+ "zeroshot_n": 237,
+ "clipset_equals_zeroshot": true,
+ "labels_equal_zeroshot": true,
+ "speakers_equal_zeroshot": true,
+ "fold_files": {
+  "seed0": {
+   "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "sha256": "2da95259b8772bf9d94c96a2d2ba64517b79f011edcdd6a4f8cebd1d73b5faf6",
+   "clipset_equal": true,
+   "speakers_equal": true
+  },
+  "seed1": {
+   "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "sha256": "771ad7de616eaf626b52f9e88f4e8818301b519840501fea6345bdd5950d6032",
+   "clipset_equal": true,
+   "speakers_equal": true
+  },
+  "seed2": {
+   "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "sha256": "3b00c2b684ecc23f943389c23d1ce003afdd8859e0885817a08120d861a2862c",
+   "clipset_equal": true,
+   "speakers_equal": true
+  },
+  "seed3": {
+   "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "sha256": "f1670e0c80261a9932e7b8076707e161c34fd38d4fbb28da22a1cf7660e3965d",
+   "clipset_equal": true,
+   "speakers_equal": true
+  },
+  "seed4": {
+   "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "sha256": "c36778a287fcccc7a1ba13557063899fe3ea4d834949ca361fec7d02e8f6a8bb",
+   "clipset_equal": true,
+   "speakers_equal": true
+  },
+  "single": {
+   "file": "<local data dir>/release/folds/adresso_groupkfold5_pod.csv",
+   "sha256": "ef017a2ac84975e55d39b83469ae6836e0cd5307d08216631931f9da5c46cf90",
+   "clipset_equal": true,
+   "speakers_equal": true
+  }
+ },
+ "zeroshot_auc": 0.7531004989308624,
+ "rerun_auc": 0.7543834640057021,
+ "rerun_vs_zeroshot_p_yes": {
+  "pearson": 0.999890481559075,
+  "max_abs": 0.030654444612175702,
+  "median_abs": 0.0
+ },
+ "n_samples_min_max": [
+  32640,
+  480000
+ ],
+ "enc_frames_min_max": [
+  104,
+  1500
+ ],
+ "layer_norms_first_last": [
+  15.730658531188965,
+  58.12753677368164
+ ],
+ "layers_distinct": true,
+ "sidecar": {
+  "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+  "snapshot": "/workspace/hf_cache/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+  "clip_list": "/workspace/mf_adresso.csv",
+  "clip_list_sha256": "f17f8da80d7d8de483b67885d0d47285a48d828eaec602448ff3d6553c77bd9f",
+  "condition": "ad",
+  "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+  "n": 237,
+  "rerun_answer_auc": 0.7543834640057021,
+  "encoder": "kimia_infer Whisper-large-v3 encoder (prompt_manager.whisper_model.speech_encoder), forward hooks on all 32 layers, layer outputs before the final encoder layer_norm",
+  "enc_pooling": "mean over the first token_len*4 frames (the frames Kimi passes to the LM), token_len=(L-1)//1280+1",
+  "enc_pad1500_pooling": "mean over all 1500 frames of the 30 s padded input (sensitivity copy only)",
+  "enc_shape": [
+   237,
+   32,
+   1280
+  ],
+  "window_seconds": 30,
+  "dtype": "bfloat16",
+  "versions": {
+   "torch": "2.8.0+cu128",
+   "transformers": "4.51.3",
+   "python": "3.12.3",
+   "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "seconds": 45.1,
+  "date_utc": "2026-09-24T01:25:28.006000+00:00",
+  "command": "kimi_encstates26.py /workspace/mf_adresso.csv /workspace/out/kimi_adresso ad"
+ },
+ "STATES_OK": true,
+ "slim": {
+  "file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/podfiles/kimi_adresso_enc_states_slim.npz",
+  "sha256": "d0beccce4763dc44301a2cb35109e7b82cae5307835488483e1b542d71022f19",
+  "enc_equal_bitwise": true,
+  "keys": {
+   "enc": [
+    [
+     237,
+     32,
+     1280
+    ],
+    "float32"
+   ],
+   "label": [
+    [
+     237
+    ],
+    "int64"
+   ],
+   "spk": [
+    [
+     237
+    ],
+    "<U8"
+   ],
+   "name": [
+    [
+     237
+    ],
+    "<U12"
+   ]
+  }
+ }
+}

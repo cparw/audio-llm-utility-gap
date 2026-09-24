@@ -1,0 +1,75 @@
+{
+ "labels_agree": true,
+ "speakers_agree": true,
+ "fold_columns_equal_release_files": {
+  "seed0": true,
+  "seed1": true,
+  "seed2": true,
+  "seed3": true,
+  "seed4": true,
+  "single": true
+ },
+ "per_repeat_mw": [
+  0.5635783674061186,
+  0.6129476584022039,
+  0.6059156154849935,
+  0.5995360301580397,
+  0.5295780774249674
+ ],
+ "probe_mw": 0.5823111497752647,
+ "answer_mw": 0.6292590981586197,
+ "gap_mw": -0.04694794838335503,
+ "gap_lo_v": -0.1392675421033583,
+ "gap_hi_v": 0.053275962738043234,
+ "usable_v": 2000,
+ "agree_4dp": {
+  "probe": true,
+  "answer": true,
+  "gap": true,
+  "lo": true,
+  "hi": true,
+  "per_repeat": true
+ },
+ "draws_maxabs": 3.3306690738754696e-16,
+ "draws_nan_same": true,
+ "perclip_equals_pod_oof": true,
+ "enc_shape": [
+  275,
+  32,
+  1280
+ ],
+ "enc_dtype": "float32",
+ "enc_finite": true,
+ "enc_frames": [
+  1500
+ ],
+ "enc_equal_probed_array": true,
+ "enc_layer_distinct": true,
+ "pyes_vs_zeroshot": {
+  "max_abs": 0.17897410404156755,
+  "median_abs": 0.02070895096996106,
+  "pearson": 0.9889905558936356,
+  "auc_rerun_mw": 0.6253443526170799
+ },
+ "llm_vs_earlier_run": {
+  "max_rel_l2": 0.027400892936627064,
+  "median_rel_l2": 0.005903804372920445,
+  "min_cosine": 0.9996249420597787,
+  "max_abs": 2.25
+ },
+ "mac_refit_seed0": {
+  "layers": [
+   0,
+   1,
+   0,
+   0,
+   17
+  ],
+  "max_abs_vs_pod_oof": 0.009601806873163476,
+  "auc_mac_refit": 0.5635058721183123
+ },
+ "ALL_CHECKS_PASS": true,
+ "created_utc": "2026-09-24T02:48:44Z",
+ "script": "scripts/part26/Kimi-Audio_E-DAIC/scripts/p26_kimi_edaic_verify.py",
+ "method": "PART 26 Kimi-Audio E-DAIC independent check. Written separately from p26_kimi_edaic_gap.py and shares no code with it.\n- AUC by the Mann-Whitney rank formula (scipy.stats.rankdata, ties averaged), not sklearn.\n- joins by python dicts on the clip name, not a pandas merge; reads the pod OOF file and the zero-shot file directly.\n- the fold columns of the OOF file are compared with the release fold files, read again here by clip.\n- bootstrap re-implemented: sorted unique speakers, fresh numpy default_rng(0), idx = rng.choice(n_spk, n_spk, replace=True),\n  all clips of each drawn speaker, mean of the five per-repeat AUCs minus the zero-shot AUC, 2.5/97.5 percentiles.\n- compares every number with the sidecar and the saved draws (max abs difference).\n- states checks: the re-extracted p_yes against the canonical zero-shot file; the re-extracted Kimi LM states against the\n  earlier Kimi E-DAIC LM states (overnight2/kimi/kimi_edaic_states.npz, the run behind the zero-shot file); encoder states\n  shape, finite, frames kept; the enc array the CPU pod probed equals the enc array in the full GPU states file.\n- a Mac refit of the five seed0 outer folds at the pod's chosen layers (StandardScaler + LogisticRegression(max_iter=2000,\n  class_weight='balanced'), Mac sklearn), compared with the pod OOF column.\nusage: /usr/local/bin/python3 p26_kimi_edaic_verify.py OOF_CSV STATES_NPZ ENCSTATES_NPZ"
+}

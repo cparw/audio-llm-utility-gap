@@ -1,0 +1,329 @@
+{
+ "cell": "Kimi-Audio E-DAIC (MDD), 30 s window",
+ "created_utc": "2026-09-24T02:48:33Z",
+ "script": "scripts/part26/Kimi-Audio_E-DAIC/scripts/p26_kimi_edaic_gap.py",
+ "command": "/usr/local/bin/python3 scripts/part26/Kimi-Audio_E-DAIC/scripts/p26_kimi_edaic_gap.py scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5_oof.csv scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5.json <local data dir>/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-gpu/out/p26_kimi_edaic_states.npz scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-gpu/out/p26_kimi_pyes_check.json",
+ "probe_stream": "encoder probe: Kimi-Audio continuous-feature Whisper encoder (whisper-large-v3 folder of the Kimi-Audio-7B-Instruct checkpoint), 32 layer outputs, mean over the 1500 frames Kimi keeps",
+ "method_change_note": "NEW in PART 26. No Kimi encoder states existed before; every earlier Kimi run hooked only the language model and the release Method says the Kimi encoder side is skipped. These states come from new forward hooks added to release podD2_final/kimi_probe.py (podfiles/gpu/kimi_enc_probe.py). Whether the paper uses this cell is an author decision.",
+ "probe_auc_mean5": 0.5823111497752647,
+ "per_repeat_auc": [
+  0.5635783674061186,
+  0.6129476584022039,
+  0.6059156154849935,
+  0.5995360301580398,
+  0.5295780774249674
+ ],
+ "per_repeat_auc_4dp": [
+  0.5636,
+  0.6129,
+  0.6059,
+  0.5995,
+  0.5296
+ ],
+ "single_split_auc": 0.6211396259243149,
+ "layers_chosen": {
+  "seed0": [
+   0,
+   1,
+   0,
+   0,
+   17
+  ],
+  "seed1": [
+   1,
+   1,
+   3,
+   1,
+   1
+  ],
+  "seed2": [
+   6,
+   0,
+   0,
+   6,
+   0
+  ],
+  "seed3": [
+   0,
+   4,
+   4,
+   0,
+   0
+  ],
+  "seed4": [
+   4,
+   0,
+   29,
+   2,
+   6
+  ],
+  "single": [
+   4,
+   4,
+   1,
+   7,
+   3
+  ]
+ },
+ "answer_auc": 0.6292590981586197,
+ "answer_master_lookup": {
+  "data_row_1based": 25,
+  "auc": 0.6293,
+  "source": "<local data dir>/release/overnight2/part3/kimi_edaic_zeroshot.json",
+  "estimator": "zero shot, 30 s window"
+ },
+ "gap": -0.04694794838335503,
+ "gap_ci95": [
+  -0.1392675421033583,
+  0.05327596273804302
+ ],
+ "interval_excludes_zero": false,
+ "interval_above_zero": false,
+ "probe_ci95": [
+  0.5189701023539159,
+  0.6460896010509316
+ ],
+ "answer_ci95": [
+  0.5510131659423789,
+  0.702105884496847
+ ],
+ "p_boot_one_sided_gap_le0": 0.8235,
+ "boot_usable": 2000,
+ "boot_total": 2000,
+ "sensitivity_vs_rerun_extraction_zeroshot": {
+  "note": "not the headline. Same probe, answer side taken from the p_yes of the PART 26 GPU re-extraction forward pass (the pass that produced the encoder states) instead of the canonical overnight2/part3 zero-shot file; same draws (same idx per draw)",
+  "answer_auc": 0.62534435261708,
+  "gap": -0.04303320284181533,
+  "gap_ci95": [
+   -0.13682507276073752,
+   0.056888661971830935
+  ],
+  "interval_excludes_zero": false
+ },
+ "bootstrap": "paired speaker bootstrap, 2000 draws, fresh numpy default_rng(0), idx = rng.choice(n_spk, size=n_spk, replace=True) over np.unique of the probe file speaker ids, all clips of each drawn speaker, both terms in the same draw, mean of the five per-repeat AUCs minus the zero-shot AUC, percentiles 2.5/97.5; one-class draws dropped",
+ "n": 275,
+ "n_pos": 66,
+ "n_speakers": 275,
+ "files": {
+  "perclip_csv": "scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.csv",
+  "draws_npz": "scores/part26/Kimi-Audio_E-DAIC/draws/p26_kimi_edaic_enc_draws.npz",
+  "probe_oof_csv": "scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5_oof.csv",
+  "probe_oof_sha256": "0bb1c6b5302d447e151ac2be1411ae298ec31e2dfce9e109765a1952d012d2ec",
+  "nested_json": "scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5.json",
+  "nested_json_sha256": "41ce0bd08af8a108201f28c5c7fdeeee0ca60c04b02c8f65cbecc2c98b8fe79f",
+  "states_npz": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-gpu/out/p26_kimi_edaic_states.npz",
+  "states_sha256": "6b66defdc0896e2342c06d139f4d46930d01bac7bcc227f11e02ceb31b4b23bc",
+  "zeroshot_csv": "<local data dir>/release/overnight2/part3/kimi_edaic_zeroshot_scores.csv",
+  "zeroshot_sha256": "f27042de35d128dd7287b8a83bec482f41dec7d9b845cd6d0fed502d8b85054c",
+  "master_lookup_sha256": "68f8bccfe0a6151bd5d59cd9ddc29445ad25080fd25d869eaca0c3b667928467"
+ },
+ "states": {
+  "enc": [
+   [
+    275,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "llm": [
+   [
+    275,
+    28,
+    3584
+   ],
+   "float32"
+  ],
+  "ans": [
+   [
+    275,
+    28,
+    3584
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    275
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    275
+   ],
+   "<U3"
+  ],
+  "p_yes": [
+   [
+    275
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    275
+   ],
+   "<U7"
+  ],
+  "enc_frames": [
+   [
+    275
+   ],
+   "int64"
+  ]
+ },
+ "fold_files": {
+  "seed0": {
+   "file": "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "sha256": "f18cd808187fef64cc9fe22e589f62a9452f17b994cef0d61d6ef9a11f57dc8d",
+   "equals_pod_tie_rule": true
+  },
+  "seed1": {
+   "file": "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "sha256": "4b6f898e61b4ceb543ad7f5c1b77db21979c79d705ec246904702980f3b22d3e",
+   "equals_pod_tie_rule": true
+  },
+  "seed2": {
+   "file": "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "sha256": "114a25b7d20bef6e1b4db1f49d1c1c25d8dc39548f475acb8ad2759aef0f1c07",
+   "equals_pod_tie_rule": true
+  },
+  "seed3": {
+   "file": "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "sha256": "a8bcff407001582f69925f4c7d088a7f38329c780a2e7e45dae28de3f9166ac4",
+   "equals_pod_tie_rule": true
+  },
+  "seed4": {
+   "file": "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "sha256": "3c7b1fad43992659ef99f257e4a4cf073a8dfe93cf42f3fd9d47f0e20f502046",
+   "equals_pod_tie_rule": true
+  },
+  "single": {
+   "file": "edaic_groupkfold5_pod.csv",
+   "sha256": "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff",
+   "equals_pod_tie_rule": true
+  }
+ },
+ "probe_run_versions": {
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0"
+ },
+ "probe_model": "StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'), layer chosen by mean inner GroupKFold(4) AUC inside each outer training fold (p25a_nested5.py, unchanged)",
+ "pyes_rerun_check": {
+  "n": 275,
+  "max_abs_p_yes_diff": 0.17897410404156755,
+  "median_abs_p_yes_diff": 0.02070895096996106,
+  "n_over_1e-3": 195,
+  "n_over_1e-2": 172,
+  "auc_rerun": 0.62534435261708,
+  "auc_ref": 0.6292590981586197
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "sklearn": "1.7.2",
+  "scipy": "1.15.3"
+ },
+ "run": {
+  "try": "PART 26 try 2. Try 1 extracted the states on the GPU pod and pulled them, but its CPU pod never received the states and was idle-killed by the watchdog; try 2 reused the pulled states (sha256 checked) and ran the probe on a new CPU pod.",
+  "gpu_pod_extraction": {
+   "name": "p26-kimi-edaic-gpu",
+   "id": "m42ljldnq92qmw",
+   "gpu": "NVIDIA H100 80GB HBM3",
+   "cost_per_hr": 3.49,
+   "created_utc": "2026-09-24 01:05:48",
+   "deleted_utc": "2026-09-24 01:26:59 (watchdog, ALL_DONE, HTTP 204)",
+   "hours": 0.353,
+   "cost_usd": 1.23
+  },
+  "cpu_pods_try1": [
+   {
+    "id": "p6afmxz5ilpzr1",
+    "flavor": "cpu3c",
+    "cost_per_hr": 0.96,
+    "created_utc": "01:15:28",
+    "deleted_utc": "01:22:07",
+    "note": "no public ip, deleted, ran nothing"
+   },
+   {
+    "id": "1b33rynkogtm3y",
+    "flavor": "cpu3c",
+    "cost_per_hr": 0.96,
+    "created_utc": "01:22:22",
+    "deleted_utc": "01:39:40",
+    "note": "pip done, states never uploaded, watchdog idle kill"
+   }
+  ],
+  "cpu_pod_probe": {
+   "name": "p26-kimi-edaic-cpu2",
+   "id": "6zo60zbviepd7a",
+   "flavor": "cpu3c",
+   "vcpu": 32,
+   "cost_per_hr": 0.96,
+   "created_utc": "2026-09-24 02:43:00",
+   "deleted_utc": "2026-09-24 02:48:16Z (watchdog, ALL_DONE, HTTP 204, then REST 404)",
+   "hours": 0.088,
+   "cost_usd": 0.08
+  },
+  "extraction": {
+   "script": "podfiles/gpu/kimi_enc_probe.py = release podD2_final/kimi_probe.py plus NEW forward hooks on the Kimi continuous-feature Whisper encoder (32 layers), unchanged otherwise",
+   "script_sha256": "006d556011b6ec7b3ffd51c919789b2a8bc09ecc809c46caca282929538145bc",
+   "command": "python kimi_enc_probe.py data/mf_edaic.csv out/p26_kimi_edaic mdd",
+   "window": 30,
+   "dtype": "bfloat16",
+   "torch": "2.8.0+cu128",
+   "transformers": "4.51.3",
+   "librosa": "1.0.0",
+   "kimi_snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+   "enc_frames": [
+    1500,
+    1500
+   ],
+   "audio": "E-DAIC_audio.tar.gz on the pod, tarball sha256 83ea8873... equals drive_data/checksums.txt; all 275 dcaps_proc wavs equal the Mac files by sha256; x[:16000*30] cut in the script",
+   "states_sha256": "6b66defdc0896e2342c06d139f4d46930d01bac7bcc227f11e02ceb31b4b23bc",
+   "encstates_sha256": "be1a058c2c6719507d31f2ab5d3c2060eb3ec7e61e707e0f00bef507e7ba2281"
+  },
+  "probe": {
+   "script": "part25/A/podfiles/p25a_nested5.py (md5 615ced0380cca2636ed7cc30c71810e6), unchanged",
+   "command": "p25a_nested5.py in/p26_kimi_edaic_encstates.npz edaic folds out/p26_kimi_edaic",
+   "versions": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "numpy": "2.1.2",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+   },
+   "n_jobs": 32,
+   "seconds": 51.3,
+   "blas_threads": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1 per fit"
+  },
+  "podverify": {
+   "mean5_rank_from_oof": 0.5823111497752647,
+   "abs_mean5_diff": 0.0,
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.5299470407524893e-08,
+   "layer_mismatches": [],
+   "PASS": true
+  },
+  "mac_encoder_recompute": {
+   "pass": true,
+   "what": "Hugging Face WhisperModel fp32 eager on the Mac, weights from the whisper-large-v3 folder of the same Kimi snapshot, 4 clips",
+   "min_cosine": 0.9999563745187839,
+   "max_rel_l2": 0.010637003740913219,
+   "same_layer_match_all": true
+  },
+  "mac_independent_check": {
+   "ALL_CHECKS_PASS": true,
+   "file": "scores/part26/Kimi-Audio_E-DAIC/verify/p26_kimi_edaic_verify.json"
+  }
+ },
+ "verified": true,
+ "finalized_utc": "2026-09-24T02:49:02Z"
+}

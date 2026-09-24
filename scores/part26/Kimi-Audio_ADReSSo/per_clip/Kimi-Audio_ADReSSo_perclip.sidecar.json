@@ -1,0 +1,297 @@
+{
+ "task": "PART 26 probe grid: Kimi-Audio encoder nested probe on ADReSSo, paired probe minus zero-shot answer gap",
+ "date_utc": "2026-09-24T02:52:20.160512+00:00",
+ "model": "Kimi-Audio (moonshotai/Kimi-Audio-7B-Instruct)",
+ "dataset": "ADReSSo",
+ "condition": "AD",
+ "n": 237,
+ "n_speakers": 237,
+ "n_pos": 122,
+ "states": {
+  "what": "NEW in PART 26: Kimi-Audio Whisper-large-v3 encoder (kimia_infer prompt_manager.whisper_model.speech_encoder), forward hooks on all 32 layers, each layer output mean-pooled over the frames Kimi passes to the LM (first token_len*4 of the 1500 padded frames). 30 s window x[:16000*30], the same clips, prompt and window as the zero-shot file. No earlier Kimi run extracted encoder states; the earlier Kimi probes hooked the language model only.",
+  "extraction_script": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/kimi_encstates26.py",
+  "extraction_script_sha256": "cad191409ba7e363f0babaed0dd22e38c96c207abb62c5116e6631784a6bb5ba",
+  "extraction_note": "built from release/podD2_final/kimi_probe.py (the script behind the Kimi zero-shot files) with encoder hooks added",
+  "file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/out/kimi_adresso_enc_states.npz",
+  "sha256": "fc93d08a37b0ec7365eb11933216728dd3f2656ba33a1dbb4878fc2b8e4a4172",
+  "sidecar": {
+   "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+   "snapshot": "/workspace/hf_cache/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+   "clip_list": "/workspace/mf_adresso.csv",
+   "clip_list_sha256": "f17f8da80d7d8de483b67885d0d47285a48d828eaec602448ff3d6553c77bd9f",
+   "condition": "ad",
+   "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+   "n": 237,
+   "rerun_answer_auc": 0.7543834640057021,
+   "encoder": "kimia_infer Whisper-large-v3 encoder (prompt_manager.whisper_model.speech_encoder), forward hooks on all 32 layers, layer outputs before the final encoder layer_norm",
+   "enc_pooling": "mean over the first token_len*4 frames (the frames Kimi passes to the LM), token_len=(L-1)//1280+1",
+   "enc_pad1500_pooling": "mean over all 1500 frames of the 30 s padded input (sensitivity copy only)",
+   "enc_shape": [
+    237,
+    32,
+    1280
+   ],
+   "window_seconds": 30,
+   "dtype": "bfloat16",
+   "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.51.3",
+    "python": "3.12.3",
+    "gpu": "NVIDIA H100 80GB HBM3"
+   },
+   "seconds": 45.1,
+   "date_utc": "2026-09-24T01:25:28.006000+00:00",
+   "command": "kimi_encstates26.py /workspace/mf_adresso.csv /workspace/out/kimi_adresso ad"
+  },
+  "states_check": "scores/part26/Kimi-Audio_ADReSSo/verify/p26_states_check.json",
+  "states_check_sha256": "d4a3e6c98c4502fd82dcc50209a8e96e5c1dc52650b8c7c1a2493a17ab7ee7ed",
+  "rerun_answer_auc_same_pass": 0.7543834640057021,
+  "rerun_vs_zeroshot_p_yes": {
+   "pearson": 0.999890481559075,
+   "max_abs": 0.030654444612175702,
+   "median_abs": 0.0
+  },
+  "gpu_pod": "p26-kimi-adresso-gpu yz8nyovce4nx08, H100 80GB HBM3, extraction 01:24:38 to 01:25:29 UTC 24 Sep, pulled and deleted 01:28 UTC"
+ },
+ "probe": {
+  "estimator": "nested encoder probe: outer folds = the five saved repeat fold files; inner GroupKFold(4) (pod tie rule) picks the layer by mean inner AUC inside each outer training set; StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit at that layer; value = mean of the five per-repeat out-of-fold AUCs",
+  "script": "p25a_nested5.py (sha256 710e3de8d94eaa9cbc0cb3a5c30868415574ad669aa4fa6e0c728edfdc0fb68e, byte identical to part25/A/podfiles/p25a_nested5.py)",
+  "per_repeat_auc": [
+   0.8489665003563792,
+   0.8806129722024234,
+   0.8925873129009266,
+   0.8775481111903065,
+   0.8415181753385602
+  ],
+  "mean5": 0.8682466143977192,
+  "per_repeat_4dp": [
+   0.849,
+   0.8806,
+   0.8926,
+   0.8775,
+   0.8415
+  ],
+  "mean5_4dp": 0.8682,
+  "layers": {
+   "seed0": [
+    24,
+    27,
+    27,
+    31,
+    23
+   ],
+   "seed1": [
+    27,
+    28,
+    25,
+    26,
+    27
+   ],
+   "seed2": [
+    27,
+    27,
+    27,
+    30,
+    30
+   ],
+   "seed3": [
+    27,
+    24,
+    31,
+    30,
+    27
+   ],
+   "seed4": [
+    27,
+    31,
+    27,
+    27,
+    15
+   ]
+  },
+  "single_split_auc": 0.894511760513186,
+  "single_split_layers": [
+   27,
+   26,
+   28,
+   26,
+   28
+  ],
+  "fold_files_equal_pod_output": {
+   "seed0": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "sha256": "2da95259b8772bf9d94c96a2d2ba64517b79f011edcdd6a4f8cebd1d73b5faf6",
+    "equal": true
+   },
+   "seed1": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "sha256": "771ad7de616eaf626b52f9e88f4e8818301b519840501fea6345bdd5950d6032",
+    "equal": true
+   },
+   "seed2": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "sha256": "3b00c2b684ecc23f943389c23d1ce003afdd8859e0885817a08120d861a2862c",
+    "equal": true
+   },
+   "seed3": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "sha256": "f1670e0c80261a9932e7b8076707e161c34fd38d4fbb28da22a1cf7660e3965d",
+    "equal": true
+   },
+   "seed4": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+    "sha256": "c36778a287fcccc7a1ba13557063899fe3ea4d834949ca361fec7d02e8f6a8bb",
+    "equal": true
+   }
+  },
+  "fold_files_equal_pod_tie_rule": {
+   "seed0": true,
+   "seed1": true,
+   "seed2": true,
+   "seed3": true,
+   "seed4": true,
+   "single": true
+  },
+  "fold_files_equal_this_pod_sklearn": {
+   "seed0": true,
+   "seed1": true,
+   "seed2": true,
+   "seed3": true,
+   "seed4": true,
+   "single": true
+  },
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-71-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "pod_seconds": 38.7,
+  "pod_command": "p25a_nested5.py in/kimi_adresso_enc_states_slim.npz adresso folds out/p26_kimi_adresso",
+  "pod_n_jobs": 24,
+  "blas_threads": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1 (driver26b_cpu.sh and the script's own setdefault)",
+  "states_used_on_pod": {
+   "file": "/workspace/in/kimi_adresso_enc_states_slim.npz",
+   "sha256": "d0beccce4763dc44301a2cb35109e7b82cae5307835488483e1b542d71022f19",
+   "keys": {
+    "enc": [
+     [
+      237,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      237
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      237
+     ],
+     "<U8"
+    ],
+    "name": [
+     [
+      237
+     ],
+     "<U12"
+    ]
+   }
+  },
+  "context_not_compared": {
+   "table1_kimi_adresso_llm_probe": {
+    "mean": 0.8993,
+    "repeats": 5,
+    "per_repeat": [
+     0.8897,
+     0.9029,
+     0.8932,
+     0.9145,
+     0.8964
+    ],
+    "n": 237,
+    "n_points": 28
+   },
+   "file": "<local data dir>/release/overnight2/kimi_new/kimi_adresso_nested_repeats.json"
+  }
+ },
+ "zeroshot": {
+  "file": "<local data dir>/release/overnight2/kimi_new/kimi_adresso_zeroshot_scores.csv",
+  "sha256": "1bb4595952813d1b86092f7cc73578e44089ce8dc0ee05f676536107526cb174",
+  "auc": 0.7531004989308624,
+  "auc_4dp": 0.7531,
+  "score_column": "p_yes"
+ },
+ "gap": {
+  "point": 0.11514611546685682,
+  "ci_2p5_97p5": [
+   0.04813201894045922,
+   0.1830847953216375
+  ],
+  "interval_above_zero": true,
+  "interval_excludes_zero": true,
+  "p_boot_le0": 0.001,
+  "probe_mean5_ci": [
+   0.8250300411860437,
+   0.9084446731336384
+  ],
+  "zeroshot_ci": [
+   0.6893701909375891,
+   0.8121286220734791
+  ],
+  "usable_draws": 2000,
+  "total_draws": 2000
+ },
+ "sensitivity_rerun_answer": {
+  "note": "not the reported gap; answer p_yes from the PART 26 extraction pass instead of the zero-shot file",
+  "answer_auc": 0.7543834640057021,
+  "point": 0.11386315039201711,
+  "ci_2p5_97p5": [
+   0.04676583472194795,
+   0.1818740032044312
+  ]
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC, same rows in the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "versions_mac": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Kimi-Audio_ADReSSo/per_clip/Kimi-Audio_ADReSSo_perclip.csv",
+  "draws_npz": "scores/part26/Kimi-Audio_ADReSSo/draws/Kimi-Audio_ADReSSo_draws.npz",
+  "pod_oof_csv": "scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-cpu2/out/p26_kimi_adresso_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-cpu2/out/p26_kimi_adresso_enc_nested5.json",
+  "states_source": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/out/kimi_adresso_enc_states.npz",
+  "states_uploaded": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/stage/cpu2/in/kimi_adresso_enc_states_slim.npz",
+  "rerun_answer_csv": "scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/out/kimi_adresso_rerun_zeroshot_scores.csv",
+  "gap_script": "scripts/part26/Kimi-Audio_ADReSSo/scripts/gap26_kimi_adresso.py"
+ },
+ "sha256": {
+  "pod_oof_csv": "c8ba0086418bfd0dca803fd95a3b76ed4d45225002f4d63931514525bae21a0e",
+  "pod_json": "c85433470b02a9f3a9ed25cc292dd55d06f6c30eefda57f02dc68e1c8f448bee",
+  "states_source": "fc93d08a37b0ec7365eb11933216728dd3f2656ba33a1dbb4878fc2b8e4a4172",
+  "states_uploaded": "d0beccce4763dc44301a2cb35109e7b82cae5307835488483e1b542d71022f19",
+  "rerun_answer_csv": "3f4293dd56238ae21a5c40bfae46a977a352c02f4f632c8c7a96679d6b46fc98",
+  "perclip_csv": "a5e37ce5e3acf750b5c18bb00d0190ecb9ecf127d829871da0350fb9014fd2ab",
+  "draws_npz": "a886f62dedcf46e80cc4b875cdf89c2439ca6acad2315e6bece1218ee5286efb"
+ },
+ "command": "/usr/local/bin/python3 scripts/gap26_kimi_adresso.py"
+}

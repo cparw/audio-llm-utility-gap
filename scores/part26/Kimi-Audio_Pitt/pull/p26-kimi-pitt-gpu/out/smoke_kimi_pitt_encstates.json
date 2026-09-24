@@ -1,0 +1,35 @@
+{
+ "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+ "snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+ "clip_list": "/workspace/in/mf_pitt.csv",
+ "clip_list_sha256": "d176a87a3397a85b6523118e9ea78771dacca41edfab7d4693e5eba7b3d2161f",
+ "condition": "ad",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 3,
+ "n_positive": 0,
+ "zeroshot_auc_this_run": null,
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "encoder": "kimia_infer prompt_manager.whisper_model.speech_encoder (Whisper-large-v3 encoder inside Kimi-Audio, the continuous-feature path)",
+ "encoder_layers": 32,
+ "enc_shape": [
+  3,
+  32,
+  1280
+ ],
+ "pooling": "enc: mean over the token_len*4 encoder frames kimia keeps, token_len=(L-1)//1280+1; enc_allframes: mean over all 1500 frames",
+ "hookcheck_max_over_clips": 2.384185791015625e-07,
+ "new_script": true,
+ "copied_from": "release/podD2_final/kimi_probe.py (forward pass, prompt, yes/no ids, 30 s cut)",
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.51.3",
+  "numpy": "2.5.3",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "flash_attn": "2.8.3.post1"
+ },
+ "seconds": 52.9,
+ "command": "kimi_enc_extract.py in/mf_pitt.csv out/smoke_kimi_pitt ad 3",
+ "date_utc": "2026-09-24T01:13:20.773975Z"
+}

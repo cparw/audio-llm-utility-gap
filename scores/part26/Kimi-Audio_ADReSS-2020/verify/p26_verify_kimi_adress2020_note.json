@@ -1,0 +1,36 @@
+{
+ "date_utc": "2026-09-24T03:44:02.831555Z",
+ "verify_checks": 17,
+ "failed": [
+  "mac_refit_at_saved_layers_same_auc"
+ ],
+ "failed_reason": "Mac refit on sklearn 1.7.2 / scipy 1.15.3 / numpy 2.2.6 (Apple BLAS), not the pinned pod stack; lbfgs fits differ slightly",
+ "mac_refit_auc_minus_pod": {
+  "seed0": -1.1102230246251565e-16,
+  "seed1": 1.1102230246251565e-16,
+  "seed2": 0.0,
+  "seed3": -8.218277449034694e-05,
+  "seed4": -0.00032873109796183186,
+  "single": -1.1102230246251565e-16
+ },
+ "mac_refit_max_abs_pred_diff": {
+  "seed0": 0.0003393382510985532,
+  "seed1": 0.00047475926364146104,
+  "seed2": 0.008654472554207787,
+  "seed3": 0.008270378945650414,
+  "seed4": 0.009199783876282897,
+  "single": 0.00011592537602905795
+ },
+ "mac_refit_mean5": 0.8880670611439843,
+ "pod_mean5": 0.8881492439184747,
+ "mean5_diff": -8.218277449045797e-05,
+ "same_at_4dp": true,
+ "pod_podverify": {
+  "ok": true,
+  "max_abs_pred_diff": 0.0,
+  "layer_mismatches": [],
+  "abs_mean5_diff": 0.0
+ },
+ "mac_inner_layer_choice": true,
+ "states_check_all_pass": true
+}

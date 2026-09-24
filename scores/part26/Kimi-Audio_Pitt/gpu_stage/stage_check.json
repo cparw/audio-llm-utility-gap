@@ -1,0 +1,98 @@
+{
+ "zeroshot_file": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+ "zeroshot_sha256": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365",
+ "clip_manifest": "<local data dir>/paper1_local_runs/clips_local/clips_for_af3/pitt468_manifest.csv",
+ "clip_manifest_sha256": "6fac150563aa1771460935cf37694bc0f565337de3fac4e3feff63349e0985f8",
+ "n": 468,
+ "manifest_clips_equal": true,
+ "manifest_speakers_equal": true,
+ "manifest_labels_equal": true,
+ "audio_all_16k_mono_pcm16": true,
+ "audio_min_dur_s": 30.01,
+ "audio_max_dur_s": 55.56,
+ "audio_all_at_least_30s": true,
+ "fold_files": {
+  "pitt_groupkfold5_pod.csv": {
+   "sha256": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406",
+   "n": 468,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ]
+  },
+  "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "sha256": "2d9c96e8bb4faf584913ceb6cbf258d42fb56241f1e250d24ed29e58a2dcf727",
+   "n": 468,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ]
+  },
+  "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "sha256": "7279e0de67c8077c45d66101f2da6f3b4dec4f4def452e699e8ad1c9ab16c0db",
+   "n": 468,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ]
+  },
+  "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "sha256": "94c5d99c7dd0ff0e5cf24bfbde680248c815f3a4611d96dbd4ede90a70c608c9",
+   "n": 468,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ]
+  },
+  "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "sha256": "d27a2ab673c2fa99f90f17d50ec158e7276de17f6b5157a65238deed88eb0174",
+   "n": 468,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ]
+  },
+  "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "sha256": "4e30a180d62a461cb630839700c5216cda55eaa7fd6e3d32dc019de5d795bbf2",
+   "n": 468,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    94,
+    94,
+    94,
+    93,
+    93
+   ]
+  }
+ },
+ "n_pos": 290,
+ "n_speakers": 228,
+ "gpu_manifest": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_Pitt/gpu_stage/mf_pitt.csv",
+ "gpu_manifest_sha256": "d176a87a3397a85b6523118e9ea78771dacca41edfab7d4693e5eba7b3d2161f"
+}

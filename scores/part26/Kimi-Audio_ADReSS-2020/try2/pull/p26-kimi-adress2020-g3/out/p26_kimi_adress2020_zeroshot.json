@@ -1,0 +1,23 @@
+{
+ "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+ "snapshot": "/workspace/hf_cache/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+ "clip_list": "/workspace/mf_adress2020.csv",
+ "condition": "ad",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 156,
+ "auc": 0.7056,
+ "llm_stages": 28,
+ "encoder": "Whisper-large-v3 encoder inside kimia_infer (prompt_manager.whisper_model.speech_encoder), bf16",
+ "encoder_layers": 32,
+ "encoder_dim": 1280,
+ "encoder_pooling": "forward hook on each encoder layer, output cut to the token_len*4 frames Kimi keeps, h.mean(dim=0).float()",
+ "enc_frames_min_max": [
+  220,
+  1500
+ ],
+ "ln_vs_continuous_feature_maxabs": 0.0,
+ "note": "PART26: kimi_probe.py plus Whisper encoder hooks; LM stages and zero-shot unchanged",
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "date": "2026-09-24"
+}

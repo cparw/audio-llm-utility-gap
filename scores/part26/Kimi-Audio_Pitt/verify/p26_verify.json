@@ -1,0 +1,138 @@
+{
+ "checks": {
+  "A_perclip_equals_pod_and_zeroshot": true,
+  "B_folds": {
+   "seed0": {
+    "pod_equals_file": true,
+    "own_fill_equals_file": true,
+    "speakers_equal_file": true,
+    "fold_file_sha256": "2d9c96e8bb4faf584913ceb6cbf258d42fb56241f1e250d24ed29e58a2dcf727"
+   },
+   "seed1": {
+    "pod_equals_file": true,
+    "own_fill_equals_file": true,
+    "speakers_equal_file": true,
+    "fold_file_sha256": "7279e0de67c8077c45d66101f2da6f3b4dec4f4def452e699e8ad1c9ab16c0db"
+   },
+   "seed2": {
+    "pod_equals_file": true,
+    "own_fill_equals_file": true,
+    "speakers_equal_file": true,
+    "fold_file_sha256": "94c5d99c7dd0ff0e5cf24bfbde680248c815f3a4611d96dbd4ede90a70c608c9"
+   },
+   "seed3": {
+    "pod_equals_file": true,
+    "own_fill_equals_file": true,
+    "speakers_equal_file": true,
+    "fold_file_sha256": "d27a2ab673c2fa99f90f17d50ec158e7276de17f6b5157a65238deed88eb0174"
+   },
+   "seed4": {
+    "pod_equals_file": true,
+    "own_fill_equals_file": true,
+    "speakers_equal_file": true,
+    "fold_file_sha256": "4e30a180d62a461cb630839700c5216cda55eaa7fd6e3d32dc019de5d795bbf2"
+   }
+  },
+  "C_auc": {
+   "per_repeat_rank": [
+    0.8264238667183262,
+    0.8026927547462224,
+    0.805850445563735,
+    0.8195660596667959,
+    0.8015304145679969
+   ],
+   "mean5_rank": 0.8112127082526154,
+   "zeroshot_rank": 0.7180356450987989,
+   "max_abs_vs_sidecar_per_repeat": 1.1102230246251565e-16,
+   "abs_mean5_vs_sidecar": 0.0,
+   "abs_mean5_vs_pod_json": 0.0,
+   "abs_zeroshot_vs_sidecar": 1.1102230246251565e-16,
+   "gap_point_rank": 0.09317706315381646,
+   "abs_gap_vs_sidecar": 1.1102230246251565e-16
+  },
+  "D_bootstrap": {
+   "speaker_idx_equal": true,
+   "usable": 2000,
+   "max_abs_diff_draws": 5.551115123125783e-16,
+   "max_abs_mean5_draws": 4.440892098500626e-16,
+   "max_abs_zeroshot_draws": 2.220446049250313e-16,
+   "ci_rebuilt": [
+    0.03305832448174661,
+    0.15468755126283512
+   ],
+   "ci_sidecar": [
+    0.03305832448174661,
+    0.154687551262835
+   ],
+   "abs_ci_diff": [
+    0.0,
+    1.1102230246251565e-16
+   ],
+   "speakers_in_npz_equal": true
+  },
+  "E_inputs": {
+   "stage_arrays_equal_source": true,
+   "stage_sha256": "f7f22020e85a884a6304c533d34fb3a4e52994f84c7c3f7ad8b682505b1e7869",
+   "pod_read_sha256": "f7f22020e85a884a6304c533d34fb3a4e52994f84c7c3f7ad8b682505b1e7869",
+   "sha_equal": true,
+   "stage_names_equal_pod_order": true,
+   "gpu_states_sha256_equals_pod_list": true
+  },
+  "F_mac_refit_information_only": {
+   "mac_sklearn": "1.7.2",
+   "seconds": 9.9,
+   "per_seed": {
+    "seed0": {
+     "max_abs_pred_diff_mac_refit": 0.01958794582270762,
+     "auc_mac_refit": 0.8266950794265788,
+     "auc_pod": 0.8264238667183262,
+     "inner_layer_mismatches_mac": [
+      {
+       "fold": 2,
+       "pod": 31,
+       "mac": 30
+      }
+     ],
+     "max_abs_inner_diff_mac": 0.0010985927652595873
+    },
+    "seed1": {
+     "max_abs_pred_diff_mac_refit": 0.023610879076811864,
+     "auc_mac_refit": 0.8027121270825262,
+     "auc_pod": 0.8026927547462224,
+     "inner_layer_mismatches_mac": [],
+     "max_abs_inner_diff_mac": 0.0013911898973415493
+    },
+    "seed2": {
+     "max_abs_pred_diff_mac_refit": 0.023794200251875286,
+     "auc_mac_refit": 0.80577295621852,
+     "auc_pod": 0.805850445563735,
+     "inner_layer_mismatches_mac": [],
+     "max_abs_inner_diff_mac": 0.00105610394525546
+    },
+    "seed3": {
+     "max_abs_pred_diff_mac_refit": 0.02460048251087421,
+     "auc_mac_refit": 0.8196435490120109,
+     "auc_pod": 0.8195660596667959,
+     "inner_layer_mismatches_mac": [],
+     "max_abs_inner_diff_mac": 0.0013077378392556405
+    },
+    "seed4": {
+     "max_abs_pred_diff_mac_refit": 0.008825770993469761,
+     "auc_mac_refit": 0.8015304145679969,
+     "auc_pod": 0.8015304145679969,
+     "inner_layer_mismatches_mac": [],
+     "max_abs_inner_diff_mac": 0.001113035063052159
+    }
+   }
+  }
+ },
+ "summary": {
+  "A": true,
+  "B": true,
+  "C": true,
+  "D": true,
+  "E": true,
+  "podverify_PASS": true
+ },
+ "PASS": true
+}

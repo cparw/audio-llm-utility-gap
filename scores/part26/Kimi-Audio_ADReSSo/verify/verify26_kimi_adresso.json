@@ -1,0 +1,157 @@
+{
+ "pulled_sha_match": {
+  "p26_kimi_adresso_ckpt.json": true,
+  "p26_kimi_adresso_enc_nested5.json": true,
+  "p26_kimi_adresso_enc_nested5_oof.csv": true
+ },
+ "perclip_equals_pod_oof": true,
+ "zs_file_matches_perclip": true,
+ "own_auc": {
+  "per_repeat": [
+   0.8489665003563792,
+   0.8806129722024234,
+   0.8925873129009266,
+   0.8775481111903065,
+   0.8415181753385602
+  ],
+  "mean5": 0.8682466143977192,
+  "zeroshot": 0.7531004989308624,
+  "gap": 0.11514611546685682,
+  "max_abs_vs_sidecar_per_repeat": 0.0,
+  "abs_vs_sidecar_zeroshot": 0.0
+ },
+ "mac_rerun": {
+  "seed0": {
+   "auc_mac": 0.8491090520313613,
+   "auc_pod": 0.8489665003563792,
+   "layers_mac": [
+    24,
+    27,
+    27,
+    31,
+    23
+   ],
+   "layers_pod": [
+    24,
+    27,
+    27,
+    31,
+    23
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.007023194350660289,
+   "rank_corr_mac_vs_pod": 0.9999862527999368
+  },
+  "seed1": {
+   "auc_mac": 0.8805416963649323,
+   "auc_pod": 0.8806129722024234,
+   "layers_mac": [
+    27,
+    28,
+    25,
+    26,
+    27
+   ],
+   "layers_pod": [
+    27,
+    28,
+    25,
+    26,
+    27
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.005138583550623466,
+   "rank_corr_mac_vs_pod": 0.999984449863991
+  },
+  "seed2": {
+   "auc_mac": 0.8925873129009266,
+   "auc_pod": 0.8925873129009266,
+   "layers_mac": [
+    27,
+    27,
+    27,
+    30,
+    30
+   ],
+   "layers_pod": [
+    27,
+    27,
+    27,
+    30,
+    30
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.0038784266159915814,
+   "rank_corr_mac_vs_pod": 0.999991210797299
+  },
+  "seed3": {
+   "auc_mac": 0.8772630078403422,
+   "auc_pod": 0.8775481111903065,
+   "layers_mac": [
+    27,
+    24,
+    31,
+    30,
+    27
+   ],
+   "layers_pod": [
+    27,
+    24,
+    31,
+    30,
+    27
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.012806696366525927,
+   "rank_corr_mac_vs_pod": 0.9999716040463208
+  },
+  "seed4": {
+   "auc_mac": 0.8414112615823236,
+   "auc_pod": 0.8415181753385602,
+   "layers_mac": [
+    27,
+    31,
+    27,
+    27,
+    15
+   ],
+   "layers_pod": [
+    27,
+    31,
+    27,
+    27,
+    15
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.0042791628235976376,
+   "rank_corr_mac_vs_pod": 0.9999878303357496
+  }
+ },
+ "mac_rerun_mean5": 0.8681824661439773,
+ "mac_rerun_layers_all_equal": true,
+ "bootstrap_rebuilt": {
+  "speaker_idx_equal": true,
+  "usable": 2000,
+  "nan_pattern_equal": true,
+  "max_abs_draw_diff": 4.440892098500626e-16,
+  "ci": [
+   0.04813201894045922,
+   0.1830847953216375
+  ],
+  "ci_sidecar": [
+   0.04813201894045922,
+   0.1830847953216375
+  ],
+  "point": 0.11514611546685682,
+  "point_sidecar": 0.11514611546685682
+ },
+ "ci_matches_sidecar_1e-9": true,
+ "sources": {
+  "states": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/out/kimi_adresso_enc_states.npz",
+  "states_sha256": "fc93d08a37b0ec7365eb11933216728dd3f2656ba33a1dbb4878fc2b8e4a4172",
+  "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_adresso_zeroshot_scores.csv",
+  "zeroshot_sha256": "1bb4595952813d1b86092f7cc73578e44089ce8dc0ee05f676536107526cb174"
+ },
+ "PASS": true,
+ "seconds": 49.1
+}
