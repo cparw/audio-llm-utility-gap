@@ -1,6 +1,6 @@
 # The Representation Utility Gap in Audio LLMs for Clinical Speech
 
-<p align="center"><b><a href="https://parw8649.github.io/audio-llm-utility-gap/">Project page</a> · <a href="https://parw8649.github.io/audio-llm-utility-gap/explorer.html">Interactive explorer</a></b></p>
+<p align="center"><b><a href="https://cparw.github.io/audio-llm-utility-gap/">Project page</a> · <a href="https://cparw.github.io/audio-llm-utility-gap/explorer.html">Interactive explorer</a></b></p>
 
 Chaitanya Parwatkar, Nima Kelidari, Minoo Ahmadi, Ashutosh Chaubey, Mohammad Soleymani.
 University of Southern California, Los Angeles, CA, USA. Submitted to ICASSP 2027.
