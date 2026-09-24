@@ -1,0 +1,92 @@
+<site-packages>/numpy/__init__.py <site-packages>/pandas/__init__.py checks/accel_24sep/figure/.venv/lib/python3.10/site-packages/pymupdf/__init__.py 1.28.2
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== checks/final_2325Z/figure/fig1_gap_whole.pdf
+  md5: b178e9d020758acf4d1c496889ccd7d6
+  page_w_bp: 244.0800018310547
+  page_h_bp: 144.0
+  include_scale_at_columnwidth: 0.9987689516972081
+  n_spans: 20
+  span_min_pt: 9.0
+  span_max_pt: 10.0
+  span_min_pt_as_printed: 8.988920565274872
+  span_max_pt_as_printed: 9.98768951697208
+  fonts_pymupdf: ['STIXGeneral-Regular']
+  gridlines_found: 6
+  grid_fit_resid_max: 1.807854854707358e-08
+  edaic_answer_lines: [{'y_auc': np.float64(0.8365999781313636), 'width': 0.800000011920929, 'dashes': '[ .8 1.32 ] 0', 'x0': 28.403749465942383, 'x1': 239.46600341796875}]
+  edaic_curves: [{'n': 61, 'width': 1.2999999523162842, 'dashes': '[ 1.3 2.145 ] 0'}]
+  edaic_curve_x_step_spread: 1.52587890625e-05
+  pdf_curve_vs_pod_auc_oof_maxabs: 2.428581258318019e-08
+  pdf_curve_vs_pod_auc_mean_maxabs: 0.016908890735122695
+== checks/final_2325Z/figure/fig1_gap_whole_86mm.pdf
+  md5: 10be267b74b338080c564e20af9ffb08
+  page_w_bp: 243.77952575683594
+  page_h_bp: 144.0
+  include_scale_at_columnwidth: 1.0000000073928244
+  n_spans: 20
+  span_min_pt: 9.0
+  span_max_pt: 10.0
+  span_min_pt_as_printed: 9.000000066535419
+  span_max_pt_as_printed: 10.000000073928243
+  fonts_pymupdf: ['STIXGeneral-Regular']
+  gridlines_found: 6
+  grid_fit_resid_max: 1.807854854707358e-08
+  edaic_answer_lines: [{'y_auc': np.float64(0.8365999781313636), 'width': 0.800000011920929, 'dashes': '[ .8 1.32 ] 0', 'x0': 28.403749465942383, 'x1': 239.16177368164062}]
+  edaic_curves: [{'n': 61, 'width': 1.2999999523162842, 'dashes': '[ 1.3 2.145 ] 0'}]
+  edaic_curve_x_step_spread: 2.288818359375e-05
+  pdf_curve_vs_pod_auc_oof_maxabs: 2.428581258318019e-08
+  pdf_curve_vs_pod_auc_mean_maxabs: 0.016908890735122695
+== checks/final_2325Z/figure/for_overleaf/fig1_gap_whole.pdf
+  md5: b178e9d020758acf4d1c496889ccd7d6
+  page_w_bp: 244.0800018310547
+  page_h_bp: 144.0
+  include_scale_at_columnwidth: 0.9987689516972081
+  n_spans: 20
+  span_min_pt: 9.0
+  span_max_pt: 10.0
+  span_min_pt_as_printed: 8.988920565274872
+  span_max_pt_as_printed: 9.98768951697208
+  fonts_pymupdf: ['STIXGeneral-Regular']
+  gridlines_found: 6
+  grid_fit_resid_max: 1.807854854707358e-08
+  edaic_answer_lines: [{'y_auc': np.float64(0.8365999781313636), 'width': 0.800000011920929, 'dashes': '[ .8 1.32 ] 0', 'x0': 28.403749465942383, 'x1': 239.46600341796875}]
+  edaic_curves: [{'n': 61, 'width': 1.2999999523162842, 'dashes': '[ 1.3 2.145 ] 0'}]
+  edaic_curve_x_step_spread: 1.52587890625e-05
+  pdf_curve_vs_pod_auc_oof_maxabs: 2.428581258318019e-08
+  pdf_curve_vs_pod_auc_mean_maxabs: 0.016908890735122695
+== <local data dir>/paper1_submission_23sep/final_overleaf_2325Z/figures/fig1_gap.pdf
+  md5: bbefb559a5768dcb07d11ed5d440da18
+  page_w_bp: 244.0800018310547
+  page_h_bp: 187.1999969482422
+  include_scale_at_columnwidth: 0.9987689516972081
+  n_spans: 28
+  span_min_pt: 7.5
+  span_max_pt: 9.0
+  span_min_pt_as_printed: 7.490767137729061
+  span_max_pt_as_printed: 8.988920565274872
+  fonts_pymupdf: ['STIXGeneral-Italic', 'STIXGeneral-Regular']
+  gridlines_found: 0
+== checks/final_2325Z/figure/fig1_gap_whole_plotted.csv
+  md5: 8beb6830bcb1bf2055d744dd71d7bdc3
+  n_enc_plotted: 32
+  n_llm_plotted: 29
+  n_enc_pod: 32
+  n_llm_pod: 29
+  enc_maxabs_vs_auc_oof: 0.0
+  llm_maxabs_vs_auc_oof: 0.0
+  enc_maxabs_vs_auc_mean: 0.01591478263215207
+  llm_maxabs_vs_auc_mean: 0.016908895340407515
+  answer_line_edaic: [0.8366]
+  x_plot_is_0_to_60: True
+== checks/final_2325Z/figure/fig1_gap_whole_86mm_plotted.csv
+  md5: 8beb6830bcb1bf2055d744dd71d7bdc3
+  n_enc_plotted: 32
+  n_llm_plotted: 29
+  n_enc_pod: 32
+  n_llm_pod: 29
+  enc_maxabs_vs_auc_oof: 0.0
+  llm_maxabs_vs_auc_oof: 0.0
+  enc_maxabs_vs_auc_mean: 0.01591478263215207
+  llm_maxabs_vs_auc_mean: 0.016908895340407515
+  answer_line_edaic: [0.8366]
+  x_plot_is_0_to_60: True
