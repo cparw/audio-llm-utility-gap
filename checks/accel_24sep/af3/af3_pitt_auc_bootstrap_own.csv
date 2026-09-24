@@ -1,0 +1,16 @@
+cell,arm,n,n_speakers,n_pos,n_neg,value,ci_lo,ci_hi,usable_draws
+part10_first30s,all,468,228,290,178,0.5894,0.5302,0.6476,2000
+interviewer_free,all,468,228,290,178,0.592,0.5293,0.6577,2000
+full_segment_sep16,all,468,228,290,178,0.5751,0.5136,0.6347,2000
+interviewer_free_minus_part10,all,468,228,290,178,0.0026,-0.0548,0.06,2000
+full_segment_minus_part10,all,468,228,290,178,-0.0142,-0.0607,0.0318,2000
+part10_first30s,conflict,146,100,101,45,0.6075,0.5063,0.7129,2000
+interviewer_free,conflict,146,100,101,45,0.5417,0.4202,0.6621,2000
+full_segment_sep16,conflict,146,100,101,45,0.6202,0.5135,0.7209,2000
+interviewer_free_minus_part10,conflict,146,100,101,45,-0.0658,-0.1653,0.0359,2000
+full_segment_minus_part10,conflict,146,100,101,45,0.0128,-0.0797,0.0947,2000
+part10_first30s,agreement,322,175,189,133,0.5855,0.5144,0.6554,2000
+interviewer_free,agreement,322,175,189,133,0.614,0.5427,0.6798,2000
+full_segment_sep16,agreement,322,175,189,133,0.5619,0.4931,0.6278,2000
+interviewer_free_minus_part10,agreement,322,175,189,133,0.0285,-0.0404,0.0959,2000
+full_segment_minus_part10,agreement,322,175,189,133,-0.0236,-0.0792,0.0291,2000

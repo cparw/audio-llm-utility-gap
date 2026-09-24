@@ -1,0 +1,8 @@
+|part3 - part10| p_yes: median 2.09e-05 max 0.0624 share>1e-3 0.380 share>0.01 0.380
+labels equal: True speakers equal: True
+part3_first30s       all       n=468 spk=228 0.5885 [0.5285, 0.6489] usable=2000
+part3_minus_part10   all       n=468 spk=228 -0.0009 [-0.0102, 0.0083] usable=2000
+part3_first30s       conflict  n=146 spk=100 0.6169 [0.5188, 0.7209] usable=2000
+part3_minus_part10   conflict  n=146 spk=100 0.0095 [-0.0131, 0.0303] usable=2000
+part3_first30s       agreement n=322 spk=175 0.5822 [0.5080, 0.6528] usable=2000
+part3_minus_part10   agreement n=322 spk=175 -0.0033 [-0.0156, 0.0080] usable=2000

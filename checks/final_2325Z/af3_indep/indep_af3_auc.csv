@@ -1,0 +1,16 @@
+cell,arm,n,n_speakers,value,ci_lo,ci_hi,usable_draws
+part10,all,468,228,0.5894,0.5302,0.6476,2000
+noinv,all,468,228,0.5920,0.5293,0.6577,2000
+full,all,468,228,0.5751,0.5136,0.6347,2000
+noinv_minus_part10_paired,all,468,228,0.0026,-0.0548,0.0600,2000
+full_minus_part10_paired,all,468,228,-0.0142,-0.0607,0.0318,2000
+part10,conflict,146,100,0.6075,0.5063,0.7129,2000
+noinv,conflict,146,100,0.5417,0.4202,0.6621,2000
+full,conflict,146,100,0.6202,0.5135,0.7209,2000
+noinv_minus_part10_paired,conflict,146,100,-0.0658,-0.1653,0.0359,2000
+full_minus_part10_paired,conflict,146,100,0.0128,-0.0797,0.0947,2000
+part10,agreement,322,175,0.5855,0.5144,0.6554,2000
+noinv,agreement,322,175,0.6140,0.5427,0.6798,2000
+full,agreement,322,175,0.5619,0.4931,0.6278,2000
+noinv_minus_part10_paired,agreement,322,175,0.0285,-0.0404,0.0959,2000
+full_minus_part10_paired,agreement,322,175,-0.0236,-0.0792,0.0291,2000

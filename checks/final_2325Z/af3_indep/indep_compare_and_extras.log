@@ -1,0 +1,30 @@
+== AUC / interval comparison, 4 dp
+YES part10_original_first30s     all       track +0.5894 [+0.5302, +0.6476]  indep 0.5894 [0.5302, 0.6476]
+YES noinv_interviewer_free       all       track +0.5920 [+0.5293, +0.6577]  indep 0.5920 [0.5293, 0.6577]
+YES noinv_minus_part10_paired    all       track +0.0026 [-0.0548, +0.0600]  indep 0.0026 [-0.0548, 0.0600]
+YES part10_original_first30s     conflict  track +0.6075 [+0.5063, +0.7129]  indep 0.6075 [0.5063, 0.7129]
+YES noinv_interviewer_free       conflict  track +0.5417 [+0.4202, +0.6621]  indep 0.5417 [0.4202, 0.6621]
+YES noinv_minus_part10_paired    conflict  track -0.0658 [-0.1653, +0.0359]  indep -0.0658 [-0.1653, 0.0359]
+YES part10_original_first30s     agreement track +0.5855 [+0.5144, +0.6554]  indep 0.5855 [0.5144, 0.6554]
+YES noinv_interviewer_free       agreement track +0.6140 [+0.5427, +0.6798]  indep 0.6140 [0.5427, 0.6798]
+YES noinv_minus_part10_paired    agreement track +0.0285 [-0.0404, +0.0959]  indep 0.0285 [-0.0404, 0.0959]
+YES fullseg_sep16                all       track +0.5751 [+0.5136, +0.6347]  indep 0.5751 [0.5136, 0.6347]
+YES fullseg_minus_part10_paired  all       track -0.0142 [-0.0607, +0.0318]  indep -0.0142 [-0.0607, 0.0318]
+YES fullseg_sep16                conflict  track +0.6202 [+0.5135, +0.7209]  indep 0.6202 [0.5135, 0.7209]
+YES fullseg_minus_part10_paired  conflict  track +0.0128 [-0.0797, +0.0947]  indep 0.0128 [-0.0797, 0.0947]
+YES fullseg_sep16                agreement track +0.5619 [+0.4931, +0.6278]  indep 0.5619 [0.4931, 0.6278]
+YES fullseg_minus_part10_paired  agreement track -0.0236 [-0.0792, +0.0291]  indep -0.0236 [-0.0792, 0.0291]
+== processor length comparison
+YES agreement_Con_118-1_6475.wav as_run_cut30 samples 480000 vs 480000 | input_features 1x128x3000 vs 1x128x3000 | mask 3000 vs 3000 | tokens 750 vs 750 | seconds 30.00 vs 30.00
+YES agreement_Con_118-1_6475.wav nocut_contrast samples 480160 vs 480160 | input_features 2x128x3000 vs 2x128x3000 | mask 3000+1 vs 3000+1 | tokens 750 vs 750 | seconds 30.01 vs 30.01
+YES conflict_Con_227-0_460.wav as_run_cut30 samples 480000 vs 480000 | input_features 1x128x3000 vs 1x128x3000 | mask 3000 vs 3000 | tokens 750 vs 750 | seconds 30.00 vs 30.00
+YES conflict_Con_227-0_460.wav nocut_contrast samples 532320 vs 532320 | input_features 2x128x3000 vs 2x128x3000 | mask 3000+327 vs 3000+327 | tokens 832 vs 832 | seconds 33.27 vs 33.27
+YES conflict_Dem_639-0_9189.wav as_run_cut30 samples 480000 vs 480000 | input_features 1x128x3000 vs 1x128x3000 | mask 3000 vs 3000 | tokens 750 vs 750 | seconds 30.00 vs 30.00
+YES conflict_Dem_639-0_9189.wav nocut_contrast samples 888960 vs 888960 | input_features 2x128x3000 vs 2x128x3000 | mask 3000+2556 vs 3000+2556 | tokens 1389 vs 1389 | seconds 55.56 vs 55.56
+== local clip durations
+n 468 min 30.010 median 33.285 max 55.560 n_over_30s 468 srs {16000}
+noinv clip dur_s min 0.681 max 29.235 | scored_s == dur_s for all: True
+== p_yes cross-checks
+val10 columns ['clip_id', 'orig_clip_id', 'speaker_id', 'label', 'arm', 'clip_path', 'dur_s', 'scored_s', 'p_yes', 'answer_mass', 'prompt']
+val10 n 10 max |p_yes - part10| 2.85e-06; scored_s ['30.0']
+16 Sep full vs part10: agreement_Con_118-1_6475 |d| 7.5e-06; median |d| all 468 0.0600

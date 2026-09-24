@@ -1,0 +1,7 @@
+cell,arm,n,n_speakers,value,ci_lo,ci_hi,usable_draws
+part3_first30s,all,468,228,0.5885,0.5285,0.6489,2000
+part3_minus_part10,all,468,228,-0.0009,-0.0102,0.0083,2000
+part3_first30s,conflict,146,100,0.6169,0.5188,0.7209,2000
+part3_minus_part10,conflict,146,100,0.0095,-0.0131,0.0303,2000
+part3_first30s,agreement,322,175,0.5822,0.508,0.6528,2000
+part3_minus_part10,agreement,322,175,-0.0033,-0.0156,0.008,2000
