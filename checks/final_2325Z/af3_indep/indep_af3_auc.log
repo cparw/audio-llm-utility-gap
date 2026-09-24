@@ -1,0 +1,17 @@
+clips 468 | arm mismatches 0 | label mismatches 0 | speaker mismatches 0
+part10                     all       n=468 spk=228  +0.5894 [+0.5302, +0.6476] draws=2000
+noinv                      all       n=468 spk=228  +0.5920 [+0.5293, +0.6577] draws=2000
+full                       all       n=468 spk=228  +0.5751 [+0.5136, +0.6347] draws=2000
+noinv_minus_part10_paired  all       n=468 spk=228  +0.0026 [-0.0548, +0.0600] draws=2000
+full_minus_part10_paired   all       n=468 spk=228  -0.0142 [-0.0607, +0.0318] draws=2000
+part10                     conflict  n=146 spk=100  +0.6075 [+0.5063, +0.7129] draws=2000
+noinv                      conflict  n=146 spk=100  +0.5417 [+0.4202, +0.6621] draws=2000
+full                       conflict  n=146 spk=100  +0.6202 [+0.5135, +0.7209] draws=2000
+noinv_minus_part10_paired  conflict  n=146 spk=100  -0.0658 [-0.1653, +0.0359] draws=2000
+full_minus_part10_paired   conflict  n=146 spk=100  +0.0128 [-0.0797, +0.0947] draws=2000
+part10                     agreement n=322 spk=175  +0.5855 [+0.5144, +0.6554] draws=2000
+noinv                      agreement n=322 spk=175  +0.6140 [+0.5427, +0.6798] draws=2000
+full                       agreement n=322 spk=175  +0.5619 [+0.4931, +0.6278] draws=2000
+noinv_minus_part10_paired  agreement n=322 spk=175  +0.0285 [-0.0404, +0.0959] draws=2000
+full_minus_part10_paired   agreement n=322 spk=175  -0.0236 [-0.0792, +0.0291] draws=2000
+wrote checks/final_2325Z/af3_indep/indep_af3_auc.csv

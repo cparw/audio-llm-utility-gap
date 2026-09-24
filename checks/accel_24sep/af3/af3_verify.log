@@ -1,0 +1,83 @@
+== 1. part10 json and scoring script ==
+{'script': '/workspace/af3_score.py', 'clip_list': '/workspace/mf_pitt.csv', 'n': 468, 'n_speakers': 228, 'window_seconds': 30, 'pre_cut_to_single_window': True, 'auc': 0.5894, 'median_source_duration_s': 33.28, 'max_source_duration_s': 55.56, 'date': '2026-09-20'}
+script sha256 3a93070ad1b28d0998bce52bb10371afd812ef39c247685b74ac62222e6fd93b
+  line 9: NOCUT = "--nocut" in sys.argv
+  line 30: if not NOCUT: x = x[:16000 * 30]
+  line 32: conv = [{"role": "user", "content": [{"type": "audio", "path": cut}, {"type": "text", "text": P}]}]
+  line 50: "n": len(res), "n_speakers": len({a[0] for a in res}), "window_seconds": None if NOCUT else 30,
+  line 51: "pre_cut_to_single_window": not NOCUT, "auc": round(AUC, 4),
+launch lines in finish_all.sh: ['python3 af3_score.py mf_pitt.csv out/af3_pitt.csv ad > logs/af3_pitt.log 2>&1', 'python3 af3_score.py mf_edaic.csv out/af3_edaic.csv mdd > logs/af3_edaic.log 2>&1']
+any --nocut on the launch line: False
+part10 log RESULT: ['RESULT af3 mf_pitt.csv n=468 AUC=0.5894 yes=0.8355 mass=0.9484 1.3 min']
+DRIVER RESULT af3 pitt: ['RESULT af3 mf_pitt.csv n=468 AUC=0.5894 yes=0.8355 mass=0.9484 1.3 min']
+json has keys written only by this script version: True
+pod pip line: ['pip install --break-system-packages -q transformers==5.5.4 accelerate librosa soundfile scikit-learn pandas gdown joblib hf_transfer peft > logs/pip.log 2>&1']
+
+== 2. three clips, own reading ==
+local transformers 5.5.4 librosa 0.11.0 soundfile 0.13.1
+<site-packages>/numba/core/errors.py:193: UserWarning: Insufficiently recent colorama version found. Numba requires colorama >= 0.3.9
+  warnings.warn(msg)
+clip=agreement_Con_118-1_6475.wav | mode=as_run_cut30 | file_sr=16000 | file_frames=480160 | file_sha256_matches_pod_hash=True | source_samples_librosa=480160 | source_seconds=30.01 | samples_after_cut=480000 | temp_wav_frames=480000 | samples_to_processor=480000 | seconds_to_processor=30.0 | n_windows=1 | window_samples=480000 | feature_shape=1x128x3000 | mask_frames=3000 | mask_frames_total=3000 | audio_tokens=750 | seconds_reaching_model=30.0
+clip=agreement_Con_118-1_6475.wav | mode=no_cut | file_sr=16000 | file_frames=480160 | file_sha256_matches_pod_hash=True | source_samples_librosa=480160 | source_seconds=30.01 | samples_after_cut=480160 | temp_wav_frames=480160 | samples_to_processor=480160 | seconds_to_processor=30.01 | n_windows=2 | window_samples=480000+160 | feature_shape=2x128x3000 | mask_frames=3000+1 | mask_frames_total=3001 | audio_tokens=750 | seconds_reaching_model=30.01
+clip=conflict_Con_227-0_460.wav | mode=as_run_cut30 | file_sr=16000 | file_frames=532320 | file_sha256_matches_pod_hash=True | source_samples_librosa=532320 | source_seconds=33.27 | samples_after_cut=480000 | temp_wav_frames=480000 | samples_to_processor=480000 | seconds_to_processor=30.0 | n_windows=1 | window_samples=480000 | feature_shape=1x128x3000 | mask_frames=3000 | mask_frames_total=3000 | audio_tokens=750 | seconds_reaching_model=30.0
+clip=conflict_Con_227-0_460.wav | mode=no_cut | file_sr=16000 | file_frames=532320 | file_sha256_matches_pod_hash=True | source_samples_librosa=532320 | source_seconds=33.27 | samples_after_cut=532320 | temp_wav_frames=532320 | samples_to_processor=532320 | seconds_to_processor=33.27 | n_windows=2 | window_samples=480000+52320 | feature_shape=2x128x3000 | mask_frames=3000+327 | mask_frames_total=3327 | audio_tokens=832 | seconds_reaching_model=33.27
+clip=conflict_Dem_639-0_9189.wav | mode=as_run_cut30 | file_sr=16000 | file_frames=888960 | file_sha256_matches_pod_hash=True | source_samples_librosa=888960 | source_seconds=55.56 | samples_after_cut=480000 | temp_wav_frames=480000 | samples_to_processor=480000 | seconds_to_processor=30.0 | n_windows=1 | window_samples=480000 | feature_shape=1x128x3000 | mask_frames=3000 | mask_frames_total=3000 | audio_tokens=750 | seconds_reaching_model=30.0
+clip=conflict_Dem_639-0_9189.wav | mode=no_cut | file_sr=16000 | file_frames=888960 | file_sha256_matches_pod_hash=True | source_samples_librosa=888960 | source_seconds=55.56 | samples_after_cut=888960 | temp_wav_frames=888960 | samples_to_processor=888960 | seconds_to_processor=55.56 | n_windows=2 | window_samples=480000+408960 | feature_shape=2x128x3000 | mask_frames=3000+2556 | mask_frames_total=5556 | audio_tokens=1389 | seconds_reaching_model=55.56
+  vs final_checks ('agreement_Con_118-1_6475.wav', 'as_run_cut30'): samples 480000 vs 480000, frames 3000 vs 3000, tokens 750 vs 750, seconds 30.0 vs 30.0
+  vs final_checks ('agreement_Con_118-1_6475.wav', 'nocut_contrast'): samples 480160 vs 480160, frames 3001 vs 3001, tokens 750 vs 750, seconds 30.01 vs 30.01
+  vs final_checks ('conflict_Con_227-0_460.wav', 'as_run_cut30'): samples 480000 vs 480000, frames 3000 vs 3000, tokens 750 vs 750, seconds 30.0 vs 30.0
+  vs final_checks ('conflict_Con_227-0_460.wav', 'nocut_contrast'): samples 532320 vs 532320, frames 3327 vs 3327, tokens 832 vs 832, seconds 33.27 vs 33.27
+  vs final_checks ('conflict_Dem_639-0_9189.wav', 'as_run_cut30'): samples 480000 vs 480000, frames 3000 vs 3000, tokens 750 vs 750, seconds 30.0 vs 30.0
+  vs final_checks ('conflict_Dem_639-0_9189.wav', 'nocut_contrast'): samples 888960 vs 888960, frames 5556 vs 5556, tokens 1389 vs 1389, seconds 55.56 vs 55.56
+
+== 3. per-clip files ==
+n part10 468 noinv 468 full 468 val10 10
+labels agree across files: True | speakers agree: True | manifest set == filename prefix: True
+local clip durations: min 30.010 median 33.285 max 55.560; over 30.0 s: 468 of 468; json median 33.28 max 55.56
+val10 (10 clips, scored_s=30.0 on all): max |part10 - val10| = 2.85e-06; max |full - val10| = 0.1856, median 0.0739
+  |part10 - full| p_yes, clips 29.9-30.1 s: n=8 median 0.0231 max 0.0926 share>0.01 0.75
+  |part10 - full| p_yes, clips 30.1-31 s: n=75 median 0.0585 max 0.2678 share>0.01 0.81
+  |part10 - full| p_yes, clips 31-34 s: n=195 median 0.0584 max 0.4051 share>0.01 0.86
+  |part10 - full| p_yes, clips 34-40 s: n=136 median 0.0755 max 0.4495 share>0.01 0.88
+  |part10 - full| p_yes, clips 40-60 s: n=54 median 0.0621 max 0.2369 share>0.01 0.89
+  spearman(duration, |part10 - full|) = 0.160
+interviewer-free clips: dur_s min 0.681 median 18.548 max 29.235; scored_s max 29.235; clips cut: 0
+  agreement_Con_118-1_6475.wav: dur 30.010 s | p_yes part10 0.622627 full 0.622635 noinv 0.321222 (noinv dur 26.236, scored 26.236)
+  conflict_Con_227-0_460.wav: dur 33.270 s | p_yes part10 0.500414 full 0.592964 noinv 0.500132 (noinv dur 8.145, scored 8.145)
+  conflict_Dem_639-0_9189.wav: dur 55.560 s | p_yes part10 0.754984 full 0.852608 noinv 0.817637 (noinv dur 14.276, scored 14.276)
+
+== 4. AUC and speaker bootstrap ==
+part10_first30s                  all       n=468 spk=228 0.5894 [0.5302, 0.6476] usable=2000
+interviewer_free                 all       n=468 spk=228 0.5920 [0.5293, 0.6577] usable=2000
+full_segment_sep16               all       n=468 spk=228 0.5751 [0.5136, 0.6347] usable=2000
+interviewer_free_minus_part10    all       n=468 spk=228 0.0026 [-0.0548, 0.0600] usable=2000
+full_segment_minus_part10        all       n=468 spk=228 -0.0142 [-0.0607, 0.0318] usable=2000
+part10_first30s                  conflict  n=146 spk=100 0.6075 [0.5063, 0.7129] usable=2000
+interviewer_free                 conflict  n=146 spk=100 0.5417 [0.4202, 0.6621] usable=2000
+full_segment_sep16               conflict  n=146 spk=100 0.6202 [0.5135, 0.7209] usable=2000
+interviewer_free_minus_part10    conflict  n=146 spk=100 -0.0658 [-0.1653, 0.0359] usable=2000
+full_segment_minus_part10        conflict  n=146 spk=100 0.0128 [-0.0797, 0.0947] usable=2000
+part10_first30s                  agreement n=322 spk=175 0.5855 [0.5144, 0.6554] usable=2000
+interviewer_free                 agreement n=322 spk=175 0.6140 [0.5427, 0.6798] usable=2000
+full_segment_sep16               agreement n=322 spk=175 0.5619 [0.4931, 0.6278] usable=2000
+interviewer_free_minus_part10    agreement n=322 spk=175 0.0285 [-0.0404, 0.0959] usable=2000
+full_segment_minus_part10        agreement n=322 spk=175 -0.0236 [-0.0792, 0.0291] usable=2000
+reference file checks/final_2325Z/af3/af3_pitt_bootstrap.csv
+    part10_original_first30s all 0.5894 0.5302 0.6476
+    noinv_interviewer_free all 0.592 0.5293 0.6577
+    noinv_minus_part10_paired all 0.0026 -0.0548 0.06
+    part10_original_first30s conflict 0.6075 0.5063 0.7129
+    noinv_interviewer_free conflict 0.5417 0.4202 0.6621
+    noinv_minus_part10_paired conflict -0.0658 -0.1653 0.0359
+    part10_original_first30s agreement 0.5855 0.5144 0.6554
+    noinv_interviewer_free agreement 0.614 0.5427 0.6798
+    noinv_minus_part10_paired agreement 0.0285 -0.0404 0.0959
+reference file checks/final_2325Z/af3/af3_pitt_fullseg_bootstrap.csv
+    fullseg_sep16 all 0.5751 0.5136 0.6347
+    fullseg_minus_part10_paired all -0.0142 -0.0607 0.0318
+    fullseg_sep16 conflict 0.6202 0.5135 0.7209
+    fullseg_minus_part10_paired conflict 0.0128 -0.0797 0.0947
+    fullseg_sep16 agreement 0.5619 0.4931 0.6278
+    fullseg_minus_part10_paired agreement -0.0236 -0.0792 0.0291
+Table 2 AF3 row in tex: ['Audio Flamingo 3 \\cite{af3}     & 0.42 & 0.84 & 0.61 & 0.59 \\\\']
+DONE
