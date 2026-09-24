@@ -1,0 +1,106 @@
+{
+ "checks": {
+  "1a per-clip rows equal the states (order, labels, speakers)": {
+   "ok": true,
+   "n": 468
+  },
+  "1b p_yes_zeroshot column equals the q3o_new zero-shot file": {
+   "ok": true
+  },
+  "1c speaker ids one to one with the zero-shot file": {
+   "ok": true,
+   "n_spk": 228
+  },
+  "2 fold columns equal the release Control15-id fold files; outer folds speaker-disjoint": {
+   "ok": true
+  },
+  "3a per-repeat AUCs by pairwise counting equal the pod json and the gap json": {
+   "ok": true,
+   "per_repeat": [
+    0.819905,
+    0.801569,
+    0.814161,
+    0.834212,
+    0.791379
+   ],
+   "mean5": 0.812245
+  },
+  "3b answer AUC equals master_lookup 0.7619": {
+   "ok": true,
+   "answer": 0.761933
+  },
+  "3c gap point": {
+   "ok": true,
+   "gap": 0.050312
+  },
+  "4 bootstrap rebuilt from the spec equals the saved draws and interval": {
+   "ok": true,
+   "max_abs_draw_diff": 4.440892098500626e-16,
+   "lo": -0.008662,
+   "hi": 0.109466,
+   "usable": 2000
+  },
+  "5a pod versions pinned (sklearn 1.9.1, numpy 2.1.2, scipy 1.18.1), avx512f present, one BLAS thread": {
+   "ok": true,
+   "versions": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-71-generic-x86_64-with-glibc2.39",
+    "numpy": "2.1.2",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+   }
+  },
+  "5b pod-side podverify PASS (refit at saved layers, inner layer choice re-derived for every outer fold, rank AUC)": {
+   "ok": true,
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.7496522392311817e-08
+  },
+  "5c pulled out/ files equal the pod sha256 list": {
+   "ok": true,
+   "bad": []
+  },
+  "5d pod read the staged states (sha256) and the five Control15-id fold files": {
+   "ok": true
+  }
+ },
+ "reference": {
+  "table1_pod3_per_repeat": [
+   0.8199147617202635,
+   0.8015691592406045,
+   0.8141611778380473,
+   0.8342115459124371,
+   0.7913793103448276
+  ],
+  "table1_pod3_mean5": 0.812247191011236,
+  "rerun_minus_table1": -1.9372336304002147e-06,
+  "max_abs_clip_diff_vs_pod3": 4.99023433686574e-09,
+  "pod3_gap_reproduces_part25C": true,
+  "mac_rerun": {
+   "file": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/verify/mac_rerun/mac5_enc_nested5_oof.csv",
+   "per_repeat": [
+    0.8197597830298334,
+    0.8015497869043007,
+    0.8143161565284773,
+    0.8343277799302596,
+    0.7911468423091825
+   ],
+   "max_abs_clip_diff_vs_pod": 0.025899831819449548
+  }
+ },
+ "ALL_PASS": true,
+ "result": {
+  "probe_mean5": 0.8122452537776056,
+  "per_repeat": [
+   0.8199050755521116,
+   0.8015691592406045,
+   0.8141611778380473,
+   0.8342115459124371,
+   0.7913793103448276
+  ],
+  "answer": 0.7619333591631151,
+  "gap": 0.05031189461449048,
+  "lo": -0.008662435059491777,
+  "hi": 0.1094655603809209
+ }
+}

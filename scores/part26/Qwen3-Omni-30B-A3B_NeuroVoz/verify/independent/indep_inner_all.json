@@ -1,0 +1,231 @@
+{
+ "folds": [
+  {
+   "seed": 0,
+   "fold": 0,
+   "mac_layer": 31,
+   "claimed_layer": 31,
+   "max_abs_inner_diff_vs_pod": 0.0003940560078165012,
+   "pod_margin_top1_top2": 0.0007967418961958295,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 0,
+   "fold": 1,
+   "mac_layer": 29,
+   "claimed_layer": 29,
+   "max_abs_inner_diff_vs_pod": 0.0009178343846254489,
+   "pod_margin_top1_top2": 0.004305586908586401,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 0,
+   "fold": 2,
+   "mac_layer": 31,
+   "claimed_layer": 31,
+   "max_abs_inner_diff_vs_pod": 0.0007700119251659032,
+   "pod_margin_top1_top2": 0.0018067970874097172,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 0,
+   "fold": 3,
+   "mac_layer": 31,
+   "claimed_layer": 31,
+   "max_abs_inner_diff_vs_pod": 0.0003983249983997572,
+   "pod_margin_top1_top2": 0.0004062648559166604,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 0,
+   "fold": 4,
+   "mac_layer": 19,
+   "claimed_layer": 19,
+   "max_abs_inner_diff_vs_pod": 0.0003978864272983218,
+   "pod_margin_top1_top2": 0.0010883924198235029,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 1,
+   "fold": 0,
+   "mac_layer": 29,
+   "claimed_layer": 29,
+   "max_abs_inner_diff_vs_pod": 0.00017896649028614764,
+   "pod_margin_top1_top2": 0.0006827409107792448,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 1,
+   "fold": 1,
+   "mac_layer": 31,
+   "claimed_layer": 31,
+   "max_abs_inner_diff_vs_pod": 0.0003975214104376956,
+   "pod_margin_top1_top2": 0.0019190802987248956,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 1,
+   "fold": 2,
+   "mac_layer": 31,
+   "claimed_layer": 31,
+   "max_abs_inner_diff_vs_pod": 0.0002367144040714697,
+   "pod_margin_top1_top2": 0.008861368644772716,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 1,
+   "fold": 3,
+   "mac_layer": 28,
+   "claimed_layer": 28,
+   "max_abs_inner_diff_vs_pod": 0.0003383421674141296,
+   "pod_margin_top1_top2": 0.002469860496529752,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 1,
+   "fold": 4,
+   "mac_layer": 29,
+   "claimed_layer": 29,
+   "max_abs_inner_diff_vs_pod": 0.00015905808508320796,
+   "pod_margin_top1_top2": 0.001817534909510976,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 2,
+   "fold": 0,
+   "mac_layer": 17,
+   "claimed_layer": 17,
+   "max_abs_inner_diff_vs_pod": 0.0006363507748592401,
+   "pod_margin_top1_top2": 0.00038652100406455503,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 2,
+   "fold": 1,
+   "mac_layer": 26,
+   "claimed_layer": 26,
+   "max_abs_inner_diff_vs_pod": 0.00040421551322267213,
+   "pod_margin_top1_top2": 0.0012685786108102004,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 2,
+   "fold": 2,
+   "mac_layer": 17,
+   "claimed_layer": 17,
+   "max_abs_inner_diff_vs_pod": 0.00034559718832272157,
+   "pod_margin_top1_top2": 0.0023049314519902886,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 2,
+   "fold": 3,
+   "mac_layer": 14,
+   "claimed_layer": 14,
+   "max_abs_inner_diff_vs_pod": 0.0005731368242594126,
+   "pod_margin_top1_top2": 0.001802779303947566,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 2,
+   "fold": 4,
+   "mac_layer": 21,
+   "claimed_layer": 21,
+   "max_abs_inner_diff_vs_pod": 0.00025060241718355414,
+   "pod_margin_top1_top2": 0.00172182968291823,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 3,
+   "fold": 0,
+   "mac_layer": 30,
+   "claimed_layer": 30,
+   "max_abs_inner_diff_vs_pod": 0.0004543094496366473,
+   "pod_margin_top1_top2": 0.0001255381761664509,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 3,
+   "fold": 1,
+   "mac_layer": 27,
+   "claimed_layer": 27,
+   "max_abs_inner_diff_vs_pod": 0.0003851196498492193,
+   "pod_margin_top1_top2": 0.0019029623424992037,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 3,
+   "fold": 2,
+   "mac_layer": 26,
+   "claimed_layer": 26,
+   "max_abs_inner_diff_vs_pod": 0.0002737061041263589,
+   "pod_margin_top1_top2": 0.001685377820800249,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 3,
+   "fold": 3,
+   "mac_layer": 17,
+   "claimed_layer": 17,
+   "max_abs_inner_diff_vs_pod": 0.0004330163023607003,
+   "pod_margin_top1_top2": 0.002517010981504475,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 3,
+   "fold": 4,
+   "mac_layer": 21,
+   "claimed_layer": 21,
+   "max_abs_inner_diff_vs_pod": 0.0003144503330003712,
+   "pod_margin_top1_top2": 9.873447755748277e-05,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 4,
+   "fold": 0,
+   "mac_layer": 21,
+   "claimed_layer": 21,
+   "max_abs_inner_diff_vs_pod": 0.00012806736968373755,
+   "pod_margin_top1_top2": 0.0004079615236393108,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 4,
+   "fold": 1,
+   "mac_layer": 20,
+   "claimed_layer": 20,
+   "max_abs_inner_diff_vs_pod": 0.0002475400705488351,
+   "pod_margin_top1_top2": 0.0025956107322422373,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 4,
+   "fold": 2,
+   "mac_layer": 29,
+   "claimed_layer": 29,
+   "max_abs_inner_diff_vs_pod": 0.00045999907120686245,
+   "pod_margin_top1_top2": 0.0003772822143612853,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 4,
+   "fold": 3,
+   "mac_layer": 26,
+   "claimed_layer": 26,
+   "max_abs_inner_diff_vs_pod": 0.00018645592392108057,
+   "pod_margin_top1_top2": 0.005242951905394144,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  },
+  {
+   "seed": 4,
+   "fold": 4,
+   "mac_layer": 25,
+   "claimed_layer": 25,
+   "max_abs_inner_diff_vs_pod": 0.00029653400544538133,
+   "pod_margin_top1_top2": 0.0018934241816825903,
+   "mac_score_at_claimed_minus_mac_best": 0.0
+  }
+ ],
+ "n_layer_mismatch": 0,
+ "max_abs_inner_diff": 0.0009178343846254489
+}

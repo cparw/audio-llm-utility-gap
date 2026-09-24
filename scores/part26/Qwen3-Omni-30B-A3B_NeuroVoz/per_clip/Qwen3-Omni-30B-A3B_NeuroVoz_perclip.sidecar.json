@@ -1,0 +1,254 @@
+{
+ "cell": "Qwen3-Omni-30B-A3B_NeuroVoz",
+ "model": "Qwen3-Omni-30B-A3B (Qwen/Qwen3-Omni-30B-A3B-Instruct)",
+ "dataset": "NeuroVoz",
+ "condition": "PD",
+ "task": "PART26 encoder nested probe (layer chosen inside the training folds) vs zero-shot answer, paired speaker bootstrap",
+ "date_utc": "2026-09-24T00:54:55.914606Z",
+ "n": 1270,
+ "n_speakers": 107,
+ "n_pos": 621,
+ "n_encoder_layers": 32,
+ "probe_per_repeat": [
+  0.9328757980194972,
+  0.9369983301449771,
+  0.9414049609333324,
+  0.9371124658523332,
+  0.9377488964813946
+ ],
+ "probe_mean5": 0.9372280902863069,
+ "probe_per_repeat_pod_json": [
+  0.9328757980194972,
+  0.9369983301449771,
+  0.9414049609333324,
+  0.9371124658523332,
+  0.9377488964813946
+ ],
+ "probe_mean5_pod_json": 0.9372280902863069,
+ "zeroshot_auc": 0.6392716156901861,
+ "gap_point": 0.29795647459612085,
+ "gap_ci": [
+  0.23603574155485121,
+  0.35776933314834564
+ ],
+ "interval_above_zero": true,
+ "interval_excludes_zero": true,
+ "probe_mean5_ci": [
+  0.9023685786608588,
+  0.9658293595575653
+ ],
+ "zeroshot_ci": [
+  0.5805349746726046,
+  0.699568449634758
+ ],
+ "usable_draws": 2000,
+ "layers": {
+  "seed0": [
+   31,
+   29,
+   31,
+   31,
+   19
+  ],
+  "seed1": [
+   29,
+   31,
+   31,
+   28,
+   29
+  ],
+  "seed2": [
+   17,
+   26,
+   17,
+   14,
+   21
+  ],
+  "seed3": [
+   30,
+   27,
+   26,
+   17,
+   21
+  ],
+  "seed4": [
+   21,
+   20,
+   29,
+   26,
+   25
+  ]
+ },
+ "single_split_auc_rerun": 0.9195802287180326,
+ "single_split_layers_rerun": [
+  23,
+  28,
+  26,
+  22,
+  13
+ ],
+ "reference_earlier_pod_run": {
+  "per_repeat": [
+   0.9329,
+   0.937,
+   0.9414,
+   0.9372,
+   0.9377
+  ],
+  "mean": 0.9372,
+  "file": "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_nested_repeats.json",
+  "abs_diff_per_repeat_4dp": [
+   0.0,
+   0.0,
+   0.0,
+   0.0001,
+   0.0
+  ],
+  "mean5_minus_reference": 2.8090286306903245e-05,
+  "single_split_auc_saved": 0.9195715444794296,
+  "single_split_layers_saved": [
+   23,
+   28,
+   26,
+   22,
+   13
+  ],
+  "single_split_rank_corr_rerun_vs_saved": 0.9999999531337355,
+  "single_split_max_abs_pred_diff_rerun_vs_saved": 0.00041431188583374023
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order of the states spk), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC, same rows in each draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "code": "boot() copied from part25/A/scripts/A_gaps.py"
+ },
+ "probe": {
+  "script": "p25a_nested5.py (PART25 A, unchanged, sha256 in inputs)",
+  "outer_folds": "saved release fold files neurovoz_groupkfold5_pod_seed{0..4}_UNVERIFIED.csv (plus neurovoz_groupkfold5_pod.csv for the single split)",
+  "inner": "GroupKFold(4) with the pod tie rule inside each outer training set, layer = argmax mean inner AUC over 32 encoder layers",
+  "model": "StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced')",
+  "fold_files": {
+   "seed0": "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "seed1": "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "seed2": "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "seed3": "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "seed4": "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "single": "neurovoz_groupkfold5_pod.csv"
+  },
+  "fold_file_equals_pod_tie_rule": {
+   "seed0": true,
+   "seed1": true,
+   "seed2": true,
+   "seed3": true,
+   "seed4": true,
+   "single": true
+  }
+ },
+ "pod": {
+  "id": "fecp2sxone9uvn",
+  "name": "p26-q3o-neurovoz",
+  "type": "CPU cpu3c 32 vCPU",
+  "cost_per_hr": 0.96,
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "blas_threads": [
+   1,
+   1,
+   1
+  ],
+  "threadpools": [
+   {
+    "user_api": "blas",
+    "internal_api": "openblas",
+    "num_threads": 1,
+    "prefix": "libscipy_openblas",
+    "filepath": "/usr/local/lib/python3.12/dist-packages/scipy.libs/libscipy_openblas-5f890258.so",
+    "version": "0.3.31.dev",
+    "threading_layer": "pthreads",
+    "architecture": "Haswell"
+   },
+   {
+    "user_api": "blas",
+    "internal_api": "openblas",
+    "num_threads": 1,
+    "prefix": "libscipy_openblas",
+    "filepath": "/usr/local/lib/python3.12/dist-packages/numpy.libs/libscipy_openblas64_-ff651d7f.so",
+    "version": "0.3.27",
+    "threading_layer": "pthreads",
+    "architecture": "Haswell"
+   },
+   {
+    "user_api": "openmp",
+    "internal_api": "openmp",
+    "num_threads": 1,
+    "prefix": "libgomp",
+    "filepath": "/usr/local/lib/python3.12/dist-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+    "version": null
+   }
+  ],
+  "n_jobs": 30,
+  "seconds": 130.3,
+  "podverify_pass": true,
+  "podverify": {
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.4553114652547947e-08,
+   "layer_mismatches": [],
+   "abs_mean5_diff": 0.0,
+   "mean5_rank_from_oof": 0.9372280902863069
+  },
+  "created_utc": "2026-09-24T00:48:40Z",
+  "deleted_utc": "2026-09-24T00:54:35Z (watchdog, after pull; REST now 404)",
+  "cost_usd_est": 0.095
+ },
+ "states": {
+  "file_used": "<local data dir>/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/stage/q3o_neurovoz_encstates.npz",
+  "sha256": "be9cadb877ffcd3cc14b9787b20f74b8da22416c40e070c033e93759d422843d",
+  "source": "<local data dir>/release/overnight2/q3o/q3o_neurovoz_states.npz",
+  "note": "enc, label, spk, p_yes, name copied byte-identical from the source states; p_yes equals the zero-shot file exactly (max diff 0.0)"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/per_clip/Qwen3-Omni-30B-A3B_NeuroVoz_perclip.csv",
+  "draws_npz": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/draws/Qwen3-Omni-30B-A3B_NeuroVoz_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/pull/p26-q3o-neurovoz/out/p26_q3o_neurovoz_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/pull/p26-q3o-neurovoz/out/p26_q3o_neurovoz_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/pull/p26-q3o-neurovoz/out/p26_q3o_neurovoz_podverify.json",
+  "pod_env_json": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/pull/p26-q3o-neurovoz/out/p26_env.json",
+  "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_zeroshot_scores.csv"
+ },
+ "sha256": {
+  "pod_oof_csv": "eef487681a232056ee40b6b4b9d2a0f6c896cef5f6a41b83810c6ba4936272d7",
+  "pod_json": "c7b4ece655f2f4205bd3e0197ecd7dfa349c741637aded38d1e1b440f843d881",
+  "zeroshot": "c5bc6852aad557adfe861b8ad8925ab53a0f94b7dccc2a16a9c92567b8594a14",
+  "perclip_csv": "9ba110a6ed04cc78ef6781957d2b5ba2e85664a9dc6c6fd227cda066f84a8ff7",
+  "draws_npz": "3d4a42271896bbc726865cb7105219672402ff87ecc801b58791c7e5b6eb47f5"
+ },
+ "versions_mac": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/gap_cell.py",
+ "verification": {
+  "status": "VERIFIED",
+  "file": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/verify/verify_cell.json",
+  "script": "scripts/part26/Qwen3-Omni-30B-A3B_NeuroVoz/scripts/verify_cell.py",
+  "date_utc": "2026-09-24T00:55:00.812105Z",
+  "n_checks": 39,
+  "failed": [],
+  "mac_refit_max_abs_auc_diff": 0.00010172965220855978,
+  "bootstrap_reimpl_max_abs_draw_diff": 4.440892098500626e-16
+ }
+}

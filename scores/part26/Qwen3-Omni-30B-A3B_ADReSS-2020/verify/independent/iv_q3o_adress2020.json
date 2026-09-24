@@ -1,0 +1,294 @@
+{
+ "checks": {
+  "perclip_n156_unique_clips": true,
+  "perclip_one_clip_per_speaker_156": true,
+  "perclip_78_pos": true,
+  "perclip_no_nan": true,
+  "clip_name_is_speaker_wav": true,
+  "zeroshot_sha256_as_sidecar": true,
+  "zeroshot_same_clip_set": true,
+  "zeroshot_speaker_label_match": true,
+  "zeroshot_column_equals_file_exact": true,
+  "zeroshot_single_prompt": true,
+  "states_rows_align_perclip": true,
+  "states_enc_shape_156_32_1280": true,
+  "podoof_same_clips": true,
+  "podoof_probe_and_fold_columns_equal_perclip": true,
+  "seed0_fold_file_matches_perclip_clips_speakers_folds": true,
+  "seed0_fold_file_sha256_equals_pod_json": true,
+  "seed0_folds_speaker_disjoint_both_classes": true,
+  "seed1_fold_file_matches_perclip_clips_speakers_folds": true,
+  "seed1_fold_file_sha256_equals_pod_json": true,
+  "seed1_folds_speaker_disjoint_both_classes": true,
+  "seed2_fold_file_matches_perclip_clips_speakers_folds": true,
+  "seed2_fold_file_sha256_equals_pod_json": true,
+  "seed2_folds_speaker_disjoint_both_classes": true,
+  "seed3_fold_file_matches_perclip_clips_speakers_folds": true,
+  "seed3_fold_file_sha256_equals_pod_json": true,
+  "seed3_folds_speaker_disjoint_both_classes": true,
+  "seed4_fold_file_matches_perclip_clips_speakers_folds": true,
+  "seed4_fold_file_sha256_equals_pod_json": true,
+  "seed4_folds_speaker_disjoint_both_classes": true,
+  "seed0_folds_rebuilt_from_scratch_equal": true,
+  "seed1_folds_rebuilt_from_scratch_equal": true,
+  "seed2_folds_rebuilt_from_scratch_equal": true,
+  "seed3_folds_rebuilt_from_scratch_equal": true,
+  "seed4_folds_rebuilt_from_scratch_equal": true,
+  "seed0_ckpt_fold_and_oof_equal_perclip": true,
+  "seed0_layers_equal_claim": true,
+  "seed0_layers_are_argmax_of_saved_inner_scores": true,
+  "seed1_ckpt_fold_and_oof_equal_perclip": true,
+  "seed1_layers_equal_claim": true,
+  "seed1_layers_are_argmax_of_saved_inner_scores": true,
+  "seed2_ckpt_fold_and_oof_equal_perclip": true,
+  "seed2_layers_equal_claim": true,
+  "seed2_layers_are_argmax_of_saved_inner_scores": true,
+  "seed3_ckpt_fold_and_oof_equal_perclip": true,
+  "seed3_layers_equal_claim": true,
+  "seed3_layers_are_argmax_of_saved_inner_scores": true,
+  "seed4_ckpt_fold_and_oof_equal_perclip": true,
+  "seed4_layers_equal_claim": true,
+  "seed4_layers_are_argmax_of_saved_inner_scores": true,
+  "auc_rank_equals_pairs_equals_sklearn": true,
+  "per_repeat_4dp_match_claim": true,
+  "mean5_4dp_match_claim": true,
+  "answer_4dp_match_claim": true,
+  "gap_4dp_match_claim": true,
+  "per_repeat_equal_pod_json_1e-12": true,
+  "usable_2000": true,
+  "lo_4dp_match_claim": true,
+  "hi_4dp_match_claim": true,
+  "draws_speakers_equal_unique_order": true,
+  "draws_speaker_idx_equal_mine": true,
+  "draws_diff_equal_mine_1e-12": true,
+  "draws_mean5_zeroshot_equal_mine_1e-12": true,
+  "draws_ci_equal_mine_1e-12": true,
+  "draws_point_equal_mine_1e-12": true
+ },
+ "values": {
+  "per_repeat": [
+   0.8336620644312952,
+   0.8555226824457594,
+   0.8458251150558843,
+   0.8400723208415516,
+   0.8474687705456936
+  ],
+  "mean5": 0.8445101906640368,
+  "answer": 0.7097304404996713,
+  "gap": 0.1347797501643655,
+  "lo": 0.041668539312337556,
+  "hi": 0.2334787688361202,
+  "usable": 2000,
+  "p_le0": 0.0035
+ },
+ "info": {
+  "perclip_n156_unique_clips": {
+   "n": 156
+  },
+  "perclip_one_clip_per_speaker_156": {
+   "n_spk": 156
+  },
+  "perclip_78_pos": {
+   "n_pos": 78
+  },
+  "zeroshot_column_equals_file_exact": {
+   "max_abs": 0.0
+  },
+  "zeroshot_single_prompt": {
+   "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+  },
+  "states_enc_shape_156_32_1280": {
+   "shape": [
+    156,
+    32,
+    1280
+   ]
+  },
+  "seed0_folds_speaker_disjoint_both_classes": {
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed1_folds_speaker_disjoint_both_classes": {
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed2_folds_speaker_disjoint_both_classes": {
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed3_folds_speaker_disjoint_both_classes": {
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed4_folds_speaker_disjoint_both_classes": {
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed0_layers_equal_claim": {
+   "layers": [
+    19,
+    18,
+    31,
+    25,
+    29
+   ]
+  },
+  "seed1_layers_equal_claim": {
+   "layers": [
+    18,
+    19,
+    29,
+    26,
+    25
+   ]
+  },
+  "seed2_layers_equal_claim": {
+   "layers": [
+    28,
+    18,
+    30,
+    19,
+    19
+   ]
+  },
+  "seed3_layers_equal_claim": {
+   "layers": [
+    30,
+    22,
+    22,
+    29,
+    19
+   ]
+  },
+  "seed4_layers_equal_claim": {
+   "layers": [
+    19,
+    29,
+    19,
+    20,
+    30
+   ]
+  },
+  "per_repeat_4dp_match_claim": {
+   "mine": [
+    0.8337,
+    0.8555,
+    0.8458,
+    0.8401,
+    0.8475
+   ]
+  },
+  "mean5_4dp_match_claim": {
+   "mine": 0.8445
+  },
+  "answer_4dp_match_claim": {
+   "mine": 0.7097
+  },
+  "gap_4dp_match_claim": {
+   "mine": 0.1348
+  },
+  "usable_2000": {
+   "usable": 2000
+  },
+  "lo_4dp_match_claim": {
+   "mine": 0.0417
+  },
+  "hi_4dp_match_claim": {
+   "mine": 0.2335
+  },
+  "draws_diff_equal_mine_1e-12": {
+   "max_abs": 4.440892098500626e-16
+  }
+ },
+ "info_part25C_columns": [
+  "clip",
+  "speaker",
+  "speaker_zs",
+  "label",
+  "p_probe_rep0",
+  "p_probe_rep1",
+  "p_probe_rep2",
+  "p_probe_rep3",
+  "p_probe_rep4",
+  "p_yes"
+ ],
+ "fold_files": {
+  "seed0": {
+   "sha256": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed1": {
+   "sha256": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed2": {
+   "sha256": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed3": {
+   "sha256": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "seed4": {
+   "sha256": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb",
+   "sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  }
+ },
+ "all_pass": true,
+ "n_checks": 64
+}

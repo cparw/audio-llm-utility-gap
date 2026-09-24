@@ -1,0 +1,172 @@
+{
+ "date_utc": "2026-09-24T00:55:15.542271Z",
+ "checks": {
+  "1_perclip_equals_pod_oof": true,
+  "1_folds_equal_release_files_and_speaker_disjoint": {
+   "seed0": true,
+   "seed1": true,
+   "seed2": true,
+   "seed3": true,
+   "seed4": true
+  },
+  "2_per_repeat_rank": [
+   0.9223388429752066,
+   0.8696677685950414,
+   0.8742380165289256,
+   0.8987867768595041,
+   0.9195702479338843
+  ],
+  "2_mean5_rank": 0.8969203305785124,
+  "2_zeroshot_rank": 0.5967206611570248,
+  "2_gap_rank": 0.30019966942148757,
+  "2_matches_sidecar": true,
+  "2_pod_json_per_repeat_diff": 1.1102230246251565e-16,
+  "3_zeroshot_column_equal": true,
+  "4_speakers_equal_states_spk": true,
+  "4_draw_max_abs_diff_vs_saved": 4.440892098500626e-16,
+  "4_mean5_draw_max_abs_diff": 4.440892098500626e-16,
+  "4_zs_draw_max_abs_diff": 2.220446049250313e-16,
+  "4_ci_recomputed": [
+   0.2298349609612817,
+   0.36945389482676405
+  ],
+  "4_usable": 2000,
+  "4_ci_matches_sidecar": true,
+  "5_mac_refit_max_abs_pred_diff": 0.039960383659668086,
+  "5_mac_refit_auc": [
+   0.9223338842975206,
+   0.8695504132231405,
+   0.8742611570247933,
+   0.8987867768595041,
+   0.9196198347107438
+  ],
+  "5_mac_refit_mean5": 0.8969104132231405,
+  "5_mac_vs_pod_mean5_diff": -9.917355371924508e-06,
+  "6_pod3_per_repeat": [
+   0.9223388429752066,
+   0.8696677685950414,
+   0.8742479338842976,
+   0.8988082644628099,
+   0.9195719008264462
+  ],
+  "6_pod3_mean5": 0.8969269421487602,
+  "6_rerun_minus_pod3_mean5": -6.6115702478386495e-06,
+  "6_per_repeat_abs_diff": [
+   0.0,
+   0.0,
+   9.917355371924508e-06,
+   2.1487603305780922e-05,
+   1.6528925619319068e-06
+  ],
+  "6_max_abs_pred_diff_vs_pod3": 4.999699591834439e-09,
+  "6_layers_rerun": [
+   [
+    14,
+    14,
+    15,
+    14,
+    15
+   ],
+   [
+    14,
+    14,
+    14,
+    6,
+    23
+   ],
+   [
+    16,
+    23,
+    16,
+    15,
+    15
+   ],
+   [
+    14,
+    14,
+    21,
+    17,
+    8
+   ],
+   [
+    14,
+    10,
+    13,
+    13,
+    15
+   ]
+  ],
+  "6_layers_pod3": [
+   [
+    14,
+    14,
+    15,
+    14,
+    15
+   ],
+   [
+    14,
+    14,
+    14,
+    6,
+    23
+   ],
+   [
+    16,
+    23,
+    16,
+    15,
+    15
+   ],
+   [
+    14,
+    14,
+    21,
+    17,
+    8
+   ],
+   [
+    14,
+    10,
+    13,
+    13,
+    15
+   ]
+  ],
+  "6_layer_choices_equal": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "7_podverify_pass": true,
+  "7_podverify_layer_mismatches": [],
+  "7_pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-65-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "8_vs_part25C_POD3_draws": {
+   "part25C_draws_file": "<local data dir>/release_from_mac/scores/part25/C/draws/C_q3o_pcgita_enc_draws.npz",
+   "part25C_source": "POD3 per-repeat OOF (part16), same bootstrap spec",
+   "max_abs_diff_of_gap_draws": 6.990358126712781e-05,
+   "speaker_idx_identical": null,
+   "part25C_gap": "0.3002 [0.2298, 0.3695]"
+  }
+ },
+ "VERIFIED": true,
+ "versions_mac": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2"
+ },
+ "sha256": {
+  "perclip_csv": "350d74545a44bc1827d65206ce37763ed41ebc2cd5042d745114e0a244997f70",
+  "draws_npz": "023f196507f9b958a4247688d6283b07ae97f29294bb18c1d4e63823ceecc77c",
+  "sidecar": "26ba90c851ceed0d36dc462407c5f2f7058331794156336ddd6da4022bf91db7"
+ }
+}

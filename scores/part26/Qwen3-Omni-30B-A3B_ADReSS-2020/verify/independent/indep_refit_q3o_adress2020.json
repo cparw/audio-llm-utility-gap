@@ -1,0 +1,14 @@
+{
+ "layers_pod_json_equal_claim": true,
+ "refit_at_saved_layers_max_abs_pred_diff": 0.006834618880163457,
+ "refit_per_repeat_auc": [
+  0.8336620644312952,
+  0.8555226824457594,
+  0.8456607495069034,
+  0.8404010519395135,
+  0.8474687705456936
+ ],
+ "refit_mean5": 0.8445430637738329,
+ "inner_layer_mismatches": [],
+ "negative_control_wrong_split_max_abs_pred_diff_seed0": 0.9679309486636098
+}

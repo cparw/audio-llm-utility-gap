@@ -1,0 +1,116 @@
+{
+ "date_utc": "2026-09-24T00:58:57.033696Z",
+ "checks": {
+  "pulled_out_files_match_pod_sha256": {
+   "ok": true,
+   "n_files": 4,
+   "bad": []
+  },
+  "perclip_equals_pod_oof_exact": {
+   "ok": true,
+   "n": 237
+  },
+  "perclip_rows_equal_states_order_labels_speakers": {
+   "ok": true,
+   "n": 237
+  },
+  "zeroshot_file_same_clips_labels_speakers_pyes": {
+   "ok": true
+  },
+  "fold_column_seed0_equals_adresso_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "ok": true,
+   "sha256": "2da95259b8772bf9d94c96a2d2ba64517b79f011edcdd6a4f8cebd1d73b5faf6"
+  },
+  "fold_column_seed1_equals_adresso_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "ok": true,
+   "sha256": "771ad7de616eaf626b52f9e88f4e8818301b519840501fea6345bdd5950d6032"
+  },
+  "fold_column_seed2_equals_adresso_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "ok": true,
+   "sha256": "3b00c2b684ecc23f943389c23d1ce003afdd8859e0885817a08120d861a2862c"
+  },
+  "fold_column_seed3_equals_adresso_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "ok": true,
+   "sha256": "f1670e0c80261a9932e7b8076707e161c34fd38d4fbb28da22a1cf7660e3965d"
+  },
+  "fold_column_seed4_equals_adresso_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "ok": true,
+   "sha256": "c36778a287fcccc7a1ba13557063899fe3ea4d834949ca361fec7d02e8f6a8bb"
+  },
+  "fold_column_single_equals_adresso_groupkfold5_pod.csv": {
+   "ok": true,
+   "sha256": "ef017a2ac84975e55d39b83469ae6836e0cd5307d08216631931f9da5c46cf90"
+  },
+  "per_repeat_auc_mannwhitney_equals_sidecar": {
+   "ok": true,
+   "per_repeat": [
+    0.875766,
+    0.865681,
+    0.877762,
+    0.872131,
+    0.883464
+   ]
+  },
+  "mean5_and_zeroshot_auc_equal_sidecar": {
+   "ok": true,
+   "mean5": 0.874961,
+   "zeroshot": 0.777406,
+   "gap": 0.097555
+  },
+  "pod_json_per_repeat_equals_recomputed": {
+   "ok": true
+  },
+  "bootstrap_draws_reproduced": {
+   "ok": true,
+   "max_abs_draw_diff": 4.440892098500626e-16,
+   "usable": 2000
+  },
+  "bootstrap_interval_reproduced_4dp": {
+   "ok": true,
+   "lo": 0.036236,
+   "hi": 0.161561
+  },
+  "point_gap_in_draws_file": {
+   "ok": true
+  },
+  "pod_versions_pinned": {
+   "ok": true,
+   "versions": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+    "numpy": "2.1.2",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+   }
+  },
+  "pod_driver_one_blas_thread_and_upload_check": {
+   "ok": true
+  },
+  "podverify_PASS": {
+   "ok": true,
+   "max_pred": 0.0,
+   "max_inner": 2.4624154937313847e-08,
+   "mism": []
+  },
+  "mac_refit_at_saved_layers_matches_oof": {
+   "ok": false,
+   "max_abs_pred_diff": 0.010899929268116448,
+   "mac_sklearn": "1.7.2"
+  },
+  "mac_inner_layer_rederivation": {
+   "ok": true,
+   "layer_mismatches": [],
+   "max_abs_inner_diff": 0.0013611615245009423,
+   "mean5_mac": 0.874954,
+   "per_repeat_mac": [
+    0.875766,
+    0.865716,
+    0.877762,
+    0.872131,
+    0.883393
+   ]
+  }
+ },
+ "ALL_PASS": false
+}

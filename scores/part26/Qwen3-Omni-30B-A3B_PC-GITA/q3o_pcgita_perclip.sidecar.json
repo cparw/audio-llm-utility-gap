@@ -1,0 +1,213 @@
+{
+ "task": "PART 26 probe grid: Qwen3-Omni-30B-A3B on PC-GITA, paired encoder probe (mean of five per-repeat nested AUCs) minus zero-shot answer AUC, 2000-draw speaker bootstrap",
+ "date_utc": "2026-09-24T00:55:10.532981Z",
+ "model": "Qwen3-Omni-30B-A3B",
+ "dataset": "PC-GITA",
+ "condition": "PD",
+ "n": 1100,
+ "n_speakers": 100,
+ "n_pos": 550,
+ "probe": {
+  "estimator": "nested encoder probe: outer GroupKFold(5) folds read from the saved release fold files (pcgita_groupkfold5_pod_seed0..4.csv), inner GroupKFold(4) with the pod tie rule on the renumbered training speakers picks the encoder layer by mean inner AUC, then StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit on the outer training rows; value = mean over the five repeats of the out-of-fold AUC",
+  "script": "p25a_nested5.py (PART 25 A, md5 615ced0380cca2636ed7cc30c71810e6), unchanged",
+  "per_repeat_auc": [
+   0.9223388429752066,
+   0.8696677685950414,
+   0.8742380165289255,
+   0.8987867768595043,
+   0.9195702479338843
+  ],
+  "mean5": 0.8969203305785124,
+  "per_repeat_auc_4dp": [
+   0.9223,
+   0.8697,
+   0.8742,
+   0.8988,
+   0.9196
+  ],
+  "mean5_4dp": 0.8969,
+  "layers": {
+   "seed0": [
+    14,
+    14,
+    15,
+    14,
+    15
+   ],
+   "seed1": [
+    14,
+    14,
+    14,
+    6,
+    23
+   ],
+   "seed2": [
+    16,
+    23,
+    16,
+    15,
+    15
+   ],
+   "seed3": [
+    14,
+    14,
+    21,
+    17,
+    8
+   ],
+   "seed4": [
+    14,
+    10,
+    13,
+    13,
+    15
+   ]
+  },
+  "single_split_auc_not_used": 0.9005983471074379,
+  "fold_files": {
+   "seed0": [
+    "pcgita_groupkfold5_pod_seed0.csv",
+    "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a"
+   ],
+   "seed1": [
+    "pcgita_groupkfold5_pod_seed1.csv",
+    "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159"
+   ],
+   "seed2": [
+    "pcgita_groupkfold5_pod_seed2.csv",
+    "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7"
+   ],
+   "seed3": [
+    "pcgita_groupkfold5_pod_seed3.csv",
+    "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0"
+   ],
+   "seed4": [
+    "pcgita_groupkfold5_pod_seed4.csv",
+    "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af"
+   ]
+  },
+  "fold_file_equals_pod_tie_rule": true,
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-65-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "pod_seconds": 44.2,
+  "pod_command": "p25a_nested5.py in/q3o_pcgita_encstates.npz pcgita in/folds out/p26_q3o_pcgita",
+  "n_jobs": 32,
+  "states_on_pod": {
+   "file": "/workspace/in/q3o_pcgita_encstates.npz",
+   "sha256": "ea65a2f24f40ac762751ed62bb2221e14e12bcd2f4bfc7981088ef8685ad6d18",
+   "keys": {
+    "enc": [
+     [
+      1100,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      1100
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      1100
+     ],
+     "<U14"
+    ],
+    "name": [
+     [
+      1100
+     ],
+     "<U29"
+    ],
+    "p_yes": [
+     [
+      1100
+     ],
+     "float64"
+    ]
+   }
+  },
+  "podverify_pass": true,
+  "podverify": {
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.4063528170081838e-08,
+   "layer_mismatches": [],
+   "abs_mean5_diff": 0.0
+  }
+ },
+ "zeroshot": {
+  "file": "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv",
+  "sha256": "f05009f50479d215b5c7c9797ee13b39db4241d79dd891aaba899a6c88e0d607",
+  "auc": 0.5967206611570248,
+  "auc_4dp": 0.5967,
+  "master_lookup_row": 172,
+  "master_value": 0.5967
+ },
+ "gap": {
+  "point": 0.30019966942148757,
+  "ci": [
+   0.2298349609612818,
+   0.36945389482676405
+  ],
+  "point_4dp": 0.3002,
+  "ci_4dp": [
+   0.2298,
+   0.3695
+  ],
+  "interval_above_zero": true,
+  "usable_draws": 2000,
+  "probe_mean5_ci": [
+   0.8321568281536232,
+   0.945372789110998
+  ],
+  "zeroshot_ci": [
+   0.5239535961808512,
+   0.6618733721512647
+  ],
+  "p_boot_diff_le_0": 0.0
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh",
+  "resample": "unique speakers (np.unique order of the states spk = fold speaker_id), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs and the zero-shot AUC on the same draw; gap = difference",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "states": {
+  "source": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz",
+  "note": "part16 POD3 re-extraction, the master row 168/169 source; the pod read an enc-only copy (enc, label, spk, name, p_yes arrays byte-identical, checked in verify/preflight.json)"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/q3o_pcgita_perclip.csv",
+  "draws_npz": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/q3o_pcgita_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/pull/p26-q3o-pcgita/out/p26_q3o_pcgita_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/pull/p26-q3o-pcgita/out/p26_q3o_pcgita_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/pull/p26-q3o-pcgita/out/p26_q3o_pcgita_podverify.json"
+ },
+ "versions_mac": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/part26/Qwen3-Omni-30B-A3B_PC-GITA/scripts/gap26.py",
+ "sha256": {
+  "perclip_csv": "350d74545a44bc1827d65206ce37763ed41ebc2cd5042d745114e0a244997f70",
+  "draws_npz": "023f196507f9b958a4247688d6283b07ae97f29294bb18c1d4e63823ceecc77c",
+  "pod_oof_csv": "579256d2d07fae9f1a15f80a7fc6d427b832f83a597e11578c4e17bf645a34c8",
+  "pod_json": "59e1dacdc0a9b4439302eb0840211227fb54c5298e374b8b1b1ca473c6da1ac8"
+ }
+}

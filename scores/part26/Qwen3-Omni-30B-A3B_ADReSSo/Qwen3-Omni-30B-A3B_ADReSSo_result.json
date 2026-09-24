@@ -1,0 +1,43 @@
+{
+ "model": "Qwen3-Omni-30B-A3B",
+ "dataset": "ADReSSo",
+ "condition": "AD",
+ "landed": true,
+ "verified": true,
+ "probe_mean5": 0.875,
+ "probe_per_repeat": [
+  0.8758,
+  0.8657,
+  0.8778,
+  0.8721,
+  0.8835
+ ],
+ "answer_auc": 0.7774,
+ "gap": 0.0976,
+ "gap_lo": 0.0362,
+ "gap_hi": 0.1616,
+ "interval_above_zero": true,
+ "n": 237,
+ "n_speakers": 237,
+ "usable_draws": 2000,
+ "master_probe_mean5": 0.875,
+ "states": "<local data dir>/release/overnight2/q3o/q3o_adresso_states.npz",
+ "oof_file": "scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/Qwen3-Omni-30B-A3B_ADReSSo_perclip.csv",
+ "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/Qwen3-Omni-30B-A3B_ADReSSo_perclip.sidecar.json",
+ "draws_file": "scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/draws/Qwen3-Omni-30B-A3B_ADReSSo_draws.npz",
+ "verify_json": "scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/verify/verify26.json",
+ "verify_info_failures": [
+  "INFO_mac_refit_at_saved_layers_matches_oof_1e-3"
+ ],
+ "pod": {
+  "name": "p26-q3o-adresso",
+  "id": "bkrhdn09yvpf3h",
+  "type": "CPU cpu5c 32 vCPU",
+  "cost_per_hr": 1.12,
+  "created_utc": "00:46:42",
+  "deleted_utc": "00:58:27",
+  "est_cost_usd": 0.22,
+  "deleted_by": "watchdog26.sh after ALL_DONE, pull verified (16 files, 4 out sha256 match)"
+ },
+ "written_utc": "2026-09-24T00:59:57.395150Z"
+}

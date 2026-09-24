@@ -1,0 +1,102 @@
+{
+ "n": 156,
+ "n_unique_clips": 156,
+ "n_spk": 156,
+ "n_pos": 78,
+ "fold_sizes": {
+  "seed0": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "seed1": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "seed2": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "seed3": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ],
+  "seed4": [
+   32,
+   31,
+   31,
+   31,
+   31
+  ]
+ },
+ "states_sha256": "f40f582ffda03c1156dc603797f9d8c1e731ec8fc9df57628f0087de3332baf3",
+ "zs_sha256": "d938609e6e30af5a8313db9b634cb3ebd011c466d9d9a1ddc1057cb0c361713b",
+ "per_repeat": [
+  0.8336620644312952,
+  0.8555226824457594,
+  0.8458251150558843,
+  0.8400723208415516,
+  0.8474687705456936
+ ],
+ "per_repeat_4dp": [
+  0.8337,
+  0.8555,
+  0.8458,
+  0.8401,
+  0.8475
+ ],
+ "mean5": 0.8445101906640368,
+ "answer": 0.7097304404996713,
+ "gap": 0.1347797501643655,
+ "rank_vs_pairs_maxdiff": 0.0,
+ "boot_usable": 2000,
+ "lo": 0.041668539312337556,
+ "hi": 0.2334787688361202,
+ "p_le0": 0.0035,
+ "choice_equals_integers_stream": true,
+ "npz_diff_maxabs": 4.440892098500626e-16,
+ "checks": {
+  "perclip_156_unique": true,
+  "no_nan_scores": true,
+  "perclip_folds_equal_release_fold_files": true,
+  "fold_file_speakers_equal_perclip": true,
+  "release_fold_sha_equal_sidecar": true,
+  "pod_pulled_fold_files_equal_release_bytes": true,
+  "folds_rebuilt_from_scratch_equal": true,
+  "pod_oof_rows_same_order": true,
+  "pod_oof_scores_equal_perclip": true,
+  "pod_oof_folds_equal_perclip": true,
+  "pod_json_fold_files_are_release_seed_files": true,
+  "states_names_spk_label_align": true,
+  "states_sha_equal_sidecar": true,
+  "zs_clips_equal": true,
+  "zs_speaker_label_align": true,
+  "zs_column_equal_file": true,
+  "zs_sha_equal_sidecar": true,
+  "per_repeat_4dp_match": true,
+  "probe_4dp_match": true,
+  "answer_4dp_match": 1.0,
+  "gap_4dp_match": 1.0,
+  "rank_auc_equals_pair_auc": true,
+  "boot_2000_usable": true,
+  "lo_4dp_match": 1.0,
+  "hi_4dp_match": 1.0,
+  "interval_above_zero": 1.0,
+  "npz_speakers_equal_unique": true,
+  "npz_speaker_idx_equal": true,
+  "npz_draws_equal_1e-10": true,
+  "npz_ci_equal_1e-10": true
+ },
+ "all_pass": true
+}

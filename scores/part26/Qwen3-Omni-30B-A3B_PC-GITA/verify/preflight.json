@@ -1,0 +1,190 @@
+{
+ "date_utc": "2026-09-24T00:47:16.923454Z",
+ "source_states": "<local data dir>/paper1_local_runs/part16_POD3_states/q3o_pcgita_states.npz",
+ "zeroshot_file": "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv",
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "source_keys": {
+  "enc": [
+   [
+    1100,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "proj": [
+   [
+    1100,
+    1,
+    2048
+   ],
+   "float32"
+  ],
+  "llm": [
+   [
+    1100,
+    49,
+    2048
+   ],
+   "float32"
+  ],
+  "ans": [
+   [
+    1100,
+    49,
+    2048
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    1100
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    1100
+   ],
+   "<U14"
+  ],
+  "p_yes": [
+   [
+    1100
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    1100
+   ],
+   "<U29"
+  ]
+ },
+ "n": 1100,
+ "n_pos": 550,
+ "n_speakers": 100,
+ "enc_shape": [
+  1100,
+  32,
+  1280
+ ],
+ "enc_all_finite": true,
+ "folds": {
+  "single": {
+   "file": "pcgita_groupkfold5_pod.csv",
+   "sha256": "ff2fa9e53a19f102a059ea08ddccb5cb3762e2f298eda3a05548cdd5a92cb61f",
+   "clip_set_equal": true,
+   "speaker_ids_equal": true,
+   "pod_tie_rule_equal": true,
+   "speaker_disjoint": true,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed0": {
+   "file": "pcgita_groupkfold5_pod_seed0.csv",
+   "sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+   "clip_set_equal": true,
+   "speaker_ids_equal": true,
+   "pod_tie_rule_equal": true,
+   "speaker_disjoint": true,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed1": {
+   "file": "pcgita_groupkfold5_pod_seed1.csv",
+   "sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+   "clip_set_equal": true,
+   "speaker_ids_equal": true,
+   "pod_tie_rule_equal": true,
+   "speaker_disjoint": true,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed2": {
+   "file": "pcgita_groupkfold5_pod_seed2.csv",
+   "sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+   "clip_set_equal": true,
+   "speaker_ids_equal": true,
+   "pod_tie_rule_equal": true,
+   "speaker_disjoint": true,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed3": {
+   "file": "pcgita_groupkfold5_pod_seed3.csv",
+   "sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+   "clip_set_equal": true,
+   "speaker_ids_equal": true,
+   "pod_tie_rule_equal": true,
+   "speaker_disjoint": true,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed4": {
+   "file": "pcgita_groupkfold5_pod_seed4.csv",
+   "sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+   "clip_set_equal": true,
+   "speaker_ids_equal": true,
+   "pod_tie_rule_equal": true,
+   "speaker_disjoint": true,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  }
+ },
+ "zeroshot": {
+  "sha256": "f05009f50479d215b5c7c9797ee13b39db4241d79dd891aaba899a6c88e0d607",
+  "n": 1100,
+  "labels_equal": true,
+  "speakers_equal_states_spk": true,
+  "auc": 0.5967206611570248,
+  "auc_4dp": 0.5967,
+  "max_abs_p_yes_vs_states_p_yes": 0.21037114284262143
+ },
+ "stage": {
+  "file": "<local data dir>/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/stage/q3o_pcgita_encstates.npz",
+  "sha256": "ea65a2f24f40ac762751ed62bb2221e14e12bcd2f4bfc7981088ef8685ad6d18",
+  "arrays_identical_to_source": true,
+  "array_sha256": {
+   "enc": "3318b00ab88e32de941109293bf612bae259bfed0395b7b163764f7bb38cd0d5",
+   "label": "d1a6eec688a9a985d126e7183b50c11935310ad414d6c38d9aee5405e2021b44",
+   "spk": "111827a7b190f0c33125285d0bca2f0353861656b8014d1d88b080ca1626b53c"
+  }
+ },
+ "source_sha256": "172ab28d24cccc4800e5a608b92252a612bc7e07b2c410fc2a61fda82c555e17"
+}

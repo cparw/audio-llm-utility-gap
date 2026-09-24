@@ -1,0 +1,2 @@
+model	dataset	condition	probe_mean5	answer_auc	gap	gap_lo	gap_hi	interval_above_zero	verified	n	n_speakers	usable_draws	oof_file	draws_file
+Qwen3-Omni-30B-A3B	ADReSSo	AD	0.875	0.7774	0.0976	0.0362	0.1616	True	True	237	237	2000	scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/Qwen3-Omni-30B-A3B_ADReSSo_perclip.csv	scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/draws/Qwen3-Omni-30B-A3B_ADReSSo_draws.npz
