@@ -1,0 +1,47 @@
+{
+ "what": "PART26 final 3 x 7 table: nested encoder probe (mean of five repeats, layer chosen in the training folds) vs zero-shot answer AUC, paired speaker-bootstrap gap",
+ "date_utc": "2026-09-24T04:09:58Z",
+ "cells_landed": 21,
+ "cells_verified": 21,
+ "pd_ad_cells_interval_above_zero": {
+  "of_verified": "14 of 18",
+  "of_18": 14,
+  "without_kimi": "9 of 12"
+ },
+ "bootstrap": "2000 draws, fresh numpy default_rng(0), np.unique speakers of the per-clip file, rng.choice(n_spk, n_spk, replace=True), all clips of each drawn speaker, 2.5 and 97.5 percentiles, gap = mean of five per-repeat AUCs minus zero-shot AUC in each draw",
+ "table_recompute": {
+  "script": "scripts/part26/table26/verify_table26.py",
+  "output": "scores/part26/table26/verify_table26_out.json",
+  "sha256_output": "0dbe6c6fed3c0de967fbbae8f3e4d3cf6f9abc93c9935f049322ff386055dc5a"
+ },
+ "cost": {
+  "script": "scripts/part26/table26/cost26.py",
+  "output": "scores/part26/table26/cost26_out.json",
+  "billing_rows": "scores/part26/table26/billing_p26_window.json",
+  "gpu_billed_usd_as_of_0406Z": 12.49,
+  "gpu_time_based_usd": 14.66,
+  "cpu_time_based_usd": 3.32,
+  "cpu_unknown_delete_upper_usd": 1.24,
+  "balance_usd_0406Z": 101.84,
+  "balance_usd_0041Z": 126.72
+ },
+ "pods": {
+  "part26_pod_ids": 35,
+  "all_http_404": true,
+  "live_pods_0406Z": 0
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3"
+ },
+ "files": {
+  "md": "reports/part26/PART26_TABLE.md",
+  "tsv": "scores/part26/PART26_TABLE.tsv"
+ },
+ "sha256": {
+  "md": "e4640d88da6847f7eea26f3f8af1bee7fd8b89babe1fefb90dd4f2b202a7ba08",
+  "tsv": "fbaf58c7615a4484f9c29a1bd7f6f733dfb4f611118a932b498bbcd4a201b9d0"
+ },
+ "omni_final_untouched": "no file under <local data dir>/release/omni_final or <local data dir>/paper1_local_runs/omni_final has mtime after 2026-09-24 00:37 UTC"
+}

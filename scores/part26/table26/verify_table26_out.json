@@ -1,0 +1,2904 @@
+{
+ "script": "<local data dir>/scratch/p26table/verify_table26.py",
+ "numpy": "2.2.6",
+ "scipy": "1.15.3",
+ "cells": {
+  "Qwen2-Audio|PC-GITA": {
+   "model": "Qwen2-Audio",
+   "dataset": "PC-GITA",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen2-Audio_PC-GITA/Qwen2-Audio_PC-GITA_perclip.csv",
+    "draws": "scores/part26/Qwen2-Audio_PC-GITA/draws/Qwen2-Audio_PC-GITA_draws.npz",
+    "sidecar": "scores/part26/Qwen2-Audio_PC-GITA/Qwen2-Audio_PC-GITA_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/paper1_local_runs/probe2/pcgita_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 1100,
+   "zs_speaker_bijection": false,
+   "folds": {
+    "seed0": {
+     "file": "pcgita_groupkfold5_pod_seed0.csv",
+     "sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed1": {
+     "file": "pcgita_groupkfold5_pod_seed1.csv",
+     "sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed2": {
+     "file": "pcgita_groupkfold5_pod_seed2.csv",
+     "sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed3": {
+     "file": "pcgita_groupkfold5_pod_seed3.csv",
+     "sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed4": {
+     "file": "pcgita_groupkfold5_pod_seed4.csv",
+     "sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    }
+   },
+   "n": 1100,
+   "n_pos": 550,
+   "n_speakers": 100,
+   "per_repeat": [
+    0.9239900826446281,
+    0.899996694214876,
+    0.9011239669421488,
+    0.9041322314049587,
+    0.9190876033057851
+   ],
+   "probe_mean5": 0.9096661157024795,
+   "answer": 0.5369190082644628,
+   "gap": 0.37274710743801664,
+   "lo": 0.3102483691604163,
+   "hi": 0.42706713447189804,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8527710468854283,
+    0.9531920040743571
+   ],
+   "answer_ci": [
+    0.49535846593446203,
+    0.5783354164544396
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen2-Audio|NeuroVoz": {
+   "model": "Qwen2-Audio",
+   "dataset": "NeuroVoz",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.csv",
+    "draws": "scores/part26/Qwen2-Audio_NeuroVoz/draws/p26_q2a_neurovoz_draws.npz",
+    "sidecar": "scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/paper1_local_runs/probe2/neurovoz_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 107,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed1": {
+     "file": "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed2": {
+     "file": "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed3": {
+     "file": "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed4": {
+     "file": "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    }
+   },
+   "n": 1270,
+   "n_pos": 621,
+   "n_speakers": 107,
+   "per_repeat": [
+    0.9310111679308437,
+    0.929632855203968,
+    0.9282917606425344,
+    0.938552808854946,
+    0.9346138863456476
+   ],
+   "probe_mean5": 0.9324204957955878,
+   "answer": 0.5519305062414863,
+   "gap": 0.3804899895541015,
+   "lo": 0.32779307586597756,
+   "hi": 0.4324540384164708,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8979725054914027,
+    0.960058418436306
+   ],
+   "answer_ci": [
+    0.5071057983773906,
+    0.598442499234629
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen2-Audio|MDVR-KCL": {
+   "model": "Qwen2-Audio",
+   "dataset": "MDVR-KCL",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen2-Audio_MDVR-KCL/Q2A_kcl_perclip.csv",
+    "draws": "scores/part26/Qwen2-Audio_MDVR-KCL/Q2A_kcl_draws.npz",
+    "sidecar": "scores/part26/Qwen2-Audio_MDVR-KCL/Q2A_kcl_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 37,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed1": {
+     "file": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed2": {
+     "file": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed3": {
+     "file": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed4": {
+     "file": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    }
+   },
+   "n": 37,
+   "n_pos": 16,
+   "n_speakers": 37,
+   "per_repeat": [
+    0.8065476190476191,
+    0.8095238095238095,
+    0.6785714285714286,
+    0.7678571428571429,
+    0.7946428571428571
+   ],
+   "probe_mean5": 0.7714285714285715,
+   "answer": 0.5922619047619048,
+   "gap": 0.1791666666666667,
+   "lo": -0.05031767598343685,
+   "hi": 0.4304572463768115,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.618648717948718,
+    0.9013461538461535
+   ],
+   "answer_ci": [
+    0.39391233766233763,
+    0.7767857142857143
+   ],
+   "share_draws_le0": 0.069,
+   "interval_above_zero": false,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 3.3306690738754696e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen2-Audio|E-DAIC": {
+   "model": "Qwen2-Audio",
+   "dataset": "E-DAIC",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen2-Audio_E-DAIC/Qwen2-Audio_E-DAIC_perclip.csv",
+    "draws": "scores/part26/Qwen2-Audio_E-DAIC/Qwen2-Audio_E-DAIC_draws.npz",
+    "sidecar": "scores/part26/Qwen2-Audio_E-DAIC/Qwen2-Audio_E-DAIC_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/paper1_local_runs/probe2/edaic_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 275,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "f18cd808187fef64cc9fe22e589f62a9452f17b994cef0d61d6ef9a11f57dc8d",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed1": {
+     "file": "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "4b6f898e61b4ceb543ad7f5c1b77db21979c79d705ec246904702980f3b22d3e",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed2": {
+     "file": "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "114a25b7d20bef6e1b4db1f49d1c1c25d8dc39548f475acb8ad2759aef0f1c07",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed3": {
+     "file": "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "a8bcff407001582f69925f4c7d088a7f38329c780a2e7e45dae28de3f9166ac4",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed4": {
+     "file": "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "3c7b1fad43992659ef99f257e4a4cf073a8dfe93cf42f3fd9d47f0e20f502046",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    }
+   },
+   "n": 275,
+   "n_pos": 66,
+   "n_speakers": 275,
+   "per_repeat": [
+    0.5130491518051327,
+    0.6021458605190663,
+    0.5555313904596201,
+    0.5558213716108453,
+    0.6098303610265333
+   ],
+   "probe_mean5": 0.5672756270842394,
+   "answer": 0.6463679860809047,
+   "gap": -0.07909235899666534,
+   "lo": -0.16639547196450186,
+   "hi": 0.01197060256568396,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.5077110337547104,
+    0.6254646278250051
+   ],
+   "answer_ci": [
+    0.5681239425355451,
+    0.7216929424445446
+   ],
+   "share_draws_le0": 0.957,
+   "interval_above_zero": false,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 3.3306690738754696e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen2-Audio|Pitt": {
+   "model": "Qwen2-Audio",
+   "dataset": "Pitt",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen2-Audio_Pitt/per_clip/q2a_pitt_perclip.csv",
+    "draws": "scores/part26/Qwen2-Audio_Pitt/draws/q2a_pitt_draws.npz",
+    "sidecar": "scores/part26/Qwen2-Audio_Pitt/per_clip/q2a_pitt_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 228,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "2d9c96e8bb4faf584913ceb6cbf258d42fb56241f1e250d24ed29e58a2dcf727",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed1": {
+     "file": "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "7279e0de67c8077c45d66101f2da6f3b4dec4f4def452e699e8ad1c9ab16c0db",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed2": {
+     "file": "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "94c5d99c7dd0ff0e5cf24bfbde680248c815f3a4611d96dbd4ede90a70c608c9",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed3": {
+     "file": "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "d27a2ab673c2fa99f90f17d50ec158e7276de17f6b5157a65238deed88eb0174",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed4": {
+     "file": "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "4e30a180d62a461cb630839700c5216cda55eaa7fd6e3d32dc019de5d795bbf2",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    }
+   },
+   "n": 468,
+   "n_pos": 290,
+   "n_speakers": 228,
+   "per_repeat": [
+    0.7687330492057343,
+    0.7886284385896939,
+    0.769469197985277,
+    0.8085044556373499,
+    0.7882700503680744
+   ],
+   "probe_mean5": 0.7847210383572258,
+   "answer": 0.6173382409918636,
+   "gap": 0.1673827973653622,
+   "lo": 0.09449803342505197,
+   "hi": 0.2432837547542402,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.7355999985793839,
+    0.8347381449574669
+   ],
+   "answer_ci": [
+    0.5540910140710171,
+    0.6799241770696611
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen2-Audio|ADReSSo": {
+   "model": "Qwen2-Audio",
+   "dataset": "ADReSSo",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen2-Audio_ADReSSo/per_clip/Qwen2-Audio_ADReSSo_perclip.csv",
+    "draws": "scores/part26/Qwen2-Audio_ADReSSo/draws/Qwen2-Audio_ADReSSo_draws.npz",
+    "sidecar": "scores/part26/Qwen2-Audio_ADReSSo/per_clip/Qwen2-Audio_ADReSSo_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/paper1_local_runs/probe2/adresso_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 237,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "2da95259b8772bf9d94c96a2d2ba64517b79f011edcdd6a4f8cebd1d73b5faf6",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed1": {
+     "file": "adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "771ad7de616eaf626b52f9e88f4e8818301b519840501fea6345bdd5950d6032",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed2": {
+     "file": "adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "3b00c2b684ecc23f943389c23d1ce003afdd8859e0885817a08120d861a2862c",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed3": {
+     "file": "adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "f1670e0c80261a9932e7b8076707e161c34fd38d4fbb28da22a1cf7660e3965d",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed4": {
+     "file": "adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "c36778a287fcccc7a1ba13557063899fe3ea4d834949ca361fec7d02e8f6a8bb",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    }
+   },
+   "n": 237,
+   "n_pos": 122,
+   "n_speakers": 237,
+   "per_repeat": [
+    0.862936564504633,
+    0.8388453314326443,
+    0.8548467569493942,
+    0.8545972915181753,
+    0.8572344975053456
+   ],
+   "probe_mean5": 0.8536920883820385,
+   "answer": 0.6648610121168924,
+   "gap": 0.18883107626514606,
+   "lo": 0.1154394087430633,
+   "hi": 0.2681630972995935,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8093278158364365,
+    0.8949193548387095
+   ],
+   "answer_ci": [
+    0.5935356001539387,
+    0.7306402452057247
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen2-Audio|ADReSS-2020": {
+   "model": "Qwen2-Audio",
+   "dataset": "ADReSS-2020",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020_perclip.csv",
+    "draws": "scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020_draws.npz",
+    "sidecar": "scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020.sidecar.json",
+    "zeroshot": "<local data dir>/paper1_local_runs/probe2/adress2020_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 156,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed1": {
+     "file": "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed2": {
+     "file": "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed3": {
+     "file": "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed4": {
+     "file": "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    }
+   },
+   "n": 156,
+   "n_pos": 78,
+   "n_speakers": 156,
+   "per_repeat": [
+    0.8149243918474688,
+    0.8200197238658777,
+    0.8284023668639053,
+    0.8658777120315582,
+    0.8284023668639053
+   ],
+   "probe_mean5": 0.831525312294543,
+   "answer": 0.6824457593688363,
+   "gap": 0.14907955292570663,
+   "lo": 0.0640441660216718,
+   "hi": 0.23683606605916663,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.7749457070312683,
+    0.8841396220160587
+   ],
+   "answer_ci": [
+    0.5988396477439138,
+    0.758886887357282
+   ],
+   "share_draws_le0": 0.001,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen3-Omni-30B-A3B|PC-GITA": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "dataset": "PC-GITA",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/q3o_pcgita_perclip.csv",
+    "draws": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/q3o_pcgita_draws.npz",
+    "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_PC-GITA/q3o_pcgita_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_pcgita_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 100,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "pcgita_groupkfold5_pod_seed0.csv",
+     "sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed1": {
+     "file": "pcgita_groupkfold5_pod_seed1.csv",
+     "sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed2": {
+     "file": "pcgita_groupkfold5_pod_seed2.csv",
+     "sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed3": {
+     "file": "pcgita_groupkfold5_pod_seed3.csv",
+     "sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed4": {
+     "file": "pcgita_groupkfold5_pod_seed4.csv",
+     "sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    }
+   },
+   "n": 1100,
+   "n_pos": 550,
+   "n_speakers": 100,
+   "per_repeat": [
+    0.9223388429752066,
+    0.8696677685950414,
+    0.8742380165289256,
+    0.8987867768595041,
+    0.9195702479338843
+   ],
+   "probe_mean5": 0.8969203305785124,
+   "answer": 0.5967206611570248,
+   "gap": 0.30019966942148757,
+   "lo": 0.2298349609612817,
+   "hi": 0.36945389482676405,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8321568281536231,
+    0.945372789110998
+   ],
+   "answer_ci": [
+    0.5239535961808511,
+    0.6618733721512646
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen3-Omni-30B-A3B|NeuroVoz": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "dataset": "NeuroVoz",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/per_clip/Qwen3-Omni-30B-A3B_NeuroVoz_perclip.csv",
+    "draws": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/draws/Qwen3-Omni-30B-A3B_NeuroVoz_draws.npz",
+    "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/per_clip/Qwen3-Omni-30B-A3B_NeuroVoz_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 107,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed1": {
+     "file": "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed2": {
+     "file": "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed3": {
+     "file": "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed4": {
+     "file": "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    }
+   },
+   "n": 1270,
+   "n_pos": 621,
+   "n_speakers": 107,
+   "per_repeat": [
+    0.9328757980194974,
+    0.9369983301449771,
+    0.9414049609333324,
+    0.9371124658523332,
+    0.9377488964813946
+   ],
+   "probe_mean5": 0.9372280902863069,
+   "answer": 0.6392716156901861,
+   "gap": 0.29795647459612085,
+   "lo": 0.2360357415548514,
+   "hi": 0.3577693331483455,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.9023685786608588,
+    0.9658293595575655
+   ],
+   "answer_ci": [
+    0.5805349746726045,
+    0.699568449634758
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen3-Omni-30B-A3B|MDVR-KCL": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "dataset": "MDVR-KCL",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/per_clip/p26_q3o_kcl_perclip.csv",
+    "draws": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/draws/p26_q3o_kcl_draws.npz",
+    "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/per_clip/p26_q3o_kcl_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_kcl_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 37,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed1": {
+     "file": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed2": {
+     "file": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed3": {
+     "file": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed4": {
+     "file": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    }
+   },
+   "n": 37,
+   "n_pos": 16,
+   "n_speakers": 37,
+   "per_repeat": [
+    0.7946428571428571,
+    0.8511904761904762,
+    0.6815476190476191,
+    0.7351190476190477,
+    0.7678571428571429
+   ],
+   "probe_mean5": 0.7660714285714285,
+   "answer": 0.7738095238095238,
+   "gap": -0.007738095238095322,
+   "lo": -0.16176820728291313,
+   "hi": 0.1385287267080744,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.6139745989304813,
+    0.8987189440993789
+   ],
+   "answer_ci": [
+    0.5727272727272728,
+    0.9352941176470588
+   ],
+   "share_draws_le0": 0.522,
+   "interval_above_zero": false,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 3.3306690738754696e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen3-Omni-30B-A3B|E-DAIC": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "dataset": "E-DAIC",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.csv",
+    "draws": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_draws.npz",
+    "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_edaic_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 275,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "f18cd808187fef64cc9fe22e589f62a9452f17b994cef0d61d6ef9a11f57dc8d",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed1": {
+     "file": "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "4b6f898e61b4ceb543ad7f5c1b77db21979c79d705ec246904702980f3b22d3e",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed2": {
+     "file": "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "114a25b7d20bef6e1b4db1f49d1c1c25d8dc39548f475acb8ad2759aef0f1c07",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed3": {
+     "file": "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "a8bcff407001582f69925f4c7d088a7f38329c780a2e7e45dae28de3f9166ac4",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed4": {
+     "file": "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "3c7b1fad43992659ef99f257e4a4cf073a8dfe93cf42f3fd9d47f0e20f502046",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    }
+   },
+   "n": 275,
+   "n_pos": 66,
+   "n_speakers": 275,
+   "per_repeat": [
+    0.5379875308104973,
+    0.6103378280411773,
+    0.5940988835725678,
+    0.6149050311729738,
+    0.5566913150645209
+   ],
+   "probe_mean5": 0.5828041177323474,
+   "answer": 0.6290416122952008,
+   "gap": -0.04623749456285342,
+   "lo": -0.14124768722162817,
+   "hi": 0.05267611084567592,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.5199309364638657,
+    0.6475631090644404
+   ],
+   "answer_ci": [
+    0.5468694943607938,
+    0.7042285889382565
+   ],
+   "share_draws_le0": 0.826,
+   "interval_above_zero": false,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 3.3306690738754696e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen3-Omni-30B-A3B|Pitt": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "dataset": "Pitt",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/per_clip/Qwen3-Omni-30B-A3B_Pitt_perclip.csv",
+    "draws": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/draws/Qwen3-Omni-30B-A3B_Pitt_draws.npz",
+    "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/per_clip/Qwen3-Omni-30B-A3B_Pitt_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 228,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "pitt_groupkfold5_pod_Control15ids_seed0.csv",
+     "sha256": "8670bd716a831c70a63222038bd26b6bbd88d65a971890150bd2e646f879966f",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed1": {
+     "file": "pitt_groupkfold5_pod_Control15ids_seed1.csv",
+     "sha256": "e20abadbea29e5c8e7b785a30b3d1060b8bcaf715872d23b8596883efff1392d",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed2": {
+     "file": "pitt_groupkfold5_pod_Control15ids_seed2.csv",
+     "sha256": "dce7e9e474eaf88843d12aa4deda78a723d5441693ef5e62317124b8980bbf68",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed3": {
+     "file": "pitt_groupkfold5_pod_Control15ids_seed3.csv",
+     "sha256": "5bf539200d4521083ff12d58df789f9f22d8ddd3f2b38cac50da269656380a29",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed4": {
+     "file": "pitt_groupkfold5_pod_Control15ids_seed4.csv",
+     "sha256": "5d01b58c61caed9647250b631756114bc46828b7686810e573d47cbed154aec5",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    }
+   },
+   "n": 468,
+   "n_pos": 290,
+   "n_speakers": 228,
+   "per_repeat": [
+    0.8199050755521116,
+    0.8015691592406045,
+    0.8141611778380473,
+    0.8342115459124371,
+    0.7913793103448276
+   ],
+   "probe_mean5": 0.8122452537776056,
+   "answer": 0.7619333591631151,
+   "gap": 0.05031189461449048,
+   "lo": -0.008662435059491777,
+   "hi": 0.1094655603809209,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.7612904471523368,
+    0.8625498592742825
+   ],
+   "answer_ci": [
+    0.7064026245439012,
+    0.81460807589681
+   ],
+   "share_draws_le0": 0.046,
+   "interval_above_zero": false,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen3-Omni-30B-A3B|ADReSSo": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "dataset": "ADReSSo",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/Qwen3-Omni-30B-A3B_ADReSSo_perclip.csv",
+    "draws": "scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/draws/Qwen3-Omni-30B-A3B_ADReSSo_draws.npz",
+    "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/Qwen3-Omni-30B-A3B_ADReSSo_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_adresso_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 237,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "2da95259b8772bf9d94c96a2d2ba64517b79f011edcdd6a4f8cebd1d73b5faf6",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed1": {
+     "file": "adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "771ad7de616eaf626b52f9e88f4e8818301b519840501fea6345bdd5950d6032",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed2": {
+     "file": "adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "3b00c2b684ecc23f943389c23d1ce003afdd8859e0885817a08120d861a2862c",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed3": {
+     "file": "adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "f1670e0c80261a9932e7b8076707e161c34fd38d4fbb28da22a1cf7660e3965d",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed4": {
+     "file": "adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "c36778a287fcccc7a1ba13557063899fe3ea4d834949ca361fec7d02e8f6a8bb",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    }
+   },
+   "n": 237,
+   "n_pos": 122,
+   "n_speakers": 237,
+   "per_repeat": [
+    0.8757662152530292,
+    0.8656806842480399,
+    0.8777619387027797,
+    0.8721311475409836,
+    0.883464005702067
+   ],
+   "probe_mean5": 0.8749607982893799,
+   "answer": 0.7774055595153243,
+   "gap": 0.09755523877405559,
+   "lo": 0.036236086812559735,
+   "hi": 0.1615613636028292,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8323536056022438,
+    0.9133743098123975
+   ],
+   "answer_ci": [
+    0.7163869527972322,
+    0.8353995583150949
+   ],
+   "share_draws_le0": 0.001,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Qwen3-Omni-30B-A3B|ADReSS-2020": {
+   "model": "Qwen3-Omni-30B-A3B",
+   "dataset": "ADReSS-2020",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/per_clip/p26_q3o_adress2020_perclip.csv",
+    "draws": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/draws/p26_q3o_adress2020_draws.npz",
+    "sidecar": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/per_clip/p26_q3o_adress2020_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 156,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed1": {
+     "file": "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed2": {
+     "file": "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed3": {
+     "file": "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed4": {
+     "file": "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    }
+   },
+   "n": 156,
+   "n_pos": 78,
+   "n_speakers": 156,
+   "per_repeat": [
+    0.8336620644312952,
+    0.8555226824457594,
+    0.8458251150558843,
+    0.8400723208415516,
+    0.8474687705456936
+   ],
+   "probe_mean5": 0.8445101906640368,
+   "answer": 0.7097304404996713,
+   "gap": 0.1347797501643655,
+   "lo": 0.041668539312337556,
+   "hi": 0.2334787688361202,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.7893373246585456,
+    0.8969527457778118
+   ],
+   "answer_ci": [
+    0.6285388352344262,
+    0.7865018201962646
+   ],
+   "share_draws_le0": 0.0035,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Kimi-Audio|PC-GITA": {
+   "model": "Kimi-Audio",
+   "dataset": "PC-GITA",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Kimi-Audio_PC-GITA/Kimi-Audio_PC-GITA_perclip.csv",
+    "draws": "scores/part26/Kimi-Audio_PC-GITA/draws/Kimi-Audio_PC-GITA_draws.npz",
+    "sidecar": "scores/part26/Kimi-Audio_PC-GITA/Kimi-Audio_PC-GITA_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 100,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "pcgita_groupkfold5_pod_seed0.csv",
+     "sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed1": {
+     "file": "pcgita_groupkfold5_pod_seed1.csv",
+     "sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed2": {
+     "file": "pcgita_groupkfold5_pod_seed2.csv",
+     "sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed3": {
+     "file": "pcgita_groupkfold5_pod_seed3.csv",
+     "sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    },
+    "seed4": {
+     "file": "pcgita_groupkfold5_pod_seed4.csv",
+     "sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      220,
+      220,
+      220,
+      220,
+      220
+     ]
+    }
+   },
+   "n": 1100,
+   "n_pos": 550,
+   "n_speakers": 100,
+   "per_repeat": [
+    0.9028495867768596,
+    0.8477884297520661,
+    0.8616264462809917,
+    0.8797388429752067,
+    0.8918396694214876
+   ],
+   "probe_mean5": 0.8767685950413224,
+   "answer": 0.614704132231405,
+   "gap": 0.26206446280991746,
+   "lo": 0.1810317734202187,
+   "hi": 0.3364143153221302,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8088821414037065,
+    0.9299761824320897
+   ],
+   "answer_ci": [
+    0.547706653309959,
+    0.6781419600196257
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Kimi-Audio|NeuroVoz": {
+   "model": "Kimi-Audio",
+   "dataset": "NeuroVoz",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Kimi-Audio_NeuroVoz/per_clip/p26_kimi_neurovoz_perclip.csv",
+    "draws": "scores/part26/Kimi-Audio_NeuroVoz/draws/p26_kimi_neurovoz_draws.npz",
+    "sidecar": "scores/part26/Kimi-Audio_NeuroVoz/per_clip/p26_kimi_neurovoz_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_neurovoz_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 107,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed1": {
+     "file": "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed2": {
+     "file": "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed3": {
+     "file": "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    },
+    "seed4": {
+     "file": "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      256,
+      251,
+      251,
+      251,
+      261
+     ]
+    }
+   },
+   "n": 1270,
+   "n_pos": 621,
+   "n_speakers": 107,
+   "per_repeat": [
+    0.9312679732723947,
+    0.9324986539430165,
+    0.9246952452553042,
+    0.930976430976431,
+    0.9402611226487424
+   ],
+   "probe_mean5": 0.9319398852191778,
+   "answer": 0.6204144118661437,
+   "gap": 0.31152547335303415,
+   "lo": 0.25147782533966817,
+   "hi": 0.36735503809671016,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8949194349727129,
+    0.9606813489447412
+   ],
+   "answer_ci": [
+    0.5600374093409132,
+    0.6805500802469058
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Kimi-Audio|MDVR-KCL": {
+   "model": "Kimi-Audio",
+   "dataset": "MDVR-KCL",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Kimi-Audio_MDVR-KCL/per_clip/p26_kimi_kcl_perclip.csv",
+    "draws": "scores/part26/Kimi-Audio_MDVR-KCL/draws/p26_kimi_kcl_draws.npz",
+    "sidecar": "scores/part26/Kimi-Audio_MDVR-KCL/per_clip/p26_kimi_kcl_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_kcl_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 37,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed1": {
+     "file": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed2": {
+     "file": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed3": {
+     "file": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    },
+    "seed4": {
+     "file": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      8,
+      8,
+      7,
+      7,
+      7
+     ]
+    }
+   },
+   "n": 37,
+   "n_pos": 16,
+   "n_speakers": 37,
+   "per_repeat": [
+    0.6934523809523809,
+    0.7946428571428571,
+    0.8511904761904762,
+    0.7172619047619048,
+    0.7589285714285714
+   ],
+   "probe_mean5": 0.7630952380952382,
+   "answer": 0.7113095238095238,
+   "gap": 0.051785714285714324,
+   "lo": -0.16367508417508422,
+   "hi": 0.29006663292847495,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.5865058479532165,
+    0.9129437340153451
+   ],
+   "answer_ci": [
+    0.5147940947940948,
+    0.8750548245614032
+   ],
+   "share_draws_le0": 0.308,
+   "interval_above_zero": false,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 3.3306690738754696e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Kimi-Audio|E-DAIC": {
+   "model": "Kimi-Audio",
+   "dataset": "E-DAIC",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.csv",
+    "draws": "scores/part26/Kimi-Audio_E-DAIC/draws/p26_kimi_edaic_enc_draws.npz",
+    "sidecar": "scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/part3/kimi_edaic_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 275,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "f18cd808187fef64cc9fe22e589f62a9452f17b994cef0d61d6ef9a11f57dc8d",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed1": {
+     "file": "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "4b6f898e61b4ceb543ad7f5c1b77db21979c79d705ec246904702980f3b22d3e",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed2": {
+     "file": "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "114a25b7d20bef6e1b4db1f49d1c1c25d8dc39548f475acb8ad2759aef0f1c07",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed3": {
+     "file": "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "a8bcff407001582f69925f4c7d088a7f38329c780a2e7e45dae28de3f9166ac4",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    },
+    "seed4": {
+     "file": "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "3c7b1fad43992659ef99f257e4a4cf073a8dfe93cf42f3fd9d47f0e20f502046",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      55,
+      55,
+      55,
+      55,
+      55
+     ]
+    }
+   },
+   "n": 275,
+   "n_pos": 66,
+   "n_speakers": 275,
+   "per_repeat": [
+    0.5635783674061186,
+    0.6129476584022039,
+    0.6059156154849935,
+    0.5995360301580397,
+    0.5295780774249674
+   ],
+   "probe_mean5": 0.5823111497752647,
+   "answer": 0.6292590981586197,
+   "gap": -0.04694794838335503,
+   "lo": -0.1392675421033583,
+   "hi": 0.053275962738043234,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.518970102353916,
+    0.6460896010509316
+   ],
+   "answer_ci": [
+    0.5510131659423789,
+    0.702105884496847
+   ],
+   "share_draws_le0": 0.8235,
+   "interval_above_zero": false,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 3.3306690738754696e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Kimi-Audio|Pitt": {
+   "model": "Kimi-Audio",
+   "dataset": "Pitt",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Kimi-Audio_Pitt/Kimi-Audio_Pitt_perclip.csv",
+    "draws": "scores/part26/Kimi-Audio_Pitt/Kimi-Audio_Pitt_draws.npz",
+    "sidecar": "scores/part26/Kimi-Audio_Pitt/Kimi-Audio_Pitt.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 228,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "2d9c96e8bb4faf584913ceb6cbf258d42fb56241f1e250d24ed29e58a2dcf727",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed1": {
+     "file": "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "7279e0de67c8077c45d66101f2da6f3b4dec4f4def452e699e8ad1c9ab16c0db",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed2": {
+     "file": "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "94c5d99c7dd0ff0e5cf24bfbde680248c815f3a4611d96dbd4ede90a70c608c9",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed3": {
+     "file": "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "d27a2ab673c2fa99f90f17d50ec158e7276de17f6b5157a65238deed88eb0174",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "seed4": {
+     "file": "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "4e30a180d62a461cb630839700c5216cda55eaa7fd6e3d32dc019de5d795bbf2",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    }
+   },
+   "n": 468,
+   "n_pos": 290,
+   "n_speakers": 228,
+   "per_repeat": [
+    0.8264238667183262,
+    0.8026927547462224,
+    0.805850445563735,
+    0.8195660596667959,
+    0.8015304145679969
+   ],
+   "probe_mean5": 0.8112127082526154,
+   "answer": 0.7180356450987989,
+   "gap": 0.09317706315381646,
+   "lo": 0.03305832448174661,
+   "hi": 0.15468755126283512,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.7604740414929154,
+    0.8602176483695231
+   ],
+   "answer_ci": [
+    0.6584954708351735,
+    0.7741946436142072
+   ],
+   "share_draws_le0": 0.002,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 5.551115123125783e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Kimi-Audio|ADReSSo": {
+   "model": "Kimi-Audio",
+   "dataset": "ADReSSo",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Kimi-Audio_ADReSSo/per_clip/Kimi-Audio_ADReSSo_perclip.csv",
+    "draws": "scores/part26/Kimi-Audio_ADReSSo/draws/Kimi-Audio_ADReSSo_draws.npz",
+    "sidecar": "scores/part26/Kimi-Audio_ADReSSo/per_clip/Kimi-Audio_ADReSSo_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_adresso_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 237,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "2da95259b8772bf9d94c96a2d2ba64517b79f011edcdd6a4f8cebd1d73b5faf6",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed1": {
+     "file": "adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "771ad7de616eaf626b52f9e88f4e8818301b519840501fea6345bdd5950d6032",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed2": {
+     "file": "adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "3b00c2b684ecc23f943389c23d1ce003afdd8859e0885817a08120d861a2862c",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed3": {
+     "file": "adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "f1670e0c80261a9932e7b8076707e161c34fd38d4fbb28da22a1cf7660e3965d",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    },
+    "seed4": {
+     "file": "adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "c36778a287fcccc7a1ba13557063899fe3ea4d834949ca361fec7d02e8f6a8bb",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      48,
+      48,
+      47,
+      47,
+      47
+     ]
+    }
+   },
+   "n": 237,
+   "n_pos": 122,
+   "n_speakers": 237,
+   "per_repeat": [
+    0.8489665003563792,
+    0.8806129722024234,
+    0.8925873129009266,
+    0.8775481111903065,
+    0.8415181753385602
+   ],
+   "probe_mean5": 0.8682466143977192,
+   "answer": 0.7531004989308624,
+   "gap": 0.11514611546685682,
+   "lo": 0.04813201894045922,
+   "hi": 0.1830847953216375,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8250300411860437,
+    0.9084446731336384
+   ],
+   "answer_ci": [
+    0.6893701909375891,
+    0.812128622073479
+   ],
+   "share_draws_le0": 0.001,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  },
+  "Kimi-Audio|ADReSS-2020": {
+   "model": "Kimi-Audio",
+   "dataset": "ADReSS-2020",
+   "checks": {
+    "clips_unique": true,
+    "probe_scores_finite": true,
+    "label_constant_within_speaker": true,
+    "zeroshot_sha256_equals_C_build_cells": true,
+    "zeroshot_clip_set_equal": true,
+    "zeroshot_labels_equal": true,
+    "perclip_p_yes_equals_zeroshot_file": true,
+    "fold_columns_equal_release_fold_files": true,
+    "outer_folds_speaker_disjoint": true,
+    "five_repeat_splits_distinct": true,
+    "saved_draws_2000": true,
+    "saved_draws_equal_mine_1e-12": true,
+    "saved_speaker_idx_equal_mine": true,
+    "saved_speaker_list_equal_np_unique": true,
+    "saved_interval_equals_mine": true,
+    "saved_point_gap_equals_mine": true,
+    "sidecar_has_probe_mean5": true,
+    "sidecar_has_answer": true,
+    "sidecar_has_gap": true,
+    "sidecar_has_lo": true,
+    "sidecar_has_hi": true,
+    "sidecar_has_all_5_repeats": true
+   },
+   "files": {
+    "perclip": "scores/part26/Kimi-Audio_ADReSS-2020/per_clip/p26_kimi_adress2020_perclip.csv",
+    "draws": "scores/part26/Kimi-Audio_ADReSS-2020/draws/p26_kimi_adress2020_draws.npz",
+    "sidecar": "scores/part26/Kimi-Audio_ADReSS-2020/per_clip/p26_kimi_adress2020_perclip.sidecar.json",
+    "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_adress2020_zeroshot_scores.csv"
+   },
+   "zs_speaker_ids": 156,
+   "zs_speaker_bijection": true,
+   "folds": {
+    "seed0": {
+     "file": "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+     "sha256": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed1": {
+     "file": "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+     "sha256": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed2": {
+     "file": "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+     "sha256": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed3": {
+     "file": "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+     "sha256": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    },
+    "seed4": {
+     "file": "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+     "sha256": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb",
+     "equal": true,
+     "speaker_partition_equal": true,
+     "speaker_disjoint": true,
+     "sizes": [
+      32,
+      31,
+      31,
+      31,
+      31
+     ]
+    }
+   },
+   "n": 156,
+   "n_pos": 78,
+   "n_speakers": 156,
+   "per_repeat": [
+    0.8887245233399079,
+    0.8902038132807364,
+    0.8770545693622617,
+    0.897353714661407,
+    0.8874095989480605
+   ],
+   "probe_mean5": 0.8881492439184747,
+   "answer": 0.7052925706771861,
+   "gap": 0.18285667324128863,
+   "lo": 0.0878848684210525,
+   "hi": 0.2738287866299561,
+   "usable_draws": 2000,
+   "probe_ci": [
+    0.8335551670551671,
+    0.9342616538279919
+   ],
+   "answer_ci": [
+    0.6263950922467183,
+    0.7851156144616767
+   ],
+   "share_draws_le0": 0.0,
+   "interval_above_zero": true,
+   "interval_below_zero": false,
+   "saved_draws_maxabs": 4.440892098500626e-16,
+   "all_pass": true,
+   "failed": []
+  }
+ }
+}
