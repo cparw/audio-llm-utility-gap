@@ -1,0 +1,16 @@
+{
+ "checkpoint": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "clip_list": "/workspace/data/mf_edaic_full.csv",
+ "condition": "mdd",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+ "n": 275,
+ "n_positive": 66,
+ "auc": 0.629,
+ "median_mass": 0.9997,
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "device": "cuda",
+ "encoder_layers": 32,
+ "llm_stages": 49,
+ "date": "2026-09-24"
+}

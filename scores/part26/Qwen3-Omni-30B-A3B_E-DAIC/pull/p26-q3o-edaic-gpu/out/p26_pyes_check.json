@@ -1,0 +1,9 @@
+{
+ "n": 275,
+ "max_abs_p_yes_diff": 0.0,
+ "median_abs_p_yes_diff": 0.0,
+ "n_over_1e-3": 0,
+ "n_over_1e-2": 0,
+ "auc_rerun": 0.6290416122952008,
+ "auc_ref": 0.6290416122952008
+}

@@ -1,0 +1,33 @@
+{
+ "perclip_probe_equals_pod_oof": true,
+ "perclip_zs_equals_q3o_new": true,
+ "folds_equal_release_files": true,
+ "states_shape": [
+  275,
+  32,
+  1280
+ ],
+ "states_finite": true,
+ "states_order_labels_speakers_equal_zs": true,
+ "per_repeat_rank": [
+  0.5379875308104973,
+  0.6103378280411773,
+  0.5940988835725678,
+  0.6149050311729738,
+  0.5566913150645209
+ ],
+ "mean5_rank": 0.5828041177323474,
+ "zs_rank": 0.6290416122952008,
+ "point_matches_4dp": true,
+ "per_repeat_max_abs_diff_vs_sidecar": 0.0,
+ "draws_max_abs_diff_vs_saved": 3.3306690738754696e-16,
+ "draws_nan_pattern_equal": true,
+ "interval_rebuilt": [
+  -0.14124768722162817,
+  0.05267611084567592
+ ],
+ "interval_matches_4dp": true,
+ "n_speakers": 275,
+ "usable": 2000,
+ "PASS": true
+}
