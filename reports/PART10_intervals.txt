@@ -1,5 +1,5 @@
 PART 10  INTERVALS AND PAIRED TESTS
-written 2026-09-22 by the Part 10 rerun job, on this Mac, CPU only
+written 2026-09-22 in the Part 10 rerun, on the Mac, CPU only
 file: /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/PART10_intervals.txt
 
 METHOD
@@ -229,14 +229,14 @@ PROVENANCE, every file read
   /Users/chaitanyaparwatkar/Desktop/release/bootstrap/bootstrap_cis.csv  (read only, see below)
 
   NOT read: anything under omni_final. The master_lookup canonical Qwen2.5-Omni Pitt zero-shot file is
-  omni_final/omni_pitt_zeroshot.json, which is out of scope for this job, so the Pitt Qwen2.5-Omni rows
+  omni_final/omni_pitt_zeroshot.json, which this part did not read, so the Pitt Qwen2.5-Omni rows
   here come from the paper's own ad_scores_omni.csv and from overnight2/part10/o25_pitt_zeroshot_scores.csv.
 
 ====================================================================================================================================
 WHERE THE APPENDED ROWS ARE
 ====================================================================================================================================
-  The brief asked for these rows to be appended to /Users/chaitanyaparwatkar/Desktop/release/bootstrap/bootstrap_cis.csv.
-  That path is outside the write scope this job was given (writes allowed only under edaic_rerun/ and
+  These rows were meant to be appended to /Users/chaitanyaparwatkar/Desktop/release/bootstrap/bootstrap_cis.csv.
+  That file was kept read-only in this part (writes went only under edaic_rerun/ and
   release_public/, read-only everywhere else), so bootstrap_cis.csv was NOT modified. Instead:
      edaic_rerun/PART10_bootstrap_cis_MERGED.csv    the existing 31 rows unchanged + the new rows, same 11 columns
      edaic_rerun/PART10_bootstrap_cis_NEWROWS.csv   only the new rows, header included, ready to append

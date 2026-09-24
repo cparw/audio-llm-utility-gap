@@ -64,7 +64,7 @@ w("  This also explains a zero that would otherwise look reassuring, see FLAG 1 
 w("Window starts were not taken on trust. For ADReSS-2020 (all 156) and a seed-0 random 60 of ADReSSo,")
 w("  the scored clip was cross-correlated against its source recording. Manifest start_s matched the")
 w("  audio within 0.2000 s for 156/156 and 60/60, mean |delta| 0.0000 s, worst correlation 0.9431.")
-w("  Files: adoff.py in the scratchpad, result /private/tmp/.../scratchpad/ad_offsets.json")
+w("  Files: scripts/audit_1a1c/adoff.py, result scripts/audit_1a1c/ad_offsets.json")
 w("  So the window positions printed below are the positions really used for scoring.")
 w()
 w("KEY PATHS")

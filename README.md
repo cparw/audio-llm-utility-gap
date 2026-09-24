@@ -6,7 +6,7 @@ Chaitanya Parwatkar, Nima Kelidari, Minoo Ahmadi, Ashutosh Chaubey, Mohammad Sol
 University of Southern California, Los Angeles, CA, USA. Submitted to ICASSP 2027.
 Corresponding author: soleymani@ict.usc.edu.
 
-The paper asks one question. When an audio LLM answers a clinical question about a recording, does the answer use
+When an audio LLM answers a clinical question about a recording, does the answer use
 what the model's own hidden states already hold? We train linear probes on the frozen hidden states of Qwen2.5-Omni
 and ask the same model the same Yes or No question on the same clips. Seven datasets cover three conditions that
 differ in how much the spoken words carry: Parkinson's read speech, depression interviews and Alzheimer's picture
@@ -14,7 +14,7 @@ descriptions.
 
 On Parkinson's and Alzheimer's speech the hidden states hold more than the answer uses. The encoder probes reach
 0.75 to 0.92 AUC on the Parkinson's sets and 0.77 to 0.88 on the Alzheimer's sets, while the zero-shot answer stays
-between 0.56 and 0.71. On depression it flips. The model hears the participant's whole interview, up to 15 minutes,
+between 0.56 and 0.71. On depression the order reverses. The model hears the participant's whole interview, up to 15 minutes,
 and its answer (0.84) beats the encoder probe (0.60) and the language model probe (0.74). A probe at the answer
 position matches it (0.84). Where the words point away from a depression diagnosis, four of six audio LLMs fall below
 chance. Retraining only the projector lifts the answer significantly on five of the six Parkinson's and Alzheimer's
@@ -52,7 +52,7 @@ In this repository:
 - every prompt string (`prompts/prompts.json`)
 - the figures (`figures/`), the audit log (`DISCREPANCIES.md`) and a file list with sizes and origins (`MANIFEST.txt`)
 
-Not in this repository, on purpose:
+Not in this repository:
 
 - No audio. No `.wav`, `.flac`, `.mp3`, `.cha` or any other recording.
 - No transcripts and no participant speech. No file holds utterance text or ASR output. Where a source table had
@@ -403,7 +403,7 @@ text matches a file that was checked independently.
 
 One row per number in the text of the final tex. Tables are in sections d and e. Commented-out text and grant numbers
 are left out. "line" is the line of the final tex source. MATCH means the file value rounds to the printed value and
-the sentence says what the file shows. UNVERIFIED means the value comes from one run with no independent check; the
+the sentence says what the file shows. UNVERIFIED means the value comes from one run with no independent check. The
 printed number is kept. NOTE means the number matches, with a caveat given in the audit note above.
 
 | line | number in the text | value in the file | file | estimator | status |
@@ -550,7 +550,7 @@ separates the effect of removing the interviewer from the effect of hearing less
 
 On Pitt, removing the interviewer raises the zero-shot answer and the rise is not explained by the shorter audio
 (C to B +0.1084). On ADReSSo and ADReSS-2020 the answer does not move beyond noise. On all three sets the encoder
-probe drops a little without the interviewer. On Pitt, 158 of 468 windows contain timed interviewer speech, the
+probe drops a little without the interviewer. On Pitt, 158 of 468 windows contain timed interviewer speech. The
 interviewer's duration alone predicts dementia at 0.6427 and the participant-only duration left in arm B predicts it
 at 0.6648 (direction free). The encoder values here are single-split re-runs on the re-cut audio. The Table 1 estimator is the mean of five.
 
@@ -630,8 +630,8 @@ beside a same-pod control with uniform weights.
 | LoRA, balanced | 0.7200 [0.6494, 0.7866] | 0.5770 [0.4586, 0.7006] | 0.7843 [0.7074, 0.8510] | `scores/part20/POD2/balanced_lora_pitt_oof.csv` |
 | LoRA, uniform control | 0.8346 [0.7856, 0.8825] | 0.6198 [0.4963, 0.7470] | 0.9112 [0.8710, 0.9471] | `scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv` |
 
-Balancing the arms does not lift the conflict arm: balanced minus control on conflict is -0.0004 [-0.0742, 0.0757]
-for the projector and -0.0428 [-0.1707, 0.0837] for LoRA, and for LoRA it costs overall AUC (-0.1146
+Balancing the arms does not lift the conflict arm. Balanced minus control on conflict is -0.0004 [-0.0742, 0.0757]
+for the projector and -0.0428 [-0.1707, 0.0837] for LoRA. For LoRA it also costs overall AUC (-0.1146
 [-0.1751, -0.0564]). Three new seeds of the standard projector recipe span 0.0688 overall (0.7396 to 0.8085) and
 0.0476 on conflict once the paper run is included (0.5189 to 0.5666), about as large as the differences between
 recipes. The conflict arm stays near chance in every run. In the first balanced projector run one fold collapsed
@@ -647,7 +647,7 @@ is the largest such matching). On this subset the Qwen2.5-Omni zero-shot answer 
 0.6951 on all 1270 clips, and the encoder probe (mean of five) is 0.8986 [0.8430, 0.9428]. The five quiet-frame
 channel features together still separate the groups at 0.7112 [0.6079, 0.7961], and the spectral centroid alone at
 0.7261 (direction free). The 363 clips left out of the subset give a zero-shot answer of 0.8462 [0.7645, 0.9144].
-The encoder probe on NeuroVoz survives matching, the channel cue does not go away, and the zero-shot answer is higher
+The encoder probe on NeuroVoz stays high after matching. The channel cue remains, and the zero-shot answer is higher
 on the unmatched clips.
 Files: `scores/part20/POD6/B_neurovoz_matched/B_zeroshot_nvmatched.csv`,
 `scores/part20/POD6/B_neurovoz_matched/B_encprobe_nested5_nvmatched_oof.csv`,
@@ -662,7 +662,7 @@ A TF-IDF logistic regression on the transcript alone, speaker-disjoint folds: PC
 NeuroVoz 0.5814 [0.5422, 0.6206], MDVR-KCL 0.4315 [0.2560, 0.6287], E-DAIC first 30 s 0.4844 [0.4028, 0.5624],
 E-DAIC full interview 0.6778 [0.5973, 0.7549], Pitt 0.8353 [0.7865, 0.8862], ADReSSo 0.8471 [0.7961, 0.8922],
 ADReSS-2020 0.9254 [0.8866, 0.9587]. The ordering Parkinson's below depression below Alzheimer's holds only with
-the full E-DAIC transcript, and on the read-speech Parkinson's sets the only text is ASR output, so what the
+the full E-DAIC transcript. On the read-speech Parkinson's sets the only text is ASR output, so what the
 classifier reads there is ASR errors caused by the voice.
 Files: `scores/part20/POD6/A_language_saliency/A_tfidf_<dataset>_oof.csv` with its sidecar, and the summary
 `release/scores/part20/POD6/A_language_saliency/A_summary.json` (authors' machine path).
@@ -756,7 +756,7 @@ runs in `scores/part22/edaic_lifted_perclip.csv` and rows 236 to 244 of `lookup/
 per-layer curves in `scores/part23/`, and the table as CSV in `lookup/new_results_edaic_windows.csv`
 and as text in `reports/EDAIC_REPORT.txt`.
 
-Caveats carried by every window: each window is cut from a stitched file of the participant's ASR segments, so
+Caveats for every window. Each window is cut from a stitched file of the participant's ASR segments, so
 "middle 30 s" is the middle of that stitched file. The raw recording was not used for the cut. The E-DAIC binary label is the dataset's
 released label, and 20 of the 209 speakers labelled negative have a PHQ-8 of 10 or more (`DISCREPANCIES.md`,
 items 2 and 9).
@@ -798,8 +798,8 @@ The GroupKFold(5) speaker fold assignment of every probe split that was run is i
 split, with columns `clip_id`, `speaker_id` and `fold`. `folds/README.md` lists every file, which run it reproduces
 and how it was checked.
 
-Why a dataset has more than one split: without shuffling, scikit-learn's GroupKFold orders speakers by clip count
-with `numpy.argsort`, and speakers with equal counts stay in an order that differed between the Mac used for some runs
+Why a dataset has more than one split. Without shuffling, scikit-learn's GroupKFold orders speakers by clip count
+with `numpy.argsort`. Speakers with equal counts stay in an order that differed between the Mac used for some runs
 (numpy 2.2.6, arm64) and the Linux GPU pods used for the others. On ADReSSo, ADReSS-2020, MDVR-KCL and E-DAIC every
 speaker has one clip, so that order decides the whole split. The same code and labels therefore gave two splits, and
 both are released: `_mac` (the Mac order) and `_pod` (a stable argsort, which reproduces every pod run that could be
@@ -833,8 +833,8 @@ What could and could not be reproduced clip for clip on the Mac:
   and nothing finer. Among the five-repeat splits only PC-GITA, and the separate Pitt split of the Qwen3-Omni
   re-extraction, are confirmed clip by clip.
 - The E-DAIC interview-window mean-of-five probe did not reproduce on three Mac stacks (scikit-learn 1.6.1, 1.7.2 and
-  1.8.0). The cause is the float32 fit path: two inner layer choices sit near a tie (LM repeat 1 fold 1, answer state
-  repeat 0 fold 1), and casting the input to float64 on the pod flips exactly those two. The unmodified script on
+  1.8.0). The cause is the float32 fit path. Two inner layer choices sit near a tie (LM repeat 1 fold 1, answer state
+  repeat 0 fold 1). Casting the input to float64 on the pod flips exactly those two. The unmodified script on
   Linux x86_64 with scikit-learn 1.9.1 and numpy 2.1.2 reproduces every per-repeat AUC and all layer choices exactly,
   so the E-DAIC mean-of-five values 0.7001 and 0.5884 are reproduced (section c, and `DISCREPANCIES.md` items 134, 135
   and 138).
