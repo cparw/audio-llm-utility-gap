@@ -1,0 +1,195 @@
+{
+ "checks": {
+  "n_rows_37": true,
+  "clips_unique": true,
+  "speakers_unique_37": true,
+  "speaker_prefix_of_clip": true,
+  "label_matches_clip_tag": true,
+  "no_nan_probe": true,
+  "folds_match_saved_files": true,
+  "five_repeat_splits_distinct": true,
+  "zs_clip_set_equal": true,
+  "zs_speaker_equal": true,
+  "zs_label_equal": true,
+  "zs_column_in_perclip_equal_file": true,
+  "pod_oof_equals_perclip": true,
+  "mw_equals_sklearn": true,
+  "per_repeat_equals_table1_json_4dp": true,
+  "mean_equals_table1_json_4dp": true,
+  "saved_speakers_equal_unique_order": true,
+  "saved_speaker_idx_equal_mine": true,
+  "saved_diff_draws_match_mine_1e-12": true,
+  "saved_per_repeat_draws_match_mine_1e-12": true,
+  "saved_zeroshot_draws_match_mine_1e-12": true,
+  "saved_point_diff_matches": true,
+  "claim_matches_4dp": true
+ },
+ "values": {
+  "n": 37,
+  "n_pos": 16,
+  "n_spk": 37,
+  "fold_checks": {
+   "seed0": {
+    "clip_set": true,
+    "speakers": true,
+    "fold_ids": true,
+    "sizes": [
+     8,
+     8,
+     7,
+     7,
+     7
+    ],
+    "speaker_grouped": true
+   },
+   "seed1": {
+    "clip_set": true,
+    "speakers": true,
+    "fold_ids": true,
+    "sizes": [
+     8,
+     8,
+     7,
+     7,
+     7
+    ],
+    "speaker_grouped": true
+   },
+   "seed2": {
+    "clip_set": true,
+    "speakers": true,
+    "fold_ids": true,
+    "sizes": [
+     8,
+     8,
+     7,
+     7,
+     7
+    ],
+    "speaker_grouped": true
+   },
+   "seed3": {
+    "clip_set": true,
+    "speakers": true,
+    "fold_ids": true,
+    "sizes": [
+     8,
+     8,
+     7,
+     7,
+     7
+    ],
+    "speaker_grouped": true
+   },
+   "seed4": {
+    "clip_set": true,
+    "speakers": true,
+    "fold_ids": true,
+    "sizes": [
+     8,
+     8,
+     7,
+     7,
+     7
+    ],
+    "speaker_grouped": true
+   },
+   "single": {
+    "fold_ids": true
+   }
+  },
+  "fold_sha256": {
+   "seed0": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+   "seed1": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+   "seed2": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+   "seed3": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+   "seed4": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711",
+   "single": "880569a7d11300835a9064fec322308998dc043eb4144e171289f10f0d275bb8"
+  },
+  "zs_sha256": "52fed914ffe7987c314d5a5f413aa3780938322be28c385cb226dd2402b104c0",
+  "per_repeat": [
+   0.8065476190476191,
+   0.8095238095238095,
+   0.6785714285714286,
+   0.7678571428571429,
+   0.7946428571428571
+  ],
+  "per_repeat_sklearn": [
+   0.8065476190476192,
+   0.8095238095238094,
+   0.6785714285714286,
+   0.7678571428571429,
+   0.7946428571428571
+  ],
+  "mean5": 0.7714285714285715,
+  "answer": 0.5922619047619048,
+  "answer_sklearn": 0.5922619047619048,
+  "gap": 0.1791666666666667,
+  "boot_usable": 2000,
+  "boot_dropped": 0,
+  "lo": -0.05031767598343685,
+  "hi": 0.4304572463768115,
+  "probe_ci": [
+   0.618648717948718,
+   0.9013461538461535
+  ],
+  "answer_ci": [
+   0.39391233766233763,
+   0.7767857142857143
+  ],
+  "frac_draws_le0": 0.069,
+  "saved_draws_max_abs_diff": 3.3306690738754696e-16,
+  "claim_compare_4dp": {
+   "probe": [
+    0.7714,
+    0.7714
+   ],
+   "answer": [
+    0.5923,
+    0.5923
+   ],
+   "gap": [
+    0.1792,
+    0.1792
+   ],
+   "lo": [
+    -0.0503,
+    -0.0503
+   ],
+   "hi": [
+    0.4305,
+    0.4305
+   ],
+   "per_repeat": [
+    [
+     0.8065,
+     0.8095,
+     0.6786,
+     0.7679,
+     0.7946
+    ],
+    [
+     0.8065,
+     0.8095,
+     0.6786,
+     0.7679,
+     0.7946
+    ]
+   ]
+  }
+ },
+ "all_pass": true,
+ "files": {
+  "perclip": "scores/part26/Qwen2-Audio_MDVR-KCL/Q2A_kcl_perclip.csv",
+  "perclip_sha256": "415f4be0a06360880ef20fa74ea0a5ce8bf6a2d2c77df7f167d1b619e2625a5a",
+  "draws": "scores/part26/Qwen2-Audio_MDVR-KCL/Q2A_kcl_draws.npz",
+  "draws_sha256": "cf8be0386700a860dd9a6fde0a134e24de5b015f24f17e796a0acbb2decc1d83",
+  "zeroshot": "<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv",
+  "pod_oof": "scores/part26/Qwen2-Audio_MDVR-KCL/pull/p26-q2a-kcl/out/p26_q2a_kcl_enc_nested5_oof.csv",
+  "table1_json": "<local data dir>/release/omni_final/q2a_kcl_nested_repeats.json"
+ },
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6"
+ }
+}

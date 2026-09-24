@@ -1,0 +1,108 @@
+{
+ "perclip_equals_pod_oof": {
+  "ok": true
+ },
+ "perclip_zeroshot_equals_file": {
+  "ok": true
+ },
+ "no_missing_scores": {
+  "ok": true,
+  "n": 1270
+ },
+ "clips_labels_speakers_equal_states": {
+  "ok": true
+ },
+ "fold_columns_equal_release_fold_files": {
+  "ok": true,
+  "per_seed": {
+   "0": true,
+   "1": true,
+   "2": true,
+   "3": true,
+   "4": true
+  }
+ },
+ "per_repeat_auc_rank_equals_sidecar": {
+  "ok": true,
+  "rank": [
+   0.9310111679308437,
+   0.929632855203968,
+   0.9282917606425344,
+   0.938552808854946,
+   0.9346138863456476
+  ]
+ },
+ "mean5_and_answer_equal_sidecar": {
+  "ok": true,
+  "mean5": 0.9324204957955878,
+  "answer": 0.5519305062414863
+ },
+ "answer_auc_4dp_is_0.5519": {
+  "ok": true,
+  "answer": 0.5519305062414863
+ },
+ "bootstrap_draws_equal_npz": {
+  "ok": true,
+  "max_abs": 4.440892098500626e-16,
+  "usable": 2000
+ },
+ "interval_equals_sidecar": {
+  "ok": true,
+  "lo": 0.32779307586597756,
+  "hi": 0.4324540384164708
+ },
+ "point_gap_equals_sidecar": {
+  "ok": true,
+  "gap": 0.3804899895541015
+ },
+ "master_per_repeat_4dp": {
+  "ok": true,
+  "master": [
+   0.931,
+   0.9296,
+   0.9283,
+   0.9386,
+   0.9346
+  ],
+  "mine": [
+   0.931,
+   0.9296,
+   0.9283,
+   0.9386,
+   0.9346
+  ]
+ },
+ "part25C_refit_clip_by_clip": {
+  "ok": true,
+  "max_abs_score_diff": 5.000000413701855e-11,
+  "folds_identical": true,
+  "part25C_per_repeat": [
+   0.9310111679308437,
+   0.929632855203968,
+   0.9282917606425344,
+   0.938552808854946,
+   0.9346138863456476
+  ]
+ },
+ "podverify_PASS": {
+  "ok": true,
+  "max_abs_pred_diff": 0.0,
+  "layer_mismatches": 0
+ },
+ "staged_states_sha_equals_uploaded": {
+  "ok": true
+ },
+ "pod_versions_pinned": {
+  "ok": true,
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  }
+ },
+ "FAILED": [],
+ "PASS": true
+}

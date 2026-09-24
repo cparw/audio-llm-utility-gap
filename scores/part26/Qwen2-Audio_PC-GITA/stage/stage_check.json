@@ -1,0 +1,170 @@
+{
+ "states": "<local data dir>/paper1_local_runs/probe2/pcgita_states.npz",
+ "states_sha256": "b14af7c5db055ca7715bff42c23771021baa4d956c3b0b73b342ca6205e62909",
+ "keys": {
+  "enc": [
+   [
+    1100,
+    33,
+    1280
+   ],
+   "float32"
+  ],
+  "llm": [
+   [
+    1100,
+    33,
+    4096
+   ],
+   "float32"
+  ],
+  "ans": [
+   [
+    1100,
+    33,
+    4096
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    1100
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    1100
+   ],
+   "<U14"
+  ],
+  "p_yes": [
+   [
+    1100
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    1100
+   ],
+   "<U29"
+  ]
+ },
+ "n": 1100,
+ "n_pos": 550,
+ "n_speakers": 100,
+ "enc_all_finite": true,
+ "zeroshot_same_order_as_states": true,
+ "zeroshot_labels_equal": true,
+ "zeroshot_p_yes_max_abs_diff_vs_states": 0.0,
+ "zeroshot_speaker_column_n_unique": 1100,
+ "zeroshot_auc": 0.5369190082644628,
+ "folds": {
+  "seed0": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0.csv",
+   "sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed1": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed1.csv",
+   "sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed2": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed2.csv",
+   "sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed3": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed3.csv",
+   "sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed4": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed4.csv",
+   "sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "single": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod.csv",
+   "sha256": "ff2fa9e53a19f102a059ea08ddccb5cb3762e2f298eda3a05548cdd5a92cb61f",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  }
+ },
+ "staged_arrays_identical": true,
+ "staged_file": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_PC-GITA/stage/q2a_pcgita_encstates.npz",
+ "staged_sha256": "14c8f1a87c9c6d78f7e7a8aa850be979aa6dbcb983b794a17a3f1b86d1926018",
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2"
+ },
+ "PASS": true
+}

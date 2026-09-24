@@ -1,0 +1,215 @@
+{
+ "checks": {
+  "perclip_sha256_matches_sidecar": {
+   "pass": true,
+   "detail": null
+  },
+  "draws_sha256_matches_sidecar": {
+   "pass": true,
+   "detail": null
+  },
+  "zeroshot_sha256_matches_C_build_cells": {
+   "pass": true,
+   "detail": null
+  },
+  "n_clips_37_unique": {
+   "pass": true,
+   "detail": "n=37 npos=16 nspk=37"
+  },
+  "seed0_fold_file_sha_matches_sidecar": {
+   "pass": true,
+   "detail": null
+  },
+  "seed0_folds_equal_release_file": {
+   "pass": true,
+   "detail": "clips_same=True"
+  },
+  "seed0_speaker_grouped": {
+   "pass": true,
+   "detail": "fold sizes [8, 8, 7, 7, 7]"
+  },
+  "seed1_fold_file_sha_matches_sidecar": {
+   "pass": true,
+   "detail": null
+  },
+  "seed1_folds_equal_release_file": {
+   "pass": true,
+   "detail": "clips_same=True"
+  },
+  "seed1_speaker_grouped": {
+   "pass": true,
+   "detail": "fold sizes [8, 8, 7, 7, 7]"
+  },
+  "seed2_fold_file_sha_matches_sidecar": {
+   "pass": true,
+   "detail": null
+  },
+  "seed2_folds_equal_release_file": {
+   "pass": true,
+   "detail": "clips_same=True"
+  },
+  "seed2_speaker_grouped": {
+   "pass": true,
+   "detail": "fold sizes [8, 8, 7, 7, 7]"
+  },
+  "seed3_fold_file_sha_matches_sidecar": {
+   "pass": true,
+   "detail": null
+  },
+  "seed3_folds_equal_release_file": {
+   "pass": true,
+   "detail": "clips_same=True"
+  },
+  "seed3_speaker_grouped": {
+   "pass": true,
+   "detail": "fold sizes [8, 8, 7, 7, 7]"
+  },
+  "seed4_fold_file_sha_matches_sidecar": {
+   "pass": true,
+   "detail": null
+  },
+  "seed4_folds_equal_release_file": {
+   "pass": true,
+   "detail": "clips_same=True"
+  },
+  "seed4_speaker_grouped": {
+   "pass": true,
+   "detail": "fold sizes [8, 8, 7, 7, 7]"
+  },
+  "seed0_fold_file_rebuilt_from_rng": {
+   "pass": true,
+   "detail": null
+  },
+  "seed1_fold_file_rebuilt_from_rng": {
+   "pass": true,
+   "detail": null
+  },
+  "seed2_fold_file_rebuilt_from_rng": {
+   "pass": true,
+   "detail": null
+  },
+  "seed3_fold_file_rebuilt_from_rng": {
+   "pass": true,
+   "detail": null
+  },
+  "seed4_fold_file_rebuilt_from_rng": {
+   "pass": true,
+   "detail": null
+  },
+  "perclip_probe_equals_pod_oof_exact": {
+   "pass": true,
+   "detail": null
+  },
+  "zeroshot_clip_set_equal": {
+   "pass": true,
+   "detail": null
+  },
+  "zeroshot_speakers_equal": {
+   "pass": true,
+   "detail": null
+  },
+  "zeroshot_labels_equal": {
+   "pass": true,
+   "detail": null
+  },
+  "perclip_zeroshot_column_equals_file": {
+   "pass": true,
+   "detail": null
+  },
+  "states_names_speakers_labels_pyes_equal": {
+   "pass": true,
+   "detail": null
+  },
+  "label_matches_filename_tag": {
+   "pass": true,
+   "detail": null
+  },
+  "own_auc_equals_sklearn": {
+   "pass": true,
+   "detail": null
+  },
+  "per_repeat_4dp_equal_claim": {
+   "pass": true,
+   "detail": [
+    0.8065,
+    0.8095,
+    0.6786,
+    0.7679,
+    0.7946
+   ]
+  },
+  "probe_4dp_equal_claim": {
+   "pass": true,
+   "detail": 0.771429
+  },
+  "answer_4dp_equal_claim": {
+   "pass": true,
+   "detail": 0.592262
+  },
+  "gap_4dp_equal_claim": {
+   "pass": true,
+   "detail": 0.179167
+  },
+  "per_repeat_equal_table1_json_4dp": {
+   "pass": true,
+   "detail": "table1 [0.8065, 0.8095, 0.6786, 0.7679, 0.7946] mean 0.7714"
+  },
+  "bootstrap_2000_usable": {
+   "pass": true,
+   "detail": "usable 2000 degenerate 0"
+  },
+  "lo_4dp_equal_claim": {
+   "pass": true,
+   "detail": -0.050318
+  },
+  "hi_4dp_equal_claim": {
+   "pass": true,
+   "detail": 0.430457
+  },
+  "saved_speakers_order_equal": {
+   "pass": true,
+   "detail": null
+  },
+  "saved_speaker_idx_equal_own": {
+   "pass": true,
+   "detail": null
+  },
+  "saved_diff_equal_own": {
+   "pass": true,
+   "detail": "max abs 3.33e-16"
+  },
+  "saved_zeroshot_draws_equal_own": {
+   "pass": true,
+   "detail": null
+  },
+  "saved_mean5_draws_equal_own": {
+   "pass": true,
+   "detail": null
+  },
+  "saved_point_diff_equal": {
+   "pass": true,
+   "detail": null
+  },
+  "interval_above_zero_false": {
+   "pass": true,
+   "detail": "interval includes zero"
+  }
+ },
+ "values": {
+  "per_repeat": [
+   0.8065476190476191,
+   0.8095238095238095,
+   0.6785714285714286,
+   0.7678571428571429,
+   0.7946428571428571
+  ],
+  "mean5": 0.7714285714285715,
+  "answer": 0.5922619047619048,
+  "gap": 0.1791666666666667,
+  "lo": -0.05031767598343685,
+  "hi": 0.4304572463768115,
+  "usable": 2000,
+  "degenerate": 0,
+  "choice_equals_integers": true
+ }
+}

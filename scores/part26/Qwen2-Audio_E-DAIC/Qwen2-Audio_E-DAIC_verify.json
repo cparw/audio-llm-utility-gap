@@ -1,0 +1,138 @@
+{
+ "checks": {
+  "1_clip_sets": {
+   "n_rows": 275,
+   "unique_clips": true,
+   "clips_eq_states": true,
+   "clips_eq_zeroshot": true,
+   "clips_eq_all_fold_files": true,
+   "labels_eq_states": true,
+   "labels_eq_zeroshot": true,
+   "speakers_eq_states": true,
+   "speakers_eq_fold_files": true,
+   "p_yes_file_eq_perclip": true,
+   "p_yes_states_vs_file_max_abs": 0.0,
+   "n_speakers": 275,
+   "n_pos": 66
+  },
+  "2_aucs": {
+   "per_repeat_rank": [
+    0.5130491518051327,
+    0.6021458605190663,
+    0.5555313904596201,
+    0.5558213716108453,
+    0.6098303610265333
+   ],
+   "mean5_rank": 0.5672756270842394,
+   "answer_rank": 0.6463679860809047,
+   "gap_point_rank": -0.07909235899666534,
+   "max_abs_vs_sidecar_per_repeat": 1.1102230246251565e-16,
+   "abs_mean5_vs_sidecar": 0.0,
+   "abs_answer_vs_sidecar": 1.1102230246251565e-16,
+   "abs_gap_vs_sidecar": 1.1102230246251565e-16,
+   "max_abs_vs_pod_json": 1.1102230246251565e-16,
+   "master_per_repeat": [
+    0.513,
+    0.6021,
+    0.5555,
+    0.5558,
+    0.6098
+   ],
+   "master_mean": 0.5673,
+   "matches_master_4dp": true,
+   "answer_4dp": 0.6464
+  },
+  "3_folds": {
+   "seed0": {
+    "csv_eq_file": true,
+    "own_greedy_eq_file": true
+   },
+   "seed1": {
+    "csv_eq_file": true,
+    "own_greedy_eq_file": true
+   },
+   "seed2": {
+    "csv_eq_file": true,
+    "own_greedy_eq_file": true
+   },
+   "seed3": {
+    "csv_eq_file": true,
+    "own_greedy_eq_file": true
+   },
+   "seed4": {
+    "csv_eq_file": true,
+    "own_greedy_eq_file": true
+   },
+   "single": {
+    "csv_eq_file": true,
+    "own_greedy_eq_file": true
+   }
+  },
+  "4_mac_refit": {
+   "max_abs_pred_diff_vs_pod": 0.023474234046924225,
+   "max_abs_inner_score_diff_vs_pod": 0.003214530397855464,
+   "layer_mismatches": [],
+   "refit_per_repeat": [
+    0.5137741046831956,
+    0.60207336523126,
+    0.5550964187327824,
+    0.5560388574742642,
+    0.6100478468899522
+   ],
+   "refit_mean5": 0.5674061186022908,
+   "max_abs_refit_auc_diff_vs_pod": 0.0007249528780629566,
+   "criterion": "cross-platform (macOS arm64, sklearn 1.7.2, Accelerate BLAS vs pod Linux x86_64, sklearn 1.9.1, OpenBLAS): same layer in every outer fold and per-repeat AUC within 0.002. The first run of this script required prediction diff < 1e-4 and failed on 0.0235 with every layer identical; lbfgs stops at different points on the two platforms. The exact same-platform checks are the pod podverify (pod versions, max pred diff must be < 1e-6) and the PART 25 C Linux refit (max OOF diff must be < 1e-6), both in PASS.",
+   "seconds": 10.8
+  },
+  "5_bootstrap": {
+   "speaker_order_sorted_eq_saved": true,
+   "speaker_idx_eq_saved_all_draws": true,
+   "usable": 2000,
+   "max_abs_diff_draws_vs_saved": 3.3306690738754696e-16,
+   "ci_own": [
+    -0.16639547196450186,
+    0.011970602565683974
+   ],
+   "ci_sidecar": [
+    -0.16639547196450197,
+    0.01197060256568396
+   ],
+   "ci_abs_diff": [
+    1.1102230246251565e-16,
+    1.3877787807814457e-17
+   ],
+   "n_draws_saved": 2000,
+   "point_diff_saved": -0.07909235899666522
+  },
+  "6_part25C_crosscheck": {
+   "file": "<local data dir>/release_from_mac/scores/part25/C/pull/p25C-4/out/q2a_edaic_enc_rep5_oof.csv",
+   "folds_equal": true,
+   "max_abs_oof_diff": 4.9731441187361725e-11,
+   "draws_file": "<local data dir>/release_from_mac/scores/part25/C/draws/C_q2a_edaic_enc_draws.npz",
+   "draw_keys": [
+    "diff",
+    "probe_mean5",
+    "zeroshot",
+    "point_diff",
+    "point_probe",
+    "point_zs",
+    "seed",
+    "n_boot",
+    "n_spk"
+   ],
+   "max_abs_diff_draws": 0.0
+  }
+ },
+ "PASS": true,
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "sha256": {
+  "perclip_csv": "aa0e78282c75e0451b2a6515cd42301eabc173a3541fac038e389f0199574d4d",
+  "sidecar": "3a3a26ce07aa38501ba053e419d8218594a60a0fa4c38be212bdeebd2bcd012c",
+  "draws": "e04941fadfa1a10f791065e1f9a9fb449eac5e1eb8b24f8de7f328dc0cc6e66d"
+ }
+}

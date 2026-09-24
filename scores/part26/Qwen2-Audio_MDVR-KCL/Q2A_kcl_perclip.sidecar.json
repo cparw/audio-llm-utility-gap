@@ -1,0 +1,221 @@
+{
+ "task": "PART26 probe grid: Qwen2-Audio encoder nested probe (layer chosen inside the training folds), five repeats on the saved fold files, paired probe minus zero-shot answer gap",
+ "date_utc": "2026-09-24T00:55:27.426541Z",
+ "model": "Qwen2-Audio-7B-Instruct",
+ "dataset": "MDVR-KCL",
+ "condition": "PD",
+ "n": 37,
+ "n_speakers": 37,
+ "n_pos": 16,
+ "n_layers": 33,
+ "probe": {
+  "estimator": "outer folds = saved pod fold files seed0..4; inner GroupKFold(4) with the pod tie rule on the outer training speakers scores every encoder stage (33: input stage + 32 layers) by mean inner AUC; argmax; refit StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'); score held-out clips. Probe = mean over the five repeats of the out-of-fold AUC.",
+  "script": "part25/A/podfiles/p25a_nested5.py (unchanged, md5 615ced0380cca2636ed7cc30c71810e6)",
+  "per_repeat_auc": [
+   0.8065476190476192,
+   0.8095238095238094,
+   0.6785714285714286,
+   0.7678571428571429,
+   0.7946428571428571
+  ],
+  "mean5": 0.7714285714285715,
+  "per_repeat_auc_4dp": [
+   0.8065,
+   0.8095,
+   0.6786,
+   0.7679,
+   0.7946
+  ],
+  "mean5_4dp": 0.7714,
+  "layers": {
+   "seed0": [
+    5,
+    26,
+    26,
+    26,
+    26
+   ],
+   "seed1": [
+    1,
+    26,
+    1,
+    8,
+    7
+   ],
+   "seed2": [
+    21,
+    14,
+    4,
+    11,
+    26
+   ],
+   "seed3": [
+    10,
+    26,
+    26,
+    26,
+    26
+   ],
+   "seed4": [
+    24,
+    5,
+    2,
+    26,
+    26
+   ]
+  },
+  "single_split_auc": 0.8095238095238095,
+  "single_split_layers": [
+   5,
+   26,
+   18,
+   25,
+   26
+  ],
+  "fold_files": {
+   "seed0": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "seed1": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "seed2": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "seed3": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "seed4": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "single": "kcl_groupkfold5_pod.csv"
+  },
+  "fold_file_sha256": {
+   "seed0": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+   "seed1": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+   "seed2": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+   "seed3": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+   "seed4": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711",
+   "single": "880569a7d11300835a9064fec322308998dc043eb4144e171289f10f0d275bb8"
+  },
+  "table1_saved_per_repeat": [
+   0.8065,
+   0.8095,
+   0.6786,
+   0.7679,
+   0.7946
+  ],
+  "table1_saved_mean": 0.7714,
+  "per_repeat_abs_diff_vs_table1_4dp": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "matches_table1_4dp": true,
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-94-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "podverify_pass": false,
+  "n_jobs": 30,
+  "pod_seconds": 37.5
+ },
+ "answer": {
+  "file": "<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv",
+  "auc": 0.5922619047619048,
+  "auc_4dp": 0.5923,
+  "column": "p_yes"
+ },
+ "gap": {
+  "point": 0.1791666666666667,
+  "ci_2p5_97p5": [
+   -0.05031767598343674,
+   0.43045724637681154
+  ],
+  "interval_above_zero": false,
+  "interval_excludes_zero": false,
+  "probe_mean5_ci": [
+   0.618648717948718,
+   0.9013461538461535
+  ],
+  "answer_ci": [
+   0.39391233766233763,
+   0.7767857142857143
+  ],
+  "usable_draws": 2000
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC, on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "degenerate_draws_dropped": 0
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/p26_gap_q2a_kcl.py",
+ "files": {
+  "perclip_csv": "scores/part26/Qwen2-Audio_MDVR-KCL/Q2A_kcl_perclip.csv",
+  "draws_npz": "scores/part26/Qwen2-Audio_MDVR-KCL/Q2A_kcl_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen2-Audio_MDVR-KCL/pull/p26-q2a-kcl/out/p26_q2a_kcl_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen2-Audio_MDVR-KCL/pull/p26-q2a-kcl/out/p26_q2a_kcl_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen2-Audio_MDVR-KCL/pull/p26-q2a-kcl/out/p26_q2a_kcl_podverify.json",
+  "zeroshot": "<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv",
+  "states_source": "<local data dir>/paper1_local_runs/probe2/kcl_states.npz",
+  "table1_json": "<local data dir>/release/omni_final/q2a_kcl_nested_repeats.json"
+ },
+ "sha256": {
+  "pod_oof_csv": "fc22b556b52d015b0b15a0607669b0c18ace3c3eb50e52558ce7f4216e748427",
+  "pod_json": "8e517897538e90980e99326b3932eddaf9333faed019c7da836d53a730c02cb1",
+  "zeroshot": "52fed914ffe7987c314d5a5f413aa3780938322be28c385cb226dd2402b104c0",
+  "states_source": "7b73febd84ad8e4807e1a48db2e0fc589940957048181ebc7fda59fd49060601",
+  "table1_json": "c9ae37925abdc28d8d4876c8b8ec127a08bb88dea78597a15f1ce4650d829ab1",
+  "perclip_csv": "415f4be0a06360880ef20fa74ea0a5ce8bf6a2d2c77df7f167d1b619e2625a5a",
+  "draws_npz": "cf8be0386700a860dd9a6fde0a134e24de5b015f24f17e796a0acbb2decc1d83"
+ },
+ "pod": {
+  "name": "p26-q2a-kcl",
+  "id": "l7pkzosi9j1glg",
+  "cpuFlavorId": "cpu3c",
+  "vcpuCount": 32,
+  "costPerHr": 0.96,
+  "cpu_model": "AMD EPYC 7713P 64-Core Processor (avx512f absent)",
+  "created_utc": "2026-09-24 00:48:31.544 +0000 UTC",
+  "deleted_utc": "2026-09-24 00:55:14 UTC (watchdog, ALL_DONE, HTTP 204, status GONE)",
+  "minutes": 6.7,
+  "cost_usd_est": 0.107,
+  "pull": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_MDVR-KCL/pull/p26-q2a-kcl.tar (22 files, count and result sha256 matched)"
+ },
+ "verification": {
+  "script": "scripts/part26/Qwen2-Audio_MDVR-KCL/scripts/p26_verify_q2a_kcl.py",
+  "result": "scores/part26/Qwen2-Audio_MDVR-KCL/verify/p26_verify_q2a_kcl.json",
+  "all_checks_pass": true,
+  "checks": {
+   "pulled_out_sha256_match_pod": true,
+   "staged_states_equal_source": true,
+   "states_pyes_equal_zeroshot": true,
+   "oof_clip_order_equals_states": true,
+   "oof_folds_equal_release_fold_files": true,
+   "per_repeat_auc_exact_equals_pod_json": true,
+   "per_repeat_auc_equals_table1_4dp": true,
+   "single_split_auc_exact": true,
+   "zeroshot_clips_labels_speakers_equal": true,
+   "zeroshot_auc_exact_equals_0.5923_4dp": true,
+   "perclip_csv_equals_pod_oof_and_zeroshot": true,
+   "bootstrap_rebuilt_equals_saved_draws": true,
+   "bootstrap_interval_equals_sidecar": true,
+   "gap_point_equals_sidecar": true,
+   "podverify_only_mismatch_is_exact_tie": true,
+   "table1_saved_run_also_chose_layer14_seed2_fold1": true,
+   "mac_refit_at_saved_layers_same_auc": true
+  },
+  "podverify_note": "p25a_podverify.py wrote PASS=False for one reason only: seed2 outer fold 1 has an exact inner tie, layers 14 and 6 both 53/60 (checked with exact fractions on the pod, logs/tiecheck_seed2_fold1.log). The probe script's float sum puts layer 14 first, the verifier's rank formula puts layer 6 first. Layer 14 is also what the saved Table 1 run chose. Predictions refit at the saved layers match to 0.0, inner scores to 2.1e-08, mean5 exactly.",
+  "status": "VERIFIED"
+ },
+ "cell_status": "VERIFIED"
+}

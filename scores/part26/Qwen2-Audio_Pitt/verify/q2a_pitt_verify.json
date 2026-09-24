@@ -1,0 +1,95 @@
+{
+ "checks": {
+  "clip_order_equals_states": true,
+  "labels_equal_states": true,
+  "speakers_equal_states": true,
+  "zeroshot_rows_equal": true,
+  "folds_equal_release_fold_files": true,
+  "probe_scores_string_equal_pod_oof": true,
+  "per_repeat_equal_sidecar": true,
+  "answer_equal_sidecar": true,
+  "gap_equal_sidecar": true,
+  "bootstrap_speaker_order_equals_saved": true,
+  "bootstrap_idx_equal_saved": true,
+  "bootstrap_draws_equal_saved": true,
+  "interval_equal_sidecar": true,
+  "interval_4dp_equal_sidecar": true,
+  "mac_refit_auc_within_0.005": true,
+  "per_repeat_within_0.001_of_master": true,
+  "answer_equals_master_0.6173": true,
+  "pod_deleted": true
+ },
+ "recomputed": {
+  "per_repeat": [
+   0.7687330492057343,
+   0.7886284385896939,
+   0.769469197985277,
+   0.8085044556373499,
+   0.7882700503680744
+  ],
+  "mean5": 0.7847210383572258,
+  "answer_auc": 0.6173382409918636,
+  "gap": 0.1673827973653622
+ },
+ "bootstrap_max_abs_diff_vs_saved": {
+  "diff": 4.440892098500626e-16,
+  "mean5": 3.3306690738754696e-16,
+  "zeroshot": 2.220446049250313e-16
+ },
+ "interval_recomputed": [
+  0.09449803342505197,
+  0.2432837547542402
+ ],
+ "mac_refit_at_saved_layers": {
+  "seed0": {
+   "auc_mac": 0.7688105385509493,
+   "auc_pod": 0.7687330492057343,
+   "abs_auc_diff": 7.748934521500939e-05,
+   "max_abs_pred_diff": 0.010568205960232224
+  },
+  "seed1": {
+   "auc_mac": 0.7886284385896939,
+   "auc_pod": 0.7886284385896939,
+   "abs_auc_diff": 0.0,
+   "max_abs_pred_diff": 0.044954112332230456
+  },
+  "seed2": {
+   "auc_mac": 0.7694498256489732,
+   "auc_pod": 0.769469197985277,
+   "abs_auc_diff": 1.9372336303780102e-05,
+   "max_abs_pred_diff": 0.009680919734398885
+  },
+  "seed3": {
+   "auc_mac": 0.808330104610616,
+   "auc_pod": 0.8085044556373499,
+   "abs_auc_diff": 0.00017435102673379888,
+   "max_abs_pred_diff": 0.015314994174136565
+  },
+  "seed4": {
+   "auc_mac": 0.7881053855094925,
+   "auc_pod": 0.7882700503680744,
+   "abs_auc_diff": 0.00016466485858190882,
+   "max_abs_pred_diff": 0.022175009964972237
+  }
+ },
+ "master": {
+  "per_repeat": [
+   0.7689,
+   0.7881,
+   0.7695,
+   0.8084,
+   0.7883
+  ],
+  "mean": 0.7846,
+  "abs_diff_4dp": [
+   0.0002,
+   0.0005,
+   0.0,
+   0.0001,
+   0.0
+  ],
+  "mean5_minus_master": 0.00012103835722587775
+ },
+ "pod_rest_status_http": "404",
+ "PASS": true
+}
