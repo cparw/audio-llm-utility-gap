@@ -1,0 +1,80 @@
+ZERO-SHOT
+  Qwen2-Audio         PC-GITA      tsv 0.5369  recomputed 0.5369  n=1100  match=yes
+  Qwen2-Audio         NeuroVoz     tsv 0.5519  recomputed 0.5519  n=1270  match=yes
+  Qwen2-Audio         MDVR-KCL     tsv 0.5923  recomputed 0.5923  n=37  match=yes
+  Qwen2-Audio         E-DAIC       tsv 0.6464  recomputed 0.6464  n=275  match=yes
+  Qwen2-Audio         Pitt         tsv 0.6173  recomputed 0.6173  n=468  match=yes
+  Qwen2-Audio         ADReSSo      tsv 0.6649  recomputed 0.6649  n=237  match=yes
+  Qwen2-Audio         ADReSS-2020  tsv 0.6824  recomputed 0.6824  n=156  match=yes
+  Qwen3-Omni-30B-A3B  PC-GITA      tsv 0.5967  recomputed 0.5967  n=1100  match=yes
+  Qwen3-Omni-30B-A3B  NeuroVoz     tsv 0.6393  recomputed 0.6393  n=1270  match=yes
+  Qwen3-Omni-30B-A3B  MDVR-KCL     tsv 0.7738  recomputed 0.7738  n=37  match=yes
+  Qwen3-Omni-30B-A3B  E-DAIC       tsv 0.6290  recomputed 0.6290  n=275  match=yes
+  Qwen3-Omni-30B-A3B  Pitt         tsv 0.7619  recomputed 0.7619  n=468  match=yes
+  Qwen3-Omni-30B-A3B  ADReSSo      tsv 0.7774  recomputed 0.7774  n=237  match=yes
+  Qwen3-Omni-30B-A3B  ADReSS-2020  tsv 0.7097  recomputed 0.7097  n=156  match=yes
+  Kimi-Audio          PC-GITA      tsv 0.6147  recomputed 0.6147  n=1100  match=yes
+  Kimi-Audio          NeuroVoz     tsv 0.6204  recomputed 0.6204  n=1270  match=yes
+  Kimi-Audio          MDVR-KCL     tsv 0.7113  recomputed 0.7113  n=37  match=yes
+  Kimi-Audio          E-DAIC       tsv 0.6293  recomputed 0.6293  n=275  match=yes
+  Kimi-Audio          Pitt         tsv 0.7180  recomputed 0.7180  n=468  match=yes
+  Kimi-Audio          ADReSSo      tsv 0.7531  recomputed 0.7531  n=237  match=yes
+  Kimi-Audio          ADReSS-2020  tsv 0.7053  recomputed 0.7053  n=156  match=yes
+  zero-shot matches: 21 of 21
+TSV INTERVAL REPRODUCED FROM ITS OWN PROBE SOURCE
+  Qwen2-Audio         PC-GITA      TSV +0.3763 [+0.3083, +0.4350]  indep +0.3763 [+0.3083, +0.4350]  agree=yes  draws max abs diff nan
+  Qwen2-Audio         NeuroVoz     TSV +0.3864 [+0.3303, +0.4399]  indep +0.3864 [+0.3303, +0.4399]  agree=yes  draws max abs diff nan
+  Qwen2-Audio         MDVR-KCL     TSV +0.2351 [+0.0030, +0.4867]  indep +0.2351 [+0.0030, +0.4867]  agree=yes  draws max abs diff nan
+  Qwen2-Audio         E-DAIC       TSV -0.0527 [-0.1586, +0.0476]  indep -0.0527 [-0.1586, +0.0476]  agree=yes  draws max abs diff nan
+  Qwen2-Audio         Pitt         TSV +0.1867 [+0.1127, +0.2609]  indep +0.1867 [+0.1127, +0.2609]  agree=yes  draws max abs diff nan
+  Qwen2-Audio         ADReSSo      TSV +0.1942 [+0.1177, +0.2763]  indep +0.1942 [+0.1177, +0.2763]  agree=yes  draws max abs diff nan
+  Qwen2-Audio         ADReSS-2020  TSV +0.1254 [+0.0275, +0.2276]  indep +0.1254 [+0.0275, +0.2276]  agree=yes  draws max abs diff nan
+  Qwen3-Omni-30B-A3B  PC-GITA      TSV +0.3002 [+0.2298, +0.3695]  indep +0.3002 [+0.2298, +0.3695]  agree=yes  draws max abs diff nan
+  Qwen3-Omni-30B-A3B  NeuroVoz     TSV +0.2803 [+0.2146, +0.3433]  indep +0.2803 [+0.2146, +0.3433]  agree=yes  draws max abs diff nan
+  Qwen3-Omni-30B-A3B  MDVR-KCL     TSV -0.0000 [-0.1300, +0.1369]  indep -0.0000 [-0.1300, +0.1369]  agree=yes  draws max abs diff nan
+  Qwen3-Omni-30B-A3B  E-DAIC       TSV -0.0447 [-0.1532, +0.0656]  indep -0.0447 [-0.1532, +0.0656]  agree=yes  draws max abs diff nan
+  Qwen3-Omni-30B-A3B  Pitt         TSV +0.0503 [-0.0087, +0.1095]  indep +0.0503 [-0.0087, +0.1095]  agree=yes  draws max abs diff nan
+  Qwen3-Omni-30B-A3B  ADReSSo      TSV +0.0944 [+0.0259, +0.1650]  indep +0.0944 [+0.0259, +0.1650]  agree=yes  draws max abs diff nan
+  Qwen3-Omni-30B-A3B  ADReSS-2020  TSV +0.1363 [+0.0436, +0.2328]  indep +0.1363 [+0.0436, +0.2328]  agree=yes  draws max abs diff nan
+  Kimi-Audio          PC-GITA      TSV has no probe per-clip source and no interval
+  Kimi-Audio          NeuroVoz     TSV has no probe per-clip source and no interval
+  Kimi-Audio          MDVR-KCL     TSV has no probe per-clip source and no interval
+  Kimi-Audio          E-DAIC       TSV has no probe per-clip source and no interval
+  Kimi-Audio          Pitt         TSV has no probe per-clip source and no interval
+  Kimi-Audio          ADReSSo      TSV has no probe per-clip source and no interval
+  Kimi-Audio          ADReSS-2020  TSV has no probe per-clip source and no interval
+PRIMARY PROBE PER CELL (best available per-clip file)
+  Qwen2-Audio         PC-GITA      probe 0.9097 (master 0.9097)  answer 0.5369  diff +0.3728 [+0.3104, +0.4271]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-2/out/q2a_pcgita_enc_rep5_oof.csv
+  Qwen2-Audio         NeuroVoz     probe 0.9324 (master 0.9324)  answer 0.5519  diff +0.3805 [+0.3278, +0.4325]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-3/out/q2a_neurovoz_enc_rep5_oof.csv
+  Qwen2-Audio         MDVR-KCL     probe 0.7714 (master 0.7714)  answer 0.5923  diff +0.1792 [-0.0503, +0.4305]  excl0=no  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-2/out/q2a_kcl_enc_rep5_oof.csv
+  Qwen2-Audio         E-DAIC       probe 0.5673 (master 0.5673)  answer 0.6464  diff -0.0791 [-0.1664, +0.0120]  excl0=no  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-4/out/q2a_edaic_enc_rep5_oof.csv
+  Qwen2-Audio         Pitt         probe 0.7846 (master 0.7846)  answer 0.6173  diff +0.1673 [+0.0944, +0.2432]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-4/out/q2a_pitt_enc_rep5_oof.csv
+  Qwen2-Audio         ADReSSo      probe 0.8537 (master 0.8537)  answer 0.6649  diff +0.1888 [+0.1154, +0.2682]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-3/out/q2a_adresso_enc_rep5_oof.csv
+  Qwen2-Audio         ADReSS-2020  probe 0.8315 (master 0.8315)  answer 0.6824  diff +0.1491 [+0.0640, +0.2368]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-2/out/q2a_adress2020_enc_rep5_oof.csv
+  Qwen3-Omni-30B-A3B  PC-GITA      probe 0.8969 (master 0.8969)  answer 0.5967  diff +0.3002 [+0.2298, +0.3695]  excl0=yes  | five-repeat OOF, mean reproduces master, per-repeat do not match the json | <local data dir>/release/edaic_rerun/part16/POD3/q3o_pcgita_encoder_nested_oof.csv
+  Qwen3-Omni-30B-A3B  NeuroVoz     probe 0.9372 (master 0.9372)  answer 0.6393  diff +0.2980 [+0.2360, +0.3578]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-5/out/q3o_neurovoz_enc_rep5_oof.csv
+  Qwen3-Omni-30B-A3B  MDVR-KCL     probe 0.7661 (master 0.7661)  answer 0.7738  diff -0.0077 [-0.1618, +0.1385]  excl0=no  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-4/out/q3o_kcl_enc_rep5_oof.csv
+  Qwen3-Omni-30B-A3B  E-DAIC       probe 0.5844 (master 0.5828)  answer 0.6290  diff -0.0447 [-0.1532, +0.0656]  excl0=no  | SINGLE-SPLIT OOF only | <local data dir>/release/overnight2/q3o_new/q3o_edaic_enc_nested_oof.csv
+  Qwen3-Omni-30B-A3B  Pitt         probe 0.8122 (master 0.8122)  answer 0.7619  diff +0.0503 [-0.0087, +0.1095]  excl0=no  | exact five-repeat OOF, per-repeat AUCs reproduce master | <local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv
+  Qwen3-Omni-30B-A3B  ADReSSo      probe 0.8750 (master 0.8750)  answer 0.7774  diff +0.0976 [+0.0362, +0.1616]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-4/out/q3o_adresso_enc_rep5_oof.csv
+  Qwen3-Omni-30B-A3B  ADReSS-2020  probe 0.8445 (master 0.8445)  answer 0.7097  diff +0.1348 [+0.0417, +0.2335]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-4/out/q3o_adress2020_enc_rep5_oof.csv
+  Kimi-Audio          PC-GITA      probe 0.8715 (master 0.8715)  answer 0.6147  diff +0.2568 [+0.1839, +0.3284]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-7/out/kimi_pcgita_llm_rep5_oof.csv
+  Kimi-Audio          NeuroVoz     probe 0.9334 (master 0.9334)  answer 0.6204  diff +0.3129 [+0.2556, +0.3681]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-6/out/kimi_neurovoz_llm_rep5_oof.csv
+  Kimi-Audio          MDVR-KCL     probe 0.7310 (master 0.7310)  answer 0.7113  diff +0.0196 [-0.1643, +0.2141]  excl0=no  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-5/out/kimi_kcl_llm_rep5_oof.csv
+  Kimi-Audio          E-DAIC       probe 0.4840 (master 0.4840)  answer 0.6293  diff -0.1453 [-0.2334, -0.0454]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-8/out/kimi_edaic_llm_rep5_oof.csv
+  Kimi-Audio          Pitt         probe 0.8374 (master 0.8374)  answer 0.7180  diff +0.1194 [+0.0587, +0.1788]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-8/out/kimi_pitt_llm_rep5_oof.csv
+  Kimi-Audio          ADReSSo      probe 0.8993 (master 0.8993)  answer 0.7531  diff +0.1462 [+0.0821, +0.2096]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-6/out/kimi_adresso_llm_rep5_oof.csv
+  Kimi-Audio          ADReSS-2020  probe 0.9200 (master 0.9200)  answer 0.7053  diff +0.2147 [+0.1331, +0.3032]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master | scores/part25/C/pull/p25C-5/out/kimi_adress2020_llm_rep5_oof.csv
+COUNTS, 18 PD/AD cells, primary probe
+  probe above answer: 17 of 18
+  interval excludes 0 (and probe above): 14 of 18
+  interval excludes 0 on the answer side: 0
+    Qwen2-Audio         above 6/6  excl0 5/6  ranks [0, 0, 0, 0, 0, 0]
+    Qwen3-Omni-30B-A3B  above 5/6  excl0 4/6  ranks [0, 0, 0, 0, 0, 1]
+    Kimi-Audio          above 6/6  excl0 5/6  ranks [0, 0, 0, 0, 0, 0]
+  restricted to cells whose five-repeat OOF reproduces master per-repeat exactly (17 cells): above 16, excl0 13
+  TSV's own claim: above 17 of 18, interval excluding 0 in 10
+E-DAIC per model (primary probe)
+  Qwen2-Audio         probe 0.5673  answer 0.6464  diff -0.0791 [-0.1664, +0.0120]  excl0=no  | exact five-repeat OOF, per-repeat AUCs reproduce master
+  Qwen3-Omni-30B-A3B  probe 0.5844  answer 0.6290  diff -0.0447 [-0.1532, +0.0656]  excl0=no  | SINGLE-SPLIT OOF only
+  Kimi-Audio          probe 0.4840  answer 0.6293  diff -0.1453 [-0.2334, -0.0454]  excl0=yes  | exact five-repeat OOF, per-repeat AUCs reproduce master
