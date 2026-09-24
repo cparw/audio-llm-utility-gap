@@ -1,0 +1,172 @@
+{
+ "checks": {
+  "fold_columns_equal_release_fold_files": true,
+  "fold_file_sha256_equal_pod_used": true,
+  "probe_columns_equal_pod_oof_strings": true,
+  "zeroshot_column_equals_file": true,
+  "outer_folds_rebuilt_from_scratch_equal": true,
+  "per_repeat_auc_equal_sidecar_1e-12": true,
+  "zeroshot_auc_equal_sidecar_1e-12": true,
+  "gap_point_equal_sidecar_1e-12": true,
+  "per_repeat_auc_equal_pod_json_1e-12": true,
+  "bootstrap_draws_reproduced_1e-12": true,
+  "bootstrap_ci_reproduced_1e-12": true,
+  "bootstrap_2000_usable": true,
+  "part25C_independent_refit_agrees_1e-6": true,
+  "zeroshot_matches_master_4dp": true,
+  "podverify_PASS": true,
+  "states_sha256_mac_equals_pod": true,
+  "pod_versions_pinned": true
+ },
+ "pair_count": {
+  "per_repeat": [
+   0.8336620644312952,
+   0.8555226824457594,
+   0.8458251150558843,
+   0.8400723208415516,
+   0.8474687705456936
+  ],
+  "mean5": 0.8445101906640368,
+  "zeroshot": 0.7097304404996713,
+  "gap": 0.1347797501643655
+ },
+ "bootstrap_rebuilt": {
+  "usable": 2000,
+  "ci": [
+   0.041668539312337556,
+   0.2334787688361202
+  ],
+  "max_abs_diff_vs_saved_draws": 4.440892098500626e-16,
+  "nan_pattern_equal": true
+ },
+ "part25C_refit": {
+  "folds_equal": true,
+  "max_abs_pred_diff": 4.9841353266799615e-11,
+  "per_repeat_C": [
+   0.8336620644312952,
+   0.8555226824457594,
+   0.8458251150558843,
+   0.8400723208415516,
+   0.8474687705456936
+  ],
+  "per_repeat_abs_diff": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "layers_C": {
+   "seed0": [
+    19,
+    18,
+    31,
+    25,
+    29
+   ],
+   "seed1": [
+    18,
+    19,
+    29,
+    26,
+    25
+   ],
+   "seed2": [
+    28,
+    18,
+    30,
+    19,
+    19
+   ],
+   "seed3": [
+    30,
+    22,
+    22,
+    29,
+    19
+   ],
+   "seed4": [
+    19,
+    29,
+    19,
+    20,
+    30
+   ]
+  },
+  "layers_pod": {
+   "seed0": [
+    19,
+    18,
+    31,
+    25,
+    29
+   ],
+   "seed1": [
+    18,
+    19,
+    29,
+    26,
+    25
+   ],
+   "seed2": [
+    28,
+    18,
+    30,
+    19,
+    19
+   ],
+   "seed3": [
+    30,
+    22,
+    22,
+    29,
+    19
+   ],
+   "seed4": [
+    19,
+    29,
+    19,
+    20,
+    30
+   ]
+  },
+  "layers_equal": true,
+  "C_versions": {
+   "sklearn": "1.9.1",
+   "numpy": "2.1.2",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "python": "3.12.3"
+  },
+  "C_cpu": "AMD EPYC 9654 96-Core Processor"
+ },
+ "master": {
+  "per_repeat": [
+   0.8337,
+   0.8555,
+   0.8458,
+   0.8401,
+   0.8475
+  ],
+  "mean": 0.8445,
+  "per_repeat_equal_4dp": true,
+  "max_abs_diff_per_repeat": 3.793556870479442e-05,
+  "mean5_diff": 1.019066403673552e-05
+ },
+ "mac_refit": {
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "max_abs_pred_diff_vs_pod": 0.006834618880163457,
+  "per_repeat_auc_mac_refit": [
+   0.8336620644312952,
+   0.8555226824457594,
+   0.8456607495069034,
+   0.8404010519395135,
+   0.8474687705456936
+  ],
+  "mean5_mac_refit": 0.8445430637738329,
+  "inner_layer_mismatches": [],
+  "max_abs_inner_score_diff_vs_pod": 0.002192982456140413
+ },
+ "PASS": true
+}

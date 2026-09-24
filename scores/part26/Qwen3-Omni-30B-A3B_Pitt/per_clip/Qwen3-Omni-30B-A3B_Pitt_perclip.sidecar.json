@@ -1,0 +1,268 @@
+{
+ "task": "PART26 Qwen3-Omni-30B-A3B Pitt: nested five-repeat encoder probe (saved folds) and paired probe minus zero-shot gap",
+ "date_utc": "2026-09-24T00:58:44.057308+00:00",
+ "model": "Qwen3-Omni-30B-A3B",
+ "dataset": "Pitt",
+ "condition": "AD",
+ "n": 468,
+ "n_speakers": 228,
+ "n_pos": 290,
+ "probe": {
+  "estimator": "mean of five per-repeat AUCs; outer folds = saved release fold files pitt_groupkfold5_pod_Control15ids_seed0..4; inner GroupKFold(4) with the pod tie rule picks the encoder layer by mean inner AUC; StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit on the outer training rows",
+  "per_repeat_auc": [
+   0.8199050755521117,
+   0.8015691592406045,
+   0.8141611778380473,
+   0.834211545912437,
+   0.7913793103448277
+  ],
+  "mean5": 0.8122452537776056,
+  "layers": {
+   "seed0": [
+    30,
+    29,
+    26,
+    29,
+    29
+   ],
+   "seed1": [
+    30,
+    30,
+    30,
+    26,
+    30
+   ],
+   "seed2": [
+    26,
+    29,
+    28,
+    30,
+    29
+   ],
+   "seed3": [
+    30,
+    30,
+    24,
+    30,
+    20
+   ],
+   "seed4": [
+    20,
+    19,
+    30,
+    30,
+    30
+   ]
+  },
+  "table1_value": 0.8122,
+  "table1_per_repeat": [
+   0.8199,
+   0.8016,
+   0.8142,
+   0.8342,
+   0.7914
+  ],
+  "table1_source_pod3_oof_per_repeat": [
+   0.8199147617202635,
+   0.8015691592406045,
+   0.8141611778380473,
+   0.834211545912437,
+   0.7913793103448277
+  ],
+  "table1_source_pod3_oof_mean5": 0.812247191011236,
+  "mean5_minus_table1_pod3": -1.9372336304002147e-06,
+  "max_abs_clip_diff_vs_pod3_oof": 4.99023433686574e-09,
+  "median_abs_clip_diff_vs_pod3_oof": 2.4793052819105377e-09
+ },
+ "answer": {
+  "file": "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv",
+  "auc": 0.7619333591631152,
+  "json_auc": 0.7619,
+  "window_seconds": 30,
+  "note": "the POD3 states carry their own p_yes from a separate run (differs by up to 0.38); the answer side uses the q3o_new file, as master_lookup does"
+ },
+ "gap": {
+  "point": 0.05031189461449037,
+  "lo": -0.008662435059491668,
+  "hi": 0.1094655603809209,
+  "interval_above_zero": false,
+  "interval_excludes_zero": false,
+  "usable_draws": 2000,
+  "p_boot_diff_le0": 0.046,
+  "probe_mean5_ci": [
+   0.7612904471523368,
+   0.8625498592742825
+  ],
+  "zeroshot_ci": [
+   0.7064026245439012,
+   0.81460807589681
+  ]
+ },
+ "sensitivity_padded_speaker_ids": {
+  "lo": -0.005810295151110936,
+  "hi": 0.11083993675625446,
+  "usable_draws": 2000,
+  "interval_above_zero": false,
+  "note": "same 228-speaker partition, np.unique order of the zero-padded ids of the zero-shot file"
+ },
+ "reference_pod3_oof_gap": {
+  "point": 0.05031383184812077,
+  "lo": -0.008660521441416963,
+  "hi": 0.1094701122016491,
+  "part25C_reported": "+0.0503 [-0.0087, +0.1095]",
+  "reproduces_part25C_4dp": true
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per bootstrap",
+  "resample": "unique speakers (np.unique order of the probe file speaker column, Control15-style ids, 228 labels), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "probe (mean of the five per-repeat AUCs) and zero-shot AUC on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "code": "PART25 A A_gaps.py boot(), unchanged"
+ },
+ "pod": {
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-71-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "n_jobs": 30,
+  "seconds": 41.2,
+  "command": "p26_nested5.py q3o_pitt_encstates.npz pitt folds out/p26_q3o_pitt",
+  "podverify_pass": true,
+  "podverify": {
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.7496522392311817e-08,
+   "layer_mismatches": [],
+   "abs_mean5_diff": 0.0,
+   "mean5_rank_from_oof": 0.8122452537776056
+  },
+  "fold_files": {
+   "seed0": {
+    "fold_file": "pitt_groupkfold5_pod_Control15ids_seed0.csv",
+    "fold_file_sha256": "8670bd716a831c70a63222038bd26b6bbd88d65a971890150bd2e646f879966f",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true
+   },
+   "seed1": {
+    "fold_file": "pitt_groupkfold5_pod_Control15ids_seed1.csv",
+    "fold_file_sha256": "e20abadbea29e5c8e7b785a30b3d1060b8bcaf715872d23b8596883efff1392d",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true
+   },
+   "seed2": {
+    "fold_file": "pitt_groupkfold5_pod_Control15ids_seed2.csv",
+    "fold_file_sha256": "dce7e9e474eaf88843d12aa4deda78a723d5441693ef5e62317124b8980bbf68",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true
+   },
+   "seed3": {
+    "fold_file": "pitt_groupkfold5_pod_Control15ids_seed3.csv",
+    "fold_file_sha256": "5bf539200d4521083ff12d58df789f9f22d8ddd3f2b38cac50da269656380a29",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true
+   },
+   "seed4": {
+    "fold_file": "pitt_groupkfold5_pod_Control15ids_seed4.csv",
+    "fold_file_sha256": "5d01b58c61caed9647250b631756114bc46828b7686810e573d47cbed154aec5",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true
+   }
+  }
+ },
+ "states": {
+  "file": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_pitt_states.npz",
+  "sha256": "adc889e0f1a509aec90d8a37e52c524fb83923c4a5ddf2deec5f42bb70691c64",
+  "staged_enc_only": "<local data dir>/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/stage/q3o_pitt_encstates.npz",
+  "staged_sha256": "6bc35a9f74756518ee30102a5012ad7ce1d51eaaada9045a0097788167fcfdeb",
+  "pod_states_sha256": "6bc35a9f74756518ee30102a5012ad7ce1d51eaaada9045a0097788167fcfdeb",
+  "note": "part16 POD3 re-extraction, 30 s window, enc 468 x 32 x 1280 mean-pooled; staged copy holds the enc, label, spk, p_yes and name arrays byte-identical"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/per_clip/Qwen3-Omni-30B-A3B_Pitt_perclip.csv",
+  "draws_npz": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/draws/Qwen3-Omni-30B-A3B_Pitt_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/pull/p26-q3o-pitt/out/p26_q3o_pitt_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/pull/p26-q3o-pitt/out/p26_q3o_pitt_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/pull/p26-q3o-pitt/out/p26_q3o_pitt_podverify.json",
+  "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv",
+  "pod3_oof": "<local data dir>/release/edaic_rerun/part16/POD3/q3o_pitt_encoder_nested_oof.csv",
+  "table1_json": "<local data dir>/release/edaic_rerun/part16/pod_sync/q3o_pitt_nested_repeats.json"
+ },
+ "sha256": {
+  "pod_oof_csv": "a962470bcf771a4c344f5d783e29bab069d9e4b4af47547d07dc7a61230a16a1",
+  "pod_json": "4313306c72e078a564b5a7104a380d9ba7504831ba47556622dc33718f77edc1",
+  "zeroshot": "9d7348cb925b6ed060f72bba32de4773c40af0a59b61c93e60c92fabc38d42d6",
+  "pod3_oof": "5c0571a4c5f9f5970b9a610999bf357c6899b996c0b03df9a4d732226ef3c32b",
+  "perclip_csv": "94e69bf8d07eb6d6d46b90efad890dc8f106f9f4d66bdb390aa32f9127bd5b61",
+  "draws_npz": "2e9e61d2800ffdbd3009a9dc02b36e1aff0e65d8d76f825b265f22122c9dd3b1"
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 p26_gap.py",
+ "pod_run": {
+  "name": "p26-q3o-pitt",
+  "id": "orph1m3rsbw8u2",
+  "type": "CPU cpu3c, 32 vCPU, AMD EPYC 9655P, avx512f present",
+  "cost_per_hr": 0.96,
+  "created_utc": "2026-09-24T00:51:3xZ",
+  "all_done_utc": "2026-09-24T00:57:12Z",
+  "pulled_and_deleted_utc": "2026-09-24T00:58:02Z (REST DELETE 204, GET 404 after)",
+  "approx_cost_usd": 0.11,
+  "watchdog": "scripts/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/watchdog26.sh, log <local data dir>/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/watchdog26.log"
+ },
+ "verification": {
+  "script": "scripts/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/p26_verify.py",
+  "result_file": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/verify/p26_verify.json",
+  "all_pass": true,
+  "checks": {
+   "1a per-clip rows equal the states (order, labels, speakers)": true,
+   "1b p_yes_zeroshot column equals the q3o_new zero-shot file": true,
+   "1c speaker ids one to one with the zero-shot file": true,
+   "2 fold columns equal the release Control15-id fold files; outer folds speaker-disjoint": true,
+   "3a per-repeat AUCs by pairwise counting equal the pod json and the gap json": true,
+   "3b answer AUC equals master_lookup 0.7619": true,
+   "3c gap point": true,
+   "4 bootstrap rebuilt from the spec equals the saved draws and interval": true,
+   "5a pod versions pinned (sklearn 1.9.1, numpy 2.1.2, scipy 1.18.1), avx512f present, one BLAS thread": true,
+   "5b pod-side podverify PASS (refit at saved layers, inner layer choice re-derived for every outer fold, rank AUC)": true,
+   "5c pulled out/ files equal the pod sha256 list": true,
+   "5d pod read the staged states (sha256) and the five Control15-id fold files": true
+  },
+  "reference": {
+   "table1_pod3_per_repeat": [
+    0.8199147617202635,
+    0.8015691592406045,
+    0.8141611778380473,
+    0.8342115459124371,
+    0.7913793103448276
+   ],
+   "table1_pod3_mean5": 0.812247191011236,
+   "rerun_minus_table1": -1.9372336304002147e-06,
+   "max_abs_clip_diff_vs_pod3": 4.99023433686574e-09,
+   "pod3_gap_reproduces_part25C": true,
+   "mac_rerun": {
+    "file": "scores/part26/Qwen3-Omni-30B-A3B_Pitt/verify/mac_rerun/mac5_enc_nested5_oof.csv",
+    "per_repeat": [
+     0.8197597830298334,
+     0.8015497869043007,
+     0.8143161565284773,
+     0.8343277799302596,
+     0.7911468423091825
+    ],
+    "max_abs_clip_diff_vs_pod": 0.025899831819449548
+   }
+  }
+ },
+ "status": "VERIFIED"
+}

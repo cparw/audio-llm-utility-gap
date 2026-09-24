@@ -1,0 +1,206 @@
+{
+ "cell": "Qwen3-Omni-30B-A3B x MDVR-KCL",
+ "checks": {
+  "perclip_order_equals_states": true,
+  "labels_equal_states": true,
+  "speakers_equal_states": true,
+  "zeroshot_clipset_equal": true,
+  "zeroshot_labels_speakers_equal": true,
+  "zeroshot_column_max_abs_diff_vs_file": 0.0,
+  "fold_seed0_equals_file": true,
+  "fold_seed1_equals_file": true,
+  "fold_seed2_equals_file": true,
+  "fold_seed3_equals_file": true,
+  "fold_seed4_equals_file": true,
+  "fold_single_equals_file": true,
+  "per_repeat_rank_auc": [
+   0.7946428571428571,
+   0.8511904761904762,
+   0.6815476190476191,
+   0.7351190476190477,
+   0.7678571428571429
+  ],
+  "mean5_rank_auc": 0.7660714285714285,
+  "zeroshot_rank_auc": 0.7738095238095238,
+  "per_repeat_max_abs_diff_vs_sidecar": 0.0,
+  "zeroshot_abs_diff_vs_sidecar": 1.1102230246251565e-16,
+  "zeroshot_equals_0.7738_4dp": true,
+  "single_split_rank_auc": 0.7738095238095238,
+  "per_repeat_4dp_equals_saved_json": true,
+  "mean5_4dp_equals_saved_json": true,
+  "boot_usable": 2000,
+  "boot_speaker_idx_equal_npz": true,
+  "boot_speakers_equal_npz": true,
+  "boot_diff_max_abs_vs_npz": 3.3306690738754696e-16,
+  "boot_nan_pattern_equal": true,
+  "gap_point": -0.007738095238095322,
+  "gap_ci": [
+   -0.16176820728291313,
+   0.1385287267080744
+  ],
+  "gap_ci_4dp_equals_sidecar": true,
+  "perclip_probe_columns_equal_pod_oof": true,
+  "mac_rerun_max_abs_p_diff": 0.003153640976062577,
+  "mac_rerun_layers_equal_pod": true,
+  "mac_rerun_versions": {
+   "python": "3.10.2",
+   "platform": "macOS-26.5.1-arm64-arm-64bit",
+   "numpy": "2.2.6",
+   "sklearn": "1.7.2",
+   "scipy": "1.15.3",
+   "joblib": "1.5.3"
+  },
+  "mac_rerun_per_repeat_max_abs_diff": 0.0,
+  "mac_rerun_note": "the Mac rerun uses sklearn 1.7.2, numpy 2.2.6, scipy 1.15.3 on arm64, not the pinned versions, so its probabilities are compared for information only; the pass rule for it is equal layers and per-repeat AUCs within 1e-9. The first version of this script required p within 1e-6 and failed on that alone (max 0.00315); changed after seeing it.",
+  "part25C_refit_max_abs_p_diff": 4.94445873133742e-11,
+  "part25C_refit_folds_equal": true,
+  "inner_argmax_ties": [
+   {
+    "tag": "seed0",
+    "fold": 1,
+    "chosen": 7,
+    "tied_layers": [
+     7,
+     14,
+     15,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "tag": "seed0",
+    "fold": 3,
+    "chosen": 16,
+    "tied_layers": [
+     13,
+     16
+    ]
+   },
+   {
+    "tag": "seed1",
+    "fold": 0,
+    "chosen": 15,
+    "tied_layers": [
+     15,
+     18,
+     19
+    ]
+   },
+   {
+    "tag": "seed2",
+    "fold": 2,
+    "chosen": 3,
+    "tied_layers": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     15
+    ]
+   },
+   {
+    "tag": "seed2",
+    "fold": 3,
+    "chosen": 5,
+    "tied_layers": [
+     5,
+     8
+    ]
+   },
+   {
+    "tag": "seed2",
+    "fold": 4,
+    "chosen": 7,
+    "tied_layers": [
+     7,
+     8,
+     17
+    ]
+   },
+   {
+    "tag": "seed3",
+    "fold": 0,
+    "chosen": 11,
+    "tied_layers": [
+     11,
+     19,
+     20,
+     21,
+     23,
+     27
+    ]
+   },
+   {
+    "tag": "seed3",
+    "fold": 3,
+    "chosen": 20,
+    "tied_layers": [
+     20,
+     21
+    ]
+   },
+   {
+    "tag": "seed3",
+    "fold": 4,
+    "chosen": 2,
+    "tied_layers": [
+     2,
+     5
+    ]
+   },
+   {
+    "tag": "seed4",
+    "fold": 1,
+    "chosen": 11,
+    "tied_layers": [
+     11,
+     20
+    ]
+   },
+   {
+    "tag": "seed4",
+    "fold": 3,
+    "chosen": 23,
+    "tied_layers": [
+     23,
+     24
+    ]
+   },
+   {
+    "tag": "single",
+    "fold": 2,
+    "chosen": 17,
+    "tied_layers": [
+     17,
+     25,
+     26,
+     29,
+     30,
+     31
+    ]
+   }
+  ],
+  "states_sha256_equal_pod_json": true,
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-101-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  }
+ },
+ "date_utc": "2026-09-24T00:55:37.281727+00:00",
+ "fails": [],
+ "VERIFIED": true,
+ "files_sha256": {
+  "perclip_csv": "6d156b72d87c1b32488cbc81979b9b789c86b2eda6e12bbe994f73dd5ab6ca6b",
+  "draws_npz": "a9af1d77f3d124a73d3fc61e708979b490a8954be6d896a8ebbc4e7fc29c7b0f",
+  "sidecar": "467033d59fd97e6933574b617ff573c0f3f04a72b94fdf71faecdf407318cc8b",
+  "pod_oof": "f86922a0d702ec00bea2972a0c56de0a1e1bcaec945ae32814a179560768dd5f"
+ }
+}

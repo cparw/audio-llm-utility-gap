@@ -1,0 +1,144 @@
+{
+ "states": "<local data dir>/release/overnight2/q3o/q3o_neurovoz_states.npz",
+ "states_sha256": "a56ea1340ddc17dbe635f57b74409df8f3ac02fea29203325ece490962f0a1f2",
+ "keys": {
+  "enc": [
+   [
+    1270,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "proj": [
+   [
+    1270,
+    1,
+    2048
+   ],
+   "float32"
+  ],
+  "llm": [
+   [
+    1270,
+    49,
+    2048
+   ],
+   "float32"
+  ],
+  "ans": [
+   [
+    1270,
+    49,
+    2048
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    1270
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    1270
+   ],
+   "<U3"
+  ],
+  "p_yes": [
+   [
+    1270
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    1270
+   ],
+   "<U21"
+  ]
+ },
+ "n": 1270,
+ "n_pos": 621,
+ "n_speakers": 107,
+ "zeroshot_file": "<local data dir>/release/overnight2/q3o_new/q3o_neurovoz_zeroshot_scores.csv",
+ "zeroshot_sha256": "c5bc6852aad557adfe861b8ad8925ab53a0f94b7dccc2a16a9c92567b8594a14",
+ "zeroshot_speaker_equals_states_spk": true,
+ "max_abs_p_yes_states_vs_zeroshot": 0.0,
+ "zeroshot_auc": 0.6392716156901861,
+ "zeroshot_auc_4dp": 0.6393,
+ "folds": {
+  "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_split_across_folds": 0
+  },
+  "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_split_across_folds": 0
+  },
+  "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_split_across_folds": 0
+  },
+  "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_split_across_folds": 0
+  },
+  "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655",
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_split_across_folds": 0
+  },
+  "neurovoz_groupkfold5_pod.csv": {
+   "sha256": "10e609c186df31e34ae1e318e78031289a4055a73055b41b1175ca66baf602ad",
+   "fold_sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "speakers_split_across_folds": 0
+  }
+ },
+ "encstates": "<local data dir>/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/stage/q3o_neurovoz_encstates.npz",
+ "encstates_sha256": "be9cadb877ffcd3cc14b9787b20f74b8da22416c40e070c033e93759d422843d",
+ "encstates_arrays_identical": true,
+ "date_utc": "2026-09-24T00:46:37.567811Z",
+ "command": "/usr/local/bin/python3 scripts/part26/Qwen3-Omni-30B-A3B_NeuroVoz/scripts/stage_cell.py"
+}

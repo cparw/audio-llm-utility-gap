@@ -1,0 +1,80 @@
+{
+ "cell": "Qwen3-Omni-30B-A3B_NeuroVoz",
+ "date_utc": "2026-09-24T00:55:00.812105Z",
+ "checks": {
+  "clips_equal_source_states": true,
+  "labels_equal_source_states": true,
+  "speakers_equal_source_states": true,
+  "zeroshot_column_equals_file": true,
+  "zeroshot_labels_equal": true,
+  "scores_finite_in_0_1": true,
+  "folds_seed0_equal_release_file": true,
+  "folds_seed0_no_speaker_in_two_folds": true,
+  "folds_seed1_equal_release_file": true,
+  "folds_seed1_no_speaker_in_two_folds": true,
+  "folds_seed2_equal_release_file": true,
+  "folds_seed2_no_speaker_in_two_folds": true,
+  "folds_seed3_equal_release_file": true,
+  "folds_seed3_no_speaker_in_two_folds": true,
+  "folds_seed4_equal_release_file": true,
+  "folds_seed4_no_speaker_in_two_folds": true,
+  "folds_single_equal_release_file": true,
+  "folds_single_no_speaker_in_two_folds": true,
+  "per_repeat_auc_equal_pod_json_1e-12": true,
+  "per_repeat_auc_equal_sidecar_1e-12": true,
+  "zeroshot_auc_equal_sidecar_1e-12": true,
+  "zeroshot_auc_4dp_is_0.6393": true,
+  "gap_point_equal_sidecar_1e-12": true,
+  "mac_refit_auc_within_0.005": true,
+  "mac_refit_pred_within_0.1": true,
+  "bootstrap_speaker_idx_equal_saved": true,
+  "bootstrap_speaker_order_equal_saved": true,
+  "bootstrap_draws_equal_1e-12": true,
+  "bootstrap_ci_equal_sidecar_1e-12": true,
+  "bootstrap_2000_usable": true,
+  "pulled_out_files_match_pod_sha256": true,
+  "podverify_PASS": true,
+  "podverify_no_layer_mismatch": true,
+  "pod_versions_pinned": true,
+  "pod_one_blas_thread": true,
+  "pod_linux": true,
+  "fold_files_equal_pod_tie_rule": true,
+  "sidecar_sha256_perclip": true,
+  "sidecar_sha256_draws": true
+ },
+ "per_repeat_auc_rank": [
+  0.9328757980194974,
+  0.9369983301449771,
+  0.9414049609333324,
+  0.9371124658523332,
+  0.9377488964813946
+ ],
+ "mean5_rank": 0.9372280902863069,
+ "zeroshot_auc_rank": 0.6392716156901861,
+ "gap_point_rank": 0.29795647459612085,
+ "mac_refit": {
+  "per_repeat_auc": [
+   0.9328931664967037,
+   0.9370268640718161,
+   0.9414086827498765,
+   0.9371335561460837,
+   0.937647166829186
+  ],
+  "max_abs_pred_diff_vs_pod": 0.010907564188716912,
+  "median_abs_pred_diff_vs_pod": 3.561055870494878e-08,
+  "max_abs_auc_diff_vs_pod": 0.00010172965220855978
+ },
+ "bootstrap_reimpl": {
+  "usable": 2000,
+  "gap_ci": [
+   0.2360357415548514,
+   0.3577693331483455
+  ],
+  "max_abs_draw_diff": 4.440892098500626e-16,
+  "max_abs_mean5_draw_diff": 4.440892098500626e-16,
+  "max_abs_zeroshot_draw_diff": 2.220446049250313e-16,
+  "speaker_order_equal_saved": true
+ },
+ "ALL_PASS": true,
+ "failed": []
+}

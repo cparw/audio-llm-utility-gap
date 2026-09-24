@@ -1,0 +1,203 @@
+{
+ "fixed_layer_refit": {
+  "seed0": {
+   "max_abs_diff": 0.0002051649462385119,
+   "auc_mac": 0.8336620644312952,
+   "auc_saved": 0.8336620644312952
+  },
+  "seed1": {
+   "max_abs_diff": 0.0012985617570927532,
+   "auc_mac": 0.8555226824457594,
+   "auc_saved": 0.8555226824457594
+  },
+  "seed2": {
+   "max_abs_diff": 0.00025835193091050535,
+   "auc_mac": 0.8456607495069034,
+   "auc_saved": 0.8458251150558843
+  },
+  "seed3": {
+   "max_abs_diff": 0.006834618880163457,
+   "auc_mac": 0.8404010519395135,
+   "auc_saved": 0.8400723208415516
+  },
+  "seed4": {
+   "max_abs_diff": 8.419264148606942e-05,
+   "auc_mac": 0.8474687705456936,
+   "auc_saved": 0.8474687705456936
+  }
+ },
+ "wrong_fold_control": {
+  "seed0_adress2020_groupkfold5_mac.csv": {
+   "n_clips_fold_differs": 126,
+   "max_abs_diff": 0.9679309486636098
+  },
+  "seed0_adress2020_groupkfold5_pod.csv": {
+   "n_clips_fold_differs": 127,
+   "max_abs_diff": 0.9833486966924606
+  },
+  "seed1_adress2020_groupkfold5_mac.csv": {
+   "n_clips_fold_differs": 118,
+   "max_abs_diff": 0.9678462164267735
+  },
+  "seed1_adress2020_groupkfold5_pod.csv": {
+   "n_clips_fold_differs": 128,
+   "max_abs_diff": 0.9460050168165001
+  },
+  "seed2_adress2020_groupkfold5_mac.csv": {
+   "n_clips_fold_differs": 116,
+   "max_abs_diff": 0.9843956559423186
+  },
+  "seed2_adress2020_groupkfold5_pod.csv": {
+   "n_clips_fold_differs": 123,
+   "max_abs_diff": 0.9564764034604497
+  },
+  "seed3_adress2020_groupkfold5_mac.csv": {
+   "n_clips_fold_differs": 131,
+   "max_abs_diff": 0.9875777204881807
+  },
+  "seed3_adress2020_groupkfold5_pod.csv": {
+   "n_clips_fold_differs": 126,
+   "max_abs_diff": 0.9249247426718449
+  },
+  "seed4_adress2020_groupkfold5_mac.csv": {
+   "n_clips_fold_differs": 134,
+   "max_abs_diff": 0.9584694955736672
+  },
+  "seed4_adress2020_groupkfold5_pod.csv": {
+   "n_clips_fold_differs": 124,
+   "max_abs_diff": 0.8398070996772735
+  }
+ },
+ "inner_selection": {
+  "seed0": {
+   "layers_mine": [
+    19,
+    18,
+    31,
+    25,
+    29
+   ],
+   "layers_pod": [
+    19,
+    18,
+    31,
+    25,
+    29
+   ],
+   "equal": true,
+   "auc_mine": 0.8336620644312952,
+   "max_abs_diff_vs_saved": 0.0002051649462385119,
+   "top_margins": [
+    0.005996102327624042,
+    0.0020435331576635907,
+    0.010498754528985632,
+    0.010916399044795688,
+    0.003006628787878829
+   ]
+  },
+  "seed1": {
+   "layers_mine": [
+    18,
+    19,
+    29,
+    26,
+    25
+   ],
+   "layers_pod": [
+    18,
+    19,
+    29,
+    26,
+    25
+   ],
+   "equal": true,
+   "auc_mine": 0.8555226824457594,
+   "max_abs_diff_vs_saved": 0.0012985617570927532,
+   "top_margins": [
+    0.004136696851479993,
+    0.02661346611012816,
+    0.0044126743139899505,
+    0.0011137900251193544,
+    0.002730096445629604
+   ]
+  },
+  "seed2": {
+   "layers_mine": [
+    28,
+    18,
+    30,
+    19,
+    19
+   ],
+   "layers_pod": [
+    28,
+    18,
+    30,
+    19,
+    19
+   ],
+   "equal": true,
+   "auc_mine": 0.8456607495069034,
+   "max_abs_diff_vs_saved": 0.00025835193091050535,
+   "top_margins": [
+    0.005888719124013231,
+    0.0006628787878788511,
+    0.0009502301104468147,
+    0.009415507093525566,
+    0.0019114463967403461
+   ]
+  },
+  "seed3": {
+   "layers_mine": [
+    30,
+    22,
+    22,
+    29,
+    19
+   ],
+   "layers_pod": [
+    30,
+    22,
+    22,
+    29,
+    19
+   ],
+   "equal": true,
+   "auc_mine": 0.8404010519395135,
+   "max_abs_diff_vs_saved": 0.006834618880163457,
+   "top_margins": [
+    0.002172215039862091,
+    0.004960317460317443,
+    0.006564901601666229,
+    0.0022310206133734356,
+    0.004277768799827442
+   ]
+  },
+  "seed4": {
+   "layers_mine": [
+    19,
+    29,
+    19,
+    20,
+    30
+   ],
+   "layers_pod": [
+    19,
+    29,
+    19,
+    20,
+    30
+   ],
+   "equal": true,
+   "auc_mine": 0.8474687705456936,
+   "max_abs_diff_vs_saved": 8.419264148606942e-05,
+   "top_margins": [
+    0.005067757534862882,
+    0.008687584345479227,
+    0.002306848852901555,
+    0.013839687359424202,
+    0.0008968735942420647
+   ]
+  }
+ }
+}

@@ -1,0 +1,239 @@
+{
+ "model": "Qwen3-Omni-30B-A3B",
+ "dataset": "MDVR-KCL",
+ "condition": "PD",
+ "n": 37,
+ "n_speakers": 37,
+ "n_pos": 16,
+ "probe": "encoder, nested (layer chosen by inner GroupKFold(4) out-of-fold AUC inside each outer training fold), StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'), 32 encoder layers, mean pooled states",
+ "probe_per_repeat": [
+  0.7946428571428571,
+  0.8511904761904762,
+  0.6815476190476191,
+  0.7351190476190477,
+  0.7678571428571429
+ ],
+ "probe_mean5": 0.7660714285714285,
+ "probe_per_repeat_saved_json": [
+  0.7946,
+  0.8512,
+  0.6815,
+  0.7351,
+  0.7679
+ ],
+ "probe_mean5_saved_json": 0.7661,
+ "probe_mean5_minus_saved_json": -2.8571428571488866e-05,
+ "zeroshot_auc": 0.773809523809524,
+ "zeroshot_json_auc": 0.7738,
+ "gap_point": -0.007738095238095433,
+ "gap_ci": [
+  -0.16176820728291313,
+  0.1385287267080744
+ ],
+ "gap_interval_excludes_zero": false,
+ "gap_interval_above_zero": false,
+ "p_boot_diff_le0": 0.5215,
+ "probe_mean5_ci": [
+  0.6139745989304813,
+  0.8987189440993789
+ ],
+ "zeroshot_ci": [
+  0.5727272727272728,
+  0.9352941176470587
+ ],
+ "usable_draws": 2000,
+ "single_split_auc": 0.7738095238095238,
+ "layers": {
+  "seed0": [
+   8,
+   7,
+   11,
+   16,
+   12
+  ],
+  "seed1": [
+   15,
+   24,
+   11,
+   6,
+   7
+  ],
+  "seed2": [
+   11,
+   14,
+   3,
+   5,
+   7
+  ],
+  "seed3": [
+   11,
+   20,
+   12,
+   20,
+   2
+  ],
+  "seed4": [
+   4,
+   11,
+   6,
+   23,
+   19
+  ],
+  "single": [
+   11,
+   11,
+   17,
+   7,
+   7
+  ]
+ },
+ "fold_files": {
+  "seed0": {
+   "fold_file": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "fold_file_sha256": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+   "fold_file_equals_pod_tie_rule": true,
+   "fold_file_equals_this_pod_sklearn": true,
+   "n_clips_sklearn_differs": 0
+  },
+  "seed1": {
+   "fold_file": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "fold_file_sha256": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+   "fold_file_equals_pod_tie_rule": true,
+   "fold_file_equals_this_pod_sklearn": true,
+   "n_clips_sklearn_differs": 0
+  },
+  "seed2": {
+   "fold_file": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "fold_file_sha256": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+   "fold_file_equals_pod_tie_rule": true,
+   "fold_file_equals_this_pod_sklearn": true,
+   "n_clips_sklearn_differs": 0
+  },
+  "seed3": {
+   "fold_file": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "fold_file_sha256": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+   "fold_file_equals_pod_tie_rule": true,
+   "fold_file_equals_this_pod_sklearn": true,
+   "n_clips_sklearn_differs": 0
+  },
+  "seed4": {
+   "fold_file": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "fold_file_sha256": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711",
+   "fold_file_equals_pod_tie_rule": true,
+   "fold_file_equals_this_pod_sklearn": true,
+   "n_clips_sklearn_differs": 0
+  },
+  "single": {
+   "fold_file": "kcl_groupkfold5_pod.csv",
+   "fold_file_sha256": "880569a7d11300835a9064fec322308998dc043eb4144e171289f10f0d275bb8",
+   "fold_file_equals_pod_tie_rule": true,
+   "fold_file_equals_this_pod_sklearn": true,
+   "n_clips_sklearn_differs": 0
+  }
+ },
+ "inner_folds_equal_pod_sklearn": {
+  "seed0": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "seed1": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "seed2": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "seed3": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "seed4": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "single": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "pod_versions": {
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-101-generic-x86_64-with-glibc2.39",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0"
+ },
+ "pod_seconds": 33.9,
+ "pod_n_jobs": 30,
+ "podverify_pass": true,
+ "podverify": {
+  "mean5_rank_from_oof": 0.7660714285714285,
+  "abs_mean5_diff": 0.0,
+  "max_abs_pred_diff": 0.0,
+  "max_abs_inner_score_diff": 1.9868214962137642e-08,
+  "layer_mismatches": []
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "same_code_as": "part25/A/scripts/A_gaps.py boot()"
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/per_clip/p26_q3o_kcl_perclip.csv",
+  "draws_npz": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/draws/p26_q3o_kcl_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_podverify.json",
+  "zeroshot_perclip": "<local data dir>/release/overnight2/q3o_new/q3o_kcl_zeroshot_scores.csv",
+  "zeroshot_json": "<local data dir>/release/overnight2/q3o_new/q3o_kcl_zeroshot.json",
+  "saved_nested_repeats_json": "<local data dir>/release/overnight2/q3o_new/q3o_kcl_nested_repeats.json",
+  "states": "<local data dir>/release/overnight2/q3o/q3o_kcl_states.npz",
+  "fold_dir": "<local data dir>/release/folds",
+  "probe_script": "scripts/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/stage/p25a_nested5.py",
+  "pod_driver": "scripts/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/stage/run26.sh"
+ },
+ "sha256": {
+  "pod_oof_csv": "f86922a0d702ec00bea2972a0c56de0a1e1bcaec945ae32814a179560768dd5f",
+  "pod_json": "56ee7be0c0367af74eb6c435768df514335755ba49e59bbed428496e6c99542e",
+  "zeroshot_perclip": "1beaf061061a23196a365e6f9b4cd6051013e38fcbe78639567dd276d7c76470",
+  "states": "18c0b957edfc50873bcac4f385ac4e56e5523c952ca2786fd8688c6f19671372",
+  "perclip_csv": "6d156b72d87c1b32488cbc81979b9b789c86b2eda6e12bbe994f73dd5ab6ca6b",
+  "draws_npz": "a9af1d77f3d124a73d3fc61e708979b490a8954be6d896a8ebbc4e7fc29c7b0f",
+  "probe_script": "710e3de8d94eaa9cbc0cb3a5c30868415574ad669aa4fa6e0c728edfdc0fb68e"
+ },
+ "date_utc": "2026-09-24T00:55:14.994224+00:00",
+ "command": "/usr/local/bin/python3 p26_gap_q3o_kcl.py"
+}

@@ -1,0 +1,328 @@
+{
+ "task": "PART26 encoder probe grid, cell Qwen3-Omni-30B-A3B x ADReSS-2020",
+ "date_utc": "2026-09-24T00:55:25.448601+00:00",
+ "model": "Qwen3-Omni-30B-A3B",
+ "checkpoint": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+ "dataset": "ADReSS-2020",
+ "condition": "AD",
+ "n": 156,
+ "n_speakers": 156,
+ "n_pos": 78,
+ "probe": {
+  "estimator": "nested encoder probe: outer = saved pod-order fold files seed0..4 (speakers renumbered with default_rng(seed)); inner GroupKFold(4) with the stable tie rule picks the layer by mean inner AUC; StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit at that layer; value = mean of the five per-repeat AUCs",
+  "script": "p25a_nested5.py (part25/A/podfiles copy, md5 615ced0380cca2636ed7cc30c71810e6, unchanged)",
+  "per_repeat_auc": [
+   0.8336620644312953,
+   0.8555226824457594,
+   0.8458251150558843,
+   0.8400723208415516,
+   0.8474687705456937
+  ],
+  "mean5": 0.8445101906640369,
+  "per_repeat_4dp": [
+   0.8337,
+   0.8555,
+   0.8458,
+   0.8401,
+   0.8475
+  ],
+  "mean5_4dp": 0.8445,
+  "layers": {
+   "seed0": [
+    19,
+    18,
+    31,
+    25,
+    29
+   ],
+   "seed1": [
+    18,
+    19,
+    29,
+    26,
+    25
+   ],
+   "seed2": [
+    28,
+    18,
+    30,
+    19,
+    19
+   ],
+   "seed3": [
+    30,
+    22,
+    22,
+    29,
+    19
+   ],
+   "seed4": [
+    19,
+    29,
+    19,
+    20,
+    30
+   ]
+  },
+  "fold_files": {
+   "seed0": "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "seed1": "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "seed2": "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "seed3": "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "seed4": "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv"
+  },
+  "fold_file_sha256": {
+   "seed0": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+   "seed1": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+   "seed2": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+   "seed3": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+   "seed4": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb"
+  },
+  "master_lookup_per_repeat": [
+   0.8337,
+   0.8555,
+   0.8458,
+   0.8401,
+   0.8475
+  ],
+  "master_lookup_mean": 0.8445,
+  "rerun_minus_master_mean": 1.0190664036846542e-05,
+  "per_repeat_abs_diff_vs_master_4dp": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "single_split_auc_rerun": 0.8459894806048652,
+  "single_split_auc_saved": 0.8459894806048652,
+  "single_split_layers_rerun": [
+   18,
+   18,
+   31,
+   19,
+   30
+  ],
+  "single_split_rank_corr_rerun_vs_saved": 0.9999999999999999
+ },
+ "answer": {
+  "file": "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_zeroshot_scores.csv",
+  "sha256": "d938609e6e30af5a8313db9b634cb3ebd011c466d9d9a1ddc1057cb0c361713b",
+  "auc": 0.7097304404996713,
+  "auc_4dp": 0.7097,
+  "zeroshot_json_auc": 0.7097,
+  "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+ },
+ "gap": {
+  "point": 0.1347797501643656,
+  "ci_2_5": 0.041668539312337556,
+  "ci_97_5": 0.2334787688361202,
+  "usable_draws": 2000,
+  "interval_above_zero": true,
+  "interval_excludes_zero": true,
+  "p_boot_one_sided_le0": 0.0035,
+  "probe_mean5_ci": [
+   0.7893373246585456,
+   0.8969527457778118
+  ],
+  "zeroshot_ci": [
+   0.6285388352344261,
+   0.7865018201962647
+  ]
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC, same rows in every draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "code": "part25/A/scripts/A_gaps.py boot(), copied"
+ },
+ "pod": {
+  "name": "p26-q3o-adress2020",
+  "id": "marzjz3lnmpdhs",
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "n_jobs": 32,
+  "seconds": 37.8,
+  "podverify_pass": true,
+  "podverify": {
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.3282813010894188e-08,
+   "layer_mismatches": [],
+   "abs_mean5_diff": 1.1102230246251565e-16,
+   "mean5_rank_from_oof": 0.8445101906640368
+  },
+  "cpu_flavor": "cpu3c",
+  "cost_per_hr": 0.96,
+  "created_utc": "2026-09-24 00:47:23.391 +0000 UTC",
+  "deleted_utc": "2026-09-24 00:55:06 (watchdog26, HTTP 204, then REST 404)",
+  "billed_hours_approx": 0.129,
+  "cost_usd_approx": 0.123,
+  "cpu_model": "AMD EPYC 9655P 96-Core Processor, avx512f",
+  "blas_threads": "openblas 1, openmp 1 (threadpoolctl, driver log)"
+ },
+ "states": {
+  "file": "<local data dir>/release/overnight2/q3o/q3o_adress2020_states.npz",
+  "sha256_mac": "f40f582ffda03c1156dc603797f9d8c1e731ec8fc9df57628f0087de3332baf3",
+  "sha256_pod_json": "f40f582ffda03c1156dc603797f9d8c1e731ec8fc9df57628f0087de3332baf3",
+  "keys": {
+   "enc": [
+    [
+     156,
+     32,
+     1280
+    ],
+    "float32"
+   ],
+   "proj": [
+    [
+     156,
+     1,
+     2048
+    ],
+    "float32"
+   ],
+   "llm": [
+    [
+     156,
+     49,
+     2048
+    ],
+    "float32"
+   ],
+   "ans": [
+    [
+     156,
+     49,
+     2048
+    ],
+    "float32"
+   ],
+   "label": [
+    [
+     156
+    ],
+    "int64"
+   ],
+   "spk": [
+    [
+     156
+    ],
+    "<U4"
+   ],
+   "p_yes": [
+    [
+     156
+    ],
+    "float64"
+   ],
+   "name": [
+    [
+     156
+    ],
+    "<U8"
+   ]
+  }
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "scipy": "1.15.3",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/per_clip/p26_q3o_adress2020_perclip.csv",
+  "draws_npz": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/draws/p26_q3o_adress2020_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/pull/p26-q3o-adress2020/out/p26_q3o_adress2020_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/pull/p26-q3o-adress2020/out/p26_q3o_adress2020_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/pull/p26-q3o-adress2020/out/p26_q3o_adress2020_podverify.json",
+  "zeroshot": "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_zeroshot_scores.csv",
+  "master_json": "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_nested_repeats.json",
+  "single_split_saved": "<local data dir>/release/overnight2/q3o_new/q3o_adress2020_enc_nested_oof.csv"
+ },
+ "sha256": {
+  "pod_oof_csv": "555b5a2dfb61b7c85bc212440219fdde02ae2e749f8f48b619cd14087bf86c69",
+  "pod_json": "8583b62bb83948ac2cfac6cea23e7d04f9f96db4ce932b1b852c88e6f41e1c70",
+  "perclip_csv": "c3d2e06b607cbc6bc82eab8b24b1dcc765ff8702e173044ac6953cc0518618a5",
+  "draws_npz": "f35055f4012229e460ed5001c5f445cf98bac6be87744f6a26b21a336507090f",
+  "zeroshot": "d938609e6e30af5a8313db9b634cb3ebd011c466d9d9a1ddc1057cb0c361713b"
+ },
+ "command": "/usr/local/bin/python3 p26_gap.py",
+ "verification": {
+  "status": "VERIFIED",
+  "script": "scripts/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/scripts/p26_verify.py",
+  "result_json": "scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/verify/p26_verify.json",
+  "checks": {
+   "fold_columns_equal_release_fold_files": true,
+   "fold_file_sha256_equal_pod_used": true,
+   "probe_columns_equal_pod_oof_strings": true,
+   "zeroshot_column_equals_file": true,
+   "outer_folds_rebuilt_from_scratch_equal": true,
+   "per_repeat_auc_equal_sidecar_1e-12": true,
+   "zeroshot_auc_equal_sidecar_1e-12": true,
+   "gap_point_equal_sidecar_1e-12": true,
+   "per_repeat_auc_equal_pod_json_1e-12": true,
+   "bootstrap_draws_reproduced_1e-12": true,
+   "bootstrap_ci_reproduced_1e-12": true,
+   "bootstrap_2000_usable": true,
+   "part25C_independent_refit_agrees_1e-6": true,
+   "zeroshot_matches_master_4dp": true,
+   "podverify_PASS": true,
+   "states_sha256_mac_equals_pod": true,
+   "pod_versions_pinned": true
+  },
+  "bootstrap_rebuilt_max_abs_diff": 4.440892098500626e-16,
+  "part25C_linux_refit": {
+   "folds_equal": true,
+   "max_abs_pred_diff": 4.9841353266799615e-11,
+   "per_repeat_abs_diff": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "layers_equal": true
+  },
+  "mac_refit": {
+   "sklearn": "1.7.2",
+   "numpy": "2.2.6",
+   "max_abs_pred_diff_vs_pod": 0.006834618880163457,
+   "per_repeat_auc_mac_refit": [
+    0.8336620644312952,
+    0.8555226824457594,
+    0.8456607495069034,
+    0.8404010519395135,
+    0.8474687705456936
+   ],
+   "mean5_mac_refit": 0.8445430637738329,
+   "inner_layer_mismatches": [],
+   "max_abs_inner_score_diff_vs_pod": 0.002192982456140413
+  },
+  "master": {
+   "per_repeat": [
+    0.8337,
+    0.8555,
+    0.8458,
+    0.8401,
+    0.8475
+   ],
+   "mean": 0.8445,
+   "per_repeat_equal_4dp": true,
+   "max_abs_diff_per_repeat": 3.793556870479442e-05,
+   "mean5_diff": 1.019066403673552e-05
+  }
+ }
+}

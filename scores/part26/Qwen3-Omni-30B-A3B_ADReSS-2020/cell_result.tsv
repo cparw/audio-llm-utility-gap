@@ -1,0 +1,2 @@
+model	dataset	n	n_speakers	probe_mean5	per_repeat	answer_auc	gap	gap_lo	gap_hi	interval_above_zero	usable_draws	podverify	perclip_csv	draws_npz
+Qwen3-Omni-30B-A3B	ADReSS-2020	156	156	0.8445	0.8337 0.8555 0.8458 0.8401 0.8475	0.7097	+0.1348	+0.0417	+0.2335	yes	2000	PASS	scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/per_clip/p26_q3o_adress2020_perclip.csv	scores/part26/Qwen3-Omni-30B-A3B_ADReSS-2020/draws/p26_q3o_adress2020_draws.npz

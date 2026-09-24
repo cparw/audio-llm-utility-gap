@@ -1,0 +1,427 @@
+{
+ "cell": "Qwen3-Omni-30B-A3B_NeuroVoz",
+ "verifier": "independent, own code",
+ "date_utc": "2026-09-24T01:01:50.050496Z",
+ "n": 1270,
+ "n_speakers": 107,
+ "n_pos": 621,
+ "per_repeat_auc": [
+  0.9328757980194974,
+  0.9369983301449771,
+  0.9414049609333324,
+  0.9371124658523332,
+  0.9377488964813946
+ ],
+ "mean5": 0.9372280902863069,
+ "answer_auc": 0.6392716156901861,
+ "gap": 0.29795647459612085,
+ "gap_ci": [
+  0.2360357415548514,
+  0.3577693331483455
+ ],
+ "mean5_ci": [
+  0.9023685786608588,
+  0.9658293595575655
+ ],
+ "answer_ci": [
+  0.5805349746726045,
+  0.699568449634758
+ ],
+ "sensitivity_numeric_speaker_order_gap_ci": [
+  0.24077995533725594,
+  0.35909533407048255
+ ],
+ "folds": {
+  "seed0": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+   "sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "both_classes_in_each_test_fold": true
+  },
+  "seed1": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+   "sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "both_classes_in_each_test_fold": true
+  },
+  "seed2": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+   "sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "both_classes_in_each_test_fold": true
+  },
+  "seed3": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+   "sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "both_classes_in_each_test_fold": true
+  },
+  "seed4": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655",
+   "sizes": [
+    256,
+    251,
+    251,
+    251,
+    261
+   ],
+   "both_classes_in_each_test_fold": true
+  }
+ },
+ "claim": {
+  "probe": "0.9372",
+  "answer": "0.6393",
+  "gap": "+0.2980",
+  "lo": "0.2360",
+  "hi": "0.3578",
+  "per_repeat": [
+   "0.9329",
+   "0.9370",
+   "0.9414",
+   "0.9371",
+   "0.9377"
+  ],
+  "layers": {
+   "seed0": [
+    31,
+    29,
+    31,
+    31,
+    19
+   ],
+   "seed1": [
+    29,
+    31,
+    31,
+    28,
+    29
+   ],
+   "seed2": [
+    17,
+    26,
+    17,
+    14,
+    21
+   ],
+   "seed3": [
+    30,
+    27,
+    26,
+    17,
+    21
+   ],
+   "seed4": [
+    21,
+    20,
+    29,
+    26,
+    25
+   ]
+  }
+ },
+ "n_checks": 53,
+ "failed": [],
+ "checks": [
+  {
+   "check": "perclip n=1270, unique clips",
+   "pass": true,
+   "detail": "n=1270"
+  },
+  {
+   "check": "perclip 107 speakers, 621 positives",
+   "pass": true,
+   "detail": "spk=107 pos=621"
+  },
+  {
+   "check": "perclip no missing / nonfinite OOF scores",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "labels constant within speaker",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "label matches clip prefix HC/PD",
+   "pass": true,
+   "detail": "prefixes=['HC', 'PD']"
+  },
+  {
+   "check": "raw pod OOF same clip order",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "raw pod OOF speakers/labels equal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "raw pod OOF scores equal per-clip scores exactly",
+   "pass": true,
+   "detail": "max abs diff 0.0"
+  },
+  {
+   "check": "raw pod OOF fold columns equal per-clip fold columns",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "zero-shot clip set equals per-clip clip set",
+   "pass": true,
+   "detail": "zs n=1270"
+  },
+  {
+   "check": "zero-shot speakers and labels line up",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "zero-shot p_yes equals per-clip p_yes_zeroshot",
+   "pass": true,
+   "detail": "max abs diff 0.0"
+  },
+  {
+   "check": "zero-shot file is the one listed in part25 C_build_cells.csv (sha256)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "states clip order, speakers, labels equal per-clip",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "states p_yes equals zero-shot file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "states have 32 encoder layers",
+   "pass": true,
+   "detail": "(1270, 32, 1280)"
+  },
+  {
+   "check": "seed0: fold file clips+speakers line up",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed0: used folds equal saved fold file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed0: every speaker in one fold only",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed0: folds rebuilt from default_rng(0) renumbering + stable greedy fill equal the used folds",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed1: fold file clips+speakers line up",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed1: used folds equal saved fold file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed1: every speaker in one fold only",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed1: folds rebuilt from default_rng(1) renumbering + stable greedy fill equal the used folds",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed2: fold file clips+speakers line up",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed2: used folds equal saved fold file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed2: every speaker in one fold only",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed2: folds rebuilt from default_rng(2) renumbering + stable greedy fill equal the used folds",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed3: fold file clips+speakers line up",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed3: used folds equal saved fold file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed3: every speaker in one fold only",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed3: folds rebuilt from default_rng(3) renumbering + stable greedy fill equal the used folds",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed4: fold file clips+speakers line up",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed4: used folds equal saved fold file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed4: every speaker in one fold only",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "seed4: folds rebuilt from default_rng(4) renumbering + stable greedy fill equal the used folds",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "the five repeat splits are all different",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "single-split column equals neurovoz_groupkfold5_pod.csv",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "claimed layers equal pod json layers",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "layer in range 0..31 and chosen per outer fold (5 per seed)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "each chosen layer is argmax of its saved inner-fold AUC vector",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "own rank AUC equals sklearn AUC (1e-12)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "per-repeat AUCs match claim at 4 dp",
+   "pass": true,
+   "detail": "['0.9329', '0.9370', '0.9414', '0.9371', '0.9377']"
+  },
+  {
+   "check": "per-repeat AUCs match pod json",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "probe mean of five matches claim at 4 dp",
+   "pass": true,
+   "detail": "0.9372"
+  },
+  {
+   "check": "answer AUC matches claim at 4 dp",
+   "pass": true,
+   "detail": "0.6393"
+  },
+  {
+   "check": "gap matches claim at 4 dp",
+   "pass": true,
+   "detail": "+0.297956"
+  },
+  {
+   "check": "bootstrap lo matches claim at 4 dp",
+   "pass": true,
+   "detail": "0.236036"
+  },
+  {
+   "check": "bootstrap hi matches claim at 4 dp",
+   "pass": true,
+   "detail": "0.357769"
+  },
+  {
+   "check": "interval above zero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "saved draws: speaker order equals mine",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "saved draws: speaker indices equal mine (all 2000 draws)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "saved draws: gap, mean5, zero-shot, per-repeat equal mine (1e-12)",
+   "pass": true,
+   "detail": "diff 4.44e-16 mean5 4.44e-16 zs 2.22e-16 per_repeat 2.22e-16"
+  }
+ ],
+ "inputs_sha256": {
+  "perclip": "9ba110a6ed04cc78ef6781957d2b5ba2e85664a9dc6c6fd227cda066f84a8ff7",
+  "raw_oof": "eef487681a232056ee40b6b4b9d2a0f6c896cef5f6a41b83810c6ba4936272d7",
+  "zeroshot": "c5bc6852aad557adfe861b8ad8925ab53a0f94b7dccc2a16a9c92567b8594a14",
+  "draws": "3d4a42271896bbc726865cb7105219672402ff87ecc801b58791c7e5b6eb47f5",
+  "pod_json": "c7b4ece655f2f4205bd3e0197ecd7dfa349c741637aded38d1e1b440f843d881"
+ },
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6"
+ }
+}

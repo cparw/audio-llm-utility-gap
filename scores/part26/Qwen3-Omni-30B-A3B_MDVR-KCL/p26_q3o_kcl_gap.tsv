@@ -1,0 +1,2 @@
+model	dataset	n	n_speakers	probe_mean5	per_repeat	zeroshot_auc	gap_point	gap_lo	gap_hi	interval_above_zero	usable_draws	podverify	perclip_file	draws_file
+Qwen3-Omni-30B-A3B	MDVR-KCL	37	37	0.7661	0.7946 0.8512 0.6815 0.7351 0.7679	0.7738	-0.0077	-0.1618	0.1385	no	2000	PASS	scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/per_clip/p26_q3o_kcl_perclip.csv	scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/draws/p26_q3o_kcl_draws.npz

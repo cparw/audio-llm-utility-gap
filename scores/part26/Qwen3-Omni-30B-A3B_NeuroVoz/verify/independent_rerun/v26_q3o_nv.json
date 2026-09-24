@@ -1,0 +1,300 @@
+{
+ "checks": {
+  "perclip_rows_1270_unique": {
+   "ok": true,
+   "n": 1270
+  },
+  "perclip_same_clip_order_as_states": {
+   "ok": true
+  },
+  "perclip_speaker_equals_states": {
+   "ok": true
+  },
+  "perclip_label_equals_states": {
+   "ok": true
+  },
+  "states_counts": {
+   "ok": true,
+   "n_spk": 107,
+   "n_pos": 621,
+   "enc_shape": [
+    1270,
+    32,
+    1280
+   ]
+  },
+  "each_speaker_single_label": {
+   "ok": true
+  },
+  "clip_name_matches_speaker_and_label": {
+   "ok": true,
+   "bad_spk": 0,
+   "bad_lab": 0,
+   "groups": [
+    "HC",
+    "PD"
+   ]
+  },
+  "stage_states_equal_source_states": {
+   "ok": true,
+   "keys": {
+    "enc": true,
+    "label": true,
+    "spk": true,
+    "p_yes": true,
+    "name": true
+   }
+  },
+  "pod_oof_same_clips": {
+   "ok": true
+  },
+  "perclip_equals_pod_oof": {
+   "ok": true,
+   "max_abs": 0.0,
+   "fold_mis": 0,
+   "meta_mis": 0
+  },
+  "folds_seed0": {
+   "ok": true,
+   "file": "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "clip_set_equal": true,
+   "fold_mismatch": 0,
+   "speaker_mismatch": 0,
+   "speaker_disjoint": true,
+   "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "pod_json_sha_and_name_match": true,
+   "ckpt_fold_match": true,
+   "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20"
+  },
+  "folds_seed1": {
+   "ok": true,
+   "file": "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "clip_set_equal": true,
+   "fold_mismatch": 0,
+   "speaker_mismatch": 0,
+   "speaker_disjoint": true,
+   "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "pod_json_sha_and_name_match": true,
+   "ckpt_fold_match": true,
+   "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a"
+  },
+  "folds_seed2": {
+   "ok": true,
+   "file": "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "clip_set_equal": true,
+   "fold_mismatch": 0,
+   "speaker_mismatch": 0,
+   "speaker_disjoint": true,
+   "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "pod_json_sha_and_name_match": true,
+   "ckpt_fold_match": true,
+   "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570"
+  },
+  "folds_seed3": {
+   "ok": true,
+   "file": "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "clip_set_equal": true,
+   "fold_mismatch": 0,
+   "speaker_mismatch": 0,
+   "speaker_disjoint": true,
+   "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "pod_json_sha_and_name_match": true,
+   "ckpt_fold_match": true,
+   "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973"
+  },
+  "folds_seed4": {
+   "ok": true,
+   "file": "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "clip_set_equal": true,
+   "fold_mismatch": 0,
+   "speaker_mismatch": 0,
+   "speaker_disjoint": true,
+   "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "pod_json_sha_and_name_match": true,
+   "ckpt_fold_match": true,
+   "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655"
+  },
+  "folds_single": {
+   "ok": true,
+   "file": "neurovoz_groupkfold5_pod.csv",
+   "clip_set_equal": true,
+   "fold_mismatch": 0,
+   "speaker_mismatch": 0,
+   "speaker_disjoint": true,
+   "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "pod_json_sha_and_name_match": true,
+   "ckpt_fold_match": true,
+   "sha256": "10e609c186df31e34ae1e318e78031289a4055a73055b41b1175ca66baf602ad"
+  },
+  "five_repeat_partitions_distinct": {
+   "ok": true
+  },
+  "per_repeat_three_ways_agree": {
+   "ok": true
+  },
+  "per_repeat_4dp_match_claim": {
+   "ok": true,
+   "mine": [
+    0.9329,
+    0.937,
+    0.9414,
+    0.9371,
+    0.9377
+   ],
+   "claim": [
+    0.9329,
+    0.937,
+    0.9414,
+    0.9371,
+    0.9377
+   ]
+  },
+  "per_repeat_match_pod_json": {
+   "ok": true
+  },
+  "mean5_4dp_match_claim": {
+   "ok": true,
+   "mine": 0.9372280902863069
+  },
+  "no_missing_oof": {
+   "ok": true
+  },
+  "single_split_auc": {
+   "ok": true,
+   "mine": 0.9195802287180327
+  },
+  "layers_match_claim_and_inner_argmax": {
+   "ok": true
+  },
+  "zeroshot_same_clips": {
+   "ok": true
+  },
+  "zeroshot_labels_speakers_align": {
+   "ok": true,
+   "lab_mis": 0,
+   "spk_mis": 0
+  },
+  "zeroshot_equals_perclip_col": {
+   "ok": true
+  },
+  "zeroshot_equals_states_p_yes": {
+   "ok": true
+  },
+  "zeroshot_file_sha": {
+   "ok": true
+  },
+  "answer_4dp_match_claim": {
+   "ok": true,
+   "mine": 0.6392716156901861
+  },
+  "gap_4dp_match_claim": {
+   "ok": true,
+   "mine": 0.29795647459612085
+  },
+  "ci_4dp_match_claim": {
+   "ok": true,
+   "lo": 0.2360357415548514,
+   "hi": 0.3577693331483455
+  },
+  "ci_above_zero": {
+   "ok": true
+  },
+  "saved_draw_speakers_order": {
+   "ok": true
+  },
+  "saved_draw_indices_equal_mine": {
+   "ok": true
+  },
+  "saved_draws_equal_mine": {
+   "ok": true,
+   "max_abs": {
+    "diff": 4.440892098500626e-16,
+    "mean5": 4.440892098500626e-16,
+    "zeroshot": 2.220446049250313e-16,
+    "per_repeat": 2.220446049250313e-16
+   }
+  },
+  "saved_points_equal_mine": {
+   "ok": true
+  },
+  "draws_file_sha_in_sidecar": {
+   "ok": true
+  },
+  "perclip_file_sha_in_sidecar": {
+   "ok": true
+  },
+  "pod_oof_sha_in_sidecar": {
+   "ok": true
+  }
+ },
+ "per_repeat": [
+  0.9328757980194974,
+  0.9369983301449771,
+  0.9414049609333324,
+  0.9371124658523332,
+  0.9377488964813946
+ ],
+ "mean5": 0.9372280902863069,
+ "single_auc": 0.9195802287180327,
+ "answer": 0.6392716156901861,
+ "gap": 0.29795647459612085,
+ "lo": 0.2360357415548514,
+ "hi": 0.3577693331483455,
+ "mean5_ci": [
+  0.9023685786608588,
+  0.9658293595575655
+ ],
+ "ans_ci": [
+  0.5805349746726045,
+  0.699568449634758
+ ],
+ "integers_stream_identical": true,
+ "sensitivity_int_speaker_order_ci": [
+  0.24077995533725594,
+  0.35909533407048255
+ ],
+ "all_pass": true,
+ "n_checks": 40,
+ "failed": [],
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2"
+ }
+}
