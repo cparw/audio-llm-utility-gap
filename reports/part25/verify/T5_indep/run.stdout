@@ -1,0 +1,46 @@
+verifier start 2026-09-24T03:49:19Z
+neurovoz               n=1270 spk=107 auc=0.6951 (rank 0.6951) ci=[0.6356,0.7519] usable=2000 alt_orders={'num': (0.6357, 0.7485), 'first': (0.6357, 0.7515)} saved 32/32 paired_lo>0=32 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=45s
+kcl                    n=37 spk=37 auc=0.7143 (rank 0.7143) ci=[0.5210,0.8810] usable=2000 alt_orders={'num': "could not convert string to float: np.str_('ID26')", 'first': (0.521, 0.881)} saved 32/0 paired_lo>0=None cmp={'answer_draws_maxabs': 0.0}  t=47s
+adresso                n=237 spk=237 auc=0.6150 (rank 0.6150) ci=[0.5432,0.6890] usable=2000 alt_orders={'num': "could not convert string to float: np.str_('adrso020')", 'first': (0.5432, 0.689)} saved 32/32 paired_lo>0=None cmp={'answer_draws_maxabs': 0.0}  t=50s
+adress2020             n=156 spk=156 auc=0.6241 (rank 0.6241) ci=[0.5348,0.7148] usable=2000 alt_orders={'num': "could not convert string to float: np.str_('S199')", 'first': (0.5348, 0.7148)} saved 32/24 paired_lo>0=22 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=86s
+edaic_whole_p23        n=275 spk=275 auc=0.8366 (rank 0.8366) ci=[0.7786,0.8866] usable=2000 alt_orders={'num': (0.7786, 0.8866), 'first': (0.7786, 0.8866)} saved 0/0 paired_lo>0=0 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=127s
+edaic_lifted_p22       n=275 spk=275 auc=0.8379 (rank 0.8379) ci=[0.7805,0.8876] usable=2000 alt_orders={'num': (0.7805, 0.8876), 'first': (0.7805, 0.8876)} saved 0/0 paired_lo>0=0 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=167s
+edaic_full_o25         n=275 spk=275 auc=0.8285 (rank 0.8285) ci=[0.7708,0.8827] usable=2000 alt_orders={'num': (0.7708, 0.8827), 'first': (0.7708, 0.8827)} saved 0/0 paired_lo>0=0 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=206s
+edaic_full_statesrun   n=275 spk=275 auc=0.8278 (rank 0.8278) ci=[0.7703,0.8822] usable=2000 alt_orders={'num': (0.7703, 0.8822), 'first': (0.7703, 0.8822)} saved 0/0 paired_lo>0=0 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=246s
+edaic_first30          n=275 spk=275 auc=0.6620 (rank 0.6620) ci=[0.5831,0.7315] usable=2000 alt_orders={'num': (0.5831, 0.7315), 'first': (0.5831, 0.7315)} saved 2/0 paired_lo>0=0 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=287s
+pitt                   n=468 spk=228 auc=0.6578 (rank 0.6578) ci=[0.6033,0.7125] usable=2000 alt_orders={'num': "could not convert string to float: np.str_('Control210')", 'first': (0.6002, 0.7127)} saved 31/25 paired_lo>0=18 cmp={'speakers_equal': True, 'speaker_idx_equal': True, 'answer_draws_maxabs': 0.0, 'probe_draws_maxabs': 0.0, 'delta_draws_maxabs': 0.0}  t=329s
+REFIT neurovoz               main 32/32 ans, 32/32 hi; min 0.8361@0 max 0.9343@25; same-fold files 3 ans [32] hi [32]; other-fold 1 ans [32] hi [32] (['lo-t5-8:macfile']); oof recompute max 2.2e-16; npz vs exact 1.1e-16
+REFIT adress2020             main 32/32 ans, 24/32 hi; min 0.6491@2 max 0.8254@25; same-fold files 3 ans [32] hi [24]; other-fold 1 ans [32] hi [26] (['lo-t5-7:macfile']); oof recompute max 1.1e-16; npz vs exact 0.0e+00
+REFIT edaic_first30          main 2/32 ans, 0/32 hi; min 0.4814@31 max 0.6686@1; same-fold files 32 ans [2] hi [0]; other-fold 3 ans [0] hi [0] (['lo-t5-10:macfile', 'lo-t5-9:macfile', 'lo-t5-4:macfile']); oof recompute max 1.1e-16; npz vs exact 0.0e+00
+REFIT pitt                   main 31/32 ans, 25/32 hi; min 0.6517@2 max 0.8083@27; same-fold files 21 ans [31] hi [25]; other-fold 2 ans [32] hi [25] (['lo-t5-10:macfile', 'lo-t5-1:macfile']); oof recompute max 1.1e-16; npz vs exact 0.0e+00
+REFIT edaic_whole_p23        main 0/32 ans, 0/32 hi; min 0.5689@30 max 0.6922@21; same-fold files 3 ans [0] hi [0]; other-fold 1 ans [0] hi [0] (['lo-t5-9:macfile']); oof recompute max 1.1e-16; npz vs exact 0.0e+00
+REFIT edaic_lifted_p22       main 0/32 ans, 0/32 hi; min 0.5689@30 max 0.6922@21; same-fold files 3 ans [0] hi [0]; other-fold 1 ans [0] hi [0] (['lo-t5-9:macfile']); oof recompute max 1.1e-16; npz vs exact 0.0e+00
+REFIT edaic_full_o25         main 0/32 ans, 0/32 hi; min 0.5689@30 max 0.6922@21; same-fold files 3 ans [0] hi [0]; other-fold 1 ans [0] hi [0] (['lo-t5-9:macfile']); oof recompute max 1.1e-16; npz vs exact 0.0e+00
+REFIT edaic_full_statesrun   main 0/32 ans, 0/32 hi; min 0.5689@30 max 0.6922@21; same-fold files 3 ans [0] hi [0]; other-fold 1 ans [0] hi [0] (['lo-t5-9:macfile']); oof recompute max 1.1e-16; npz vs exact 0.0e+00
+P23 saved lifted curve {'file': '<local data dir>/release_from_mac/scores/part23/pull/p23-a-probes/p23a/out/o25_whole_encoder_perlayer.csv', 'sha256': '80b11fb36ce0c43f42b94d5bf5a9991e0b7eadcc4e4080cde2a611ee76f82322', 'max': 0.6874728142670726, 'max_layer': 19, 'vs': {'edaic_whole_p23': (0, 0), 'edaic_lifted_p22': (0, 0), 'edaic_full_o25': (0, 0), 'edaic_full_statesrun': (0, 0)}}
+CURVE pitt       enc  lo-t5-1  Haswell   maxabs 6.78e-04 (8/32 at 4dp)
+CURVE pitt       proj lo-t5-1  Haswell   maxabs 5.81e-05 (0/1 at 4dp)
+CURVE pitt       enc  lo-t5-10 SkylakeX  maxabs 0.00e+00 (32/32 at 4dp)
+CURVE pitt       proj lo-t5-10 SkylakeX  maxabs 0.00e+00 (1/1 at 4dp)
+CURVE pitt       llm  lo-t5-2  SkylakeX  maxabs 0.00e+00 (29/29 at 4dp)
+CURVE pitt       ans  lo-t5-3  Haswell   maxabs 7.94e-04 (4/29 at 4dp)
+CURVE pitt       ans  lo-t5-13 SkylakeX  maxabs 0.00e+00 (29/29 at 4dp)
+CURVE edaic30    enc  lo-t5-4  Haswell   maxabs 5.07e-04 (7/32 at 4dp)
+CURVE edaic30    proj lo-t5-4  Haswell   maxabs 3.62e-04 (0/1 at 4dp)
+CURVE edaic30    enc  lo-t5-9  SkylakeX  maxabs 0.00e+00 (32/32 at 4dp)
+CURVE edaic30    proj lo-t5-9  SkylakeX  maxabs 0.00e+00 (1/1 at 4dp)
+CURVE edaic30    enc  lo-t5-10 SkylakeX  maxabs 0.00e+00 (32/32 at 4dp)
+CURVE edaic30    proj lo-t5-10 SkylakeX  maxabs 0.00e+00 (1/1 at 4dp)
+CURVE edaic30    llm  lo-t5-5  SkylakeX  maxabs 0.00e+00 (29/29 at 4dp)
+CURVE edaic30    ans  lo-t5-6  SkylakeX  maxabs 0.00e+00 (29/29 at 4dp)
+CURVE adress2020 enc  lo-t5-7  SkylakeX  maxabs 2.88e-03 (1/32 at 4dp)
+CURVE adress2020 proj lo-t5-7  SkylakeX  maxabs 1.31e-03 (0/1 at 4dp)
+CURVE neurovoz   enc  lo-t5-8  SkylakeX  maxabs 1.09e-03 (5/32 at 4dp)
+CURVE neurovoz   proj lo-t5-8  SkylakeX  maxabs 4.96e-06 (0/1 at 4dp)
+CURVE edaicfull  enc  lo-t5-9  SkylakeX  maxabs 2.97e-03 (2/32 at 4dp)
+CURVE edaicfull  proj lo-t5-9  SkylakeX  maxabs 7.25e-04 (0/1 at 4dp)
+Haswell vs AVX-512 counts {'pitt lo-t5-1 enc': (31, 25), 'pitt lo-t5-10 enc': (31, 25), 'edaic30 lo-t5-4 enc': (2, 0), 'edaic30 lo-t5-10 enc': (2, 0)}
+kcl/adresso files in T5 pulls+inputs: [] {'n_npz_scanned': 1461, 'kcl_min_pyes_diff': 0.6754685630057568, 'adresso_237_min_pyes_diff': 0.622620029830596}
+TEX {'n_tex': 7, 'every_encoder_layer_hits': [], 'line226_has_phrase': True, 'line226_commented': False, 'line226_parkinson': True, 'every_depth_lines': [226, 231], 'every_depth_live': [226], 'table1_edaic': ['E-DAIC      &  275 (275) & 0.84 & 0.82 & 0.86 \\\\', 'E-DAIC transcript vs own audio answer: $r$ / identical Yes-No & 0.83 / 96\\% \\\\']}
+TRACK CHECK {'n_ok': 544, 'n_bad': 0, 'result': 'TOTAL checks 544, BAD 0', 'hashes_match_current': {'T5_counts.tsv': True, 'T5_curve_match.tsv': True, 'T5_counts_sidecar.json': True}, 'omni_final_latest_mtime_utc': '2026-09-18T12:52:40Z', 'omni_final_n_files': 175}
+done 466s

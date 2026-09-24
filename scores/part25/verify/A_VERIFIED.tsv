@@ -1,0 +1,12 @@
+id	claimed	recomputed	verified
+A_PCGITA_gap	+0.3306 [0.2498, 0.4088]	+0.3306 [0.2498, 0.4088]; mean5 0.8941 (T1 0.8941), zs 0.5635, single-split gap +0.3454, n 1100/100 spk, usable 2000	yes
+A_NeuroVoz_gap	+0.2262 [0.1735, 0.2851]	+0.2262 [0.1735, 0.2851]; mean5 0.9213 (T1 0.9213), zs 0.6951, single-split gap +0.2209, n 1270/107 spk, usable 2000	yes
+A_ADReSSo_gap	+0.2602 [0.1755, 0.3396]	+0.2602 [0.1755, 0.3396]; mean5 0.8752 (T1 0.8752), zs 0.6150, single-split gap +0.2748, n 237/237 spk, usable 2000	yes
+A_ADReSS2020_gap	+0.1802 [0.0766, 0.2805]	+0.1802 [0.0766, 0.2805]; mean5 0.8043 (T1 0.8043), zs 0.6241, single-split gap +0.1637, n 156/156 spk, usable 2000	yes
+A_Pitt_reference	+0.1128 [0.0455, 0.1768]	+0.1128 [0.0455, 0.1768]; mean5 0.7706, zs 0.6578, n 468/228 speaker labels, usable 2000	yes
+A_table1_reproduction	4 of 4 exact to 4 dp (difference 0.0000 on every set)	4 of 4: mean5 and all 5 repeats equal Table 1 JSON at 4 dp (|mean5 - T1| 2.7e-05, 2.3e-05, 1.7e-05, 2.6e-05); orig-script enc JSON == omni_final JSON on 4/4; zero-shot rerun bit-identical 1100/1100, 1270/1270, 237/237, 156/156; single split max abs diff 0.0 and layers equal on 4/4	yes
+A_independent_check	ALL_PASS true	A_verify_r2.json ALL_PASS=True; pod verify PASS 4/4, max_pred_diff 0, no layer mismatches=True; this verifier's own recompute agrees on all 5 gaps and my 2000 draws equal track A's npz bit for bit=True	yes
+A_sensitivity_ADReSS2020_H100	+0.1802 [0.0766, 0.2805], n 156	+0.1802 [0.0766, 0.2805], n 156, mean5 0.8043, zero-shot exact 153/156 (max diff 0.0156); gap uses the saved zero-shot; H100 OOF csv byte-identical to H200 OOF=True; with the H100 rerun zero-shot instead: +0.1800 [0.0764, 0.2801]	yes
+A_cost	$5.55	$5.55 from createdAt (launch resp) to watchdog DELETE 204/GONE times x costPerHr; 5 pods (4 H200, 1 H100); all 5 ids return HTTP 404 on GET /v1/pods/<id> at 03:42Z; only live pod is another track's (p26-kimi-adress2020-c2); balance at 03:42Z was $101.88 (other tracks spending since)	yes
+A_note_text_values	text says 0.33 / 0.23 / 0.26 / 0.18	final tex has 0.33 for PC-GITA (True) and Pitt 0.11 [0.05, 0.18] (True); no NeuroVoz 0.23, ADReSSo 0.26 or ADReSS-2020 0.18 gap appears in the tex or fig1_gap.pdf; the mean-of-five gaps round to those values	no
+A_note_pitt_speakers	Pitt 468 clips, 228 speakers	228 speaker labels in pitt_enc_nested5_oof.npz (participant 172 is under Control172 and Dementia172); tex Table 1 prints 468 (227)	yes

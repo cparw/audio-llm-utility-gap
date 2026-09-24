@@ -1,0 +1,171 @@
+{
+ "task": "PART 25 T5 independent verifier",
+ "date_utc": "2026-09-24T03:57:33Z",
+ "tsv": "scores/part25/verify/T5_VERIFIED.tsv",
+ "tsv_sha256": "864dd65d87e2a71852d9abcd93aef0c648577e47e96bceaf40a76f2500816fa5",
+ "scripts": [
+  "scripts/part25/verify/T5_indep/T5_indep_verify.py",
+  "scripts/part25/verify/T5_indep/T5_indep_table.py"
+ ],
+ "recomputed_json": "scores/part25/verify/T5_indep/T5v_recomputed.json",
+ "draws": [
+  "T5v_draws_adress2020.npz",
+  "T5v_draws_adresso.npz",
+  "T5v_draws_edaic_first30.npz",
+  "T5v_draws_edaic_full_o25.npz",
+  "T5v_draws_edaic_full_statesrun.npz",
+  "T5v_draws_edaic_lifted_p22.npz",
+  "T5v_draws_edaic_whole_p23.npz",
+  "T5v_draws_kcl.npz",
+  "T5v_draws_neurovoz.npz",
+  "T5v_draws_pitt.npz"
+ ],
+ "perclip": [
+  "T5v_perclip_adress2020.csv",
+  "T5v_perclip_adresso.csv",
+  "T5v_perclip_edaic_first30.csv",
+  "T5v_perclip_edaic_full_o25.csv",
+  "T5v_perclip_edaic_full_statesrun.csv",
+  "T5v_perclip_edaic_lifted_p22.csv",
+  "T5v_perclip_edaic_whole_p23.csv",
+  "T5v_perclip_kcl.csv",
+  "T5v_perclip_neurovoz.csv",
+  "T5v_perclip_pitt.csv"
+ ],
+ "method": "sklearn roc_auc_score (rank formula cross check); speaker bootstrap 2000 draws, fresh default_rng(0) per cell, np.unique(str) speaker order, idx = rng.choice(n_spk, n_spk, replace=True), all clips of each drawn speaker, usable = both classes present, np.percentile 2.5/97.5; paired delta = layer AUC minus answer AUC in the same draw; strict > for all counts; 4 dp match = equal after round(x, 4)",
+ "notes": [
+  "Answer CI depends slightly on speaker order: NeuroVoz numeric order gives [0.6357, 0.7485], first-appearance [0.6357, 0.7515], string order (used by the track and here) [0.6356, 0.7519]. No count changes (refit min 0.8361).",
+  "Pitt has 228 speaker ids but Dementia172 and Control172 share a number; Table 1 prints 227.",
+  "Mac env for this check: sklearn 1.7.2, numpy 2.2.6, scipy 1.15.3; the track draws were reproduced exactly."
+ ],
+ "rows": [
+  {
+   "id": "T5_neurovoz_refit_above_answer",
+   "claimed": "32/32; ans 0.6951 [0.6356, 0.7519]; 1270 clips, 107 spk, 2000/2000 draws; lowest layer 0 at 0.8361",
+   "recomputed": "32/32; ans 0.6951 [0.6356, 0.7519]; 1270 clips, 107 spk, 2000/2000 draws; lowest layer 0 at 0.8361",
+   "verified": "yes",
+   "n_subchecks": 10,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_neurovoz_refit_above_hi",
+   "claimed": "32/32 above 0.7519; 3 same-fold refit files 32/32; paired delta lo>0 on 32/32",
+   "recomputed": "32/32; same-fold files 3 give [32]; paired delta lo>0 32/32 (min lo 0.0654); draws equal to track draw by draw (max abs 0.0)",
+   "verified": "yes",
+   "n_subchecks": 5,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_kcl_refit",
+   "claimed": "NOT LANDED (no refit exists); ans 0.7143 [0.5210, 0.8810]; 37 clips, 37 spk; saved 32/32 above ans, 0/32 above hi; saved max 0.8482",
+   "recomputed": "no kcl file in any T5 pull or input (0 kcl/adresso files); 1461 npz scanned in t5v; ans 0.7143 [0.521, 0.881]; 37 clips, 37 spk; saved 32/32 above ans, 0/32 above hi; saved max 0.8482",
+   "verified": "yes",
+   "n_subchecks": 9,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_adresso_refit",
+   "claimed": "NOT LANDED (no refit exists); ans 0.6150 [0.5432, 0.6890]; 237 clips, 237 spk; saved 32/32 above ans, 32/32 above hi; saved min 0.7413",
+   "recomputed": "no adresso file in any T5 pull or input; ans 0.615 [0.5432, 0.689]; 237 clips, 237 spk; saved 32/32 above ans, 32/32 above hi; saved min 0.7413",
+   "verified": "yes",
+   "n_subchecks": 9,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_adress2020_refit_above_answer",
+   "claimed": "32/32; ans 0.6241 [0.5348, 0.7148]; 156 clips, 156 spk; lowest layer 2 at 0.6491, margin 0.025",
+   "recomputed": "32/32; ans 0.6241 [0.5348, 0.7148]; 156 clips, 156 spk; lowest layer 2 at 0.6491, margin 0.025",
+   "verified": "yes",
+   "n_subchecks": 9,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_adress2020_refit_above_hi",
+   "claimed": "24/32; layers 0 to 7 not above 0.7148; saved curve 24/32; paired delta lo>0 on 22/32",
+   "recomputed": "24/32; not above hi: 0 to 7; saved 24/32; paired delta lo>0 22/32; same-fold files 3 give [24]",
+   "verified": "yes",
+   "n_subchecks": 4,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_edaic_whole_refit_above_answer",
+   "claimed": "0/32; ans 0.8366 [0.7786, 0.8866] (Table 1 0.84); 275 clips, 275 spk; 0/32 vs 0.8379, 0.8285, 0.8278; refit max 0.6922 at layer 21; P23 saved curve 0/32, max 0.6875",
+   "recomputed": "0/32; ans 0.8366 [0.7786, 0.8866] (Table 1 row: E-DAIC      &  275 (275) & 0.84 & 0.82 & 0.86 \\\\); 275 clips, 275 spk; others 0/32 vs 0.8379; 0/32 vs 0.8285; 0/32 vs 0.8278; refit max 0.6922 at layer 21; P23 saved 0/32, max 0.6875",
+   "verified": "yes",
+   "n_subchecks": 14,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_edaic_whole_refit_above_hi",
+   "claimed": "0/32 for all four whole-interview answer files",
+   "recomputed": "edaic_whole_p23 0/32 (hi 0.8866); edaic_lifted_p22 0/32 (hi 0.8876); edaic_full_o25 0/32 (hi 0.8827); edaic_full_statesrun 0/32 (hi 0.8822)",
+   "verified": "yes",
+   "n_subchecks": 1,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_edaic_first30_refit_above_answer",
+   "claimed": "2/32; ans 0.6620 [0.5831, 0.7315]; 275 clips, 275 spk; only layers 0 and 1; 2/32 over all 32 same-fold files",
+   "recomputed": "2/32; ans 0.662 [0.5831, 0.7315]; 275 clips, 275 spk; above: 0,1; 32 same-fold files give [2]",
+   "verified": "yes",
+   "n_subchecks": 9,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_edaic_first30_refit_above_hi",
+   "claimed": "0/32",
+   "recomputed": "0/32; same-fold files give [0]",
+   "verified": "yes",
+   "n_subchecks": 2,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_pitt_refit_extra",
+   "claimed": "31/32 above ans, 25/32 above hi; ans 0.6578 [0.6033, 0.7125]; 468 clips, 228 speaker ids; layer 2 at 0.6517; layers 0 to 6 not above hi; paired delta lo>0 18/32",
+   "recomputed": "31/32 above ans, 25/32 above hi; ans 0.6578 [0.6033, 0.7125]; 468 clips, 228 speaker ids; not above ans: 2 at 0.6517; not above hi: 0 to 6; paired delta lo>0 18/32",
+   "verified": "yes",
+   "n_subchecks": 11,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_every_encoder_layer_verdict",
+   "claimed": "holds on NeuroVoz and ADReSS-2020 only; fails on E-DAIC (and Pitt); KCL and ADReSSo cannot be judged on the refit; above hi only NeuroVoz; phrase not in any tex; line 226 has \"the signal is present at every depth\" (Parkinson's)",
+   "recomputed": "holds (32/32 above ans): neurovoz, adress2020; above hi 32/32: neurovoz; fails: edaic_whole_p23 0/32, edaic_first30 2/32, pitt 31/32; no refit: kcl, adresso; 'every encoder layer' hits in 7 tex files: 0; final tex line 226 has phrase: True, commented: False, Parkinson's: True; live 'every depth' lines: [226]",
+   "verified": "yes",
+   "n_subchecks": 8,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_curve_match_same_run_avx512",
+   "claimed": "max abs diff 0 on every curve; all layers match at 4 dp",
+   "recomputed": "pitt enc lo-t5-10 (SkylakeX) 0.0e+00 32/32; pitt proj lo-t5-10 (SkylakeX) 0.0e+00 1/1; pitt llm lo-t5-2 (SkylakeX) 0.0e+00 29/29; pitt ans lo-t5-13 (SkylakeX) 0.0e+00 29/29; edaic30 enc lo-t5-9 (SkylakeX) 0.0e+00 32/32; edaic30 proj lo-t5-9 (SkylakeX) 0.0e+00 1/1; edaic30 enc lo-t5-10 (SkylakeX) 0.0e+00 32/32; edaic30 proj lo-t5-10 (SkylakeX) 0.0e+00 1/1; edaic30 llm lo-t5-5 (SkylakeX) 0.0e+00 29/29; edaic30 ans lo-t5-6 (SkylakeX) 0.0e+00 29/29",
+   "verified": "yes",
+   "n_subchecks": 10,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_curve_match_other_extraction",
+   "claimed": "close, not exact; enc NeuroVoz 1.09e-03 (5/32), ADReSS-2020 2.88e-03 (1/32), E-DAIC whole o25_full 2.97e-03 (2/32); proj 4.96e-06, 1.31e-03, 7.25e-04",
+   "recomputed": "close, not exact; neurovoz enc 1.09e-03 (5/32); adress2020 enc 2.88e-03 (1/32); edaicfull enc 2.97e-03 (2/32); neurovoz proj 4.96e-06 (0/1); adress2020 proj 1.31e-03 (0/1); edaicfull proj 7.25e-04 (0/1)",
+   "verified": "yes",
+   "n_subchecks": 6,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_curve_match_haswell_pods",
+   "claimed": "close, not exact; Pitt enc 6.78e-04 (8/32), proj 5.81e-05, ans 7.94e-04 (4/29), E-DAIC first30 enc 5.07e-04 (7/32), proj 3.62e-04; counts unchanged",
+   "recomputed": "close, not exact; pitt enc lo-t5-1 (Haswell) 6.78e-04 (8/32); pitt proj lo-t5-1 (Haswell) 5.81e-05 (0/1); pitt ans lo-t5-3 (Haswell) 7.94e-04 (4/29); edaic30 enc lo-t5-4 (Haswell) 5.07e-04 (7/32); edaic30 proj lo-t5-4 (Haswell) 3.62e-04 (0/1); counts Haswell vs AVX-512: pitt [31, 25] vs [31, 25], edaic30 [2, 0] vs [2, 0]",
+   "verified": "yes",
+   "n_subchecks": 6,
+   "n_subchecks_failed": 0
+  },
+  {
+   "id": "T5_independent_check",
+   "claimed": "544 checks, 0 bad; omni_final last modified 2026-09-18",
+   "recomputed": "track sidecar says 544 checks, 0 bad; sidecar hashes match current T5 files: True; omni_final latest mtime 2026-09-18T12:52:40Z over 175 files; this verifier also reproduced every T5 draw array draw by draw",
+   "verified": "yes",
+   "n_subchecks": 4,
+   "n_subchecks_failed": 0
+  }
+ ]
+}
