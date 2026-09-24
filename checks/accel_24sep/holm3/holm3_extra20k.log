@@ -1,0 +1,3 @@
+Pitt Qwen2.5-Omni conflict minus agreement (20000, np.float64(-0.29476140257854194), np.float64(-0.04394843218666906), np.float64(0.009699515024248788))
+PC-GITA probe after minus before (20000, np.float64(-0.12030997387213092), np.float64(-0.017100749489878688), np.float64(0.00679966001699915))
+NeuroVoz probe after minus before (20000, np.float64(-0.060940686696264665), np.float64(-0.0014553245392025219), np.float64(0.039798010099495025))

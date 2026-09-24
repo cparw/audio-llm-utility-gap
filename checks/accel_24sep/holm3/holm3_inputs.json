@@ -1,0 +1,122 @@
+{
+ "edaic_arms": {
+  "path": "<local data dir>/release/edaic_rerun/part17/T1_perclip_all966.csv",
+  "sha256_16": "2cb1fab543119ef9"
+ },
+ "pitt_Qwen2-Audio": {
+  "path": "<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+  "sha256_16": "9cd9800ed47adee9"
+ },
+ "pitt_Qwen2.5-Omni": {
+  "path": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+  "sha256_16": "7a5318fe5e2bee98"
+ },
+ "pitt_Qwen3-Omni": {
+  "path": "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv",
+  "sha256_16": "9d7348cb925b6ed0"
+ },
+ "pitt_Audio Flamingo 2": {
+  "path": "<local data dir>/paper1_local_runs/af2_results/af2_pitt468.csv",
+  "sha256_16": "f70f37696cd46110"
+ },
+ "pitt_Audio Flamingo 3": {
+  "path": "<local data dir>/release/overnight2/part3/af3_pitt.csv",
+  "sha256_16": "675eab0366cb0506"
+ },
+ "pitt_Kimi-Audio": {
+  "path": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+  "sha256_16": "15a3c5c1175df984"
+ },
+ "zs_pcgita": {
+  "path": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+  "sha256_16": "988edd5c6e76b4a7"
+ },
+ "ft_pcgita": {
+  "path": "<local data dir>/release/omni_final/omnisft_pcgita_oof.csv",
+  "sha256_16": "1fba37d27367dc2f"
+ },
+ "zs_neurovoz": {
+  "path": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+  "sha256_16": "1695cbc067f39dd3"
+ },
+ "ft_neurovoz": {
+  "path": "<local data dir>/release/omni_final/omnisft_neurovoz_oof.csv",
+  "sha256_16": "3e7646316242937b"
+ },
+ "zs_kcl": {
+  "path": "<local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv",
+  "sha256_16": "18501de17fa0a533"
+ },
+ "ft_kcl": {
+  "path": "<local data dir>/release/omni_final/omnisft_kcl_oof.csv",
+  "sha256_16": "0eaf5c84702a64e6"
+ },
+ "zs_pitt": {
+  "path": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+  "sha256_16": "7a5318fe5e2bee98"
+ },
+ "ft_pitt": {
+  "path": "<local data dir>/release/omni_final/omnisft_pitt_oof.csv",
+  "sha256_16": "fd715b2a5ec64118"
+ },
+ "zs_adresso": {
+  "path": "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv",
+  "sha256_16": "43ffeff4a1ab6ea8"
+ },
+ "ft_adresso": {
+  "path": "<local data dir>/release/omni_final/omnisft_adresso_oof.csv",
+  "sha256_16": "f2cf92a44d64841d"
+ },
+ "zs_adress2020": {
+  "path": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+  "sha256_16": "21a4753da1a3bb5a"
+ },
+ "ft_adress2020": {
+  "path": "<local data dir>/release/omni_final/omnisft_adress2020_oof.csv",
+  "sha256_16": "8f3c58b0bc117bf6"
+ },
+ "zs_edaic_whole": {
+  "path": "scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv",
+  "sha256_16": "e13f360198811ff3"
+ },
+ "ft_edaic_whole_seed0": {
+  "path": "scores/part24/FT/FT24_whole_seed0_perclip.csv",
+  "sha256_16": "cbf1a85fd6ef62b9"
+ },
+ "lora_pitt": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv",
+  "sha256_16": "dda1ef283d07bcad"
+ },
+ "ctrl_pg_before": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_pg_before_enc_nested_oof.csv",
+  "sha256_16": "df55713784e90770"
+ },
+ "ctrl_pg_after": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_pg_after_enc_nested_oof.csv",
+  "sha256_16": "631efd76f166ef99"
+ },
+ "ctrl_nv_before": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_nv_before_enc_nested_oof.csv",
+  "sha256_16": "a186cb0f0f39856a"
+ },
+ "ctrl_nv_after": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_nv_after_enc_nested_oof.csv",
+  "sha256_16": "679419ac6616e6dc"
+ },
+ "ctrlzs_pg_before": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_pg_before_zeroshot_scores.csv",
+  "sha256_16": "6db5e24dc4e0eb7c"
+ },
+ "ctrlzs_pg_after": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_pg_after_zeroshot_scores.csv",
+  "sha256_16": "9256359f4a33d017"
+ },
+ "ctrlzs_nv_before": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_nv_before_zeroshot_scores.csv",
+  "sha256_16": "4a966c22a2634a6b"
+ },
+ "ctrlzs_nv_after": {
+  "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_nv_after_zeroshot_scores.csv",
+  "sha256_16": "1f12c2f16fb8593b"
+ }
+}
