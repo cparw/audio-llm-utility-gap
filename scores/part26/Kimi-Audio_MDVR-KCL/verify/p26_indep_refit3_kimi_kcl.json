@@ -1,0 +1,438 @@
+{
+ "tags": {
+  "seed0": {
+   "folds": [
+    {
+     "fold": 0,
+     "saved_layer": 1,
+     "my_argmax_first": 1,
+     "tie_set": [
+      1,
+      2,
+      8
+     ],
+     "max_inner": "47/48",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 1,
+     "saved_layer": 16,
+     "my_argmax_first": 16,
+     "tie_set": [
+      16,
+      17,
+      18,
+      19
+     ],
+     "max_inner": "7/8",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 2,
+     "saved_layer": 22,
+     "my_argmax_first": 22,
+     "tie_set": [
+      22,
+      23
+     ],
+     "max_inner": "5/6",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 3,
+     "saved_layer": 5,
+     "my_argmax_first": 5,
+     "tie_set": [
+      5
+     ],
+     "max_inner": "19/24",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 4,
+     "saved_layer": 17,
+     "my_argmax_first": 17,
+     "tie_set": [
+      17
+     ],
+     "max_inner": "5/6",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "mac_refit_auc": 0.6934523809523809,
+   "pod_auc": 0.693452380952381,
+   "pod_auc_exact": "233/336",
+   "mac_refit_auc_exact": "233/336",
+   "max_abs_pred_diff_vs_pod": 9.73339115251104e-06
+  },
+  "seed1": {
+   "folds": [
+    {
+     "fold": 0,
+     "saved_layer": 17,
+     "my_argmax_first": 17,
+     "tie_set": [
+      17,
+      19
+     ],
+     "max_inner": "47/48",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 1,
+     "saved_layer": 5,
+     "my_argmax_first": 5,
+     "tie_set": [
+      5,
+      7,
+      8
+     ],
+     "max_inner": "103/120",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 2,
+     "saved_layer": 11,
+     "my_argmax_first": 11,
+     "tie_set": [
+      11
+     ],
+     "max_inner": "13/16",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 3,
+     "saved_layer": 8,
+     "my_argmax_first": 8,
+     "tie_set": [
+      8
+     ],
+     "max_inner": "389/480",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 4,
+     "saved_layer": 5,
+     "my_argmax_first": 5,
+     "tie_set": [
+      5,
+      8
+     ],
+     "max_inner": "31/32",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "mac_refit_auc": 0.7946428571428571,
+   "pod_auc": 0.7946428571428572,
+   "pod_auc_exact": "89/112",
+   "mac_refit_auc_exact": "89/112",
+   "max_abs_pred_diff_vs_pod": 3.1238025109958656e-06
+  },
+  "seed2": {
+   "folds": [
+    {
+     "fold": 0,
+     "saved_layer": 4,
+     "my_argmax_first": 4,
+     "tie_set": [
+      4,
+      5,
+      8
+     ],
+     "max_inner": "211/240",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 2.220446049250313e-16
+    },
+    {
+     "fold": 1,
+     "saved_layer": 5,
+     "my_argmax_first": 5,
+     "tie_set": [
+      5
+     ],
+     "max_inner": "217/240",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 2,
+     "saved_layer": 1,
+     "my_argmax_first": 1,
+     "tie_set": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      16,
+      18,
+      19
+     ],
+     "max_inner": "1",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 3,
+     "saved_layer": 8,
+     "my_argmax_first": 8,
+     "tie_set": [
+      8,
+      11
+     ],
+     "max_inner": "37/40",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 2.220446049250313e-16
+    },
+    {
+     "fold": 4,
+     "saved_layer": 3,
+     "my_argmax_first": 3,
+     "tie_set": [
+      3
+     ],
+     "max_inner": "53/60",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "mac_refit_auc": 0.8511904761904762,
+   "pod_auc": 0.8511904761904762,
+   "pod_auc_exact": "143/168",
+   "mac_refit_auc_exact": "143/168",
+   "max_abs_pred_diff_vs_pod": 3.857257264594516e-06
+  },
+  "seed3": {
+   "folds": [
+    {
+     "fold": 0,
+     "saved_layer": 1,
+     "my_argmax_first": 1,
+     "tie_set": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "max_inner": "11/12",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 1,
+     "saved_layer": 17,
+     "my_argmax_first": 17,
+     "tie_set": [
+      17
+     ],
+     "max_inner": "23/24",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 2,
+     "saved_layer": 5,
+     "my_argmax_first": 5,
+     "tie_set": [
+      5
+     ],
+     "max_inner": "19/24",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 3,
+     "saved_layer": 20,
+     "my_argmax_first": 20,
+     "tie_set": [
+      20
+     ],
+     "max_inner": "67/84",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 4,
+     "saved_layer": 2,
+     "my_argmax_first": 2,
+     "tie_set": [
+      2,
+      4,
+      5,
+      7
+     ],
+     "max_inner": "43/48",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "mac_refit_auc": 0.7172619047619048,
+   "pod_auc": 0.7172619047619048,
+   "pod_auc_exact": "241/336",
+   "mac_refit_auc_exact": "241/336",
+   "max_abs_pred_diff_vs_pod": 1.6479994391971342e-05
+  },
+  "seed4": {
+   "folds": [
+    {
+     "fold": 0,
+     "saved_layer": 11,
+     "my_argmax_first": 11,
+     "tie_set": [
+      11
+     ],
+     "max_inner": "9/10",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 1,
+     "saved_layer": 27,
+     "my_argmax_first": 27,
+     "tie_set": [
+      27
+     ],
+     "max_inner": "101/120",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 2,
+     "saved_layer": 1,
+     "my_argmax_first": 1,
+     "tie_set": [
+      1
+     ],
+     "max_inner": "29/30",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 3,
+     "saved_layer": 18,
+     "my_argmax_first": 18,
+     "tie_set": [
+      18,
+      23,
+      24,
+      25,
+      26
+     ],
+     "max_inner": "67/80",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 4,
+     "saved_layer": 27,
+     "my_argmax_first": 27,
+     "tie_set": [
+      27
+     ],
+     "max_inner": "41/48",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "mac_refit_auc": 0.7589285714285714,
+   "pod_auc": 0.7589285714285715,
+   "pod_auc_exact": "85/112",
+   "mac_refit_auc_exact": "85/112",
+   "max_abs_pred_diff_vs_pod": 4.891277913809944e-06
+  },
+  "single": {
+   "folds": [
+    {
+     "fold": 0,
+     "saved_layer": 5,
+     "my_argmax_first": 5,
+     "tie_set": [
+      5
+     ],
+     "max_inner": "37/48",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 1,
+     "saved_layer": 11,
+     "my_argmax_first": 11,
+     "tie_set": [
+      11
+     ],
+     "max_inner": "15/16",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 2,
+     "saved_layer": 14,
+     "my_argmax_first": 12,
+     "tie_set": [
+      12,
+      14
+     ],
+     "max_inner": "43/48",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 3,
+     "saved_layer": 26,
+     "my_argmax_first": 26,
+     "tie_set": [
+      26
+     ],
+     "max_inner": "14/15",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    },
+    {
+     "fold": 4,
+     "saved_layer": 12,
+     "my_argmax_first": 12,
+     "tie_set": [
+      12,
+      16
+     ],
+     "max_inner": "35/48",
+     "saved_in_tie_set": true,
+     "my_inner_vs_pod_maxabs": 1.1102230246251565e-16
+    }
+   ],
+   "mac_refit_auc": 0.6875,
+   "pod_auc": 0.6875,
+   "pod_auc_exact": "11/16",
+   "mac_refit_auc_exact": "11/16",
+   "max_abs_pred_diff_vs_pod": 0.00043285998169761974
+  }
+ },
+ "n_folds_with_ties": 14,
+ "swap_mean5_range": [
+  0.7541666666666667,
+  0.7672619047619048
+ ],
+ "swap_gap_range": [
+  0.04285714285714286,
+  0.055952380952380955
+ ],
+ "all_saved_in_tie_set": true
+}

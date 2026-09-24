@@ -1,0 +1,159 @@
+{
+ "checks": {
+  "pulled_out_sha256_match_pod": {
+   "ok": true,
+   "n_files": 3,
+   "mismatched": []
+  },
+  "clips_labels_speakers_equal_zeroshot_file_in_order": {
+   "ok": true,
+   "n": 37,
+   "n_pos": 16,
+   "n_spk": 37
+  },
+  "clips_speakers_equal_all_fold_files": {
+   "ok": true,
+   "per_file": {
+    "kcl_groupkfold5_pod.csv": true,
+    "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv": true,
+    "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv": true,
+    "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv": true,
+    "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv": true,
+    "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv": true
+   }
+  },
+  "enc_shape_37x32x1280": {
+   "ok": true,
+   "shape": [
+    37,
+    32,
+    1280
+   ],
+   "dtype": "float32"
+  },
+  "enc_all_finite": {
+   "ok": true
+  },
+  "enc_layers_distinct": {
+   "ok": true
+  },
+  "enc_no_constant_columns": {
+   "ok": true,
+   "constant_columns_per_layer_max": 0
+  },
+  "enc_frames_1500_every_clip": {
+   "ok": true,
+   "frames_min": 1500,
+   "frames_max": 1500
+  },
+  "final_layernorm_equals_kimi_continuous_feature": {
+   "ok": true,
+   "max_abs": 0.0
+  },
+  "rerun_p_yes_reproduces_saved_zeroshot": {
+   "ok": true,
+   "max_abs": 0.04816186391531746,
+   "median_abs": 0.01373624127887546,
+   "auc_saved": 0.7113095238095238,
+   "auc_rerun": 0.693452380952381,
+   "pearson": 0.9968271961592691
+  },
+  "rerun_llm_states_reproduce_saved": {
+   "ok": true,
+   "shape": [
+    37,
+    28,
+    3584
+   ],
+   "max_abs": 2.0,
+   "max_abs_over_max": 0.016,
+   "min_layer_corr": 0.9999330003938057
+  }
+ },
+ "states_ok": true,
+ "states_file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_MDVR-KCL/pull/p26-kimi-kcl-gpu/out/p26_kimi_kcl_states.npz",
+ "states_sha256": "1cf4867a5453795b7c760b598d7949b08c46e658f9073a886cf213956e11b5f7",
+ "keys": {
+  "enc": [
+   [
+    37,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "enc_ln": [
+   [
+    37,
+    1,
+    1280
+   ],
+   "float32"
+  ],
+  "llm": [
+   [
+    37,
+    28,
+    3584
+   ],
+   "float32"
+  ],
+  "ans": [
+   [
+    37,
+    28,
+    3584
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    37
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    37
+   ],
+   "<U4"
+  ],
+  "p_yes": [
+   [
+    37
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    37
+   ],
+   "<U17"
+  ],
+  "enc_frames": [
+   [
+    37
+   ],
+   "int64"
+  ],
+  "ln_vs_feat_maxabs": [
+   [
+    37
+   ],
+   "float64"
+  ]
+ },
+ "cpu_stage_files": [
+  "driver26.sh",
+  "folds/kcl_groupkfold5_pod.csv",
+  "folds/kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+  "folds/kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+  "guard26.sh",
+  "in/kimi_kcl_encstates.npz",
+  "p25a_nested5.py",
+  "p25a_podverify.py"
+ ]
+}

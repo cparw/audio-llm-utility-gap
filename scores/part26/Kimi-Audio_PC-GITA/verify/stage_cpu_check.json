@@ -1,0 +1,302 @@
+{
+ "states": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_PC-GITA/pull/p26-kimi-pcgita-gpu/out/kimi_pcgita_encstates.npz",
+ "states_sha256": "dddfba93155b9ab48e10c61b20d2a202e2aa7a49c0c8735a76a17e5bca942c0f",
+ "keys": {
+  "enc": [
+   [
+    1100,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "enc_allframes": [
+   [
+    1100,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "enc_final_ln": [
+   [
+    1100,
+    1280
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    1100
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    1100
+   ],
+   "<U14"
+  ],
+  "name": [
+   [
+    1100
+   ],
+   "<U29"
+  ],
+  "p_yes": [
+   [
+    1100
+   ],
+   "float64"
+  ],
+  "mass": [
+   [
+    1100
+   ],
+   "float64"
+  ],
+  "kept_frames": [
+   [
+    1100
+   ],
+   "int64"
+  ],
+  "samples_heard": [
+   [
+    1100
+   ],
+   "int64"
+  ],
+  "dur_file_s": [
+   [
+    1100
+   ],
+   "float64"
+  ],
+  "hookcheck_maxdiff": [
+   [
+    1100
+   ],
+   "float64"
+  ],
+  "wav_sha256": [
+   [
+    1100
+   ],
+   "<U64"
+  ]
+ },
+ "sidecar": {
+  "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+  "snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+  "clip_list": "/workspace/in/mf_pcgita_pod.csv",
+  "clip_list_sha256": "db0da66f58e334dae363266516deff4981256c6c2b0c437d2b60a52c76911517",
+  "condition": "pd",
+  "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+  "n": 1100,
+  "n_positive": 550,
+  "zeroshot_auc_this_run": 0.6129223140495867,
+  "window_seconds": 30,
+  "dtype": "bfloat16",
+  "encoder": "kimia_infer prompt_manager.whisper_model.speech_encoder (Whisper-large-v3 encoder inside Kimi-Audio, the continuous-feature path)",
+  "encoder_layers": 32,
+  "enc_shape": [
+   1100,
+   32,
+   1280
+  ],
+  "pooling": "enc: mean over the token_len*4 encoder frames kimia keeps, token_len=(L-1)//1280+1; enc_allframes: mean over all 1500 frames",
+  "hookcheck_max_over_clips": 2.384185791015625e-07,
+  "new_script": true,
+  "copied_from": "release/podD2_final/kimi_probe.py (forward pass, prompt, yes/no ids, 30 s cut)",
+  "versions": {
+   "python": "3.12.3",
+   "torch": "2.8.0+cu128",
+   "transformers": "4.51.3",
+   "numpy": "2.5.3",
+   "gpu": "NVIDIA H100 80GB HBM3",
+   "flash_attn": "2.8.3.post1"
+  },
+  "seconds": 229.3,
+  "command": "kimi_enc_extract.py in/mf_pcgita_pod.csv out/kimi_pcgita pd",
+  "date_utc": "2026-09-24T01:33:53.729853Z"
+ },
+ "enc_shape_ok": true,
+ "enc_all_finite": true,
+ "enc_layers_distinct": true,
+ "enc_constant_columns_per_layer": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "n_unique_names": 1100,
+ "n": 1100,
+ "n_pos": 550,
+ "n_speakers": 100,
+ "wav_sha256_equal_upload_list": true,
+ "hookcheck_maxdiff_max": 2.384185791015625e-07,
+ "kept_frames_min_max": [
+  60,
+  1500
+ ],
+ "dur_file_s_min_median_max": [
+  1.1993125,
+  3.42403125,
+  45.261
+ ],
+ "n_clips_over_30s": 3,
+ "zeroshot_same_order_as_states": true,
+ "zeroshot_labels_equal": true,
+ "zeroshot_speakers_equal": true,
+ "p_yes_this_run_vs_canonical": {
+  "max_abs": 0.09343208896603045,
+  "median_abs": 0.010985579139031199,
+  "n_over_1e-3": 865,
+  "pearson": 0.989357957865556,
+  "auc_canonical": 0.6147041322314049,
+  "auc_this_run": 0.6129223140495867,
+  "note": "separate pod run of the same forward pass; part20 POD4d found the same kind of cross-pod drift for Kimi (median 0.010, max 0.20 on Pitt). The gap uses the canonical file."
+ },
+ "smoke3_names_equal": true,
+ "smoke3_enc_max_abs_vs_full": 0.0,
+ "smoke3_p_yes_max_abs_vs_full": 0.0,
+ "rerun10_names_equal": true,
+ "rerun10_enc_max_abs_vs_full": 0.0,
+ "rerun10_p_yes_max_abs_vs_full": 0.0,
+ "folds": {
+  "seed0": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed0.csv",
+   "sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed1": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed1.csv",
+   "sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed2": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed2.csv",
+   "sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed3": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed3.csv",
+   "sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "seed4": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod_seed4.csv",
+   "sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  },
+  "single": {
+   "file": "<local data dir>/release/folds/pcgita_groupkfold5_pod.csv",
+   "sha256": "ff2fa9e53a19f102a059ea08ddccb5cb3762e2f298eda3a05548cdd5a92cb61f",
+   "n": 1100,
+   "same_clip_set": true,
+   "speaker_ids_equal_states_spk": true,
+   "equals_pod_tie_rule": true,
+   "speakers_cross_folds": 0,
+   "fold_sizes": [
+    220,
+    220,
+    220,
+    220,
+    220
+   ]
+  }
+ },
+ "staged_arrays_identical": true,
+ "staged_file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_PC-GITA/stage/kimi_pcgita_encstates.npz",
+ "staged_sha256": "5c16cef5d6dd9e467ae298c076ea2a9b1d620df4a837b22909383959144710e9",
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2"
+ },
+ "PASS": true
+}

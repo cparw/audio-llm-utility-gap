@@ -1,0 +1,4 @@
+clip,speaker,p_yes,mass,kept_frames,samples_heard,dur_file_s,wav_sha256,prompt
+AVPEPUDEAC0001_readtext.wav,AVPEPUDEAC0001,0.3274937469114217,0.9961451292037964,876,279525,17.4703,8b371f6a3b5476b428f87828bb3d3b27f7964d320609fc99b216db78c983b5fa,"Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."
+AVPEPUDEAC0003_readtext.wav,AVPEPUDEAC0003,0.45708027690633,0.9955432116985321,852,271874,16.9921,a62575838556e96943f2b9997739e6d0058c17968e4f01903f50f91c6f812d30,"Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."
+AVPEPUDEAC0004_readtext.wav,AVPEPUDEAC0004,0.3210900164463082,0.997250497341156,856,273220,17.0763,389b0a2d355b2d277d5d35906488b516e18f1aaa961419fff1564e93521da68c,"Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."

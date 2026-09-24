@@ -1,0 +1,157 @@
+{
+ "tags": {
+  "seed0": {
+   "layers": [
+    27,
+    28,
+    27,
+    20,
+    19
+   ],
+   "claimed_layers": [
+    27,
+    28,
+    27,
+    20,
+    19
+   ],
+   "layers_equal": true,
+   "inner_margin_top_vs_runnerup": [
+    0.0014898718138748324,
+    0.002761041200633363,
+    0.0005881688792461759,
+    0.00022518397656368094,
+    0.001940809580023961
+   ],
+   "max_abs_pred_diff": 0.01024506933895114,
+   "auc_refit": 0.9312406799510705,
+   "auc_claimed_oof": 0.9312679732723947,
+   "auc_4dp_equal": false
+  },
+  "seed1": {
+   "layers": [
+    21,
+    18,
+    15,
+    28,
+    21
+   ],
+   "claimed_layers": [
+    21,
+    18,
+    15,
+    28,
+    21
+   ],
+   "layers_equal": true,
+   "inner_margin_top_vs_runnerup": [
+    0.0011637671379276515,
+    0.002518458775613297,
+    0.0006199766506745918,
+    0.001288320488695982,
+    0.0023496543318672902
+   ],
+   "max_abs_pred_diff": 0.028616616928924754,
+   "auc_refit": 0.9325408345305176,
+   "auc_claimed_oof": 0.9324986539430165,
+   "auc_4dp_equal": true
+  },
+  "seed2": {
+   "layers": [
+    31,
+    19,
+    21,
+    17,
+    13
+   ],
+   "claimed_layers": [
+    31,
+    19,
+    21,
+    17,
+    13
+   ],
+   "layers_equal": true,
+   "inner_margin_top_vs_runnerup": [
+    0.0015546338324222697,
+    0.0019982068960447963,
+    0.0008582969692084719,
+    0.001136713425094471,
+    0.0014144183001376653
+   ],
+   "max_abs_pred_diff": 0.052143163520574964,
+   "auc_refit": 0.9250004342119301,
+   "auc_claimed_oof": 0.9246952452553042,
+   "auc_4dp_equal": false
+  },
+  "seed3": {
+   "layers": [
+    28,
+    27,
+    27,
+    22,
+    20
+   ],
+   "claimed_layers": [
+    28,
+    27,
+    27,
+    22,
+    20
+   ],
+   "layers_equal": true,
+   "inner_margin_top_vs_runnerup": [
+    0.004083823794154839,
+    0.003374805877611964,
+    0.0038883360990266125,
+    0.0008505435357992752,
+    0.0020326946756892283
+   ],
+   "max_abs_pred_diff": 0.08274821236239432,
+   "auc_refit": 0.931300229015778,
+   "auc_claimed_oof": 0.930976430976431,
+   "auc_4dp_equal": false
+  },
+  "seed4": {
+   "layers": [
+    18,
+    20,
+    21,
+    27,
+    27
+   ],
+   "claimed_layers": [
+    18,
+    20,
+    21,
+    27,
+    27
+   ],
+   "layers_equal": true,
+   "inner_margin_top_vs_runnerup": [
+    0.00044944004114899627,
+    0.0010368818994312967,
+    0.002970008660844292,
+    0.0034198401077387697,
+    0.0018532555558534725
+   ],
+   "max_abs_pred_diff": 0.011253656925014954,
+   "auc_refit": 0.9402648444652866,
+   "auc_claimed_oof": 0.9402611226487424,
+   "auc_4dp_equal": true
+  }
+ },
+ "mean5_refit": 0.9320694044349166,
+ "mean5_claimed": 0.9319398852191778,
+ "versions": {
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "scipy": "1.15.3",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "seconds": 33.0,
+ "all_pass": false,
+ "layers_equal_count": "25/25",
+ "max_abs_auc_diff_refit_vs_pod": 0.0003237980393470119,
+ "note": "Extra check on the Mac, outside the required checks. all_pass is False only because the Mac refit AUCs (sklearn 1.7.2, Accelerate) differ from the pinned Linux pod (sklearn 1.9.1) by up to 3.2e-04 per repeat, so the 4th decimal flips on some repeats; the Mac mean of five is 0.9321 vs 0.9319 on the pod. All 25 of 25 outer-fold layers chosen by my own inner selection equal the claimed layers. Same pattern as the Qwen2-Audio NeuroVoz refit. So this confirms the saved folds and the in-fold layer choice, not the 4th decimal."
+}
