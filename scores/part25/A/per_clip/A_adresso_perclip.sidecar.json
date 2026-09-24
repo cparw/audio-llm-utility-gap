@@ -1,0 +1,160 @@
+{
+ "dataset": "ADReSSo",
+ "n": 237,
+ "n_speakers": 237,
+ "n_pos": 122,
+ "probe_per_repeat_rerun": [
+  0.8722024233784746,
+  0.8664647184604419,
+  0.8824661439771917,
+  0.8739843193157519,
+  0.8809693513898789
+ ],
+ "probe_mean5_rerun": 0.8752173913043478,
+ "probe_per_repeat_table1": [
+  0.8722,
+  0.8665,
+  0.8825,
+  0.874,
+  0.881
+ ],
+ "probe_mean5_table1": 0.8752,
+ "mean5_rerun_minus_table1": 1.739130434785796e-05,
+ "matches_table1_4dp": true,
+ "per_repeat_4dp_equal_table1": [
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "original_script_nested_repeats_all_on_rerun_states": {
+  "mean": 0.8752,
+  "repeats": 5,
+  "per_repeat": [
+   0.8722,
+   0.8665,
+   0.8825,
+   0.874,
+   0.881
+  ],
+  "n": 237,
+  "n_points": 32
+ },
+ "original_script_matches_table1_json": true,
+ "zeroshot_auc_saved": 0.61503920171062,
+ "zeroshot_auc_rerun_extraction": 0.61503920171062,
+ "zeroshot_rerun_vs_saved": {
+  "n": 237,
+  "p_yes_exact_equal": 237,
+  "p_yes_max_abs_diff": 0.0,
+  "p_yes_median_abs_diff": 0.0,
+  "n_below_1e-9": 237,
+  "n_below_1e-4": 237,
+  "mass_max_abs_diff": 0.0,
+  "labels_equal": true,
+  "speakers_equal": true
+ },
+ "single_split_auc_rerun": 0.8898788310762652,
+ "single_split_auc_saved": 0.8898788310762652,
+ "single_split_max_abs_p_diff_vs_saved_oof": 0.0,
+ "single_split_layers_rerun": [
+  29,
+  29,
+  28,
+  26,
+  26
+ ],
+ "single_split_layers_saved": [
+  29,
+  29,
+  28,
+  26,
+  26
+ ],
+ "gap_point_rerun": 0.26017818959372785,
+ "gap_ci": [
+  0.1755085344483064,
+  0.33956551891989545
+ ],
+ "gap_point_table1": 0.26016079828938,
+ "probe_mean5_ci": [
+  0.8311007147200915,
+  0.917495307727611
+ ],
+ "zeroshot_ci": [
+  0.5432332651905852,
+  0.6889640923339982
+ ],
+ "usable_draws": 2000,
+ "text_single_split_gap": 0.26,
+ "interval_excludes_zero": true,
+ "layers_rerun": {
+  "seed0": [
+   29,
+   30,
+   28,
+   27,
+   28
+  ],
+  "seed1": [
+   25,
+   31,
+   28,
+   25,
+   25
+  ],
+  "seed2": [
+   26,
+   27,
+   27,
+   24,
+   29
+  ],
+  "seed3": [
+   25,
+   27,
+   29,
+   27,
+   28
+  ],
+  "seed4": [
+   27,
+   27,
+   24,
+   29,
+   29
+  ]
+ },
+ "pod_versions": {
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-57-generic-x86_64-with-glibc2.39",
+  "numpy": "2.1.2",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "joblib": "1.6.0"
+ },
+ "pod_env": "VERSIONS tf 5.5.4 torch 2.8.0+cu128 sk 1.9.1 np 2.1.2 sp 1.18.1 librosa 1.0.0 joblib 1.6.0 py 3.12.3 Linux-6.8.0-57-generic-x86_64-with-glibc2.39 cuda True NVIDIA H200",
+ "podverify_pass": true,
+ "files": {
+  "perclip_csv": "scores/part25/A/per_clip/A_adresso_perclip.csv",
+  "draws_npz": "scores/part25/A/draws/A_adresso_draws.npz",
+  "pod_oof_csv": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_enc_nested5_oof.csv",
+  "pod_json": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_enc_nested5.json",
+  "pod_verify_json": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_podverify.json",
+  "zeroshot_saved": "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv",
+  "single_split_saved": "<local data dir>/release/omni_final/omni_adresso_enc_nested_oof.csv",
+  "zs_compare": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_zs_compare.json",
+  "original_script_json": "scores/part25/A/pod/p25Ar-adresso/r2orig_adresso_nested_repeats.json",
+  "table1_json": "<local data dir>/release/omni_final/omni_adresso_nested_repeats.json",
+  "rerun_zeroshot": "scores/part25/A/pod/p25Ar-adresso/r2_omni_adresso_zeroshot_scores.csv",
+  "rerun_encstates": "<local data dir>/release_from_mac/scores/part25/A/retry_tf554/pull/p25Ar-adresso/out/r2_omni_adresso_encstates.npz"
+ },
+ "sha256": {
+  "pod_oof_csv": "da5a3587d1d7fb4af801b0ef85cc5b76b6a91eaffb905a11a56430b8201cccf1",
+  "zeroshot_saved": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+  "table1_json": "9f84041e55dd991114a08951a21bcd4de26c2953a130e12ebe99085b8fb7840b",
+  "perclip_csv": "8ca580ac103b4eff7e0fa3fe2cee4f9a184c650f36e7683c5dfc2be69f6b118b",
+  "rerun_encstates": "a138b7ed1ab70fd01ea515210a4dc7738d2b96fe333dd4361e833f70c908cc41"
+ }
+}
