@@ -1,0 +1,61 @@
+{
+ "id": "Cs_pg_answer",
+ "family": "CONTROLS",
+ "role": "sensitivity only",
+ "claim": "zero-shot answer after minus before normalisation, PC-GITA",
+ "tex_line": 149,
+ "tex_quote": "and the answer stays at 0.57",
+ "estimator": "two",
+ "value": -0.005408264462809842,
+ "lo": -0.04370077556610681,
+ "hi": 0.03573776916201958,
+ "excludes_zero": false,
+ "p": 0.7786106946526736,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 1222,
+ "n_ge0": 778,
+ "term_points": [
+  0.5674214876033058,
+  0.5728297520661156
+ ],
+ "n_clips": 1100,
+ "n_spk": 100,
+ "n_pos": 550,
+ "per_clip": "scores/part25/B/per_clip/B_Cs_pg_answer_perclip.csv",
+ "per_clip_sha256": "762965a1d0c49e00692a971c058606cc76b68431a626672031d534b34544a7dd",
+ "draws": "scores/part25/B/draws/B_Cs_pg_answer_draws.npz",
+ "draws_sha256": "97b965ebb78f03b1d61fca005c9dd6b47be6900cf17e6a93d492879d40b69d35",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_pg_after_zeroshot_scores.csv",
+   "sha256": "9256359f4a33d017ffcd6c11af941804f1b480732050e89471966468f2171dcc"
+  },
+  {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_pg_before_zeroshot_scores.csv",
+   "sha256": "6db5e24dc4e0eb7c04ed141ed7ec1cf49f718276d2cba46df409ebbf3e4ecd00"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.57,
+   "computed": 0.567421,
+   "rounds_to": 0.57,
+   "match": true
+  }
+ },
+ "note": "sensitivity member (tex says the answer stays)",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:35:11.593618Z"
+}

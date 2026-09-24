@@ -1,0 +1,63 @@
+{
+ "id": "R_edaic_kimi",
+ "family": "ARMS",
+ "role": "claimed",
+ "claim": "conflict minus agreement arm AUC, E-DAIC, Kimi-Audio",
+ "tex_line": 180,
+ "tex_quote": "Speaker-level bootstrap intervals for the difference between the two arms exclude zero for all six models on depression",
+ "estimator": "arms",
+ "value": -0.36778026473510794,
+ "lo": -0.43943881868036716,
+ "hi": -0.30200720169061257,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 2000,
+ "n_ge0": 0,
+ "term_points": [
+  0.5258466397613617,
+  0.8936269044964696
+ ],
+ "n_clips": 794,
+ "n_spk": 138,
+ "n_pos": 309,
+ "per_clip": "scores/part25/B/per_clip/B_R_edaic_kimi_perclip.csv",
+ "per_clip_sha256": "0cceb93bcb548594f4ab07f687d040c4e8e721a93c8b09b5a1818cf9a574be3d",
+ "draws": "scores/part25/B/draws/B_R_edaic_kimi_draws.npz",
+ "draws_sha256": "819518ac366d1a9fc929a463f631185aa9edffed747afb0b3e08ba3798b20583",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part17/T1_perclip_all966.csv",
+   "sha256": "2cb1fab543119ef96379bbaf2eb24e692fc3bd4be270c088276eadfa9d258b92"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.53,
+   "computed": 0.525847,
+   "rounds_to": 0.53,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.89,
+   "computed": 0.893627,
+   "rounds_to": 0.89,
+   "match": true
+  }
+ },
+ "note": "Table 2 row l.173: 0.53 / 0.89; agreement scored on the 311 distinct segments",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:18.296104Z"
+}

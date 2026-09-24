@@ -1,0 +1,59 @@
+{
+ "id": "Gs_edaic_ansstate",
+ "family": "GAPS",
+ "role": "sensitivity only",
+ "claim": "answer-state probe (mean of five) minus zero-shot answer, E-DAIC whole interview",
+ "tex_line": 149,
+ "tex_quote": "while a probe on the answer state matches the answer (0.84)",
+ "estimator": "mean5",
+ "value": -0.0006814557053790304,
+ "lo": -0.04550966749307937,
+ "hi": 0.04357614671356687,
+ "excludes_zero": false,
+ "p": 0.9855072463768116,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 1017,
+ "n_ge0": 985,
+ "term_points": [
+  0.8359141655792375,
+  0.8365956212846165,
+  0.8330433521821082,
+  0.8557343772654777,
+  0.8235464694794838,
+  0.8320284181528201,
+  0.8352182108162969
+ ],
+ "n_clips": 275,
+ "n_spk": 275,
+ "n_pos": 66,
+ "per_clip": "scores/part25/B/per_clip/B_Gs_edaic_ansstate_perclip.csv",
+ "per_clip_sha256": "f6cff99ad0e166d76fb667f555ff73d55a0ff8b4a74c5a070751ba4b83cbdcf1",
+ "draws": "scores/part25/B/draws/B_Gs_edaic_ansstate_draws.npz",
+ "draws_sha256": "057c52f2442224f2a037897677c34502c09ccb9d7ecc1eedf4ffa001437e4ccd",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release_from_mac/scores/part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv",
+   "sha256": "422acc656ee2ad9808b2d53e63f8fb3758c008b7ef3b9fade281cd935ce64e17"
+  },
+  {
+   "path": "scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv",
+   "sha256": "e13f360198811ff3061a222d9d9862aadc7a5de730f4e793f59b1139094e0e30"
+  }
+ ],
+ "tex_check": null,
+ "note": "tex reports it as matching (not significant); it contradicts the abstract's 'the answer beats every probe'",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:33:56.998174Z"
+}

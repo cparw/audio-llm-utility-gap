@@ -1,0 +1,74 @@
+{
+ "id": "G_pcgita",
+ "family": "GAPS",
+ "role": "claimed",
+ "claim": "encoder probe (mean of five) minus zero-shot answer, PC-GITA",
+ "tex_line": 149,
+ "tex_quote": "The paired difference $\\Delta$ excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL",
+ "estimator": "mean5",
+ "value": 0.3306495867768595,
+ "lo": 0.24979955940559587,
+ "hi": 0.40877956233147067,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 0,
+ "n_ge0": 2000,
+ "term_points": [
+  0.8941272727272727,
+  0.5634776859504131,
+  0.8881752066115702,
+  0.8900165289256198,
+  0.8925702479338843,
+  0.8954330578512398,
+  0.9044413223140497
+ ],
+ "n_clips": 1100,
+ "n_spk": 100,
+ "n_pos": 550,
+ "per_clip": "scores/part25/B/per_clip/B_G_pcgita_perclip.csv",
+ "per_clip_sha256": "20540dabb249a31600aa0f233d345f966f0c4523705ac7598805ece61ca4d934",
+ "draws": "scores/part25/B/draws/B_G_pcgita_draws.npz",
+ "draws_sha256": "3cdbec82665156b29d28fb3039cb1a65389cd81ee60874842c0514b71e02f43c",
+ "draws_source": "Track A saved draws (regenerated here and equal to 1e-9)",
+ "trackA_reuse": {
+  "file": "scores/part25/A/draws/A_pcgita_draws.npz",
+  "sha256": "a2bd42fb63e910cb8430e64f6c102880e23d1406c4b4e728ff91020c05a7400e",
+  "same_speaker_idx": true,
+  "same_nan_pattern": true,
+  "max_abs_draw_diff_vs_regenerated": 0.0,
+  "point_diff_saved": 0.3306495867768595,
+  "point_diff_here": 0.3306495867768595
+ },
+ "sources": [
+  {
+   "path": "scores/part25/A/per_clip/A_pcgita_perclip.csv",
+   "sha256": "993302c72862d106127ccc0827f1d4f6ec53915f8610d44ffbe148388febac2a"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+   "sha256": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3"
+  }
+ ],
+ "tex_check": {
+  "value": {
+   "tex": 0.33,
+   "computed": 0.33065,
+   "rounds_to": 0.33,
+   "match": true
+  }
+ },
+ "note": "also l.52 'the gap is significant on every Parkinson's and Alzheimer's set except MDVR-KCL'; probe vectors from the Track A re-extraction whose mean of five equals Table 1 to 4 dp",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:33:08.124531Z"
+}

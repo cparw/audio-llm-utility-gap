@@ -1,0 +1,79 @@
+{
+ "id": "F_lora_minus_projector",
+ "family": "FINE TUNE",
+ "role": "claimed",
+ "claim": "LoRA minus projector fine-tune, Pitt",
+ "tex_line": 226,
+ "tex_quote": "reaches 0.825 on Pitt, 0.06 [0.02, 0.10] above the projector run",
+ "estimator": "two",
+ "value": 0.057719876017047866,
+ "lo": 0.015354824049278376,
+ "hi": 0.1044231893807194,
+ "excludes_zero": true,
+ "p": 0.0079960019990005,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 7,
+ "n_ge0": 1993,
+ "term_points": [
+  0.8250000000000002,
+  0.7672801239829523
+ ],
+ "n_clips": 468,
+ "n_spk": 228,
+ "n_pos": 290,
+ "per_clip": "scores/part25/B/per_clip/B_F_lora_minus_projector_perclip.csv",
+ "per_clip_sha256": "53af5b11233e323089a0a7b9ccf4c47ae4e8a4a5fd579866b80bb78d61df65a9",
+ "draws": "scores/part25/B/draws/B_F_lora_minus_projector_draws.npz",
+ "draws_sha256": "dad6936662f33e14ac67339133e90f37e2422488eb1af67951e4f6c6bdb0414e",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD2/lora_pitt_oof.csv",
+   "sha256": "dda1ef283d07bcad8238eb74718a50c05cd1f3f2a17c934f98922bb335a8f24d"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omnisft_pitt_oof.csv",
+   "sha256": "fd715b2a5ec64118aa2e1a7d9b3e9c20b928b97fac67680b285e036d1c1550d2"
+  }
+ ],
+ "tex_check": {
+  "value": {
+   "tex": 0.06,
+   "computed": 0.05772,
+   "rounds_to": 0.06,
+   "match": true
+  },
+  "lo": {
+   "tex": 0.02,
+   "computed": 0.015355,
+   "rounds_to": 0.02,
+   "match": true
+  },
+  "hi": {
+   "tex": 0.1,
+   "computed": 0.104423,
+   "rounds_to": 0.1,
+   "match": true
+  },
+  "t0": {
+   "tex": 0.825,
+   "computed": 0.825,
+   "rounds_to": 0.825,
+   "match": true
+  }
+ },
+ "note": "",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:35:01.855515Z"
+}

@@ -1,0 +1,654 @@
+{
+ "tex_scan": [
+  {
+   "line": 26,
+   "text": "On depression the answer beats every probe."
+  },
+  {
+   "line": 26,
+   "text": "Where the words contradict a depression diagnosis, four of six models fall below chance."
+  },
+  {
+   "line": 52,
+   "text": "\\item We compare what an Audio LLM encodes against what it answers on seven clinical datasets, evaluate six Audio LLMs on the conflict sets to test whether the paralinguistic signal is utilized, and show that the gap is significant on every Parkinson's and Alzheimer's set except MDVR-KCL and reverse"
+  },
+  {
+   "line": 97,
+   "text": "For Alzheimer's disease, we score the words of each segment in the Pitt dataset \\cite{pitt} with a logistic regression trained on six fluency markers from the CHAT transcription codes \\cite{macwhinney2000chat,fraser2016linguistic}: type-token ratio, retraces, fillers, unintelligible tokens, errors a"
+  },
+  {
+   "line": 101,
+   "text": "Intervals are 95 percent percentile intervals from 2000 speaker draws, one draw per replicate for paired differences, and a difference is called significant when its interval excludes zero, without correction for multiple comparisons."
+  },
+  {
+   "line": 149,
+   "text": "The paired difference $\\Delta$ excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL (37 speakers), from 0.11 [0.05, 0.18] on Pitt to 0.33 on PC-GITA."
+  },
+  {
+   "line": 149,
+   "text": "The encoder probe is above it on every set, by 0.01 on MDVR-KCL to 0.18 on ADReSSo, and on PC-GITA and NeuroVoz the baseline itself beats the zero-shot answer by 0.27 and 0.15."
+  },
+  {
+   "line": 149,
+   "text": "Normalising loudness and noise floor brings them to 0.56 on PC-GITA, where the encoder probe falls to 0.83 ($-$0.07 [$-$0.12, $-$0.02]) and the answer stays at 0.57, and only to 0.60 on NeuroVoz, where the probe falls to 0.89 ($-$0.03 [$-$0.061, $-$0.001])."
+  },
+  {
+   "line": 149,
+   "text": "\\par\\par\\noindent\\textbf{Depression reverses.} On E-DAIC the language model probe reaches 0.74 and the encoder probe 0.60, both below the answer of 0.84 ($-$0.09 [$-$0.16, $-$0.03] and $-$0.24 [$-$0.32, $-$0.15]), while a probe on the answer state matches the answer (0.84)."
+  },
+  {
+   "line": 180,
+   "text": "A model attending to the voice should score similarly on both arms, whereas a model following the words should invert and fall below chance on the conflict arm."
+  },
+  {
+   "line": 180,
+   "text": "On the depression segments four of the six models fall below chance when the words point away from the label, while every model except Audio Flamingo 2 scores above 0.80 when the words and the label agree."
+  },
+  {
+   "line": 180,
+   "text": "Speaker-level bootstrap intervals for the difference between the two arms exclude zero for all six models on depression and for the three Qwen models on Pitt."
+  },
+  {
+   "line": 180,
+   "text": "The conflict arm stays below chance under the two other prompt wordings, at 0.34 and 0.24, and under sentiment thresholds of 0.60 and 0.80 (646 and 281 pairs), at 0.26 and 0.19."
+  },
+  {
+   "line": 180,
+   "text": "A second sentiment scorer (DistilBERT fine-tuned on SST-2) selects 1,334 pairs, on which the conflict arm scores 0.46 [0.42, 0.51], at chance rather than below it, and stays 0.39 below the agreement arm."
+  },
+  {
+   "line": 180,
+   "text": "On the Pitt dataset the three Qwen models drop by 0.17 to 0.29 from the agreement to the conflict arm but none falls significantly below chance, Kimi-Audio shows no drop, and the two Audio Flamingo models score 0.53 to 0.61 on both arms (Table~\\ref{tab:conflict})."
+  },
+  {
+   "line": 180,
+   "text": "Asking Qwen2.5-Omni to judge the voice alone moves its Pitt answer by $-$0.01 [$-$0.04, 0.02]."
+  },
+  {
+   "line": 226,
+   "text": "After fine-tuning the projector, AUC improves significantly on every dataset except MDVR-KCL, which has 37 speakers, and E-DAIC, which does not move (Table~\\ref{tab:main})."
+  },
+  {
+   "line": 226,
+   "text": "Low-rank adaptation (LoRA) \\cite{lora} of the language model (rank 8, all attention projections of the 28 layers, 5.0\\,M trainable parameters against 4.6\\,M for the projector) reaches 0.825 on Pitt, 0.06 [0.02, 0.10] above the projector run, and 0.55 on its conflict segments, and training both toget"
+  },
+  {
+   "line": 226,
+   "text": "On E-DAIC the retrained projector stays at the zero-shot level (+0.02 [$-$0.01, 0.05], and 0.82 with a second seed), consistent with a task the words carry more than the voice."
+  },
+  {
+   "line": 244,
+   "text": "To alleviate this problem and narrow the utility gap, we performed a supervised fine-tuning limited to the projector layer, keeping the rest of the model's weights frozen, resulting in a significant performance gain in AD and PD detection, but not in MDD, where the answer already follows the words."
+  }
+ ],
+ "omni_final_files_newer_than_B_start": 0,
+ "ALL_PASS": true,
+ "fails": [],
+ "n_rows": 41,
+ "recomputed": {
+  "G_pcgita": {
+   "kind": "mean5",
+   "value": 0.3306495867768594,
+   "lo": 0.24979955940559564,
+   "hi": 0.40877956233147067,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 1100,
+   "n_spk": 100,
+   "max_draw_diff": 4.440892098500626e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.0069965017491254375,
+   "holm_full": 0.008995502248875561
+  },
+  "G_neurovoz": {
+   "kind": "mean5",
+   "value": 0.2261953854437273,
+   "lo": 0.17349622032564138,
+   "hi": 0.28505668553264507,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 1270,
+   "n_spk": 107,
+   "max_draw_diff": 4.440892098500626e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.0069965017491254375,
+   "holm_full": 0.008995502248875561
+  },
+  "G_adresso": {
+   "kind": "mean5",
+   "value": 0.26017818959372774,
+   "lo": 0.1755085344483064,
+   "hi": 0.33956551891989534,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 237,
+   "n_spk": 237,
+   "max_draw_diff": 4.440892098500626e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.0069965017491254375,
+   "holm_full": 0.008995502248875561
+  },
+  "G_adress2020": {
+   "kind": "mean5",
+   "value": 0.18017751479289945,
+   "lo": 0.07660302294164079,
+   "hi": 0.2804666484587165,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 156,
+   "n_spk": 156,
+   "max_draw_diff": 5.551115123125783e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.0069965017491254375,
+   "holm_full": 0.008995502248875561
+  },
+  "G_pitt": {
+   "kind": "mean5",
+   "value": 0.11280123982952339,
+   "lo": 0.04550149479611408,
+   "hi": 0.1768100605302147,
+   "p": 0.0029985007496251873,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 4.440892098500626e-16,
+   "max_score_diff": 8.326672684688674e-17,
+   "holm_primary": 0.0069965017491254375,
+   "holm_full": 0.01199400299850075
+  },
+  "G_edaic_llm": {
+   "kind": "mean5",
+   "value": -0.09288096273742208,
+   "lo": -0.16093403148149338,
+   "hi": -0.025735708894878803,
+   "p": 0.0079960019990005,
+   "usable": 2000,
+   "n_clips": 275,
+   "n_spk": 275,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.0079960019990005,
+   "holm_full": 0.0239880059970015
+  },
+  "G_edaic_enc": {
+   "kind": "mean5",
+   "value": -0.23848049876758004,
+   "lo": -0.32436175626283104,
+   "hi": -0.15047018915731827,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 275,
+   "n_spk": 275,
+   "max_draw_diff": 4.440892098500626e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.0069965017491254375,
+   "holm_full": 0.008995502248875561
+  },
+  "Gs_edaic_ansstate": {
+   "kind": "mean5",
+   "value": -0.0006814557053790304,
+   "lo": -0.04550966749307937,
+   "hi": 0.04357614671356697,
+   "p": 0.9855072463768116,
+   "usable": 2000,
+   "n_clips": 275,
+   "n_spk": 275,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_full": 1.0
+  },
+  "Gs_kcl_single": {
+   "kind": "two",
+   "value": 0.0625,
+   "lo": -0.18129984051036677,
+   "hi": 0.2900227272727272,
+   "p": 0.6086956521739131,
+   "usable": 2000,
+   "n_clips": 37,
+   "n_spk": 37,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_full": 1.0
+  },
+  "R_edaic_q2a": {
+   "kind": "arms",
+   "value": -0.7328192344566308,
+   "lo": -0.7779965200759946,
+   "hi": -0.6837209048903733,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 794,
+   "n_spk": 138,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.01199400299850075
+  },
+  "R_edaic_o25": {
+   "kind": "arms",
+   "value": -0.7428749373451724,
+   "lo": -0.7868938951339735,
+   "hi": -0.6944484040256372,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 794,
+   "n_spk": 138,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.01199400299850075
+  },
+  "R_edaic_q3o": {
+   "kind": "arms",
+   "value": -0.6719322152197484,
+   "lo": -0.7266207921961361,
+   "hi": -0.6105302443655257,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 794,
+   "n_spk": 138,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.01199400299850075
+  },
+  "R_edaic_af2": {
+   "kind": "arms",
+   "value": -0.10112514931361871,
+   "lo": -0.16472734981618792,
+   "hi": -0.0383837623489771,
+   "p": 0.00399800099950025,
+   "usable": 2000,
+   "n_clips": 794,
+   "n_spk": 138,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.019990004997501247
+  },
+  "R_edaic_af3": {
+   "kind": "arms",
+   "value": -0.4189537626771085,
+   "lo": -0.4877569130185091,
+   "hi": -0.3461386092550403,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 794,
+   "n_spk": 138,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.01199400299850075
+  },
+  "R_edaic_kimi": {
+   "kind": "arms",
+   "value": -0.36778026473510816,
+   "lo": -0.43943881868036727,
+   "hi": -0.30200720169061257,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 794,
+   "n_spk": 138,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.01199400299850075
+  },
+  "R_pitt_q2a": {
+   "kind": "arms",
+   "value": -0.2852511602753544,
+   "lo": -0.3949687042417685,
+   "hi": -0.14847664246429185,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 2.7755575615628914e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.01199400299850075
+  },
+  "R_pitt_o25": {
+   "kind": "arms",
+   "value": -0.1731413241574784,
+   "lo": -0.2958098595289465,
+   "hi": -0.03918389355242107,
+   "p": 0.01199400299850075,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 8.326672684688674e-17,
+   "holm_primary": 0.01199400299850075,
+   "holm_full": 0.047976011994003
+  },
+  "R_pitt_q3o": {
+   "kind": "arms",
+   "value": -0.21652859163467375,
+   "lo": -0.32422614340770245,
+   "hi": -0.10517054551378692,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.01199400299850075
+  },
+  "Rs_pitt_af2": {
+   "kind": "arms",
+   "value": 0.04982289134749496,
+   "lo": -0.06527613576302035,
+   "hi": 0.17350990487518403,
+   "p": 0.39280359820089955,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 5.551115123125783e-17,
+   "holm_full": 1.0
+  },
+  "Rs_pitt_af3": {
+   "kind": "arms",
+   "value": 0.02200913252800396,
+   "lo": -0.08463830003982595,
+   "hi": 0.13571749838128444,
+   "p": 0.6526736631684158,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 8.326672684688674e-17,
+   "holm_full": 1.0
+  },
+  "Rs_pitt_kimi": {
+   "kind": "arms",
+   "value": -0.0029877459639985338,
+   "lo": -0.11338938461733043,
+   "hi": 0.10652876469905792,
+   "p": 0.9385307346326837,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 4.440892098500626e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_full": 1.0
+  },
+  "F_pcgita": {
+   "kind": "two",
+   "value": 0.32274049586776854,
+   "lo": 0.23914726944027045,
+   "hi": 0.40396588119392957,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 1100,
+   "n_spk": 100,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.005997001499250375,
+   "holm_full": 0.0079960019990005
+  },
+  "F_neurovoz": {
+   "kind": "two",
+   "value": 0.20775428070932855,
+   "lo": 0.15881803305766773,
+   "hi": 0.2578415910187822,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 1270,
+   "n_spk": 107,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.005997001499250375,
+   "holm_full": 0.0079960019990005
+  },
+  "F_pitt": {
+   "kind": "two",
+   "value": 0.10951181712514524,
+   "lo": 0.04541749774549669,
+   "hi": 0.17282380515509438,
+   "p": 0.0029985007496251873,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 4.440892098500626e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.014992503748125937
+  },
+  "F_adresso": {
+   "kind": "two",
+   "value": 0.2095509622238061,
+   "lo": 0.12938243308983838,
+   "hi": 0.28674672933358264,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 237,
+   "n_spk": 237,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.005997001499250375,
+   "holm_full": 0.0079960019990005
+  },
+  "F_adress2020": {
+   "kind": "two",
+   "value": 0.14431295200525973,
+   "lo": 0.04895805776014106,
+   "hi": 0.2369567901234567,
+   "p": 0.0029985007496251873,
+   "usable": 2000,
+   "n_clips": 156,
+   "n_spk": 156,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.014992503748125937
+  },
+  "Fs_kcl": {
+   "kind": "two",
+   "value": -0.014880952380952439,
+   "lo": -0.27088068181818187,
+   "hi": 0.2363840326340325,
+   "p": 0.9335332333833083,
+   "usable": 2000,
+   "n_clips": 37,
+   "n_spk": 37,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_full": 0.9335332333833083
+  },
+  "Fs_edaic_seed0": {
+   "kind": "two",
+   "value": 0.022292301000435,
+   "lo": -0.006375501222408933,
+   "hi": 0.05467220381110185,
+   "p": 0.12493753123438281,
+   "usable": 2000,
+   "n_clips": 275,
+   "n_spk": 275,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_full": 0.24987506246876562
+  },
+  "F_lora_minus_projector": {
+   "kind": "two",
+   "value": 0.057719876017047644,
+   "lo": 0.015354824049278482,
+   "hi": 0.10442318938071962,
+   "p": 0.0079960019990005,
+   "usable": 2000,
+   "n_clips": 468,
+   "n_spk": 228,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.008995502248875561,
+   "holm_full": 0.0239880059970015
+  },
+  "C_pg_probe_drop": {
+   "kind": "two",
+   "value": -0.06607272727272728,
+   "lo": -0.11807733101505073,
+   "hi": -0.018009420691348362,
+   "p": 0.012993503248375811,
+   "usable": 2000,
+   "n_clips": 1100,
+   "n_spk": 100,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.025987006496751622,
+   "holm_full": 0.038980509745127435
+  },
+  "C_nv_probe_drop": {
+   "kind": "two",
+   "value": -0.030817881591647223,
+   "lo": -0.06081860111939197,
+   "hi": -0.0012329532883262712,
+   "p": 0.03698150924537731,
+   "usable": 2000,
+   "n_clips": 1270,
+   "n_spk": 107,
+   "max_draw_diff": 3.3306690738754696e-16,
+   "max_score_diff": 1.1102230246251565e-16,
+   "holm_primary": 0.03698150924537731,
+   "holm_full": 0.07396301849075462
+  },
+  "Cs_pg_answer": {
+   "kind": "two",
+   "value": -0.005408264462809953,
+   "lo": -0.04370077556610692,
+   "hi": 0.03573776916201947,
+   "p": 0.7786106946526736,
+   "usable": 2000,
+   "n_clips": 1100,
+   "n_spk": 100,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 8.326672684688674e-17,
+   "holm_full": 0.7786106946526736
+  },
+  "X_edaic_conf_q2a": {
+   "kind": "one",
+   "value": -0.2719775399192841,
+   "lo": -0.3183724186364256,
+   "hi": -0.22183601229199432,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 483,
+   "n_spk": 138,
+   "max_draw_diff": 1.1102230246251565e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.00399800099950025,
+   "holm_full": 0.005997001499250375
+  },
+  "X_edaic_conf_o25": {
+   "kind": "one",
+   "value": -0.278224249868398,
+   "lo": -0.31713538502155686,
+   "hi": -0.23678878395590047,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 483,
+   "n_spk": 138,
+   "max_draw_diff": 1.1102230246251565e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.00399800099950025,
+   "holm_full": 0.005997001499250375
+  },
+  "X_edaic_conf_q3o": {
+   "kind": "one",
+   "value": -0.19924548166344974,
+   "lo": -0.25458159392218666,
+   "hi": -0.1358760631520076,
+   "p": 0.0009995002498750624,
+   "usable": 2000,
+   "n_clips": 483,
+   "n_spk": 138,
+   "max_draw_diff": 1.1102230246251565e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.00399800099950025,
+   "holm_full": 0.005997001499250375
+  },
+  "X_edaic_conf_af2": {
+   "kind": "one",
+   "value": 0.02856641516055447,
+   "lo": -0.04884876427446902,
+   "hi": 0.10147749074472516,
+   "p": 0.48075962018990503,
+   "usable": 2000,
+   "n_clips": 483,
+   "n_spk": 138,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 0.0,
+   "holm_full": 0.9615192403798101
+  },
+  "X_edaic_conf_af3": {
+   "kind": "one",
+   "value": -0.07646955606246708,
+   "lo": -0.13941406544354856,
+   "hi": -0.01199044493690117,
+   "p": 0.01999000499750125,
+   "usable": 2000,
+   "n_clips": 483,
+   "n_spk": 138,
+   "max_draw_diff": 1.1102230246251565e-16,
+   "max_score_diff": 0.0,
+   "holm_primary": 0.01999000499750125,
+   "holm_full": 0.05997001499250375
+  },
+  "X_edaic_conf_kimi": {
+   "kind": "one",
+   "value": 0.02584663976136159,
+   "lo": -0.049934184198636475,
+   "hi": 0.09771398944193047,
+   "p": 0.5137431284357821,
+   "usable": 2000,
+   "n_clips": 483,
+   "n_spk": 138,
+   "max_draw_diff": 1.1102230246251565e-16,
+   "max_score_diff": 0.0,
+   "holm_full": 0.9615192403798101
+  },
+  "X_pitt_conf_q2a": {
+   "kind": "one",
+   "value": -0.08679867986798678,
+   "lo": -0.19949329555307815,
+   "hi": 0.042300224364034016,
+   "p": 0.175912043978011,
+   "usable": 2000,
+   "n_clips": 146,
+   "n_spk": 100,
+   "max_draw_diff": 1.1102230246251565e-16,
+   "max_score_diff": 1.1102230246251565e-16
+  },
+  "X_pitt_conf_o25": {
+   "kind": "one",
+   "value": 0.03223322332233225,
+   "lo": -0.07844984272973402,
+   "hi": 0.14469439131413142,
+   "p": 0.5507246376811594,
+   "usable": 2000,
+   "n_clips": 146,
+   "n_spk": 100,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 8.326672684688674e-17
+  },
+  "X_pitt_conf_q3o": {
+   "kind": "one",
+   "value": 0.10660066006600655,
+   "lo": -0.00443229685659934,
+   "hi": 0.21229133060357455,
+   "p": 0.06496751624187906,
+   "usable": 2000,
+   "n_clips": 146,
+   "n_spk": 100,
+   "max_draw_diff": 2.220446049250313e-16,
+   "max_score_diff": 1.1102230246251565e-16
+  }
+ },
+ "written_utc": "2026-09-24T03:36:01.634970Z",
+ "method": "independent rebuild from original sources; Mann-Whitney rank AUC; sorted() speaker order; own p, percentile and Holm",
+ "versions": {
+  "numpy": "2.2.6",
+  "pandas": "2.3.3"
+ }
+}

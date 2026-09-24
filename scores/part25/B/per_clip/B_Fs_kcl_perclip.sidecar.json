@@ -1,0 +1,67 @@
+{
+ "id": "Fs_kcl",
+ "family": "FINE TUNE",
+ "role": "sensitivity only",
+ "claim": "projector fine-tune minus zero-shot answer, MDVR-KCL",
+ "tex_line": 226,
+ "tex_quote": "After fine-tuning the projector, AUC improves significantly on every dataset except MDVR-KCL",
+ "estimator": "two",
+ "value": -0.014880952380952439,
+ "lo": -0.27088068181818187,
+ "hi": 0.2363840326340325,
+ "excludes_zero": false,
+ "p": 0.9335332333833083,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 1097,
+ "n_ge0": 933,
+ "term_points": [
+  0.6994047619047619,
+  0.7142857142857143
+ ],
+ "n_clips": 37,
+ "n_spk": 37,
+ "n_pos": 16,
+ "per_clip": "scores/part25/B/per_clip/B_Fs_kcl_perclip.csv",
+ "per_clip_sha256": "2ddf1253cdafebaee3acfa2c5dfc91d1bea70ff3b5285e3259d39471b681ac8a",
+ "draws": "scores/part25/B/draws/B_Fs_kcl_draws.npz",
+ "draws_sha256": "0d9d85e83de4d6dcd669d7c73b30060badb7d09eb9537280be2d627cd21ea05f",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omnisft_kcl_oof.csv",
+   "sha256": "0eaf5c84702a64e6a5a7d628c88e312cb4b171f4685b9aac68392262bfbfa631"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv",
+   "sha256": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.7,
+   "computed": 0.699405,
+   "rounds_to": 0.7,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.71,
+   "computed": 0.714286,
+   "rounds_to": 0.71,
+   "match": true
+  }
+ },
+ "note": "Table 1 l.120-130: 0.71 -> 0.70; also abstract l.26, l.53, l.244; sensitivity member (tex names it as the exception)",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:55.615631Z"
+}

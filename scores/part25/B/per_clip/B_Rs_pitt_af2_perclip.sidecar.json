@@ -1,0 +1,71 @@
+{
+ "id": "Rs_pitt_af2",
+ "family": "ARMS",
+ "role": "sensitivity only",
+ "claim": "conflict minus agreement arm AUC, Pitt, Audio Flamingo 2",
+ "tex_line": 180,
+ "tex_quote": "Kimi-Audio shows no drop, and the two Audio Flamingo models score 0.53 to 0.61 on both arms",
+ "estimator": "arms",
+ "value": 0.04982289134749507,
+ "lo": -0.06527613576302035,
+ "hi": 0.17350990487518397,
+ "excludes_zero": false,
+ "p": 0.39280359820089955,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 392,
+ "n_ge0": 1608,
+ "term_points": [
+  0.5834983498349836,
+  0.5336754584874885
+ ],
+ "n_clips": 468,
+ "n_spk": 228,
+ "n_pos": 290,
+ "per_clip": "scores/part25/B/per_clip/B_Rs_pitt_af2_perclip.csv",
+ "per_clip_sha256": "75accd973c713f6833002587e96f299ffc324df01c1697f9376fbfe6bf6c834e",
+ "draws": "scores/part25/B/draws/B_Rs_pitt_af2_draws.npz",
+ "draws_sha256": "04f6119fea5bd775b6e58f1f3b80b048a052cb451f8384162e5a9c5de88cd611",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "scores/part20/POD4c/af2_orig30_conflict.csv",
+   "sha256": "b89312b08aa264156c1a1d0fa1bdaba37e378373ead14af58b7672605b07f2b2"
+  },
+  {
+   "path": "scores/part20/POD4c/af2_orig30_agreement.csv",
+   "sha256": "41a18e4c468dbe35d991f25bf3aae0b621294768a9e813eb6230d2ecd5c74008"
+  },
+  {
+   "path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.58,
+   "computed": 0.583498,
+   "rounds_to": 0.58,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.53,
+   "computed": 0.533675,
+   "rounds_to": 0.53,
+   "match": true
+  }
+ },
+ "note": "Table 2 row l.171: 0.58 / 0.53; arm from pitt_conflict_manifest.csv set column; sensitivity member (tex reports no significant drop)",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:30.445180Z"
+}

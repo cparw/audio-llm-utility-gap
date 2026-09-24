@@ -1,0 +1,89 @@
+GAPS      G_pcgita                   claim +0.3306 [+0.2498, +0.4088] p=0.0010 B=2000 deg=0 terms=[0.8941, 0.5635] spk=100 n=1100 tex:value=OK
+GAPS      G_neurovoz                 claim +0.2262 [+0.1735, +0.2851] p=0.0010 B=2000 deg=0 terms=[0.9213, 0.6951] spk=107 n=1270
+GAPS      G_adresso                  claim +0.2602 [+0.1755, +0.3396] p=0.0010 B=2000 deg=0 terms=[0.8752, 0.615] spk=237 n=237
+GAPS      G_adress2020               claim +0.1802 [+0.0766, +0.2805] p=0.0010 B=2000 deg=0 terms=[0.8043, 0.6241] spk=156 n=156
+GAPS      G_pitt                     claim +0.1128 [+0.0455, +0.1768] p=0.0030 B=2000 deg=0 terms=[0.7706, 0.6578] spk=228 n=468 tex:value=OK,lo=OK,hi=OK
+GAPS      G_edaic_llm                claim -0.0929 [-0.1609, -0.0257] p=0.0080 B=2000 deg=0 terms=[0.7437, 0.8366] spk=275 n=275 tex:value=OK,lo=OK,hi=OK
+GAPS      G_edaic_enc                claim -0.2385 [-0.3244, -0.1505] p=0.0010 B=2000 deg=0 terms=[0.5981, 0.8366] spk=275 n=275 tex:value=OK,lo=OK,hi=OK
+GAPS      Gs_edaic_ansstate          sensi -0.0007 [-0.0455, +0.0436] p=0.9855 B=2000 deg=0 terms=[0.8359, 0.8366] spk=275 n=275
+GAPS      Gs_kcl_single              sensi +0.0625 [-0.1813, +0.2900] p=0.6087 B=2000 deg=0 terms=[0.7768, 0.7143] spk=37 n=37
+ARMS      R_edaic_q2a                claim -0.7328 [-0.7780, -0.6837] p=0.0010 B=2000 deg=0 terms=[0.228, 0.9608] spk=138 n=794 tex:t0=OK,t1=OK
+ARMS      R_edaic_o25                claim -0.7429 [-0.7869, -0.6944] p=0.0010 B=2000 deg=0 terms=[0.2218, 0.9647] spk=138 n=794 tex:t0=OK,t1=OK
+ARMS      R_edaic_q3o                claim -0.6719 [-0.7266, -0.6105] p=0.0010 B=2000 deg=0 terms=[0.3008, 0.9727] spk=138 n=794 tex:t0=OK,t1=OK
+ARMS      R_edaic_af2                claim -0.1011 [-0.1647, -0.0384] p=0.0040 B=2000 deg=0 terms=[0.5286, 0.6297] spk=138 n=794 tex:t0=OK,t1=OK
+ARMS      R_edaic_af3                claim -0.4190 [-0.4878, -0.3461] p=0.0010 B=2000 deg=0 terms=[0.4235, 0.8425] spk=138 n=794 tex:t0=OK,t1=OK
+ARMS      R_edaic_kimi               claim -0.3678 [-0.4394, -0.3020] p=0.0010 B=2000 deg=0 terms=[0.5258, 0.8936] spk=138 n=794 tex:t0=OK,t1=OK
+ARMS      R_pitt_q2a                 claim -0.2853 [-0.3950, -0.1485] p=0.0010 B=2000 deg=0 terms=[0.4132, 0.6985] spk=228 n=468 tex:t0=OK,t1=OK
+ARMS      R_pitt_o25                 claim -0.1731 [-0.2958, -0.0392] p=0.0120 B=2000 deg=0 terms=[0.5322, 0.7054] spk=228 n=468 tex:t0=OK,t1=OK
+ARMS      R_pitt_q3o                 claim -0.2165 [-0.3242, -0.1052] p=0.0010 B=2000 deg=0 terms=[0.6066, 0.8231] spk=228 n=468 tex:t0=OK,t1=OK
+ARMS      Rs_pitt_af2                sensi +0.0498 [-0.0653, +0.1735] p=0.3928 B=2000 deg=0 terms=[0.5835, 0.5337] spk=228 n=468 tex:t0=OK,t1=OK
+ARMS      Rs_pitt_af3                sensi +0.0220 [-0.0846, +0.1357] p=0.6527 B=2000 deg=0 terms=[0.6075, 0.5855] spk=228 n=468 tex:t0=OK,t1=OK
+ARMS      Rs_pitt_kimi               sensi -0.0030 [-0.1134, +0.1065] p=0.9385 B=2000 deg=0 terms=[0.7197, 0.7227] spk=228 n=468 tex:t0=OK,t1=OK
+FINE TUNE F_pcgita                   claim +0.3227 [+0.2391, +0.4040] p=0.0010 B=2000 deg=0 terms=[0.8862, 0.5635] spk=100 n=1100 tex:t0=OK,t1=OK
+FINE TUNE F_neurovoz                 claim +0.2078 [+0.1588, +0.2578] p=0.0010 B=2000 deg=0 terms=[0.9028, 0.6951] spk=107 n=1270 tex:t0=OK,t1=OK
+FINE TUNE F_pitt                     claim +0.1095 [+0.0454, +0.1728] p=0.0030 B=2000 deg=0 terms=[0.7673, 0.6578] spk=228 n=468 tex:t0=OK,t1=OK
+FINE TUNE F_adresso                  claim +0.2096 [+0.1294, +0.2867] p=0.0010 B=2000 deg=0 terms=[0.8246, 0.615] spk=237 n=237 tex:t0=OK,t1=OK
+FINE TUNE F_adress2020               claim +0.1443 [+0.0490, +0.2370] p=0.0030 B=2000 deg=0 terms=[0.7684, 0.6241] spk=156 n=156 tex:t0=OK,t1=OK
+FINE TUNE Fs_kcl                     sensi -0.0149 [-0.2709, +0.2364] p=0.9335 B=2000 deg=0 terms=[0.6994, 0.7143] spk=37 n=37 tex:t0=OK,t1=OK
+FINE TUNE Fs_edaic_seed0             sensi +0.0223 [-0.0064, +0.0547] p=0.1249 B=2000 deg=0 terms=[0.8589, 0.8366] spk=275 n=275 tex:value=OK,lo=OK,hi=OK
+FINE TUNE F_lora_minus_projector     claim +0.0577 [+0.0154, +0.1044] p=0.0080 B=2000 deg=0 terms=[0.825, 0.7673] spk=228 n=468 tex:value=OK,lo=OK,hi=OK,t0=OK
+CONTROLS  C_pg_probe_drop            claim -0.0661 [-0.1181, -0.0180] p=0.0130 B=2000 deg=0 terms=[0.8298, 0.8959] spk=100 n=1100 tex:value=OK,lo=OK,hi=OK,t0=OK
+CONTROLS  C_nv_probe_drop            claim -0.0308 [-0.0608, -0.0012] p=0.0370 B=2000 deg=0 terms=[0.8924, 0.9233] spk=107 n=1270 tex:value=OK,lo=OK,hi=OK,t0=OK
+CONTROLS  Cs_pg_answer               sensi -0.0054 [-0.0437, +0.0357] p=0.7786 B=2000 deg=0 terms=[0.5674, 0.5728] spk=100 n=1100 tex:t0=OK
+EXTRA CHANCE X_edaic_conf_q2a           claim -0.2720 [-0.3184, -0.2218] p=0.0010 B=2000 deg=0 terms=[0.228, 0.5] spk=138 n=483 tex:t0=OK
+EXTRA CHANCE X_edaic_conf_o25           claim -0.2782 [-0.3171, -0.2368] p=0.0010 B=2000 deg=0 terms=[0.2218, 0.5] spk=138 n=483 tex:t0=OK
+EXTRA CHANCE X_edaic_conf_q3o           claim -0.1992 [-0.2546, -0.1359] p=0.0010 B=2000 deg=0 terms=[0.3008, 0.5] spk=138 n=483 tex:t0=OK
+EXTRA CHANCE X_edaic_conf_af2           sensi +0.0286 [-0.0488, +0.1015] p=0.4808 B=2000 deg=0 terms=[0.5286, 0.5] spk=138 n=483 tex:t0=OK
+EXTRA CHANCE X_edaic_conf_af3           claim -0.0765 [-0.1394, -0.0120] p=0.0200 B=2000 deg=0 terms=[0.4235, 0.5] spk=138 n=483 tex:t0=OK
+EXTRA CHANCE X_edaic_conf_kimi          sensi +0.0258 [-0.0499, +0.0977] p=0.5137 B=2000 deg=0 terms=[0.5258, 0.5] spk=138 n=483 tex:t0=OK
+EXTRA CHANCE X_pitt_conf_q2a            check -0.0868 [-0.1995, +0.0423] p=0.1759 B=2000 deg=0 terms=[0.4132, 0.5] spk=100 n=146 tex:t0=OK
+EXTRA CHANCE X_pitt_conf_o25            check +0.0322 [-0.0784, +0.1447] p=0.5507 B=2000 deg=0 terms=[0.5322, 0.5] spk=100 n=146 tex:t0=OK
+EXTRA CHANCE X_pitt_conf_q3o            check +0.1066 [-0.0044, +0.2123] p=0.0650 B=2000 deg=0 terms=[0.6066, 0.5] spk=100 n=146 tex:t0=OK
+
+      family             role                     id  tex_line                   value_ci      p holm_p survives holm_p_full survives_full
+        GAPS          claimed               G_pcgita       149 +0.3306 [+0.2498, +0.4088] 0.0010 0.0070      yes      0.0090           yes
+        GAPS          claimed             G_neurovoz       149 +0.2262 [+0.1735, +0.2851] 0.0010 0.0070      yes      0.0090           yes
+        GAPS          claimed              G_adresso       149 +0.2602 [+0.1755, +0.3396] 0.0010 0.0070      yes      0.0090           yes
+        GAPS          claimed           G_adress2020       149 +0.1802 [+0.0766, +0.2805] 0.0010 0.0070      yes      0.0090           yes
+        GAPS          claimed                 G_pitt       149 +0.1128 [+0.0455, +0.1768] 0.0030 0.0070      yes      0.0120           yes
+        GAPS          claimed            G_edaic_llm       149 -0.0929 [-0.1609, -0.0257] 0.0080 0.0080      yes      0.0240           yes
+        GAPS          claimed            G_edaic_enc       149 -0.2385 [-0.3244, -0.1505] 0.0010 0.0070      yes      0.0090           yes
+        GAPS sensitivity only      Gs_edaic_ansstate       149 -0.0007 [-0.0455, +0.0436] 0.9855                      1.0000            no
+        GAPS sensitivity only          Gs_kcl_single       149 +0.0625 [-0.1813, +0.2900] 0.6087                      1.0000            no
+        ARMS          claimed            R_edaic_q2a       180 -0.7328 [-0.7780, -0.6837] 0.0010 0.0090      yes      0.0120           yes
+        ARMS          claimed            R_edaic_o25       180 -0.7429 [-0.7869, -0.6944] 0.0010 0.0090      yes      0.0120           yes
+        ARMS          claimed            R_edaic_q3o       180 -0.6719 [-0.7266, -0.6105] 0.0010 0.0090      yes      0.0120           yes
+        ARMS          claimed            R_edaic_af2       180 -0.1011 [-0.1647, -0.0384] 0.0040 0.0090      yes      0.0200           yes
+        ARMS          claimed            R_edaic_af3       180 -0.4190 [-0.4878, -0.3461] 0.0010 0.0090      yes      0.0120           yes
+        ARMS          claimed           R_edaic_kimi       180 -0.3678 [-0.4394, -0.3020] 0.0010 0.0090      yes      0.0120           yes
+        ARMS          claimed             R_pitt_q2a       180 -0.2853 [-0.3950, -0.1485] 0.0010 0.0090      yes      0.0120           yes
+        ARMS          claimed             R_pitt_o25       180 -0.1731 [-0.2958, -0.0392] 0.0120 0.0120      yes      0.0480           yes
+        ARMS          claimed             R_pitt_q3o       180 -0.2165 [-0.3242, -0.1052] 0.0010 0.0090      yes      0.0120           yes
+        ARMS sensitivity only            Rs_pitt_af2       180 +0.0498 [-0.0653, +0.1735] 0.3928                      1.0000            no
+        ARMS sensitivity only            Rs_pitt_af3       180 +0.0220 [-0.0846, +0.1357] 0.6527                      1.0000            no
+        ARMS sensitivity only           Rs_pitt_kimi       180 -0.0030 [-0.1134, +0.1065] 0.9385                      1.0000            no
+   FINE TUNE          claimed               F_pcgita       226 +0.3227 [+0.2391, +0.4040] 0.0010 0.0060      yes      0.0080           yes
+   FINE TUNE          claimed             F_neurovoz       226 +0.2078 [+0.1588, +0.2578] 0.0010 0.0060      yes      0.0080           yes
+   FINE TUNE          claimed                 F_pitt       226 +0.1095 [+0.0454, +0.1728] 0.0030 0.0090      yes      0.0150           yes
+   FINE TUNE          claimed              F_adresso       226 +0.2096 [+0.1294, +0.2867] 0.0010 0.0060      yes      0.0080           yes
+   FINE TUNE          claimed           F_adress2020       226 +0.1443 [+0.0490, +0.2370] 0.0030 0.0090      yes      0.0150           yes
+   FINE TUNE sensitivity only                 Fs_kcl       226 -0.0149 [-0.2709, +0.2364] 0.9335                      0.9335            no
+   FINE TUNE sensitivity only         Fs_edaic_seed0       226 +0.0223 [-0.0064, +0.0547] 0.1249                      0.2499            no
+   FINE TUNE          claimed F_lora_minus_projector       226 +0.0577 [+0.0154, +0.1044] 0.0080 0.0090      yes      0.0240           yes
+    CONTROLS          claimed        C_pg_probe_drop       149 -0.0661 [-0.1181, -0.0180] 0.0130 0.0260      yes      0.0390           yes
+    CONTROLS          claimed        C_nv_probe_drop       149 -0.0308 [-0.0608, -0.0012] 0.0370 0.0370      yes      0.0740            no
+    CONTROLS sensitivity only           Cs_pg_answer       149 -0.0054 [-0.0437, +0.0357] 0.7786                      0.7786            no
+EXTRA CHANCE          claimed       X_edaic_conf_q2a       180 -0.2720 [-0.3184, -0.2218] 0.0010 0.0040      yes      0.0060           yes
+EXTRA CHANCE          claimed       X_edaic_conf_o25       180 -0.2782 [-0.3171, -0.2368] 0.0010 0.0040      yes      0.0060           yes
+EXTRA CHANCE          claimed       X_edaic_conf_q3o       180 -0.1992 [-0.2546, -0.1359] 0.0010 0.0040      yes      0.0060           yes
+EXTRA CHANCE sensitivity only       X_edaic_conf_af2       180 +0.0286 [-0.0488, +0.1015] 0.4808                      0.9615            no
+EXTRA CHANCE          claimed       X_edaic_conf_af3       180 -0.0765 [-0.1394, -0.0120] 0.0200 0.0200      yes      0.0600            no
+EXTRA CHANCE sensitivity only      X_edaic_conf_kimi       180 +0.0258 [-0.0499, +0.0977] 0.5137                      0.9615            no
+EXTRA CHANCE       check only        X_pitt_conf_q2a       180 -0.0868 [-0.1995, +0.0423] 0.1759                                          
+EXTRA CHANCE       check only        X_pitt_conf_o25       180 +0.0322 [-0.0784, +0.1447] 0.5507                                          
+EXTRA CHANCE       check only        X_pitt_conf_q3o       180 +0.1066 [-0.0044, +0.2123] 0.0650                                          
+
+24 of 24 differences survive Holm correction within their family.
+Sensitivity (families widened with the 8 same-kind differences the tex reports as not significant): 23 of 24 claimed differences survive; encoder probe after minus before loudness and noise-floor normalisation, NeuroVoz do not.
+Extra, not in the paper line: 4 of 4 E-DAIC conflict arms stay below chance after Holm (m=4).
+tex mismatches: []

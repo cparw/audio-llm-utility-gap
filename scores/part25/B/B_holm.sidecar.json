@@ -1,0 +1,54 @@
+{
+ "task": "PART 25 B r2: Holm correction over the differences the final tex calls significant",
+ "date_utc": "2026-09-24T03:35:32.668130Z",
+ "tex": "<local data dir>/paper1_submission_23sep/final_overleaf_2325Z/AudioLLMHealthUtilityGap.tex",
+ "tex_sha256": "6c886f3513e93de7f78a7324f608091e7cdc24f257089bb5bd0a5c40638e4a20",
+ "n_draws": 2000,
+ "rng": "numpy default_rng(0), fresh per cell",
+ "resample": "unique speakers (np.unique order of string ids), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+ "paired": "all terms on the same draw",
+ "mean_of_five": "mean of the five per-repeat AUCs in each draw",
+ "p_rule": "min(1, 2*min((1+#d<=0)/(B+1), (1+#d>=0)/(B+1))), B = usable draws; a draw with |d| < 1e-12 is a floating point tie and counts as exactly 0 (sklearn and rank AUC differ by up to 1e-15 on exact ties; affects only sensitivity or check rows)",
+ "holm": "step-down, adjusted p = running max of min(1,(m-rank+1)*p), survives when adjusted p <= 0.05, within family",
+ "families": {
+  "GAPS": {
+   "m": 7,
+   "m_full": 9
+  },
+  "ARMS": {
+   "m": 9,
+   "m_full": 12
+  },
+  "FINE TUNE": {
+   "m": 6,
+   "m_full": 8
+  },
+  "CONTROLS": {
+   "m": 2,
+   "m_full": 3
+  },
+  "EXTRA CHANCE": {
+   "m": 4,
+   "m_full": 6
+  }
+ },
+ "paper_line": "24 of 24 differences survive Holm correction within their family.",
+ "sensitivity_line": "Sensitivity (families widened with the 8 same-kind differences the tex reports as not significant): 23 of 24 claimed differences survive; encoder probe after minus before loudness and noise-floor normalisation, NeuroVoz do not.",
+ "extra_line": "Extra, not in the paper line: 4 of 4 E-DAIC conflict arms stay below chance after Holm (m=4).",
+ "tex_value_mismatches": [],
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/B_holm_r2.py",
+ "outputs": {
+  "tsv": "scores/part25/B/B_holm.tsv",
+  "index": "scores/part25/B/B_draws_index.tsv",
+  "tsv_sha256": "c87e04c231fdb9504e4a22b272b1ee015aea0062056a1105491b304093caaf18",
+  "index_sha256": "26dfe02efe06cb5d79a87d79306908ce0e1e255bb65b83936ec00862cdd9842b"
+ }
+}

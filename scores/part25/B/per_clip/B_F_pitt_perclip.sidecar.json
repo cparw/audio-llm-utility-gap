@@ -1,0 +1,67 @@
+{
+ "id": "F_pitt",
+ "family": "FINE TUNE",
+ "role": "claimed",
+ "claim": "projector fine-tune minus zero-shot answer, Pitt",
+ "tex_line": 226,
+ "tex_quote": "After fine-tuning the projector, AUC improves significantly on every dataset except MDVR-KCL",
+ "estimator": "two",
+ "value": 0.10951181712514524,
+ "lo": 0.04541749774549659,
+ "hi": 0.1728238051550943,
+ "excludes_zero": true,
+ "p": 0.0029985007496251873,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 2,
+ "n_ge0": 1998,
+ "term_points": [
+  0.7672801239829523,
+  0.6577683068578071
+ ],
+ "n_clips": 468,
+ "n_spk": 228,
+ "n_pos": 290,
+ "per_clip": "scores/part25/B/per_clip/B_F_pitt_perclip.csv",
+ "per_clip_sha256": "eb4e7722b522883c2afeb7d18d98707c135577001ba29b05aeb6dd8a62a7c0be",
+ "draws": "scores/part25/B/draws/B_F_pitt_draws.npz",
+ "draws_sha256": "f802d0f5d90d490a62fa1b76db4a23a9da7a517655978232080ebfea84566fb2",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omnisft_pitt_oof.csv",
+   "sha256": "fd715b2a5ec64118aa2e1a7d9b3e9c20b928b97fac67680b285e036d1c1550d2"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.77,
+   "computed": 0.76728,
+   "rounds_to": 0.77,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.66,
+   "computed": 0.657768,
+   "rounds_to": 0.66,
+   "match": true
+  }
+ },
+ "note": "Table 1 l.120-130: 0.66 -> 0.77; also abstract l.26, l.53, l.244",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:46.696485Z"
+}

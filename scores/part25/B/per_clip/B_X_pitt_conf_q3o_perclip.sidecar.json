@@ -1,0 +1,61 @@
+{
+ "id": "X_pitt_conf_q3o",
+ "family": "EXTRA CHANCE",
+ "role": "check only",
+ "claim": "conflict arm AUC minus 0.5, Pitt, Qwen3-Omni",
+ "tex_line": 180,
+ "tex_quote": "but none falls significantly below chance",
+ "estimator": "one",
+ "value": 0.10660066006600655,
+ "lo": -0.004432296856599284,
+ "hi": 0.21229133060357455,
+ "excludes_zero": false,
+ "p": 0.06496751624187906,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 64,
+ "n_ge0": 1936,
+ "term_points": [
+  0.6066006600660065,
+  0.5
+ ],
+ "n_clips": 146,
+ "n_spk": 100,
+ "n_pos": 101,
+ "per_clip": "scores/part25/B/per_clip/B_X_pitt_conf_q3o_perclip.csv",
+ "per_clip_sha256": "27001290bcec4a7d0a5c39b0112855d9da5f7e72857278171f44d3ada1559c84",
+ "draws": "scores/part25/B/draws/B_X_pitt_conf_q3o_draws.npz",
+ "draws_sha256": "3e4814f32ec083a57bfb16af7664228b634a59a0c5fc1c0437f1d3b9a54b8adf",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv",
+   "sha256": "9d7348cb925b6ed060f72bba32de4773c40af0a59b61c93e60c92fabc38d42d6"
+  },
+  {
+   "path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.61,
+   "computed": 0.606601,
+   "rounds_to": 0.61,
+   "match": true
+  }
+ },
+ "note": "non-significance statement; checked, not Holm corrected",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:35:30.976144Z"
+}

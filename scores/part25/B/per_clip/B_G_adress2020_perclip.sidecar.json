@@ -1,0 +1,67 @@
+{
+ "id": "G_adress2020",
+ "family": "GAPS",
+ "role": "claimed",
+ "claim": "encoder probe (mean of five) minus zero-shot answer, ADReSS-2020",
+ "tex_line": 149,
+ "tex_quote": "The paired difference $\\Delta$ excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL",
+ "estimator": "mean5",
+ "value": 0.18017751479289945,
+ "lo": 0.07660302294164079,
+ "hi": 0.2804666484587164,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 0,
+ "n_ge0": 2000,
+ "term_points": [
+  0.8042735042735043,
+  0.6240959894806049,
+  0.8160749506903353,
+  0.7935568704799474,
+  0.8050624589086128,
+  0.8062130177514795,
+  0.8004602235371466
+ ],
+ "n_clips": 156,
+ "n_spk": 156,
+ "n_pos": 78,
+ "per_clip": "scores/part25/B/per_clip/B_G_adress2020_perclip.csv",
+ "per_clip_sha256": "0b4ba0054f2d8ffe35117bbb833ced63304556c5b6ca13f36068a673e4f82885",
+ "draws": "scores/part25/B/draws/B_G_adress2020_draws.npz",
+ "draws_sha256": "1b4820d13326d62187b42c28950d5c50866b498e2620ced11fc3bccb1035381e",
+ "draws_source": "Track A saved draws (regenerated here and equal to 1e-9)",
+ "trackA_reuse": {
+  "file": "scores/part25/A/draws/A_adress2020_draws.npz",
+  "sha256": "10725cff26227a0f00edfab707101d0f29294696810d6b3ac1495c41c8a311f2",
+  "same_speaker_idx": true,
+  "same_nan_pattern": true,
+  "max_abs_draw_diff_vs_regenerated": 0.0,
+  "point_diff_saved": 0.18017751479289945,
+  "point_diff_here": 0.18017751479289945
+ },
+ "sources": [
+  {
+   "path": "scores/part25/A/per_clip/A_adress2020_perclip.csv",
+   "sha256": "42e355cefdd22ca756a240aeb37df6f2ed7a940accc139e7c9677cb944a15daf"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "sha256": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543"
+  }
+ ],
+ "tex_check": null,
+ "note": "also l.52 'the gap is significant on every Parkinson's and Alzheimer's set except MDVR-KCL'; probe vectors from the Track A re-extraction whose mean of five equals Table 1 to 4 dp",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:33:29.295592Z"
+}

@@ -1,0 +1,54 @@
+{
+ "id": "Gs_kcl_single",
+ "family": "GAPS",
+ "role": "sensitivity only",
+ "claim": "encoder probe (single nested split, stand-in) minus zero-shot answer, MDVR-KCL",
+ "tex_line": 149,
+ "tex_quote": "The paired difference $\\Delta$ excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL",
+ "estimator": "two",
+ "value": 0.06249999999999989,
+ "lo": -0.18129984051036677,
+ "hi": 0.2900227272727272,
+ "excludes_zero": false,
+ "p": 0.6086956521739131,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 608,
+ "n_ge0": 1412,
+ "term_points": [
+  0.7767857142857142,
+  0.7142857142857143
+ ],
+ "n_clips": 37,
+ "n_spk": 37,
+ "n_pos": 16,
+ "per_clip": "scores/part25/B/per_clip/B_Gs_kcl_single_perclip.csv",
+ "per_clip_sha256": "22d2a4e3ae8d8de7d92f7c5704e38e4136bac0b380bf160b9e423e6ec30415ea",
+ "draws": "scores/part25/B/draws/B_Gs_kcl_single_draws.npz",
+ "draws_sha256": "09be33b29a48d0b8cc00e95438c7423e07eb445b6cf507884eb7fbcb2dc32995",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omni_kcl_enc_nested_oof.csv",
+   "sha256": "d3f6e287eb55faf86a36a4481e7c82a5fef90ee3d5329d0a442fc4a78e86e24a"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_kcl_zeroshot_scores.csv",
+   "sha256": "18501de17fa0a5331e870a82ad79d9bbe5bb0dcff234ff72f58c0c287bd1bb0e"
+  }
+ ],
+ "tex_check": null,
+ "note": "no per-repeat OOF vectors exist for the Omni KCL mean of five (only omni_kcl_nested_repeats.json, mean 0.7506), so the single nested split stands in; sensitivity only",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:00.035658Z"
+}

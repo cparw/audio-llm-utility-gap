@@ -1,0 +1,67 @@
+{
+ "id": "R_pitt_o25",
+ "family": "ARMS",
+ "role": "claimed",
+ "claim": "conflict minus agreement arm AUC, Pitt, Qwen2.5-Omni",
+ "tex_line": 180,
+ "tex_quote": "and for the three Qwen models on Pitt",
+ "estimator": "arms",
+ "value": -0.1731413241574784,
+ "lo": -0.2958098595289466,
+ "hi": -0.039183893552420856,
+ "excludes_zero": true,
+ "p": 0.01199400299850075,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 1989,
+ "n_ge0": 11,
+ "term_points": [
+  0.5322332233223322,
+  0.7053745474798107
+ ],
+ "n_clips": 468,
+ "n_spk": 228,
+ "n_pos": 290,
+ "per_clip": "scores/part25/B/per_clip/B_R_pitt_o25_perclip.csv",
+ "per_clip_sha256": "705d8c0ebc984fa354695847378df9357f7510ccd542e2c642d5a0f3148afa3c",
+ "draws": "scores/part25/B/draws/B_R_pitt_o25_draws.npz",
+ "draws_sha256": "c0363fcf9854cd36044513b2de4eadfbf4311dc73b9fedf50bf0989c2101b15a",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+  },
+  {
+   "path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.53,
+   "computed": 0.532233,
+   "rounds_to": 0.53,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.71,
+   "computed": 0.705375,
+   "rounds_to": 0.71,
+   "match": true
+  }
+ },
+ "note": "Table 2 row l.169: 0.53 / 0.71; arm from pitt_conflict_manifest.csv set column",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:24.473289Z"
+}

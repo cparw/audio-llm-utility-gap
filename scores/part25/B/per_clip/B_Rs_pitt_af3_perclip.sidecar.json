@@ -1,0 +1,67 @@
+{
+ "id": "Rs_pitt_af3",
+ "family": "ARMS",
+ "role": "sensitivity only",
+ "claim": "conflict minus agreement arm AUC, Pitt, Audio Flamingo 3",
+ "tex_line": 180,
+ "tex_quote": "Kimi-Audio shows no drop, and the two Audio Flamingo models score 0.53 to 0.61 on both arms",
+ "estimator": "arms",
+ "value": 0.022009132528004183,
+ "lo": -0.08463830003982584,
+ "hi": 0.13571749838128433,
+ "excludes_zero": false,
+ "p": 0.6526736631684158,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 652,
+ "n_ge0": 1348,
+ "term_points": [
+  0.6074807480748076,
+  0.5854716155468034
+ ],
+ "n_clips": 468,
+ "n_spk": 228,
+ "n_pos": 290,
+ "per_clip": "scores/part25/B/per_clip/B_Rs_pitt_af3_perclip.csv",
+ "per_clip_sha256": "065c51f917bc6ec792165547f4724eefa3e5fc6c90562c17abd37700b52fef3a",
+ "draws": "scores/part25/B/draws/B_Rs_pitt_af3_draws.npz",
+ "draws_sha256": "f1367ab3529060da24fc62846a0e1f22c02f752bf09850e514c7e8a429806476",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/overnight2/part10/af3_pitt.csv",
+   "sha256": "c421d9884331e0fa4e7db745041cd06b63dd2f6708f53cf12f37477fe77dd23b"
+  },
+  {
+   "path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.61,
+   "computed": 0.607481,
+   "rounds_to": 0.61,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.59,
+   "computed": 0.585472,
+   "rounds_to": 0.59,
+   "match": true
+  }
+ },
+ "note": "Table 2 row l.172: 0.61 / 0.59; arm from pitt_conflict_manifest.csv set column; sensitivity member (tex reports no significant drop)",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:33.597967Z"
+}

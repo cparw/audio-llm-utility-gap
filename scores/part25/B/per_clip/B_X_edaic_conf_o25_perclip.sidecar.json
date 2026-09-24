@@ -1,0 +1,57 @@
+{
+ "id": "X_edaic_conf_o25",
+ "family": "EXTRA CHANCE",
+ "role": "claimed",
+ "claim": "conflict arm AUC minus 0.5, E-DAIC, Qwen2.5-Omni",
+ "tex_line": 180,
+ "tex_quote": "On the depression segments four of the six models fall below chance when the words point away from the label",
+ "estimator": "one",
+ "value": -0.27822424986839794,
+ "lo": -0.31713538502155686,
+ "hi": -0.23678878395590047,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 2000,
+ "n_ge0": 0,
+ "term_points": [
+  0.22177575013160206,
+  0.5
+ ],
+ "n_clips": 483,
+ "n_spk": 138,
+ "n_pos": 205,
+ "per_clip": "scores/part25/B/per_clip/B_X_edaic_conf_o25_perclip.csv",
+ "per_clip_sha256": "1d834526f4ee270e35a8eef079cc17064a4b7302edba662bf79fcee7c1108343",
+ "draws": "scores/part25/B/draws/B_X_edaic_conf_o25_draws.npz",
+ "draws_sha256": "c5b924098506202730f53fd59879d62c59b567b379cb496975f7bb1682b7f4c6",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part17/T1_perclip_all966.csv",
+   "sha256": "2cb1fab543119ef96379bbaf2eb24e692fc3bd4be270c088276eadfa9d258b92"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.22,
+   "computed": 0.221776,
+   "rounds_to": 0.22,
+   "match": true
+  }
+ },
+ "note": "not in the requested list; abstract l.26 'four of six models fall below chance'; Table 2 l.169 conflict 0.22",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:35:15.028558Z"
+}

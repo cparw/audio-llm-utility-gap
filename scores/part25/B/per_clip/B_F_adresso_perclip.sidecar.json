@@ -1,0 +1,67 @@
+{
+ "id": "F_adresso",
+ "family": "FINE TUNE",
+ "role": "claimed",
+ "claim": "projector fine-tune minus zero-shot answer, ADReSSo",
+ "tex_line": 226,
+ "tex_quote": "After fine-tuning the projector, AUC improves significantly on every dataset except MDVR-KCL",
+ "estimator": "two",
+ "value": 0.2095509622238061,
+ "lo": 0.12938243308983835,
+ "hi": 0.28674672933358264,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 0,
+ "n_ge0": 2000,
+ "term_points": [
+  0.8245901639344261,
+  0.61503920171062
+ ],
+ "n_clips": 237,
+ "n_spk": 237,
+ "n_pos": 122,
+ "per_clip": "scores/part25/B/per_clip/B_F_adresso_perclip.csv",
+ "per_clip_sha256": "8d44352dc459a2a6930a676a635dd435236b99b6db5a1f0b1f7bb34e068174f9",
+ "draws": "scores/part25/B/draws/B_F_adresso_draws.npz",
+ "draws_sha256": "0c3df911eac45ac60ac2b6d19b89bf1ff4a38198fa83f50813150c58a935437c",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omnisft_adresso_oof.csv",
+   "sha256": "f2cf92a44d64841d28d9e5baa6401baedbf8549081b38bd727afffa67066a41d"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv",
+   "sha256": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.82,
+   "computed": 0.82459,
+   "rounds_to": 0.82,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.62,
+   "computed": 0.615039,
+   "rounds_to": 0.62,
+   "match": true
+  }
+ },
+ "note": "Table 1 l.120-130: 0.62 -> 0.82; also abstract l.26, l.53, l.244",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:49.922569Z"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "R_edaic_o25",
+ "family": "ARMS",
+ "role": "claimed",
+ "claim": "conflict minus agreement arm AUC, E-DAIC, Qwen2.5-Omni",
+ "tex_line": 180,
+ "tex_quote": "Speaker-level bootstrap intervals for the difference between the two arms exclude zero for all six models on depression",
+ "estimator": "arms",
+ "value": -0.7428749373451722,
+ "lo": -0.7868938951339735,
+ "hi": -0.6944484040256372,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 2000,
+ "n_ge0": 0,
+ "term_points": [
+  0.22177575013160206,
+  0.9646506874767743
+ ],
+ "n_clips": 794,
+ "n_spk": 138,
+ "n_pos": 309,
+ "per_clip": "scores/part25/B/per_clip/B_R_edaic_o25_perclip.csv",
+ "per_clip_sha256": "e06e64f364bc2caa4daf48e504df07387cc5a7105707ba4deeebfd3693170a0c",
+ "draws": "scores/part25/B/draws/B_R_edaic_o25_draws.npz",
+ "draws_sha256": "4940e12e01f02ca5dcd664738689f7932ca61d31244c77be5fbcd902268ebbdf",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part17/T1_perclip_all966.csv",
+   "sha256": "2cb1fab543119ef96379bbaf2eb24e692fc3bd4be270c088276eadfa9d258b92"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.22,
+   "computed": 0.221776,
+   "rounds_to": 0.22,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.96,
+   "computed": 0.964651,
+   "rounds_to": 0.96,
+   "match": true
+  }
+ },
+ "note": "Table 2 row l.169: 0.22 / 0.96; agreement scored on the 311 distinct segments",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:05.879531Z"
+}

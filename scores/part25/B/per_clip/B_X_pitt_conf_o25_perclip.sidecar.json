@@ -1,0 +1,61 @@
+{
+ "id": "X_pitt_conf_o25",
+ "family": "EXTRA CHANCE",
+ "role": "check only",
+ "claim": "conflict arm AUC minus 0.5, Pitt, Qwen2.5-Omni",
+ "tex_line": 180,
+ "tex_quote": "but none falls significantly below chance",
+ "estimator": "one",
+ "value": 0.03223322332233225,
+ "lo": -0.07844984272973402,
+ "hi": 0.14469439131413142,
+ "excludes_zero": false,
+ "p": 0.5507246376811594,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 550,
+ "n_ge0": 1452,
+ "term_points": [
+  0.5322332233223322,
+  0.5
+ ],
+ "n_clips": 146,
+ "n_spk": 100,
+ "n_pos": 101,
+ "per_clip": "scores/part25/B/per_clip/B_X_pitt_conf_o25_perclip.csv",
+ "per_clip_sha256": "c66f684bd708a926f187d988d750d3d3a84cbf7dc44c7a5461ee1ec6c2699c79",
+ "draws": "scores/part25/B/draws/B_X_pitt_conf_o25_draws.npz",
+ "draws_sha256": "19510b3e8b11ce186a72c416b1ddbdbf2f342e54f39b1cf37ab7dfecd1f33efe",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+  },
+  {
+   "path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.53,
+   "computed": 0.532233,
+   "rounds_to": 0.53,
+   "match": true
+  }
+ },
+ "note": "non-significance statement; checked, not Holm corrected",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:35:29.104200Z"
+}
