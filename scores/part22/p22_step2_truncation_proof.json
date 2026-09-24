@@ -6,7 +6,6 @@
    "src_dur_s": 2847.4001,
    "win_dur_s": 900.0,
    "capped": 1,
-   "label": 0,
    "ref_p_yes_answer": 0.577617711052789,
    "full": {
     "wave_samples": 14400000,
@@ -75,7 +74,6 @@
    "src_dur_s": 2808.3999,
    "win_dur_s": 900.0,
    "capped": 1,
-   "label": 0,
    "ref_p_yes_answer": 0.2339097854731636,
    "full": {
     "wave_samples": 14400000,
@@ -144,7 +142,6 @@
    "src_dur_s": 2586.1999,
    "win_dur_s": 900.0,
    "capped": 1,
-   "label": 0,
    "ref_p_yes_answer": 0.706314575488364,
    "full": {
     "wave_samples": 14400000,
@@ -213,7 +210,6 @@
    "src_dur_s": 198.3,
    "win_dur_s": 198.3,
    "capped": 0,
-   "label": 1,
    "ref_p_yes_answer": 0.9604466103597945,
    "full": {
     "wave_samples": 3172800,

@@ -158,16 +158,16 @@ Window start start_s: min 0.0000  median 4.0000  mean 7.6737  max 45.0000
     The shift helps but does not clear the interviewer out of the window.
 
   Worst ten ADReSS-2020 windows by interviewer seconds:
-    S139   train label 1  window 45.0000-75.0000 s  inv 17.7990 s  share 0.5933  inv words 20
-    S156   train label 1  window 45.0000-75.0000 s  inv 16.2820 s  share 0.5427  inv words 28
-    S182   test  label 1  window 9.7200-39.7200 s  inv 15.4190 s  share 0.5140  inv words 23
-    S080   train label 1  window 3.6000-33.6000 s  inv 13.8380 s  share 0.4613  inv words 9
-    S145   train label 1  window 19.6200-49.6200 s  inv 11.3940 s  share 0.3798  inv words 18
-    S124   train label 1  window 5.0000-35.0000 s  inv 10.0180 s  share 0.3339  inv words 28
-    S068   train label 0  window 0.0000-30.0000 s  inv 9.5330 s  share 0.3178  inv words 2
-    S033   train label 0  window 0.0000-30.0000 s  inv 8.9840 s  share 0.2995  inv words 27
-    S087   train label 1  window 24.0000-54.0000 s  inv 8.6030 s  share 0.2868  inv words 15
-    S201   test  label 0  window 4.0000-34.0000 s  inv 8.3870 s  share 0.2796  inv words 2
+    S139   train  window 45.0000-75.0000 s  inv 17.7990 s  share 0.5933  inv words 20
+    S156   train  window 45.0000-75.0000 s  inv 16.2820 s  share 0.5427  inv words 28
+    S182   test  window 9.7200-39.7200 s  inv 15.4190 s  share 0.5140  inv words 23
+    S080   train  window 3.6000-33.6000 s  inv 13.8380 s  share 0.4613  inv words 9
+    S145   train  window 19.6200-49.6200 s  inv 11.3940 s  share 0.3798  inv words 18
+    S124   train  window 5.0000-35.0000 s  inv 10.0180 s  share 0.3339  inv words 28
+    S068   train  window 0.0000-30.0000 s  inv 9.5330 s  share 0.3178  inv words 2
+    S033   train  window 0.0000-30.0000 s  inv 8.9840 s  share 0.2995  inv words 27
+    S087   train  window 24.0000-54.0000 s  inv 8.6030 s  share 0.2868  inv words 15
+    S201   test  window 4.0000-34.0000 s  inv 8.3870 s  share 0.2796  inv words 2
 
   Worst ten Pitt windows by timed interviewer seconds (lower bound):
     Dem 173-1    agreement  window 16.9940-55.7340 s  inv 12.8170 s  share 0.3308  inv words 61

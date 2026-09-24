@@ -43,7 +43,7 @@ In this repository:
 - the scripts that produced the released numbers (`scripts/`)
 - segment lists and manifests, with speech columns and clinical columns removed (`manifests/`). Two kinds of clinical
   information remain in ids and file membership, see "Before any public release" below
-- per-clip score files with their sidecar JSON (`scores/`)
+- per-clip score files with their sidecar JSON (`scores/`), without the clinical label (see "Clinical labels" below)
 - the GroupKFold(5) speaker fold assignments behind the probes (`folds/`, see section i)
 - lookup tables of every cell with its estimator and source (`lookup/`)
 - every prompt string (`prompts/prompts.json`)
@@ -55,9 +55,10 @@ Not in this repository, on purpose:
 - No transcripts and no participant speech. No file holds utterance text or ASR output. Where a source table had
   a text column it was dropped. Counts derived from the text (`nw`, `ttr`, `retrace`, `fillers`, `unintel`,
   `errors`, `pauses`, `rate`, `p_text`, `val`, `npos`, `nneg`) are kept, because the conflict rules are defined on them.
-- No clinical metadata columns beyond the binary label. Columns such as `age`, `sex`, `mmse`, `dx`, `sev` (PHQ-8
-  total) and PHQ items were dropped from every file. DementiaBank and E-DAIC distribute those under a data-use
-  agreement and they are not ours to republish. Two exceptions remain in the tree, and both are listed below. The
+- No clinical label and no clinical metadata column. Columns such as `age`, `sex`, `mmse`, `dx`, `sev` (PHQ-8
+  total) and PHQ items were dropped from every file, and the binary label was dropped on 24 September 2026 (see
+  "Clinical labels" below). DementiaBank and E-DAIC distribute those under a data-use agreement and they are not
+  ours to republish. Two exceptions remain in the tree, and both are listed below. The
   MDVR-KCL clip names carry the dataset's own Hoehn and Yahr and UPDRS item scores. Membership in the E-DAIC pair
   set implies a PHQ-8 total of 15 or more, or 4 or less.
 - No participant identifier beyond each dataset's own released ids.
@@ -68,6 +69,27 @@ Not in this repository, on purpose:
 
 Reproducing a number needs the original corpora, each from its own custodian: DementiaBank (Pitt, ADReSS-2020,
 ADReSS-M), E-DAIC, PC-GITA, NeuroVoz and MDVR-KCL.
+
+### Clinical labels
+
+On 24 September 2026 the clinical label was dropped from every file that held a participant, speaker or clip id in
+the same row as a label: 237 files. `lookup/LABELS_DROPPED.tsv` lists each file with the columns dropped. They are
+the `label` column of the per-clip score files and manifests, the columns whose values name the diagnosis group
+(`grp`, `group`, `label_y`, and the ADReSS-2020 `split`, whose values train_cc and train_cd name the group), the
+`label` array of `scores/part10/pitt_enc_nested5_oof.npz` and `scores/part16/pod_sync/q3o_perp_cols.npz`, the
+`label` field of `scores/part22/p22_step2_truncation_proof.json`, and the label field of ten lines of
+`reports/PART5_interviewer_measure.txt`. Every id column and every score column is kept.
+
+To recompute an AUC, read the label from your own licensed copy of the corpus and join it on the id column:
+
+- E-DAIC: `pid`, `speaker` or `speaker_id` is the participant number. Use the dataset's released binary label
+  (1 = depressed).
+- DementiaBank Pitt: `spk` or `speaker` holds the participant number, and the speaker label or the clip name
+  carries the group (Control or Dementia, Con or Dem). 1 = Dementia.
+- ADReSSo and ADReSS-2020: the recording id (`adrso...`, `S...`) joins the challenge metadata. 1 = AD.
+- PC-GITA, NeuroVoz and MDVR-KCL: the speaker id joins the corpus metadata. 1 = Parkinson's disease.
+
+Sidecar JSON files and scripts written before this change may still name a `label` column.
 
 ### Before any public release
 
