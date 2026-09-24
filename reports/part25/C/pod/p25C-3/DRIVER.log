@@ -1,0 +1,15 @@
+23:50:37 driver start jobs: q2a_neurovoz:enc q2a_adresso:enc
+23:50:37 PIP FAILED
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'sklearn'
+model name	: AMD EPYC 9655P 96-Core Processor
+192
+23:50:37 avx512f present
+VERSIONS 1.9.1 2.1.2 1.18.1 3.0.6
+00:01:32 driver v2 start jobs: q2a_neurovoz:enc q2a_adresso:enc
+00:01:32 start q2a_neurovoz enc
+00:02:11 done q2a_neurovoz enc q2a_neurovoz enc mean5 0.932420 per_repeat [0.931, 0.9296, 0.9283, 0.9386, 0.9346]
+00:05:31 start q2a_adresso enc
+00:05:46 done q2a_adresso enc q2a_adresso enc mean5 0.853692 per_repeat [0.8629, 0.8388, 0.8548, 0.8546, 0.8572]
+00:05:46 ALL_DONE

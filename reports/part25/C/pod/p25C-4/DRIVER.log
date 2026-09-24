@@ -1,0 +1,21 @@
+23:50:48 driver start jobs: q2a_pitt:enc q2a_edaic:enc q3o_adress2020:enc q3o_adresso:enc q3o_kcl:enc
+23:50:48 PIP FAILED
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'sklearn'
+model name	: AMD EPYC 9654 96-Core Processor
+192
+23:50:48 avx512f present
+VERSIONS 1.9.1 2.1.2 1.18.1 3.0.6
+00:01:37 driver v2 start jobs: q2a_pitt:enc q2a_edaic:enc q3o_adress2020:enc q3o_adresso:enc q3o_kcl:enc
+00:01:37 start q2a_pitt enc
+00:01:56 done q2a_pitt enc q2a_pitt enc mean5 0.784613 per_repeat [0.7689, 0.7881, 0.7695, 0.8084, 0.7883]
+00:01:56 start q2a_edaic enc
+00:02:12 done q2a_edaic enc q2a_edaic enc mean5 0.567276 per_repeat [0.513, 0.6021, 0.5555, 0.5558, 0.6098]
+00:02:17 start q3o_adress2020 enc
+00:02:28 done q3o_adress2020 enc q3o_adress2020 enc mean5 0.844510 per_repeat [0.8337, 0.8555, 0.8458, 0.8401, 0.8475]
+00:04:43 start q3o_adresso enc
+00:04:56 done q3o_adresso enc q3o_adresso enc mean5 0.874961 per_repeat [0.8758, 0.8657, 0.8778, 0.8721, 0.8835]
+00:05:11 start q3o_kcl enc
+00:05:20 done q3o_kcl enc q3o_kcl enc mean5 0.766071 per_repeat [0.7946, 0.8512, 0.6815, 0.7351, 0.7679]
+00:05:20 ALL_DONE

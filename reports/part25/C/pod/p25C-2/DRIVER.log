@@ -1,0 +1,17 @@
+23:50:25 driver start jobs: q2a_pcgita:enc q2a_kcl:enc q2a_adress2020:enc
+23:50:25 PIP FAILED
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'sklearn'
+model name	: AMD EPYC 9655P 96-Core Processor
+192
+23:50:25 avx512f present
+VERSIONS 1.9.1 2.1.2 1.18.1 3.0.6
+00:01:28 driver v2 start jobs: q2a_pcgita:enc q2a_kcl:enc q2a_adress2020:enc
+00:01:58 start q2a_pcgita enc
+00:02:30 done q2a_pcgita enc q2a_pcgita enc mean5 0.909673 per_repeat [0.9242, 0.9, 0.9011, 0.9041, 0.9191]
+00:02:45 start q2a_kcl enc
+00:02:53 done q2a_kcl enc q2a_kcl enc mean5 0.771429 per_repeat [0.8065, 0.8095, 0.6786, 0.7679, 0.7946]
+00:03:58 start q2a_adress2020 enc
+00:04:10 done q2a_adress2020 enc q2a_adress2020 enc mean5 0.831525 per_repeat [0.8149, 0.82, 0.8284, 0.8659, 0.8284]
+00:04:10 ALL_DONE
