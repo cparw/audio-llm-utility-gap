@@ -1,0 +1,63 @@
+{
+ "id": "R_edaic_af3",
+ "family": "ARMS",
+ "role": "claimed",
+ "claim": "conflict minus agreement arm AUC, E-DAIC, Audio Flamingo 3",
+ "tex_line": 180,
+ "tex_quote": "Speaker-level bootstrap intervals for the difference between the two arms exclude zero for all six models on depression",
+ "estimator": "arms",
+ "value": -0.4189537626771086,
+ "lo": -0.48775691301850915,
+ "hi": -0.3461386092550403,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 2000,
+ "n_ge0": 0,
+ "term_points": [
+  0.4235304439375329,
+  0.8424842066146415
+ ],
+ "n_clips": 794,
+ "n_spk": 138,
+ "n_pos": 309,
+ "per_clip": "scores/part25/B/per_clip/B_R_edaic_af3_perclip.csv",
+ "per_clip_sha256": "ab20e0e1aa81d30433eedce6d9a987e9e8b0b692efe273c8e4b71ddf3656284a",
+ "draws": "scores/part25/B/draws/B_R_edaic_af3_draws.npz",
+ "draws_sha256": "a943b56a00e2415fd89a828af613a41cfced97c6e76745cbbfa4f08f47a45871",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part17/T1_perclip_all966.csv",
+   "sha256": "2cb1fab543119ef96379bbaf2eb24e692fc3bd4be270c088276eadfa9d258b92"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.42,
+   "computed": 0.42353,
+   "rounds_to": 0.42,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.84,
+   "computed": 0.842484,
+   "rounds_to": 0.84,
+   "match": true
+  }
+ },
+ "note": "Table 2 row l.172: 0.42 / 0.84; agreement scored on the 311 distinct segments",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:15.428917Z"
+}

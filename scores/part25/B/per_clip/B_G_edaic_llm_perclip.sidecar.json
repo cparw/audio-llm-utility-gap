@@ -1,0 +1,78 @@
+{
+ "id": "G_edaic_llm",
+ "family": "GAPS",
+ "role": "claimed",
+ "claim": "language model probe (mean of five) minus zero-shot answer, E-DAIC whole interview",
+ "tex_line": 149,
+ "tex_quote": "On E-DAIC the language model probe reaches 0.74 and the encoder probe 0.60, both below the answer of 0.84",
+ "estimator": "mean5",
+ "value": -0.09288096273742219,
+ "lo": -0.16093403148149316,
+ "hi": -0.025735708894878695,
+ "excludes_zero": true,
+ "p": 0.0079960019990005,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 1993,
+ "n_ge0": 7,
+ "term_points": [
+  0.7437146585471943,
+  0.8365956212846165,
+  0.7456140350877194,
+  0.743801652892562,
+  0.7480788748731333,
+  0.7374945628534145,
+  0.743584167029143
+ ],
+ "n_clips": 275,
+ "n_spk": 275,
+ "n_pos": 66,
+ "per_clip": "scores/part25/B/per_clip/B_G_edaic_llm_perclip.csv",
+ "per_clip_sha256": "ab455c9e9767eaaf52994959e92e19b2358f99c22ef19c727aa85db2c7f5d0c0",
+ "draws": "scores/part25/B/draws/B_G_edaic_llm_draws.npz",
+ "draws_sha256": "5f1857ab1785822dd96263465e0140e38a17d01d08da9163a09b7883f0004b40",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release_from_mac/scores/part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv",
+   "sha256": "422acc656ee2ad9808b2d53e63f8fb3758c008b7ef3b9fade281cd935ce64e17"
+  },
+  {
+   "path": "scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv",
+   "sha256": "e13f360198811ff3061a222d9d9862aadc7a5de730f4e793f59b1139094e0e30"
+  }
+ ],
+ "tex_check": {
+  "value": {
+   "tex": -0.09,
+   "computed": -0.092881,
+   "rounds_to": -0.09,
+   "match": true
+  },
+  "lo": {
+   "tex": -0.16,
+   "computed": -0.160934,
+   "rounds_to": -0.16,
+   "match": true
+  },
+  "hi": {
+   "tex": -0.03,
+   "computed": -0.025736,
+   "rounds_to": -0.03,
+   "match": true
+  }
+ },
+ "note": "reversal, interval below zero; also l.52 'reverses on depression' and abstract l.26 'On depression the answer beats every probe'",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:33:42.837840Z"
+}

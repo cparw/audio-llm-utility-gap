@@ -1,0 +1,79 @@
+{
+ "id": "C_nv_probe_drop",
+ "family": "CONTROLS",
+ "role": "claimed",
+ "claim": "encoder probe after minus before loudness and noise-floor normalisation, NeuroVoz",
+ "tex_line": 149,
+ "tex_quote": "where the probe falls to 0.89 ($-$0.03 [$-$0.061, $-$0.001])",
+ "estimator": "two",
+ "value": -0.030817881591647334,
+ "lo": -0.06081860111939197,
+ "hi": -0.0012329532883264876,
+ "excludes_zero": true,
+ "p": 0.03698150924537731,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 1964,
+ "n_ge0": 36,
+ "term_points": [
+  0.8924419830831032,
+  0.9232598646747505
+ ],
+ "n_clips": 1270,
+ "n_spk": 107,
+ "n_pos": 621,
+ "per_clip": "scores/part25/B/per_clip/B_C_nv_probe_drop_perclip.csv",
+ "per_clip_sha256": "13267936d5c093922f4bcfb9dcc385d7c5d70784a7601932e617ded09817e5b5",
+ "draws": "scores/part25/B/draws/B_C_nv_probe_drop_draws.npz",
+ "draws_sha256": "5ea6ee4968023cfecb3f1744a598abc073f6389c8d6a2203d32a8d46f2036dbc",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_nv_after_enc_nested_oof.csv",
+   "sha256": "679419ac6616e6dc41733417c6f4ca9b7a22bb2653dc668371bd11a6cf3227d2"
+  },
+  {
+   "path": "<local data dir>/release/edaic_rerun/part16/POD4/p16_nv_before_enc_nested_oof.csv",
+   "sha256": "a186cb0f0f39856a754dad5369ea4c37a14d6aaf25988ab37d89153f729698c5"
+  }
+ ],
+ "tex_check": {
+  "value": {
+   "tex": -0.03,
+   "computed": -0.030818,
+   "rounds_to": -0.03,
+   "match": true
+  },
+  "lo": {
+   "tex": -0.061,
+   "computed": -0.060819,
+   "rounds_to": -0.061,
+   "match": true
+  },
+  "hi": {
+   "tex": -0.001,
+   "computed": -0.001233,
+   "rounds_to": -0.001,
+   "match": true
+  },
+  "t0": {
+   "tex": 0.89,
+   "computed": 0.892442,
+   "rounds_to": 0.89,
+   "match": true
+  }
+ },
+ "note": "single nested split probe, as reported in the tex",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:35:08.414796Z"
+}

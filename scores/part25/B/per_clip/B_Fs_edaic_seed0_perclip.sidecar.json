@@ -1,0 +1,73 @@
+{
+ "id": "Fs_edaic_seed0",
+ "family": "FINE TUNE",
+ "role": "sensitivity only",
+ "claim": "projector fine-tune (seed 0) minus zero-shot answer, E-DAIC whole interview",
+ "tex_line": 226,
+ "tex_quote": "On E-DAIC the retrained projector stays at the zero-shot level (+0.02 [$-$0.01, 0.05]",
+ "estimator": "two",
+ "value": 0.022292301000435,
+ "lo": -0.0063755012224089355,
+ "hi": 0.054672203811101744,
+ "excludes_zero": false,
+ "p": 0.12493753123438281,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 124,
+ "n_ge0": 1877,
+ "term_points": [
+  0.8588879222850515,
+  0.8365956212846165
+ ],
+ "n_clips": 275,
+ "n_spk": 275,
+ "n_pos": 66,
+ "per_clip": "scores/part25/B/per_clip/B_Fs_edaic_seed0_perclip.csv",
+ "per_clip_sha256": "aa4b8890faa28137d2ae8dce09f4ffbc9e65e3a0defd700ba0d1194b6d39fa99",
+ "draws": "scores/part25/B/draws/B_Fs_edaic_seed0_draws.npz",
+ "draws_sha256": "66b3ac8448983909ed307ff915fc451a2288ac2045fee3093433f19ceec5fbc6",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "scores/part24/FT/FT24_whole_seed0_perclip.csv",
+   "sha256": "cbf1a85fd6ef62b9edcd4150587735baaf356fc4167ac830913a7ad5f35df2f6"
+  },
+  {
+   "path": "scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv",
+   "sha256": "e13f360198811ff3061a222d9d9862aadc7a5de730f4e793f59b1139094e0e30"
+  }
+ ],
+ "tex_check": {
+  "value": {
+   "tex": 0.02,
+   "computed": 0.022292,
+   "rounds_to": 0.02,
+   "match": true
+  },
+  "lo": {
+   "tex": -0.01,
+   "computed": -0.006376,
+   "rounds_to": -0.01,
+   "match": true
+  },
+  "hi": {
+   "tex": 0.05,
+   "computed": 0.054672,
+   "rounds_to": 0.05,
+   "match": true
+  }
+ },
+ "note": "sensitivity member (tex reports it as not significant)",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:58.678231Z"
+}

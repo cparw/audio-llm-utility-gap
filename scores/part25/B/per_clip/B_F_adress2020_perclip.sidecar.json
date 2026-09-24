@@ -1,0 +1,67 @@
+{
+ "id": "F_adress2020",
+ "family": "FINE TUNE",
+ "role": "claimed",
+ "claim": "projector fine-tune minus zero-shot answer, ADReSS-2020",
+ "tex_line": 226,
+ "tex_quote": "After fine-tuning the projector, AUC improves significantly on every dataset except MDVR-KCL",
+ "estimator": "two",
+ "value": 0.14431295200525973,
+ "lo": 0.04895805776014106,
+ "hi": 0.2369567901234568,
+ "excludes_zero": true,
+ "p": 0.0029985007496251873,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 2,
+ "n_ge0": 1998,
+ "term_points": [
+  0.7684089414858646,
+  0.6240959894806049
+ ],
+ "n_clips": 156,
+ "n_spk": 156,
+ "n_pos": 78,
+ "per_clip": "scores/part25/B/per_clip/B_F_adress2020_perclip.csv",
+ "per_clip_sha256": "1466907ce76c65d18ad11ccc26dcbd2c4cd2125e698962598c7af0a9533eb2cd",
+ "draws": "scores/part25/B/draws/B_F_adress2020_draws.npz",
+ "draws_sha256": "06329d333456b956de622a2f20f059905d38bf97b70310b95c2d7c72f9e23f30",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omnisft_adress2020_oof.csv",
+   "sha256": "8f3c58b0bc117bf6cf105610ef90154d4124d6bd99926da2e6be3955ca964e00"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "sha256": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.77,
+   "computed": 0.768409,
+   "rounds_to": 0.77,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.62,
+   "computed": 0.624096,
+   "rounds_to": 0.62,
+   "match": true
+  }
+ },
+ "note": "Table 1 l.120-130: 0.62 -> 0.77; also abstract l.26, l.53, l.244",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:53.064517Z"
+}

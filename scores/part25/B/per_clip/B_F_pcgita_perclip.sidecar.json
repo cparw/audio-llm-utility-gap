@@ -1,0 +1,67 @@
+{
+ "id": "F_pcgita",
+ "family": "FINE TUNE",
+ "role": "claimed",
+ "claim": "projector fine-tune minus zero-shot answer, PC-GITA",
+ "tex_line": 226,
+ "tex_quote": "After fine-tuning the projector, AUC improves significantly on every dataset except MDVR-KCL",
+ "estimator": "two",
+ "value": 0.32274049586776876,
+ "lo": 0.23914726944027045,
+ "hi": 0.4039658811939295,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 0,
+ "n_ge0": 2000,
+ "term_points": [
+  0.8862181818181819,
+  0.5634776859504131
+ ],
+ "n_clips": 1100,
+ "n_spk": 100,
+ "n_pos": 550,
+ "per_clip": "scores/part25/B/per_clip/B_F_pcgita_perclip.csv",
+ "per_clip_sha256": "3c0f1cf2c757a7cfe9814c38b18ffe8532a59d522531e6cfc40431be0e94e3d8",
+ "draws": "scores/part25/B/draws/B_F_pcgita_draws.npz",
+ "draws_sha256": "9c7ec2406a119fb80e2efeb7650ab242be1b8035ab918bbd2070aebce37b177d",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omnisft_pcgita_oof.csv",
+   "sha256": "1fba37d27367dc2f62603cc1b05ce976266c4f01cb5415cf23cb8f6fe9d231c6"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+   "sha256": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.89,
+   "computed": 0.886218,
+   "rounds_to": 0.89,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.56,
+   "computed": 0.563478,
+   "rounds_to": 0.56,
+   "match": true
+  }
+ },
+ "note": "Table 1 l.120-130: 0.56 -> 0.89; also abstract l.26, l.53, l.244",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:39.865663Z"
+}

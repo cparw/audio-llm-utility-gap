@@ -1,0 +1,67 @@
+{
+ "id": "G_neurovoz",
+ "family": "GAPS",
+ "role": "claimed",
+ "claim": "encoder probe (mean of five) minus zero-shot answer, NeuroVoz",
+ "tex_line": 149,
+ "tex_quote": "The paired difference $\\Delta$ excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL",
+ "estimator": "mean5",
+ "value": 0.22619538544372741,
+ "lo": 0.17349622032564116,
+ "hi": 0.28505668553264496,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 0,
+ "n_ge0": 2000,
+ "term_points": [
+  0.9212768808199906,
+  0.6950814953762632,
+  0.9274617955531737,
+  0.9154328844822581,
+  0.9279704438142167,
+  0.9123586640167334,
+  0.9231606162335713
+ ],
+ "n_clips": 1270,
+ "n_spk": 107,
+ "n_pos": 621,
+ "per_clip": "scores/part25/B/per_clip/B_G_neurovoz_perclip.csv",
+ "per_clip_sha256": "b4c05a15bf60d64afc010c3d957ca6253be1059285ddaa03a05f07732ee7c58c",
+ "draws": "scores/part25/B/draws/B_G_neurovoz_draws.npz",
+ "draws_sha256": "51c1c3ecaf1b565acd5550c1d0dde277f6cd9113bc5709ab2f6d1c567f49030a",
+ "draws_source": "Track A saved draws (regenerated here and equal to 1e-9)",
+ "trackA_reuse": {
+  "file": "scores/part25/A/draws/A_neurovoz_draws.npz",
+  "sha256": "0f7c07a7ae16b234a40e995dae755b257a19f62de04fa164e64bc0b47cdf7e41",
+  "same_speaker_idx": true,
+  "same_nan_pattern": true,
+  "max_abs_draw_diff_vs_regenerated": 0.0,
+  "point_diff_saved": 0.22619538544372741,
+  "point_diff_here": 0.22619538544372741
+ },
+ "sources": [
+  {
+   "path": "scores/part25/A/per_clip/A_neurovoz_perclip.csv",
+   "sha256": "98dd842a52bb65ebc0958faddc16bfbd3390817ae5689b916f4613ccfe9c26c1"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "sha256": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082"
+  }
+ ],
+ "tex_check": null,
+ "note": "also l.52 'the gap is significant on every Parkinson's and Alzheimer's set except MDVR-KCL'; probe vectors from the Track A re-extraction whose mean of five equals Table 1 to 4 dp",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:33:15.873793Z"
+}

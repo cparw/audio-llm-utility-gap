@@ -1,0 +1,57 @@
+{
+ "id": "X_edaic_conf_kimi",
+ "family": "EXTRA CHANCE",
+ "role": "sensitivity only",
+ "claim": "conflict arm AUC minus 0.5, E-DAIC, Kimi-Audio",
+ "tex_line": 180,
+ "tex_quote": "On the depression segments four of the six models fall below chance when the words point away from the label",
+ "estimator": "one",
+ "value": 0.0258466397613617,
+ "lo": -0.049934184198636475,
+ "hi": 0.09771398944193047,
+ "excludes_zero": false,
+ "p": 0.5137431284357821,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 513,
+ "n_ge0": 1487,
+ "term_points": [
+  0.5258466397613617,
+  0.5
+ ],
+ "n_clips": 483,
+ "n_spk": 138,
+ "n_pos": 205,
+ "per_clip": "scores/part25/B/per_clip/B_X_edaic_conf_kimi_perclip.csv",
+ "per_clip_sha256": "ecfd777cac8e6ee300c887e71d5f087c755fc56d2c439f24236be0610b799401",
+ "draws": "scores/part25/B/draws/B_X_edaic_conf_kimi_draws.npz",
+ "draws_sha256": "e892c728d7fd449b33c3ceafb53e06aaaad057f49dffdd94f378a6c225b80259",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/edaic_rerun/part17/T1_perclip_all966.csv",
+   "sha256": "2cb1fab543119ef96379bbaf2eb24e692fc3bd4be270c088276eadfa9d258b92"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.53,
+   "computed": 0.525847,
+   "rounds_to": 0.53,
+   "match": true
+  }
+ },
+ "note": "not in the requested list; abstract l.26 'four of six models fall below chance'; Table 2 l.173 conflict 0.53",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:35:24.109454Z"
+}

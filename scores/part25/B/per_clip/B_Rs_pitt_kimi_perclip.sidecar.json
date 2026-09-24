@@ -1,0 +1,67 @@
+{
+ "id": "Rs_pitt_kimi",
+ "family": "ARMS",
+ "role": "sensitivity only",
+ "claim": "conflict minus agreement arm AUC, Pitt, Kimi-Audio",
+ "tex_line": 180,
+ "tex_quote": "Kimi-Audio shows no drop, and the two Audio Flamingo models score 0.53 to 0.61 on both arms",
+ "estimator": "arms",
+ "value": -0.0029877459639985338,
+ "lo": -0.11338938461733043,
+ "hi": 0.10652876469905792,
+ "excludes_zero": false,
+ "p": 0.9385307346326837,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 1062,
+ "n_ge0": 938,
+ "term_points": [
+  0.7196919691969198,
+  0.7226797151609183
+ ],
+ "n_clips": 468,
+ "n_spk": 228,
+ "n_pos": 290,
+ "per_clip": "scores/part25/B/per_clip/B_Rs_pitt_kimi_perclip.csv",
+ "per_clip_sha256": "542e27b657a4983775bb8568472e33202e9202c12bcf6cbb35d8b7c8f6ef4b80",
+ "draws": "scores/part25/B/draws/B_Rs_pitt_kimi_draws.npz",
+ "draws_sha256": "e8ba71f1e6d509d6a31f37f08d9772815eb7444bede7f4cfea86bfda6d33d363",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+   "sha256": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365"
+  },
+  {
+   "path": "<local data dir>/DementiaBank/pitt_conflict_manifest.csv",
+   "sha256": "13c02db00532b910ab81c3bfa893af969c9e0840d25bbfa69f0b7abb117e5607"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.72,
+   "computed": 0.719692,
+   "rounds_to": 0.72,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.72,
+   "computed": 0.72268,
+   "rounds_to": 0.72,
+   "match": true
+  }
+ },
+ "note": "Table 2 row l.173: 0.72 / 0.72; arm from pitt_conflict_manifest.csv set column; sensitivity member (tex reports no significant drop)",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:36.993166Z"
+}

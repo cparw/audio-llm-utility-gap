@@ -1,0 +1,67 @@
+{
+ "id": "G_adresso",
+ "family": "GAPS",
+ "role": "claimed",
+ "claim": "encoder probe (mean of five) minus zero-shot answer, ADReSSo",
+ "tex_line": 149,
+ "tex_quote": "The paired difference $\\Delta$ excludes zero on every Parkinson's and Alzheimer's set except MDVR-KCL",
+ "estimator": "mean5",
+ "value": 0.26017818959372785,
+ "lo": 0.1755085344483064,
+ "hi": 0.33956551891989545,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 0,
+ "n_ge0": 2000,
+ "term_points": [
+  0.8752173913043478,
+  0.61503920171062,
+  0.8722024233784746,
+  0.8664647184604419,
+  0.8824661439771917,
+  0.8739843193157519,
+  0.8809693513898789
+ ],
+ "n_clips": 237,
+ "n_spk": 237,
+ "n_pos": 122,
+ "per_clip": "scores/part25/B/per_clip/B_G_adresso_perclip.csv",
+ "per_clip_sha256": "e31d51117b9db9c0d72c620d2b25eb7f12592e6f569d38e63060c813093c4b95",
+ "draws": "scores/part25/B/draws/B_G_adresso_draws.npz",
+ "draws_sha256": "605365aee2b463bc31832aecc7f91e0e92a1cc3453466b6705804e4121507cba",
+ "draws_source": "Track A saved draws (regenerated here and equal to 1e-9)",
+ "trackA_reuse": {
+  "file": "scores/part25/A/draws/A_adresso_draws.npz",
+  "sha256": "058c2b664e653719bb1d31aa8150764c55f10fcac6db7f468ffc8fe3d76cf994",
+  "same_speaker_idx": true,
+  "same_nan_pattern": true,
+  "max_abs_draw_diff_vs_regenerated": 0.0,
+  "point_diff_saved": 0.26017818959372785,
+  "point_diff_here": 0.26017818959372785
+ },
+ "sources": [
+  {
+   "path": "scores/part25/A/per_clip/A_adresso_perclip.csv",
+   "sha256": "8ca580ac103b4eff7e0fa3fe2cee4f9a184c650f36e7683c5dfc2be69f6b118b"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv",
+   "sha256": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd"
+  }
+ ],
+ "tex_check": null,
+ "note": "also l.52 'the gap is significant on every Parkinson's and Alzheimer's set except MDVR-KCL'; probe vectors from the Track A re-extraction whose mean of five equals Table 1 to 4 dp",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:33:22.313712Z"
+}

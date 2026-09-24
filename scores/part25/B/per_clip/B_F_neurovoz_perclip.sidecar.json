@@ -1,0 +1,67 @@
+{
+ "id": "F_neurovoz",
+ "family": "FINE TUNE",
+ "role": "claimed",
+ "claim": "projector fine-tune minus zero-shot answer, NeuroVoz",
+ "tex_line": 226,
+ "tex_quote": "After fine-tuning the projector, AUC improves significantly on every dataset except MDVR-KCL",
+ "estimator": "two",
+ "value": 0.20775428070932866,
+ "lo": 0.15881803305766773,
+ "hi": 0.2578415910187819,
+ "excludes_zero": true,
+ "p": 0.0009995002498750624,
+ "usable_draws": 2000,
+ "degenerate_draws": 0,
+ "n_le0": 0,
+ "n_ge0": 2000,
+ "term_points": [
+  0.9028357760855918,
+  0.6950814953762632
+ ],
+ "n_clips": 1270,
+ "n_spk": 107,
+ "n_pos": 621,
+ "per_clip": "scores/part25/B/per_clip/B_F_neurovoz_perclip.csv",
+ "per_clip_sha256": "c61c2bea28004d1f2c55873f7a62f7cfee871fee2ac9bab56f1673160eebdbc2",
+ "draws": "scores/part25/B/draws/B_F_neurovoz_draws.npz",
+ "draws_sha256": "88733c8871b58941a79a20add68316b9828084c54ce39c244c377c591baa33e2",
+ "draws_source": "regenerated here from the per-clip file",
+ "trackA_reuse": null,
+ "sources": [
+  {
+   "path": "<local data dir>/release/omni_final/omnisft_neurovoz_oof.csv",
+   "sha256": "3e7646316242937b863debd5ccb80aa477158eb4048c1eef50c3922ee02a399e"
+  },
+  {
+   "path": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "sha256": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082"
+  }
+ ],
+ "tex_check": {
+  "t0": {
+   "tex": 0.9,
+   "computed": 0.902836,
+   "rounds_to": 0.9,
+   "match": true
+  },
+  "t1": {
+   "tex": 0.7,
+   "computed": 0.695081,
+   "rounds_to": 0.7,
+   "match": true
+  }
+ },
+ "note": "Table 1 l.120-130: 0.70 -> 0.90; also abstract l.26, l.53, l.244",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "np.unique string speaker ids; idx = rng.choice(n_spk, size=n_spk, replace=True); all clips of each drawn speaker",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "written_utc": "2026-09-24T03:34:43.203595Z"
+}
