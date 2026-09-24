@@ -1,0 +1,725 @@
+{
+ "task": "PART25 independent verifier, track A",
+ "date_utc": "2026-09-24T03:40:26.179742Z",
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "scipy": "1.15.3",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "method": {
+  "auc": "sklearn.metrics.roc_auc_score, cross-checked with a scipy rankdata Mann-Whitney AUC",
+  "bootstrap": "2000 draws, fresh numpy default_rng(0) per cell, idx = rng.choice(n_spk, size=n_spk, replace=True) over np.unique(speaker as str), all clips of each drawn speaker, paired on the same draw, mean of the five per-repeat AUCs per draw, percentiles 2.5/97.5 (numpy linear)"
+ },
+ "inputs_sha256": {
+  "scores/part25/A/per_clip/A_pcgita_perclip.csv": "993302c72862d106127ccc0827f1d4f6ec53915f8610d44ffbe148388febac2a",
+  "scores/part25/A/pod/p25Ar-pcgita/r2_pcgita_enc_nested5_oof.csv": "f6ef98dfa1e711287d91f85f57378d76baecc7f88a7b2533c7951a3010ea0ffc",
+  "<local data dir>/release/omni_final/omni_pcgita_nested_repeats.json": "d527536a84934e0a78a78e3fc3b44437819f1d41c89fc1d1f95573b65529995e",
+  "scores/part25/A/pod/p25Ar-pcgita/r2orig_pcgita_nested_repeats.json": "8b252e0204b542701c089e8d228d1d9e7daf42b7a3dd44340f3cb7c7e67a6f42",
+  "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+  "scores/part25/A/pod/p25Ar-pcgita/r2_omni_pcgita_zeroshot_scores.csv": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+  "<local data dir>/release/omni_final/omni_pcgita_enc_nested_oof.csv": "d8413f410f91d92ba278266d5dafe0096beba7bce8b908c22c4419058982c67e",
+  "scores/part25/A/per_clip/A_neurovoz_perclip.csv": "98dd842a52bb65ebc0958faddc16bfbd3390817ae5689b916f4613ccfe9c26c1",
+  "scores/part25/A/pod/p25Ar-neurovoz/r2_neurovoz_enc_nested5_oof.csv": "a2a9b584fcb464cc889a0057887394000a0855a37375f95aca1c3ee69b118e38",
+  "<local data dir>/release/omni_final/omni_neurovoz_nested_repeats.json": "06df58214a53c7b082af4be22fe0cf38f38097daa383243b8e352a596efe68a7",
+  "scores/part25/A/pod/p25Ar-neurovoz/r2orig_neurovoz_nested_repeats.json": "7566859d9e7b66048b10bd5879c040db81dd7731386b1906c01bcb550bbe07e9",
+  "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+  "scores/part25/A/pod/p25Ar-neurovoz/r2_omni_neurovoz_zeroshot_scores.csv": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+  "<local data dir>/release/omni_final/omni_neurovoz_enc_nested_oof.csv": "1a1c2cac8ee13e34fe89a8ae5fd668dfc648dfc28feb70581ab9670434418e2d",
+  "scores/part25/A/per_clip/A_adresso_perclip.csv": "8ca580ac103b4eff7e0fa3fe2cee4f9a184c650f36e7683c5dfc2be69f6b118b",
+  "scores/part25/A/pod/p25Ar-adresso/r2_adresso_enc_nested5_oof.csv": "da5a3587d1d7fb4af801b0ef85cc5b76b6a91eaffb905a11a56430b8201cccf1",
+  "<local data dir>/release/omni_final/omni_adresso_nested_repeats.json": "9f84041e55dd991114a08951a21bcd4de26c2953a130e12ebe99085b8fb7840b",
+  "scores/part25/A/pod/p25Ar-adresso/r2orig_adresso_nested_repeats.json": "dee855616b72b7b1f9ee64a5d4f5a06f26966bc63a6822397af9bc90b6eb2fb1",
+  "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+  "scores/part25/A/pod/p25Ar-adresso/r2_omni_adresso_zeroshot_scores.csv": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+  "<local data dir>/release/omni_final/omni_adresso_enc_nested_oof.csv": "447010a74fe175e03a565ee647ff34a2e6fed447a2e8849defdfd8b5e9e118e5",
+  "scores/part25/A/per_clip/A_adress2020_perclip.csv": "42e355cefdd22ca756a240aeb37df6f2ed7a940accc139e7c9677cb944a15daf",
+  "scores/part25/A/pod/p25Ar-adress2020-h200/r2_adress2020_enc_nested5_oof.csv": "2ae2526111d3244cdcb494ac834980acb44b3cfe7901b898a9cd972f062d3160",
+  "<local data dir>/release/omni_final/omni_adress2020_nested_repeats.json": "ec1b12cba4c005ec7cfe809d3d59061f6f0de92a9f5960bdefa09cea234d4b55",
+  "scores/part25/A/pod/p25Ar-adress2020-h200/r2orig_adress2020_nested_repeats.json": "6acc927b920c1285ed6bcf80bc29164191711e0c8ca1d78da5509ec3b814cbb6",
+  "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+  "scores/part25/A/pod/p25Ar-adress2020-h200/r2_omni_adress2020_zeroshot_scores.csv": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+  "<local data dir>/release/omni_final/omni_adress2020_enc_nested_oof.csv": "7c26b3f361fc88b3134532c4210c275b4c89248398ffa06e523f137c812c9a9e",
+  "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47",
+  "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406"
+ },
+ "datasets": {
+  "pcgita": {
+   "pod_oof_clip_set_equal": true,
+   "pod_oof_max_abs_diff_vs_perclip": 0.0,
+   "pod_oof_labels_equal": true,
+   "per_repeat_auc": [
+    0.8881752066115702,
+    0.8900165289256198,
+    0.8925702479338843,
+    0.8954330578512398,
+    0.9044413223140497
+   ],
+   "per_repeat_mw_max_diff": 1.1102230246251565e-16,
+   "table1_per_repeat": [
+    0.8882,
+    0.89,
+    0.8926,
+    0.8954,
+    0.9044
+   ],
+   "table1_mean": 0.8941,
+   "mean5": 0.8941272727272727,
+   "per_repeat_4dp_match_table1": true,
+   "mean5_4dp_match_table1": true,
+   "orig_script_enc_equals_table1_json": true,
+   "zs_saved_clip_set_equal": true,
+   "zs_saved_labels_equal": true,
+   "zs_saved_speakers_equal": true,
+   "perclip_zs_saved_col_equal_file": true,
+   "zeroshot_auc": 0.5634776859504131,
+   "zeroshot_auc_mw_diff": 1.1102230246251565e-16,
+   "zeroshot_json_auc": 0.5635,
+   "zs_rerun_exact_equal": 1100,
+   "zs_rerun_max_abs_diff": 0.0,
+   "single_split_rerun_vs_saved_max_abs": 0.0,
+   "single_split_auc_saved": 0.9088644628099174,
+   "single_split_auc_json": 0.9088644628099174,
+   "single_split_gap": 0.34538677685950425,
+   "single_split_layers_saved": [
+    7,
+    12,
+    2,
+    15,
+    6
+   ],
+   "single_split_layers_rerun_keys": [
+    "n_layers",
+    "single_split_auc"
+   ],
+   "folds_equal_release": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "n": 1100,
+   "n_speakers": 100,
+   "n_pos": 550,
+   "gap": 0.3306495867768595,
+   "lo": 0.24979955940559587,
+   "hi": 0.40877956233147067,
+   "usable": 2000,
+   "track_draws_max_abs_diff_vs_mine": 0.0,
+   "track_speaker_idx_equal_mine": true,
+   "track_speakers_equal_mine": true,
+   "track_point_diff": 0.3306495867768595,
+   "checks": {
+    "gap4": true,
+    "lo4": true,
+    "hi4": true,
+    "n": true,
+    "nspk": true,
+    "usable": true,
+    "mean5": true,
+    "reps": true,
+    "zs4": true,
+    "single4": true,
+    "pod_oof": true,
+    "zs_file": true,
+    "folds": true,
+    "excl0": true
+   }
+  },
+  "neurovoz": {
+   "pod_oof_clip_set_equal": true,
+   "pod_oof_max_abs_diff_vs_perclip": 0.0,
+   "pod_oof_labels_equal": true,
+   "per_repeat_auc": [
+    0.9274617955531737,
+    0.9154328844822581,
+    0.9279704438142167,
+    0.9123586640167334,
+    0.9231606162335713
+   ],
+   "per_repeat_mw_max_diff": 2.220446049250313e-16,
+   "table1_per_repeat": [
+    0.9275,
+    0.9154,
+    0.928,
+    0.9124,
+    0.9232
+   ],
+   "table1_mean": 0.9213,
+   "mean5": 0.9212768808199906,
+   "per_repeat_4dp_match_table1": true,
+   "mean5_4dp_match_table1": true,
+   "orig_script_enc_equals_table1_json": true,
+   "zs_saved_clip_set_equal": true,
+   "zs_saved_labels_equal": true,
+   "zs_saved_speakers_equal": true,
+   "perclip_zs_saved_col_equal_file": true,
+   "zeroshot_auc": 0.6950814953762632,
+   "zeroshot_auc_mw_diff": 1.1102230246251565e-16,
+   "zeroshot_json_auc": 0.6951,
+   "zs_rerun_exact_equal": 1270,
+   "zs_rerun_max_abs_diff": 0.0,
+   "single_split_rerun_vs_saved_max_abs": 0.0,
+   "single_split_auc_saved": 0.9159725478811699,
+   "single_split_auc_json": 0.9159725478811699,
+   "single_split_gap": 0.2208910525049067,
+   "single_split_layers_saved": [
+    17,
+    29,
+    25,
+    25,
+    19
+   ],
+   "single_split_layers_rerun_keys": [
+    "n_layers",
+    "single_split_auc"
+   ],
+   "folds_equal_release": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "n": 1270,
+   "n_speakers": 107,
+   "n_pos": 621,
+   "gap": 0.22619538544372741,
+   "lo": 0.17349622032564116,
+   "hi": 0.28505668553264496,
+   "usable": 2000,
+   "track_draws_max_abs_diff_vs_mine": 0.0,
+   "track_speaker_idx_equal_mine": true,
+   "track_speakers_equal_mine": true,
+   "track_point_diff": 0.22619538544372741,
+   "checks": {
+    "gap4": true,
+    "lo4": true,
+    "hi4": true,
+    "n": true,
+    "nspk": true,
+    "usable": true,
+    "mean5": true,
+    "reps": true,
+    "zs4": true,
+    "single4": true,
+    "pod_oof": true,
+    "zs_file": true,
+    "folds": true,
+    "excl0": true
+   }
+  },
+  "adresso": {
+   "pod_oof_clip_set_equal": true,
+   "pod_oof_max_abs_diff_vs_perclip": 0.0,
+   "pod_oof_labels_equal": true,
+   "per_repeat_auc": [
+    0.8722024233784746,
+    0.8664647184604419,
+    0.8824661439771917,
+    0.8739843193157519,
+    0.8809693513898789
+   ],
+   "per_repeat_mw_max_diff": 0.0,
+   "table1_per_repeat": [
+    0.8722,
+    0.8665,
+    0.8825,
+    0.874,
+    0.881
+   ],
+   "table1_mean": 0.8752,
+   "mean5": 0.8752173913043478,
+   "per_repeat_4dp_match_table1": true,
+   "mean5_4dp_match_table1": true,
+   "orig_script_enc_equals_table1_json": true,
+   "zs_saved_clip_set_equal": true,
+   "zs_saved_labels_equal": true,
+   "zs_saved_speakers_equal": true,
+   "perclip_zs_saved_col_equal_file": true,
+   "zeroshot_auc": 0.61503920171062,
+   "zeroshot_auc_mw_diff": 1.1102230246251565e-16,
+   "zeroshot_json_auc": 0.615,
+   "zs_rerun_exact_equal": 237,
+   "zs_rerun_max_abs_diff": 0.0,
+   "single_split_rerun_vs_saved_max_abs": 0.0,
+   "single_split_auc_saved": 0.8898788310762652,
+   "single_split_auc_json": 0.8898788310762652,
+   "single_split_gap": 0.2748396293656452,
+   "single_split_layers_saved": [
+    29,
+    29,
+    28,
+    26,
+    26
+   ],
+   "single_split_layers_rerun_keys": [
+    "n_layers",
+    "single_split_auc"
+   ],
+   "folds_equal_release": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "n": 237,
+   "n_speakers": 237,
+   "n_pos": 122,
+   "gap": 0.26017818959372785,
+   "lo": 0.1755085344483064,
+   "hi": 0.33956551891989545,
+   "usable": 2000,
+   "track_draws_max_abs_diff_vs_mine": 0.0,
+   "track_speaker_idx_equal_mine": true,
+   "track_speakers_equal_mine": true,
+   "track_point_diff": 0.26017818959372785,
+   "checks": {
+    "gap4": true,
+    "lo4": true,
+    "hi4": true,
+    "n": true,
+    "nspk": true,
+    "usable": true,
+    "mean5": true,
+    "reps": true,
+    "zs4": true,
+    "single4": true,
+    "pod_oof": true,
+    "zs_file": true,
+    "folds": true,
+    "excl0": true
+   }
+  },
+  "adress2020": {
+   "pod_oof_clip_set_equal": true,
+   "pod_oof_max_abs_diff_vs_perclip": 0.0,
+   "pod_oof_labels_equal": true,
+   "per_repeat_auc": [
+    0.8160749506903353,
+    0.7935568704799474,
+    0.8050624589086128,
+    0.8062130177514795,
+    0.8004602235371466
+   ],
+   "per_repeat_mw_max_diff": 2.220446049250313e-16,
+   "table1_per_repeat": [
+    0.8161,
+    0.7936,
+    0.8051,
+    0.8062,
+    0.8005
+   ],
+   "table1_mean": 0.8043,
+   "mean5": 0.8042735042735043,
+   "per_repeat_4dp_match_table1": true,
+   "mean5_4dp_match_table1": true,
+   "orig_script_enc_equals_table1_json": true,
+   "zs_saved_clip_set_equal": true,
+   "zs_saved_labels_equal": true,
+   "zs_saved_speakers_equal": true,
+   "perclip_zs_saved_col_equal_file": true,
+   "zeroshot_auc": 0.6240959894806049,
+   "zeroshot_auc_mw_diff": 0.0,
+   "zeroshot_json_auc": 0.6241,
+   "zs_rerun_exact_equal": 156,
+   "zs_rerun_max_abs_diff": 0.0,
+   "single_split_rerun_vs_saved_max_abs": 0.0,
+   "single_split_auc_saved": 0.7878040762656147,
+   "single_split_auc_json": 0.7878040762656147,
+   "single_split_gap": 0.1637080867850098,
+   "single_split_layers_saved": [
+    25,
+    17,
+    30,
+    27,
+    29
+   ],
+   "single_split_layers_rerun_keys": [
+    "n_layers",
+    "single_split_auc"
+   ],
+   "folds_equal_release": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "n": 156,
+   "n_speakers": 156,
+   "n_pos": 78,
+   "gap": 0.18017751479289945,
+   "lo": 0.07660302294164079,
+   "hi": 0.2804666484587164,
+   "usable": 2000,
+   "track_draws_max_abs_diff_vs_mine": 0.0,
+   "track_speaker_idx_equal_mine": true,
+   "track_speakers_equal_mine": true,
+   "track_point_diff": 0.18017751479289945,
+   "checks": {
+    "gap4": true,
+    "lo4": true,
+    "hi4": true,
+    "n": true,
+    "nspk": true,
+    "usable": true,
+    "mean5": true,
+    "reps": true,
+    "zs4": true,
+    "single4": true,
+    "pod_oof": true,
+    "zs_file": true,
+    "folds": true,
+    "excl0": true
+   }
+  },
+  "pitt": {
+   "clip_set_equal": true,
+   "labels_equal": true,
+   "speakers_equal": true,
+   "n": 468,
+   "n_speakers": 228,
+   "per_repeat": [
+    0.7598024021697016,
+    0.7724719101123595,
+    0.7458930647036032,
+    0.7903332041844247,
+    0.7843471522665634
+   ],
+   "mean5": 0.7705695466873305,
+   "zeroshot": 0.6577683068578071,
+   "gap": 0.11280123982952339,
+   "lo": 0.04550149479611408,
+   "hi": 0.1768100605302148,
+   "usable": 2000,
+   "track_draws_max_abs_diff": 0.0,
+   "track_idx_equal": true,
+   "omni_final_pitt_enc_mean": 0.7761,
+   "tex_pitt_interval_present": true,
+   "checks": {
+    "gap": true,
+    "lo": true,
+    "hi": true,
+    "n": true,
+    "nspk": true,
+    "mean5": true,
+    "zs": true,
+    "files": true
+   }
+  }
+ },
+ "part2": {
+  "table1_reproduction": {
+   "pcgita": {
+    "layers_rerun": [
+     7,
+     12,
+     2,
+     15,
+     6
+    ],
+    "layers_saved": [
+     7,
+     12,
+     2,
+     15,
+     6
+    ],
+    "layers_equal": true,
+    "podverify_PASS": true,
+    "podverify_max_abs_pred_diff": 0.0,
+    "podverify_layer_mismatches": [],
+    "gpu": "H200",
+    "mean5_minus_table1": 2.727272727265362e-05,
+    "mean5_4dp_equal": true,
+    "per_repeat_4dp_equal": true,
+    "orig_script_equal": true,
+    "zs_rerun_exact": 1100,
+    "n": 1100,
+    "single_split_max_abs": 0.0
+   },
+   "neurovoz": {
+    "layers_rerun": [
+     17,
+     29,
+     25,
+     25,
+     19
+    ],
+    "layers_saved": [
+     17,
+     29,
+     25,
+     25,
+     19
+    ],
+    "layers_equal": true,
+    "podverify_PASS": true,
+    "podverify_max_abs_pred_diff": 0.0,
+    "podverify_layer_mismatches": [],
+    "gpu": "H200",
+    "mean5_minus_table1": -2.3119180009412155e-05,
+    "mean5_4dp_equal": true,
+    "per_repeat_4dp_equal": true,
+    "orig_script_equal": true,
+    "zs_rerun_exact": 1270,
+    "n": 1270,
+    "single_split_max_abs": 0.0
+   },
+   "adresso": {
+    "layers_rerun": [
+     29,
+     29,
+     28,
+     26,
+     26
+    ],
+    "layers_saved": [
+     29,
+     29,
+     28,
+     26,
+     26
+    ],
+    "layers_equal": true,
+    "podverify_PASS": true,
+    "podverify_max_abs_pred_diff": 0.0,
+    "podverify_layer_mismatches": [],
+    "gpu": "H200",
+    "mean5_minus_table1": 1.739130434785796e-05,
+    "mean5_4dp_equal": true,
+    "per_repeat_4dp_equal": true,
+    "orig_script_equal": true,
+    "zs_rerun_exact": 237,
+    "n": 237,
+    "single_split_max_abs": 0.0
+   },
+   "adress2020": {
+    "layers_rerun": [
+     25,
+     17,
+     30,
+     27,
+     29
+    ],
+    "layers_saved": [
+     25,
+     17,
+     30,
+     27,
+     29
+    ],
+    "layers_equal": true,
+    "podverify_PASS": true,
+    "podverify_max_abs_pred_diff": 0.0,
+    "podverify_layer_mismatches": [],
+    "gpu": "H200",
+    "mean5_minus_table1": -2.649572649571219e-05,
+    "mean5_4dp_equal": true,
+    "per_repeat_4dp_equal": true,
+    "orig_script_equal": true,
+    "zs_rerun_exact": 156,
+    "n": 156,
+    "single_split_max_abs": 0.0
+   }
+  },
+  "independent_check": {
+   "file_ALL_PASS": true,
+   "podverify_all": true,
+   "my_recompute_all": true,
+   "my_draws_bit_equal": true
+  },
+  "sensitivity_h100": {
+   "gpu_is_h100_hbm3": true,
+   "oof_sha": "2ae2526111d3244cdcb494ac834980acb44b3cfe7901b898a9cd972f062d3160",
+   "oof_sha_equals_h200_oof": true,
+   "mean5": 0.8042735042735043,
+   "zeroshot_saved": 0.6240959894806049,
+   "gap": 0.18017751479289945,
+   "lo": 0.07660302294164079,
+   "hi": 0.2804666484587164,
+   "usable": 2000,
+   "zs_rerun_exact_equal": 153,
+   "zs_rerun_max_abs": 0.015552099170763944,
+   "gap_with_h100_rerun_zeroshot": 0.18001314924391842,
+   "ci_with_h100_rerun_zeroshot": [
+    0.07636288727752148,
+    0.2801343630798573
+   ],
+   "track_draws_max_abs_diff": 0.0
+  },
+  "cost": {
+   "pods": [
+    {
+     "name": "p25Ar-pcgita",
+     "id": "zut4h14otaka38",
+     "id_resp": "zut4h14otaka38",
+     "rate_resp": 4.59,
+     "rate_record": 4.59,
+     "hours": 0.3383333333333333,
+     "usd": 1.5529499999999998,
+     "delete_204_gone_in_log": true,
+     "live_now": false
+    },
+    {
+     "name": "p25Ar-neurovoz",
+     "id": "yk0kdi7s6k90j5",
+     "id_resp": "yk0kdi7s6k90j5",
+     "rate_resp": 4.59,
+     "rate_record": 4.59,
+     "hours": 0.35333333333333333,
+     "usd": 1.6218,
+     "delete_204_gone_in_log": true,
+     "live_now": false
+    },
+    {
+     "name": "p25Ar-adresso",
+     "id": "348aftq6eytbv7",
+     "id_resp": "348aftq6eytbv7",
+     "rate_resp": 4.59,
+     "rate_record": 4.59,
+     "hours": 0.13111111111111112,
+     "usd": 0.6018,
+     "delete_204_gone_in_log": true,
+     "live_now": false
+    },
+    {
+     "name": "p25Ar-adress2020",
+     "id": "fty6q62utrqzmj",
+     "id_resp": "fty6q62utrqzmj",
+     "rate_resp": 3.49,
+     "rate_record": 3.49,
+     "hours": 0.37,
+     "usd": 1.2913000000000001,
+     "delete_204_gone_in_log": true,
+     "live_now": false
+    },
+    {
+     "name": "p25Ar-adress2020-h200",
+     "id": "olomyogjeu7lp7",
+     "id_resp": "olomyogjeu7lp7",
+     "rate_resp": 4.59,
+     "rate_record": 4.59,
+     "hours": 0.10583333333333333,
+     "usd": 0.485775,
+     "delete_204_gone_in_log": true,
+     "live_now": false
+    }
+   ],
+   "total_recomputed": 5.553625,
+   "total_claimed": 5.55,
+   "live_pods_now": [
+    [
+     "5dt4v6o0nffj1o",
+     "p26-kimi-adress2020-c2"
+    ]
+   ]
+  },
+  "tex_notes": {
+   "pcgita_033_in_tex": true,
+   "pitt_interval_in_tex": true,
+   "excludes_zero_sentence": true,
+   "neurovoz_023_gap_in_tex": false,
+   "adresso_026_gap_in_tex": false,
+   "adress2020_018_gap_in_tex": false,
+   "pitt_table1_speakers": "227"
+  }
+ },
+ "date_utc_final": "2026-09-24T03:43:16.221248Z",
+ "rows": [
+  {
+   "id": "A_PCGITA_gap",
+   "claimed": "+0.3306 [0.2498, 0.4088]",
+   "recomputed": "+0.3306 [0.2498, 0.4088]; mean5 0.8941 (T1 0.8941), zs 0.5635, single-split gap +0.3454, n 1100/100 spk, usable 2000",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_NeuroVoz_gap",
+   "claimed": "+0.2262 [0.1735, 0.2851]",
+   "recomputed": "+0.2262 [0.1735, 0.2851]; mean5 0.9213 (T1 0.9213), zs 0.6951, single-split gap +0.2209, n 1270/107 spk, usable 2000",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_ADReSSo_gap",
+   "claimed": "+0.2602 [0.1755, 0.3396]",
+   "recomputed": "+0.2602 [0.1755, 0.3396]; mean5 0.8752 (T1 0.8752), zs 0.6150, single-split gap +0.2748, n 237/237 spk, usable 2000",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_ADReSS2020_gap",
+   "claimed": "+0.1802 [0.0766, 0.2805]",
+   "recomputed": "+0.1802 [0.0766, 0.2805]; mean5 0.8043 (T1 0.8043), zs 0.6241, single-split gap +0.1637, n 156/156 spk, usable 2000",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_Pitt_reference",
+   "claimed": "+0.1128 [0.0455, 0.1768]",
+   "recomputed": "+0.1128 [0.0455, 0.1768]; mean5 0.7706, zs 0.6578, n 468/228 speaker labels, usable 2000",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_table1_reproduction",
+   "claimed": "4 of 4 exact to 4 dp (difference 0.0000 on every set)",
+   "recomputed": "4 of 4: mean5 and all 5 repeats equal Table 1 JSON at 4 dp (|mean5 - T1| 2.7e-05, 2.3e-05, 1.7e-05, 2.6e-05); orig-script enc JSON == omni_final JSON on 4/4; zero-shot rerun bit-identical 1100/1100, 1270/1270, 237/237, 156/156; single split max abs diff 0.0 and layers equal on 4/4",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_independent_check",
+   "claimed": "ALL_PASS true",
+   "recomputed": "A_verify_r2.json ALL_PASS=True; pod verify PASS 4/4, max_pred_diff 0, no layer mismatches=True; this verifier's own recompute agrees on all 5 gaps and my 2000 draws equal track A's npz bit for bit=True",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_sensitivity_ADReSS2020_H100",
+   "claimed": "+0.1802 [0.0766, 0.2805], n 156",
+   "recomputed": "+0.1802 [0.0766, 0.2805], n 156, mean5 0.8043, zero-shot exact 153/156 (max diff 0.0156); gap uses the saved zero-shot; H100 OOF csv byte-identical to H200 OOF=True; with the H100 rerun zero-shot instead: +0.1800 [0.0764, 0.2801]",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_cost",
+   "claimed": "$5.55",
+   "recomputed": "$5.55 from createdAt (launch resp) to watchdog DELETE 204/GONE times x costPerHr; 5 pods (4 H200, 1 H100); all 5 ids return HTTP 404 on GET /v1/pods/<id> at 03:42Z; only live pod is another track's (p26-kimi-adress2020-c2); balance at 03:42Z was $101.88 (other tracks spending since)",
+   "verified": "yes",
+   "fails": []
+  },
+  {
+   "id": "A_note_text_values",
+   "claimed": "text says 0.33 / 0.23 / 0.26 / 0.18",
+   "recomputed": "final tex has 0.33 for PC-GITA (True) and Pitt 0.11 [0.05, 0.18] (True); no NeuroVoz 0.23, ADReSSo 0.26 or ADReSS-2020 0.18 gap appears in the tex or fig1_gap.pdf; the mean-of-five gaps round to those values",
+   "verified": "no",
+   "fails": [
+    "0.23/0.26/0.18 not in final tex"
+   ]
+  },
+  {
+   "id": "A_note_pitt_speakers",
+   "claimed": "Pitt 468 clips, 228 speakers",
+   "recomputed": "228 speaker labels in pitt_enc_nested5_oof.npz (participant 172 is under Control172 and Dementia172); tex Table 1 prints 468 (227)",
+   "verified": "yes",
+   "fails": []
+  }
+ ],
+ "scripts": [
+  "scripts/part25/verify/A_indep_verify.py",
+  "scripts/part25/verify/A_indep_verify_part2.py"
+ ],
+ "my_draws": [
+  "<local data dir>/release_from_mac/scores/part25/verify/draws/Vfy_A_pcgita_draws.npz",
+  "<local data dir>/release_from_mac/scores/part25/verify/draws/Vfy_A_neurovoz_draws.npz",
+  "<local data dir>/release_from_mac/scores/part25/verify/draws/Vfy_A_adresso_draws.npz",
+  "<local data dir>/release_from_mac/scores/part25/verify/draws/Vfy_A_adress2020_draws.npz",
+  "<local data dir>/release_from_mac/scores/part25/verify/draws/Vfy_A_pitt_draws.npz"
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "created_utc": "2026-09-24T03:42:55Z",
+ "tsv": "scores/part25/verify/C_VERIFIED.tsv",
+ "cells_json": "scores/part25/verify/C/vC_cells.json",
+ "recompute_meta": {
+  "created_utc": "2026-09-24T03:42:26Z",
+  "script": "scripts/part25/verify/C/vC_recompute.py",
+  "env": {
+   "python": "3.10.2",
+   "numpy": "2.2.6",
+   "sklearn": "1.7.2",
+   "scipy": "1.15.3"
+  },
+  "master_lookup": "<local data dir>/release/master/master_lookup.csv",
+  "master_lookup_sha256": "68f8bccfe0a6151bd5d59cd9ddc29445ad25080fd25d869eaca0c3b667928467",
+  "n_master_rows": 242,
+  "kimi_encoder_rows_in_master": []
+ },
+ "script": "scripts/part25/verify/C/vC_compare.py",
+ "n_ids": 25,
+ "n_yes": 25,
+ "addendum": {
+  "id": "C_kimi_enc_adress2020_part26_addendum",
+  "added_utc": "2026-09-24T03:43:41Z",
+  "script": "scripts/part25/verify/C/vC_kimi_a2020_addendum.py",
+  "sidecar": "<local data dir>/release_from_mac/scores/part25/verify/C/sidecars/vC_kimi_adress2020_enc_part26.sidecar.json"
+ }
+}
