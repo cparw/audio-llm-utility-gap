@@ -1,0 +1,34 @@
+{
+ "what": "PART25 A retry sensitivity: ADReSS-2020 extracted under transformers 5.5.4 on an H100 80GB HBM3 (not the original H200).\n153 of 156 zero-shot scores are bit-identical to the saved file, 3 are not. Same probe, same bootstrap as A_gaps_r2.py.\nWrites A_sensitivity_r2.tsv, A_sensitivity_r2.sidecar.json, draws/A_sens_adress2020_h100hbm3_tf554_draws.npz.",
+ "per_repeat": [
+  0.8160749506903353,
+  0.7935568704799474,
+  0.8050624589086128,
+  0.8062130177514795,
+  0.8004602235371466
+ ],
+ "mean5": 0.8042735042735043,
+ "zeroshot": 0.6240959894806049,
+ "gap": 0.18017751479289945,
+ "ci": [
+  0.07660302294164079,
+  0.2804666484587164
+ ],
+ "usable": 2000,
+ "zs_compare": {
+  "n": 156,
+  "p_yes_exact_equal": 153,
+  "p_yes_max_abs_diff": 0.015552099170763944,
+  "p_yes_median_abs_diff": 0.0,
+  "n_below_1e-9": 153,
+  "n_below_1e-4": 154,
+  "mass_max_abs_diff": 5.257129669189453e-05,
+  "labels_equal": true,
+  "speakers_equal": true
+ },
+ "oof_csv": "scores/part25/A/pod/p25Ar-adress2020/r2_adress2020_enc_nested5_oof.csv",
+ "oof_sha256": "2ae2526111d3244cdcb494ac834980acb44b3cfe7901b898a9cd972f062d3160",
+ "pod_env": [
+  "VERSIONS tf 5.5.4 torch 2.8.0+cu128 sk 1.9.1 np 2.1.2 sp 1.18.1 librosa 1.0.0 joblib 1.6.0 py 3.12.3 Linux-6.8.0-106-generic-x86_64-with-glibc2.39 cuda True NVIDIA H100 80GB HBM3"
+ ]
+}
