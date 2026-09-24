@@ -1,0 +1,9 @@
+02:52:19 DRIVER START pcgita pd NJ=190
+SETUP_END 02:53:09 PIP=ok HF=ok
+02:59:51 DATA CHECK OK 1100 files
+03:05:20 EXTRACT DONE: RESULT zero-shot mf_pcgita.csv n=1100 AUC=0.5635 median_mass=0.995  325s
+03:05:20 ZS_COMPARE {"n": 1100, "p_yes_exact_equal": 1100, "p_yes_max_abs_diff": 0.0, "p_yes_median_abs_diff": 0.0, "n_below_1e-9": 1100, "n_below_1e-4": 1100, "mass_max_abs_diff": 0.0, "labels_equal": true, "speakers_equal": true}
+03:10:13 PROBE DONE: NESTED5 DONE pcgita mean5 0.894127 per [0.8882, 0.89, 0.8926, 0.8954, 0.9044] single 0.908864
+03:10:13 ORIGINAL SCRIPT: enc: mean 0.8941 over 5 splits  [0.8882, 0.89, 0.8926, 0.8954, 0.9044] ORIG_RC 0
+03:10:39 PODVERIFY: PODVERIFY pcgita PASS=True max_pred_diff=0 max_inner_diff=2.84e-08 layer_mismatch=0 mean5 0.894127 vs 0.894127
+03:10:39 ALL DONE

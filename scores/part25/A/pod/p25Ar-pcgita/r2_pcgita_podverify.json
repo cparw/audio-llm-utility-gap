@@ -1,0 +1,73 @@
+{
+ "dataset": "pcgita",
+ "tags": {
+  "seed0": {
+   "fold_file": "pcgita_groupkfold5_pod_seed0.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.8881752066115702,
+   "auc_rank_saved_oof": 0.8881752066115702,
+   "auc_rank_refit": 0.8881752066115702,
+   "abs_json_vs_rank": 0.0,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed1": {
+   "fold_file": "pcgita_groupkfold5_pod_seed1.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.8900165289256198,
+   "auc_rank_saved_oof": 0.8900165289256199,
+   "auc_rank_refit": 0.8900165289256199,
+   "abs_json_vs_rank": 1.1102230246251565e-16,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed2": {
+   "fold_file": "pcgita_groupkfold5_pod_seed2.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.8925702479338843,
+   "auc_rank_saved_oof": 0.8925702479338843,
+   "auc_rank_refit": 0.8925702479338843,
+   "abs_json_vs_rank": 0.0,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed3": {
+   "fold_file": "pcgita_groupkfold5_pod_seed3.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.8954330578512398,
+   "auc_rank_saved_oof": 0.8954330578512397,
+   "auc_rank_refit": 0.8954330578512397,
+   "abs_json_vs_rank": 1.1102230246251565e-16,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed4": {
+   "fold_file": "pcgita_groupkfold5_pod_seed4.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.9044413223140497,
+   "auc_rank_saved_oof": 0.9044413223140496,
+   "auc_rank_refit": 0.9044413223140496,
+   "abs_json_vs_rank": 1.1102230246251565e-16,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "single": {
+   "fold_file": "pcgita_groupkfold5_pod.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.9088644628099174,
+   "auc_rank_saved_oof": 0.9088644628099174,
+   "auc_rank_refit": 0.9088644628099174,
+   "abs_json_vs_rank": 0.0,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  }
+ },
+ "mean5_rank_from_oof": 0.8941272727272727,
+ "mean5_json": 0.8941272727272727,
+ "abs_mean5_diff": 0.0,
+ "max_abs_pred_diff": 0.0,
+ "max_abs_inner_score_diff": 2.8359003367839364e-08,
+ "layer_mismatches": [],
+ "seconds": 21.9,
+ "PASS": true
+}
