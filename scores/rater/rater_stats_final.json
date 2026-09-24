@@ -1,0 +1,75 @@
+{
+ "part": "24 item 3, rater agreement",
+ "created_utc": "2026-09-24T04:10:55Z",
+ "command": "/usr/local/bin/python3 scripts/part24/rater/rater_stats.py --sheet <local data dir>/rater_final/rater_sheet_heard80_filled.csv --out <local data dir>/rater_final --tag final",
+ "inputs": {
+  "<local data dir>/rater_final/rater_sheet_heard80_filled.csv": {
+   "path": "<local data dir>/rater_final/rater_sheet_heard80_filled.csv",
+   "sha256": "9220325639c41163123e27f2804419e3946991ff7ef1e77520115898aa7e5f20"
+  },
+  "<local data dir>/release/edaic_rerun/rater_key_heard80.csv": {
+   "path": "<local data dir>/release/edaic_rerun/rater_key_heard80.csv",
+   "sha256": "3de3d2904174016f6f462c788ad836fbad2b8a65fa0a1927652b0aca0ddcedd9"
+  },
+  "<local data dir>/release/edaic_rerun/part9_heard_window_sentiment.csv": {
+   "path": "<local data dir>/release/edaic_rerun/part9_heard_window_sentiment.csv",
+   "sha256": "505e7eab2ee2f6de7973e2f486c09fcd519e9b9670604d9c10629e400df02779"
+  }
+ },
+ "sheet_layout": "local",
+ "reading": "valence",
+ "reading_reason": "every cell is positive/negative",
+ "reading_check_warnings": [],
+ "fill": {
+  "rater1": {
+   "non_empty": 80,
+   "readable": 80,
+   "unreadable": 0,
+   "n": 80
+  },
+  "rater2": {
+   "non_empty": 80,
+   "readable": 80,
+   "unreadable": 0,
+   "n": 80
+  }
+ },
+ "scorers": {
+  "roberta_heard": {
+   "column": "sent_heard",
+   "what": "cardiffnlp/twitter-roberta-base-sentiment-latest sign on the heard window"
+  },
+  "lexicon_arm": {
+   "column": "lex_direction",
+   "what": "dq_lex lexicon direction that set the conflict/agreement arm"
+  }
+ },
+ "scorer_model": "cardiffnlp/twitter-roberta-base-sentiment-latest; sign rule p_pos > p_neg, neutral ignored (PART8_9_validity.txt 9b). Snapshot not written by the PART 9 run; the HF cache refs/main is 3216a57f2a0d9c45a2e6c20157c20c49fb4bf9c7, downloaded 2026-09-22 18:40 local, 4 min before part9_heard_window_sentiment.csv",
+ "lexicon": "dq_lex via px_build.py lines 137-139 and 159-162 (PART8_9_validity.txt)",
+ "seed": 0,
+ "gpu": "none (CPU, Mac)",
+ "bootstrap": "2000 draws; fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over items; 2.5/97.5 percentiles; undefined kappa draws dropped and counted. Second interval: same rule over sorted unique pid, all items of each drawn speaker.",
+ "n": {
+  "all80": 80,
+  "conflict40": 40,
+  "agreement40": 40
+ },
+ "n_speakers": {
+  "all80": 48,
+  "conflict40": 33,
+  "agreement40": 33
+ },
+ "interrater_on": "dir",
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "sklearn": "1.7.2"
+ },
+ "outputs": [
+  "<local data dir>/rater_final/rater_stats_final.csv",
+  "<local data dir>/rater_final/rater_stats_items_final.csv",
+  "<local data dir>/rater_final/rater_stats_paste_final.txt"
+ ],
+ "release_note": "Released copies of the outputs: scores/rater/rater_stats_final.csv, scores/rater/rater_stats_final.json and scores/rater/rater_stats_paste_final.txt. The filled rater sheet holds the transcript text and the label, and rater_stats_items_final.csv holds the label per item, so neither is released. The scripts are scripts/part24/rater/rater_stats.py and scripts/part24/rater/verify_rater_stats.py."
+}
