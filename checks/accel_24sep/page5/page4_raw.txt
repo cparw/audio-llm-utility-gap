@@ -1,0 +1,152 @@
+Table 2. Zero-shot AUC on 30 s segments whose words conflict with
+the diagnosis and on segments whose words agree with it. Depression,
+E-DAIC [17]: 483 conflict segments paired with agreement segments
+of the same speakers (311 distinct), 138 speakers. Alzheimer’s, Pitt
+[19]: unpaired arms of 146 and 322 segments from 100 and 175
+speakers. Intervals per cell are in the release.
+Depression
+Model
+
+Alzheimer’s
+
+Conflict
+
+Agree.
+
+Conflict
+
+Agree.
+
+0.23
+0.22
+0.30
+0.53
+0.42
+0.53
+
+0.96
+0.96
+0.97
+0.63
+0.84
+0.89
+
+0.41
+0.53
+0.61
+0.58
+0.61
+0.72
+
+0.70
+0.71
+0.82
+0.53
+0.59
+0.72
+
+Qwen2-Audio [8]
+Qwen2.5-Omni [9]
+Qwen3-Omni [10]
+Audio Flamingo 2 [11]
+Audio Flamingo 3 [12]
+Kimi-Audio [13]
+4.3. Conflict Test Results
+
+Table 2 reports the conflict test defined in Section 2. A model attending to the voice should score similarly on both arms, whereas a
+model following the words should invert and fall below chance on
+the conflict arm. A model reading affect from prosody would also
+invert, and the transcript-only baseline below shows that the words
+alone suffice. No such test is possible for PD, since the words are
+fixed by the protocol. Results in Table 2 show a strong language bias.
+On the depression segments four of the six models fall below chance
+when the words point away from the label, while every model except
+Audio Flamingo 2 scores above 0.80 when the words and the label
+agree. Speaker-level bootstrap intervals for the difference between
+the two arms exclude zero for all six models on depression and for
+the three Qwen models on Pitt. On the same pairs the transcript alone
+scores 0.15 on conflict and 0.96 on agreement for Qwen2.5-Omni and
+0.22 and 0.95 for Qwen3-Omni, and for Qwen2.5-Omni the transcript
+decision matches the audio decision on 86 percent of clips. On the
+Pitt dataset the transcript alone shows the same arm gap as the audio
+(0.56 on conflict, 0.71 on agreement). The conflict arm stays below
+chance under the two other prompt wordings, at 0.34 and 0.24, and
+under sentiment thresholds of 0.60 and 0.80 (646 and 281 pairs), at
+0.26 and 0.19. Replacing the severity gates of 15 and 4 with a PHQ-8
+cut at 10 gives 924 pairs from 237 speakers, on which the conflict
+arm scores 0.18. A second sentiment scorer (DistilBERT fine-tuned
+on SST-2) selects 1,334 pairs, on which the conflict arm scores 0.46
+[0.42, 0.51], at chance rather than below it, and stays 0.39 below
+the agreement arm. The inversion holds on the 420 segments both
+scorers call conflicting (0.20) and not on the 855 the first scorer calls
+neutral (0.62). Audio Flamingo 2 is the only model whose audio
+encoder, CLAP [29], was not trained for speech recognition, so its
+transcription is limited. It also answers Yes on 97 percent or more
+of the clips, and Qwen2-Audio on 87 percent or more, so their AUC
+reflects ranking rather than decisions. On the Pitt dataset the three
+Qwen models drop by 0.17 to 0.29 from the agreement to the conflict
+arm but none falls significantly below chance, Kimi-Audio shows
+no drop, and the two Audio Flamingo models score 0.53 to 0.61 on
+both arms (Table 2). Asking Qwen2.5-Omni to judge the voice alone
+moves its Pitt answer by −0.01 [−0.04, 0.02].
+4.4. Supervised Fine-tuning
+To narrow the gap, we retrain the projector between the audio encoder
+and the language model so that paralinguistic information becomes
+more salient to the language model. After fine-tuning the projector,
+
+AUC improves significantly on every dataset except MDVR-KCL,
+which has 37 speakers, and E-DAIC, which does not move (Table 1).
+On the Pitt dataset the retrained projector reaches 0.77, the level of
+the answer-state probe of Section 4.2, and 0.74 to 0.81 across three
+further seeds. Its conflict arm stays at chance in every run (0.45 to
+0.57, every interval including 0.5) while its agreement arm rises to
+0.82 to 0.90, so the projector recovers the overall AUC through the
+arm the words already help. A class-balanced loss does not change
+this. Low-rank adaptation (LoRA) [30] of the language model (rank 8,
+all attention projections of the 28 layers, 5.0 M trainable parameters
+against 4.6 M for the projector) reaches 0.825 on Pitt, 0.06 [0.02,
+0.10] above the projector run, and 0.55 on its conflict segments, and
+training both together gives 0.77. On E-DAIC the retrained projector
+stays at the zero-shot level (+0.02 [−0.01, 0.05], and 0.82 with a
+second seed), consistent with a task the words carry more than the
+voice. Retraining it on the E-DAIC pairs themselves lifts the conflict
+arm from 0.22 to 0.59 and lowers agreement from 0.96 to 0.67, so
+the language bias can be trained away only at the cost of the arm
+the words were carrying. On Parkinson’s speech the deficit sits in
+how the representation is read out rather than in the representation,
+since the signal is present at every depth and retraining the projector
+recovers it. On Alzheimer’s what is recovered is at least partly lexical.
+The fine tuning is on Qwen2.5-Omni, and we release the segment
+lists, fold assignments, scripts and per-clip answer scores at https:
+//github.com/parw8649/audio-llm-utility-gap.
+5. CONCLUSIONS
+In this paper, we showed how Audio LLMs could underperform when
+diagnosing three different clinical conditions. We then inspected
+the audio representations through probing to learn whether the information necessary for a correct diagnosis is present. The probing
+results demonstrated a wide utility gap, i.e., the LLM does not effectively use the information available from the audio encoder, hence,
+resulting in lower performance. Similar to previous work [7], we
+found a strong language bias in Audio LLMs as they are more likely
+to follow the spoken words rather than paralinguistic speech. To
+alleviate this problem and narrow the utility gap, we performed a
+supervised fine-tuning limited to the projector layer, keeping the rest
+of the model’s weights frozen, resulting in a significant performance
+gain in AD and PD detection, but not in MDD, where the answer
+already follows the words. This work demonstrated that the hidden
+state representations carry the necessary paralinguistic information,
+and future work should focus on further narrowing the utility gap.
+Acknowledgments. Research was sponsored by the ARO under
+Cooperative Agreement Number W911NF-25-2-0040 and the NIMH
+under Award Number R61MH135407. The views and conclusions
+contained in this document are those of the authors and not of the U.S.
+Government. The Pitt corpus was supported by NIA grants AG03705
+and AG05133.
+Compliance with ethical standards. This study is a secondary analysis of existing recordings, all obtained under each distributor’s data
+agreement. No new recordings were made, no audio is redistributed,
+and no ethical approval was required for this secondary analysis. The
+authors declare no conflict of interest.
+6. REFERENCES
+[1] Nicholas Cummins et al., “A review of depression and suicide
+risk assessment using speech analysis,” Speech Commun., vol.
+71, pp. 10-49, 2015.
+
+
