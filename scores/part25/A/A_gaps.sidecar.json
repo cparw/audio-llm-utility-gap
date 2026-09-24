@@ -1,0 +1,774 @@
+{
+ "task": "PART25 A retry: paired probe minus zero-shot gaps on the paper's mean-of-five estimator, states re-extracted in the original omni-final environment (H200 image runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404, transformers 5.5.4)",
+ "date_utc": "2026-09-24T03:15:40.344416Z",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh per cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "probe (mean of the five per-repeat AUCs) and zero-shot AUC computed on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "zeroshot_source": "saved paper files omni_final/omni_<ds>_zeroshot_scores.csv"
+ },
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/A_gaps_r2.py adress2020",
+ "datasets": {
+  "adresso": {
+   "dataset": "ADReSSo",
+   "n": 237,
+   "n_speakers": 237,
+   "n_pos": 122,
+   "probe_per_repeat_rerun": [
+    0.8722024233784746,
+    0.8664647184604419,
+    0.8824661439771917,
+    0.8739843193157519,
+    0.8809693513898789
+   ],
+   "probe_mean5_rerun": 0.8752173913043478,
+   "probe_per_repeat_table1": [
+    0.8722,
+    0.8665,
+    0.8825,
+    0.874,
+    0.881
+   ],
+   "probe_mean5_table1": 0.8752,
+   "mean5_rerun_minus_table1": 1.739130434785796e-05,
+   "matches_table1_4dp": true,
+   "per_repeat_4dp_equal_table1": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "original_script_nested_repeats_all_on_rerun_states": {
+    "mean": 0.8752,
+    "repeats": 5,
+    "per_repeat": [
+     0.8722,
+     0.8665,
+     0.8825,
+     0.874,
+     0.881
+    ],
+    "n": 237,
+    "n_points": 32
+   },
+   "original_script_matches_table1_json": true,
+   "zeroshot_auc_saved": 0.61503920171062,
+   "zeroshot_auc_rerun_extraction": 0.61503920171062,
+   "zeroshot_rerun_vs_saved": {
+    "n": 237,
+    "p_yes_exact_equal": 237,
+    "p_yes_max_abs_diff": 0.0,
+    "p_yes_median_abs_diff": 0.0,
+    "n_below_1e-9": 237,
+    "n_below_1e-4": 237,
+    "mass_max_abs_diff": 0.0,
+    "labels_equal": true,
+    "speakers_equal": true
+   },
+   "single_split_auc_rerun": 0.8898788310762652,
+   "single_split_auc_saved": 0.8898788310762652,
+   "single_split_max_abs_p_diff_vs_saved_oof": 0.0,
+   "single_split_layers_rerun": [
+    29,
+    29,
+    28,
+    26,
+    26
+   ],
+   "single_split_layers_saved": [
+    29,
+    29,
+    28,
+    26,
+    26
+   ],
+   "gap_point_rerun": 0.26017818959372785,
+   "gap_ci": [
+    0.1755085344483064,
+    0.33956551891989545
+   ],
+   "gap_point_table1": 0.26016079828938,
+   "probe_mean5_ci": [
+    0.8311007147200915,
+    0.917495307727611
+   ],
+   "zeroshot_ci": [
+    0.5432332651905852,
+    0.6889640923339982
+   ],
+   "usable_draws": 2000,
+   "text_single_split_gap": 0.26,
+   "interval_excludes_zero": true,
+   "layers_rerun": {
+    "seed0": [
+     29,
+     30,
+     28,
+     27,
+     28
+    ],
+    "seed1": [
+     25,
+     31,
+     28,
+     25,
+     25
+    ],
+    "seed2": [
+     26,
+     27,
+     27,
+     24,
+     29
+    ],
+    "seed3": [
+     25,
+     27,
+     29,
+     27,
+     28
+    ],
+    "seed4": [
+     27,
+     27,
+     24,
+     29,
+     29
+    ]
+   },
+   "pod_versions": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-57-generic-x86_64-with-glibc2.39",
+    "numpy": "2.1.2",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+   },
+   "pod_env": "VERSIONS tf 5.5.4 torch 2.8.0+cu128 sk 1.9.1 np 2.1.2 sp 1.18.1 librosa 1.0.0 joblib 1.6.0 py 3.12.3 Linux-6.8.0-57-generic-x86_64-with-glibc2.39 cuda True NVIDIA H200",
+   "podverify_pass": true,
+   "files": {
+    "perclip_csv": "scores/part25/A/per_clip/A_adresso_perclip.csv",
+    "draws_npz": "scores/part25/A/draws/A_adresso_draws.npz",
+    "pod_oof_csv": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_enc_nested5_oof.csv",
+    "pod_json": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_enc_nested5.json",
+    "pod_verify_json": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_podverify.json",
+    "zeroshot_saved": "<local data dir>/release/omni_final/omni_adresso_zeroshot_scores.csv",
+    "single_split_saved": "<local data dir>/release/omni_final/omni_adresso_enc_nested_oof.csv",
+    "zs_compare": "scores/part25/A/pod/p25Ar-adresso/r2_adresso_zs_compare.json",
+    "original_script_json": "scores/part25/A/pod/p25Ar-adresso/r2orig_adresso_nested_repeats.json",
+    "table1_json": "<local data dir>/release/omni_final/omni_adresso_nested_repeats.json",
+    "rerun_zeroshot": "scores/part25/A/pod/p25Ar-adresso/r2_omni_adresso_zeroshot_scores.csv",
+    "rerun_encstates": "<local data dir>/release_from_mac/scores/part25/A/retry_tf554/pull/p25Ar-adresso/out/r2_omni_adresso_encstates.npz"
+   },
+   "sha256": {
+    "pod_oof_csv": "da5a3587d1d7fb4af801b0ef85cc5b76b6a91eaffb905a11a56430b8201cccf1",
+    "zeroshot_saved": "43ffeff4a1ab6ea8bda8fef25ec6d8bed187b151135afc4541bae7bc7cfeaecd",
+    "table1_json": "9f84041e55dd991114a08951a21bcd4de26c2953a130e12ebe99085b8fb7840b",
+    "perclip_csv": "8ca580ac103b4eff7e0fa3fe2cee4f9a184c650f36e7683c5dfc2be69f6b118b",
+    "rerun_encstates": "a138b7ed1ab70fd01ea515210a4dc7738d2b96fe333dd4361e833f70c908cc41"
+   }
+  },
+  "pcgita": {
+   "dataset": "PC-GITA",
+   "n": 1100,
+   "n_speakers": 100,
+   "n_pos": 550,
+   "probe_per_repeat_rerun": [
+    0.8881752066115702,
+    0.8900165289256198,
+    0.8925702479338843,
+    0.8954330578512398,
+    0.9044413223140497
+   ],
+   "probe_mean5_rerun": 0.8941272727272727,
+   "probe_per_repeat_table1": [
+    0.8882,
+    0.89,
+    0.8926,
+    0.8954,
+    0.9044
+   ],
+   "probe_mean5_table1": 0.8941,
+   "mean5_rerun_minus_table1": 2.727272727265362e-05,
+   "matches_table1_4dp": true,
+   "per_repeat_4dp_equal_table1": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "original_script_nested_repeats_all_on_rerun_states": {
+    "mean": 0.8941,
+    "repeats": 5,
+    "per_repeat": [
+     0.8882,
+     0.89,
+     0.8926,
+     0.8954,
+     0.9044
+    ],
+    "n": 1100,
+    "n_points": 32
+   },
+   "original_script_matches_table1_json": true,
+   "zeroshot_auc_saved": 0.5634776859504131,
+   "zeroshot_auc_rerun_extraction": 0.5634776859504131,
+   "zeroshot_rerun_vs_saved": {
+    "n": 1100,
+    "p_yes_exact_equal": 1100,
+    "p_yes_max_abs_diff": 0.0,
+    "p_yes_median_abs_diff": 0.0,
+    "n_below_1e-9": 1100,
+    "n_below_1e-4": 1100,
+    "mass_max_abs_diff": 0.0,
+    "labels_equal": true,
+    "speakers_equal": true
+   },
+   "single_split_auc_rerun": 0.9088644628099174,
+   "single_split_auc_saved": 0.9088644628099174,
+   "single_split_max_abs_p_diff_vs_saved_oof": 0.0,
+   "single_split_layers_rerun": [
+    7,
+    12,
+    2,
+    15,
+    6
+   ],
+   "single_split_layers_saved": [
+    7,
+    12,
+    2,
+    15,
+    6
+   ],
+   "gap_point_rerun": 0.3306495867768595,
+   "gap_ci": [
+    0.24979955940559587,
+    0.40877956233147067
+   ],
+   "gap_point_table1": 0.33062231404958686,
+   "probe_mean5_ci": [
+    0.8304164448126938,
+    0.9404928604785391
+   ],
+   "zeroshot_ci": [
+    0.4930640072309111,
+    0.6330859923977538
+   ],
+   "usable_draws": 2000,
+   "text_single_split_gap": 0.33,
+   "interval_excludes_zero": true,
+   "layers_rerun": {
+    "seed0": [
+     7,
+     7,
+     12,
+     7,
+     23
+    ],
+    "seed1": [
+     12,
+     10,
+     16,
+     4,
+     8
+    ],
+    "seed2": [
+     12,
+     6,
+     15,
+     24,
+     8
+    ],
+    "seed3": [
+     7,
+     7,
+     3,
+     21,
+     6
+    ],
+    "seed4": [
+     10,
+     6,
+     15,
+     5,
+     15
+    ]
+   },
+   "pod_versions": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-60-generic-x86_64-with-glibc2.39",
+    "numpy": "2.1.2",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+   },
+   "pod_env": "VERSIONS tf 5.5.4 torch 2.8.0+cu128 sk 1.9.1 np 2.1.2 sp 1.18.1 librosa 1.0.0 joblib 1.6.0 py 3.12.3 Linux-6.8.0-60-generic-x86_64-with-glibc2.39 cuda True NVIDIA H200",
+   "podverify_pass": true,
+   "files": {
+    "perclip_csv": "scores/part25/A/per_clip/A_pcgita_perclip.csv",
+    "draws_npz": "scores/part25/A/draws/A_pcgita_draws.npz",
+    "pod_oof_csv": "scores/part25/A/pod/p25Ar-pcgita/r2_pcgita_enc_nested5_oof.csv",
+    "pod_json": "scores/part25/A/pod/p25Ar-pcgita/r2_pcgita_enc_nested5.json",
+    "pod_verify_json": "scores/part25/A/pod/p25Ar-pcgita/r2_pcgita_podverify.json",
+    "zeroshot_saved": "<local data dir>/release/omni_final/omni_pcgita_zeroshot_scores.csv",
+    "single_split_saved": "<local data dir>/release/omni_final/omni_pcgita_enc_nested_oof.csv",
+    "zs_compare": "scores/part25/A/pod/p25Ar-pcgita/r2_pcgita_zs_compare.json",
+    "original_script_json": "scores/part25/A/pod/p25Ar-pcgita/r2orig_pcgita_nested_repeats.json",
+    "table1_json": "<local data dir>/release/omni_final/omni_pcgita_nested_repeats.json",
+    "rerun_zeroshot": "scores/part25/A/pod/p25Ar-pcgita/r2_omni_pcgita_zeroshot_scores.csv",
+    "rerun_encstates": "<local data dir>/release_from_mac/scores/part25/A/retry_tf554/pull/p25Ar-pcgita/out/r2_omni_pcgita_encstates.npz"
+   },
+   "sha256": {
+    "pod_oof_csv": "f6ef98dfa1e711287d91f85f57378d76baecc7f88a7b2533c7951a3010ea0ffc",
+    "zeroshot_saved": "988edd5c6e76b4a7373a3a8a521d368b945bea16d3cc836491cd8c8ca70529f3",
+    "table1_json": "d527536a84934e0a78a78e3fc3b44437819f1d41c89fc1d1f95573b65529995e",
+    "perclip_csv": "993302c72862d106127ccc0827f1d4f6ec53915f8610d44ffbe148388febac2a",
+    "rerun_encstates": "db02e1b9293285b0d93447e91997873ad2e6f2cae4e9c6f109e7715b24551d38"
+   }
+  },
+  "neurovoz": {
+   "dataset": "NeuroVoz",
+   "n": 1270,
+   "n_speakers": 107,
+   "n_pos": 621,
+   "probe_per_repeat_rerun": [
+    0.9274617955531737,
+    0.9154328844822581,
+    0.9279704438142167,
+    0.9123586640167334,
+    0.9231606162335713
+   ],
+   "probe_mean5_rerun": 0.9212768808199906,
+   "probe_per_repeat_table1": [
+    0.9275,
+    0.9154,
+    0.928,
+    0.9124,
+    0.9232
+   ],
+   "probe_mean5_table1": 0.9213,
+   "mean5_rerun_minus_table1": -2.3119180009412155e-05,
+   "matches_table1_4dp": true,
+   "per_repeat_4dp_equal_table1": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "original_script_nested_repeats_all_on_rerun_states": {
+    "mean": 0.9213,
+    "repeats": 5,
+    "per_repeat": [
+     0.9275,
+     0.9154,
+     0.928,
+     0.9124,
+     0.9232
+    ],
+    "n": 1270,
+    "n_points": 32
+   },
+   "original_script_matches_table1_json": true,
+   "zeroshot_auc_saved": 0.6950814953762632,
+   "zeroshot_auc_rerun_extraction": 0.6950814953762632,
+   "zeroshot_rerun_vs_saved": {
+    "n": 1270,
+    "p_yes_exact_equal": 1270,
+    "p_yes_max_abs_diff": 0.0,
+    "p_yes_median_abs_diff": 0.0,
+    "n_below_1e-9": 1270,
+    "n_below_1e-4": 1270,
+    "mass_max_abs_diff": 0.0,
+    "labels_equal": true,
+    "speakers_equal": true
+   },
+   "single_split_auc_rerun": 0.9159725478811699,
+   "single_split_auc_saved": 0.9159725478811699,
+   "single_split_max_abs_p_diff_vs_saved_oof": 0.0,
+   "single_split_layers_rerun": [
+    17,
+    29,
+    25,
+    25,
+    19
+   ],
+   "single_split_layers_saved": [
+    17,
+    29,
+    25,
+    25,
+    19
+   ],
+   "gap_point_rerun": 0.22619538544372741,
+   "gap_ci": [
+    0.17349622032564116,
+    0.28505668553264496
+   ],
+   "gap_point_table1": 0.22621850462373683,
+   "probe_mean5_ci": [
+    0.8834186183940416,
+    0.9524781531666177
+   ],
+   "zeroshot_ci": [
+    0.6355883997757804,
+    0.7518676424825447
+   ],
+   "usable_draws": 2000,
+   "text_single_split_gap": 0.23,
+   "interval_excludes_zero": true,
+   "layers_rerun": {
+    "seed0": [
+     24,
+     24,
+     19,
+     24,
+     25
+    ],
+    "seed1": [
+     19,
+     19,
+     17,
+     24,
+     27
+    ],
+    "seed2": [
+     23,
+     24,
+     24,
+     11,
+     19
+    ],
+    "seed3": [
+     24,
+     27,
+     24,
+     18,
+     24
+    ],
+    "seed4": [
+     19,
+     24,
+     25,
+     25,
+     21
+    ]
+   },
+   "pod_versions": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-60-generic-x86_64-with-glibc2.39",
+    "numpy": "2.1.2",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+   },
+   "pod_env": "VERSIONS tf 5.5.4 torch 2.8.0+cu128 sk 1.9.1 np 2.1.2 sp 1.18.1 librosa 1.0.0 joblib 1.6.0 py 3.12.3 Linux-6.8.0-60-generic-x86_64-with-glibc2.39 cuda True NVIDIA H200",
+   "podverify_pass": true,
+   "files": {
+    "perclip_csv": "scores/part25/A/per_clip/A_neurovoz_perclip.csv",
+    "draws_npz": "scores/part25/A/draws/A_neurovoz_draws.npz",
+    "pod_oof_csv": "scores/part25/A/pod/p25Ar-neurovoz/r2_neurovoz_enc_nested5_oof.csv",
+    "pod_json": "scores/part25/A/pod/p25Ar-neurovoz/r2_neurovoz_enc_nested5.json",
+    "pod_verify_json": "scores/part25/A/pod/p25Ar-neurovoz/r2_neurovoz_podverify.json",
+    "zeroshot_saved": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+    "single_split_saved": "<local data dir>/release/omni_final/omni_neurovoz_enc_nested_oof.csv",
+    "zs_compare": "scores/part25/A/pod/p25Ar-neurovoz/r2_neurovoz_zs_compare.json",
+    "original_script_json": "scores/part25/A/pod/p25Ar-neurovoz/r2orig_neurovoz_nested_repeats.json",
+    "table1_json": "<local data dir>/release/omni_final/omni_neurovoz_nested_repeats.json",
+    "rerun_zeroshot": "scores/part25/A/pod/p25Ar-neurovoz/r2_omni_neurovoz_zeroshot_scores.csv",
+    "rerun_encstates": "<local data dir>/release_from_mac/scores/part25/A/retry_tf554/pull/p25Ar-neurovoz/out/r2_omni_neurovoz_encstates.npz"
+   },
+   "sha256": {
+    "pod_oof_csv": "a2a9b584fcb464cc889a0057887394000a0855a37375f95aca1c3ee69b118e38",
+    "zeroshot_saved": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+    "table1_json": "06df58214a53c7b082af4be22fe0cf38f38097daa383243b8e352a596efe68a7",
+    "perclip_csv": "98dd842a52bb65ebc0958faddc16bfbd3390817ae5689b916f4613ccfe9c26c1",
+    "rerun_encstates": "8cdd9a3b72da1568718389edfa04f68467fee490910cb3d13924895299216ce8"
+   }
+  },
+  "adress2020": {
+   "dataset": "ADReSS-2020",
+   "n": 156,
+   "n_speakers": 156,
+   "n_pos": 78,
+   "probe_per_repeat_rerun": [
+    0.8160749506903353,
+    0.7935568704799474,
+    0.8050624589086128,
+    0.8062130177514795,
+    0.8004602235371466
+   ],
+   "probe_mean5_rerun": 0.8042735042735043,
+   "probe_per_repeat_table1": [
+    0.8161,
+    0.7936,
+    0.8051,
+    0.8062,
+    0.8005
+   ],
+   "probe_mean5_table1": 0.8043,
+   "mean5_rerun_minus_table1": -2.649572649571219e-05,
+   "matches_table1_4dp": true,
+   "per_repeat_4dp_equal_table1": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "original_script_nested_repeats_all_on_rerun_states": {
+    "mean": 0.8043,
+    "repeats": 5,
+    "per_repeat": [
+     0.8161,
+     0.7936,
+     0.8051,
+     0.8062,
+     0.8005
+    ],
+    "n": 156,
+    "n_points": 32
+   },
+   "original_script_matches_table1_json": true,
+   "zeroshot_auc_saved": 0.6240959894806049,
+   "zeroshot_auc_rerun_extraction": 0.6240959894806049,
+   "zeroshot_rerun_vs_saved": {
+    "n": 156,
+    "p_yes_exact_equal": 156,
+    "p_yes_max_abs_diff": 0.0,
+    "p_yes_median_abs_diff": 0.0,
+    "n_below_1e-9": 156,
+    "n_below_1e-4": 156,
+    "mass_max_abs_diff": 0.0,
+    "labels_equal": true,
+    "speakers_equal": true
+   },
+   "single_split_auc_rerun": 0.7878040762656147,
+   "single_split_auc_saved": 0.7878040762656147,
+   "single_split_max_abs_p_diff_vs_saved_oof": 0.0,
+   "single_split_layers_rerun": [
+    25,
+    17,
+    30,
+    27,
+    29
+   ],
+   "single_split_layers_saved": [
+    25,
+    17,
+    30,
+    27,
+    29
+   ],
+   "gap_point_rerun": 0.18017751479289945,
+   "gap_ci": [
+    0.07660302294164079,
+    0.2804666484587164
+   ],
+   "gap_point_table1": 0.18020401051939516,
+   "probe_mean5_ci": [
+    0.7407030863178744,
+    0.85943769395186
+   ],
+   "zeroshot_ci": [
+    0.5348478618421052,
+    0.7148052262172812
+   ],
+   "usable_draws": 2000,
+   "text_single_split_gap": 0.18,
+   "interval_excludes_zero": true,
+   "layers_rerun": {
+    "seed0": [
+     26,
+     30,
+     30,
+     26,
+     30
+    ],
+    "seed1": [
+     30,
+     21,
+     26,
+     31,
+     17
+    ],
+    "seed2": [
+     27,
+     22,
+     27,
+     26,
+     17
+    ],
+    "seed3": [
+     17,
+     29,
+     25,
+     26,
+     27
+    ],
+    "seed4": [
+     17,
+     17,
+     26,
+     25,
+     29
+    ]
+   },
+   "pod_versions": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+    "numpy": "2.1.2",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+   },
+   "pod_env": "VERSIONS tf 5.5.4 torch 2.8.0+cu128 sk 1.9.1 np 2.1.2 sp 1.18.1 librosa 1.0.0 joblib 1.6.0 py 3.12.3 Linux-6.8.0-138-generic-x86_64-with-glibc2.39 cuda True NVIDIA H200",
+   "podverify_pass": true,
+   "files": {
+    "perclip_csv": "scores/part25/A/per_clip/A_adress2020_perclip.csv",
+    "draws_npz": "scores/part25/A/draws/A_adress2020_draws.npz",
+    "pod_oof_csv": "scores/part25/A/pod/p25Ar-adress2020-h200/r2_adress2020_enc_nested5_oof.csv",
+    "pod_json": "scores/part25/A/pod/p25Ar-adress2020-h200/r2_adress2020_enc_nested5.json",
+    "pod_verify_json": "scores/part25/A/pod/p25Ar-adress2020-h200/r2_adress2020_podverify.json",
+    "zeroshot_saved": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+    "single_split_saved": "<local data dir>/release/omni_final/omni_adress2020_enc_nested_oof.csv",
+    "zs_compare": "scores/part25/A/pod/p25Ar-adress2020-h200/r2_adress2020_zs_compare.json",
+    "original_script_json": "scores/part25/A/pod/p25Ar-adress2020-h200/r2orig_adress2020_nested_repeats.json",
+    "table1_json": "<local data dir>/release/omni_final/omni_adress2020_nested_repeats.json",
+    "rerun_zeroshot": "scores/part25/A/pod/p25Ar-adress2020-h200/r2_omni_adress2020_zeroshot_scores.csv",
+    "rerun_encstates": "<local data dir>/release_from_mac/scores/part25/A/retry_tf554/pull/p25Ar-adress2020-h200/out/r2_omni_adress2020_encstates.npz"
+   },
+   "sha256": {
+    "pod_oof_csv": "2ae2526111d3244cdcb494ac834980acb44b3cfe7901b898a9cd972f062d3160",
+    "zeroshot_saved": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+    "table1_json": "ec1b12cba4c005ec7cfe809d3d59061f6f0de92a9f5960bdefa09cea234d4b55",
+    "perclip_csv": "42e355cefdd22ca756a240aeb37df6f2ed7a940accc139e7c9677cb944a15daf",
+    "rerun_encstates": "9f53d8ab30ec6a0a3c4ef8d6bb1cf7488f8fbc7bc06602b51ad335234812bfcd"
+   }
+  }
+ },
+ "pitt_reference": {
+  "file": "<local data dir>/release/overnight2/part10/pitt_enc_nested5_oof.npz",
+  "sha256": "6482918756b0cf1d451178416563a324b8f59c486e80cb3029f7e058e13a9f47",
+  "per_repeat": [
+   0.7598024021697016,
+   0.7724719101123595,
+   0.7458930647036032,
+   0.7903332041844247,
+   0.7843471522665634
+  ],
+  "mean5": 0.7705695466873305,
+  "zeroshot": 0.6577683068578071,
+  "gap": 0.11280123982952339,
+  "gap_ci": [
+   0.04550149479611408,
+   0.1768100605302148
+  ],
+  "usable_draws": 2000,
+  "expected": "+0.1128 [0.0455, 0.1768]",
+  "reproduced_4dp": true
+ },
+ "canonical_copies": {
+  "note": "byte copies of the retry outputs placed at the canonical PART25 A paths; the retry folder holds the originals",
+  "files": {
+   "A_gaps.tsv": "8a828fa998e7f3c79f2e915f88e6ffea0f7333a823be2ef6d06e927f320a17bc",
+   "per_clip/A_pcgita_perclip.csv": "993302c72862d106127ccc0827f1d4f6ec53915f8610d44ffbe148388febac2a",
+   "per_clip/A_pcgita_perclip.sidecar.json": "85ec19ae3c5be131c966ceae3ad5cf5229ac7fa8b551396149c08f04edc49287",
+   "per_clip/A_neurovoz_perclip.csv": "98dd842a52bb65ebc0958faddc16bfbd3390817ae5689b916f4613ccfe9c26c1",
+   "per_clip/A_neurovoz_perclip.sidecar.json": "7a65723e53072310ee53abf199b53e903984f6c133912e4b2895a7cc8bb095ae",
+   "per_clip/A_adresso_perclip.csv": "8ca580ac103b4eff7e0fa3fe2cee4f9a184c650f36e7683c5dfc2be69f6b118b",
+   "per_clip/A_adresso_perclip.sidecar.json": "6bd38e848ed170782ce3078504cdbab3262caa25ae4c8bbd7f54b82f84054392",
+   "per_clip/A_adress2020_perclip.csv": "42e355cefdd22ca756a240aeb37df6f2ed7a940accc139e7c9677cb944a15daf",
+   "per_clip/A_adress2020_perclip.sidecar.json": "4689c88cb9d219c46f17b7890f9b17c261d02881835266d0a9b5e47af6db200f",
+   "draws/A_pcgita_draws.npz": "a2bd42fb63e910cb8430e64f6c102880e23d1406c4b4e728ff91020c05a7400e",
+   "draws/A_neurovoz_draws.npz": "0f7c07a7ae16b234a40e995dae755b257a19f62de04fa164e64bc0b47cdf7e41",
+   "draws/A_adresso_draws.npz": "058c2b664e653719bb1d31aa8150764c55f10fcac6db7f468ffc8fe3d76cf994",
+   "draws/A_adress2020_draws.npz": "10725cff26227a0f00edfab707101d0f29294696810d6b3ac1495c41c8a311f2",
+   "draws/A_pitt_draws.npz": "079fe9d6463cf100a7e5867f44317467ac84c0f365c9ba13c9cc7269e973c673"
+  }
+ },
+ "supersedes": {
+  "folder": "<local data dir>/release_from_mac/scores/part25/A/superseded_tf5170",
+  "why": "first attempt re-extracted with transformers 5.17.0 (original pod used 5.5.4); no zero-shot score matched bit for bit and the mean-of-five missed Table 1 by up to 0.0019"
+ },
+ "environment_match_evidence": {
+  "original_pod": "gv9jvm57b21mcz, NVIDIA H200, image runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404, transformers==5.5.4 (paper1_local_runs/omni_final/podA_logs/setup_out.log)",
+  "retry_pods": "H200, same image, transformers 5.5.4, sklearn 1.9.1, numpy 2.1.2, scipy 1.18.1 (pull/*/logs/pip.log)"
+ },
+ "independent_check": {
+  "script": "scripts/part25/A/verify/A_verify_r2.py",
+  "result": "scores/part25/A/verify/A_verify_r2.json",
+  "ALL_PASS": true
+ },
+ "cost": {
+  "pods": [
+   {
+    "name": "p25Ar-pcgita",
+    "id": "zut4h14otaka38",
+    "gpu": "NVIDIA H200",
+    "usd_per_hr": 4.59,
+    "created_utc": "02:51:55",
+    "deleted_utc": "03:12:13",
+    "hours": 0.3383,
+    "usd": 1.55
+   },
+   {
+    "name": "p25Ar-neurovoz",
+    "id": "yk0kdi7s6k90j5",
+    "gpu": "NVIDIA H200",
+    "usd_per_hr": 4.59,
+    "created_utc": "02:51:57",
+    "deleted_utc": "03:13:09",
+    "hours": 0.3533,
+    "usd": 1.62
+   },
+   {
+    "name": "p25Ar-adresso",
+    "id": "348aftq6eytbv7",
+    "gpu": "NVIDIA H200",
+    "usd_per_hr": 4.59,
+    "created_utc": "02:51:59",
+    "deleted_utc": "02:59:51",
+    "hours": 0.1311,
+    "usd": 0.6
+   },
+   {
+    "name": "p25Ar-adress2020",
+    "id": "fty6q62utrqzmj",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "usd_per_hr": 3.49,
+    "created_utc": "02:52:03",
+    "deleted_utc": "03:14:15",
+    "hours": 0.37,
+    "usd": 1.29
+   },
+   {
+    "name": "p25Ar-adress2020-h200",
+    "id": "olomyogjeu7lp7",
+    "gpu": "NVIDIA H200",
+    "usd_per_hr": 4.59,
+    "created_utc": "03:08:53",
+    "deleted_utc": "03:15:14",
+    "hours": 0.1058,
+    "usd": 0.49
+   }
+  ],
+  "total_usd": 5.55,
+  "source": "launch logs (createdAt) and watchdog_r2.log (DELETE HTTP 204, status GONE)"
+ }
+}
