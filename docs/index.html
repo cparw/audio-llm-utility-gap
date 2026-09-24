@@ -140,7 +140,7 @@ footer a:hover{text-decoration:underline}
   &middot; University of Southern California</p>
   <p class="links">
     <a class="btn" href="explorer.html">Interactive explorer</a>
-    <a class="btn ghost" href="https://github.com/parw8649/audio-llm-utility-gap">Code (private until acceptance)</a>
+    <a class="btn ghost" href="https://github.com/parw8649/audio-llm-utility-gap">Code</a>
     <span class="note">Paper: ICASSP 2027 submission, under review</span>
   </p>
 </header>
@@ -152,8 +152,8 @@ footer a:hover{text-decoration:underline}
     (PC-GITA, AUC). A linear probe on its own audio encoder reads 0.89 on the same clips.</span></div>
   <div style="--c:var(--warn)"><b>4 of 6</b><span>audio LLMs that fall below chance on depression
     segments whose words point away from the diagnosis</span></div>
-  <div style="--c:var(--answer)"><b>0.83</b><span>the answer on depression interviews (first 300 s).
-    Every probe on the same model reads lower, at most 0.74. Here the words carry the task.</span></div>
+  <div style="--c:var(--answer)"><b>0.84</b><span>the answer on whole depression interviews. The encoder
+    and language model probes read lower, 0.60 and 0.74. Here the words carry the task.</span></div>
 </div>
 <p class="small">Every score on this page is AUC. 0.5 is chance and 1.0 is perfect. Intervals are 95 percent,
 from resampling speakers.</p>
@@ -223,16 +223,18 @@ only part of it. Depression is the odd one out, covered next.</p>
 </section>
 
 <section id="depression">
-<h2>On depression interviews (first 300 s), the answer beats every probe</h2>
-<p>Depression runs the other way. On E-DAIC interviews the answer reaches 0.83, while the encoder probe reads
-0.59 and the language model probe 0.70. Both paired intervals stay below zero. The words seem to carry this
-task. Given only the whole transcript, the same model scores 0.82.</p>
-<p>We meant to feed each participant's full speech, but the model's audio processor kept only the first 300
-seconds. So we lifted the cut and let the model hear up to 15 minutes. The answer moved from 0.83 to 0.84, a
-change of 0.01 that is within noise. The encoder probe barely moved, from 0.59 to 0.60, and the language
-model probe rose to 0.74, still below the answer. A probe at the answer position caught up, at 0.84.</p>
-<p>Two models that keep longer audio, Qwen3-Omni and Audio Flamingo 3, reach 0.87 and 0.86. With 275
-speakers, the probes may simply be short of data.</p>
+<h2>On depression interviews, the answer beats the encoder and language model probes</h2>
+<p>Depression runs the other way. On whole E-DAIC interviews the answer reaches 0.84, while the encoder probe
+reads 0.60 and the language model probe 0.74. Both paired intervals stay below zero. A probe at the answer
+position matches the answer, at 0.84. The words seem to carry this task. Given only the whole transcript, the
+same model scores 0.82.</p>
+<p>By default the model's audio processor keeps only the first 300 seconds. We lifted that cut, so the model
+hears the participant's own turns for up to 15 minutes. On the first 300 seconds the picture is the same: the
+answer is 0.83 and the probes 0.59 and 0.70. The answer rises with the audio it hears, from 0.66 on the first
+30 seconds, which is mostly session setup, to 0.72 on a middle 30 seconds, 0.81 on a middle five minutes and
+0.84 on the whole interview.</p>
+<p>Qwen3-Omni, which also hears the whole interview, reaches 0.87, and Audio Flamingo 3, which hears the first
+ten minutes, 0.86. With 275 speakers, the probes may simply be short of data.</p>
 
 <figure>
   <div class="key">
@@ -281,7 +283,7 @@ though this does not prove the voice is ignored.</p>
 <p>On Pitt picture descriptions the models also lean on the words, but less sharply. We split segments by how
 fluent the transcript reads. Here the two arms are not matched speaker by speaker, so this test is weaker
 than the depression one.</p>
-<p>The three Qwen models drop by 0.17 to 0.29 from agreement to conflict, but none falls below chance.
+<p>The three Qwen models drop by 0.17 to 0.29 from agreement to conflict, but none falls significantly below chance.
 Kimi-Audio shows no drop, and the two Audio Flamingo models score 0.53 to 0.61 on both arms. The transcript
 alone shows the same pattern, 0.56 against 0.71, so the words explain much of it.</p>
 <p>The Pitt clips also hold some interviewer speech. When we cut it out, Qwen2.5-Omni's answer rose from 0.66
@@ -318,9 +320,12 @@ features to the language model, and scored every clip on held-out speakers.</p>
 PC-GITA, with intervals above zero. MDVR-KCL did not move. These are one run each. On Pitt we ran the same
 recipe seven times in all and got 0.74 to 0.81. In every run the conflict segments stayed at chance, 0.45 to
 0.57, while the agreement segments rose to 0.82 to 0.90.</p>
-<p>On depression no run beat the zero-shot answer, and the runs moved a lot: 0.64, 0.81 and 0.79, against
-answers of 0.83 and 0.84. The runs did not hear the same audio. The 0.64 run heard only the first 30 s of each
-window. The other two heard the first 300 s and up to 15 min.</p>
+<p>On depression the retrained projector stays at the zero-shot level: 0.86 against 0.84 on the whole
+interview, a paired change of +0.02 (95 percent interval -0.01 to 0.05), and 0.82 with a second seed. Other
+runs of the recipe moved more, because they heard less audio or lost a fold: 0.64 on a run that heard only the
+first 30 s of each window, 0.81 on the first 300 s, and 0.79 on a run where one fold stopped answering. Trained
+on the depression pairs themselves, the projector lifts the conflict arm from 0.22 to 0.59 but pulls the
+agreement arm down from 0.96 to 0.67.</p>
 
 <figure>
   <div class="key">
@@ -343,42 +348,25 @@ window. The other two heard the first 300 s and up to 15 min.</p>
 </section>
 
 <section id="did-not-survive">
-<h2>What did not survive</h2>
-<p class="small">We checked every claim in the paper against the result files. These did not hold up, or
-held up only in a weaker form.</p>
+<h2>What to read with care</h2>
+<p class="small">We checked every claim in the paper against the result files. The final paper fixed what an
+earlier check found. These points remain.</p>
 <ul class="dns">
-  <li><strong>The whole interview.</strong> The paper says the model heard each participant's whole interview.
-  It heard the first 300 seconds, because its audio processor cut the rest. With the cut lifted the answer is
-  0.84 instead of 0.83, so the finding holds, but the sentence was wrong.</li>
-  <li><strong>A fine-tuning gain on depression.</strong> The paper's conclusion claims one. No run showed it. Our
-  E-DAIC runs gave 0.64, 0.81 and 0.79, against zero-shot answers of 0.83 and 0.84. The 0.64 run, the one in the
-  paper, heard only the first 30 s of each window. So it cannot be compared with the 300 s answer. The other two
-  heard the first 300 s and up to 15 min. The 0.64 run also cannot be rerun as it was made. It saved no
-  checkpoint, and its training audio was not kept.</li>
-  <li><strong>The gap shrinking as the words carry more of the diagnosis.</strong> The seven gaps do not line up
-  in that order. Only depression reverses.</li>
-  <li><strong>Paired Pitt arms.</strong> The Pitt conflict and agreement segments come from overlapping but
-  different groups of speakers, so the Pitt test is weaker than the depression one.</li>
-  <li><strong>Below chance on every test.</strong> Four of six models fall below chance on the depression pairs
-  only. On Pitt none does, and a second sentiment model puts the depression conflict arm at chance (0.46), not
-  below it.</li>
-  <li><strong>Numbers with no file behind them.</strong> The speaking-rate figure of 0.92 has no result file.
-  Neither does the share of Pitt words heard inside the 30 second window. Most Pitt segments run longer than
-  the 30 seconds the models hear. The paper still prints both numbers. They should come out, and they stay
-  off this page.</li>
-  <li><strong>Counts and bases that were off.</strong> The 488 depression conflict segments make 483 pairs with
-  311 distinct agreement segments. The Audio Flamingo 3 agreement score is 0.84, not 0.81. The PC-GITA gap is
-  0.33 on the paper's own probe, not 0.35. Audio Flamingo 2 heard longer Pitt clips than the other models. On
-  the same 30 seconds it scores 0.58 and 0.53.</li>
+  <li><strong>Figure 1's depression panel.</strong> The figure in the paper draws E-DAIC on the first 300
+  seconds, where the answer is 0.83. The tables and the text use the whole interview, where it is 0.84. The two
+  tell the same story.</li>
+  <li><strong>What "whole interview" means.</strong> The model hears the participant's turns, taken from the
+  transcript timings and joined in order. Where two transcript rows overlap, that stretch is heard twice.</li>
+  <li><strong>The gap intervals.</strong> On Pitt the gap of 0.11 has an interval on the paper's own probe, 0.05
+  to 0.18. On PC-GITA, NeuroVoz, ADReSSo and ADReSS-2020 the interval behind "significant" comes from one saved
+  split of the probe. All four clear zero there.</li>
   <li><strong>The cosine test for the readout.</strong> The angle between the probe direction and the Yes or No
   direction is near random. But in a space this large, two unrelated directions always look like that. So the
   test could not have failed. We keep the plainer result that the readout direction separates the Pitt groups
   at only 0.66.</li>
-  <li><strong>The NeuroVoz channel check.</strong> Normalising loudness and noise floor did not bring the
-  recording features below our own 0.60 bar on NeuroVoz, and the probe fell from 0.92 to 0.89. PC-GITA passed.
-  On NeuroVoz a recording channel effect is not ruled out.</li>
-  <li><strong>The Pitt age-matched numbers.</strong> Two joins of the same matched list give different clip
-  counts and probe values. Until one is chosen, they stay off this page.</li>
+  <li><strong>The Qwen3-Omni readout numbers.</strong> The probe of 0.83, with and without the readout
+  direction, comes from one run. A refit from the saved states gives 0.79, so treat those two numbers with
+  care.</li>
 </ul>
 </section>
 
@@ -393,7 +381,6 @@ from its owners.</p>
 <footer>
   University of Southern California, Prof. Mohammad Soleymani's group.<br>
   Code and result files: <a href="https://github.com/parw8649/audio-llm-utility-gap">github.com/parw8649/audio-llm-utility-gap</a>
-  (private until the paper is accepted)
   &middot; <a href="explorer.html">Interactive explorer</a><br>
   Paper: ICASSP 2027 submission, under review.
 </footer>
@@ -492,8 +479,8 @@ var C1=[
  {n:"ADReSSo",clips:"237 speakers",p:0.8752,a:0.61504,ai:[0.5432,0.6890],e:0.6942,t:0.5542},
  {n:"ADReSS-2020",clips:"156 speakers",p:0.8043,a:0.6241,ai:[0.5348,0.7148],e:0.7122,t:0.7538},
  {g:"DEPRESSION"},
- {n:"E-DAIC",sub:"first 300 s",clips:"275 speakers",p:0.5884,a:0.8278,ai:[0.7703,0.8822],e:null,t:0.8230,
-  tnote:"whole transcript",lm:0.7001,lab:true}
+ {n:"E-DAIC",sub:"whole interview",clips:"275 speakers",p:0.5981,a:0.8366,ai:[0.7786,0.8866],e:null,t:0.8230,
+  tnote:"whole transcript",lm:0.7437,lab:true}
 ];
 function tip1(r){
   var h="<b>"+r.n+(r.sub?", "+r.sub:"")+"</b><br><span class=m>"+r.clips+"</span><br>"+
@@ -759,10 +746,9 @@ var C6=[
  {n:"ADReSSo",a:0.61504,f:0.8246,d:0.2096,dci:[0.1294,0.2867]},
  {n:"ADReSS-2020",a:0.6241,f:0.7684,d:0.1443,dci:[0.0490,0.2370]},
  {g:"DEPRESSION"},
- {n:"E-DAIC",sub:"first 300 s answer",a:0.8278,runs:[
-   [0.6421,"run in the paper table, heard only the first 30 s of each window"],
-   [0.81496,"first 300 s, same folds"],
-   [0.7931,"up to 15 min, one of five folds stopped answering Yes or No"]]}
+ {n:"E-DAIC",a:0.8366,f:0.8589,d:0.0223,dci:[-0.0064,0.0547],reruns:[0.8184,0.81496,0.7931,0.6421],
+  rnote:"other runs: second seed 0.82, first 300 s 0.81, one fold stopped answering 0.79, first 30 s only 0.64",
+  rshort:"other runs"}
 ];
 function tip6(r){
   if(r.runs){var h="<b>E-DAIC</b><br>zero-shot answer, first 300 s <b>"+f2(r.a)+"</b><br>"+
@@ -770,7 +756,8 @@ function tip6(r){
     r.runs.forEach(function(q){h+="<br><b>"+f2(q[0])+"</b> <span class=m>"+q[1]+"</span>";});return h;}
   var t="<b>"+r.n+"</b><br>zero-shot answer <b>"+f2(r.a)+"</b><br>after projector fine-tune <b>"+f2(r.f)+
     "</b><br>paired gain <b>"+f2(r.d,true)+"</b> "+iv(r.dci);
-  if(r.reruns)t+="<br><span class=m>six more runs of the same recipe: "+r.reruns.map(function(v){return f2(v);}).join(", ")+"</span>";
+  if(r.rnote)t+="<br><span class=m>"+r.rnote+"</span>";
+  else if(r.reruns)t+="<br><span class=m>six more runs of the same recipe: "+r.reruns.map(function(v){return f2(v);}).join(", ")+"</span>";
   return t;}
 function drawC6(){
   var o=measure("c6"),W=o.W,nar=o.narrow,s=o.s;
@@ -837,7 +824,7 @@ function drawC6b(){
 table("t6",["Dataset","Zero-shot answer","After fine-tune","Paired gain [95%]"],
   C6.filter(function(r){return !r.g;}).map(function(r){
     if(r.runs)return ["E-DAIC",f2(r.a)+" (first 300 s)",r.runs.map(function(q){return f2(q[0])+' <span class=m>('+q[1]+')</span>';}).join("<br>"),"none above the answer"];
-    return [r.n,f2(r.a),f2(r.f)+(r.reruns?"<br><span class=m>six more runs: "+r.reruns.map(function(v){return f2(v);}).join(", ")+"</span>":""),f2(r.d,true)+" "+iv(r.dci)];}),
+    return [r.n,f2(r.a),f2(r.f)+(r.reruns?"<br><span class=m>"+(r.rshort||"six more runs")+": "+r.reruns.map(function(v){return f2(v);}).join(", ")+"</span>":""),f2(r.d,true)+" "+iv(r.dci)];}),
   "<br>"+tbl(["Pitt run","Words point away","Words agree"],
   RUNS.map(function(q){return [q[0],f2(q[1]),f2(q[2])];}).concat([["zero-shot answer",f2(ZS6[0]),f2(ZS6[1])]])));
 

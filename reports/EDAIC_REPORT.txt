@@ -1,4 +1,4 @@
-EDAIC_REPORT.txt  —  E-DAIC window rerun, Qwen2.5-Omni
+EDAIC_REPORT.txt: E-DAIC window rerun, Qwen2.5-Omni
 generated 2026-09-22 17:43
 All windows cut from dcaps_proc. AFFECTED by D2 (stitched timeline) and D1 (context cap).
 ============================================================================================

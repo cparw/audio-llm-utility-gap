@@ -1,12 +1,12 @@
 # DISCREPANCIES.md: E-DAIC rerun and data audit
 
-Items 3, 4, 5, 6, 7, 8, 12, 13 and 14 describe the 14 September draft and are resolved in the submitted version.
+Items 3, 4, 5, 6, 7, 8, 12, 13 and 14 describe the 14 September draft and are resolved in the final tex.
 
 This file carries every item of the working audit log as it stood on 23 September 2026 at 13:26 UTC: 176 numbered items (128 headed items and 48 standalone bullets). 4 headings only group the bullets under them and carry no finding of their own, so they are not numbered.
 
-Every numbered item ends with a line that starts "Status now:". It says one of three things. Fixed in the paper: the line quotes, verbatim, the sentence of the submitted text that fixes or avoids the finding (the final tex of the submitted version). Released here: the line names the files that document or release it. Most are in this repository. A path followed by (authors' machine path) stays on the authors' machine, where release/ stands for the authors' release folder. Open: the line says what decides it. Counts: 25 fixed in the paper, 137 released here, 14 open (items 2, 29, 40, 42, 49, 69, 70, 73, 84, 111, 125, 147, 149 and 175).
+Every numbered item ends with a line that starts "Status now:". It says one of three things. Fixed in the paper: the line quotes, verbatim, the sentence of the final tex that fixes or avoids the finding. Released here: the line names the files that document or release it. Most are in this repository. A path followed by (authors' machine path) stays on the authors' machine, where release/ stands for the authors' release folder. Open: the line says what decides it. Counts: 43 fixed in the paper, 128 released here, 5 open (items 2, 69, 84, 125 and 149).
 
-Sentences the authors added to the paper later on 23 September are not in the pasted copy. Where an item depends on one, the status line gives the decided value and says the wording will be matched to the final tex.
+The status lines were checked again on 24 September 2026 against the final tex, the Overleaf copy of 23 September 2026, 23:23 UTC (md5 2923ced559329a4413b75efbaf477168). Every quoted sentence is in that tex, outside its comments.
 
 Paths inside the findings that start with release/, gdrive/ or DementiaBank/ stay on the authors' machine. release/ is the authors' release folder, gdrive/ is the folder of local runs on the authors' external drive, and DementiaBank/ is the authors' copy of that corpus. Paths that start with /workspace/, /root/ or /scratch1/ were on the GPU pods (rented cloud GPU machines). None of these resolve in this repository. Paths in the status lines are relative to the repository root, except the ones marked (authors' machine path).
 
@@ -30,7 +30,7 @@ stated and the number of truncated files printed, or move to a chunk-and-pool de
 the file in segments and pools the states. Do not call it "full".
 Status. Proceeding with an empirically determined cap. Every capped file is listed in the sidecar.
 
-Status now: released here. Files: scores/part22/P22_step1_processor_config.md, scores/part22/p22_step2_truncation_proof.json, scores/part22/edaic_lifted_perclip.csv, scores/part22/edaic_lifted_auc.json, release/scores/part22/rows/P22_verified.tsv (authors' machine path), manifests/edaic_windows_full.csv. The binding limit is the processor's 300 s cut (item 100), and the paper's E-DAIC condition is that cut window. The authors' rule: Qwen2_5OmniProcessor (transformers 5.17.0) cuts audio at 300 s, and 217 of 275 windows are longer than 300 s and are cut. With truncation off the whole window (capped at 900 s) gives 0.8379 [0.7805, 0.8876] against 0.8278, paired +0.0101 [-0.0309, 0.0518], which is not significant. The pasted copy of the paper still reads "The model hears the participant's whole interview, capped at 15 minutes for the 89 longest." Any sentence on the 300 s cut was added after that copy, and its wording will be matched to the final tex.
+Status now: fixed in the paper. Quote: "The model hears the participant's whole interview, interviewer turns removed and capped at 15 minutes for the 89 longest, with the processor's default input limit lifted so that every window is encoded whole." The paper's E-DAIC audio numbers now come from the run with the processor's 300 s cut lifted (PART 23): zero-shot answer 0.8366 [0.7786, 0.8866], against 0.8278 with the cut, paired +0.0088 [-0.0320, 0.0510] (part23/verify/PART23_VERIFIED.tsv, authors' machine path). A second run of the same setting gives 0.8379 [0.7805, 0.8876]. Files: scores/part22/P22_step1_processor_config.md, scores/part22/p22_step2_truncation_proof.json, scores/part22/edaic_lifted_perclip.csv, scores/part22/edaic_lifted_auc.json, manifests/edaic_windows_full.csv. 89 of the 275 windows still reach the 900 s cap, as the quoted sentence says.
 
 ---
 ## 2. D2. dcaps_proc is a stitched concatenation, not the raw interview. SEVERITY: HIGH
@@ -48,7 +48,7 @@ What would fix it. Cut windows from the raw `<pid>_AUDIO.wav` using the transcri
 Status. Logged. Windows for this run are cut from dcaps_proc as planned. Results are marked
 AFFECTED in every sidecar.
 
-Status now: open. The paper's E-DAIC audio is the stitched file: every transcript row with End > Start, joined in file order (the rule in scripts/edaic_full/build_windows.py). The pasted copy calls it "the participant's whole interview". What decides it: how the final tex describes that input, or a recut from the raw recording. Related files: scripts/edaic_full/build_windows.py, manifests/edaic_windows_full.csv.
+Status now: open. The final tex reads "The model hears the participant's whole interview, interviewer turns removed and capped at 15 minutes for the 89 longest, with the processor's default input limit lifted so that every window is encoded whole." The file is the participant's transcript rows with End > Start, joined in file order (the rule in scripts/edaic_full/build_windows.py), so rows that overlap are heard twice. The tex does not say this. What decides it: a recut from the raw recording. Related files: scripts/edaic_full/build_windows.py, manifests/edaic_windows_full.csv.
 
 ---
 ## 3. D3. The E-DAIC first 30 s is setup chatter, not interview speech. SEVERITY: HIGH
@@ -67,7 +67,7 @@ What would fix it. Score E-DAIC on a window that contains actual interview speec
 mid-300 s variants in this run are exactly that test.
 Status. This is the strongest single result of the audit and it is why the rerun matters.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "On E-DAIC the audio answer on the whole interview matches the transcript alone." The first 30 s window of the 14 September draft is gone from the paper. The length of the window now used is item 100.
+Status now: fixed in the paper. This item describes the 14 September draft. Quote: "On E-DAIC the audio answer on the whole interview matches the answer from the whole transcript." The first 30 s window of the 14 September draft is gone from Table 1. The final tex reports it only as one step of the window series: "The E-DAIC answer rises with the audio it hears: 0.66 on the first 30\,s, which is mostly session setup, 0.72 on a middle 30\,s, 0.81 on a middle five minutes and 0.84 on the whole interview, while the encoder probe never exceeds 0.63 on any window."
 
 ---
 ## 4. D4. Scored windows contain interviewer speech on the AD sets. SEVERITY: HIGH
@@ -85,7 +85,7 @@ artefact of 795 Pitt `*INV:` utterances carrying no time bullet, not evidence th
 Do not cite that column.
 What would fix it. Recut from the first timed participant utterance and exclude INV spans. PART 5.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "Each Pitt segment starts at the participant's first timed utterance, and the ADReSSo and ADReSS-2020 windows start at the beginning of the recording, so interviewer prompts inside the window are kept."
+Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the final tex. Quote: "Each Pitt segment starts at the participant's first timed utterance, and the ADReSSo and ADReSS-2020 windows start at the beginning of the recording, so interviewer prompts inside the window are kept."
 
 ---
 ## 5. D5. "468 thirty-second segments" is false. SEVERITY: HIGH
@@ -94,7 +94,7 @@ max 55.5600, mean 34.5104, sd 4.3122. Exactly 30 s: 0 of 468. Longer than 30 s: 
 Paper sentence it contradicts. Section 3's "468 thirty-second segments".
 What would fix it. State the real distribution, or recut to a true 30 s.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "Models hear the first 30\,s, the length Qwen2-Audio accepts, so the conflict test in Table~\ref{tab:conflict} runs on the same clips for all six models." The dataset sentence of the final tex reads "468 segments from 227 speakers" with no thirty-second claim.
+Status now: fixed in the paper. This item describes the 14 September draft. Quote: "Segments run from 30 to 56\,s (median 33\,s) and the models hear the first 30\,s of each." The dataset sentence gives the counts without a thirty-second claim: "468 segments from 227 participants".
 
 ---
 ## 6. D6. Heavy speaker overlap across Pitt, ADReSSo and ADReSS-2020. SEVERITY: HIGH
@@ -108,7 +108,7 @@ Paper sentence it contradicts. Any treatment of Pitt, ADReSSo and ADReSS-2020 as
 any cross-dataset transfer claim among them.
 What would fix it. Restrict transfer claims to the clean remainders, or state the overlap.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "The three sets share speakers, so every result is within one set on speaker-disjoint folds and we make no transfer claim among them."
+Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the final tex. Quote: "The three sets share speakers, so every result is within one set on speaker-disjoint folds and we make no transfer claim among them."
 
 ---
 ## 7. D7. The set called ADReSSo is not ADReSSo. SEVERITY: HIGH
@@ -117,7 +117,7 @@ What the data shows. `challenges/ADReSSo/` is empty. The 237 clips come from
 Paper sentence it contradicts. Every mention of ADReSSo as the dataset.
 What would fix it. Rename to ADReSS-M, or obtain real ADReSSo.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "We use the DementiaBank Pitt cookie-theft descriptions \cite{pitt}, with 468 segments from 227 speakers, the top and bottom third of the fluency score defined under Conflict set construction below, the ADReSSo recordings \cite{adresso} from 237 speakers, as released with the ADReSS-M challenge \cite{adressm}, and the ADReSS-2020 benchmark split \cite{adress2020} including 108 training and 48 test recordings."
+Status now: fixed in the paper. This item describes the 14 September draft. Quote: "We use the DementiaBank Pitt cookie-theft descriptions \cite{pitt}, with 468 segments from 227 participants (one has sessions in both groups and is grouped under two labels), the top and bottom third of the fluency score defined under Conflict set construction below, the ADReSSo recordings \cite{adresso} from 237 speakers, as released with the ADReSS-M challenge \cite{adressm}, and the ADReSS-2020 benchmark split \cite{adress2020} including 108 training and 48 test recordings."
 
 ---
 ## 8. D8. NeuroVoz is channel confounded. SEVERITY: HIGH
@@ -130,7 +130,7 @@ but with 16 PD / 21 HC the p values are 0.0333 / 0.0426 / 0.0505, so suspicious 
 Clean: Pitt (max 0.5943), ADReSSo (0.5650), ADReSS-2020 (0.6358), E-DAIC (0.5737).
 What would fix it. Report the confound floor per dataset, as Paper 2 does.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "Recording features from the quietest frames separate the NeuroVoz groups at 0.87 by spectral centroid alone and PC-GITA at 0.69, so part of the Parkinson's probe may come from the recording channel."
+Status now: fixed in the paper. This item describes the 14 September draft. Quote: "Five recording features from the quietest frames (noise floor, SNR, spectral centroid, roll-off and tilt) separate the NeuroVoz groups at 0.80 and the PC-GITA groups at 0.67, so part of the Parkinson's probe may come from the recording channel." and "Normalising loudness and noise floor brings them to 0.56 on PC-GITA, where the encoder probe falls to 0.83 ($-$0.07 [$-$0.12, $-$0.02]) and the answer stays at 0.57, and only to 0.60 on NeuroVoz, where the probe falls to 0.89 ($-$0.03 [$-$0.061, $-$0.001])."
 
 ---
 ## 9. D9. PHQ-8 binary threshold does not reproduce the label. SEVERITY: MEDIUM
@@ -139,7 +139,7 @@ sev >= 10 (up to 16). [Participant ids withheld here, clinical scores are not re
 Class balance y=1 66 (24.0000%), y=0 209 (76.0000%).
 What would fix it. State the actual label source rather than "PHQ-8 binary at threshold 10".
 
-Status now: fixed in the paper. Quote: "We use E-DAIC \cite{daic}, the extended corpus released for AVEC 2019, with 275 participants, where the binary label is the dataset's PHQ-8 \cite{Kroenke2009} based label rather than a clinical diagnosis."
+Status now: fixed in the paper. Quote: "We use E-DAIC \cite{daic}, the extended dataset released for AVEC 2019, with 275 participants, where the binary label is the dataset's released label based on the eight-item Patient Health Questionnaire (PHQ-8) \cite{Kroenke2009}, stricter than PHQ-8 $\geq 10$ for 20 participants, rather than a clinical diagnosis."
 
 ---
 ## 10. D10. PC-GITA and NeuroVoz have no 30 s window. SEVERITY: MEDIUM
@@ -147,7 +147,7 @@ What the data shows. PC-GITA 1100 clips median 3.4240 s. NeuroVoz 1270 clips med
 Each scored file is one whole short utterance. A 30 s window does not exist for either set.
 What would fix it. Do not describe a uniform 30 s window across all seven datasets.
 
-Status now: fixed in the paper. Quote: "We use the following three corpora: PC-GITA (Spanish, 1100 clips) \cite{pcgita}, NeuroVoz (Spanish, 1270 clips) \cite{neurovoz} and MDVR-KCL (English, 37 speakers) \cite{kcl}." The 30 s window is stated for the Alzheimer's sets only.
+Status now: fixed in the paper. Quote: "From the Parkinson's disease datasets, we only use material whose words are fixed by the protocol, so the words carry little of the diagnosis, and most of the signal has to come from the voice: PC-GITA \cite{pcgita} (Spanish, ten sentences and one read text per speaker, 1100 clips), NeuroVoz \cite{neurovoz} (Spanish, twelve isolated words, 1270 clips from 107 speakers) and MDVR-KCL \cite{kcl} (English, 37 speakers, most reading one of two passages)." The 30 s window is stated for the Alzheimer's sets only.
 
 ---
 ## 11. D11. NeuroVoz is stored twice. SEVERITY: LOW
@@ -181,7 +181,7 @@ What would fix it. Rebuild the segment list keeping every tertile and report the
 set, and separately on the middle tertile, so the selection effect is visible. That is PART 13.
 Status. PART 13 launched.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "On all 708 Pitt segments, middle third included, the encoder probe reaches 0.80 and the zero-shot answer 0.67." The dataset sentence also names "the top and bottom third of the fluency score".
+Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the final tex. Quote: "On all 708 Pitt segments, middle third included, the encoder probe reaches 0.80 and the zero-shot answer 0.67." The dataset sentence also names "the top and bottom third of the fluency score".
 
 ---
 ## 13. D13. The E-DAIC valence lexicon (dq_lex) is not on this machine. SEVERITY: HIGH
@@ -198,7 +198,7 @@ public lexicon so it is reproducible by a reader.
 Status. PART 7 proceeds on the reproducible TF-IDF rule plus a named public sentiment model, with
 the lexicon half explicitly marked NOT REPRODUCED rather than silently substituted.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "From the raw E-DAIC transcripts, with the interviewer removed, we take every participant segment of at least 25 words and 5\,s of speech and score it with a RoBERTa sentiment classifier trained on TweetEval \cite{tweeteval}." The paper's conflict rule now names a public sentiment model. The valence lexicon is not used.
+Status now: fixed in the paper. This item describes the 14 September draft. Quote: "From the raw E-DAIC transcripts, with the interviewer removed, we take every participant segment of at least 25 words and 5\,s of speech and score it with the Twitter-RoBERTa sentiment classifier trained on TweetEval \cite{tweeteval}." The paper's conflict rule names a public sentiment model. The valence lexicon is not used.
 
 ---
 ## 14. D14. The E-DAIC answer is not weak. The window was. SEVERITY: HIGH
@@ -221,7 +221,7 @@ What would fix it. Either report E-DAIC on a window containing actual speech and
 utility-gap claim, or state explicitly that the E-DAIC gap is a windowing artefact.
 Status. Probes, text and fine-tune on all three windows still running. This is the zero-shot row.
 
-Status now: fixed in the paper. This item describes the 14 September draft and is resolved in the submitted version. Quote: "The gap is widest on Parkinson's read-speech, narrower on Alzheimer's picture descriptions and reversed on depression."
+Status now: fixed in the paper. This item describes the 14 September draft. Quote: "The E-DAIC answer rises with the audio it hears: 0.66 on the first 30\,s, which is mostly session setup, 0.72 on a middle 30\,s, 0.81 on a middle five minutes and 0.84 on the whole interview, while the encoder probe never exceeds 0.63 on any window." and "On E-DAIC the language model probe reaches 0.74 and the encoder probe 0.60, both below the answer of 0.84 ($-$0.09 [$-$0.16, $-$0.03] and $-$0.24 [$-$0.32, $-$0.15]), while a probe on the answer state matches the answer (0.84)." The earlier sentence on the order of the gap across conditions is gone from the final tex.
 
 - 15. [HIGH] M10 (part16) KCL transcript AUC recomputed 0.7634 from release/overnight2/text_new/o25_kcl_text.csv does not match published 0.7619 in master_lookup.csv / release/overnight2/text_new/o25_kcl_text.json
 
@@ -274,7 +274,7 @@ run: /usr/local/bin/python3 release/edaic_rerun/part16/M7_gap_per_dataset.py
 
 - 26. [LOW] PART16 M4: agreement arm has 311 unique seg_uids across 483 pair rows (agreement segments are reused across pairs of the same speaker). All 483 rows kept, so a reused clip contributes its score once per pair. Conflict arm has 483 unique seg_uids.
 
-  Status now: released here. Files: scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv, release/edaic_rerun/part17/rows/T1.tsv (authors' machine path). The authors' rule: Table 2 uses the 483 conflict segments and the 311 distinct agreement segments on E-DAIC. The pasted copy prints the old 483-row agreement values 0.95, 0.95, 0.96, 0.61, 0.81 and 0.87. On the 311 distinct segments they are 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89. The Table 2 wording will be matched to the final tex.
+  Status now: fixed in the paper. The final tex prints the 311 distinct segment values 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89 in Table 2. Quote (caption): "Depression, E-DAIC \cite{daic}: 483 conflict segments paired with agreement segments of the same speakers (311 distinct), 138 speakers." Files: scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv.
 
 - 27. [MEDIUM] PART16 M4: AudioFlamingo2 / conflict: Yes rate 0.9710 is near-constant (p_yes sd=0.0532). The model answers the same word on almost every clip, so its arm contrast carries little information.
 
@@ -290,7 +290,7 @@ run: /usr/local/bin/python3 release/edaic_rerun/part16/M7_gap_per_dataset.py
 - Same n, same clips. Cause not yet established. POD3 is diffing the two per-clip files clip by clip.
 - Affects a published Table 1 cell. Not resolved.
 
-Status now: open. The final tex no longer gives a Qwen3-Omni range. It reads "On Qwen3-Omni the encoder probe reaches 0.90 on PC-GITA and 0.81 on Pitt against zero-shot answers of 0.60 and 0.77." The printed Pitt 0.77 rounds the rerun 0.7673, while Table 2 and lookup/master_lookup.csv use the shipped 0.7619, which rounds to 0.76 (the same-pod rescore gives 0.7638). What decides it: the text printing 0.76, the value of the file behind Table 2. Evidence: scores/part20/POD4b/P20_4b_q3o_orig_samepod_overall.perclip.csv in this repository and release/scores/part20/rows/POD4b.tsv (authors' machine path).
+Status now: fixed in the paper. Quote: "On Qwen3-Omni the encoder probe reaches 0.90 on PC-GITA and 0.81 on Pitt against zero-shot answers of 0.60 and 0.76, so its Alzheimer's gap is only 0.05." The printed 0.76 is the shipped file behind Table 2, 0.7619. The rerun 0.7673 is listed as not used. Evidence: scores/part20/POD4b/P20_4b_q3o_orig_samepod_overall.perclip.csv in this repository.
 
 ## 30. [MEDIUM] Qwen3-Omni Pitt projector probe is a single repeat
 - `q3o_pitt_nested_repeats.json` gives proj mean 0.7820 over 1 repeat / 1 candidate point, while enc, llm and ans are 5 repeats over 32/49/49 points.
@@ -321,7 +321,7 @@ Status now: released here. Files: lookup/master_lookup.csv. The lookup labels th
   Files: release/edaic_rerun/part16/M2_REPORT.txt,
   release/edaic_rerun/part16/M2_distilbert_sentiment.csv
 
-  Status now: released here. Files: scores/part16/M/M2_distilbert_sentiment.csv, scores/part16/M/M2_distilbert_sentiment.json, scores/part20/POD3b/sst2_pairs_o25_audio.csv, scores/part20/POD3b/sst2_pairs_o25_audio.json, scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv, release/scores/part20/rows/POD3b.tsv (authors' machine path). The paper names its scorer (a RoBERTa classifier trained on TweetEval, threshold 0.70) and makes no claim that the set is scorer independent. The DistilBERT comparison is item 146.
+  Status now: released here. Files: scores/part16/M/M2_distilbert_sentiment.csv, scores/part16/M/M2_distilbert_sentiment.json, scores/part20/POD3b/sst2_pairs_o25_audio.csv, scores/part20/POD3b/sst2_pairs_o25_audio.json, scores/part20/POD3b/sst2_pairs_o25_audio_diag_by_roberta_arm.csv, release/scores/part20/rows/POD3b.tsv (authors' machine path). The paper names its scorer (a RoBERTa classifier trained on TweetEval, threshold 0.70) and reports the second scorer: "A second sentiment scorer (DistilBERT fine-tuned on SST-2) selects 1,334 pairs, on which the conflict arm scores 0.46 [0.42, 0.51], at chance rather than below it, and stays 0.39 below the agreement arm." "The inversion holds on the 420 segments both scorers call conflicting (0.20) and not on the 855 the first scorer calls neutral (0.62)." The DistilBERT comparison is item 146.
 
 - 33. [LOW] PART16 M2: the Part 14 builder scripts were not under
   release/edaic_rerun/scripts_part14/ (that folder holds only
@@ -346,7 +346,7 @@ POSITIONALLY. All 1a/1f numbers below use that positional join.
 Also note per-clip scores are duplicated for reused clips, so pooled AUCs weight those clips twice.
 This is a property of the existing Part 14 design, not something introduced here.
 
-Status now: released here. Files: manifests/part14_manifest_new.csv, scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv, release/edaic_rerun/part17/rows/T1.tsv (authors' machine path). The manifest has 966 rows and 794 distinct segments. The authors' rule: Table 2 uses the 483 conflict segments and the 311 distinct agreement segments on E-DAIC. The pasted copy prints the old 483-row agreement values 0.95, 0.95, 0.96, 0.61, 0.81 and 0.87. On the 311 distinct segments they are 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89. The Table 2 wording will be matched to the final tex.
+Status now: fixed in the paper. The manifest has 966 rows and 794 distinct segments. The final tex prints the 311 distinct segment values 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89 in Table 2. Quote (caption): "Depression, E-DAIC \cite{daic}: 483 conflict segments paired with agreement segments of the same speakers (311 distinct), 138 speakers." Quote (method): "This yields 488 conflict segments, of which 483 have an agreement segment from the same speaker, giving 483 pairs from 138 speakers." Files: manifests/part14_manifest_new.csv, scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv.
 
 ## 35. [MEDIUM] PART16 M1: two different Qwen2.5-Omni transcript-only runs exist on the same Pitt 468 segments
 - Run A (used): `gdrive/omni_pitt_text.csv`, mtime 2026-09-15 15:14, 468 rows, columns `id,speaker,label,set,p_yes,mass`. Recomputed rank-formula AUC all=0.6975, conflict=0.4550, agreement=0.7987, paired conflict-minus-agreement=-0.3437.
@@ -374,7 +374,7 @@ Status now: released here. Files: scores/part17/T6_pitt_text_sep20_arms.csv, rel
 
 - 38. [HIGH] M8 (part16) Audio Flamingo 2 has two Pitt-468 score files that disagree badly: `gdrive/af2_results/af2_pitt468.csv` (conflict AUC 0.6310 [0.5336,0.7260], all-468 0.5724) vs `gdrive/af2_pitt_audio.csv` (conflict AUC 0.6691 [0.5650,0.7654], all-468 0.5273). Per-clip p_yes correlation is only 0.6137, max abs diff 0.4324 on the same 468 clips. master_lookup.csv cites af2_pitt468.csv. BOTH rows are reported in M8_conflict_cells.csv. Neither was silently dropped.
 
-  Status now: released here. Files: lookup/SUPERSEDED.csv, lookup/master_lookup.csv, release/scores/part20/POD4c/work/af2_val10.csv (authors' machine path). The authors' rule: af2_results/af2_pitt468.csv is the canonical AF2 Pitt file. Table 2 prints 0.63 and 0.55 from it, and a pod rescore of 10 windows matches it bit for bit.
+  Status now: released here. Files: lookup/SUPERSEDED.csv, lookup/master_lookup.csv, release/scores/part20/POD4c/work/af2_val10.csv (authors' machine path). The authors' rule: af2_results/af2_pitt468.csv is the canonical AF2 Pitt file, and a pod rescore of 10 windows matches it bit for bit. That file heard the full 30 to 56 s windows. The final Table 2 prints the values of the same windows cut to 30 s, 0.5835 and 0.5337, row verbatim: "Audio Flamingo 2 \cite{af2}     & 0.53 & 0.63 & 0.58 & 0.53 \\" (release/scores/part20/POD4c/af2_orig30_conflict.csv and af2_orig30_agreement.csv, authors' machine paths).
 
 - 39. [MEDIUM] M8 (part16) Kimi-Audio Pitt-468 exists in four copies with two different score sets. `overnight2/part3` = `overnight2/kimi` (conflict 0.7197) but `overnight/kimi/kimi_pitt_zeroshot_scores.csv` differs (conflict 0.7078, per-clip corr 0.9299, max abs diff 0.3630), and `gdrive/kimi_pitt_audio.csv` gives conflict 0.7166. master_lookup.csv cites the part3 copy, which M8 used as primary. The overnight copy is reported as an `alt_overnight_copy` row. The verdict (above 0.5) is the same under every copy.
 
@@ -382,7 +382,7 @@ Status now: released here. Files: scores/part17/T6_pitt_text_sep20_arms.csv, rel
 
 - 40. [LOW] M8 (part16) Audio Flamingo 3 Pitt-468 exists in three copies that differ slightly (`overnight2/part3/af3_pitt.csv` conflict 0.6169, `overnight2/part10/af3_pitt.csv`, `gdrive/af3_pitt_audio.csv` conflict 0.6031, max abs per-clip diff 0.0624). master_lookup.csv cites the part3 copy, used here. Verdict (above 0.5) is unchanged across copies.
 
-  Status now: open. The two AF3 Pitt copies disagree: part3 gives 0.6169 conflict and 0.5822 agreement, part10 gives 0.6075 and 0.5855. The pasted Table 2 prints 0.61 and 0.59, which matches part10, while lookup/master_lookup.csv cites part3. A pod rescore reproduces part10 exactly (release/scores/part20/POD4c/work/af3_val10.csv (authors' machine path)). What decides it: the authors choosing the canonical AF3 Pitt file. Related files: scores/part16/M/M8_conflict_cells.csv, scores/part20/POD6/C_landed/C_af3_pitt_part10_arms.csv, release/scores/part20/POD4c/work/af3_val10.csv (authors' machine path), release/scores/part20/rows/POD4c.tsv (authors' machine path).
+  Status now: fixed in the paper. The final Table 2 prints the part10 copy, row verbatim: "Audio Flamingo 3 \cite{af3}     & 0.42 & 0.84 & 0.61 & 0.59 \\" The part3 copy (0.6169 and 0.5822) is not used. A pod rescore reproduces part10 exactly (release/scores/part20/POD4c/work/af3_val10.csv (authors' machine path)), and an input-length check shows that the part10 run cut every Pitt window to its first 30 s before the processor, 480,000 samples and 750 audio tokens per clip, as the text says (paper1_submission_23sep/final_checks_2325Z/af3/AF3_INPUT_LENGTH.md, authors' machine path). lookup/master_lookup.csv still cites part3 for these two cells.
 
 - 41. [LOW] M8 (part16) Two older E-DAIC conflict score sets exist under `release/edaic_conflict_new/` with 390 rows per model (the pre-Part-14 build). M8 Set A uses the Part 14 966-clip files under `edaic_rerun/part14/` exclusively, as instructed. The 390-row files are a different clip set, not an alternative scoring of the same clips.
 
@@ -390,11 +390,11 @@ Status now: released here. Files: scores/part17/T6_pitt_text_sep20_arms.csv, rel
 
 - 42. [HIGH] M8 (part16) SUBSTANTIVE: only 4 of the 12 primary conflict cells have a 95% speaker-bootstrap interval entirely below 0.5 (Qwen2.5-Omni, Qwen2-Audio, Qwen3-Omni, Audio Flamingo 3 on E-DAIC Part 14). All six Pitt conflict cells fail the below-chance bar. Three of them (AF2, AF3, Kimi) are entirely ABOVE 0.5. Any paper sentence saying models are below chance on the conflict arm has to be scoped to E-DAIC and to four of the six models.
 
-  Status now: open. The body scopes the claim: "On the depression segments four of the six models fall below chance when the words point away from the label, while every model except Audio Flamingo 2 scores above 0.80 when the words and the label agree." The abstract sentence "Where the words contradict the diagnosis, four of six models fall below chance." does not name depression, and the Pitt sentence says both Audio Flamingo models "sit near chance on both sets" while their Pitt conflict intervals lie above 0.5 (AF2 0.6310 [0.5336, 0.7260], AF3 0.6169 [0.5188, 0.7209] on part3 and 0.6075 [0.5063, 0.7129] on part10). What decides it: the final wording of those two sentences. Related files: scores/part16/M/M8_conflict_cells.csv, release/edaic_rerun/part17/rows/T4.tsv (authors' machine path), release/scores/part20/rows/POD4c.tsv (authors' machine path).
+  Status now: fixed in the paper. The abstract now names depression: "Where the words contradict a depression diagnosis, four of six models fall below chance." The body sentence is "On the depression segments four of the six models fall below chance when the words point away from the label, while every model except Audio Flamingo 2 scores above 0.80 when the words and the label agree." The Pitt sentence is "On the Pitt dataset the three Qwen models drop by 0.17 to 0.29 from the agreement to the conflict arm but none falls significantly below chance, Kimi-Audio shows no drop, and the two Audio Flamingo models score 0.53 to 0.61 on both arms (Table~\ref{tab:conflict})." Related files: scores/part16/M/M8_conflict_cells.csv.
 
 - 43. [LOW] PART16 M5 (2026-09-23) Mass weighting is effectively degenerate for Qwen2-Audio: 0.999916 of the mean Yes softmax mass sits on token id 9454 ('Yes') and 0.999970 of the No mass on id 2753 ('No'). cos(d_mass_weighted, normalise(W[9454]-W[2753])) = 1.000000 to 6 dp, and the conflict-arm, agreement-arm and all-data directions are identical to 10 dp (cos = 1.0000000000). So the "mass-weighted" refinement of the readout direction is a no-op on this backbone, and an arm-specific readout direction cannot exist. Reported as-is. The direction is still the correct one, it is just not distinguishable from the plain top-token difference. File: part16/M5_readout_direction_q2a.json.
 
-  Status now: released here. Files: scores/part16/M/M5_readout_direction_q2a.csv, scores/part17/T3_q2a_direction.csv, scores/part17/T3_q2a_direction_summary.csv, release/edaic_rerun/part17/rows/T3.tsv (authors' machine path). The direction test in the paper is on Qwen2.5-Omni.
+  Status now: released here. Files: scores/part16/M/M5_readout_direction_q2a.csv, scores/part17/T3_q2a_direction.csv, scores/part17/T3_q2a_direction_summary.csv, release/edaic_rerun/part17/rows/T3.tsv (authors' machine path). The final tex reports the Qwen2-Audio direction test without a cosine: "On Qwen2-Audio and Qwen3-Omni the readout direction gives 0.62 and 0.77 and the probe 0.82 and 0.83, and 0.81 and 0.83 with the direction removed."
 
 - 44. [LOW] PART16 M5 (2026-09-23) auc along the readout direction (0.617358) and auc of the scorer's own saved p_yes column in pitt_states.npz (0.617338) differ in the 5th decimal. Spearman between the two scores is 0.9999575, Kendall tau 0.9961, and 243 of 468 clips swap rank by a small amount. Cause: the saved p_yes was produced by probe2/extract2.py under fp16 inference with a wider Yes/No id list (["Yes"," Yes","yes"," yes","YES"], taking t[0] of any encoding) and renormalised over the Yes/No logits only, whereas M5 uses float64, the direction_q3o.py id rule (single-token encodings only) and the full-vocab softmax. Not a contradiction, and both round to 0.6174 / 0.6173. The 0.6174 in README_probe2.txt Table 1 (zero-shot audio, Pitt) matches the direction value. File: part16/M5_readout_direction_q2a.csv.
 
@@ -427,11 +427,11 @@ Status now: released here. Files: lookup/SUPERSEDED.csv, lookup/master_lookup.cs
 - On the E-DAIC Part 14 set (n=483, 138 speakers) four of six ARE entirely below 0.5: Omni 0.2218 [0.1829, 0.2632], Qwen2-Audio 0.2280 [0.1816, 0.2782], Qwen3-Omni 0.3008 [0.2454, 0.3641], AF3 0.4235 [0.3606, 0.4880]. AF2 0.5286 [0.4512, 0.6015] and Kimi 0.5258 [0.4501, 0.5977] straddle.
 - Any sentence claiming below-chance behaviour on Pitt at n=146 is not supported by the interval.
 
-Status now: fixed in the paper. Quote: "On the Pitt conflict segments the three Qwen models drop by 0.18 to 0.29 against their agreement segments, Kimi-Audio holds, and both Audio Flamingo models sit near chance on both sets (Table~\ref{tab:conflict})." The Pitt sentence makes no below-chance claim.
+Status now: fixed in the paper. Quote: "On the Pitt dataset the three Qwen models drop by 0.17 to 0.29 from the agreement to the conflict arm but none falls significantly below chance, Kimi-Audio shows no drop, and the two Audio Flamingo models score 0.53 to 0.61 on both arms (Table~\ref{tab:conflict})." The Pitt sentence makes no below-chance claim.
 
 - 49. [HIGH] PART16 M11: two DIFFERENT ASR transcript sets exist on disk for the same 37 MDVR-KCL scored clips, and they agree on zero rows. `release/part4_text/asr/asr_kcl.csv` (the pod copy, clip_path `/workspace/data/kcl_read30b/`, the one the Omni text condition consumed as `/workspace/text/kcl_text.csv`) averages 56.1 words per clip. `gdrive/kcl_read30b_text.csv` averages 84.9. Worst cases, six of 37 speakers: 1 word vs 39, 16 vs 164, 24 vs 315, 8 vs 88, 8 vs 85, 9 vs 78 [speaker ids withheld here]. One local-copy clip holds 315 words in 30 s (~630 wpm), which is a Whisper repetition loop, so neither copy is clean. Whichever is used changes the transcript condition's input. Not resolved.
 
-  Status now: open. The MDVR-KCL transcript cell in Table 1 comes from the pod whisper-large-v3 copy, and transcripts cannot be released. What decides it: the final tex naming that transcript set and settling items 69 and 70. Related files: scores/part16/M/M11_kcl_wer.csv.
+  Status now: fixed in the paper. The final tex names the transcript set: "Pitt and ADReSS-2020 \cite{adress2020} come with manual CHAT transcripts and E-DAIC \cite{daic} with the challenge's automatic transcripts, used with the annotation codes stripped, and ADReSSo \cite{adresso} and the three Parkinson's sets are transcribed with whisper-large-v3 \cite{whisper}." The MDVR-KCL transcript cell in Table 1 comes from the pod whisper-large-v3 copy, and transcripts cannot be released. Related files: scores/part16/M/M11_kcl_wer.csv.
 
 - 50. [LOW] PART16 M11: MDVR-KCL text-condition AUC recomputed from the per-clip file with the tie-averaged rank formula is 0.7634, against 0.7619 stored in `release/podE_final/out/o25_kcl_text.json`. Difference is exactly half a rank unit out of n1*n0=336, i.e. one tied pair handled differently. Same clips, same n=37.
 
@@ -479,7 +479,7 @@ Status now: fixed in the paper. Quote: "On the Pitt conflict segments the three 
 
 - 59. MEDIUM: the LoRA-on-Pitt baseline POD2 was set to produce already exists. `omni_final/abl_pitt_lora.json` + `abl_pitt_oof.csv`, dated 2026-09-18, is Qwen2.5-Omni, Pitt 468, LoRA rank 8, 3 epochs, lr 1e-4, 5 folds, `trainable_params 5046272`, which is exactly r=8 on q/k/v/o of all 28 thinker layers, i.e. the same config POD2 was told to run fresh. Its recomputed OOF AUC is 0.8202. POD2 ran its own fresh replication anyway and reports both side by side. Neither file was overwritten.
 
-  Status now: released here. Files: lookup/master_lookup.csv, scores/part16/POD2/lora_pitt_oof.csv, scores/part20/POD2/balanced_minus_earlier_lora_pitt_perclip.csv. The lookup records the POD2 LoRA run 0.8250. The paper reports no LoRA result.
+  Status now: released here. Files: lookup/master_lookup.csv, scores/part16/POD2/lora_pitt_oof.csv, scores/part20/POD2/balanced_minus_earlier_lora_pitt_perclip.csv. The lookup records the POD2 LoRA run 0.8250, and the final tex reports it: "Low-rank adaptation (LoRA) \cite{lora} of the language model (rank 8, all attention projections of the 28 layers, 5.0\,M trainable parameters against 4.6\,M for the projector) reaches 0.825 on Pitt, 0.06 [0.02, 0.10] above the projector run, and 0.55 on its conflict segments, and training both together gives 0.77."
 
 - 60. LOW: the prior LoRA/projector per-clip csvs carry no `answer_mass` column, so answer-mass cannot be audited for those runs. POD2's own csv records it per clip.
 
@@ -528,7 +528,7 @@ speakers into the depressed arm. 1d therefore defines label := (sev >= 10) and d
 sev>=15 / sev<=4 severity gates, keeping the eligibility gate, the 0.70 sentiment rule and the
 closest-span same-speaker matching unchanged. The paper's Table 2 set is unaffected by this note.
 
-Status now: fixed in the paper. Quote: "We use E-DAIC \cite{daic}, the extended corpus released for AVEC 2019, with 275 participants, where the binary label is the dataset's PHQ-8 \cite{Kroenke2009} based label rather than a clinical diagnosis."
+Status now: fixed in the paper. Quote: "We use E-DAIC \cite{daic}, the extended dataset released for AVEC 2019, with 275 participants, where the binary label is the dataset's released label based on the eight-item Patient Health Questionnaire (PHQ-8) \cite{Kroenke2009}, stricter than PHQ-8 $\geq 10$ for 20 participants, rather than a clinical diagnosis."
 
 ## 66. [RETRACTED, SEE CORRECTION BELOW] POD4 / Part 16 4b: quoted Pitt encoder-probe figure 0.7706 not found in any file (MEDIUM)
 THIS ENTRY IS WRONG. 0.7706 reproduces exactly from `overnight2/part10/pitt_enc_nested5_oof.npz`. Retained only for audit. See the CORRECTION entry at the end of this file.
@@ -561,11 +561,11 @@ Status now: released here. Files: folds/pitt_groupkfold5_pod.csv, folds/pitt_gro
 
 - 69. [HIGH] PART16 M11: the 30 s window used for MDVR-KCL catches setup chatter instead of the read passage on 6 of 37 speakers. Words recovered in the window on those six speakers: 1 ([one word withheld here]), 8, 9, 10, 10 and 16 (vs a median of 60 across the set) [speaker ids withheld here]. The transcript condition scored those clips anyway, so for those speakers the text condition is classifying an utterance that contains no passage at all. Window starts are measured in `edaic_rerun/scripts_1a1c/kcl_offsets.json`.
 
-  Status now: open. The six windows are inside every MDVR-KCL cell of Table 1. What decides it: a recut of those six windows, or a sentence in the final tex. Related files: scripts/audit_1a1c/kcl_offsets.json, scripts/audit_1a1c/kcloff.py, scores/part16/M/M11_kcl_wer.csv.
+  Status now: open. The six windows are inside every MDVR-KCL cell of Table 1, and the final tex has no sentence on them. What decides it: a recut of those six windows. Related files: scripts/audit_1a1c/kcl_offsets.json, scripts/audit_1a1c/kcloff.py, scores/part16/M/M11_kcl_wer.csv.
 
 - 70. [MEDIUM] PART16 M11: MDVR-KCL read speakers were not given one common passage. Classifying each large-v3 transcript by keyword gives north_wind PD=13 control=10, light_scattering PD=2 control=7, neither PD=1 control=4. Passage identity alone (north_wind=1) recomputes to AUC 0.6682 against the diagnosis on the 37 scored clips, against 0.7634 for the full transcript condition. Reading material is therefore a live confound for the KCL text result, and a true WER against a single reference passage is not definable for this set.
 
-  Status now: open. It contradicts the pasted sentence "From the Parkinson's disease datasets, we only used the read-speech (read-aloud) protocol where every speaker reads the same passage, so the words carry almost no diagnostic signals and any signal must come from the voice." for MDVR-KCL. The MDVR-KCL transcript cell is 0.76 while the text says "On the Parkinson's sets the transcript sits near chance, since every speaker reads the same sentences." What decides it: the final tex wording for MDVR-KCL. Related files: scores/part16/M/M11_kcl_wer.csv.
+  Status now: fixed in the paper. Quotes: "From the Parkinson's disease datasets, we only use material whose words are fixed by the protocol, so the words carry little of the diagnosis, and most of the signal has to come from the voice: PC-GITA \cite{pcgita} (Spanish, ten sentences and one read text per speaker, 1100 clips), NeuroVoz \cite{neurovoz} (Spanish, twelve isolated words, 1270 clips from 107 speakers) and MDVR-KCL \cite{kcl} (English, 37 speakers, most reading one of two passages)." and "On PC-GITA and NeuroVoz the transcript sits near chance, since every speaker produces the same words, while on MDVR-KCL, where speakers read one of two passages, it is above chance." Related files: scores/part16/M/M11_kcl_wer.csv.
 
 - 71. [LOW] PART16 M11: the two group-mean bootstrap implementations differ in the last digits of the interval only. The main script reseeds per cell and resamples that group's speakers alone. The verifier draws the full 37-speaker list once per replicate and subsets. Point estimates, paired differences and Spearman intervals agree exactly. Example: B_xsys_disagree PD 0.3049 [0.1301, 0.4944] vs [0.1157, 0.5115].
 
@@ -649,7 +649,7 @@ and LM nested 0.8445 against a zero-shot answer of 0.7619-0.7673 on the same 468
 Everything POD3 reports for Pitt is computed from THIS pod's states, so it is internally
 consistent. Both zero-shot values are printed side by side.
 
-Status now: open. The final tex reads "On Qwen3-Omni the encoder probe reaches 0.90 on PC-GITA and 0.81 on Pitt against zero-shot answers of 0.60 and 0.77." The printed Pitt 0.77 rounds this pod's 0.7673, while Table 2 and lookup/master_lookup.csv use the shipped 0.7619, which rounds to 0.76 (the same-pod rescore gives 0.7638). What decides it: the text printing 0.76, the value of the file behind Table 2. Evidence in this repository: scores/part20/POD4b/P20_4b_q3o_orig_samepod_overall.perclip.csv.
+Status now: fixed in the paper. Quote: "On Qwen3-Omni the encoder probe reaches 0.90 on PC-GITA and 0.81 on Pitt against zero-shot answers of 0.60 and 0.76, so its Alzheimer's gap is only 0.05." The printed 0.76 is the shipped 0.7619, the value of the file behind Table 2. This pod's 0.7673 and the same-pod rescore 0.7638 are not used. Evidence in this repository: scores/part20/POD4b/P20_4b_q3o_orig_samepod_overall.perclip.csv.
 
 ## 74. POD3 / Part 16 3a: no saved fold file for the Pitt 468 or PC-GITA 1100 (MEDIUM)
 Per the instruction to load saved folds rather than recompute: no fold column exists in any
@@ -683,7 +683,7 @@ re-run under it. POD3 did not do that, and the conclusion would not change, beca
 arms auc_without_d is within noise of auc_probe (conflict 0.6196 vs 0.6145, agreement
 0.9341 vs 0.9349) and the cosine sits inside the random floor.
 
-Status now: released here. Files: lookup/readout_direction.csv, release/edaic_rerun/part16/Q3O_direction_FIXED.json (authors' machine path), lookup/SUPERSEDED.csv. The direction test in the paper is on Qwen2.5-Omni and uses the held-out-fold standardisation (lookup/readout_direction.csv). SUPERSEDED.csv records the Qwen3-Omni by-arm rule.
+Status now: released here. Files: lookup/readout_direction.csv, release/edaic_rerun/part16/Q3O_direction_FIXED.json (authors' machine path), lookup/SUPERSEDED.csv. The direction test in the paper uses the held-out-fold standardisation (lookup/readout_direction.csv). SUPERSEDED.csv records the Qwen3-Omni by-arm rule. The final tex adds the Qwen2-Audio and Qwen3-Omni values: "On Qwen2-Audio and Qwen3-Omni the readout direction gives 0.62 and 0.77 and the probe 0.82 and 0.83, and 0.81 and 0.83 with the direction removed." The Qwen3-Omni 0.83 comes from one pod run. A refit of the same probe from the saved states gives 0.7864, not 0.8307 (release/edaic_rerun/part16/verify/POD3_partF_out.json, authors' machine path).
 
 ## 76. [HIGH] readout-direction `auc_without_d` was standardised with the TRAINING fold, not the held-out fold
 - Canonical definition, `release/omni/readout_direction.json` and `scripts/part10_readout_direction_v2.py:274`:
@@ -722,11 +722,11 @@ Status now: fixed in the paper. Table 1 rows, verbatim: "PC-GITA     & 1100 (100
 - "the Qwen2.x models and Kimi at 0.988-0.999" is false: Qwen2-Audio's lowest is adresso/transcript at 0.9110.
 - "both Audio Flamingo models an order of magnitude looser" is false twice: Qwen2-Audio at 0.9110 is looser than AF2's worst (0.9304), and 0.897 vs 0.999 is not an order of magnitude.
 
-Status now: released here. Files: scores/part16/M/M9_answer_mass.csv. The pasted copy has no answer-mass sentence.
+Status now: released here. Files: scores/part16/M/M9_answer_mass.csv. The final tex has one answer-mass sentence, "the two sets hold a median of at least 0.89 of the probability mass in every cell." The smallest median is 0.8968. None of the three claims above is in the tex.
 
 - 81. LOW: POD2's fresh LoRA does not reproduce the pre-existing LoRA run clip for clip. Same config, same 468 clips, same 5 folds: OOF AUC 0.8250 (POD2, fresh) vs 0.8202 (`abl_pitt_oof.csv`, 2026-09-18). Only 6 of 468 per-clip p_yes values are bit-identical, but Pearson r = 0.9402 and rank correlation = 0.9507 between the two score vectors, and the 0.0048 gap sits far inside either interval. Cause is ordinary run-to-run nondeterminism: the LoRA A-matrix init and the dropout masks draw from torch's global RNG, which neither script seeds, and the CUDA kernels are not in deterministic mode. Treat this as an independent replication of the baseline, not a mismatch. Nothing was overwritten.
 
-  Status now: released here. Files: lookup/master_lookup.csv, scores/part20/POD2/balanced_minus_earlier_lora_pitt_perclip.csv, scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv. The lookup records 0.8250. The control file is a seeded rerun of the same recipe (item 169). The paper reports no LoRA result.
+  Status now: released here. Files: lookup/master_lookup.csv, scores/part20/POD2/balanced_minus_earlier_lora_pitt_perclip.csv, scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv. The lookup records 0.8250, the value the final tex prints as 0.825. The control file is a seeded rerun of the same recipe (item 169).
 
 - 82. LOW: two defensible bootstrap protocols for a single-arm interval. Resampling speakers *within that arm's* speaker universe, versus resampling all 228 speakers and then subsetting to the arm, give slightly different ends (e.g. POD2 conflict arm: [0.4348, 0.6833] vs [0.4376, 0.6789]). POD2 reports the arm-restricted version as primary, consistent with the paired-difference rule that draws one speaker list per replicate. Both are recorded in the sidecar.
 
@@ -753,7 +753,7 @@ Shaping was verified per file: residual noise-floor error mean +1.216 dB (sd 2.1
 within 0.1 dB/kHz). Noise can only be added, never subtracted, which is why the
 residual is biased positive.
 
-Status now: fixed in the paper. Quote: "Recording features from the quietest frames separate the NeuroVoz groups at 0.87 by spectral centroid alone and PC-GITA at 0.69, so part of the Parkinson's probe may come from the recording channel." The paper does not present a clean channel rebuttal for NeuroVoz.
+Status now: fixed in the paper. Quotes: "Five recording features from the quietest frames (noise floor, SNR, spectral centroid, roll-off and tilt) separate the NeuroVoz groups at 0.80 and the PC-GITA groups at 0.67, so part of the Parkinson's probe may come from the recording channel." and "Normalising loudness and noise floor brings them to 0.56 on PC-GITA, where the encoder probe falls to 0.83 ($-$0.07 [$-$0.12, $-$0.02]) and the answer stays at 0.57, and only to 0.60 on NeuroVoz, where the probe falls to 0.89 ($-$0.03 [$-$0.061, $-$0.001])." The tex reports the NeuroVoz check as it came out, not as a clean rebuttal.
 
 ## 84. POD4 / Part 16 4b: the interviewer's PRESENCE is itself label-correlated in the Pitt windows (HIGH, and it is now controlled)
 Measured from the CHAT tiers over the 30 s the model hears:
@@ -783,7 +783,7 @@ utility gap shrinks from 0.1452 (0.7949 probe vs 0.6497 zero-shot) to 0.0267
 interviewer effect. This must not be reported as "the Pitt result survives
 unchanged".
 
-Status now: open. Under the paper's estimators the interviewer-free cut gives zero shot 0.7231 [0.6663, 0.7750] and encoder probe 0.7643 [0.7135, 0.8116] on the Mac folds, against 0.6578 and 0.7706 on the original windows. The pasted copy says interviewer prompts are kept but does not report this check. What decides it: whether the final tex reports it. Related files: scores/part16/POD4/pitt_no_interviewer.csv, scores/part20/POD5/POD5_zs_o25_noinv.csv, scores/part20/POD5/POD5_nested_enc_mac_seed.csv, release/scores/part20/rows/POD5.tsv (authors' machine path).
+Status now: open. Under the paper's estimators the interviewer-free cut gives zero shot 0.7231 [0.6663, 0.7750] and encoder probe 0.7643 [0.7135, 0.8116] on the Mac folds, against 0.6578 and 0.7706 on the original windows. The final tex says "Each Pitt segment starts at the participant's first timed utterance, and the ADReSSo and ADReSS-2020 windows start at the beginning of the recording, so interviewer prompts inside the window are kept." but does not report this check. What decides it: whether a later version reports it. Related files: scores/part16/POD4/pitt_no_interviewer.csv, scores/part20/POD5/POD5_zs_o25_noinv.csv, scores/part20/POD5/POD5_nested_enc_mac_seed.csv, release/scores/part20/rows/POD5.tsv (authors' machine path).
 
 ## 85. POD4 / Part 16 4a: PC-GITA is only mildly channel-confounded and the normalisation WORKS there (MEDIUM, informational)
 PC-GITA, clean manifest (100 speakers x 11 clips, 550/550, all recordings taken
@@ -802,7 +802,7 @@ Shaping verified per file for PC-GITA: residual noise-floor error mean +1.152 dB
 (sd 1.148, 63.6% within 1 dB). Residual tilt error mean -0.0581 dB/kHz
 (sd 0.1244, 69.1% within 0.1 dB/kHz).
 
-Status now: fixed in the paper. Quote: "Recording features from the quietest frames separate the NeuroVoz groups at 0.87 by spectral centroid alone and PC-GITA at 0.69, so part of the Parkinson's probe may come from the recording channel."
+Status now: fixed in the paper. Quote: "Normalising loudness and noise floor brings them to 0.56 on PC-GITA, where the encoder probe falls to 0.83 ($-$0.07 [$-$0.12, $-$0.02]) and the answer stays at 0.57, and only to 0.60 on NeuroVoz, where the probe falls to 0.89 ($-$0.03 [$-$0.061, $-$0.001])."
 
 ## 86. POD3 / Part 16 3a: the same drift reproduces on PC-GITA, and it refines the diagnosis (HIGH, same root cause as the Pitt entry above)
 POD3 re-extracted PC-GITA 1100 on Qwen3-Omni from the original audio. Zero-shot answer AUC
@@ -830,7 +830,7 @@ amplified by MoE top-k routing and by the coarse bf16 ladder p_yes sits on. The 
 reported AUC is about +0.005 on both datasets, well inside the speaker bootstrap interval
 (Pitt pod 0.7673 [0.7101, 0.8198] vs shipped 0.7619 [0.7054, 0.8130]).
 
-Status now: fixed in the paper. Quote: "On Qwen3-Omni the encoder probe reaches 0.90 on PC-GITA and 0.81 on Pitt against zero-shot answers of 0.60 and 0.77." PC-GITA prints as 0.60 under the shipped value 0.5967 and under the rerun 0.6015. The Pitt value in the same sentence is items 29 and 73.
+Status now: fixed in the paper. Quote: "On Qwen3-Omni the encoder probe reaches 0.90 on PC-GITA and 0.81 on Pitt against zero-shot answers of 0.60 and 0.76, so its Alzheimer's gap is only 0.05." PC-GITA prints as 0.60 under the shipped value 0.5967 and under the rerun 0.6015. The Pitt 0.76 is the shipped 0.7619 (items 29 and 73).
 
 ## 87. POD4 / Part 16 4a: which PC-GITA manifest was used (LOW, informational)
 The known-leaky states file
@@ -921,7 +921,7 @@ encoder probe still reaches 0.8298 against a zero-shot of 0.5674. The utility ga
 on PC-GITA is not a channel artefact. On NeuroVoz the same claim cannot be made,
 because the channel was not closed to the agreed bar.
 
-Status now: fixed in the paper. Quote: "Recording features from the quietest frames separate the NeuroVoz groups at 0.87 by spectral centroid alone and PC-GITA at 0.69, so part of the Parkinson's probe may come from the recording channel."
+Status now: fixed in the paper. Quote: "Normalising loudness and noise floor brings them to 0.56 on PC-GITA, where the encoder probe falls to 0.83 ($-$0.07 [$-$0.12, $-$0.02]) and the answer stays at 0.57, and only to 0.60 on NeuroVoz, where the probe falls to 0.89 ($-$0.03 [$-$0.061, $-$0.001])."
 
 ## 91. POD3 / Part 16 3a: PC-GITA projector AUC differs in the 4th decimal between memory and the per-clip csv (LOW)
 Verification flagged one value out of 17: PC-GITA projector nested AUC, run-side json 0.8872
@@ -1098,7 +1098,7 @@ segments and pools across them. Do not describe this condition as the full inter
 Status. Logged. The probe and the paired interval below are computed on these same windows, so
 they are directly comparable to the published 0.8285. Every one of them inherits the 300 s cap.
 
-Status now: released here. Files: scores/part22/P22_step1_processor_config.md, scores/part22/p22_step2_truncation_proof.json, scores/part22/edaic_lifted_perclip.csv, scores/part22/edaic_lifted_auc.json, release/scores/part22/rows/P22_verified.tsv (authors' machine path), manifests/edaic_windows_full.csv. The authors' rule: Qwen2_5OmniProcessor (transformers 5.17.0) cuts audio at 300 s, and 217 of 275 windows are longer than 300 s and are cut. With truncation off the whole window (capped at 900 s) gives 0.8379 [0.7805, 0.8876] against 0.8278, paired +0.0101 [-0.0309, 0.0518], which is not significant. The pasted copy of the paper still reads "The model hears the participant's whole interview, capped at 15 minutes for the 89 longest." Any sentence on the 300 s cut was added after that copy, and its wording will be matched to the final tex.
+Status now: fixed in the paper. Quote: "The model hears the participant's whole interview, interviewer turns removed and capped at 15 minutes for the 89 longest, with the processor's default input limit lifted so that every window is encoded whole." The paper's E-DAIC audio numbers now come from the run with the processor's 300 s cut lifted (PART 23): zero-shot answer 0.8366 [0.7786, 0.8866], against 0.8278 with the cut, paired +0.0088 [-0.0320, 0.0510] (part23/verify/PART23_VERIFIED.tsv, authors' machine path). A second run of the same setting gives 0.8379 [0.7805, 0.8876]. Files: scores/part22/P22_step1_processor_config.md, scores/part22/p22_step2_truncation_proof.json, scores/part22/edaic_lifted_perclip.csv, scores/part22/edaic_lifted_auc.json, manifests/edaic_windows_full.csv. The authors' rule: Qwen2_5OmniProcessor (transformers 5.17.0) cuts audio at 300 s by default, and 217 of 275 windows are longer than 300 s. The final tex lifts that cut. 89 of the 275 windows still reach the 900 s cap, as the quoted sentence says.
 
 ## 101. POD2 / Part16 EDAICFULL, o25_full_proj_perlayer.csv is a copy of the LM embedding stage. SEVERITY: MEDIUM
 `variants/o25_full_proj_perlayer.csv` has one row and it is byte-identical to row `stage 0` of
@@ -1183,25 +1183,25 @@ Status now: released here. Files: release/edaic_rerun/part17/rows/T4.tsv (author
 - De-duplicated values: transcript agreement 0.9596 -> 0.9620. Table 2 audio agreement 0.9482 -> 0.9647.
 - Every gap WIDENS on de-duplication, so no conclusion is at risk, but the agreement-arm bootstrap intervals are narrower than they should be, because 172 of 483 rows are repeated segments.
 
-Status now: released here. Files: scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv, release/edaic_rerun/part17/rows/T1.tsv (authors' machine path). The authors' rule: Table 2 uses the 483 conflict segments and the 311 distinct agreement segments on E-DAIC. The pasted copy prints the old 483-row agreement values 0.95, 0.95, 0.96, 0.61, 0.81 and 0.87. On the 311 distinct segments they are 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89. The Table 2 wording will be matched to the final tex.
+Status now: fixed in the paper. The final tex prints the 311 distinct segment values 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89 in Table 2. Quote (caption): "Depression, E-DAIC \cite{daic}: 483 conflict segments paired with agreement segments of the same speakers (311 distinct), 138 speakers." Files: scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv.
 
 ## 110. [MEDIUM] A third adaptation arm exists and was never used
 - `omni_final/abl2_pitt_both_oof.csv` + `abl_pitt_both.json`: LoRA PLUS projector on the same Pitt 468, 9,637,376 trainable params.
 - Recomputed: OOF 0.7696 [0.7135, 0.8253], conflict 0.5710, agreement 0.8443. The LARGER budget is WORSE than LoRA alone (0.8250). This strengthens the paper's argument and should be in the ablation table.
 - Separately, that file pair disagrees with itself: `abl_pitt_both.json` claims auc_oof 0.7872 while its csv recomputes to 0.7696.
 
-Status now: released here. Files: lookup/master_lookup.csv, lookup/SUPERSEDED.csv. The lookup records LoRA plus projector 0.7696, and SUPERSEDED.csv lists the 0.7872 claim as not used. The paper has no ablation table.
+Status now: released here. Files: lookup/master_lookup.csv, lookup/SUPERSEDED.csv. The lookup records LoRA plus projector 0.7696, and SUPERSEDED.csv lists the 0.7872 claim as not used. The paper has no ablation table. Its LoRA sentence ends "and training both together gives 0.77", which is 0.7696.
 
 ## 111. [MEDIUM] 1d changes two things at once, not one
 - Besides swapping the label to PHQ-8 >= 10, the rebuild drops the original conflict severity gate (sev>=15 for positives, sev<=4 for negatives) entirely. That is why n nearly doubles from 483 to 924 pairs.
 - 1d is therefore NOT a like-for-like severity-matched comparison against Table 2.
 
-Status now: open. The final tex keeps the severity gates for the paper's set ("A participant with a PHQ-8 score of 15 or more speaking positively, or a healthy control with a PHQ-8 score of 4 or less speaking negatively, constitutes a conflict segment.") but also reports the 1d rebuild as one change: "With the dataset's own binary label in place of the PHQ-8 cut points of 15 and 4 the set grows to 924 clips and the conflict arm scores 0.18." The rebuild used PHQ-8 of 10 or more, not the released label, it dropped the gates, and 924 counts pairs. What decides it: the final wording of that sentence. Evidence: release/edaic_rerun/part16/POD1/p14_phq10_omni.csv (authors' machine path).
+Status now: fixed in the paper. Quote: "Replacing the severity gates of 15 and 4 with a PHQ-8 cut at 10 gives 924 pairs from 237 speakers, on which the conflict arm scores 0.18." The sentence now names the PHQ-8 cut at 10, says the gates were replaced, and counts pairs. Evidence: release/edaic_rerun/part16/POD1/p14_phq10_omni.csv (authors' machine path).
 
 ## 112. [MEDIUM] E-DAIC's released binary label is not the standard PHQ-8 cutoff
 - 20 of 275 speakers carry y=0 despite PHQ-8 >= 10.
 
-Status now: fixed in the paper. Quote: "We use E-DAIC \cite{daic}, the extended corpus released for AVEC 2019, with 275 participants, where the binary label is the dataset's PHQ-8 \cite{Kroenke2009} based label rather than a clinical diagnosis."
+Status now: fixed in the paper. Quote: "We use E-DAIC \cite{daic}, the extended dataset released for AVEC 2019, with 275 participants, where the binary label is the dataset's released label based on the eight-item Patient Health Questionnaire (PHQ-8) \cite{Kroenke2009}, stricter than PHQ-8 $\geq 10$ for 20 participants, rather than a clinical diagnosis."
 
 ## 113. [HIGH, CORRECTS AN EARLIER CONCLUSION] The ADReSSo released segmentation DOES exist
 - `PART5_interviewer_measure.txt` section 5.2 declares ADReSSo "NOT MEASURABLE, no timed transcript exists". That was concluded from a folder listing. The four .tgz archives were never opened.
@@ -1244,7 +1244,7 @@ Status now: released here. Files: scores/part16/POD4B/p16_adresso_orig_zeroshot_
 - Pitt agreement arm has 322 rows = 322 distinct segment_path, so the Pitt columns of Table 2 are not affected by this issue.
 - Files: release/edaic_rerun/part17/T1_table2_distinct.csv, T1_perclip_distinct_agreement.csv, T1_table2_distinct.json.
 
-Status now: released here. Files: scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv, release/edaic_rerun/part17/rows/T1.tsv (authors' machine path). The authors' rule: Table 2 uses the 483 conflict segments and the 311 distinct agreement segments on E-DAIC. The pasted copy prints the old 483-row agreement values 0.95, 0.95, 0.96, 0.61, 0.81 and 0.87. On the 311 distinct segments they are 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89. The Table 2 wording will be matched to the final tex.
+Status now: fixed in the paper. The final tex prints the 311 distinct segment values 0.96, 0.96, 0.97, 0.63, 0.84 and 0.89 in Table 2. Quote (caption): "Depression, E-DAIC \cite{daic}: 483 conflict segments paired with agreement segments of the same speakers (311 distinct), 138 speakers." Files: scores/part17/T1_table2_distinct.csv, scores/part17/T1_perclip_distinct_agreement.csv, scores/part17/T1_perclip_all966.csv.
 
 ## 119. [LOW] [PART17] T3 states path moved (2026-09-23 03:57)
 - The old drive path of `probe2/pitt_states.npz` no longer resolves, because the `paper1_local_runs` folder moved into another folder on the same drive (gdrive/ in this file). Same file: sha256 of first 1 MB `5d8272dc673cdbded7c0a84207d5306ffdd30b6d1fee6a99b549b05d7087494c` equals the Part 16 M5 sidecar value. Every Part 16 sidecar that cites the old drive path now points at a dead path.
@@ -1259,7 +1259,7 @@ Status now: released here. Files: scores/part17/T3_q2a_direction.csv, release/ed
 ## 121. [MEDIUM] [PART17] T3 'nested probe direction' vs the verifier's run (2026-09-23 03:57)
 - The authors' wording asks for the cosine with the NESTED probe direction 'from the verifier's corrected run'. The verifier's run (and Omni part10, and q3o) uses the FINAL-STAGE probe on ans[:, -1, :], not the nested probe. The nested answer probe picks layers [23, 22, 23, 16, 23] (none is the final stage 32). Both are reported in part17/T3_q2a_direction_summary.csv: final-stage cos 0.0145 (headline, comparable across the three backbones) and nested cos 0.0256 (supplement, d is the final-stage readout direction applied at mid layers, a logit-lens reading). The paper text must say which one it quotes.
 
-Status now: released here. Files: scores/part17/T3_q2a_direction_summary.csv, release/edaic_rerun/part17/rows/T3.tsv (authors' machine path). The rows give the final-stage cosine 0.0145 and the nested cosine 0.0256. The paper quotes the direction test for Qwen2.5-Omni only.
+Status now: released here. Files: scores/part17/T3_q2a_direction_summary.csv, release/edaic_rerun/part17/rows/T3.tsv (authors' machine path). The rows give the final-stage cosine 0.0145 and the nested cosine 0.0256. The final tex quotes the direction test for Qwen2-Audio and Qwen3-Omni without a cosine: "On Qwen2-Audio and Qwen3-Omni the readout direction gives 0.62 and 0.77 and the probe 0.82 and 0.83, and 0.81 and 0.83 with the direction removed."
 
 ## 122. [LOW] [PART17] T3 direction weighting differs between first pass and verifier (2026-09-23 03:57)
 - First pass and q3o weight the Yes/No rows by FULL-vocabulary softmax mass. The verifier and part10 (Omni) use the softmax over the Yes/No logits only. For Qwen2-Audio Pitt the two unit directions agree to cos 1.0000000000. The reported 4-decimal values are identical.
@@ -1271,7 +1271,7 @@ Status now: released here. Files: scores/part17/T3_q2a_direction.csv.
 - Sensitivity, Qwen2-Audio readout test, grouped by the manifest participant id (227 groups, changes the whole GroupKFold partition, not only this person): all probe 0.8273, all probe minus d 0.8200, conflict minus d 0.6607, agreement minus d 0.8838, paired -0.2230 [-0.3304, -0.1192]. File: part17/T3_selfcheck_participant_grouped.csv.
 - Most of that movement is the partition, not the leak: over 50 random participant-grouped partitions (GroupKFold(5, shuffle=True, random_state=0..49)) conflict minus d has median 0.6095, 2.5-97.5% [0.5749, 0.6593]. All probe median 0.8112. Paired median -0.2724 [-0.3020, -0.2247]. The canonical values (0.8223, 0.6013, -0.2884) sit inside those ranges. File: part17/T3_selfcheck_partitions.csv. No conclusion changes. The paper should say 227 participants for Pitt, or state that that participant is counted once per diagnosis group.
 
-Status now: released here. Files: folds/README.md, release/edaic_rerun/part17/T3_selfcheck_participant_grouped.csv (authors' machine path), release/edaic_rerun/part17/T3_selfcheck_partitions.csv (authors' machine path). The authors' rule: Pitt has 468 segments from 227 participants, and one participant appears under two labels, so the files count 228 speaker labels. The pasted copy prints 228. The count wording will be matched to the final tex.
+Status now: fixed in the paper. Quote: "We use the DementiaBank Pitt cookie-theft descriptions \cite{pitt}, with 468 segments from 227 participants (one has sessions in both groups and is grouped under two labels), the top and bottom third of the fluency score defined under Conflict set construction below, the ADReSSo recordings \cite{adresso} from 237 speakers, as released with the ADReSS-M challenge \cite{adressm}, and the ADReSS-2020 benchmark split \cite{adress2020} including 108 training and 48 test recordings." The files count 228 speaker labels, because one participant appears under two labels. Files: folds/README.md, release/edaic_rerun/part17/T3_selfcheck_participant_grouped.csv (authors' machine path), release/edaic_rerun/part17/T3_selfcheck_partitions.csv (authors' machine path).
 
 - 124. [PART17] [MEDIUM] T5 (2026-09-23 03:59): make_fig1_v5.py does not exist on disk (Desktop, release, paper1_final, public repo clones searched). The newest figure script is edaic_rerun/make_fig1_v4.py. It wrote paper1_final/figures/fig1_gap.pdf (E-DAIC variant full, answer 0.8285) at 22:25 on 22 Sep, and fig1_gray_v5-1.png is the grayscale render of that output. Which E-DAIC variant sits in Overleaf cannot be checked from disk. T5 used make_fig1_v4.py.
 
@@ -1294,7 +1294,7 @@ Status now: open. 75 rows of lookup/master_lookup.csv still cite the old gdrive/
 - ACTION: the authors pick one convention for E-DAIC and Pitt before either number is cited. If the pod still has edaic_full_oof_repeats.npz, copying it back allows the mean-of-five interval.
 - Files: master/master_lookup.csv, edaic_rerun/part17/T4_lookup.json, edaic_rerun/part17/rows/T4.tsv.
 
-Status now: released here. Files: scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv, scores/part17/T7b/T7b_edaic300_meanof5.csv, release/edaic_rerun/part17/rows/T7b.tsv (authors' machine path), lookup/master_lookup.csv. The authors' rule for E-DAIC is the mean of five per-repeat AUCs, as for Pitt: LM probe 0.7001 [0.6231, 0.7727], encoder probe 0.5884 [0.5268, 0.6523], and paired minus the zero-shot answer 0.8278, LM -0.1276 [-0.1993, -0.0629] and encoder -0.2394 [-0.3188, -0.1572]. The averaged-probability values 0.7088 and 0.5916 are listed as not used. The pasted copy prints "On E-DAIC the best probe is 0.69", from the superseded 0.6853. The decided 0.7001 prints as 0.70, to be matched in the final tex.
+Status now: fixed in the paper. Quote: "On E-DAIC the language model probe reaches 0.74 and the encoder probe 0.60, both below the answer of 0.84 ($-$0.09 [$-$0.16, $-$0.03] and $-$0.24 [$-$0.32, $-$0.15]), while a probe on the answer state matches the answer (0.84)." The final tex uses the whole-interview run with the processor cut lifted (PART 23), under the decided mean-of-five estimator: language model probe 0.7437 [0.6752, 0.8097], encoder probe 0.5981 [0.5267, 0.6672], paired minus the answer 0.8366, -0.0929 [-0.1609, -0.0257] and -0.2385 [-0.3244, -0.1505], answer-state probe 0.8359 [0.7819, 0.8832] (part23/verify/PART23_VERIFIED.tsv, authors' machine path). The first-300 s values under the same estimator, 0.7001 and 0.5884 (scores/part17/T7b/T7b_edaic300_meanof5_perclip.csv), are the earlier window. The superseded 0.6853 is gone from the tex.
 
 ## 127. [MEDIUM] [PART17] T4 master_lookup builder cannot reproduce the lookup, left untouched (2026-09-23)
 - No build_master*.py exists under release/. The only copy found is build_master.py in a temporary folder on the authors' machine. It opens release/master/master_lookup.csv for writing directly.
@@ -1311,7 +1311,7 @@ Status now: released here. Files: lookup/master_lookup.csv, lookup/SUPERSEDED.cs
 ## 129. [MEDIUM] [PART17] T4 original-run edaic_full rows still say "capped at 900 s" (2026-09-23)
 - Qwen2.5-Omni edaic_full zero shot 0.8285, answer-state 0.7542, projector 0.5293 and projector fine tune 0.6421 (and the other models' edaic_full zero-shot rows) describe the window as full audio capped at 900 s. For Qwen2.5-Omni the processor only sees the first 300 s (see the POD2 EDAICFULL HIGH entry). Only the two rows T4 changed now say "300 s window". The rest were not rewritten.
 
-Status now: released here. Rows 200, 202, 204 and 205 of lookup/master_lookup.csv (zero shot 0.8285, projector 0.5293, answer-state 0.7542 and projector fine tune 0.6421) now carry the authors' current notes: the first 300 s is what the model heard, and the fine-tune heard only the first 30 s (item 100). The other models' edaic_full rows are unchanged. Related files: lookup/master_lookup.csv.
+Status now: released here. Rows 200, 202, 204 and 205 of lookup/master_lookup.csv (zero shot 0.8285, projector 0.5293, answer-state 0.7542 and projector fine tune 0.6421) carry the authors' notes: the first 300 s is what the model heard in those runs, and the fine-tune heard only the first 30 s (item 100). The final tex uses the runs with the processor cut lifted instead. Rows 236 to 244 hold them: the PART 23 zero-shot answer 0.8366 and the four mean-of-five probes, the PART 23 fine-tunes 0.7931 (whole window) and 0.8150 (first 300 s), and the PART 24 fine-tunes 0.8589 (seed 0, the Table 1 cell) and 0.8184 (seed 1). The other models' edaic_full rows are unchanged. Related files: lookup/master_lookup.csv.
 
 ## 130. [LOW] [PART17] T4 notes (2026-09-23)
 - AF2 Pitt agreement: the decision text typed 0.5536. af2_pitt468.csv gives 0.554442 with zero tied scores, so no tie rule gives 0.5536. 0.5544 recorded.
@@ -1332,7 +1332,7 @@ Status now: released here. Files: lookup/master_lookup.csv, lookup/SUPERSEDED.cs
 - Paired Sep 20 minus Sep 15: conflict +0.1010 [0.0270, 0.1766], agreement -0.0909 [-0.1345, -0.0518], arm gap +0.1919 [0.1104, 0.2800]. The two runs disagree beyond resampling noise.
 - Files: part17/T6_pitt_text_sep20_arms.csv, T6_pitt_text_sep20_arms.json, rows/T6.tsv.
 
-Status now: fixed in the paper. The final tex has no by-arm Pitt transcript sentence (its pooled Pitt, ADReSS-2020 and ADReSSo transcript sentence is commented out), and Table 1 prints the Sep 20 run. Table 1 row, verbatim: "Pitt        &  468 (227) & 0.66 & 0.66 & 0.77 \\".
+Status now: fixed in the paper. The final tex prints the Sep 20 run in Table 1, row verbatim: "Pitt        &  468 (227) & 0.66 & 0.66 & 0.77 \\" and a by-arm sentence: "On the Pitt dataset the transcript alone shows the same arm gap as the audio (0.56 on conflict, 0.71 on agreement)." Files: scores/part17/T6_pitt_text_sep20_arms.csv, scores/part17/T6_pitt_text_sep20_arms.json.
 
 ## 132. [MEDIUM] [PART17] T6: Sep 15 and Sep 20 Pitt transcript runs are not the same scorer (2026-09-23)
 - Per-clip p_yes, Sep 20 vs Sep 15: Pearson r 0.7640, Spearman 0.7876, max abs diff 0.6147 (one clip: 0.7433 vs 0.1285), mean abs diff 0.3019, 460/468 clips differ by more than 0.1. Mean p_yes 0.4010 vs 0.0991. Median answer mass 0.9966 vs 0.9519.
@@ -1455,7 +1455,7 @@ Status now: released here. Files: scores/part20/POD3b/sst2_pairs_o25_audio.csv, 
 - Both copies are reported side by side with the new cut as asked. part3 gives 0.5885 / 0.6169 / 0.5822 (all / conflict / agreement), part10 gives 0.5894 / 0.6075 / 0.5855. The part10 json also says 0.5894. The paired differences use each copy separately.
 - File: release/scores/part20/POD4c/work/af3_val10.csv
 
-Status now: open. The two AF3 Pitt copies disagree: part3 gives 0.6169 conflict and 0.5822 agreement, part10 gives 0.6075 and 0.5855. The pasted Table 2 prints 0.61 and 0.59, which matches part10, while lookup/master_lookup.csv cites part3. A pod rescore reproduces part10 exactly (release/scores/part20/POD4c/work/af3_val10.csv (authors' machine path)). What decides it: the authors choosing the canonical AF3 Pitt file. Related files: release/scores/part20/POD4c/work/af3_val10.csv (authors' machine path), scores/part20/POD4c/af3_orig_part3_all.csv, scores/part20/POD4c/af3_orig_part10_all.csv, release/scores/part20/rows/POD4c.tsv (authors' machine path).
+Status now: fixed in the paper. The final Table 2 prints the part10 copy, row verbatim: "Audio Flamingo 3 \cite{af3}     & 0.42 & 0.84 & 0.61 & 0.59 \\" The part3 copy (0.6169 and 0.5822) is not used. A pod rescore reproduces part10 exactly (release/scores/part20/POD4c/work/af3_val10.csv (authors' machine path)), and an input-length check shows that the part10 run cut every Pitt window to its first 30 s before the processor, 480,000 samples and 750 audio tokens per clip, as the text says (paper1_submission_23sep/final_checks_2325Z/af3/AF3_INPUT_LENGTH.md, authors' machine path). lookup/master_lookup.csv still cites part3 for these two cells.
 
 ## 148. [MEDIUM] [PART20] POD6 A: the Parkinson's < depression < Alzheimer's language ordering holds only with the full E-DAIC interview transcript (2026-09-23)
 - TF-IDF word logistic regression, vectorizer fit inside each training fold, single-split _mac speaker folds, 2000-draw speaker intervals.
@@ -1468,13 +1468,13 @@ Status now: released here. Files: release/scores/part20/POD6/A_language_saliency
 ## 149. [MEDIUM] [PART20] POD6 A: on read-speech Parkinson's sets the TF-IDF signal comes from ASR output, not word choice (2026-09-23)
 - PC-GITA 0.6196 [0.5700, 0.6681] and NeuroVoz 0.5814 [0.5422, 0.6206] are above 0.5. But both are read speech. The Table 1 caption says every PC-GITA speaker reads the same passage, and NeuroVoz speakers read the same fixed sentences. The only text source is release/part4_text/asr/asr_<ds>.csv (ASR). So what the probe reads there is ASR errors caused by the voice, not the words the speaker chose. Any "language saliency" sentence about the Parkinson's sets should say this.
 
-Status now: open. The final tex now has a language saliency sentence: "A logistic regression on transcript word counts, speaker-disjoint, reaches 0.43 to 0.62 on the Parkinson's sets, 0.68 on E-DAIC and 0.84 to 0.93 on the Alzheimer's sets." It does not say that on the read Parkinson's sets the text is whisper-large-v3 output of fixed words, so the signal there is ASR error. What decides it: that sentence saying so. Evidence: scores/part20/POD6/A_language_saliency/A_tfidf_<dataset>_oof.csv.
+Status now: open. The final tex reads "As a measure of how much the words alone carry, a TF-IDF logistic regression on the transcripts, speaker-disjoint, reaches 0.43 to 0.62 on the Parkinson's sets, 0.68 on the E-DAIC transcripts and 0.84 to 0.93 on the Alzheimer's sets." It does not say that on the read Parkinson's sets the text is whisper-large-v3 output of fixed words, so the signal there is ASR error. What decides it: that sentence saying so. Evidence: scores/part20/POD6/A_language_saliency/A_tfidf_<dataset>_oof.csv.
 
 ## 150. [LOW] [PART20] POD6 A: Pitt transcript text source (2026-09-23)
 - The paper transcript condition read /workspace/text/pitt_text.csv (o25_pitt_text.json). The local copy paper1_local_runs/pitt_text.csv has cleaned text. The 'text' column of pitt_conflict_manifest.csv is raw CHAT with annotation codes, and it differs from the cleaned text on 468 of 468 segments.
 - TF-IDF AUC: cleaned 0.8353 [0.7865, 0.8862] (reported), raw CHAT 0.8452 [0.7975, 0.8918] (sensitivity). The two-decimal values differ (0.84 vs 0.85), and the intervals overlap almost completely.
 
-Status now: fixed in the paper. Quote (first clause of the transcripts sentence, verbatim): "Pitt, ADReSS-2020 \cite{adress2020} and E-DAIC \cite{daic} come with transcripts, used with the annotation codes stripped".
+Status now: fixed in the paper. Quote: "Pitt and ADReSS-2020 \cite{adress2020} come with manual CHAT transcripts and E-DAIC \cite{daic} with the challenge's automatic transcripts, used with the annotation codes stripped, and ADReSSo \cite{adresso} and the three Parkinson's sets are transcribed with whisper-large-v3 \cite{whisper}."
 
 ## 151. [LOW] [PART20] POD6 B: NeuroVoz metadata gaps that limit the matched pairs (2026-09-23)
 - zenodo_upload/metadata/data_hc.csv: Two healthy controls lack sex or age, and one PD speaker is in data_pd.csv but outside the 1270-clip paper set [ids withheld here]. All three are excluded from pairing. That leaves 52 PD and 53 HC eligible. Greedy matching gives 38 pairs, which equals the maximum bipartite matching (scipy), so no larger set exists under same sex and |age diff| <= 5.
@@ -1610,7 +1610,7 @@ Status now: released here. Files: release/scores/part20/POD4c/af2_orig30_all.csv
 - The paper's protocol is pooled OOF AUC, so 0.7200 is the reported value. The per-fold numbers are a diagnostic only. Files: scores/part20/POD2/balanced_lora_pitt_oof.csv, scores/part20/POD2/control/uniform_lora_pitt_control_oof.sidecar.json (per_fold_diagnostics).
 - Also: the earlier LoRA (part16 POD2) left the LoRA init and dropout unseeded. This run and its control seed both (torch seed 0 for init, 1000+k per fold) and ran folds in 3 parallel processes. Same data bytes (sha256 of all 468 wavs checked against the G-Drive originals).
 
-Status now: released here. Files: scores/part20/POD2/balanced_lora_pitt_oof.csv, scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv, scores/part20/POD2/control/uniform_lora_pitt_control_oof.sidecar.json, release/scores/part20/rows/POD2.tsv (authors' machine path). The paper reports no LoRA result.
+Status now: released here. Files: scores/part20/POD2/balanced_lora_pitt_oof.csv, scores/part20/POD2/control/uniform_lora_pitt_control_oof.csv, scores/part20/POD2/control/uniform_lora_pitt_control_oof.sidecar.json, release/scores/part20/rows/POD2.tsv (authors' machine path). The paper reports the unbalanced LoRA run only: "Low-rank adaptation (LoRA) \cite{lora} of the language model (rank 8, all attention projections of the 28 layers, 5.0\,M trainable parameters against 4.6\,M for the projector) reaches 0.825 on Pitt, 0.06 [0.02, 0.10] above the projector run, and 0.55 on its conflict segments, and training both together gives 0.77."
 
 ## 170. [MEDIUM] [PART20] POD1: balanced projector fine-tune, fold 3 collapsed in the first run and not in two repeats (2026-09-23)
 - Run: `release/scores/part20/POD1/balanced_ft_pitt.py` (sft_projector.py recipe, only the per-clip loss weight changed), Qwen2.5-Omni, Pitt 468, folds `release/folds/pitt_groupkfold5_pod.csv`, pod H100 NVL, torch 2.8.0+cu128, transformers 5.17.0.
@@ -1619,7 +1619,7 @@ Status now: released here. Files: scores/part20/POD2/balanced_lora_pitt_oof.csv,
 - Effect: balanced repeat 1 as run = 0.7301 / 0.4693 / 0.8279 (all / conflict / agreement). With fold 3 swapped for the lone rerun = 0.7603 / 0.5003 / 0.8573. Repeat 2 = 0.7360 / 0.4810 / 0.8379. All three files are kept. None is dropped.
 - Files: release/scores/part20/POD1/balanced_ft_pitt_oof.csv, balanced_ft_pitt_fold3rerun_oof.csv, balanced_ft_pitt_r2_oof.csv, logs/balanced_0_3.log, logs/balanced_rerun_fold3.log.
 
-Status now: released here. Files: scores/part20/POD1/balanced_ft_pitt_oof.csv, scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv, release/scores/part20/POD1/balanced_ft_pitt_r2_oof.csv (authors' machine path), release/scores/part20/rows/POD1.tsv (authors' machine path). The balanced fine-tune is not in the paper.
+Status now: released here. Files: scores/part20/POD1/balanced_ft_pitt_oof.csv, scores/part20/POD1/balanced_ft_pitt_fold3rerun_oof.csv, release/scores/part20/POD1/balanced_ft_pitt_r2_oof.csv (authors' machine path), release/scores/part20/rows/POD1.tsv (authors' machine path). The paper mentions the balanced fine-tune in one sentence: "A class-balanced loss does not change this." Its conflict arm is 0.4693.
 
 ## 171. [MEDIUM] [PART20] POD1: the standard projector fine-tune reproduces overall but not by arm (2026-09-23)
 - Two reruns of the unchanged recipe (weight 1 for every clip) on this pod, same script, folds and clip order as the balanced run: overall 0.7720 and 0.7734 (paper file omnisft_pitt_oof.csv 0.7673), conflict 0.4697 and 0.4490 (paper 0.5189), agreement 0.8895 and 0.8967 (paper 0.8593).
@@ -1627,7 +1627,7 @@ Status now: released here. Files: scores/part20/POD1/balanced_ft_pitt_oof.csv, s
 - So the paper's arm split (0.52 conflict, 0.86 agreement) is one draw. Run to run, the conflict arm moves by about 0.05 to 0.07 and agreement by about 0.03 to 0.04. The conflict arm stays at chance in every run (every interval includes 0.5). The machine that made omnisft_pitt_oof.csv is not recorded in omnisft_pitt_sft.json.
 - Files: release/scores/part20/POD1/standard_rerun_ft_pitt_oof.csv, standard_rerun_ft_pitt_r2_oof.csv (+ .sidecar.json).
 
-Status now: released here. Files: scores/part20/POD1/standard_rerun_ft_pitt_oof.csv, release/scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv (authors' machine path), release/scores/part20/rows/POD1.tsv (authors' machine path). The pasted sentence "On the Pitt conflict segments the fine-tuned answer stays at 0.52, while the agreement segments rise to 0.86." is one draw of the recipe. The conflict arm stays at chance in every rerun.
+Status now: fixed in the paper. Quote: "Its conflict arm stays at chance in every run (0.45 to 0.57, every interval including 0.5) while its agreement arm rises to 0.82 to 0.90, so the projector recovers the overall AUC through the arm the words already help." Files: scores/part20/POD1/standard_rerun_ft_pitt_oof.csv, release/scores/part20/POD1/standard_rerun_ft_pitt_r2_oof.csv (authors' machine path), release/scores/part20/rows/POD1.tsv (authors' machine path).
 
 ## 172. [LOW] [PART20] POD1: p_yes definition for the fine-tune comparison (2026-09-23)
 - Rule 3 asks for p_yes over all single-token Yes/yes/YES vs No/no/NO. The recipe (sft_projector.py) and the paper file omnisft_pitt_oof.csv use softmax over just [' Yes',' No']. To keep the paired balanced-minus-standard difference like for like, the headline column `p_yes` uses the recipe definition. The rule 3 value is saved per clip as `p_yes_multi`, with `answer_mass`. It moves AUC by at most 0.016 (repeat 1 agreement 0.8279 vs 0.8433, repeat 2 all 0.7360 vs 0.7381). Answer mass is at least 0.995 on every clip in every run except the collapsed repeat 1 fold 3.
@@ -1655,7 +1655,7 @@ Status now: released here. Files: scores/part20/POD4c/af2_noinv_all.csv, scores/
 - The original run (omni_final/omnisft_pitt_oof.csv) did not record answer mass. Its fold 3 shows the same squeezed p_yes as the collapsed folds here (range 0.35 to 0.93, sd 0.16, against sd 0.33 to 0.37 on its other folds). So the paper's 0.7673 may include one collapsed fold. This is not confirmed.
 - Files: release/scores/part20/POD1b/std_ft_seed{1,2}_pitt_oof.csv (answer_mass column), per_fold_diagnostics in the matching .sidecar.json
 
-Status now: open. The original run saved no answer mass, so whether its fold 3 collapsed cannot be settled from its scores. The paper prints 0.77 for the Pitt fine-tune. What decides it: the authors reporting the seed range (item 176), or a rerun that records answer mass on the original machine. Related files: release/scores/part20/POD1b/std_ft_seed1_pitt_oof.csv (authors' machine path), release/scores/part20/POD1b/std_ft_seed2_pitt_oof.csv (authors' machine path), release/scores/part20/rows/POD1b.tsv (authors' machine path).
+Status now: fixed in the paper. The final tex reports the seed range: "On the Pitt dataset the retrained projector reaches 0.77, the level of the answer-state probe of Section~\ref{sec:gap}, and 0.74 to 0.81 across three further seeds." Whether the original run's fold 3 collapsed still cannot be settled from its scores, since it saved no answer mass. Related files: release/scores/part20/POD1b/std_ft_seed1_pitt_oof.csv (authors' machine path), release/scores/part20/POD1b/std_ft_seed2_pitt_oof.csv (authors' machine path), release/scores/part20/rows/POD1b.tsv (authors' machine path).
 
 ## 176. [MEDIUM] [PART20] POD1b: the Pitt projector fine-tune moves 0.07 overall across seeds, and the same seed does not reproduce 0.7673 on this pod (2026-09-23)
 - sft_projector.py has no seed argument. Its only randomness is the clip order, np.random.RandomState(fold*10+epoch). Torch is unseeded, and every dropout in the Omni thinker config is 0.0 (checked on the pod). The omni_final sidecar has no seed field. Here the order is RandomState(seed*1000+fold*10+epoch) for seeds 1, 2, 3.
@@ -1666,4 +1666,4 @@ Status now: open. The original run saved no answer mass, so whether its fold 3 c
 - For the paper: the single-run 0.77 is inside the seed range. The earlier LoRA 0.8250 is above every projector seed, but only by 0.017 over the best one (0.8085). Any sentence ranking projector against LoRA on Pitt overall should carry this spread.
 - Files: release/scores/part20/POD1b/std_ft_seed{0,1,2,3}_pitt_oof.csv and .sidecar.json, std_ft_seed_range_pitt.json
 
-Status now: released here. Files: release/scores/part20/POD1b/std_ft_seed0_pitt_oof.csv (authors' machine path) to release/scores/part20/POD1b/std_ft_seed3_pitt_oof.csv (authors' machine path), release/scores/part20/POD1b/std_ft_seed_range_pitt.json (authors' machine path), release/scores/part20/rows/POD1b.tsv (authors' machine path). The paper ranks no projector result against LoRA.
+Status now: released here. Files: release/scores/part20/POD1b/std_ft_seed0_pitt_oof.csv (authors' machine path) to release/scores/part20/POD1b/std_ft_seed3_pitt_oof.csv (authors' machine path), release/scores/part20/POD1b/std_ft_seed_range_pitt.json (authors' machine path), release/scores/part20/rows/POD1b.tsv (authors' machine path). The final tex compares LoRA with the paper's projector run only, not with the seed range: "Low-rank adaptation (LoRA) \cite{lora} of the language model (rank 8, all attention projections of the 28 layers, 5.0\,M trainable parameters against 4.6\,M for the projector) reaches 0.825 on Pitt, 0.06 [0.02, 0.10] above the projector run, and 0.55 on its conflict segments, and training both together gives 0.77."
