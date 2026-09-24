@@ -1,0 +1,76 @@
+{
+ "checks": {
+  "clip_order_equals_states": true,
+  "labels_equal_states": true,
+  "speakers_equal_states": true,
+  "p_yes_equal_zeroshot_file": true,
+  "p_yes_equal_states": true,
+  "zeroshot_labels_equal": true,
+  "fold_seed0_equals_file": true,
+  "fold_seed0_speaker_equals_file": true,
+  "fold_seed1_equals_file": true,
+  "fold_seed1_speaker_equals_file": true,
+  "fold_seed2_equals_file": true,
+  "fold_seed2_speaker_equals_file": true,
+  "fold_seed3_equals_file": true,
+  "fold_seed3_speaker_equals_file": true,
+  "fold_seed4_equals_file": true,
+  "fold_seed4_speaker_equals_file": true,
+  "per_repeat_auc_match_sidecar_1e-12": true,
+  "zeroshot_auc_match_sidecar_1e-12": true,
+  "zeroshot_auc_4dp_is_0.5369": true,
+  "bootstrap_speakers_100": true,
+  "bootstrap_draws_match_1e-9": true,
+  "bootstrap_ci_match_4dp": true,
+  "speaker_idx_match_saved": true,
+  "mac_refit_layers_match": true,
+  "mac_refit_pred_within_1e-4": false,
+  "mac_refit_mean5_within_5e-4": true
+ },
+ "rank_auc": {
+  "per_repeat": [
+   0.9239900826446281,
+   0.899996694214876,
+   0.9011239669421488,
+   0.9041322314049587,
+   0.9190876033057851
+  ],
+  "mean5": 0.9096661157024795,
+  "zeroshot": 0.5369190082644628,
+  "gap": 0.37274710743801664
+ },
+ "bootstrap_rebuilt": {
+  "n_speakers": 100,
+  "usable": 2000,
+  "gap_ci": [
+   0.3102483691604163,
+   0.42706713447189804
+  ],
+  "max_abs_diff_vs_saved_draws": 4.440892098500626e-16,
+  "max_abs_mean5_vs_saved": 4.440892098500626e-16,
+  "max_abs_zeroshot_vs_saved": 1.1102230246251565e-16
+ },
+ "mac_refit": {
+  "layer_mismatches": [],
+  "max_abs_inner_score_diff_vs_pod": 0.0009850044354176024,
+  "max_abs_pred_diff_vs_pod": 0.0374028188276645,
+  "per_repeat_auc_mac_refit": [
+   0.9239867768595041,
+   0.9000595041322315,
+   0.9009454545454545,
+   0.9042545454545454,
+   0.9190545454545455
+  ],
+  "mean5_mac_refit": 0.9096601652892563,
+  "abs_mean5_diff_vs_pod": 5.950413223154705e-06,
+  "seconds": 20.4,
+  "nproc": 6
+ },
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "PASS": false
+}

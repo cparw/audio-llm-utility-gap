@@ -1,0 +1,157 @@
+{
+ "pulled_sha_match": {
+  "p26_q2a_adresso_ckpt.json": true,
+  "p26_q2a_adresso_enc_nested5.json": true,
+  "p26_q2a_adresso_enc_nested5_oof.csv": true
+ },
+ "perclip_equals_pod_oof": true,
+ "zs_file_matches_perclip": true,
+ "own_auc": {
+  "per_repeat": [
+   0.862936564504633,
+   0.8388453314326443,
+   0.8548467569493942,
+   0.8545972915181753,
+   0.8572344975053456
+  ],
+  "mean5": 0.8536920883820385,
+  "zeroshot": 0.6648610121168924,
+  "gap": 0.18883107626514606,
+  "max_abs_vs_sidecar_per_repeat": 1.1102230246251565e-16,
+  "abs_vs_sidecar_zeroshot": 0.0
+ },
+ "mac_rerun": {
+  "seed0": {
+   "auc_mac": 0.862936564504633,
+   "auc_pod": 0.862936564504633,
+   "layers_mac": [
+    26,
+    27,
+    27,
+    27,
+    20
+   ],
+   "layers_pod": [
+    26,
+    27,
+    27,
+    27,
+    20
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.006874633234646987,
+   "rank_corr_mac_vs_pod": 0.9999905347130544
+  },
+  "seed1": {
+   "auc_mac": 0.8387027797576622,
+   "auc_pod": 0.8388453314326443,
+   "layers_mac": [
+    27,
+    21,
+    29,
+    21,
+    20
+   ],
+   "layers_pod": [
+    27,
+    21,
+    29,
+    21,
+    20
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.0061928779879816265,
+   "rank_corr_mac_vs_pod": 0.9999896332656002
+  },
+  "seed2": {
+   "auc_mac": 0.8548111190306487,
+   "auc_pod": 0.8548467569493942,
+   "layers_mac": [
+    22,
+    21,
+    29,
+    27,
+    21
+   ],
+   "layers_pod": [
+    22,
+    21,
+    29,
+    27,
+    21
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.014806674341334869,
+   "rank_corr_mac_vs_pod": 0.9999871542666907
+  },
+  "seed3": {
+   "auc_mac": 0.8544547398431932,
+   "auc_pod": 0.8545972915181753,
+   "layers_mac": [
+    29,
+    27,
+    20,
+    29,
+    28
+   ],
+   "layers_pod": [
+    29,
+    27,
+    20,
+    29,
+    28
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.0007102092979952568,
+   "rank_corr_mac_vs_pod": 0.9999968449049609
+  },
+  "seed4": {
+   "auc_mac": 0.8570206699928724,
+   "auc_pod": 0.8572344975053456,
+   "layers_mac": [
+    27,
+    27,
+    21,
+    29,
+    21
+   ],
+   "layers_pod": [
+    27,
+    27,
+    21,
+    29,
+    21
+   ],
+   "layers_equal": true,
+   "max_abs_p_diff_mac_vs_pod": 0.003220675943642448,
+   "rank_corr_mac_vs_pod": 0.9999900839813027
+  }
+ },
+ "mac_rerun_mean5": 0.8535851746258019,
+ "mac_rerun_layers_all_equal": true,
+ "bootstrap_rebuilt": {
+  "speaker_idx_equal": true,
+  "usable": 2000,
+  "nan_pattern_equal": true,
+  "max_abs_draw_diff": 4.440892098500626e-16,
+  "ci": [
+   0.1154394087430633,
+   0.2681630972995935
+  ],
+  "ci_sidecar": [
+   0.11543940874306319,
+   0.2681630972995935
+  ],
+  "point": 0.18883107626514606,
+  "point_sidecar": 0.18883107626514606
+ },
+ "ci_matches_sidecar_1e-9": true,
+ "sources": {
+  "states": "<local data dir>/paper1_local_runs/probe2/adresso_states.npz",
+  "states_sha256": "089445b1fc4f48e2a73df4f1fbfb6b5f967cfa41eecb6b5a98ec259a3e1f4122",
+  "zeroshot": "<local data dir>/paper1_local_runs/probe2/adresso_zeroshot_scores.csv",
+  "zeroshot_sha256": "5e4140be4e61ee95c064ce7c272615a65892dccf3442246668b9b9372937d55a"
+ },
+ "PASS": true,
+ "seconds": 42.5
+}

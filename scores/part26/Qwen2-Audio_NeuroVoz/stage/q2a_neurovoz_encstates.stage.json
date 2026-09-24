@@ -1,0 +1,122 @@
+{
+ "src": "<local data dir>/paper1_local_runs/probe2/neurovoz_states.npz",
+ "out": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/stage/q2a_neurovoz_encstates.npz",
+ "keys_src": {
+  "enc": [
+   [
+    1270,
+    33,
+    1280
+   ],
+   "float32"
+  ],
+  "llm": [
+   [
+    1270,
+    33,
+    4096
+   ],
+   "float32"
+  ],
+  "ans": [
+   [
+    1270,
+    33,
+    4096
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    1270
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    1270
+   ],
+   "<U3"
+  ],
+  "p_yes": [
+   [
+    1270
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    1270
+   ],
+   "<U21"
+  ]
+ },
+ "arrays_equal": {
+  "enc": true,
+  "label": true,
+  "spk": true,
+  "p_yes": true,
+  "name": true
+ },
+ "array_sha256": {
+  "enc": "8edb1fe5cddc47b662f6b073f09762a24077f18b7022850175a0ca2dab4e65cc",
+  "label": "bdf3bea1e81f018d40616d616ac35e515f97eb65b2339a9175cae29a320f09f5",
+  "p_yes": "e00b37c06ec7840b0f78bc86b441b25c7002c2ab24da061f89481fc7378f0bff"
+ },
+ "enc_finite": true,
+ "enc_shape": [
+  1270,
+  33,
+  1280
+ ],
+ "n": 1270,
+ "n_unique_names": 1270,
+ "n_speakers": 107,
+ "n_pos": 621,
+ "folds": {
+  "seed0": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "same_clip_set": true,
+   "speaker_equal": true,
+   "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20"
+  },
+  "seed1": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "same_clip_set": true,
+   "speaker_equal": true,
+   "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a"
+  },
+  "seed2": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "same_clip_set": true,
+   "speaker_equal": true,
+   "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570"
+  },
+  "seed3": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "same_clip_set": true,
+   "speaker_equal": true,
+   "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973"
+  },
+  "seed4": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "same_clip_set": true,
+   "speaker_equal": true,
+   "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655"
+  },
+  "single": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod.csv",
+   "same_clip_set": true,
+   "speaker_equal": true,
+   "sha256": "10e609c186df31e34ae1e318e78031289a4055a73055b41b1175ca66baf602ad"
+  }
+ },
+ "zeroshot": {
+  "file": "<local data dir>/paper1_local_runs/probe2/neurovoz_zeroshot_scores.csv",
+  "same_clip_set": true,
+  "labels_equal": true,
+  "speaker_equal": true,
+  "p_yes_max_abs_diff_vs_states": 0.0
+ },
+ "PASS": true
+}

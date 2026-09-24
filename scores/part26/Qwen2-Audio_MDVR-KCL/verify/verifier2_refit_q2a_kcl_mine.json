@@ -1,0 +1,141 @@
+{
+ "states_label_equal": true,
+ "states_speaker_equal": true,
+ "states_pyes_equal_perclip_zeroshot": true,
+ "seeds": {
+  "seed0": {
+   "my_outer_rule_equals_saved_file": true,
+   "layers": [
+    5,
+    26,
+    26,
+    26,
+    26
+   ],
+   "ties": [],
+   "auc_refit": 0.8065476190476192,
+   "auc_claim": 0.8065476190476192,
+   "max_abs_score_diff": 3.472635151252623e-05
+  },
+  "seed1": {
+   "my_outer_rule_equals_saved_file": true,
+   "layers": [
+    1,
+    26,
+    1,
+    8,
+    7
+   ],
+   "ties": [
+    {
+     "fold": 0,
+     "exact_tied_layers": [
+      1,
+      18
+     ],
+     "exact_value": "47/48",
+     "float_argmax": 1
+    },
+    {
+     "fold": 4,
+     "exact_tied_layers": [
+      7,
+      9
+     ],
+     "exact_value": "457/480",
+     "float_argmax": 7
+    }
+   ],
+   "auc_refit": 0.8095238095238094,
+   "auc_claim": 0.8095238095238094,
+   "max_abs_score_diff": 0.00015217640172823788
+  },
+  "seed2": {
+   "my_outer_rule_equals_saved_file": true,
+   "layers": [
+    21,
+    14,
+    4,
+    11,
+    26
+   ],
+   "ties": [
+    {
+     "fold": 1,
+     "exact_tied_layers": [
+      6,
+      14
+     ],
+     "exact_value": "53/60",
+     "float_argmax": 14
+    },
+    {
+     "fold": 2,
+     "exact_tied_layers": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      16,
+      17
+     ],
+     "exact_value": "1",
+     "float_argmax": 4
+    }
+   ],
+   "auc_refit": 0.6785714285714286,
+   "auc_claim": 0.6785714285714286,
+   "max_abs_score_diff": 1.5573322409506707e-05
+  },
+  "seed3": {
+   "my_outer_rule_equals_saved_file": true,
+   "layers": [
+    10,
+    26,
+    26,
+    26,
+    26
+   ],
+   "ties": [
+    {
+     "fold": 3,
+     "exact_tied_layers": [
+      26,
+      27
+     ],
+     "exact_value": "155/168",
+     "float_argmax": 26
+    }
+   ],
+   "auc_refit": 0.7678571428571429,
+   "auc_claim": 0.7678571428571429,
+   "max_abs_score_diff": 3.5669910319890974e-06
+  },
+  "seed4": {
+   "my_outer_rule_equals_saved_file": true,
+   "layers": [
+    24,
+    5,
+    2,
+    26,
+    26
+   ],
+   "ties": [],
+   "auc_refit": 0.7946428571428571,
+   "auc_claim": 0.7946428571428571,
+   "max_abs_score_diff": 1.5506215178984206e-05
+  }
+ },
+ "mean5_refit": 0.7714285714285715,
+ "mean5_claim": 0.7714285714285715,
+ "versions": {
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2"
+ }
+}

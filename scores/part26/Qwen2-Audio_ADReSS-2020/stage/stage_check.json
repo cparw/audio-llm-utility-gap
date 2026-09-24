@@ -1,0 +1,128 @@
+{
+ "source_states": "<local data dir>/paper1_local_runs/probe2/adress2020_states.npz",
+ "source_sha256": "59bb41b6dbfac5476dc7bcc88591b26646190d82242f92f5a5b873f63b2aa672",
+ "stage_file": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/stage/q2a_adress2020_encstates.npz",
+ "stage_sha256": "0a86d1990536f13b192d8c24ec00c271adfed65ab6338e421902730bb61313ef",
+ "keys": {
+  "enc": [
+   [
+    156,
+    33,
+    1280
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    156
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    156
+   ],
+   "<U4"
+  ],
+  "p_yes": [
+   [
+    156
+   ],
+   "float64"
+  ],
+  "name": [
+   [
+    156
+   ],
+   "<U8"
+  ]
+ },
+ "arrays_equal_source": true,
+ "enc_finite": true,
+ "zeroshot_labels_equal": true,
+ "zeroshot_speakers_equal": true,
+ "states_p_yes_vs_zeroshot_max_abs": 0.0,
+ "fold_files": {
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod.csv": {
+   "sha256": "f88e8566d034a2ce947f17ff61a5ae11109c4a2abfbe655980cdbd1d857d7067",
+   "n": 156,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+   "sha256": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+   "n": 156,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+   "sha256": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+   "n": 156,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+   "sha256": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+   "n": 156,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+   "sha256": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+   "n": 156,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  },
+  "<local data dir>/release/folds/adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+   "sha256": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb",
+   "n": 156,
+   "clips_equal": true,
+   "speakers_equal": true,
+   "fold_sizes": [
+    32,
+    31,
+    31,
+    31,
+    31
+   ]
+  }
+ },
+ "n": 156,
+ "n_pos": 78,
+ "n_speakers": 156
+}

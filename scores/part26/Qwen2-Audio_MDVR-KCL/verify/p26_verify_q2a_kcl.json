@@ -1,0 +1,151 @@
+{
+ "checks": {
+  "pulled_out_sha256_match_pod": {
+   "ok": true,
+   "n_files": 4,
+   "mismatched": []
+  },
+  "staged_states_equal_source": {
+   "ok": true,
+   "shape": [
+    37,
+    33,
+    1280
+   ]
+  },
+  "states_pyes_equal_zeroshot": {
+   "ok": true
+  },
+  "oof_clip_order_equals_states": {
+   "ok": true,
+   "n": 37
+  },
+  "oof_folds_equal_release_fold_files": {
+   "ok": true,
+   "per_tag": {
+    "seed0": true,
+    "seed1": true,
+    "seed2": true,
+    "seed3": true,
+    "seed4": true,
+    "single": true
+   }
+  },
+  "per_repeat_auc_exact_equals_pod_json": {
+   "ok": true,
+   "exact": [
+    "271/336",
+    "17/21",
+    "19/28",
+    "43/56",
+    "89/112"
+   ],
+   "mean5_exact": "27/35",
+   "mean5": 0.7714285714285715
+  },
+  "per_repeat_auc_equals_table1_4dp": {
+   "ok": true,
+   "rerun": [
+    0.8065,
+    0.8095,
+    0.6786,
+    0.7679,
+    0.7946
+   ],
+   "table1": [
+    0.8065,
+    0.8095,
+    0.6786,
+    0.7679,
+    0.7946
+   ],
+   "table1_mean": 0.7714
+  },
+  "single_split_auc_exact": {
+   "ok": true
+  },
+  "zeroshot_clips_labels_speakers_equal": {
+   "ok": true
+  },
+  "zeroshot_auc_exact_equals_0.5923_4dp": {
+   "ok": true,
+   "exact": "199/336",
+   "value": 0.5922619047619048
+  },
+  "perclip_csv_equals_pod_oof_and_zeroshot": {
+   "ok": true
+  },
+  "bootstrap_rebuilt_equals_saved_draws": {
+   "ok": true,
+   "max_abs_draw_diff": 3.3306690738754696e-16,
+   "usable": 2000
+  },
+  "bootstrap_interval_equals_sidecar": {
+   "ok": true,
+   "lo": -0.05031767598343685,
+   "hi": 0.4304572463768115
+  },
+  "gap_point_equals_sidecar": {
+   "ok": true,
+   "gap": 0.17916666666666667
+  },
+  "podverify_only_mismatch_is_exact_tie": {
+   "ok": true,
+   "podverify_PASS_flag": false,
+   "inner_14": 0.8833333333333334,
+   "inner_6": 0.8833333333333333,
+   "tie_log": [
+    "layer 14 inner fold AUCs ['1', '7/10', '1', '5/6'] mean exact 53/60 0.8833333333333333",
+    "layer 6 inner fold AUCs ['14/15', '3/5', '1', '1'] mean exact 53/60 0.8833333333333333",
+    "layer 2 inner fold AUCs ['13/15', '4/5', '1', '5/6'] mean exact 7/8 0.875",
+    "EXACT_TIE_14_vs_6 True"
+   ]
+  },
+  "table1_saved_run_also_chose_layer14_seed2_fold1": {
+   "ok": true,
+   "layers": [
+    21,
+    14,
+    4,
+    11,
+    26
+   ]
+  },
+  "mac_refit_at_saved_layers_same_auc": {
+   "ok": true,
+   "per_tag": {
+    "seed0": {
+     "auc_mac_refit": 0.8065476190476191,
+     "auc_pod": 0.8065476190476192,
+     "max_abs_pred_diff": 3.472635151252623e-05
+    },
+    "seed1": {
+     "auc_mac_refit": 0.8095238095238095,
+     "auc_pod": 0.8095238095238094,
+     "max_abs_pred_diff": 0.00015217640172823788
+    },
+    "seed2": {
+     "auc_mac_refit": 0.6785714285714286,
+     "auc_pod": 0.6785714285714286,
+     "max_abs_pred_diff": 1.5573322409506707e-05
+    },
+    "seed3": {
+     "auc_mac_refit": 0.7678571428571429,
+     "auc_pod": 0.7678571428571429,
+     "max_abs_pred_diff": 3.5669910319890974e-06
+    },
+    "seed4": {
+     "auc_mac_refit": 0.7946428571428571,
+     "auc_pod": 0.7946428571428571,
+     "max_abs_pred_diff": 1.5506215178984206e-05
+    },
+    "single": {
+     "auc_mac_refit": 0.8095238095238095,
+     "auc_pod": 0.8095238095238095,
+     "max_abs_pred_diff": 1.1043698710522243e-05
+    }
+   }
+  }
+ },
+ "all_pass_except_podverify_flag": true
+}

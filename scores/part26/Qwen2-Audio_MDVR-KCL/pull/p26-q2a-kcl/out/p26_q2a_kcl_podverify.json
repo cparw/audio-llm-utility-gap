@@ -1,0 +1,80 @@
+{
+ "dataset": "kcl",
+ "tags": {
+  "seed0": {
+   "fold_file": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.8065476190476192,
+   "auc_rank_saved_oof": 0.8065476190476191,
+   "auc_rank_refit": 0.8065476190476191,
+   "abs_json_vs_rank": 1.1102230246251565e-16,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed1": {
+   "fold_file": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.8095238095238094,
+   "auc_rank_saved_oof": 0.8095238095238095,
+   "auc_rank_refit": 0.8095238095238095,
+   "abs_json_vs_rank": 1.1102230246251565e-16,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed2": {
+   "fold_file": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.6785714285714286,
+   "auc_rank_saved_oof": 0.6785714285714286,
+   "auc_rank_refit": 0.6785714285714286,
+   "abs_json_vs_rank": 0.0,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed3": {
+   "fold_file": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.7678571428571429,
+   "auc_rank_saved_oof": 0.7678571428571429,
+   "auc_rank_refit": 0.7678571428571429,
+   "abs_json_vs_rank": 0.0,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "seed4": {
+   "fold_file": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.7946428571428571,
+   "auc_rank_saved_oof": 0.7946428571428571,
+   "auc_rank_refit": 0.7946428571428571,
+   "abs_json_vs_rank": 0.0,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  },
+  "single": {
+   "fold_file": "kcl_groupkfold5_pod.csv",
+   "csv_folds_equal_file": true,
+   "greedy_outer_equals_file": true,
+   "auc_json": 0.8095238095238095,
+   "auc_rank_saved_oof": 0.8095238095238095,
+   "auc_rank_refit": 0.8095238095238095,
+   "abs_json_vs_rank": 0.0,
+   "max_abs_pred_diff_refit_vs_saved": 0.0
+  }
+ },
+ "mean5_rank_from_oof": 0.7714285714285715,
+ "mean5_json": 0.7714285714285715,
+ "abs_mean5_diff": 0.0,
+ "max_abs_pred_diff": 0.0,
+ "max_abs_inner_score_diff": 2.1287373197509396e-08,
+ "layer_mismatches": [
+  {
+   "tag": "seed2",
+   "fold": 1,
+   "saved": 14,
+   "rederived": 6
+  }
+ ],
+ "seconds": 2.5,
+ "PASS": false
+}

@@ -1,0 +1,381 @@
+{
+ "task": "PART26 probe grid: Qwen2-Audio, PC-GITA, nested encoder probe (layer chosen inside the training folds), mean of five repeats, paired gap vs zero-shot answer",
+ "date_utc": "2026-09-24T00:56:18.021737Z",
+ "model": "Qwen2-Audio-7B-Instruct",
+ "dataset": "PC-GITA",
+ "condition": "PD",
+ "n": 1100,
+ "n_speakers": 100,
+ "n_pos": 550,
+ "states": {
+  "file": "/workspace/in/q2a_pcgita_encstates.npz",
+  "sha256": "14c8f1a87c9c6d78f7e7a8aa850be979aa6dbcb983b794a17a3f1b86d1926018",
+  "keys": {
+   "enc": [
+    [
+     1100,
+     33,
+     1280
+    ],
+    "float32"
+   ],
+   "label": [
+    [
+     1100
+    ],
+    "int64"
+   ],
+   "spk": [
+    [
+     1100
+    ],
+    "<U14"
+   ],
+   "p_yes": [
+    [
+     1100
+    ],
+    "float64"
+   ],
+   "name": [
+    [
+     1100
+    ],
+    "<U29"
+   ]
+  }
+ },
+ "n_layers": 33,
+ "window": "30 s (probe2/extract2.py)",
+ "probe_per_repeat": [
+  0.923990082644628,
+  0.8999966942148759,
+  0.9011239669421487,
+  0.9041322314049586,
+  0.9190876033057851
+ ],
+ "probe_mean5": 0.9096661157024792,
+ "probe_per_repeat_4dp": [
+  0.924,
+  0.9,
+  0.9011,
+  0.9041,
+  0.9191
+ ],
+ "probe_mean5_4dp": 0.9097,
+ "probe_json_mean5": 0.9096661157024792,
+ "single_split_auc": 0.9026181818181818,
+ "single_split_auc_saved_probe2": 0.9132561983471073,
+ "layers": {
+  "seed0": [
+   16,
+   16,
+   14,
+   16,
+   16
+  ],
+  "seed1": [
+   19,
+   24,
+   24,
+   16,
+   24
+  ],
+  "seed2": [
+   16,
+   16,
+   19,
+   24,
+   25
+  ],
+  "seed3": [
+   19,
+   16,
+   3,
+   15,
+   19
+  ],
+  "seed4": [
+   16,
+   17,
+   24,
+   16,
+   16
+  ],
+  "single": [
+   16,
+   3,
+   16,
+   19,
+   16
+  ]
+ },
+ "zeroshot_auc": 0.5369190082644628,
+ "zeroshot_file": "<local data dir>/paper1_local_runs/probe2/pcgita_zeroshot_scores.csv",
+ "zeroshot_speaker_column_note": "clip stem, 1100 ids; not used for the bootstrap",
+ "gap_point": 0.3727471074380164,
+ "gap_ci": [
+  0.3102483691604163,
+  0.42706713447189804
+ ],
+ "gap_interval_above_zero": true,
+ "probe_mean5_ci": [
+  0.8527710468854283,
+  0.9531920040743571
+ ],
+ "zeroshot_ci": [
+  0.49535846593446203,
+  0.5783354164544396
+ ],
+ "usable_draws": 2000,
+ "reference_master_table1": {
+  "file": "<local data dir>/paper1_local_runs/omni_final/q2a_pcgita_nested_repeats.json",
+  "per_repeat": [
+   0.9242,
+   0.9,
+   0.9011,
+   0.9041,
+   0.9191
+  ],
+  "mean": 0.9097,
+  "note": "master estimator: pod sklearn GroupKFold outer and inner on renumbered speakers; this run uses the saved fold files and the pod tie rule inner"
+ },
+ "reference_part25C_refit": {
+  "file": "<local data dir>/release_from_mac/scores/part25/C/pull/p25C-2/out/q2a_pcgita_enc_rep5.json",
+  "per_repeat": [
+   0.9241537190082646,
+   0.8999669421487604,
+   0.9010644628099175,
+   0.9040578512396693,
+   0.9191206611570247
+  ],
+  "mean5": 0.9096727272727273,
+  "layers": {
+   "seed0": [
+    16,
+    16,
+    14,
+    16,
+    16
+   ],
+   "seed1": [
+    19,
+    24,
+    24,
+    16,
+    24
+   ],
+   "seed2": [
+    16,
+    16,
+    19,
+    24,
+    25
+   ],
+   "seed3": [
+    19,
+    16,
+    3,
+    15,
+    19
+   ],
+   "seed4": [
+    16,
+    17,
+    24,
+    16,
+    16
+   ]
+  }
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot AUC, same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "speaker_source": "OOF csv speaker = states spk = fold file speaker_id (100 speakers)"
+ },
+ "pod": {
+  "name": "p26-q2a-pcgita",
+  "id": "j0g9l1t6s9r3vm",
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "n_jobs": 32,
+  "seconds": 124.4,
+  "podverify_pass": true,
+  "podverify": {
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.6344815107215425e-08,
+   "layer_mismatches": [],
+   "abs_mean5_diff": 2.220446049250313e-16
+  },
+  "fold_files": {
+   "seed0": {
+    "fold_file": "pcgita_groupkfold5_pod_seed0.csv",
+    "fold_file_sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed1": {
+    "fold_file": "pcgita_groupkfold5_pod_seed1.csv",
+    "fold_file_sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed2": {
+    "fold_file": "pcgita_groupkfold5_pod_seed2.csv",
+    "fold_file_sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed3": {
+    "fold_file": "pcgita_groupkfold5_pod_seed3.csv",
+    "fold_file_sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed4": {
+    "fold_file": "pcgita_groupkfold5_pod_seed4.csv",
+    "fold_file_sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "single": {
+    "fold_file": "pcgita_groupkfold5_pod.csv",
+    "fold_file_sha256": "ff2fa9e53a19f102a059ea08ddccb5cb3762e2f298eda3a05548cdd5a92cb61f",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   }
+  }
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen2-Audio_PC-GITA/Qwen2-Audio_PC-GITA_perclip.csv",
+  "draws_npz": "scores/part26/Qwen2-Audio_PC-GITA/draws/Qwen2-Audio_PC-GITA_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen2-Audio_PC-GITA/pull/p26-q2a-pcgita/out/p26_q2a_pcgita_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen2-Audio_PC-GITA/pull/p26-q2a-pcgita/out/p26_q2a_pcgita_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen2-Audio_PC-GITA/pull/p26-q2a-pcgita/out/p26_q2a_pcgita_podverify.json",
+  "zeroshot": "<local data dir>/paper1_local_runs/probe2/pcgita_zeroshot_scores.csv"
+ },
+ "sha256": {
+  "perclip_csv": "b9c045a4ff08181f3b6228fa90858c6fb92cf2bd609f509ed3d22a02dbd3f6c3",
+  "draws_npz": "31f413bb2c982b1b07366dd9448f3caa7e4ee2d891b36c02e6e5591c647e9d45",
+  "pod_oof_csv": "1d7c5bcdce4f36633f4b59b89c5a303090f60d9b72fc8069f295730617195dd3",
+  "pod_json": "2d0e91cbe884b007914848d41778679ac9199782b8661b695eb56eada6970acb",
+  "zeroshot": "11b020e52ad7c96167bb198a88f492a1e0e37e39b0b6712dcb50c5276d829dbc"
+ },
+ "command": "/usr/local/bin/python3 scripts/gap26_q2a_pcgita.py",
+ "verification": {
+  "status": "VERIFIED",
+  "summary": "Probe mean5, zero-shot AUC, gap point and 2000-draw interval recomputed independently (rank AUC, own speaker grouping from the fold file) and match exactly; pod-side refit matches bit for bit (podverify PASS); a Mac refit on sklearn 1.7.2 re-derives all 25 layer choices exactly and gives mean5 within 6e-6 and the same gap and interval at 3 dp.",
+  "failed_check_kept": {
+   "name": "mac_refit_pred_within_1e-4",
+   "value": false,
+   "max_abs_pred_diff_mac_vs_pod": 0.0374028188276645,
+   "explanation": "threshold set before the run was too tight. LBFGS converged in 37 to 75 iterations (none at max_iter), so the per-clip spread is the solver tolerance on a different BLAS. Two Linux pods with the same sklearn 1.9.1 / numpy 2.1.2 / scipy 1.18.1 (this AVX2 EPYC 7702P pod and the PART25 C AVX-512 EPYC 9655P pod, same folds, same layers) differ by up to 0.031 per clip as well."
+  },
+  "independent_check_json": "scores/part26/Qwen2-Audio_PC-GITA/verify/verify26_q2a_pcgita.json",
+  "independent_check_script": "scripts/part26/Qwen2-Audio_PC-GITA/scripts/verify26_q2a_pcgita.py",
+  "sensitivity_json": "scores/part26/Qwen2-Audio_PC-GITA/verify/sensitivity26.json",
+  "compare_part25C_json": "scores/part26/Qwen2-Audio_PC-GITA/verify/compare_c25.json",
+  "gap_4dp_by_platform": {
+   "pod": [
+    0.9097,
+    0.3727,
+    0.3102,
+    0.4271
+   ],
+   "mac_refit": [
+    0.9097,
+    0.3727,
+    0.3104,
+    0.4271
+   ],
+   "part25C_avx512": [
+    0.9097,
+    0.3728,
+    0.3104,
+    0.4271
+   ]
+  },
+  "pod_cpu": "AMD EPYC 7702P (avx512f absent), 32 vCPU, cpu3c",
+  "stage_check": "scores/part26/Qwen2-Audio_PC-GITA/stage/stage_check.json"
+ },
+ "cost": {
+  "pod": "p26-q2a-pcgita j0g9l1t6s9r3vm cpu3c 32 vCPU $0.96/h",
+  "created_utc": "2026-09-24T00:48:40Z",
+  "deleted_utc": "2026-09-24T00:55:47Z",
+  "minutes": 7.1,
+  "usd_estimate": 0.114,
+  "balance_after": {
+   "clientBalance": 124.3761277668,
+   "currentSpendPerHr": 6.573
+  }
+ },
+ "gpu_hours_to_extract": 0,
+ "extract_plan": "none, saved states used"
+}

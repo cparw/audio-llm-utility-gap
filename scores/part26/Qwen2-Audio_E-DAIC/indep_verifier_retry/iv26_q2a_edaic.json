@@ -1,0 +1,460 @@
+{
+ "verifier": "iv26_q2a_edaic.py (written from scratch)",
+ "date_utc": "2026-09-24T02:42:18.252212+00:00",
+ "numpy": "2.2.6",
+ "checks": {
+  "perclip_275_unique_clips": {
+   "ok": true,
+   "detail": 275
+  },
+  "zs_clip_set_equal": {
+   "ok": true,
+   "detail": 275
+  },
+  "pod_oof_clip_set_equal": {
+   "ok": true,
+   "detail": 275
+  },
+  "speaker_is_clip_stem": {
+   "ok": true,
+   "detail": null
+  },
+  "one_clip_per_speaker": {
+   "ok": true,
+   "detail": 275
+  },
+  "zs_speaker_label_match": {
+   "ok": true,
+   "detail": null
+  },
+  "pod_speaker_label_match": {
+   "ok": true,
+   "detail": null
+  },
+  "states_clip_set_equal": {
+   "ok": true,
+   "detail": 275
+  },
+  "states_label_spk_match": {
+   "ok": true,
+   "detail": null
+  },
+  "states_p_yes_equals_zs_file": {
+   "ok": true,
+   "detail": null
+  },
+  "perclip_probe_equals_pod_oof": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "perclip_single_equals_pod_oof": {
+   "ok": true,
+   "detail": null
+  },
+  "perclip_zs_equals_zs_file": {
+   "ok": true,
+   "detail": null
+  },
+  "folds_seed0": {
+   "ok": true,
+   "detail": {
+    "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "sha256": "f18cd808187fef64cc9fe22e589f62a9452f17b994cef0d61d6ef9a11f57dc8d",
+    "sizes": [
+     55,
+     55,
+     55,
+     55,
+     55
+    ],
+    "perclip_equals_saved": true,
+    "pod_oof_equals_saved": true,
+    "speaker_disjoint": true,
+    "rebuilt_tie_rule_equals_saved": true,
+    "rebuilt_mismatch": 0
+   }
+  },
+  "folds_seed1": {
+   "ok": true,
+   "detail": {
+    "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "sha256": "4b6f898e61b4ceb543ad7f5c1b77db21979c79d705ec246904702980f3b22d3e",
+    "sizes": [
+     55,
+     55,
+     55,
+     55,
+     55
+    ],
+    "perclip_equals_saved": true,
+    "pod_oof_equals_saved": true,
+    "speaker_disjoint": true,
+    "rebuilt_tie_rule_equals_saved": true,
+    "rebuilt_mismatch": 0
+   }
+  },
+  "folds_seed2": {
+   "ok": true,
+   "detail": {
+    "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "sha256": "114a25b7d20bef6e1b4db1f49d1c1c25d8dc39548f475acb8ad2759aef0f1c07",
+    "sizes": [
+     55,
+     55,
+     55,
+     55,
+     55
+    ],
+    "perclip_equals_saved": true,
+    "pod_oof_equals_saved": true,
+    "speaker_disjoint": true,
+    "rebuilt_tie_rule_equals_saved": true,
+    "rebuilt_mismatch": 0
+   }
+  },
+  "folds_seed3": {
+   "ok": true,
+   "detail": {
+    "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "sha256": "a8bcff407001582f69925f4c7d088a7f38329c780a2e7e45dae28de3f9166ac4",
+    "sizes": [
+     55,
+     55,
+     55,
+     55,
+     55
+    ],
+    "perclip_equals_saved": true,
+    "pod_oof_equals_saved": true,
+    "speaker_disjoint": true,
+    "rebuilt_tie_rule_equals_saved": true,
+    "rebuilt_mismatch": 0
+   }
+  },
+  "folds_seed4": {
+   "ok": true,
+   "detail": {
+    "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+    "sha256": "3c7b1fad43992659ef99f257e4a4cf073a8dfe93cf42f3fd9d47f0e20f502046",
+    "sizes": [
+     55,
+     55,
+     55,
+     55,
+     55
+    ],
+    "perclip_equals_saved": true,
+    "pod_oof_equals_saved": true,
+    "speaker_disjoint": true,
+    "rebuilt_tie_rule_equals_saved": true,
+    "rebuilt_mismatch": 0
+   }
+  },
+  "folds_single": {
+   "ok": true,
+   "detail": {
+    "file": "<local data dir>/release/folds/edaic_groupkfold5_pod.csv",
+    "sha256": "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff",
+    "sizes": [
+     55,
+     55,
+     55,
+     55,
+     55
+    ],
+    "perclip_equals_saved": true,
+    "pod_oof_equals_saved": true,
+    "speaker_disjoint": true,
+    "rebuilt_tie_rule_equals_saved": true,
+    "rebuilt_mismatch": 0
+   }
+  },
+  "sidecar_fold_hashes_match_saved": {
+   "ok": true,
+   "detail": null
+  },
+  "pod_json_fold_names_match": {
+   "ok": true,
+   "detail": null
+  },
+  "own_auc_equals_sklearn": {
+   "ok": true,
+   "detail": null
+  },
+  "per_repeat_match_master_4dp": {
+   "ok": true,
+   "detail": [
+    0.513,
+    0.6021,
+    0.5555,
+    0.5558,
+    0.6098
+   ]
+  },
+  "mean_match_master_4dp": {
+   "ok": true,
+   "detail": 0.5673
+  },
+  "per_repeat_match_pod_json": {
+   "ok": true,
+   "detail": null
+  },
+  "draws_match": {
+   "ok": true,
+   "detail": {
+    "speakers_equal": true,
+    "speaker_idx_equal": true,
+    "diff_maxabs": 3.3306690738754696e-16,
+    "mean5_maxabs": 2.220446049250313e-16,
+    "zeroshot_maxabs": 2.220446049250313e-16,
+    "per_repeat_maxabs": 3.3306690738754696e-16,
+    "point_diff_saved": -0.07909235899666522,
+    "ci_saved": [
+     -0.16639547196450197,
+     0.01197060256568396
+    ]
+   }
+  },
+  "claim_probe_4dp": {
+   "ok": true,
+   "detail": {
+    "recomputed": 0.5673,
+    "claimed": 0.5673
+   }
+  },
+  "claim_answer_4dp": {
+   "ok": true,
+   "detail": {
+    "recomputed": 0.6464,
+    "claimed": 0.6464
+   }
+  },
+  "claim_gap_4dp": {
+   "ok": true,
+   "detail": {
+    "recomputed": -0.0791,
+    "claimed": -0.0791
+   }
+  },
+  "claim_lo_4dp": {
+   "ok": true,
+   "detail": {
+    "recomputed": -0.1664,
+    "claimed": -0.1664
+   }
+  },
+  "claim_hi_4dp": {
+   "ok": true,
+   "detail": {
+    "recomputed": 0.012,
+    "claimed": 0.012
+   }
+  },
+  "claim_per_repeat_4dp": {
+   "ok": true,
+   "detail": {
+    "recomputed": [
+     0.513,
+     0.6021,
+     0.5555,
+     0.5558,
+     0.6098
+    ],
+    "claimed": [
+     0.513,
+     0.6021,
+     0.5555,
+     0.5558,
+     0.6098
+    ]
+   }
+  }
+ },
+ "n": 275,
+ "n_pos": 66,
+ "n_speakers": 275,
+ "folds": {
+  "seed0": {
+   "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "sha256": "f18cd808187fef64cc9fe22e589f62a9452f17b994cef0d61d6ef9a11f57dc8d",
+   "sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "perclip_equals_saved": true,
+   "pod_oof_equals_saved": true,
+   "speaker_disjoint": true,
+   "rebuilt_tie_rule_equals_saved": true,
+   "rebuilt_mismatch": 0
+  },
+  "seed1": {
+   "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "sha256": "4b6f898e61b4ceb543ad7f5c1b77db21979c79d705ec246904702980f3b22d3e",
+   "sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "perclip_equals_saved": true,
+   "pod_oof_equals_saved": true,
+   "speaker_disjoint": true,
+   "rebuilt_tie_rule_equals_saved": true,
+   "rebuilt_mismatch": 0
+  },
+  "seed2": {
+   "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "sha256": "114a25b7d20bef6e1b4db1f49d1c1c25d8dc39548f475acb8ad2759aef0f1c07",
+   "sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "perclip_equals_saved": true,
+   "pod_oof_equals_saved": true,
+   "speaker_disjoint": true,
+   "rebuilt_tie_rule_equals_saved": true,
+   "rebuilt_mismatch": 0
+  },
+  "seed3": {
+   "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "sha256": "a8bcff407001582f69925f4c7d088a7f38329c780a2e7e45dae28de3f9166ac4",
+   "sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "perclip_equals_saved": true,
+   "pod_oof_equals_saved": true,
+   "speaker_disjoint": true,
+   "rebuilt_tie_rule_equals_saved": true,
+   "rebuilt_mismatch": 0
+  },
+  "seed4": {
+   "file": "<local data dir>/release/folds/edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "sha256": "3c7b1fad43992659ef99f257e4a4cf073a8dfe93cf42f3fd9d47f0e20f502046",
+   "sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "perclip_equals_saved": true,
+   "pod_oof_equals_saved": true,
+   "speaker_disjoint": true,
+   "rebuilt_tie_rule_equals_saved": true,
+   "rebuilt_mismatch": 0
+  },
+  "single": {
+   "file": "<local data dir>/release/folds/edaic_groupkfold5_pod.csv",
+   "sha256": "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff",
+   "sizes": [
+    55,
+    55,
+    55,
+    55,
+    55
+   ],
+   "perclip_equals_saved": true,
+   "pod_oof_equals_saved": true,
+   "speaker_disjoint": true,
+   "rebuilt_tie_rule_equals_saved": true,
+   "rebuilt_mismatch": 0
+  }
+ },
+ "recomputed": {
+  "per_repeat": [
+   0.5130491518051327,
+   0.6021458605190663,
+   0.5555313904596201,
+   0.5558213716108453,
+   0.6098303610265333
+  ],
+  "mean5": 0.5672756270842394,
+  "answer": 0.6463679860809047,
+  "gap": -0.07909235899666534,
+  "single_split": 0.6237494562853415
+ },
+ "bootstrap": {
+  "B": 2000,
+  "usable": 2000,
+  "lo": -0.16639547196450186,
+  "hi": 0.01197060256568396,
+  "probe_ci": [
+   0.5077110337547104,
+   0.6254646278250051
+  ],
+  "zs_ci": [
+   0.5681239425355451,
+   0.7216929424445446
+  ]
+ },
+ "draws_compare": {
+  "speakers_equal": true,
+  "speaker_idx_equal": true,
+  "diff_maxabs": 3.3306690738754696e-16,
+  "mean5_maxabs": 2.220446049250313e-16,
+  "zeroshot_maxabs": 2.220446049250313e-16,
+  "per_repeat_maxabs": 3.3306690738754696e-16,
+  "point_diff_saved": -0.07909235899666522,
+  "ci_saved": [
+   -0.16639547196450197,
+   0.01197060256568396
+  ]
+ },
+ "claim_vs_recomputed_4dp": {
+  "probe": {
+   "recomputed": 0.5673,
+   "claimed": 0.5673,
+   "equal": true
+  },
+  "answer": {
+   "recomputed": 0.6464,
+   "claimed": 0.6464,
+   "equal": true
+  },
+  "gap": {
+   "recomputed": -0.0791,
+   "claimed": -0.0791,
+   "equal": true
+  },
+  "lo": {
+   "recomputed": -0.1664,
+   "claimed": -0.1664,
+   "equal": true
+  },
+  "hi": {
+   "recomputed": 0.012,
+   "claimed": 0.012,
+   "equal": true
+  },
+  "per_repeat": {
+   "recomputed": [
+    0.513,
+    0.6021,
+    0.5555,
+    0.5558,
+    0.6098
+   ],
+   "claimed": [
+    0.513,
+    0.6021,
+    0.5555,
+    0.5558,
+    0.6098
+   ],
+   "equal": true
+  }
+ },
+ "failed": [],
+ "verified": true
+}

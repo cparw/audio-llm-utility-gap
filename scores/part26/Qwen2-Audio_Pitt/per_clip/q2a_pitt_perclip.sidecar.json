@@ -1,0 +1,274 @@
+{
+ "task": "PART26 probe grid: Qwen2-Audio encoder nested probe on Pitt, paired probe minus zero-shot answer gap",
+ "date_utc": "2026-09-24T00:52:23.216872Z",
+ "model": "Qwen2-Audio (Qwen2-Audio-7B-Instruct)",
+ "dataset": "Pitt",
+ "condition": "AD",
+ "n": 468,
+ "n_pos": 290,
+ "n_speakers": 228,
+ "speaker_note": "228 speaker labels cover 227 people: participant 172 is labeled both Control172 and Dementia172, kept as the runs did",
+ "probe": {
+  "estimator": "nested encoder probe, outer folds from the saved fold files, inner GroupKFold(4) with the stable tie rule picks the layer by mean inner AUC, StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'), mean of the five per-repeat out-of-fold AUCs",
+  "per_repeat_auc": [
+   0.7687330492057343,
+   0.788628438589694,
+   0.769469197985277,
+   0.8085044556373499,
+   0.7882700503680743
+  ],
+  "mean5": 0.7847210383572258,
+  "per_repeat_auc_4dp": [
+   0.7687,
+   0.7886,
+   0.7695,
+   0.8085,
+   0.7883
+  ],
+  "mean5_4dp": 0.7847,
+  "layers": {
+   "seed0": [
+    19,
+    21,
+    27,
+    24,
+    27
+   ],
+   "seed1": [
+    26,
+    20,
+    20,
+    20,
+    27
+   ],
+   "seed2": [
+    18,
+    27,
+    18,
+    21,
+    18
+   ],
+   "seed3": [
+    23,
+    20,
+    24,
+    27,
+    27
+   ],
+   "seed4": [
+    27,
+    30,
+    26,
+    19,
+    24
+   ]
+  },
+  "single_split_auc": 0.774602867105773,
+  "single_split_layers": [
+   24,
+   21,
+   29,
+   27,
+   27
+  ],
+  "fold_files": {
+   "seed0": "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "seed1": "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "seed2": "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "seed3": "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "seed4": "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "single": "pitt_groupkfold5_pod.csv"
+  },
+  "fold_file_sha256": {
+   "seed0": "2d9c96e8bb4faf584913ceb6cbf258d42fb56241f1e250d24ed29e58a2dcf727",
+   "seed1": "7279e0de67c8077c45d66101f2da6f3b4dec4f4def452e699e8ad1c9ab16c0db",
+   "seed2": "94c5d99c7dd0ff0e5cf24bfbde680248c815f3a4611d96dbd4ede90a70c608c9",
+   "seed3": "d27a2ab673c2fa99f90f17d50ec158e7276de17f6b5157a65238deed88eb0174",
+   "seed4": "4e30a180d62a461cb630839700c5216cda55eaa7fd6e3d32dc019de5d795bbf2",
+   "single": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406"
+  },
+  "fold_file_equals_pod_tie_rule": true,
+  "fold_file_equals_this_pod_sklearn": {
+   "seed0": true,
+   "seed1": true,
+   "seed2": true,
+   "seed3": true,
+   "seed4": true,
+   "single": true
+  },
+  "n_clips_sklearn_differs": {
+   "seed0": 0,
+   "seed1": 0,
+   "seed2": 0,
+   "seed3": 0,
+   "seed4": 0,
+   "single": 0
+  },
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "pod_seconds": 74.3,
+  "pod_n_jobs": 32,
+  "pod_cpu": "AMD EPYC 7702P, cpu3c 32 vCPU, avx512f absent",
+  "podverify_pass": true,
+  "podverify": {
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.2680861300194977e-08,
+   "layer_mismatches": [],
+   "abs_mean5_diff": 0.0
+  }
+ },
+ "master_lookup_probe": {
+  "file": "<local data dir>/paper1_local_runs/omni_final/q2a_pitt_nested_repeats.json",
+  "per_repeat": [
+   0.7689,
+   0.7881,
+   0.7695,
+   0.8084,
+   0.7883
+  ],
+  "mean": 0.7846,
+  "mean5_minus_master": 0.00012103835722587775,
+  "matches_master_4dp": false,
+  "per_repeat_abs_diff_4dp": [
+   0.0002,
+   0.0005,
+   0.0,
+   0.0001,
+   0.0
+  ]
+ },
+ "part25C_refit_comparison": {
+  "file": "<local data dir>/release_from_mac/scores/part25/C/pull/p25C-4/out/q2a_pitt_enc_rep5_oof.csv",
+  "per_repeat_auc": [
+   0.7688880278961643,
+   0.788066640836885,
+   0.7694885703215808,
+   0.8083688492832235,
+   0.7882506780317705
+  ],
+  "folds_equal_part26_per_seed": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "max_abs_pclip_diff_per_seed": [
+   0.01910352703513185,
+   0.020527958908233668,
+   0.013896226834307912,
+   0.01595607401944582,
+   0.037245988887738
+  ]
+ },
+ "zeroshot": {
+  "file": "<local data dir>/paper1_local_runs/probe2/pitt_zeroshot_scores.csv",
+  "sha256": "9cd9800ed47adee9d9912219bf31db487d4941128364d80babf3d0488fbfff6c",
+  "auc": 0.6173382409918635,
+  "auc_4dp": 0.6173,
+  "equals_states_p_yes": true
+ },
+ "gap": {
+  "point": 0.16738279736536232,
+  "point_4dp": 0.1674,
+  "ci_2.5": 0.0944980334250522,
+  "ci_97.5": 0.2432837547542402,
+  "ci_4dp": [
+   0.0945,
+   0.2433
+  ],
+  "interval_above_zero": true,
+  "p_boot_diff_le0": 0.0,
+  "probe_mean5_ci": [
+   0.7355999985793839,
+   0.8347381449574669
+  ],
+  "zeroshot_ci": [
+   0.5540910140710171,
+   0.6799241770696612
+  ],
+  "usable_draws": 2000,
+  "point_master_mean_minus_answer": 0.16726175900813645
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "probe (mean of the five per-repeat AUCs) and zero-shot AUC on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "states": {
+  "source": "<local data dir>/paper1_local_runs/probe2/pitt_states.npz",
+  "source_sha256": "1390814cdd4105be27d92a501fe0e31d9d008e3b967d09217bbecac64d6254c5",
+  "probe_input": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_Pitt/stage/q2a_pitt_encstates.npz",
+  "probe_input_sha256": "3043392320c1675e7b6363fa7d2f4237fec44f8a6a0966e7aa4e18832c9a0bc9",
+  "probe_input_arrays_equal_source": true,
+  "keys": {
+   "enc": [
+    [
+     468,
+     33,
+     1280
+    ],
+    "float32"
+   ],
+   "label": [
+    [
+     468
+    ],
+    "int64"
+   ],
+   "spk": [
+    [
+     468
+    ],
+    "<U11"
+   ],
+   "p_yes": [
+    [
+     468
+    ],
+    "float64"
+   ],
+   "name": [
+    [
+     468
+    ],
+    "<U30"
+   ]
+  }
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen2-Audio_Pitt/per_clip/q2a_pitt_perclip.csv",
+  "draws_npz": "scores/part26/Qwen2-Audio_Pitt/draws/q2a_pitt_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen2-Audio_Pitt/pull/p26-q2a-pitt/out/p26_q2a_pitt_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen2-Audio_Pitt/pull/p26-q2a-pitt/out/p26_q2a_pitt_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen2-Audio_Pitt/pull/p26-q2a-pitt/out/p26_q2a_pitt_podverify.json",
+  "pod_tar": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_Pitt/pull/p26-q2a-pitt.tar",
+  "script": "scripts/part26/Qwen2-Audio_Pitt/scripts/q2a_pitt_gap.py"
+ },
+ "sha256": {
+  "pod_oof_csv": "18292b3c3a2da3c569b01f30f49093ae41c1c9ca638ea411d427fb6557895b3d",
+  "pod_json": "396a74fef35daeef086d64ee68e697810d0fc3d3466ad38edf1ff64a085e3095",
+  "perclip_csv": "2986e7a1fc526810319dd31e2377cdd6e324174f8ba56074643d976851a36c79",
+  "draws_npz": "1eec8afeab7dd393218bc8c4a6bfa539bd6c5c25156e4607680ca8abab02355d",
+  "master_json": "ba576018b973f22001c8ce2973e7a5471309936a5a2fe7fcd38f1a0990fdfc28"
+ },
+ "command": "/usr/local/bin/python3 scripts/q2a_pitt_gap.py"
+}

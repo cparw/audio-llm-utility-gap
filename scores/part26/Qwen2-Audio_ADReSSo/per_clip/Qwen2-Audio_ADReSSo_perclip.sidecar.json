@@ -1,0 +1,246 @@
+{
+ "task": "PART 26 probe grid: Qwen2-Audio encoder nested probe on ADReSSo, paired probe minus zero-shot answer gap",
+ "date_utc": "2026-09-24T00:53:20.097517+00:00",
+ "model": "Qwen2-Audio",
+ "dataset": "ADReSSo",
+ "condition": "AD",
+ "n": 237,
+ "n_speakers": 237,
+ "n_pos": 122,
+ "probe": {
+  "estimator": "nested encoder probe: outer folds = the five saved repeat fold files; inner GroupKFold(4) (pod tie rule) picks the layer by mean inner AUC inside each outer training set; StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit at that layer; Table 1 value = mean of the five per-repeat out-of-fold AUCs",
+  "script": "p25a_nested5.py (sha256 710e3de8d94eaa9cbc0cb3a5c30868415574ad669aa4fa6e0c728edfdc0fb68e, byte identical to part25/A/podfiles/p25a_nested5.py)",
+  "per_repeat_auc": [
+   0.8629365645046329,
+   0.8388453314326443,
+   0.854846756949394,
+   0.8545972915181753,
+   0.8572344975053456
+  ],
+  "mean5": 0.8536920883820385,
+  "per_repeat_4dp": [
+   0.8629,
+   0.8388,
+   0.8548,
+   0.8546,
+   0.8572
+  ],
+  "mean5_4dp": 0.8537,
+  "layers": {
+   "seed0": [
+    26,
+    27,
+    27,
+    27,
+    20
+   ],
+   "seed1": [
+    27,
+    21,
+    29,
+    21,
+    20
+   ],
+   "seed2": [
+    22,
+    21,
+    29,
+    27,
+    21
+   ],
+   "seed3": [
+    29,
+    27,
+    20,
+    29,
+    28
+   ],
+   "seed4": [
+    27,
+    27,
+    21,
+    29,
+    21
+   ]
+  },
+  "single_split_auc": 0.8781895937277264,
+  "single_split_layers": [
+   27,
+   20,
+   27,
+   20,
+   21
+  ],
+  "table1_per_repeat": [
+   0.8629,
+   0.8388,
+   0.8548,
+   0.8546,
+   0.8572
+  ],
+  "table1_mean": 0.8537,
+  "matches_table1_4dp": true,
+  "fold_files_equal_pod_output": {
+   "seed0": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "sha256": "2da95259b8772bf9d94c96a2d2ba64517b79f011edcdd6a4f8cebd1d73b5faf6",
+    "equal": true
+   },
+   "seed1": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "sha256": "771ad7de616eaf626b52f9e88f4e8818301b519840501fea6345bdd5950d6032",
+    "equal": true
+   },
+   "seed2": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "sha256": "3b00c2b684ecc23f943389c23d1ce003afdd8859e0885817a08120d861a2862c",
+    "equal": true
+   },
+   "seed3": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "sha256": "f1670e0c80261a9932e7b8076707e161c34fd38d4fbb28da22a1cf7660e3965d",
+    "equal": true
+   },
+   "seed4": {
+    "file": "<local data dir>/release/folds/adresso_groupkfold5_pod_seed4_UNVERIFIED.csv",
+    "sha256": "c36778a287fcccc7a1ba13557063899fe3ea4d834949ca361fec7d02e8f6a8bb",
+    "equal": true
+   }
+  },
+  "fold_files_equal_pod_tie_rule": {
+   "seed0": true,
+   "seed1": true,
+   "seed2": true,
+   "seed3": true,
+   "seed4": true,
+   "single": true
+  },
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "pod_seconds": 38.8,
+  "pod_command": "p25a_nested5.py in/q2a_adresso_enc_states.npz adresso folds out/p26_q2a_adresso",
+  "states_used_on_pod": {
+   "file": "/workspace/in/q2a_adresso_enc_states.npz",
+   "sha256": "9d5aaed9f90ecf62353021d08122540c712adab1668b7477a374d452c3cccba9",
+   "keys": {
+    "enc": [
+     [
+      237,
+      33,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      237
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      237
+     ],
+     "<U8"
+    ],
+    "name": [
+     [
+      237
+     ],
+     "<U12"
+    ]
+   }
+  },
+  "p25C_refit_comparison": {
+   "file": "<local data dir>/release_from_mac/scores/part25/C/pull/p25C-3/out/q2a_adresso_enc_rep5_oof.csv",
+   "folds_equal": true,
+   "max_abs_p_diff": 4.9871828888825576e-11
+  }
+ },
+ "zeroshot": {
+  "file": "<local data dir>/paper1_local_runs/probe2/adresso_zeroshot_scores.csv",
+  "sha256": "5e4140be4e61ee95c064ce7c272615a65892dccf3442246668b9b9372937d55a",
+  "auc": 0.6648610121168924,
+  "auc_4dp": 0.6649,
+  "score_column": "p_yes"
+ },
+ "gap": {
+  "point": 0.18883107626514606,
+  "ci_2p5_97p5": [
+   0.11543940874306319,
+   0.2681630972995935
+  ],
+  "interval_above_zero": true,
+  "interval_excludes_zero": true,
+  "p_boot_le0": 0.0,
+  "probe_mean5_ci": [
+   0.8093278158364365,
+   0.8949193548387095
+  ],
+  "zeroshot_ci": [
+   0.5935356001539387,
+   0.7306402452057247
+  ],
+  "usable_draws": 2000,
+  "total_draws": 2000
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC, same rows in the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "versions_mac": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen2-Audio_ADReSSo/per_clip/Qwen2-Audio_ADReSSo_perclip.csv",
+  "draws_npz": "scores/part26/Qwen2-Audio_ADReSSo/draws/Qwen2-Audio_ADReSSo_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen2-Audio_ADReSSo/pull/p26-q2a-adresso/out/p26_q2a_adresso_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen2-Audio_ADReSSo/pull/p26-q2a-adresso/out/p26_q2a_adresso_enc_nested5.json",
+  "states_source": "<local data dir>/paper1_local_runs/probe2/adresso_states.npz",
+  "states_uploaded": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_ADReSSo/podfiles/q2a_adresso_enc_states.npz",
+  "table1_json": "<local data dir>/paper1_local_runs/omni_final/q2a_adresso_nested_repeats.json",
+  "gap_script": "scripts/part26/Qwen2-Audio_ADReSSo/scripts/gap26.py"
+ },
+ "sha256": {
+  "pod_oof_csv": "cb5acd66471a50c0f9833602b2f756507177a2fc3f279a4a479f08d173ddfc7b",
+  "pod_json": "b622bee09a0d47ece17dfc6db308f82c09dedc5a0125ca58d6b2e4264c26b156",
+  "states_source": "089445b1fc4f48e2a73df4f1fbfb6b5f967cfa41eecb6b5a98ec259a3e1f4122",
+  "states_uploaded": "9d5aaed9f90ecf62353021d08122540c712adab1668b7477a374d452c3cccba9",
+  "table1_json": "f31f5a3b83635ac544792348c65b29061809f89fc35321abab93ad7fc10a0313",
+  "perclip_csv": "f571d4f28736fe09795b67b806dc6668aa4c2da6336984477f45ac41005170c7",
+  "draws_npz": "1866a288c246c001c73c6a6fea46aebbe394baf76002a35a04c8085a838907b0"
+ },
+ "command": "/usr/local/bin/python3 gap26.py",
+ "pod": {
+  "name": "p26-q2a-adresso",
+  "id": "fx4m1lrp4exk6p",
+  "type": "CPU cpu3c, 32 vCPU, AMD EPYC 9655P",
+  "cost_per_hr": 0.96,
+  "created_utc": "2026-09-24T00:46:17Z",
+  "deleted_utc": "2026-09-24T00:53:04Z (watchdog, after pull; REST GET then 404)",
+  "estimated_cost_usd": 0.109,
+  "watchdog": "scripts/watchdog26.sh (copy of part24/watchdog24.sh), log logs/watchdog26.log"
+ },
+ "verification": {
+  "file": "verify/verify26.json",
+  "PASS": true,
+  "checks": "pulled sha256 equal to the pod's; per-clip csv equals pod OOF; AUCs recomputed with a rank formula (max diff 1.1e-16); nested probe rerun on the Mac from the original states file picks the same 25 layers, mean5 0.8536 vs pod 0.8537; bootstrap rebuilt draw by draw (max diff 4.4e-16), same interval"
+ },
+ "status": "VERIFIED"
+}

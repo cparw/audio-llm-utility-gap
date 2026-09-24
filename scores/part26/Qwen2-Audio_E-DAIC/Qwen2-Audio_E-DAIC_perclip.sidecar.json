@@ -1,0 +1,307 @@
+{
+ "task": "PART26 probe grid cell: Qwen2-Audio, E-DAIC (first 30 s of dcaps_proc/<pid>.wav), encoder nested probe minus zero-shot answer",
+ "date_utc": "2026-09-24T00:59:51.941408+00:00",
+ "model": "Qwen2-Audio",
+ "dataset": "E-DAIC",
+ "condition": "MDD",
+ "window": "30 s (x[:16000*30])",
+ "n": 275,
+ "n_speakers": 275,
+ "n_pos": 66,
+ "probe": {
+  "estimator": "nested: outer = saved fold files (five renumbered repeats, pod tie order); inner GroupKFold(4) with the pod tie rule on the outer training speakers picks the encoder stage by mean inner AUC; StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit on the outer training rows at that stage; value = mean of the five per-repeat out-of-fold AUCs",
+  "script": "part25/A/podfiles/p25a_nested5.py (unchanged, sha256 710e3de8d94eaa9cbc0cb3a5c30868415574ad669aa4fa6e0c728edfdc0fb68e)",
+  "per_repeat_auc": [
+   0.5130491518051328,
+   0.6021458605190663,
+   0.5555313904596201,
+   0.5558213716108453,
+   0.6098303610265332
+  ],
+  "mean5": 0.5672756270842394,
+  "per_repeat_auc_4dp": [
+   0.513,
+   0.6021,
+   0.5555,
+   0.5558,
+   0.6098
+  ],
+  "mean5_4dp": 0.5673,
+  "single_split_auc": 0.6237494562853414,
+  "layers": {
+   "seed0": [
+    21,
+    4,
+    11,
+    4,
+    18
+   ],
+   "seed1": [
+    4,
+    5,
+    0,
+    4,
+    6
+   ],
+   "seed2": [
+    4,
+    4,
+    6,
+    29,
+    19
+   ],
+   "seed3": [
+    0,
+    0,
+    0,
+    29,
+    4
+   ],
+   "seed4": [
+    0,
+    4,
+    6,
+    5,
+    1
+   ]
+  },
+  "single_split_layers": [
+   4,
+   5,
+   0,
+   0,
+   4
+  ],
+  "json_per_repeat_auc": [
+   0.5130491518051328,
+   0.6021458605190663,
+   0.5555313904596201,
+   0.5558213716108453,
+   0.6098303610265332
+  ],
+  "json_mean5": 0.5672756270842394,
+  "master_json": "<local data dir>/paper1_local_runs/omni_final/q2a_edaic_nested_repeats.json",
+  "master_per_repeat": [
+   0.513,
+   0.6021,
+   0.5555,
+   0.5558,
+   0.6098
+  ],
+  "master_mean": 0.5673,
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-101-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "n_jobs": 30,
+  "pod_seconds": 39.5,
+  "states_used_on_pod": {
+   "file": "/workspace/in/q2a_edaic_encstates.npz",
+   "sha256": "ffcc52b2e35efa4fc13a04b6242c23b7bb7a2e35e402b782f1ad2ee9a52d2bbd",
+   "keys": {
+    "enc": [
+     [
+      275,
+      33,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      275
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7"
+    ]
+   }
+  },
+  "states_provenance": {
+   "source_states": "<local data dir>/paper1_local_runs/probe2/edaic_states.npz",
+   "source_sha256": "da41d1bdc5df338bb6cdc14ac32a4dd3065af158494fe8d42b6754e2c75455e8",
+   "derived": "q2a_edaic_encstates.npz",
+   "derived_sha256": "ffcc52b2e35efa4fc13a04b6242c23b7bb7a2e35e402b782f1ad2ee9a52d2bbd",
+   "keys_copied": [
+    "enc",
+    "label",
+    "spk",
+    "p_yes",
+    "name"
+   ],
+   "arrays_equal_source": {
+    "enc": true,
+    "label": true,
+    "spk": true,
+    "p_yes": true,
+    "name": true
+   },
+   "array_bytes_sha256": {
+    "enc": "cf037f36ecf4ff07df0313f22649b1a15d12ebe3845cfe6f7e301320b5571835",
+    "label": "5cb6377f783efaf86a4221f56a97a352fe0f89aec1baa0df11c02c7441445dac",
+    "spk": "3b50f89ef51d94fd0782d63ecdc39cdb7d1e4fdb22242105e3e69fdace3ecaaa",
+    "p_yes": "8bb632e7f716b71c3dc2812beef65a685b5c9aeaadce9a72ecd669c19f3bc904",
+    "name": "23b857fa16c5ab449e9a8c5d4b15fbb99a2d0e86b4268ae2f48ffc9da6fdce05"
+   },
+   "shapes": {
+    "enc": [
+     [
+      275,
+      33,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      275
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      275
+     ],
+     "<U3"
+    ],
+    "p_yes": [
+     [
+      275
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      275
+     ],
+     "<U7"
+    ]
+   },
+   "note": "enc-only subset of the saved Qwen2-Audio E-DAIC 30 s states (np.savez, uncompressed); no array changed"
+  },
+  "fold_files": {
+   "seed0": {
+    "file": "edaic_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "sha256": "f18cd808187fef64cc9fe22e589f62a9452f17b994cef0d61d6ef9a11f57dc8d",
+    "csv_equals_file": true
+   },
+   "seed1": {
+    "file": "edaic_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "sha256": "4b6f898e61b4ceb543ad7f5c1b77db21979c79d705ec246904702980f3b22d3e",
+    "csv_equals_file": true
+   },
+   "seed2": {
+    "file": "edaic_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "sha256": "114a25b7d20bef6e1b4db1f49d1c1c25d8dc39548f475acb8ad2759aef0f1c07",
+    "csv_equals_file": true
+   },
+   "seed3": {
+    "file": "edaic_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "sha256": "a8bcff407001582f69925f4c7d088a7f38329c780a2e7e45dae28de3f9166ac4",
+    "csv_equals_file": true
+   },
+   "seed4": {
+    "file": "edaic_groupkfold5_pod_seed4_UNVERIFIED.csv",
+    "sha256": "3c7b1fad43992659ef99f257e4a4cf073a8dfe93cf42f3fd9d47f0e20f502046",
+    "csv_equals_file": true
+   },
+   "single": {
+    "file": "edaic_groupkfold5_pod.csv",
+    "sha256": "1d57d4624adf4f40f5ac44b42215507cb11e2e9bdb537670a21eff7c40db37ff",
+    "csv_equals_file": true
+   }
+  }
+ },
+ "answer": {
+  "file": "<local data dir>/paper1_local_runs/probe2/edaic_zeroshot_scores.csv",
+  "sha256": "f3c53b3207f07a7e43eb72d59dd776c6b89c1bb64deb87014b9093934cac8abb",
+  "auc": 0.6463679860809046,
+  "p_yes_states_vs_file_max_abs_diff": 0.0
+ },
+ "gap": {
+  "point": -0.07909235899666522,
+  "ci": [
+   -0.16639547196450197,
+   0.01197060256568396
+  ],
+  "probe_mean5_ci": [
+   0.5077110337547104,
+   0.6254646278250052
+  ],
+  "zeroshot_ci": [
+   0.5681239425355451,
+   0.7216929424445446
+  ],
+  "usable_draws": 2000,
+  "interval_above_zero": false,
+  "interval_excludes_zero": false
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "probe (mean of the five per-repeat AUCs) and zero-shot AUC on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score"
+ },
+ "podverify": {
+  "PASS": true,
+  "max_abs_pred_diff": 0.0,
+  "max_abs_inner_score_diff": 2.34600243675942e-08,
+  "layer_mismatches": []
+ },
+ "pod": {
+  "name": "p26-q2a-edaic",
+  "create_response": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/launch/create_p26-q2a-edaic_resp.json",
+  "id": "k93fsuqg1hk1y7",
+  "cpuFlavorId": "cpu3c",
+  "vcpu": 32,
+  "cost_per_hr": 0.96,
+  "created_utc": "2026-09-24 00:47:05.93 +0000 UTC",
+  "deleted": "ALL_DONE 00:57:07Z UTC (watchdog26.log, REST status 404 after)",
+  "est_cost_usd": 0.16
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen2-Audio_E-DAIC/Qwen2-Audio_E-DAIC_perclip.csv",
+  "draws_npz": "scores/part26/Qwen2-Audio_E-DAIC/Qwen2-Audio_E-DAIC_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen2-Audio_E-DAIC/pull/p26-q2a-edaic/out/p26_q2a_edaic_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen2-Audio_E-DAIC/pull/p26-q2a-edaic/out/p26_q2a_edaic_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen2-Audio_E-DAIC/pull/p26-q2a-edaic/out/p26_q2a_edaic_podverify.json"
+ },
+ "sha256": {
+  "pod_oof_csv": "642fcc9db916a177595098bc253b25e7db0497b39129ce9aad1cd606df4874d8",
+  "pod_json": "997254d0bafeaeaea6c0d62c0b59913da007999e5fc4ba46ad8d2333d4201dd2",
+  "perclip_csv": "aa0e78282c75e0451b2a6515cd42301eabc173a3541fac038e389f0199574d4d",
+  "draws_npz": "e04941fadfa1a10f791065e1f9a9fb449eac5e1eb8b24f8de7f328dc0cc6e66d"
+ },
+ "command": "/usr/local/bin/python3 gap26_q2a_edaic.py"
+}

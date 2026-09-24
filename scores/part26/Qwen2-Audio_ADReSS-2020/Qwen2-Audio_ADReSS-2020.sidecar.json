@@ -1,0 +1,352 @@
+{
+ "cell": "Qwen2-Audio / ADReSS-2020",
+ "model": "Qwen2-Audio-7B-Instruct",
+ "dataset": "ADReSS-2020",
+ "condition": "AD",
+ "part": "PART26",
+ "date_utc": "2026-09-24T00:55:29.052164+00:00",
+ "n": 156,
+ "n_speakers": 156,
+ "n_pos": 78,
+ "probe": {
+  "estimator": "encoder nested probe, layer chosen inside each outer training fold by mean inner GroupKFold(4) AUC (pod tie rule), StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit at that layer; outer folds = saved release fold files adress2020_groupkfold5_pod_seed{0..4}_UNVERIFIED.csv; value = mean of the five per-repeat out-of-fold AUCs",
+  "script": "part25/A/podfiles/p25a_nested5.py (unchanged, sha256 710e3de8d94eaa9cbc0cb3a5c30868415574ad669aa4fa6e0c728edfdc0fb68e)",
+  "per_repeat_auc": [
+   0.8149243918474688,
+   0.8200197238658776,
+   0.8284023668639053,
+   0.8658777120315583,
+   0.8284023668639053
+  ],
+  "mean5": 0.831525312294543,
+  "per_repeat_auc_4dp": [
+   0.8149,
+   0.82,
+   0.8284,
+   0.8659,
+   0.8284
+  ],
+  "mean5_4dp": 0.8315,
+  "layers": {
+   "seed0": [
+    31,
+    32,
+    20,
+    32,
+    29
+   ],
+   "seed1": [
+    20,
+    20,
+    20,
+    27,
+    20
+   ],
+   "seed2": [
+    20,
+    18,
+    32,
+    29,
+    32
+   ],
+   "seed3": [
+    31,
+    31,
+    32,
+    32,
+    32
+   ],
+   "seed4": [
+    32,
+    32,
+    32,
+    20,
+    32
+   ]
+  },
+  "single_split_podtie_auc": 0.784845496383958,
+  "single_split_layers": [
+   18,
+   32,
+   32,
+   32,
+   28
+  ],
+  "fold_files": {
+   "seed0": {
+    "fold_file": "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "fold_file_sha256": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed1": {
+    "fold_file": "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "fold_file_sha256": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed2": {
+    "fold_file": "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "fold_file_sha256": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed3": {
+    "fold_file": "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "fold_file_sha256": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed4": {
+    "fold_file": "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+    "fold_file_sha256": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "single": {
+    "fold_file": "adress2020_groupkfold5_pod.csv",
+    "fold_file_sha256": "f88e8566d034a2ce947f17ff61a5ae11109c4a2abfbe655980cdbd1d857d7067",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   }
+  },
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "pod_seconds": 51.5,
+  "states_on_pod": {
+   "file": "/workspace/in/q2a_adress2020_encstates.npz",
+   "sha256": "0a86d1990536f13b192d8c24ec00c271adfed65ab6338e421902730bb61313ef",
+   "keys": {
+    "enc": [
+     [
+      156,
+      33,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      156
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      156
+     ],
+     "<U4"
+    ],
+    "p_yes": [
+     [
+      156
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      156
+     ],
+     "<U8"
+    ]
+   }
+  }
+ },
+ "answer": {
+  "file": "<local data dir>/paper1_local_runs/probe2/adress2020_zeroshot_scores.csv",
+  "sha256": "6a211f89a4305144e9f17352891f7b2afb08301840a46176a85c896a6723133a",
+  "zeroshot_auc": 0.6824457593688363,
+  "zeroshot_auc_4dp": 0.6824,
+  "score": "p_yes"
+ },
+ "gap": {
+  "point": 0.14907955292570663,
+  "point_4dp": 0.1491,
+  "ci95": [
+   0.06404416602167169,
+   0.23683606605916663
+  ],
+  "ci95_4dp": [
+   0.064,
+   0.2368
+  ],
+  "interval_above_zero": true,
+  "interval_excludes_zero": true,
+  "probe_mean5_ci95": [
+   0.7749457070312683,
+   0.8841396220160583
+  ],
+  "zeroshot_ci95": [
+   0.5988396477439138,
+   0.758886887357282
+  ],
+  "usable_draws": 2000,
+  "p_boot_diff_le0": 0.001
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat probe AUCs and the zero-shot answer AUC on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "code_path": "part25/A/scripts/A_gaps.py boot(), copied unchanged"
+ },
+ "comparisons": {
+  "master_lookup_table1": {
+   "file": "<local data dir>/paper1_local_runs/omni_final/q2a_adress2020_nested_repeats.json",
+   "per_repeat": [
+    0.8149,
+    0.82,
+    0.8284,
+    0.8659,
+    0.8284
+   ],
+   "mean": 0.8315,
+   "per_repeat_abs_diff_4dp": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mean5_matches_4dp": true
+  },
+  "part25C_p25C2_linux_refit": {
+   "file": "<local data dir>/release_from_mac/scores/part25/C/pull/p25C-2/out/q2a_adress2020_enc_rep5_oof.csv",
+   "folds_equal_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "max_abs_pred_diff_per_seed": [
+    4.985356572007049e-11,
+    4.888153770643555e-11,
+    4.9298121140850526e-11,
+    4.9804715906986985e-11,
+    4.675904108353279e-11
+   ]
+  },
+  "probe2_single_split_saved_mac": {
+   "file": "<local data dir>/paper1_local_runs/probe2/adress2020_enc_nested_oof.csv",
+   "note": "earlier Mac single split (Mac GroupKFold order), a different split from these five; recorded only",
+   "auc": 0.8078566732412885
+  }
+ },
+ "podverify": {
+  "file": "scores/part26/Qwen2-Audio_ADReSS-2020/pull/p26-q2a-adress2020/out/p26_q2a_adress2020_podverify.json",
+  "PASS": true,
+  "max_abs_pred_diff": 0.0,
+  "max_abs_inner_score_diff": 2.495881090691654e-08,
+  "layer_mismatches": [],
+  "abs_mean5_diff": 0.0
+ },
+ "inputs": {
+  "states_source": "<local data dir>/paper1_local_runs/probe2/adress2020_states.npz",
+  "states_stage_enc_only": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/stage/q2a_adress2020_encstates.npz",
+  "stage_sha256": "0a86d1990536f13b192d8c24ec00c271adfed65ab6338e421902730bb61313ef"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020_perclip.csv",
+  "draws_npz": "scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020_draws.npz",
+  "pod_oof_csv": "scores/part26/Qwen2-Audio_ADReSS-2020/pull/p26-q2a-adress2020/out/p26_q2a_adress2020_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Qwen2-Audio_ADReSS-2020/pull/p26-q2a-adress2020/out/p26_q2a_adress2020_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Qwen2-Audio_ADReSS-2020/pull/p26-q2a-adress2020/out/p26_q2a_adress2020_podverify.json"
+ },
+ "sha256": {
+  "pod_oof_csv": "8e01b37cb328ef8a138d672d4cd2e826f056648fece4fec73cce300ad132a090",
+  "pod_json": "d3a0528fb292d48ac4015d09fb88afed6b025651f7625912ea2510f428d8ea40",
+  "perclip_csv": "6dbc37c6daa8056d4d4507e1851bdc6371cd86f58def86f1693105db825d9c35",
+  "draws_npz": "f7bcac92f62036f31237192f6c0c042cb1159382eee89e2e3ef3f78fbd2580eb"
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 p26_gap.py",
+ "verification": {
+  "verified": true,
+  "mac_independent_check": "scores/part26/Qwen2-Audio_ADReSS-2020/verify/p26_verify.json",
+  "mac_check_script": "scripts/part26/Qwen2-Audio_ADReSS-2020/scripts/p26_verify.py",
+  "mac_check_sha256": "b2228683767d9d08398aedcf5d881f882926667124068b4c4601d8b627a0bb87",
+  "summary": {
+   "A": true,
+   "B": true,
+   "C": true,
+   "D": true,
+   "E": true,
+   "podverify_PASS": true
+  },
+  "mac_refit_information_only": {
+   "seed0": {
+    "max_abs_pred_diff_mac_refit": 0.0031363109135890688,
+    "auc_mac_refit": 0.8149243918474688,
+    "auc_pod": 0.8149243918474688,
+    "inner_layer_mismatches_mac": [],
+    "max_abs_inner_diff_mac": 0.002525252525252486
+   },
+   "seed1": {
+    "max_abs_pred_diff_mac_refit": 0.0056286829694539575,
+    "auc_mac_refit": 0.8203484549638396,
+    "auc_pod": 0.8200197238658777,
+    "inner_layer_mismatches_mac": [],
+    "max_abs_inner_diff_mac": 0.002192982456140302
+   },
+   "seed2": {
+    "max_abs_pred_diff_mac_refit": 0.006063135580463314,
+    "auc_mac_refit": 0.8284023668639053,
+    "auc_pod": 0.8284023668639053,
+    "inner_layer_mismatches_mac": [],
+    "max_abs_inner_diff_mac": 0.0033143939393940336
+   },
+   "seed3": {
+    "max_abs_pred_diff_mac_refit": 0.00454268096274002,
+    "auc_mac_refit": 0.8657133464825773,
+    "auc_pod": 0.8658777120315582,
+    "inner_layer_mismatches_mac": [],
+    "max_abs_inner_diff_mac": 0.0020920868347338306
+   },
+   "seed4": {
+    "max_abs_pred_diff_mac_refit": 0.009340484251170289,
+    "auc_mac_refit": 0.8285667324128863,
+    "auc_pod": 0.8284023668639053,
+    "inner_layer_mismatches_mac": [],
+    "max_abs_inner_diff_mac": 0.002136752136752129
+   }
+  },
+  "note": "Pod check (p25a_podverify.py): every outer fold refitted at the saved layer (max pred diff 0), inner layer choice re-derived for all 30 outer folds (0 mismatches). Mac check: per-clip file, fold files, rank AUCs, bootstrap rebuilt with own code (max draw diff 4.4e-16), inputs equal the saved Qwen2-Audio states. Mac refit with Mac sklearn 1.7.2 picks the same layer on all 25 outer folds of the five repeats; per-repeat AUC within 0.0004 of the pod."
+ },
+ "pod": {
+  "name": "p26-q2a-adress2020",
+  "id": "vyn4hnge5s8jn0",
+  "cpuFlavorId": "cpu3c",
+  "vcpu": 32,
+  "cpu": "AMD EPYC 9965, avx512f present",
+  "cost_per_hr": 0.96,
+  "created_utc": "2026-09-24T00:47:40Z",
+  "deleted_utc": "2026-09-24T00:55:08Z (watchdog26, after pull; REST now 404)",
+  "est_cost_usd": 0.12,
+  "watchdog": "scripts/part26/Qwen2-Audio_ADReSS-2020/scripts/watchdog26.sh (copy of part24/watchdog24.sh, CPU idle rule as part25/C)",
+  "watchdog_log": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/watchdog26.log",
+  "pull_tar": "<local data dir>/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/pull/p26-q2a-adress2020.tar"
+ }
+}
