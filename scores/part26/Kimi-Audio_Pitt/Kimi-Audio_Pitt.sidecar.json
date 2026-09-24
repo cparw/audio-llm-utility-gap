@@ -1,0 +1,563 @@
+{
+ "cell": "Kimi-Audio / Pitt",
+ "model": "Kimi-Audio-7B-Instruct",
+ "dataset": "Pitt",
+ "condition": "AD",
+ "part": "PART26",
+ "date_utc": "2026-09-24T02:42:20.273801+00:00",
+ "n": 468,
+ "n_speakers": 228,
+ "n_pos": 290,
+ "probe": {
+  "estimator": "encoder nested probe, layer chosen inside each outer training fold by mean inner GroupKFold(4) AUC (pod tie rule), StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced') refit at that layer; outer folds = saved release fold files pitt_groupkfold5_pod_seed{0..4}_UNVERIFIED.csv; value = mean of the five per-repeat out-of-fold AUCs",
+  "script": "part25/A/podfiles/p25a_nested5.py (unchanged, sha256 710e3de8d94eaa9cbc0cb3a5c30868415574ad669aa4fa6e0c728edfdc0fb68e)",
+  "per_repeat_auc": [
+   0.8264238667183262,
+   0.8026927547462224,
+   0.805850445563735,
+   0.8195660596667957,
+   0.801530414567997
+  ],
+  "mean5": 0.8112127082526154,
+  "per_repeat_auc_4dp": [
+   0.8264,
+   0.8027,
+   0.8059,
+   0.8196,
+   0.8015
+  ],
+  "mean5_4dp": 0.8112,
+  "layers": {
+   "seed0": [
+    30,
+    31,
+    31,
+    31,
+    30
+   ],
+   "seed1": [
+    31,
+    31,
+    22,
+    22,
+    30
+   ],
+   "seed2": [
+    26,
+    27,
+    22,
+    22,
+    30
+   ],
+   "seed3": [
+    30,
+    29,
+    30,
+    30,
+    27
+   ],
+   "seed4": [
+    26,
+    31,
+    31,
+    29,
+    28
+   ]
+  },
+  "single_split_podtie_auc": 0.801840371948857,
+  "single_split_layers": [
+   20,
+   29,
+   28,
+   31,
+   31
+  ],
+  "fold_files": {
+   "seed0": {
+    "fold_file": "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv",
+    "fold_file_sha256": "2d9c96e8bb4faf584913ceb6cbf258d42fb56241f1e250d24ed29e58a2dcf727",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed1": {
+    "fold_file": "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv",
+    "fold_file_sha256": "7279e0de67c8077c45d66101f2da6f3b4dec4f4def452e699e8ad1c9ab16c0db",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed2": {
+    "fold_file": "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv",
+    "fold_file_sha256": "94c5d99c7dd0ff0e5cf24bfbde680248c815f3a4611d96dbd4ede90a70c608c9",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed3": {
+    "fold_file": "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv",
+    "fold_file_sha256": "d27a2ab673c2fa99f90f17d50ec158e7276de17f6b5157a65238deed88eb0174",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "seed4": {
+    "fold_file": "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv",
+    "fold_file_sha256": "4e30a180d62a461cb630839700c5216cda55eaa7fd6e3d32dc019de5d795bbf2",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   },
+   "single": {
+    "fold_file": "pitt_groupkfold5_pod.csv",
+    "fold_file_sha256": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0
+   }
+  },
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-51-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "pod_seconds": 82.2,
+  "states_on_pod": {
+   "file": "/workspace/in/kimi_pitt_encstates.npz",
+   "sha256": "f7f22020e85a884a6304c533d34fb3a4e52994f84c7c3f7ad8b682505b1e7869",
+   "keys": {
+    "enc": [
+     [
+      468,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      468
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      468
+     ],
+     "<U11"
+    ],
+    "p_yes": [
+     [
+      468
+     ],
+     "float64"
+    ],
+    "name": [
+     [
+      468
+     ],
+     "<U30"
+    ]
+   }
+  }
+ },
+ "encoder_states": {
+  "new_in_part26": true,
+  "gpu_pod": "p26-kimi-pitt-gpu (ykow87gaqraiqs, NVIDIA H100 80GB HBM3, $3.49/h, created 01:06:02, deleted 01:18:37 UTC)",
+  "script": "gpu_stage/kimi_enc_extract.py = Kimi-Audio_PC-GITA/podfiles/kimi_enc_extract.py, sha256 fa201c10479ecb58a8641981d6903e76cf28001d5a58b709cb96d9d83debb454",
+  "setup": "gpu_stage/setup_kimi.sh (sha256 324748a00e5ee35c5fef42f23e2096e53aabaa11e7416b6c8c54f4a1a1d39adf)",
+  "encoder": "kimia_infer prompt_manager.whisper_model.speech_encoder (Whisper-large-v3 encoder inside Kimi-Audio, the continuous-feature path)",
+  "pooling": "enc: mean over the token_len*4 encoder frames kimia keeps, token_len=(L-1)//1280+1; enc_allframes: mean over all 1500 frames",
+  "enc_shape": [
+   468,
+   32,
+   1280
+  ],
+  "window": "first 30 s, x[:16000*30]; every Pitt clip is 30.01 to 55.56 s, so 480000 samples and 1500 kept frames for all 468",
+  "versions": {
+   "python": "3.12.3",
+   "torch": "2.8.0+cu128",
+   "transformers": "4.51.3",
+   "numpy": "2.5.3",
+   "gpu": "NVIDIA H100 80GB HBM3",
+   "flash_attn": "2.8.3.post1"
+  },
+  "hookcheck_max": 3.5762786865234375e-07,
+  "clip_list": "gpu_stage/mf_pitt.csv, zero-shot file row order",
+  "stage_check": {
+   "source_states": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_Pitt/pull/p26-kimi-pitt-gpu/out/kimi_pitt_encstates.npz",
+   "source_sha256": "4fecad1a119b3128b9543f3edb8aa4bddf97b8647cbe0eb055e4694b2bf14d4f",
+   "keys": {
+    "enc": [
+     [
+      468,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "enc_allframes": [
+     [
+      468,
+      32,
+      1280
+     ],
+     "float32"
+    ],
+    "enc_final_ln": [
+     [
+      468,
+      1280
+     ],
+     "float32"
+    ],
+    "label": [
+     [
+      468
+     ],
+     "int64"
+    ],
+    "spk": [
+     [
+      468
+     ],
+     "<U11"
+    ],
+    "name": [
+     [
+      468
+     ],
+     "<U30"
+    ],
+    "p_yes": [
+     [
+      468
+     ],
+     "float64"
+    ],
+    "mass": [
+     [
+      468
+     ],
+     "float64"
+    ],
+    "kept_frames": [
+     [
+      468
+     ],
+     "int64"
+    ],
+    "samples_heard": [
+     [
+      468
+     ],
+     "int64"
+    ],
+    "dur_file_s": [
+     [
+      468
+     ],
+     "float64"
+    ],
+    "hookcheck_maxdiff": [
+     [
+      468
+     ],
+     "float64"
+    ],
+    "wav_sha256": [
+     [
+      468
+     ],
+     "<U64"
+    ]
+   },
+   "n": 468,
+   "n_unique": 468,
+   "order_equals_zeroshot_rows": true,
+   "zeroshot_labels_equal": true,
+   "zeroshot_speakers_equal": true,
+   "enc_shape": [
+    468,
+    32,
+    1280
+   ],
+   "enc_finite": true,
+   "kept_frames_all_1500": true,
+   "samples_heard_all_480000": true,
+   "enc_equals_enc_allframes": true,
+   "hookcheck_max": 3.5762786865234375e-07,
+   "wav_sha256_equal_mac": true,
+   "p_yes_vs_canonical_30s": {
+    "max_abs": 0.1845279594810587,
+    "median_abs": 0.011304331591385608,
+    "mean_abs": 0.018548935720892164,
+    "pearson": 0.9894573224762537,
+    "auc_this_run": 0.7212127082526152,
+    "auc_canonical": 0.7180356450987988
+   },
+   "p_yes_vs_18sep_fullclip_contrast": {
+    "file": "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv",
+    "max_abs": 0.38279318163200204,
+    "median_abs": 0.035725356066890535,
+    "pearson": 0.9320025286860284,
+    "auc_fullclip": 0.6963580007748935
+   },
+   "rerun10_enc_max_abs": 0.0,
+   "rerun10_p_yes_max_abs": 0.0,
+   "rerun10_names_equal": true,
+   "smoke3_enc_max_abs": 0.0,
+   "stage_file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_Pitt/stage/in/kimi_pitt_encstates.npz",
+   "stage_sha256": "f7f22020e85a884a6304c533d34fb3a4e52994f84c7c3f7ad8b682505b1e7869",
+   "stage_arrays_equal_source": true,
+   "fold_files": {
+    "pitt_groupkfold5_pod.csv": {
+     "sha256": "b2efe5b4a3edf104f8a64f9bc4e3dc99514a633bf86360b73ffd5a9b578c9406",
+     "n": 468,
+     "clips_equal": true,
+     "speakers_equal": true,
+     "fold_sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "pitt_groupkfold5_pod_seed0_UNVERIFIED.csv": {
+     "sha256": "2d9c96e8bb4faf584913ceb6cbf258d42fb56241f1e250d24ed29e58a2dcf727",
+     "n": 468,
+     "clips_equal": true,
+     "speakers_equal": true,
+     "fold_sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "pitt_groupkfold5_pod_seed1_UNVERIFIED.csv": {
+     "sha256": "7279e0de67c8077c45d66101f2da6f3b4dec4f4def452e699e8ad1c9ab16c0db",
+     "n": 468,
+     "clips_equal": true,
+     "speakers_equal": true,
+     "fold_sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "pitt_groupkfold5_pod_seed2_UNVERIFIED.csv": {
+     "sha256": "94c5d99c7dd0ff0e5cf24bfbde680248c815f3a4611d96dbd4ede90a70c608c9",
+     "n": 468,
+     "clips_equal": true,
+     "speakers_equal": true,
+     "fold_sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "pitt_groupkfold5_pod_seed3_UNVERIFIED.csv": {
+     "sha256": "d27a2ab673c2fa99f90f17d50ec158e7276de17f6b5157a65238deed88eb0174",
+     "n": 468,
+     "clips_equal": true,
+     "speakers_equal": true,
+     "fold_sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    },
+    "pitt_groupkfold5_pod_seed4_UNVERIFIED.csv": {
+     "sha256": "4e30a180d62a461cb630839700c5216cda55eaa7fd6e3d32dc019de5d795bbf2",
+     "n": 468,
+     "clips_equal": true,
+     "speakers_equal": true,
+     "fold_sizes": [
+      94,
+      94,
+      94,
+      93,
+      93
+     ]
+    }
+   },
+   "n_pos": 290,
+   "n_speakers": 228
+  },
+  "determinism": {
+   "rerun10_enc_max_abs": 0.0,
+   "rerun10_p_yes_max_abs": 0.0
+  },
+  "same_audio_window_evidence": {
+   "wav_sha256_equal_mac": true,
+   "p_yes_rerun_vs_canonical": {
+    "max_abs": 0.1845279594810587,
+    "median_abs": 0.011304331591385608,
+    "mean_abs": 0.018548935720892164,
+    "pearson": 0.9894573224762537,
+    "auc_this_run": 0.7212127082526152,
+    "auc_canonical": 0.7180356450987988
+   },
+   "p_yes_rerun_vs_18sep_fullclip_contrast": {
+    "file": "<local data dir>/release/overnight/kimi/kimi_pitt_zeroshot_scores.csv",
+    "max_abs": 0.38279318163200204,
+    "median_abs": 0.035725356066890535,
+    "pearson": 0.9320025286860284,
+    "auc_fullclip": 0.6963580007748935
+   },
+   "note": "the answer side is the canonical 19 Sep file; the pod rerun of the answer is recorded only (different torch/flash-attn build)"
+  }
+ },
+ "answer": {
+  "file": "<local data dir>/release/overnight2/part3/kimi_pitt_zeroshot_scores.csv",
+  "sha256": "15a3c5c1175df984d7117cb7f9cbc401a1b6fd12a6dbecf1d68904854a069365",
+  "zeroshot_auc": 0.7180356450987988,
+  "zeroshot_auc_4dp": 0.718,
+  "score": "p_yes",
+  "rerun_on_gpu_pod_auc": 0.7212127082526152
+ },
+ "gap": {
+  "point": 0.09317706315381658,
+  "point_4dp": 0.0932,
+  "ci95": [
+   0.03305832448174661,
+   0.154687551262835
+  ],
+  "ci95_4dp": [
+   0.0331,
+   0.1547
+  ],
+  "interval_above_zero": true,
+  "interval_excludes_zero": true,
+  "probe_mean5_ci95": [
+   0.7604740414929154,
+   0.8602176483695231
+  ],
+  "zeroshot_ci95": [
+   0.6584954708351735,
+   0.7741946436142071
+  ],
+  "usable_draws": 2000,
+  "p_boot_diff_le0": 0.002
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat probe AUCs and the zero-shot answer AUC on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "code_path": "part25/A/scripts/A_gaps.py boot(), copied unchanged"
+ },
+ "comparisons": {
+  "part25C_kimi_pitt_LM_probe_reference": {
+   "file": "<local data dir>/release_from_mac/scores/part25/C/sidecars/C_kimi_pitt_llm.sidecar.json",
+   "note": "the earlier Kimi LM-stage probe (not the encoder), recorded only",
+   "gap": 0.11937814800464941,
+   "probe": null
+  }
+ },
+ "podverify": {
+  "file": "scores/part26/Kimi-Audio_Pitt/pull/p26-kimi-pitt-cpu/out/p26_kimi_pitt_podverify.json",
+  "PASS": true,
+  "max_abs_pred_diff": 0.0,
+  "max_abs_inner_score_diff": 2.6592736013242302e-08,
+  "layer_mismatches": [],
+  "abs_mean5_diff": 0.0
+ },
+ "inputs": {
+  "states_source": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_Pitt/pull/p26-kimi-pitt-gpu/out/kimi_pitt_encstates.npz",
+  "states_source_sha256": "4fecad1a119b3128b9543f3edb8aa4bddf97b8647cbe0eb055e4694b2bf14d4f",
+  "states_stage_enc_only": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_Pitt/stage/in/kimi_pitt_encstates.npz",
+  "stage_sha256": "f7f22020e85a884a6304c533d34fb3a4e52994f84c7c3f7ad8b682505b1e7869"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Kimi-Audio_Pitt/Kimi-Audio_Pitt_perclip.csv",
+  "draws_npz": "scores/part26/Kimi-Audio_Pitt/Kimi-Audio_Pitt_draws.npz",
+  "pod_oof_csv": "scores/part26/Kimi-Audio_Pitt/pull/p26-kimi-pitt-cpu/out/p26_kimi_pitt_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Kimi-Audio_Pitt/pull/p26-kimi-pitt-cpu/out/p26_kimi_pitt_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Kimi-Audio_Pitt/pull/p26-kimi-pitt-cpu/out/p26_kimi_pitt_podverify.json"
+ },
+ "sha256": {
+  "pod_oof_csv": "595bf60e4612ecd523e2d11ee9f536ff4602ee19af288c71b7e05c7ba13e956a",
+  "pod_json": "95393ad5beb5f3cb76eee9490be9e5386684c0cda5c929d933e7ce0edc1de549",
+  "perclip_csv": "4b748e753ea3bda74a1d6ed5b115e0d7095c137d7af9a5c6e92d91f619ef07c5",
+  "draws_npz": "fdf06c3712a3fe9f30955f2e398bc086f32ef3e9ee3c7289dd32c3c933b30b44"
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 p26_gap.py",
+ "verification": {
+  "added_utc": "2026-09-24T02:46:18.726706+00:00",
+  "mac_independent_check": {
+   "file": "scores/part26/Kimi-Audio_Pitt/verify/p26_verify.json",
+   "script": "scripts/part26/Kimi-Audio_Pitt/scripts/p26_verify.py",
+   "PASS": true,
+   "summary": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true,
+    "E": true,
+    "podverify_PASS": true
+   },
+   "bootstrap_ci_rebuilt": [
+    0.03305832448174661,
+    0.15468755126283512
+   ],
+   "note": "A per-clip csv vs pod OOF and zero-shot file; B folds vs release fold files and own GroupKFold fill; C rank AUCs; D own 2000-draw bootstrap; E states pulled equal states probed; F Mac refit, information only"
+  },
+  "encoder_recompute_mac": {
+   "file": "scores/part26/Kimi-Audio_Pitt/verify/p26_kimi_pitt_encoder_recompute.json",
+   "script": "scripts/part26/Kimi-Audio_Pitt/scripts/p26_kimi_pitt_encoder_recompute.py",
+   "pass": true,
+   "weights_sha256_equals_kimi_snapshot": true,
+   "clips": [
+    "conflict_Con_015-0_67805.wav",
+    "conflict_Dem_349-0_5627.wav",
+    "agreement_Con_208-2_3373.wav",
+    "agreement_Dem_157-2_740.wav",
+    "agreement_Dem_714-0_13211.wav"
+   ],
+   "min_cosine_any_layer_any_clip": 0.9999755241040473,
+   "max_rel_l2_any_layer_any_clip": 0.009027884376467387,
+   "all_best_match_same_layer": true,
+   "note": "HF WhisperModel fp32 CPU from the Kimi snapshot whisper-large-v3 weights, first 30 s of the Mac wav, layer means vs pod bf16 states"
+  },
+  "pods": {
+   "gpu": {
+    "id": "ykow87gaqraiqs",
+    "created": "01:06:02",
+    "deleted": "01:18:37",
+    "usd_per_h": 3.49
+   },
+   "cpu": {
+    "id": "rvk1syvmw4l0x2",
+    "created": "01:14:52",
+    "deleted": "01:27:07",
+    "usd_per_h": 1.12
+   },
+   "cell_spend_usd_est": 0.96,
+   "both_deleted_http_204": true
+  }
+ }
+}

@@ -1,0 +1,4 @@
+clip,speaker,p_yes,mass,kept_frames,samples_heard,dur_file_s,wav_sha256,prompt
+conflict_Con_015-0_67805.wav,Control015,0.527962416774103,0.9947253465652466,1500,480000,33.38,d02bf8d29597d0a2557a6c46e5375e21a3cbff8b4a276706e3a2b468eb6f6c97,"Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+conflict_Con_015-1_4987.wav,Control015,0.32261767910462946,0.9936856925487518,1500,480000,55.17,f0624a2ed9e0aea445fb3b83f452a744804871ca4cdb584ba57d5e876d1f4e3b,"Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."
+conflict_Con_015-1_60159.wav,Control015,0.6016108914280272,0.9964895844459534,1500,480000,31.2,fff5a10246c4520548ba90eef9a5aba7dc55bc0afcf2c7d092a05bd692aa31ed,"Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No."

@@ -1,0 +1,207 @@
+{
+ "task": "PART26 probe grid: Kimi-Audio encoder nested probe (layer chosen inside the training folds), five repeats on the saved fold files, paired probe minus zero-shot answer gap",
+ "date_utc": "2026-09-24T03:42:50.814709Z",
+ "model": "Kimi-Audio-7B-Instruct",
+ "dataset": "ADReSS-2020",
+ "condition": "AD",
+ "n": 156,
+ "n_speakers": 156,
+ "n_pos": 78,
+ "n_layers": 32,
+ "method_note": "NEW in PART26: no Kimi encoder states existed before. Earlier Kimi runs hooked only the language model and the paper Method says the Kimi encoder side is skipped. These states come from new forward hooks on the Whisper-large-v3 encoder inside kimia_infer (the path that builds history.continuous_feature). Using this cell in the paper needs the Method text changed.",
+ "states": {
+  "script": "try2/stage/gpu/kimi_enc_probe.py (byte equal to the MDVR-KCL cell copy, md5 13a643f175b363f7ce6d37b5bc27eebc: podD2_final/kimi_probe.py plus Whisper encoder hooks)",
+  "setup": "try2/stage/gpu/setup_kimi.sh (MDVR-KCL cell copy of edaic_conflict_new/kimi/setup_kimi.sh, snapshot pinned to 9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b)",
+  "window": "first 30 s (x[:16000*30]) of the same 156 clips as the zero-shot answer; 142 are 30.0 s, 14 are shorter (4.33 to 28.74 s)",
+  "encoder": "32 Whisper-large-v3 layers, 1280 dims, bf16; each layer output cut to the token_len*4 frames Kimi keeps (1500 for a 30 s clip) and mean-pooled (h.mean(dim=0).float()), as the Qwen2.5-Omni encoder states",
+  "file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSS-2020/try2/pull/p26-kimi-adress2020-g3/out/p26_kimi_adress2020_states.npz",
+  "sha256": "df7198638c466614af5a795bf547c11d690fff39e4f556d60cb4f422a3d7520e",
+  "check_file": "scores/part26/Kimi-Audio_ADReSS-2020/verify/p26_states_check_kimi_adress2020.json",
+  "rerun_p_yes_vs_saved_zeroshot": {
+   "ok": true,
+   "max_abs": 0.02346506143481364,
+   "median_abs": 0.0,
+   "n_over_0p05": 0,
+   "auc_saved": 0.7052925706771861,
+   "auc_rerun": 0.705621301775148,
+   "pearson": 0.9999214084049918
+  },
+  "rerun_llm_vs_saved_llm_states": {
+   "ok": true,
+   "shape": [
+    156,
+    28,
+    3584
+   ],
+   "max_abs": 0.5,
+   "max_abs_over_max": 0.004048582995951417,
+   "min_layer_corr": 0.9999983292620764
+  },
+  "final_layernorm_vs_continuous_feature": {
+   "ok": true,
+   "max_abs": 0.0
+  }
+ },
+ "probe": {
+  "estimator": "outer folds = saved pod fold files seed0..4; inner GroupKFold(4) with the pod tie rule on the outer training speakers scores every encoder layer (32) by mean inner AUC; argmax; refit StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'); score held-out clips. Probe = mean over the five repeats of the out-of-fold AUC.",
+  "script": "part25/A/podfiles/p25a_nested5.py (unchanged, md5 615ced0380cca2636ed7cc30c71810e6)",
+  "per_repeat_auc": [
+   0.888724523339908,
+   0.8902038132807363,
+   0.8770545693622617,
+   0.8973537146614069,
+   0.8874095989480605
+  ],
+  "mean5": 0.8881492439184747,
+  "per_repeat_auc_4dp": [
+   0.8887,
+   0.8902,
+   0.8771,
+   0.8974,
+   0.8874
+  ],
+  "mean5_4dp": 0.8881,
+  "layers": {
+   "seed0": [
+    29,
+    31,
+    31,
+    31,
+    29
+   ],
+   "seed1": [
+    31,
+    31,
+    29,
+    31,
+    28
+   ],
+   "seed2": [
+    31,
+    29,
+    28,
+    31,
+    31
+   ],
+   "seed3": [
+    29,
+    29,
+    31,
+    31,
+    31
+   ],
+   "seed4": [
+    29,
+    29,
+    31,
+    29,
+    31
+   ]
+  },
+  "single_split_auc": 0.8782051282051283,
+  "single_split_layers": [
+   29,
+   29,
+   31,
+   31,
+   29
+  ],
+  "fold_files": {
+   "seed0": "adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "seed1": "adress2020_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "seed2": "adress2020_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "seed3": "adress2020_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "seed4": "adress2020_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "single": "adress2020_groupkfold5_pod.csv"
+  },
+  "fold_file_sha256": {
+   "seed0": "5411a146763482b9bb88a64a4c7f550a35285b7322b5c7796fd6fd6c25061cd6",
+   "seed1": "e011312b0116f9208f381ec589ab63a7638658e5ebe99e59e5ae71258310149e",
+   "seed2": "fbd872e6575fac73620ccdeb2dc2697e14490162e51ecda9d62cd1cf4a395b9c",
+   "seed3": "69781fdb96a987e45864e19f4b2064a2a57e141894193aa6dcb3aecad69030f9",
+   "seed4": "8c4e81be7dac1187336eb6825c91bbfc20b2ed03ce3409bdefd9c0151a0cd0cb",
+   "single": "f88e8566d034a2ce947f17ff61a5ae11109c4a2abfbe655980cdbd1d857d7067"
+  },
+  "fold_files_status": "UNVERIFIED in release/folds (they reproduce the saved per-repeat AUCs within 0.008, no per-clip OOF ever existed to check them clip by clip); each equals the pod tie rule rebuild (asserted by the probe script)",
+  "table1_saved": null,
+  "table1_note": "no earlier Kimi encoder probe exists, so there is no Table 1 value to compare with",
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "podverify_pass": true,
+  "n_jobs": 30,
+  "pod_seconds": 40.2
+ },
+ "answer": {
+  "file": "<local data dir>/release/overnight2/kimi_new/kimi_adress2020_zeroshot_scores.csv",
+  "auc": 0.7052925706771861,
+  "auc_4dp": 0.7053,
+  "column": "p_yes"
+ },
+ "gap": {
+  "point": 0.18285667324128863,
+  "ci_2p5_97p5": [
+   0.08788486842105273,
+   0.2738287866299561
+  ],
+  "interval_above_zero": true,
+  "interval_excludes_zero": true,
+  "probe_mean5_ci": [
+   0.833555167055167,
+   0.9342616538279919
+  ],
+  "answer_ci": [
+   0.6263950922467183,
+   0.7851156144616768
+  ],
+  "usable_draws": 2000
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC, on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "degenerate_draws_dropped": 0
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/p26_gap_kimi_adress2020.py",
+ "files": {
+  "perclip_csv": "scores/part26/Kimi-Audio_ADReSS-2020/per_clip/p26_kimi_adress2020_perclip.csv",
+  "draws_npz": "scores/part26/Kimi-Audio_ADReSS-2020/draws/p26_kimi_adress2020_draws.npz",
+  "pod_oof_csv": "scores/part26/Kimi-Audio_ADReSS-2020/try2/pull/p26-kimi-adress2020-c2/out/p26_kimi_adress2020_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Kimi-Audio_ADReSS-2020/try2/pull/p26-kimi-adress2020-c2/out/p26_kimi_adress2020_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Kimi-Audio_ADReSS-2020/try2/pull/p26-kimi-adress2020-c2/out/p26_kimi_adress2020_podverify.json",
+  "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_adress2020_zeroshot_scores.csv",
+  "states": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_ADReSS-2020/try2/pull/p26-kimi-adress2020-g3/out/p26_kimi_adress2020_states.npz"
+ },
+ "sha256": {
+  "pod_oof_csv": "268731bef6f076f6c7e8ae2917f74592b2cbd062c9ce2b29712f46c3a53f7ba0",
+  "pod_json": "fc3a32d95283bc0f4c9790c5480a2251b8ef5c447251d2780ff486db26c3d8f7",
+  "zeroshot": "adf6b53ffee9aa8112fb796a2588c2ffa583c53a9ad94b39dfa867dd458abcea",
+  "states": "df7198638c466614af5a795bf547c11d690fff39e4f556d60cb4f422a3d7520e",
+  "perclip_csv": "cfa9483acb7594a945f3141f59191d94a569fafa9abd50c2597187c95e61d893",
+  "draws_npz": "fd6c6829409fa78f8ac4f3cb8651f2b3ffc32a680d56dc286fe3abd850be36e0"
+ },
+ "attempt": "try2: try 1 (01:00 to 01:43 UTC) never extracted; its Mac upload never arrived and the watchdog idle-killed the GPU pod after setup",
+ "verification": {
+  "states_check": "scores/part26/Kimi-Audio_ADReSS-2020/verify/p26_states_check_kimi_adress2020.json (11 of 11 pass)",
+  "independent_mac_check": "scores/part26/Kimi-Audio_ADReSS-2020/verify/p26_verify_kimi_adress2020.json (16 of 17 pass)",
+  "note": "scores/part26/Kimi-Audio_ADReSS-2020/verify/p26_verify_kimi_adress2020_note.json",
+  "only_failure": "mac_refit_at_saved_layers_same_auc: Mac refit on sklearn 1.7.2 differs from the pinned pod by at most 3.3e-04 AUC per repeat, 8.2e-05 on mean5 (same at 4 dp); the pod-side podverify on the pinned stack is exact (max prediction difference 0, 0 layer mismatches)"
+ }
+}

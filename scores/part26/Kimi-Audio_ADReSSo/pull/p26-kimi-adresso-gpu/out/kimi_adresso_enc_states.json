@@ -1,0 +1,29 @@
+{
+ "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+ "snapshot": "/workspace/hf_cache/hub/models--moonshotai--Kimi-Audio-7B-Instruct/snapshots/9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+ "clip_list": "/workspace/mf_adresso.csv",
+ "clip_list_sha256": "f17f8da80d7d8de483b67885d0d47285a48d828eaec602448ff3d6553c77bd9f",
+ "condition": "ad",
+ "prompt": "Based only on this recording, does this speaker show signs of dementia? Answer with one word, Yes or No.",
+ "n": 237,
+ "rerun_answer_auc": 0.7543834640057021,
+ "encoder": "kimia_infer Whisper-large-v3 encoder (prompt_manager.whisper_model.speech_encoder), forward hooks on all 32 layers, layer outputs before the final encoder layer_norm",
+ "enc_pooling": "mean over the first token_len*4 frames (the frames Kimi passes to the LM), token_len=(L-1)//1280+1",
+ "enc_pad1500_pooling": "mean over all 1500 frames of the 30 s padded input (sensitivity copy only)",
+ "enc_shape": [
+  237,
+  32,
+  1280
+ ],
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "versions": {
+  "torch": "2.8.0+cu128",
+  "transformers": "4.51.3",
+  "python": "3.12.3",
+  "gpu": "NVIDIA H100 80GB HBM3"
+ },
+ "seconds": 45.1,
+ "date_utc": "2026-09-24T01:25:28.006000+00:00",
+ "command": "kimi_encstates26.py /workspace/mf_adresso.csv /workspace/out/kimi_adresso ad"
+}
