@@ -1,0 +1,19 @@
+pymupdf 1.28.2 pages 5
+p1: chars 4389  min rawdict 7.491 pt (STIXGeneral-Italic, '.' at x=450.0 y=318.7)  min texttrace 7.491  chars<9pt 2437
+     under 9 pt by size: {7.49: 11, 7.97: 42, 8.49: 42, 8.88: 753, 8.89: 233, 8.9: 59, 8.91: 119, 8.92: 52, 8.94: 61, 8.95: 57, 8.96: 55, 8.97: 563, 8.98: 112, 8.99: 159, 9.0: 119}
+p2: chars 6240  min rawdict 5.978 pt (CMMI6, 't' at x=236.8 y=204.6)  min texttrace 5.978  chars<9pt 3453
+     under 9 pt by size: {5.98: 43, 8.88: 1508, 8.89: 116, 8.9: 116, 8.91: 108, 8.92: 117, 8.93: 286, 8.94: 55, 8.95: 55, 8.96: 108, 8.97: 773, 8.98: 56, 8.99: 58, 9.0: 54}
+p3: chars 5397  min rawdict 8.876 pt (NimbusRomNo9L-Medi, '.' at x=81.8 y=523.0)  min texttrace 8.787  chars<9pt 2775
+     under 9 pt by size: {8.88: 862, 8.89: 113, 8.9: 58, 8.91: 58, 8.93: 173, 8.94: 56, 8.95: 266, 8.96: 56, 8.97: 788, 8.98: 110, 8.99: 235}
+p4: chars 5829  min rawdict 8.876 pt (NimbusRomNo9L-Regu, '(' at x=407.5 y=158.5)  min texttrace 8.787  chars<9pt 2904
+     under 9 pt by size: {8.88: 792, 8.89: 164, 8.9: 167, 8.91: 115, 8.92: 121, 8.93: 227, 8.94: 114, 8.95: 121, 8.96: 170, 8.97: 577, 8.98: 226, 8.99: 57, 9.0: 53}
+p5: chars 3861  min rawdict 8.876 pt (NimbusRomNo9L-Regu, '(' at x=267.8 y=491.7)  min texttrace 8.787  chars<9pt 2621
+     under 9 pt by size: {8.88: 874, 8.89: 103, 8.9: 211, 8.92: 166, 8.93: 109, 8.94: 106, 8.95: 105, 8.97: 894, 8.99: 53}
+SMALLEST overall: 5.9776 pt font CMMI6 char 't'
+  5.98 pt: 43 chars, fonts ['CMMI6', 'CMR6', 'CMSY6', 'NimbusRomNo9L-Regu'], text 'probeℓ⊤ℓℓℓℓanswert∈Ytt∈Y∪Ntℓprobeℓanswer2−4'
+  7.49 pt: 11 chars, fonts ['STIXGeneral-Italic', 'STIXGeneral-Regular'], text 'proj.chance'
+  7.97 pt: 42 chars, fonts ['NimbusRomNo9L-Regu'], text 'Correspondingauthor:soleymani@ict.usc.edu.'
+  8.49 pt: 42 chars, fonts ['STIXGeneral-Regular'], text '0.56PC-GITA(PD)0.66Pitt(AD)0.83E-DAIC(MDD)'
+  8.88 pt: 4789 chars, fonts ['NimbusRomNo9L-Medi', 'NimbusRomNo9L-MediItal', 'NimbusRomNo9L-Regu', 'NimbusRomNo9L-ReguItal'], text 'withitsanswersunderthreeconditionsofdifferentlanguagesalienc'
+  8.89 pt: 729 chars, fonts ['NimbusRomNo9L-Medi', 'NimbusRomNo9L-Regu', 'NimbusRomNo9L-ReguItal'], text 'languagemodels(AudioLLMs)nowanswerclinicalquestionsaboutreac'
+raster images per page (text inside them cannot be measured): [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0)]
