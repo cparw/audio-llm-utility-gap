@@ -1,0 +1,4 @@
+id	value	lo	hi	agree_4dp_col	ci_check	independent_ref	independent_src	fragment_value	match_4dp	file
+3a_pcgita_llm_best_stage	0.8960	0.8341	0.9463	yes (twin file)	same	0.8960 [0.8341, 0.9463]	verify/p16twins_VERIFIED.tsv	0.8960	yes	scores/leftovers_23sep/tables_rebuild/summary_all_v2_patched.csv
+3a_pcgita_ans_best_stage	0.8962	0.8327	0.9452	yes (twin file)	same	0.8962 [0.8327, 0.9452]	verify/p16twins_VERIFIED.tsv	0.8962	yes	scores/leftovers_23sep/tables_rebuild/summary_all_v2_patched.csv
+M11#36:B_xsys_disagree_ge20w_MEAN_diff_PD_minus_control	0.0594	-0.1355	0.2708	yes (twin file)		0.0594 [-0.1355, 0.2708]	verify/m7m11_VERIFIED.tsv	0.0594	yes	scores/leftovers_23sep/tables_rebuild/summary_all_v2_patched.csv

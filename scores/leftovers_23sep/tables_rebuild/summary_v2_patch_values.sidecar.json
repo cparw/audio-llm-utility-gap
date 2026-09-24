@@ -1,0 +1,30 @@
+{
+ "rows_total": 1532,
+ "rows_identical_to_old_v2": 1524,
+ "rows_changed": [
+  "M11#04:B_xsys_disagree_diff_PD_minus_control",
+  "M11#10:C_mean_token_logprob_diff_PD_minus_control",
+  "M11#16:C_compression_ratio_diff_PD_minus_control",
+  "M11#22:D_n_words_30s_diff_PD_minus_control",
+  "M11#33:B_xsys_disagree_MEDIAN_diff_PD_minus_control",
+  "M11#36:B_xsys_disagree_ge20w_MEAN_diff_PD_minus_control",
+  "3a_pcgita_llm_best_stage",
+  "3a_pcgita_ans_best_stage"
+ ],
+ "checks": [
+  [
+   "3a_pcgita_llm_best_stage",
+   "yes"
+  ],
+  [
+   "3a_pcgita_ans_best_stage",
+   "yes"
+  ],
+  [
+   "M11#36:B_xsys_disagree_ge20w_MEAN_diff_PD_minus_control",
+   "yes"
+  ]
+ ],
+ "no_NO_rows": 0,
+ "sha256_patched": "b57d030c05ede4fd9977dc6dadbc2d0d17f6a446cafcacbcab66ded6219e1d33"
+}

@@ -1,0 +1,4 @@
+Counter({'yes': 812, 'no twin': 50, 'yes (second record only, not a recompute)': 8})
+Counter({('yes', 'same'): 616, ('yes', ''): 175, ('no twin', ''): 50, ('yes', 'differs'): 8, ('yes (second record only, not a recompute)', ''): 8, ('yes', 'interval not in twin'): 7, ('yes', 'row has no interval; twin interval given'): 6})
+Counter({'Mac verifier (verify folder)': 704, 'p16twins task': 52, '': 50, 'pod-side verifier': 42, 'm7m11 task': 22})
+p16twins entries read 62
