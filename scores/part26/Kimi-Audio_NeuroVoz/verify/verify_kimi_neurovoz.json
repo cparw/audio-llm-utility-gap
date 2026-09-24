@@ -1,0 +1,97 @@
+{
+ "perclip_equals_pod_oof": {
+  "ok": true
+ },
+ "perclip_zeroshot_equals_file": {
+  "ok": true
+ },
+ "no_missing_scores": {
+  "ok": true,
+  "n": 1270
+ },
+ "clips_labels_speakers_equal_states": {
+  "ok": true
+ },
+ "fold_columns_equal_release_fold_files": {
+  "ok": true,
+  "per_seed": {
+   "0": true,
+   "1": true,
+   "2": true,
+   "3": true,
+   "4": true
+  }
+ },
+ "each_speaker_in_one_outer_fold": {
+  "ok": true
+ },
+ "per_repeat_auc_rank_equals_sidecar": {
+  "ok": true,
+  "rank": [
+   0.9312679732723947,
+   0.9324986539430165,
+   0.9246952452553042,
+   0.930976430976431,
+   0.9402611226487424
+  ]
+ },
+ "mean5_and_answer_equal_sidecar": {
+  "ok": true,
+  "mean5": 0.9319398852191778,
+  "answer": 0.6204144118661437
+ },
+ "answer_auc_4dp_is_0.6204": {
+  "ok": true,
+  "answer": 0.6204144118661437
+ },
+ "speaker_order_equals_npz": {
+  "ok": true
+ },
+ "bootstrap_draws_equal_npz": {
+  "ok": true,
+  "max_abs": 4.440892098500626e-16,
+  "usable": 2000
+ },
+ "interval_equals_sidecar": {
+  "ok": true,
+  "lo": 0.25147782533966817,
+  "hi": 0.36735503809671016
+ },
+ "point_gap_equals_sidecar": {
+  "ok": true,
+  "gap": 0.31152547335303415
+ },
+ "podverify_PASS": {
+  "ok": true,
+  "max_abs_pred_diff": 0.0,
+  "layer_mismatches": 0
+ },
+ "staged_states_sha_equals_uploaded": {
+  "ok": true
+ },
+ "pod_versions_pinned": {
+  "ok": true,
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  }
+ },
+ "staged_enc_equals_gpu_pull": {
+  "ok": true,
+  "shape": [
+   1270,
+   32,
+   1280
+  ]
+ },
+ "all_32_layers_used": {
+  "ok": true,
+  "n_layers_scored": 32
+ },
+ "FAILED": [],
+ "PASS": true
+}

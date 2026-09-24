@@ -1,0 +1,399 @@
+{
+ "task": "PART26 probe grid: Kimi-Audio, PC-GITA, nested encoder probe (layer chosen inside the training folds), mean of five repeats, paired gap vs zero-shot answer",
+ "date_utc": "2026-09-24T02:51:37.141922Z",
+ "model": "Kimi-Audio-7B-Instruct",
+ "dataset": "PC-GITA",
+ "condition": "PD",
+ "n": 1100,
+ "n_speakers": 100,
+ "n_pos": 550,
+ "METHOD_NOTE": "NEW extraction path. No earlier run extracted Kimi encoder states (the paper Method says the Kimi encoder side is skipped). These states are the 32 layers of the Whisper-large-v3 encoder inside Kimi-Audio (the continuous-feature path into the LM), mean-pooled over the frames Kimi keeps, first 30 s. Kimi's other audio path, the discrete GLM-4-Voice tokens, is not probed.",
+ "states": {
+  "file": "/workspace/in/kimi_pcgita_encstates.npz",
+  "sha256": "5c16cef5d6dd9e467ae298c076ea2a9b1d620df4a837b22909383959144710e9",
+  "keys": {
+   "enc": [
+    [
+     1100,
+     32,
+     1280
+    ],
+    "float32"
+   ],
+   "label": [
+    [
+     1100
+    ],
+    "int64"
+   ],
+   "spk": [
+    [
+     1100
+    ],
+    "<U14"
+   ],
+   "p_yes": [
+    [
+     1100
+    ],
+    "float64"
+   ],
+   "name": [
+    [
+     1100
+    ],
+    "<U29"
+   ]
+  }
+ },
+ "n_layers": 32,
+ "window": "first 30 s (x[:16000*30]), as the Kimi zero-shot run",
+ "extraction": {
+  "script": "scripts/part26/Kimi-Audio_PC-GITA/podfiles/kimi_enc_extract.py",
+  "script_sha256": "fa201c10479ecb58a8641981d6903e76cf28001d5a58b709cb96d9d83debb454",
+  "pod": "p26-kimi-pcgita-gpu roj4j50j5vbk1a (H100 80GB HBM3)",
+  "sidecar": {
+   "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+   "snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+   "clip_list": "/workspace/in/mf_pcgita_pod.csv",
+   "clip_list_sha256": "db0da66f58e334dae363266516deff4981256c6c2b0c437d2b60a52c76911517",
+   "condition": "pd",
+   "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+   "n": 1100,
+   "n_positive": 550,
+   "zeroshot_auc_this_run": 0.6129223140495867,
+   "window_seconds": 30,
+   "dtype": "bfloat16",
+   "encoder": "kimia_infer prompt_manager.whisper_model.speech_encoder (Whisper-large-v3 encoder inside Kimi-Audio, the continuous-feature path)",
+   "encoder_layers": 32,
+   "enc_shape": [
+    1100,
+    32,
+    1280
+   ],
+   "pooling": "enc: mean over the token_len*4 encoder frames kimia keeps, token_len=(L-1)//1280+1; enc_allframes: mean over all 1500 frames",
+   "hookcheck_max_over_clips": 2.384185791015625e-07,
+   "new_script": true,
+   "copied_from": "release/podD2_final/kimi_probe.py (forward pass, prompt, yes/no ids, 30 s cut)",
+   "versions": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.51.3",
+    "numpy": "2.5.3",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "flash_attn": "2.8.3.post1"
+   },
+   "seconds": 229.3,
+   "command": "kimi_enc_extract.py in/mf_pcgita_pod.csv out/kimi_pcgita pd",
+   "date_utc": "2026-09-24T01:33:53.729853Z"
+  },
+  "stage_check_pass": true,
+  "p_yes_rerun_vs_canonical": {
+   "max_abs": 0.09343208896603045,
+   "median_abs": 0.010985579139031199,
+   "n_over_1e-3": 865,
+   "pearson": 0.989357957865556,
+   "auc_canonical": 0.6147041322314049,
+   "auc_this_run": 0.6129223140495867,
+   "note": "separate pod run of the same forward pass; part20 POD4d found the same kind of cross-pod drift for Kimi (median 0.010, max 0.20 on Pitt). The gap uses the canonical file."
+  },
+  "rerun10_enc_max_abs": 0.0,
+  "hookcheck_max": 2.384185791015625e-07,
+  "wav_sha256_equal_upload": true
+ },
+ "probe_per_repeat": [
+  0.9028495867768594,
+  0.8477884297520659,
+  0.8616264462809918,
+  0.8797388429752067,
+  0.8918396694214875
+ ],
+ "probe_mean5": 0.8767685950413222,
+ "probe_per_repeat_4dp": [
+  0.9028,
+  0.8478,
+  0.8616,
+  0.8797,
+  0.8918
+ ],
+ "probe_mean5_4dp": 0.8768,
+ "probe_json_mean5": 0.8767685950413222,
+ "single_split_auc": 0.8684776859504132,
+ "layers": {
+  "seed0": [
+   7,
+   5,
+   8,
+   2,
+   4
+  ],
+  "seed1": [
+   10,
+   15,
+   26,
+   3,
+   2
+  ],
+  "seed2": [
+   10,
+   2,
+   13,
+   12,
+   8
+  ],
+  "seed3": [
+   2,
+   3,
+   2,
+   17,
+   7
+  ],
+  "seed4": [
+   9,
+   10,
+   7,
+   2,
+   3
+  ],
+  "single": [
+   3,
+   0,
+   26,
+   19,
+   4
+  ]
+ },
+ "zeroshot_auc": 0.6147041322314049,
+ "zeroshot_file": "<local data dir>/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv",
+ "gap_point": 0.26206446280991735,
+ "gap_ci": [
+  0.1810317734202187,
+  0.3364143153221301
+ ],
+ "gap_interval_above_zero": true,
+ "probe_mean5_ci": [
+  0.8088821414037066,
+  0.9299761824320897
+ ],
+ "zeroshot_ci": [
+  0.547706653309959,
+  0.6781419600196257
+ ],
+ "usable_draws": 2000,
+ "secondary_gap_vs_part26_pod_rerun_pyes": {
+  "zeroshot_auc": 0.6129223140495867,
+  "gap_point": 0.26384628099173546,
+  "gap_ci": [
+   0.1820591533006892,
+   0.33948278851829977
+  ],
+  "note": "sensitivity only; the reported gap uses the canonical zero-shot file"
+ },
+ "reference_kimi_lm_nested_repeats": {
+  "file": "<local data dir>/release/overnight2/part3/kimi_pcgita_nested_repeats.json",
+  "content": {
+   "llm": {
+    "mean": 0.8715,
+    "repeats": 5,
+    "per_repeat": [
+     0.8664,
+     0.8698,
+     0.8752,
+     0.8702,
+     0.8762
+    ],
+    "n": 1100,
+    "n_points": 28
+   },
+   "ans": {
+    "mean": 0.8616,
+    "repeats": 5,
+    "per_repeat": [
+     0.8445,
+     0.8647,
+     0.8537,
+     0.8708,
+     0.8743
+    ],
+    "n": 1100,
+    "n_points": 28
+   }
+  }
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot AUC, same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "speaker_source": "OOF csv speaker = states spk = fold file speaker_id = zero-shot speaker (100 speakers)"
+ },
+ "pod": {
+  "name": "p26-kimi-pcgita-cpu",
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "n_jobs": 32,
+  "seconds": 55.0,
+  "podverify_pass": true,
+  "podverify": {
+   "max_abs_pred_diff": 0.0,
+   "max_abs_inner_score_diff": 2.660040621105253e-08,
+   "layer_mismatches": [],
+   "abs_mean5_diff": 2.220446049250313e-16
+  },
+  "fold_files": {
+   "seed0": {
+    "fold_file": "pcgita_groupkfold5_pod_seed0.csv",
+    "fold_file_sha256": "392ac9168ec37f1302149fb7d26ae4f6e682bb03b5d677825a5c94ee0eb0505a",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed1": {
+    "fold_file": "pcgita_groupkfold5_pod_seed1.csv",
+    "fold_file_sha256": "49eb5f89bb54a771bf77e7332904c06e7e0ee65884e418692c65eba329e7c159",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed2": {
+    "fold_file": "pcgita_groupkfold5_pod_seed2.csv",
+    "fold_file_sha256": "2bbf5949a73a53575e11f907eb36e2dad531cfb04049ea293d75bebecbf89bb7",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed3": {
+    "fold_file": "pcgita_groupkfold5_pod_seed3.csv",
+    "fold_file_sha256": "67cd21a37d920800b53be7581a425461997c90f2b265df9c81d059d4f26f4bc0",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "seed4": {
+    "fold_file": "pcgita_groupkfold5_pod_seed4.csv",
+    "fold_file_sha256": "e642735123d4e3788fa600e399703dd214f1e5c23694821986ecf872a10bc2af",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "single": {
+    "fold_file": "pcgita_groupkfold5_pod.csv",
+    "fold_file_sha256": "ff2fa9e53a19f102a059ea08ddccb5cb3762e2f298eda3a05548cdd5a92cb61f",
+    "fold_file_equals_pod_tie_rule": true,
+    "fold_file_equals_this_pod_sklearn": true,
+    "n_clips_sklearn_differs": 0,
+    "inner_sk_equal": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   }
+  }
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Kimi-Audio_PC-GITA/Kimi-Audio_PC-GITA_perclip.csv",
+  "draws_npz": "scores/part26/Kimi-Audio_PC-GITA/draws/Kimi-Audio_PC-GITA_draws.npz",
+  "pod_oof_csv": "scores/part26/Kimi-Audio_PC-GITA/pull/p26-kimi-pcgita-cpu/out/p26_kimi_pcgita_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Kimi-Audio_PC-GITA/pull/p26-kimi-pcgita-cpu/out/p26_kimi_pcgita_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Kimi-Audio_PC-GITA/pull/p26-kimi-pcgita-cpu/out/p26_kimi_pcgita_podverify.json",
+  "zeroshot": "<local data dir>/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv",
+  "gpu_states": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_PC-GITA/pull/p26-kimi-pcgita-gpu/out/kimi_pcgita_encstates.npz"
+ },
+ "sha256": {
+  "perclip_csv": "3cac47f2b5d8225dc99ed28504b1c3b4831e5d3f7182077b3dd015636373a29f",
+  "draws_npz": "5759f1482baf3d980a5dca6a2b366bfa2efe4e1981710b0416d49b2f8f86b64c",
+  "pod_oof_csv": "1982ac3edcd4838581fae63f4a2ed0717c00df38484a6cf82eed75fc24b1a147",
+  "pod_json": "74c94a0afa5cb9cad29c7f8a8a6286bac789d47b3810b8f1e3234df1ef247a69",
+  "zeroshot": "ec3c684d1e4498fdde321a0f74be424d6c1871c8d394fd67226bec8ee5aef9e6",
+  "gpu_states": "dddfba93155b9ab48e10c61b20d2a202e2aa7a49c0c8735a76a17e5bca942c0f"
+ },
+ "command": "/usr/local/bin/python3 scripts/part26/Kimi-Audio_PC-GITA/scripts/gap26_kimi_pcgita.py",
+ "verification": {
+  "mac_verify_json": "scores/part26/Kimi-Audio_PC-GITA/verify/verify26_kimi_pcgita.json",
+  "mac_verify_sha256": "9beb620467c569c5c7b15ca6d88dd5933beda41f7f677ddd07c5fe7e09f192be",
+  "mac_verify_PASS": true,
+  "mac_encoder_recompute_pass": true,
+  "stage_check_json": "scores/part26/Kimi-Audio_PC-GITA/verify/stage_cpu_check.json",
+  "pod_verify_PASS": true,
+  "note": "Mac refit is cross-version (sklearn 1.7.2 arm64 vs pinned 1.9.1 x86_64 on the pod): max prediction difference 0.036, per-repeat AUC within 1.1e-4, seed0 layers all equal. Exact same-version check is the pod-side p25a_podverify.py (max prediction difference 0).",
+  "added_utc": "2026-09-24T02:53:26.426625Z"
+ },
+ "cost": {
+  "gpu_pod": {
+   "name": "p26-kimi-pcgita-gpu",
+   "id": "roj4j50j5vbk1a",
+   "gpu": "NVIDIA H100 80GB HBM3",
+   "cost_per_hr": 3.49,
+   "created_utc": "2026-09-24T01:01:42Z",
+   "deleted_utc": "2026-09-24T01:37:33Z",
+   "minutes": 35.85,
+   "usd_est": 2.09
+  },
+  "cpu_pod": {
+   "name": "p26-kimi-pcgita-cpu",
+   "id": "bg8a6dnjgyjyyh",
+   "flavor": "cpu3c 32 vCPU",
+   "cost_per_hr": 0.96,
+   "created_utc": "2026-09-24T02:43:19Z",
+   "deleted_utc": "2026-09-24T02:51:12Z",
+   "minutes": 7.88,
+   "usd_est": 0.13
+  },
+  "note": "estimates from pod create and delete times; both pods pulled and deleted by the Mac watchdogs (REST 404 after delete)",
+  "total_usd_est": 2.22
+ }
+}

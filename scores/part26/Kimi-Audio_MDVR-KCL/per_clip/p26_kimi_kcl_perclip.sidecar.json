@@ -1,0 +1,218 @@
+{
+ "task": "PART26 probe grid: Kimi-Audio encoder nested probe (layer chosen inside the training folds), five repeats on the saved fold files, paired probe minus zero-shot answer gap",
+ "date_utc": "2026-09-24T01:25:46.128567Z",
+ "model": "Kimi-Audio-7B-Instruct",
+ "dataset": "MDVR-KCL",
+ "condition": "PD",
+ "n": 37,
+ "n_speakers": 37,
+ "n_pos": 16,
+ "n_layers": 32,
+ "method_note": "NEW in PART26: no Kimi encoder states existed before. Earlier Kimi runs hooked only the language model and the paper Method says the Kimi encoder side is skipped. These states come from new forward hooks on the Whisper-large-v3 encoder inside kimia_infer (the path that builds history.continuous_feature). Using this cell in the paper needs the Method text changed.",
+ "states": {
+  "script": "stage/gpu/kimi_enc_probe.py (podD2_final/kimi_probe.py plus Whisper encoder hooks)",
+  "setup": "stage/gpu/setup_kimi.sh (edaic_conflict_new/kimi/setup_kimi.sh, snapshot pinned to 9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b)",
+  "window": "first 30 s (x[:16000*30]); all 37 KCL clips are 30.0 s",
+  "encoder": "32 Whisper-large-v3 layers, 1280 dims, bf16; each layer output cut to the 1500 frames Kimi keeps and mean-pooled (h.mean(dim=0).float()), as the Qwen2.5-Omni encoder states",
+  "file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_MDVR-KCL/pull/p26-kimi-kcl-gpu/out/p26_kimi_kcl_states.npz",
+  "sha256": "1cf4867a5453795b7c760b598d7949b08c46e658f9073a886cf213956e11b5f7",
+  "check_file": "scores/part26/Kimi-Audio_MDVR-KCL/verify/p26_states_check_kimi_kcl.json",
+  "rerun_p_yes_vs_saved_zeroshot": {
+   "ok": true,
+   "max_abs": 0.04816186391531746,
+   "median_abs": 0.01373624127887546,
+   "auc_saved": 0.7113095238095238,
+   "auc_rerun": 0.693452380952381,
+   "pearson": 0.9968271961592691
+  },
+  "rerun_llm_vs_saved_llm_states": {
+   "ok": true,
+   "shape": [
+    37,
+    28,
+    3584
+   ],
+   "max_abs": 2.0,
+   "max_abs_over_max": 0.016,
+   "min_layer_corr": 0.9999330003938057
+  },
+  "final_layernorm_vs_continuous_feature": {
+   "ok": true,
+   "max_abs": 0.0
+  }
+ },
+ "probe": {
+  "estimator": "outer folds = saved pod fold files seed0..4; inner GroupKFold(4) with the pod tie rule on the outer training speakers scores every encoder layer (32) by mean inner AUC; argmax; refit StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced'); score held-out clips. Probe = mean over the five repeats of the out-of-fold AUC.",
+  "script": "part25/A/podfiles/p25a_nested5.py (unchanged, md5 615ced0380cca2636ed7cc30c71810e6)",
+  "per_repeat_auc": [
+   0.693452380952381,
+   0.7946428571428572,
+   0.8511904761904762,
+   0.7172619047619048,
+   0.7589285714285715
+  ],
+  "mean5": 0.7630952380952382,
+  "per_repeat_auc_4dp": [
+   0.6935,
+   0.7946,
+   0.8512,
+   0.7173,
+   0.7589
+  ],
+  "mean5_4dp": 0.7631,
+  "layers": {
+   "seed0": [
+    1,
+    16,
+    22,
+    5,
+    17
+   ],
+   "seed1": [
+    17,
+    5,
+    11,
+    8,
+    5
+   ],
+   "seed2": [
+    4,
+    5,
+    1,
+    8,
+    3
+   ],
+   "seed3": [
+    1,
+    17,
+    5,
+    20,
+    2
+   ],
+   "seed4": [
+    11,
+    27,
+    1,
+    18,
+    27
+   ]
+  },
+  "single_split_auc": 0.6875,
+  "single_split_layers": [
+   5,
+   11,
+   14,
+   26,
+   12
+  ],
+  "fold_files": {
+   "seed0": "kcl_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "seed1": "kcl_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "seed2": "kcl_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "seed3": "kcl_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "seed4": "kcl_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "single": "kcl_groupkfold5_pod.csv"
+  },
+  "fold_file_sha256": {
+   "seed0": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+   "seed1": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+   "seed2": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+   "seed3": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+   "seed4": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711",
+   "single": "880569a7d11300835a9064fec322308998dc043eb4144e171289f10f0d275bb8"
+  },
+  "fold_files_status": "UNVERIFIED in release/folds (they reproduce the saved per-repeat AUCs within 0.008, no per-clip OOF ever existed to check them clip by clip); each equals the pod tie rule rebuild (asserted by the probe script)",
+  "table1_saved": null,
+  "table1_note": "no earlier Kimi encoder probe exists, so there is no Table 1 value to compare with",
+  "pod_versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "podverify_pass": false,
+  "n_jobs": 30,
+  "pod_seconds": 35.9
+ },
+ "answer": {
+  "file": "<local data dir>/release/overnight2/kimi_new/kimi_kcl_zeroshot_scores.csv",
+  "auc": 0.7113095238095238,
+  "auc_4dp": 0.7113,
+  "column": "p_yes"
+ },
+ "gap": {
+  "point": 0.051785714285714324,
+  "ci_2p5_97p5": [
+   -0.1636750841750841,
+   0.29006663292847495
+  ],
+  "interval_above_zero": false,
+  "interval_excludes_zero": false,
+  "probe_mean5_ci": [
+   0.5865058479532164,
+   0.9129437340153451
+  ],
+  "answer_ci": [
+   0.5147940947940948,
+   0.8750548245614032
+  ],
+  "usable_draws": 2000
+ },
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot answer AUC, on the same draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "degenerate_draws_dropped": 0
+ },
+ "mac_versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/p26_gap_kimi_kcl.py",
+ "files": {
+  "perclip_csv": "scores/part26/Kimi-Audio_MDVR-KCL/per_clip/p26_kimi_kcl_perclip.csv",
+  "draws_npz": "scores/part26/Kimi-Audio_MDVR-KCL/draws/p26_kimi_kcl_draws.npz",
+  "pod_oof_csv": "scores/part26/Kimi-Audio_MDVR-KCL/pull/p26-kimi-kcl-cpu/out/p26_kimi_kcl_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Kimi-Audio_MDVR-KCL/pull/p26-kimi-kcl-cpu/out/p26_kimi_kcl_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Kimi-Audio_MDVR-KCL/pull/p26-kimi-kcl-cpu/out/p26_kimi_kcl_podverify.json",
+  "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_kcl_zeroshot_scores.csv",
+  "states": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_MDVR-KCL/pull/p26-kimi-kcl-gpu/out/p26_kimi_kcl_states.npz"
+ },
+ "sha256": {
+  "pod_oof_csv": "5d3dab6f7d368224f6a5770f28e760e9784ab45676fc2bedbdfd67f655155b5c",
+  "pod_json": "ddd69978d5af9c7e79bd8894f4f791ff31f7ba2c069dd8c320fa4c1b7e4795a3",
+  "zeroshot": "33b2b1abaef683d08a767fe5adab683fb8e1578b2902e919660b1b1e608b7b1c",
+  "states": "1cf4867a5453795b7c760b598d7949b08c46e658f9073a886cf213956e11b5f7",
+  "perclip_csv": "9075945555f6ef0cb65c4a40acef29c197a913991eb748d228acc883680136de",
+  "draws_npz": "de47bb1ddb3681db2b462df11d51107141b35e661db446ac2595caf8937ea862"
+ },
+ "podverify_note": "p25a_podverify.py wrote PASS=False for one reason only: seed0 outer fold 2 has an exact inner tie, layers 22 and 23 both 5/6 (exact fractions, verify/p26_indep_verify2_kimi_kcl.json). The probe script keeps the first index of its float argmax (22); the verifier's rank formula put layer 23 first. Refit predictions at the saved layers match to 0.0 on the pod, mean5 matches exactly. Same situation as the PART26 Qwen2-Audio MDVR-KCL cell.",
+ "tie_note": "14 of 30 outer folds (6 tags x 5) have layers tied at the exact maximum inner AUC; the saved layer is always in the tied set and always the probe script's own argmax. Swapping in any other tied layer, one fold at a time, moves mean5 between 0.7542 and 0.7673 and the gap between +0.0429 and +0.0560.",
+ "verification": {
+  "run1": {
+   "file": "scores/part26/Kimi-Audio_MDVR-KCL/verify/p26_verify_kimi_kcl.json",
+   "all_pass": false,
+   "why": "only the podverify PASS flag, which is the exact tie above; every other check passed"
+  },
+  "run2": {
+   "file": "scores/part26/Kimi-Audio_MDVR-KCL/verify/p26_indep_verify2_kimi_kcl.json",
+   "sha256": "574d61a1bb70b576b49b8c3d9f3f398ee1480dbbd9fda8f52c1d30d4eb562200",
+   "script": "scripts/part26/Kimi-Audio_MDVR-KCL/scripts/p26_indep_verify2_kimi_kcl.py",
+   "all_pass": true,
+   "date_utc": "2026-09-24T02:44:55.307728Z",
+   "what": "fresh code, no shared lines with the probe, podverify, gap or run1 verify scripts: input sha256, states shape and order vs the zero-shot file, LM states vs the saved kimi_new states, fold files read straight from release/folds, per-repeat and answer AUCs as exact fractions, inner layer choice re-derived for all 30 outer folds with exact fractions, refit at the saved layers, bootstrap rebuilt, per-clip csv clip by clip"
+  }
+ },
+ "retry_24sep": "PART26 'Try again' run, 2026-09-24T02:45Z: no new pods. The states, probe, per-clip file and draws from the 01:05 to 01:25 UTC run were re-verified from disk and are unchanged (sha256 equal). GPU pod vz0e628ewxabop (H100 80GB HBM3, $3.49/h) ran 01:05:53 to 01:18:49 UTC; CPU pod boyfheojko3eqb ($0.96/h) deleted 01:24:59 UTC; about $0.85 total. The original sidecar is kept at verify/p26_kimi_kcl_perclip.sidecar.run1_backup.json.",
+ "status": "LANDED"
+}

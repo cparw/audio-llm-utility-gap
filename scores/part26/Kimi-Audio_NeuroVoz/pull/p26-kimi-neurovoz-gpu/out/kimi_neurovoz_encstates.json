@@ -1,0 +1,35 @@
+{
+ "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+ "snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+ "clip_list": "/workspace/in/mf_neurovoz_pod.csv",
+ "clip_list_sha256": "2152fe2309579dc1fab11be945dc1d5bf46aeaffd1f4eb61b5d51f6db12a8f20",
+ "condition": "pd",
+ "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+ "n": 1270,
+ "n_positive": 621,
+ "zeroshot_auc_this_run": 0.6199181696602478,
+ "window_seconds": 30,
+ "dtype": "bfloat16",
+ "encoder": "kimia_infer prompt_manager.whisper_model.speech_encoder (Whisper-large-v3 encoder inside Kimi-Audio, the continuous-feature path)",
+ "encoder_layers": 32,
+ "enc_shape": [
+  1270,
+  32,
+  1280
+ ],
+ "pooling": "enc: mean over the token_len*4 encoder frames kimia keeps, token_len=(L-1)//1280+1; enc_allframes: mean over all 1500 frames",
+ "hookcheck_max_over_clips": 2.384185791015625e-07,
+ "new_script": true,
+ "copied_from": "release/podD2_final/kimi_probe.py (forward pass, prompt, yes/no ids, 30 s cut)",
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.51.3",
+  "numpy": "2.5.3",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "flash_attn": "2.8.3.post1"
+ },
+ "seconds": 100.3,
+ "command": "kimi_enc_extract.py in/mf_neurovoz_pod.csv out/kimi_neurovoz pd",
+ "date_utc": "2026-09-24T01:23:33.233924Z"
+}

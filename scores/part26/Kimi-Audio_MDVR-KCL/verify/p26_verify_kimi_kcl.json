@@ -1,0 +1,180 @@
+{
+ "checks": {
+  "pulled_cpu_out_sha256_match_pod": {
+   "ok": true,
+   "n_files": 4,
+   "mismatched": []
+  },
+  "pulled_gpu_out_sha256_match_pod": {
+   "ok": true,
+   "n_files": 3,
+   "mismatched": []
+  },
+  "probed_states_equal_gpu_states": {
+   "ok": true,
+   "pod_json_sha": "1cf4867a5453795b7c760b598d7949b08c46e658f9073a886cf213956e11b5f7",
+   "gpu_sha": "1cf4867a5453795b7c760b598d7949b08c46e658f9073a886cf213956e11b5f7"
+  },
+  "oof_clip_order_equals_states": {
+   "ok": true,
+   "n": 37
+  },
+  "oof_folds_equal_release_fold_files": {
+   "ok": true,
+   "per_tag": {
+    "seed0": true,
+    "seed1": true,
+    "seed2": true,
+    "seed3": true,
+    "seed4": true,
+    "single": true
+   }
+  },
+  "per_repeat_auc_exact_equals_pod_json": {
+   "ok": true,
+   "exact": [
+    "233/336",
+    "89/112",
+    "143/168",
+    "241/336",
+    "85/112"
+   ],
+   "mean5_exact": "641/840",
+   "mean5": 0.763095238095238,
+   "per_repeat": [
+    0.6934523809523809,
+    0.7946428571428571,
+    0.8511904761904762,
+    0.7172619047619048,
+    0.7589285714285714
+   ]
+  },
+  "single_split_auc_exact": {
+   "ok": true
+  },
+  "zeroshot_clips_labels_speakers_equal": {
+   "ok": true
+  },
+  "zeroshot_auc_exact_equals_0.7113_4dp": {
+   "ok": true,
+   "exact": "239/336",
+   "value": 0.7113095238095238
+  },
+  "perclip_csv_equals_pod_oof_and_zeroshot": {
+   "ok": true
+  },
+  "bootstrap_rebuilt_equals_saved_draws": {
+   "ok": true,
+   "max_abs_draw_diff": 3.3306690738754696e-16,
+   "usable": 2000
+  },
+  "bootstrap_interval_equals_sidecar": {
+   "ok": true,
+   "lo": -0.16367508417508422,
+   "hi": 0.29006663292847495
+  },
+  "gap_point_equals_sidecar": {
+   "ok": true,
+   "gap": 0.05178571428571429
+  },
+  "podverify_pass": {
+   "ok": false,
+   "max_abs_pred_diff": 0.0,
+   "layer_mismatches": [
+    {
+     "tag": "seed0",
+     "fold": 2,
+     "saved": 22,
+     "rederived": 23
+    }
+   ],
+   "abs_mean5_diff": 0.0
+  },
+  "mac_refit_at_saved_layers_same_auc": {
+   "ok": true,
+   "per_tag": {
+    "seed0": {
+     "auc_mac_refit": 0.6934523809523809,
+     "auc_pod": 0.693452380952381,
+     "max_abs_pred_diff": 9.73339115251104e-06
+    },
+    "seed1": {
+     "auc_mac_refit": 0.7946428571428571,
+     "auc_pod": 0.7946428571428572,
+     "max_abs_pred_diff": 3.1238025109958656e-06
+    },
+    "seed2": {
+     "auc_mac_refit": 0.8511904761904762,
+     "auc_pod": 0.8511904761904762,
+     "max_abs_pred_diff": 3.857257264594516e-06
+    },
+    "seed3": {
+     "auc_mac_refit": 0.7172619047619048,
+     "auc_pod": 0.7172619047619048,
+     "max_abs_pred_diff": 1.6479994391971342e-05
+    },
+    "seed4": {
+     "auc_mac_refit": 0.7589285714285714,
+     "auc_pod": 0.7589285714285715,
+     "max_abs_pred_diff": 4.891277913809944e-06
+    },
+    "single": {
+     "auc_mac_refit": 0.6875,
+     "auc_pod": 0.6875,
+     "max_abs_pred_diff": 0.00043285998169761974
+    }
+   }
+  },
+  "mac_inner_layer_choice_equals_pod_up_to_exact_ties": {
+   "ok": true,
+   "mismatches": [
+    {
+     "tag": "seed3",
+     "fold": 4,
+     "saved": 2,
+     "mac": 5,
+     "saved_inner_at_saved": 0.8958333333333334,
+     "saved_inner_at_mac": 0.8958333333333333,
+     "mac_scores_tie": true
+    },
+    {
+     "tag": "single",
+     "fold": 2,
+     "saved": 14,
+     "mac": 12,
+     "saved_inner_at_saved": 0.8958333333333334,
+     "saved_inner_at_mac": 0.8958333333333333,
+     "mac_scores_tie": true
+    }
+   ],
+   "max_abs_inner_score_diff": 2.220446049250313e-16
+  },
+  "podverify_mismatches_are_exact_ties_first_index_kept": {
+   "ok": true,
+   "ties": [
+    {
+     "tag": "seed0",
+     "fold": 2,
+     "saved": 22,
+     "rederived": 23,
+     "inner_saved": 0.8333333333333334,
+     "inner_rederived": 0.8333333333333334,
+     "inner_max": 0.8333333333333334,
+     "exact_tie": true
+    }
+   ]
+  }
+ },
+ "tie_sensitivity": [
+  {
+   "tag": "seed0",
+   "fold": 2,
+   "alt_layer": 23,
+   "repeat_auc_saved": 0.6934523809523809,
+   "repeat_auc_alt": 0.6875,
+   "mean5_alt": 0.7619047619047619,
+   "gap_alt": 0.050595238095238027
+  }
+ ],
+ "all_pass": false
+}

@@ -1,0 +1,307 @@
+{
+ "task": "PART26 encoder probe grid, cell Kimi-Audio x NeuroVoz: nested five-repeat encoder probe (layer chosen inside the training folds), paired probe minus zero-shot answer gap",
+ "date_utc": "2026-09-24T02:55:01.066664Z",
+ "model": "Kimi-Audio",
+ "dataset": "NeuroVoz",
+ "condition": "PD",
+ "n": 1270,
+ "n_speakers": 107,
+ "n_pos": 621,
+ "probe_per_repeat": [
+  0.9312679732723949,
+  0.9324986539430165,
+  0.9246952452553042,
+  0.9309764309764309,
+  0.9402611226487423
+ ],
+ "probe_mean5": 0.9319398852191778,
+ "probe_per_repeat_4dp": [
+  0.9313,
+  0.9325,
+  0.9247,
+  0.931,
+  0.9403
+ ],
+ "probe_mean5_4dp": 0.9319,
+ "zeroshot_auc": 0.6204144118661435,
+ "zeroshot_auc_4dp": 0.6204,
+ "gap_point": 0.31152547335303427,
+ "gap_ci": [
+  0.25147782533966806,
+  0.3673550380967104
+ ],
+ "probe_mean5_ci": [
+  0.8949194349727129,
+  0.9606813489447412
+ ],
+ "zeroshot_ci": [
+  0.5600374093409132,
+  0.6805500802469058
+ ],
+ "usable_draws": 2000,
+ "interval_above_zero": true,
+ "interval_excludes_zero": true,
+ "single_split_auc": 0.9257944217413635,
+ "layers": {
+  "seed0": [
+   27,
+   28,
+   27,
+   20,
+   19
+  ],
+  "seed1": [
+   21,
+   18,
+   15,
+   28,
+   21
+  ],
+  "seed2": [
+   31,
+   19,
+   21,
+   17,
+   13
+  ],
+  "seed3": [
+   28,
+   27,
+   27,
+   22,
+   20
+  ],
+  "seed4": [
+   18,
+   20,
+   21,
+   27,
+   27
+  ]
+ },
+ "layers_single": [
+  18,
+  18,
+  17,
+  22,
+  15
+ ],
+ "fold_files": {
+  "seed0": {
+   "file": "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+   "equals_pod_tie_rule": true,
+   "equals_pod_sklearn_GroupKFold": true
+  },
+  "seed1": {
+   "file": "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+   "equals_pod_tie_rule": true,
+   "equals_pod_sklearn_GroupKFold": true
+  },
+  "seed2": {
+   "file": "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+   "equals_pod_tie_rule": true,
+   "equals_pod_sklearn_GroupKFold": true
+  },
+  "seed3": {
+   "file": "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+   "equals_pod_tie_rule": true,
+   "equals_pod_sklearn_GroupKFold": true
+  },
+  "seed4": {
+   "file": "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655",
+   "equals_pod_tie_rule": true,
+   "equals_pod_sklearn_GroupKFold": true
+  },
+  "single": {
+   "file": "neurovoz_groupkfold5_pod.csv",
+   "sha256": "10e609c186df31e34ae1e318e78031289a4055a73055b41b1175ca66baf602ad",
+   "equals_pod_tie_rule": true,
+   "equals_pod_sklearn_GroupKFold": true
+  }
+ },
+ "fold_note": "outer folds read from release/folds/neurovoz_groupkfold5_pod_seed{0..4}_UNVERIFIED.csv (the Table 1 five-repeat splits; UNVERIFIED means no per-clip OOF ever existed to confirm them clip by clip)",
+ "bootstrap": {
+  "n_draws": 2000,
+  "rng": "numpy default_rng(0), fresh for this cell",
+  "resample": "unique speakers (np.unique order of states spk), idx = rng.choice(n_spk, size=n_spk, replace=True), all clips of each drawn speaker",
+  "paired": "mean of the five per-repeat AUCs minus the zero-shot AUC, same rows in each draw",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "auc": "sklearn.metrics.roc_auc_score",
+  "code_path": "part25/A/scripts/A_gaps.py boot()"
+ },
+ "estimator": {
+  "script": "part25/A/podfiles/p25a_nested5.py (unchanged, md5 615ced0380cca2636ed7cc30c71810e6)",
+  "outer": "saved fold files, GroupKFold(5) on speakers renumbered by default_rng(seed)",
+  "inner": "GroupKFold(4) pod tie rule on the outer training speakers, layer = argmax mean inner AUC over 32 Whisper encoder layers",
+  "model": "StandardScaler + LogisticRegression(max_iter=2000, class_weight='balanced')",
+  "blas_threads_per_fit": 1
+ },
+ "encoder_states": {
+  "NEW_FOR_PART26": true,
+  "method_note": "No earlier Kimi run extracted encoder states (every earlier Kimi probe hooked the LM; the paper Method says the Kimi encoder side is skipped). These states come from a new script with forward hooks on the Whisper-large-v3 encoder inside kimia_infer (the continuous-feature path into the LM); the discrete GLM-4-Voice token path is not probed. Whether the paper uses this cell is an author decision.",
+  "extract_script": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-gpu/kimi_enc_extract.py",
+  "extract_script_sha256": "fa201c10479ecb58a8641981d6903e76cf28001d5a58b709cb96d9d83debb454",
+  "states_file": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-gpu/out/kimi_neurovoz_encstates.npz",
+  "states_sha256": "5a6c138e279483a8fb724e353efc4bb9924b0e262490e52a1b59b2ed9d8d98a6",
+  "states_sidecar": "scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-gpu/out/kimi_neurovoz_encstates.json",
+  "enc_shape": [
+   1270,
+   32,
+   1280
+  ],
+  "pooling": "enc: mean over the token_len*4 encoder frames kimia keeps, token_len=(L-1)//1280+1; enc_allframes: mean over all 1500 frames",
+  "window_seconds": 30,
+  "dtype": "bfloat16",
+  "checkpoint": "moonshotai/Kimi-Audio-7B-Instruct",
+  "snapshot": "9a82a84c37ad9eb1307fb6ed8d7b397862ef9e6b",
+  "gpu_versions": {
+   "python": "3.12.3",
+   "torch": "2.8.0+cu128",
+   "transformers": "4.51.3",
+   "numpy": "2.5.3",
+   "gpu": "NVIDIA H100 80GB HBM3",
+   "flash_attn": "2.8.3.post1"
+  },
+  "hookcheck_max_over_clips": 2.384185791015625e-07,
+  "zeroshot_auc_same_run": 0.6199181696602478,
+  "stage_check": {
+   "PASS": true,
+   "p_yes_vs_zeroshot_file": {
+    "max_abs_diff": 0.06049084911792901,
+    "median_abs_diff": 0.0016788388790056619,
+    "n_over_0.01": 424,
+    "n_over_0.05": 2,
+    "pearson_r": 0.9934997088452538,
+    "auc_this_run": 0.6199181696602478,
+    "auc_zeroshot_file": 0.6204144118661435
+   },
+   "rerun10": {
+    "names_equal": true,
+    "enc_max_abs_diff": 0.0,
+    "p_yes_max_abs_diff": 0.0
+   },
+   "wav_sha256_equal_mac_stage": true,
+   "file": "scores/part26/Kimi-Audio_NeuroVoz/stage/kimi_neurovoz_encstates.stage.json"
+  },
+  "gpu_pod": {
+   "name": "p26-kimi-neurovoz-gpu",
+   "id": "pcg8t6ahr6bo4q",
+   "gpu": "NVIDIA H100 80GB HBM3",
+   "deleted_utc": "2026-09-24T01:28:26Z (watchdog, HTTP 204)",
+   "watchdog_log": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/watchdog26_kimi_neurovoz.log"
+  }
+ },
+ "reference_lm_probe_part25C": {
+  "probe_stream": "LM probe (Kimi-Audio has no encoder probe; LM probe shown instead)",
+  "probe_auc_master": "0.9334",
+  "gap": "0.313",
+  "gap_lo": "0.2556",
+  "gap_hi": "0.3681",
+  "per_repeat": [
+   0.9354,
+   0.9192,
+   0.9397,
+   0.9334,
+   0.9391
+  ],
+  "file": "<local data dir>/release_from_mac/scores/part25/C/C_other_models.tsv"
+ },
+ "pod": {
+  "name": "p26-kimi-neurovoz-cpu2",
+  "id": "o0ezblvilljrg0",
+  "cpuFlavor": "cpu3c",
+  "cpu": "AMD EPYC 9965 192-Core Processor (avx512f present)",
+  "versions": {
+   "python": "3.12.3",
+   "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+   "numpy": "2.1.2",
+   "sklearn": "1.9.1",
+   "scipy": "1.18.1",
+   "joblib": "1.6.0"
+  },
+  "seconds": 76.8,
+  "n_jobs": 24,
+  "created_utc": "2026-09-24T02:43:40Z",
+  "cost_per_hr": 0.96,
+  "watchdog": "scripts/part26/Kimi-Audio_NeuroVoz/watchdog26_kimi_neurovoz_cpu.sh",
+  "watchdog_log": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/watchdog26_kimi_neurovoz_cpu.log",
+  "attempt1_note": "first CPU pod p26-kimi-neurovoz-cpu (xm65txjjvqzq5q, created 01:22:44Z) was gone (REST 404) by 02:40Z with nothing run or pulled",
+  "deleted_utc": "2026-09-24T02:54:40Z (watchdog, HTTP 204, REST GET 404 after)",
+  "spend_usd_approx": 0.18
+ },
+ "podverify": {
+  "PASS": true,
+  "max_abs_pred_diff": 0.0,
+  "max_abs_inner_score_diff": 2.5579683704535228e-08,
+  "layer_mismatches": [],
+  "abs_mean5_diff": 0.0
+ },
+ "files": {
+  "perclip_csv": "scores/part26/Kimi-Audio_NeuroVoz/per_clip/p26_kimi_neurovoz_perclip.csv",
+  "draws_npz": "scores/part26/Kimi-Audio_NeuroVoz/draws/p26_kimi_neurovoz_draws.npz",
+  "pod_oof_csv": "scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-cpu2/out/p26_kimi_neurovoz_enc_nested5_oof.csv",
+  "pod_json": "scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-cpu2/out/p26_kimi_neurovoz_enc_nested5.json",
+  "pod_verify_json": "scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-cpu2/out/p26_kimi_neurovoz_podverify.json",
+  "zeroshot": "<local data dir>/release/overnight2/kimi_new/kimi_neurovoz_zeroshot_scores.csv",
+  "states_source": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-gpu/out/kimi_neurovoz_encstates.npz",
+  "states_staged": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/stage/kimi_neurovoz_encstates.npz"
+ },
+ "sha256": {
+  "pod_oof_csv": "24d2503206983c5b977d1d3487900d24335ef5cf54f2e208e79804d6c7c5f081",
+  "pod_json": "5e7ca35adfdee6a7ddd233ca00a5decc16cb1d66d5f5fa354abefe89e30f990a",
+  "zeroshot": "31ead549711af7ee473908b22fb8eea5eeda76406096282b4c5a386281bbf433",
+  "states_staged": "e9cf22321be2bb07345dd8c0cd7ac66a245c48ecd7e5f21f93595d53707604a8",
+  "perclip_csv": "798210421e8f6f822059dec9c95fe4d25b56cf36ce88fe5831ef62da1b3692e1",
+  "draws_npz": "36537bf0b54e4b6370626acfeec986b893736d7f1e5a32c75b5d96cfbf07d204"
+ },
+ "versions_mac": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "command": "/usr/local/bin/python3 scripts/p26_gap_kimi_neurovoz.py scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-cpu2",
+ "verified": true,
+ "verify_json": "scores/part26/Kimi-Audio_NeuroVoz/verify/verify_kimi_neurovoz.json",
+ "verify_script": "scripts/part26/Kimi-Audio_NeuroVoz/verify/verify_kimi_neurovoz.py",
+ "verify_checks": [
+  "perclip_equals_pod_oof",
+  "perclip_zeroshot_equals_file",
+  "no_missing_scores",
+  "clips_labels_speakers_equal_states",
+  "fold_columns_equal_release_fold_files",
+  "each_speaker_in_one_outer_fold",
+  "per_repeat_auc_rank_equals_sidecar",
+  "mean5_and_answer_equal_sidecar",
+  "answer_auc_4dp_is_0.6204",
+  "speaker_order_equals_npz",
+  "bootstrap_draws_equal_npz",
+  "interval_equals_sidecar",
+  "point_gap_equals_sidecar",
+  "podverify_PASS",
+  "staged_states_sha_equals_uploaded",
+  "pod_versions_pinned",
+  "staged_enc_equals_gpu_pull",
+  "all_32_layers_used"
+ ],
+ "xrefit_mac": {
+  "file": "scores/part26/Kimi-Audio_NeuroVoz/verify/xrefit_kimi_neurovoz.json",
+  "layers_equal": "25/25",
+  "mean5_refit": 0.9320694044349166,
+  "max_abs_auc_diff": 0.0003237980393470119,
+  "note": "Extra check on the Mac, outside the required checks. all_pass is False only because the Mac refit AUCs (sklearn 1.7.2, Accelerate) differ from the pinned Linux pod (sklearn 1.9.1) by up to 3.2e-04 per repeat, so the 4th decimal flips on some repeats; the Mac mean of five is 0.9321 vs 0.9319 on the pod. All 25 of 25 outer-fold layers chosen by my own inner selection equal the claimed layers. Same pattern as the Qwen2-Audio NeuroVoz refit. So this confirms the saved folds and the in-fold layer choice, not the 4th decimal."
+ },
+ "cell_spend_usd_approx": {
+  "gpu_pod_01:08:05-01:28:26_at_3.49": 1.18,
+  "cpu_attempt1_01:22:44-(gone by 02:40, deletion time unknown)_at_0.96": "at most 1.26",
+  "cpu_attempt2_02:43:40-02:54:40_at_0.96": 0.18
+ }
+}

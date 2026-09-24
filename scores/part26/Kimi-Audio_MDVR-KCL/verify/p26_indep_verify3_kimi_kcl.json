@@ -1,0 +1,211 @@
+{
+ "sha256": {
+  "perclip": "9075945555f6ef0cb65c4a40acef29c197a913991eb748d228acc883680136de",
+  "draws": "de47bb1ddb3681db2b462df11d51107141b35e661db446ac2595caf8937ea862",
+  "pod_oof": "5d3dab6f7d368224f6a5770f28e760e9784ab45676fc2bedbdfd67f655155b5c",
+  "zeroshot": "33b2b1abaef683d08a767fe5adab683fb8e1578b2902e919660b1b1e608b7b1c",
+  "fold_seed0": "e2653f93cf66ffc151e058ff09a985a61a22f84adff79f01dfccbfee68dfafae",
+  "fold_seed1": "8c1b07503c586ea751795d461d12c6b4bc4e9d1fe7df6c8297370b30cb56e1cf",
+  "fold_seed2": "110399d28ef21477a1524cd95ee38a81543a5db63a67eb4d9727f247e8581c1b",
+  "fold_seed3": "b672b2efdb52e31168e340f5cb48ede4b74eac14e2f6960a2982ba90504b4f36",
+  "fold_seed4": "e41ef57489f25b6acaa97ac0e1ec7e0daeef3189653db8edba898d9b06cc3711"
+ },
+ "G1": {
+  "n_clips": 37,
+  "unique_clips": true,
+  "n_speakers": 37,
+  "n_pos": 16,
+  "zs_same_clip_set": true,
+  "zs_same_order": true,
+  "zs_speaker_match": true,
+  "zs_label_match": true,
+  "label_matches_clip_name": true,
+  "speaker_is_clip_prefix": true,
+  "pod_same_clip_set": true,
+  "pod_speaker_label_match": true
+ },
+ "G2": {
+  "seed0": {
+   "same_clip_set": true,
+   "speaker_match": true,
+   "perclip_fold_match": true,
+   "pod_oof_fold_match": true,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ]
+  },
+  "seed1": {
+   "same_clip_set": true,
+   "speaker_match": true,
+   "perclip_fold_match": true,
+   "pod_oof_fold_match": true,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ]
+  },
+  "seed2": {
+   "same_clip_set": true,
+   "speaker_match": true,
+   "perclip_fold_match": true,
+   "pod_oof_fold_match": true,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ]
+  },
+  "seed3": {
+   "same_clip_set": true,
+   "speaker_match": true,
+   "perclip_fold_match": true,
+   "pod_oof_fold_match": true,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ]
+  },
+  "seed4": {
+   "same_clip_set": true,
+   "speaker_match": true,
+   "perclip_fold_match": true,
+   "pod_oof_fold_match": true,
+   "fold_sizes": [
+    8,
+    8,
+    7,
+    7,
+    7
+   ]
+  },
+  "rebuild_from_definition_matches": {
+   "seed0": true,
+   "seed1": true,
+   "seed2": true,
+   "seed3": true,
+   "seed4": true
+  },
+  "speaker_disjoint": true
+ },
+ "G3": {
+  "probe_scores_equal_pod_oof": true,
+  "single_equal_pod_oof": true,
+  "zeroshot_equal_file": true,
+  "no_nan": true
+ },
+ "G4": {
+  "per_repeat_exact": [
+   "233/336",
+   "89/112",
+   "143/168",
+   "241/336",
+   "85/112"
+  ],
+  "per_repeat": [
+   0.6934523809523809,
+   0.7946428571428571,
+   0.8511904761904762,
+   0.7172619047619048,
+   0.7589285714285714
+  ],
+  "per_repeat_4dp": [
+   0.6935,
+   0.7946,
+   0.8512,
+   0.7173,
+   0.7589
+  ],
+  "per_repeat_sklearn": [
+   0.693452380952381,
+   0.7946428571428572,
+   0.8511904761904762,
+   0.7172619047619048,
+   0.7589285714285715
+  ],
+  "mean5_exact": "641/840",
+  "mean5": 0.763095238095238,
+  "mean5_4dp": 0.7631,
+  "match_claim_per_repeat_4dp": true,
+  "match_claim_mean_4dp": true,
+  "match_claim_fraction": true,
+  "sklearn_agrees": true
+ },
+ "G5": {
+  "answer_exact": "239/336",
+  "answer": 0.7113095238095238,
+  "answer_4dp": 0.7113,
+  "sklearn": 0.7113095238095238,
+  "match_claim_4dp": true,
+  "match_claim_fraction": true,
+  "sklearn_agrees": true,
+  "answer_from_raw_zs_file": 0.7113095238095238,
+  "raw_file_agrees": true
+ },
+ "G6": {
+  "gap_exact": "29/560",
+  "gap": 0.05178571428571429,
+  "gap_4dp": 0.0518,
+  "match_claim_4dp": true,
+  "match_claim_fraction": true
+ },
+ "G7": {
+  "usable": 2000,
+  "lo": -0.16367508417508422,
+  "hi": 0.29006663292847495,
+  "lo_4dp": -0.1637,
+  "hi_4dp": 0.2901,
+  "mean5_ci": [
+   0.5865058479532165,
+   0.9129437340153451
+  ],
+  "answer_ci": [
+   0.5147940947940948,
+   0.8750548245614032
+  ],
+  "frac_draws_gap_le_0": 0.308,
+  "choice_stream_equals_integers_stream_first5": true,
+  "match_claim_lo_4dp": true,
+  "match_claim_hi_4dp": true,
+  "usable_2000": true,
+  "interval_includes_zero": true,
+  "saved_speakers_equal_np_unique": true,
+  "saved_speaker_idx_equal": true,
+  "saved_diff_maxabs": 3.3306690738754696e-16,
+  "saved_mean5_maxabs": 3.3306690738754696e-16,
+  "saved_zeroshot_maxabs": 2.220446049250313e-16,
+  "saved_per_repeat_maxabs": 2.220446049250313e-16,
+  "saved_point_diff": 0.051785714285714324,
+  "saved_point_diff_matches": true,
+  "saved_draws_lo_hi": [
+   -0.1636750841750841,
+   0.29006663292847495
+  ],
+  "saved_draws_ok": true
+ },
+ "checks": {
+  "G1_clips_speakers_labels": true,
+  "G2_folds_match_saved_files": true,
+  "G3_scores_trace_to_sources": true,
+  "G4_per_repeat_and_mean": true,
+  "G5_answer_auc": true,
+  "G6_gap_point": true,
+  "G7_bootstrap": true
+ },
+ "all_pass": true,
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6"
+ }
+}

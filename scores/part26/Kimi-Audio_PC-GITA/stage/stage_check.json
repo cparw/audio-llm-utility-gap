@@ -1,0 +1,20 @@
+{
+ "n": 1100,
+ "n_speakers": 100,
+ "n_pos": 550,
+ "duplicate_basenames_in_tree": 0,
+ "duplicates_all_identical": true,
+ "tar": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_PC-GITA/stage/pcgita1100.tar",
+ "tar_sha256": "e96184c119a98292adc8327744e8df4fc5cd98f45bfa885f387cd5e65c8979fc",
+ "tar_bytes": 490414080,
+ "order": "Kimi zero-shot file row order",
+ "checks": [
+  "clip set == Kimi zero-shot file",
+  "label and speaker == Kimi zero-shot file",
+  "clip set and speaker == all 5 fold files"
+ ],
+ "read_csv": "<local data dir>/paper1_local_runs/drive_data/pcgita_read.csv",
+ "read_csv_sha256": "252cbead6df82af519a72c44d52a9e32e6ed8d94f9f637c76eaa20892ba0363b",
+ "zeroshot_file": "<local data dir>/release/overnight2/part3/kimi_pcgita_zeroshot_scores.csv",
+ "zeroshot_sha256": "ec3c684d1e4498fdde321a0f74be424d6c1871c8d394fd67226bec8ee5aef9e6"
+}

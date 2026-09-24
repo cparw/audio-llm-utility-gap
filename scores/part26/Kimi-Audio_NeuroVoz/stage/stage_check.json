@@ -1,0 +1,35 @@
+{
+ "n": 1270,
+ "n_speakers": 107,
+ "n_pos": 621,
+ "wav_counts_by_subfolder": {
+  "audios": 2903,
+  "transcriptions": 0,
+  "audio_features": 0,
+  "metadata": 0
+ },
+ "bytes": 343495586,
+ "duration_s": {
+  "min": 0.08154195011337868,
+  "median": 2.972154195011338,
+  "max": 9.854897959183674,
+  "n_over_30": 0
+ },
+ "order": "Kimi zero-shot file row order, equal to the build_manifests.py rule (neurovoz.csv read rows)",
+ "checks": [
+  "clip set and order == Kimi zero-shot file",
+  "label and speaker == Kimi zero-shot file",
+  "clip set and speaker == all 5 fold files"
+ ],
+ "neurovoz_csv": "<local data dir>/paper1_local_runs/drive_data/neurovoz.csv",
+ "neurovoz_csv_sha256": "8281ea88ce16bc87fc372ca36d67b7b735fb87879104fe7f014e1c137db6bf60",
+ "zeroshot_file": "<local data dir>/release/overnight2/kimi_new/kimi_neurovoz_zeroshot_scores.csv",
+ "zeroshot_sha256": "31ead549711af7ee473908b22fb8eea5eeda76406096282b4c5a386281bbf433",
+ "fold_files": {
+  "neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+  "neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+  "neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+  "neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+  "neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655"
+ }
+}

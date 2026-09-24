@@ -1,0 +1,4 @@
+clip,speaker,p_yes,mass,kept_frames,samples_heard,dur_file_s,wav_sha256,prompt
+HC_ABLANDADA_0034.wav,34,0.24595462621799116,0.9973573088645935,116,35920,2.245,516c715b6fa6fce52284c9145a75d4aaaa32d7d0f6c15a60b5200667c170c7a0,"Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."
+HC_PIDIO_0034.wav,34,0.4076058002792228,0.9967512488365173,212,66987,4.1867,c52da42a888be465df56dd0ad68668918c8b524a87d0b794328c147d8aa7a761,"Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."
+HC_BURRO_0034.wav,34,0.44004252222640494,0.9952276945114136,108,34176,2.136,fb3d8d3f6c5f1c0e85b0d753fdea75f3d5697b14c4f4e9abbc7a0f7b2b94ed53,"Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No."

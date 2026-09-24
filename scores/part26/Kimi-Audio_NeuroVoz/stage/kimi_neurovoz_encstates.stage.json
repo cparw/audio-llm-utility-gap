@@ -1,0 +1,172 @@
+{
+ "src": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/pull/p26-kimi-neurovoz-gpu/out/kimi_neurovoz_encstates.npz",
+ "src_sha256": "5a6c138e279483a8fb724e353efc4bb9924b0e262490e52a1b59b2ed9d8d98a6",
+ "keys_src": {
+  "enc": [
+   [
+    1270,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "enc_allframes": [
+   [
+    1270,
+    32,
+    1280
+   ],
+   "float32"
+  ],
+  "enc_final_ln": [
+   [
+    1270,
+    1280
+   ],
+   "float32"
+  ],
+  "label": [
+   [
+    1270
+   ],
+   "int64"
+  ],
+  "spk": [
+   [
+    1270
+   ],
+   "<U3"
+  ],
+  "name": [
+   [
+    1270
+   ],
+   "<U21"
+  ],
+  "p_yes": [
+   [
+    1270
+   ],
+   "float64"
+  ],
+  "mass": [
+   [
+    1270
+   ],
+   "float64"
+  ],
+  "kept_frames": [
+   [
+    1270
+   ],
+   "int64"
+  ],
+  "samples_heard": [
+   [
+    1270
+   ],
+   "int64"
+  ],
+  "dur_file_s": [
+   [
+    1270
+   ],
+   "float64"
+  ],
+  "hookcheck_maxdiff": [
+   [
+    1270
+   ],
+   "float64"
+  ],
+  "wav_sha256": [
+   [
+    1270
+   ],
+   "<U64"
+  ]
+ },
+ "n": 1270,
+ "n_unique": 1270,
+ "n_speakers": 107,
+ "n_pos": 621,
+ "order_equals_zeroshot": true,
+ "labels_equal_zeroshot": true,
+ "speakers_equal_zeroshot": true,
+ "folds": {
+  "seed0": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed0_UNVERIFIED.csv",
+   "sha256": "0dc7597680677d894a4c8ebba1467e298e399dfe9a2479b5a6766fd7bd245b20",
+   "same_clip_set": true,
+   "speaker_equal": true
+  },
+  "seed1": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed1_UNVERIFIED.csv",
+   "sha256": "a04494edc44e6137c9647f296a051079c734ab6bcd2f623eaf070db169e6a10a",
+   "same_clip_set": true,
+   "speaker_equal": true
+  },
+  "seed2": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed2_UNVERIFIED.csv",
+   "sha256": "6ffff72c766b6b9d23ebfe8ac4ce80b35ece4eaa9b1cc686698dd2a885e8c570",
+   "same_clip_set": true,
+   "speaker_equal": true
+  },
+  "seed3": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed3_UNVERIFIED.csv",
+   "sha256": "fa8763b565affb5e214323c2f46ed2fbfdf49a3a05ca8b5f83069279194fa973",
+   "same_clip_set": true,
+   "speaker_equal": true
+  },
+  "seed4": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod_seed4_UNVERIFIED.csv",
+   "sha256": "45357585eb4cd7e7c82282517d7f55df9095153150cb87396f3360de5de22655",
+   "same_clip_set": true,
+   "speaker_equal": true
+  },
+  "single": {
+   "file": "<local data dir>/release/folds/neurovoz_groupkfold5_pod.csv",
+   "sha256": "10e609c186df31e34ae1e318e78031289a4055a73055b41b1175ca66baf602ad",
+   "same_clip_set": true,
+   "speaker_equal": true
+  }
+ },
+ "enc_shape": [
+  1270,
+  32,
+  1280
+ ],
+ "enc_dtype": "float32",
+ "enc_finite": true,
+ "wav_sha256_equal_mac_stage": true,
+ "hookcheck_max": 2.384185791015625e-07,
+ "p_yes_vs_zeroshot": {
+  "max_abs_diff": 0.06049084911792901,
+  "median_abs_diff": 0.0016788388790056619,
+  "n_over_0.01": 424,
+  "n_over_0.05": 2,
+  "pearson_r": 0.9934997088452538,
+  "auc_this_run": 0.6199181696602478,
+  "auc_zeroshot_file": 0.6204144118661435
+ },
+ "kept_frames": {
+  "min": 8,
+  "median": 152.0,
+  "max": 496
+ },
+ "rerun10": {
+  "names_equal": true,
+  "enc_max_abs_diff": 0.0,
+  "p_yes_max_abs_diff": 0.0
+ },
+ "staged": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_NeuroVoz/stage/kimi_neurovoz_encstates.npz",
+ "staged_sha256": "e9cf22321be2bb07345dd8c0cd7ac66a245c48ecd7e5f21f93595d53707604a8",
+ "staged_arrays_equal": {
+  "enc": true,
+  "label": true,
+  "spk": true,
+  "p_yes": true,
+  "name": true
+ },
+ "PASS": true
+}

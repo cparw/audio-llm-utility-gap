@@ -1,0 +1,134 @@
+{
+ "created_utc": "2026-09-24T02:52:02.505300Z",
+ "script": "scripts/part26/Kimi-Audio_PC-GITA/scripts/verify26_kimi_pcgita.py",
+ "1_fold_columns_equal_release_files": {
+  "seed0": true,
+  "seed1": true,
+  "seed2": true,
+  "seed3": true,
+  "seed4": true,
+  "single": true
+ },
+ "2_rank_auc_per_repeat": [
+  0.9028495867768596,
+  0.8477884297520661,
+  0.8616264462809917,
+  0.8797388429752067,
+  0.8918396694214876
+ ],
+ "2_max_abs_vs_pod_json": 2.220446049250313e-16,
+ "2_mean5": 0.8767685950413224,
+ "3_mac_refit_max_abs_pred_diff": 0.03636185864426461,
+ "3_mac_refit_auc": [
+  0.9029157024793388,
+  0.8478842975206612,
+  0.8615206611570247,
+  0.8797322314049587,
+  0.8918115702479339
+ ],
+ "3_mac_refit_auc_max_abs_vs_pod": 0.0001057851239669727,
+ "3_mac_refit_mean5_abs_vs_pod": 4.2975206611117756e-06,
+ "4_seed0_own_fill_equals_saved_outer": true,
+ "4_seed0_inner": {
+  "0": {
+   "layer": 7,
+   "pod_layer": 7,
+   "max_abs_inner_diff": 0.0007859629179360894,
+   "pod_inner_at_mac_layer_minus_pod_best": 0.0
+  },
+  "1": {
+   "layer": 5,
+   "pod_layer": 5,
+   "max_abs_inner_diff": 0.0006203980248401519,
+   "pod_inner_at_mac_layer_minus_pod_best": 0.0
+  },
+  "2": {
+   "layer": 8,
+   "pod_layer": 8,
+   "max_abs_inner_diff": 0.00027130812254771985,
+   "pod_inner_at_mac_layer_minus_pod_best": 0.0
+  },
+  "3": {
+   "layer": 2,
+   "pod_layer": 2,
+   "max_abs_inner_diff": 0.0005217463895150765,
+   "pod_inner_at_mac_layer_minus_pod_best": 0.0
+  },
+  "4": {
+   "layer": 4,
+   "pod_layer": 4,
+   "max_abs_inner_diff": 0.000731749311294716,
+   "pod_inner_at_mac_layer_minus_pod_best": 0.0
+  }
+ },
+ "4_seed0_layers_match": true,
+ "4_seed0_layers_match_or_near_tie": true,
+ "5_point_gap": 0.26206446280991746,
+ "5_zeroshot_auc": 0.614704132231405,
+ "5_ci": [
+  0.1810317734202187,
+  0.3364143153221302
+ ],
+ "5_ci_vs_sidecar_max_abs": 5.551115123125783e-17,
+ "5_point_vs_sidecar_abs": 1.1102230246251565e-16,
+ "5_draws_max_abs_vs_saved": 4.440892098500626e-16,
+ "5_usable": 2000,
+ "6_perclip_rows": 1100,
+ "6_probe_columns_equal_oof": true,
+ "6_zeroshot_equal_canonical": true,
+ "7_encoder_recompute": {
+  "weights": "<local data dir>/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/verify/hf_whisper/whisper-large-v3",
+  "transformers": "5.5.4",
+  "torch": "2.11.0",
+  "clips": {
+   "AVPEPUDEA0055_micasa.wav": {
+    "dur_file_s": 1.1993125,
+    "kept_frames": 60,
+    "min_cosine": 0.9999964194065494,
+    "median_cosine": 0.9999988685174792,
+    "max_rel_l2": 0.0026772382448909254,
+    "median_rel_l2": 0.0015047711851818401,
+    "best_match_is_same_layer": true,
+    "allframes_min_cosine": 0.9999965399192868
+   },
+   "AVPEPUDEA0035_micasa.wav": {
+    "dur_file_s": 2.84675,
+    "kept_frames": 144,
+    "min_cosine": 0.9999967906550636,
+    "median_cosine": 0.999999379466944,
+    "max_rel_l2": 0.0036949731835476517,
+    "median_rel_l2": 0.0011149818874163415,
+    "best_match_is_same_layer": true,
+    "allframes_min_cosine": 0.9999978407815532
+   },
+   "AVPEPUDEAC0018_precupado.wav": {
+    "dur_file_s": 4.2710625,
+    "kept_frames": 216,
+    "min_cosine": 0.9999988364559569,
+    "median_cosine": 0.9999996819445234,
+    "max_rel_l2": 0.0015257996235520763,
+    "median_rel_l2": 0.0008077702434643774,
+    "best_match_is_same_layer": true,
+    "allframes_min_cosine": 0.999997250766518
+   },
+   "AVPEPUDEA0035_readtext.wav": {
+    "dur_file_s": 45.261,
+    "kept_frames": 1500,
+    "min_cosine": 0.9999956991047835,
+    "median_cosine": 0.9999996680282377,
+    "max_rel_l2": 0.0033307850186831984,
+    "median_rel_l2": 0.0008196586401482812,
+    "best_match_is_same_layer": true,
+    "allframes_min_cosine": 0.9999956991047835
+   }
+  },
+  "pass": true
+ },
+ "versions": {
+  "python": "3.10.2",
+  "numpy": "2.2.6",
+  "sklearn": "1.7.2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit"
+ },
+ "PASS": true
+}
