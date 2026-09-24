@@ -1,0 +1,46 @@
+{
+  "dcaps": {
+    "n_clips": 275,
+    "n_speakers": 275,
+    "n_PD": 66,
+    "n_HC": 209,
+    "AUC_from_recording_properties_only": 0.453,
+    "AUC_from_metadata_only_age_sex": NaN,
+    "AUC_recording_plus_metadata": NaN,
+    "AUC_label_shuffled_control": 0.535,
+    "mean_age_PD": NaN,
+    "mean_age_HC": NaN,
+    "frac_male_PD": NaN,
+    "frac_male_HC": NaN,
+    "per_class_means": {
+      "duration_s": {
+        "PD": 676.942,
+        "HC": 798.312
+      },
+      "rms": {
+        "PD": 0.008,
+        "HC": 0.01
+      },
+      "orig_sr": {
+        "PD": 16000.0,
+        "HC": 16000.0
+      },
+      "spec_centroid": {
+        "PD": 1272.048,
+        "HC": 1260.856
+      },
+      "spec_rolloff": {
+        "PD": 2595.064,
+        "HC": 2563.599
+      },
+      "zcr": {
+        "PD": 0.076,
+        "HC": 0.075
+      },
+      "snr_est": {
+        "PD": 29.043,
+        "HC": 29.227
+      }
+    }
+  }
+}

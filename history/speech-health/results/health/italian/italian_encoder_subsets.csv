@@ -1,0 +1,15 @@
+task,condition,n_clips,n_ctrl_spk,n_pd_spk,auc,ci_lo,ci_hi,spk_auc,shuffle
+read,"as shipped (all 236 read clips, speaker_id as given)",236,37,28,0.9953,0.983,1.0,1.0,0.4986
+read,+ duplicate-speaker fix (3 patients had 2 ids),236,37,25,0.9977,0.992,1.0,1.0,0.5291
+read,16 kHz native only,196,37,18,0.9998,0.999,1.0,1.0,0.5034
+read,matched container (bare fmt|data) + 16 kHz,152,23,18,0.9914,0.967,1.0,0.9662,0.4627
+read,matched container + 16 kHz + elderly HC only (age-matched),151,22,18,1.0,1.0,1.0,1.0,0.4893
+read,"matched container, raw",152,23,18,0.9914,0.967,1.0,0.9662,
+read,"matched container, noise-floor level residualised",152,23,18,0.9826,0.948,1.0,0.9565,
+vowel,"as shipped (all 236 read clips, speaker_id as given)",495,22,28,0.9864,0.964,1.0,0.9919,0.4879
+vowel,+ duplicate-speaker fix (3 patients had 2 ids),495,22,25,0.9917,0.973,1.0,0.9945,0.4861
+vowel,16 kHz native only,395,22,18,0.9938,0.978,1.0,0.9949,0.4829
+vowel,matched container (bare fmt|data) + 16 kHz,395,22,18,0.9938,0.978,1.0,0.9949,0.4829
+vowel,matched container + 16 kHz + elderly HC only (age-matched),395,22,18,0.9938,0.978,1.0,0.9949,0.4829
+vowel,"matched container, raw",212,22,7,1.0,1.0,1.0,1.0,
+vowel,"matched container, noise-floor level residualised",212,22,7,1.0,1.0,1.0,1.0,

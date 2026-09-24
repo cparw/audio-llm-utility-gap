@@ -1,0 +1,277 @@
+[
+  {
+    "case": 1,
+    "part": "A",
+    "name": "raw",
+    "n": 236,
+    "auc": 0.995,
+    "ci": [
+      0.957,
+      1.0
+    ]
+  },
+  {
+    "case": 2,
+    "part": "A",
+    "name": "rmsnorm",
+    "n": 236,
+    "auc": 0.992,
+    "ci": [
+      0.938,
+      1.0
+    ]
+  },
+  {
+    "case": 3,
+    "part": "A",
+    "name": "silence",
+    "n": 236,
+    "auc": 0.996,
+    "ci": [
+      0.958,
+      1.0
+    ]
+  },
+  {
+    "case": 4,
+    "part": "A",
+    "name": "seg1.0",
+    "n": 13941,
+    "auc": 0.802,
+    "ci": [
+      0.708,
+      0.826
+    ]
+  },
+  {
+    "case": 5,
+    "part": "A",
+    "name": "seg3.0",
+    "n": 13469,
+    "auc": 0.916,
+    "ci": [
+      0.844,
+      0.95
+    ]
+  },
+  {
+    "case": 6,
+    "part": "A",
+    "name": "seg5.0",
+    "n": 12997,
+    "auc": 0.956,
+    "ci": [
+      0.886,
+      0.974
+    ]
+  },
+  {
+    "case": 7,
+    "part": "A",
+    "name": "seg10.0",
+    "n": 11817,
+    "auc": 0.963,
+    "ci": [
+      0.903,
+      0.991
+    ]
+  },
+  {
+    "case": 8,
+    "part": "A",
+    "name": "sil_seg_3.0",
+    "n": 9085,
+    "auc": 0.932,
+    "ci": [
+      0.863,
+      0.967
+    ]
+  },
+  {
+    "case": 9,
+    "part": "A",
+    "name": "silrms_seg_3.0",
+    "n": 9085,
+    "auc": 0.929,
+    "ci": [
+      0.871,
+      0.966
+    ]
+  },
+  {
+    "case": 10,
+    "part": "B-single",
+    "name": "duration_s",
+    "n": 236,
+    "auc": 0.665,
+    "ci": [
+      0.594,
+      0.752
+    ]
+  },
+  {
+    "case": 11,
+    "part": "B-single",
+    "name": "rms",
+    "n": 236,
+    "auc": 0.365,
+    "ci": [
+      0.241,
+      0.697
+    ]
+  },
+  {
+    "case": 12,
+    "part": "B-single",
+    "name": "spec_centroid",
+    "n": 236,
+    "auc": 0.809,
+    "ci": [
+      0.672,
+      0.896
+    ]
+  },
+  {
+    "case": 13,
+    "part": "B-single",
+    "name": "spec_rolloff",
+    "n": 236,
+    "auc": 0.661,
+    "ci": [
+      0.443,
+      0.765
+    ]
+  },
+  {
+    "case": 14,
+    "part": "B-single",
+    "name": "zcr",
+    "n": 236,
+    "auc": 0.818,
+    "ci": [
+      0.733,
+      0.921
+    ]
+  },
+  {
+    "case": 15,
+    "part": "B-single",
+    "name": "snr_est",
+    "n": 236,
+    "auc": 0.865,
+    "ci": [
+      0.777,
+      0.934
+    ]
+  },
+  {
+    "case": 16,
+    "part": "B-loo",
+    "name": "drop_duration_s",
+    "n": 236,
+    "auc": 0.997,
+    "ci": [
+      0.957,
+      1.0
+    ]
+  },
+  {
+    "case": 17,
+    "part": "B-loo",
+    "name": "drop_rms",
+    "n": 236,
+    "auc": 0.99,
+    "ci": [
+      0.934,
+      1.0
+    ]
+  },
+  {
+    "case": 18,
+    "part": "B-loo",
+    "name": "drop_spec_centroid",
+    "n": 236,
+    "auc": 0.994,
+    "ci": [
+      0.958,
+      1.0
+    ]
+  },
+  {
+    "case": 19,
+    "part": "B-loo",
+    "name": "drop_spec_rolloff",
+    "n": 236,
+    "auc": 0.996,
+    "ci": [
+      0.959,
+      1.0
+    ]
+  },
+  {
+    "case": 20,
+    "part": "B-loo",
+    "name": "drop_zcr",
+    "n": 236,
+    "auc": 0.991,
+    "ci": [
+      0.943,
+      1.0
+    ]
+  },
+  {
+    "case": 21,
+    "part": "B-loo",
+    "name": "drop_snr_est",
+    "n": 236,
+    "auc": 0.868,
+    "ci": [
+      0.723,
+      0.932
+    ]
+  },
+  {
+    "case": 22,
+    "part": "B-group",
+    "name": "spectral_only",
+    "n": 236,
+    "auc": 0.834,
+    "ci": [
+      0.711,
+      0.925
+    ]
+  },
+  {
+    "case": 23,
+    "part": "B-group",
+    "name": "level_only",
+    "n": 236,
+    "auc": 0.863,
+    "ci": [
+      0.744,
+      0.927
+    ]
+  },
+  {
+    "case": 24,
+    "part": "B-group",
+    "name": "duration_only",
+    "n": 236,
+    "auc": 0.665,
+    "ci": [
+      0.594,
+      0.752
+    ]
+  },
+  {
+    "case": 25,
+    "part": "B-group",
+    "name": "no_duration_no_snr",
+    "n": 236,
+    "auc": 0.831,
+    "ci": [
+      0.684,
+      0.919
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "model": "kimi-audio-7b-instruct",
+  "n_clips": 1117,
+  "n_parsed": 1117,
+  "n_speakers": 117,
+  "prompt": "Based only on how this person's voice sounds, does this speaker show signs of Parkinson's disease? Answer with one word, Yes or No.",
+  "frac_yes": 0.26589077887197854,
+  "unparsed": 0,
+  "auc": 0.5753831110541164
+}

@@ -1,0 +1,28 @@
+quantity,n,mean,ci_low,ci_high
+pitt answer,468,0.6178,0.5639,0.6699
+pitt projector retrained,468,0.7977,0.7555,0.8360
+pitt readout strict,468,0.7844,0.7419,0.8268
+pitt transcript only (raw),468,0.6126,0.5619,0.6627
+pitt transcript only (clean),468,0.6763,0.6256,0.7229
+pitt projector minus answer (paired),468,0.1800,0.1145,0.2426
+pitt readout minus answer (paired),468,0.1666,0.1020,0.2304
+pitt audio answer minus transcript only clean (paired),468,-0.0586,-0.1239,0.0085
+"pitt answer, conflict arm",146,0.4125,0.3094,0.5235
+"pitt readout strict, conflict arm",146,0.6073,0.5038,0.7066
+"pitt projector retrained, conflict arm",146,0.5728,0.4786,0.6667
+"pitt readout minus answer, conflict arm (paired)",146,0.1947,0.0433,0.3442
+"pitt projector minus answer, conflict arm (paired)",146,0.1603,0.0248,0.2980
+"pitt projector retrained, no plug (final layer)",468,0.7627,0.7205,0.8057
+pitt projector no plug minus answer (paired),468,0.1450,0.0818,0.2093
+pitt projector layer 24 minus no plug (paired),468,0.0350,-0.0038,0.0733
+"pitt projector no plug, conflict arm",146,0.4839,0.3842,0.5816
+"pitt projector layer 24 minus no plug, conflict arm (paired)",146,0.0889,0.0038,0.1774
+adresso answer (patient window),237,0.6644,0.5956,0.7354
+adresso transcript only (whisper-large-v3),237,0.6822,0.6134,0.7482
+adresso transcript minus answer (paired),237,0.0177,-0.0752,0.1019
+adress2020 answer pooled (patient window),156,0.6815,0.5984,0.7619
+"adress2020 answer, official test split",48,0.7821,0.6346,0.9020
+"adress2020 answer, official train split",108,0.6245,0.5141,0.7295
+kcl answer,37,0.6458,0.4455,0.8187
+kcl projector retrained,37,0.7500,0.5684,0.9035
+kcl projector minus answer (paired),37,0.1042,-0.1265,0.3394

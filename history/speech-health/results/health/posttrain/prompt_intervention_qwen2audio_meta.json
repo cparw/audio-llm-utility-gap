@@ -1,0 +1,23 @@
+{
+  "model": "Qwen/Qwen2-Audio-7B-Instruct",
+  "n_rows": 4680,
+  "n_wavs": 297,
+  "prompts": {
+    "P00_baseline": "Based only on this recording, does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P01_voice": "Based only on how this person's voice sounds, does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P02_ignore_words": "Ignore the meaning of the words completely. Judge only the sound of the voice. Does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P03_words_misleading": "The words spoken in this recording may be misleading and must not be used. Base your judgement only on vocal acoustics. Does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P04_acoustic_list": "Attend only to pitch variation, loudness, speaking rate, pauses and voice quality. Do not consider what is being said. Does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P05_clinician": "You are a clinician assessing vocal biomarkers. Depressed speech is typically monotone, quiet, slow, and contains long pauses. Judge the voice, not the content. Does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P06_foreign_language": "Assume you do not understand the language being spoken and can only hear how it sounds. Does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P07_prosody_not_semantics": "Based only on the prosody and vocal quality of this recording, and not on its semantic content, does this speaker show signs of depression? Answer with one word, Yes or No.",
+    "P08_symptom_acoustic": "Based only on how this person's voice sounds, does this speaker have flat affect, low energy, and a monotone or slowed voice? Answer with one word, Yes or No.",
+    "P09_polarity_flip": "Based only on how this person's voice sounds, does this speaker sound emotionally healthy and not depressed? Answer with one word, Yes or No.",
+    "P10_balanced_prior": "Based only on this recording, does this speaker show signs of depression? About half of the speakers in this study are depressed, so answer Yes about half the time. Answer with one word, Yes or No.",
+    "P11_ignore_words_prior": "Ignore the meaning of the words completely and judge only the sound of the voice. Does this speaker show signs of depression? About half of the speakers in this study are depressed, so answer Yes about half the time. Answer with one word, Yes or No."
+  },
+  "flip": [
+    "P09_polarity_flip"
+  ],
+  "minutes": 15.1
+}
