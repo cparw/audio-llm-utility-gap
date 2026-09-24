@@ -1,0 +1,36 @@
+{
+ "task": "independent check of part25/T5 r2 outputs",
+ "date_utc": "2026-09-24T02:55:56Z",
+ "script": "scripts/part25/T5/verify/T5_verify_r2.py",
+ "script_sha256": "0cb7fefa68470fce99438e1b28cbadad03986206f5ccf85740ebab1575a3ab4b",
+ "checked": {
+  "T5_counts.tsv": "01b60bf4732dc48254dd5dd38b15dd00ef27236436947738d60c165cd19a82fc",
+  "T5_curve_match.tsv": "11cbe7d6b2800af61e4c056c330b6936c67854562089c2ec56ef0ada6209a43d",
+  "T5_counts_sidecar.json": "29aee7c3042261e4b6097a1a096563d24902bf581ec82d5e0fa5225f1dbaa853"
+ },
+ "result": "TOTAL checks 544, BAD 0",
+ "n_ok": 544,
+ "n_bad": 0,
+ "info": [
+  "neurovoz: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 2.22e-16; vrefit counts 32/32 above answer, 32/32 above hi",
+  "neurovoz: refit 32/32 above answer 0.6951, 32/32 above hi 0.7519; paired delta lower bound > 0 on 32/32 layers",
+  "kcl: no refit; saved 32/32 above answer 0.7143, 0/32 above hi 0.8810",
+  "adresso: no refit; saved 32/32 above answer 0.6150, 32/32 above hi 0.6890",
+  "adress2020: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 1.11e-16; vrefit counts 32/32 above answer, 24/32 above hi",
+  "adress2020: refit 32/32 above answer 0.6241, 24/32 above hi 0.7148; paired delta lower bound > 0 on 22/32 layers",
+  "edaic_whole_p23: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 1.11e-16; vrefit counts 0/32 above answer, 0/32 above hi",
+  "edaic_whole_p23: refit 0/32 above answer 0.8366, 0/32 above hi 0.8866; paired delta lower bound > 0 on 0/32 layers",
+  "edaic_lifted_p22: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 1.11e-16; vrefit counts 0/32 above answer, 0/32 above hi",
+  "edaic_lifted_p22: refit 0/32 above answer 0.8379, 0/32 above hi 0.8876; paired delta lower bound > 0 on 0/32 layers",
+  "edaic_full_o25: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 1.11e-16; vrefit counts 0/32 above answer, 0/32 above hi",
+  "edaic_full_o25: refit 0/32 above answer 0.8285, 0/32 above hi 0.8827; paired delta lower bound > 0 on 0/32 layers",
+  "edaic_full_statesrun: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 1.11e-16; vrefit counts 0/32 above answer, 0/32 above hi",
+  "edaic_full_statesrun: refit 0/32 above answer 0.8278, 0/32 above hi 0.8822; paired delta lower bound > 0 on 0/32 layers",
+  "edaic_first30: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 1.11e-16; vrefit counts 2/32 above answer, 0/32 above hi",
+  "edaic_first30: refit 2/32 above answer 0.6620, 0/32 above hi 0.7315; paired delta lower bound > 0 on 0/32 layers",
+  "pitt: vrefit (second code path, same pod) auc_oof vs refit csv maxabs 1.11e-16; vrefit counts 31/32 above answer, 25/32 above hi",
+  "pitt: refit 31/32 above answer 0.6578, 25/32 above hi 0.7125; paired delta lower bound > 0 on 18/32 layers",
+  "pcgita: no refit; saved 32/32 above answer 0.5635, 32/32 above hi 0.6331",
+  "omni_final newest mtime 2026-09-18T12:52:40.905903+00:00"
+ ]
+}
