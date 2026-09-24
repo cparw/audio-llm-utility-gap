@@ -1,0 +1,249 @@
+{
+ "saved": {
+  "pitt_enc": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_encoder_perlayer.csv",
+   "sha256": "1e4a885cc2ddff92622ca3b94298f7f8ac5538fa955fd0f7fe93cbe5c2aafb18"
+  },
+  "pitt_proj": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_proj_perlayer.csv",
+   "sha256": "592d3db3a27e57fd7f3b6429826aafb026871fed71db47cb80de66441ce4343d"
+  },
+  "pitt_llm": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_llm_perlayer.csv",
+   "sha256": "4300f8d3869276687d98fd6d4116598cb73610009139269cf924e4ddc79cab24"
+  },
+  "pitt_ans": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_ans_perlayer.csv",
+   "sha256": "ca0dd2575907aa53ecedc52ab35b43b25856815090abc5eebf0125623ce254c2"
+  },
+  "edaic_first30_enc": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_encoder_perlayer.csv",
+   "sha256": "aa45ad8a6a030ed70538b113f9a38d6fa1d810c466c42183a8f0fe0b0bc4dafd"
+  },
+  "edaic_first30_proj": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_proj_perlayer.csv",
+   "sha256": "a2035a1bd51860bbbc6eaa460233067ee9ba1bccf5942c66ecebbda7c66c3458"
+  },
+  "edaic_first30_llm": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_llm_perlayer.csv",
+   "sha256": "a453d88a88334729094be7fb1d5dd775431dcbaac3d43c8db52239caa931bf95"
+  },
+  "edaic_first30_ans": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_ans_perlayer.csv",
+   "sha256": "fb7a767939b4ba6a34756523c5af4c77bd0935dbf598f1bf80844b76379f5bcc"
+  },
+  "adress2020_enc": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_encoder_perlayer.csv",
+   "sha256": "e56202f096162382cdc1a0a5d4451bbb7676e5b3f3649d1b5676b8b9f3b29752"
+  },
+  "adress2020_proj": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_proj_perlayer.csv",
+   "sha256": "f6cd9d1928ce9d2a571dd2a03a16cb8411e8f39a24747c7c96de503927ca6bd7"
+  },
+  "adress2020_llm": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_llm_perlayer.csv",
+   "sha256": "77ec34eb94b808736bebc336caebb884952c377f80a580200201212a4532c547"
+  },
+  "adress2020_ans": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_ans_perlayer.csv",
+   "sha256": "90f6b6fc4740213123712dea05506eadf22819f67cc636eb290ab77243604034"
+  },
+  "neurovoz_enc": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_encoder_perlayer.csv",
+   "sha256": "126fa3cee99739a5c875ebf2d35fcbe9eebb048db7ac5cb98ad27d046f9b0e55"
+  },
+  "neurovoz_proj": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_proj_perlayer.csv",
+   "sha256": "8e27c321fed1afe68b9d62509198392d307ad6fa87c27f8cf30ced0fa55c8894"
+  },
+  "neurovoz_llm": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_llm_perlayer.csv",
+   "sha256": "7cb0b860d7c7c5aae1da2dfc33670da9555d84243326efda11019b632cad1d23"
+  },
+  "neurovoz_ans": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_ans_perlayer.csv",
+   "sha256": "d547a72980e0f7e3245f340ad2fc6da2686824e9a06b39db84b35e44241df5fc"
+  },
+  "edaic_full_enc": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_encoder_perlayer.csv",
+   "sha256": "adbbb86b58d2d0bba56c1467a6a9ccd0206c1c1219d4fc69f2116ecc8b53fc3b"
+  },
+  "edaic_full_proj": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_proj_perlayer.csv",
+   "sha256": "13df004f06c9dccec923455248d9997578ffc556956c3756a5a20720b58081c0"
+  },
+  "edaic_full_llm": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_llm_perlayer.csv",
+   "sha256": "1e235070dd4e81e17625fcfc37444afe895230301bb089167841fe44b4fc8f52"
+  },
+  "edaic_full_ans": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_ans_perlayer.csv",
+   "sha256": "23b319d4aa57e67716ab1974073ae70b706c1cf3cd0ef38ca7a709a743312ea2"
+  }
+ },
+ "zeroshot": {
+  "pitt": {
+   "file": "<local data dir>/release/omni_final/omni_pitt_zeroshot_scores.csv",
+   "sha256": "7a5318fe5e2bee981a5104c124705944293918d1d5378df5bde4bb670552a406",
+   "answer_auc": 0.6577683068578071
+  },
+  "edaic_first30": {
+   "file": "<local data dir>/release/omni_final/omni_edaic_zeroshot_scores.csv",
+   "sha256": "9df401fdf638ef5794708261c582a7940fbe8989c5997b46ba66a25a6d8ea51f",
+   "answer_auc": 0.662026968247064
+  },
+  "adress2020": {
+   "file": "<local data dir>/release/omni_final/omni_adress2020_zeroshot_scores.csv",
+   "sha256": "21a4753da1a3bb5a7e1aeff90b8688eb217a4d198984905168800a4361d57543",
+   "answer_auc": 0.6240959894806049
+  },
+  "neurovoz": {
+   "file": "<local data dir>/release/omni_final/omni_neurovoz_zeroshot_scores.csv",
+   "sha256": "1695cbc067f39dd3e07e435861ea1f781b6022a2b69eff0f49edd9dfc45bd082",
+   "answer_auc": 0.6950814953762633
+  },
+  "edaic_full": {
+   "file": "<local data dir>/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv",
+   "sha256": "e6d42d7402e081395e246e7b1b407b268cea7dfdeb889e386a4f8f7381c5c590",
+   "answer_auc": 0.8284761490503117
+  }
+ },
+ "answer_edaicfull_states_run": 0.8277511961722488,
+ "pitt_figure_file_vs_omni_final_maxabs": 0.0,
+ "pyes_maxdiff": {
+  "pitt": [
+   0.0,
+   468,
+   468
+  ],
+  "edaic_first30": [
+   0.0,
+   275,
+   275
+  ],
+  "adress2020": [
+   0.03836380753010504,
+   156,
+   156
+  ],
+  "neurovoz": [
+   0.04680777214932552,
+   1270,
+   1270
+  ],
+  "edaic_full": [
+   0.030250470877691393,
+   275,
+   275
+  ]
+ },
+ "rows_recomputed": {
+  "n": 106,
+  "agree": 106,
+  "file": "scores/leftovers_23sep/t5_verify/t5_VERIFIED_rows.tsv"
+ },
+ "task_pod_cpus": {
+  "lo-t5-1": "AMD EPYC 7713",
+  "lo-t5-2": "AMD EPYC 9754",
+  "lo-t5-3": "AMD EPYC 7713",
+  "lo-t5-4": "AMD EPYC 7713",
+  "lo-t5-5": "AMD EPYC 9965",
+  "lo-t5-6": "AMD EPYC 9965",
+  "lo-t5-7": "AMD EPYC 9654",
+  "lo-t5-8": "AMD EPYC 9655P",
+  "lo-t5-9": "AMD EPYC 9654",
+  "lo-t5-10": "AMD EPYC 9654",
+  "lo-t5-11": null,
+  "lo-t5-12": null,
+  "lo-t5-13": "AMD EPYC 9575F"
+ },
+ "task_verify_log_total": [
+  "TOTAL agree 106 disagree 0 of 106"
+ ],
+ "task_vrefit_vs_saved": {
+  "lo-t5-1:pitt_encproj__vrefit_enc.csv": {
+   "maxabs": 0.0006780317706315264,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-1:pitt_encproj__vrefit_proj.csv": {
+   "maxabs": 5.8117008911340307e-05,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-10:edaic30_encproj__vrefit_enc.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-10:edaic30_encproj__vrefit_proj.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-10:pitt_encproj__vrefit_enc.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-10:pitt_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-13:pitt_ans__vrefit_ans.csv": {
+   "maxabs": 2.220446049250313e-16,
+   "cpu": "AMD EPYC 9575F"
+  },
+  "lo-t5-2:pitt_llm__vrefit_llm.csv": {
+   "maxabs": 2.220446049250313e-16,
+   "cpu": "AMD EPYC 9754"
+  },
+  "lo-t5-3:pitt_ans__vrefit_ans.csv": {
+   "maxabs": 0.000794265788454096,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-4:edaic30_encproj__vrefit_enc.csv": {
+   "maxabs": 0.0005074670146441029,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-4:edaic30_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0003624764390314228,
+   "cpu": "AMD EPYC 7713"
+  },
+  "lo-t5-5:edaic30_llm__vrefit_llm.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9965"
+  },
+  "lo-t5-6:edaic30_ans__vrefit_ans.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9965"
+  },
+  "lo-t5-7:adress2020_encproj__vrefit_enc.csv": {
+   "maxabs": 0.002876397107166362,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-7:adress2020_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0013149243918473275,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-8:neurovoz_encproj__vrefit_enc.csv": {
+   "maxabs": 0.001091732852970706,
+   "cpu": "AMD EPYC 9655P"
+  },
+  "lo-t5-8:neurovoz_encproj__vrefit_proj.csv": {
+   "maxabs": 4.9624220589405965e-06,
+   "cpu": "AMD EPYC 9655P"
+  },
+  "lo-t5-9:edaic30_encproj__vrefit_enc.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-9:edaic30_encproj__vrefit_proj.csv": {
+   "maxabs": 1.1102230246251565e-16,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-9:edaicfull_encproj__vrefit_enc.csv": {
+   "maxabs": 0.002972306800058111,
+   "cpu": "AMD EPYC 9654"
+  },
+  "lo-t5-9:edaicfull_encproj__vrefit_proj.csv": {
+   "maxabs": 0.0007249528780629566,
+   "cpu": "AMD EPYC 9654"
+  }
+ }
+}
