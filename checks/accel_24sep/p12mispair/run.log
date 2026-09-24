@@ -1,0 +1,81 @@
+0 L67_321 0.89 0.89680315554142 OK min median Yes+No mass over 70 zero-shot cells = 0.8968 (Audio Flamingo 3 pcgita); recomputed from af3_pcgita.csv = 0.89680315554142; E-DAIC whole median 0.9969 tex says 'at least 0.89'; true floor check (>=0.89)
+1 L77_360 0.43 to 0.62 0.4315 to 0.6196 OK AUC(label,p_tfidf) KCL 0.4315 NeuroVoz 0.5814 PC-GITA 0.6196 
+2 L77_398 0.68 0.6777584457010294 OK AUC [0.5973, 0.7549] n=275 
+3 L77_433 0.84 to 0.93 0.8353 to 0.9254 OK Pitt 0.8353 ADReSSo 0.8471 ADReSS-2020 0.9254 
+4 L92_538 0.07 0.06642450047018944 OK max |wording - base| over 14 runs = 0.0664; mean 0.0240 (tex 0.02 on average) E-DAIC wording runs are 30 s windows (omni_edaic_*), not the whole-interview Table 1 cell; pcgita/p2 +0.0071; pcgita/p3 -0.0071; neurovoz/p2 -0.0664; neurovoz/p3 -0.0418; kcl/p2 -0.0179; kcl/p3 -0.0060; edaic/p2 +0.0128; edaic/p3 +0.0222; pitt/p2 -0.0380; pitt/p3 +0.0034; adresso/p2 +0.0148; adresso/p3 +0.0589; adress2020/p2 -0.0146; adress2020/p3 +0.0251
+5 L97_803 30 to 56 30.0 to 55.6 (median 33.3) OK dur column, n=468, sets {'agreement': 322, 'conflict': 146} 
+8 L140_549 0.72 0.720530665506742 OK AUC [0.6531, 0.7917] n=275 
+9 L149_1096 0.67 0.6656859504132231 OK five-feature OOF AUC, PC-GITA, before 
+10 L149_1224 0.56 0.5589785123966943 OK five-feature OOF AUC, PC-GITA, after 
+11 L149_1283 0.07 -0.06607272727272717 OK enc probe after minus before 0.8298-0.8959 = -0.0661 [-0.1181, -0.0180] paired spk bootstrap tex prints -0.07
+12 L149_1292 0.12 -0.11807733101505062 OK lower bound of row 11 interval tex prints -0.12
+13 L149_1301 0.02 -0.01800942069134837 OK upper bound of row 11 interval tex prints -0.02
+14 L149_1350 0.60 0.6024603688568316 OK five-feature OOF AUC, NeuroVoz, after (before 0.7977, tex 0.80) 
+15 L149_1402 0.03 -0.030817881591647334 OK enc probe after minus before 0.8924-0.9233 = -0.0308 [-0.0608, -0.0012] tex prints -0.03
+16 L149_1411 0.061 -0.06081860111939197 OK lower bound (tex gives 3 dp) checked at 3 dp because tex prints -0.061
+17 L149_1421 0.001 -0.0012329532883264876 OK upper bound (tex gives 3 dp) checked at 3 dp because tex prints -0.001
+18 L149_1507 0.90 0.8985816533924595 OK mean of 5 seed AUCs 0.8986; AUC of averaged p 0.9147; p_single 0.8951; n=907 spk=76 
+20 L149_1527 0.63 0.6281860528439867 OK AUC [0.5584, 0.6985] n=907 spk=76 
+19 L149_152 0.77 to 0.88 0.7706 to 0.8752 OK Pitt mean of 5 per-repeat AUCs 0.7706 (recomputed); ADReSSo json mean 0.8752 (per-repeat mean 0.8752); ADReSS-2020 0.8043 (0.8043) ADReSSo and ADReSS-2020 read from the repeats json summary, not recomputed per clip
+21 L149_2192 0.66 0.6608 OK auc_d (summary csv) 
+22 L149_2262 0.77 0.7709 OK auc_probe (summary csv) 
+23 L149_2283 0.77 0.7662 OK auc_probe_without_d (summary csv); cosine -0.0109 
+25 L149_2463 0.62 0.6173576133281674 OK AUC(label, proj_d) n=468; probe 0.8223; perp_z 0.8114; nested_oof 0.8295; nested_perp_z 0.8169 
+26 L149_2643 0.74 0.7437146585471943 OK LM probe mean of five per-repeat AUCs (AUC of averaged p 0.7504) 
+27 L149_2670 0.60 0.5981151225170365 OK encoder probe mean of five per-repeat AUCs (AUC of averaged p 0.6058) 
+28 L149_2701 0.84 0.8365956212846165 OK AUC p_yes_whole n=275 
+29 L149_2710 0.09 -0.09288096273742219 OK LM minus answer -0.0929 [-0.1609, -0.0257] paired, mean-of-five inside each draw tex prints -0.09
+30 L149_2719 0.16 -0.16093403148149316 OK lower bound tex prints -0.16
+31 L149_2728 0.03 -0.025735708894878695 OK upper bound tex prints -0.03
+32 L149_2741 0.24 -0.23848049876758004 OK encoder minus answer -0.2385 [-0.3244, -0.1505] tex prints -0.24
+33 L149_2750 0.32 -0.32436175626283104 OK lower bound tex prints -0.32
+34 L149_2759 0.15 -0.15047018915731847 OK upper bound tex prints -0.15
+35 L149_2821 0.84 0.8359141655792375 OK answer-state probe mean of five; minus answer -0.0007 [-0.0455, +0.0436] 
+36 L149_333 0.11 0.11280123982952339 OK mean-of-5 enc 0.7706 minus zero-shot 0.6578 = +0.1128 [+0.0455, +0.1768] n=468 spk=228 
+37 L149_339 0.05, 0.18 0.0455, 0.1768 OK interval of the Pitt gap 
+38 L149_362 0.33 0.33062231404958686 OK enc mean-of-5 0.8941 (per-repeat mean 0.8941) minus zero-shot 0.5635; single-split enc OOF file gives 0.9089 (gap 0.3454) point only; no five-repeat per-clip PC-GITA file for an interval
+39 L149_593 0.60 0.5967206611570248 OK AUC n=1100 
+40 L149_639 0.05 0.05031383184812077 OK Q3O Pitt enc mean-of-5 0.8122 minus zero-shot 0.7619 
+41 L149_796 0.01 on MDVR-KCL to 0.18 +0.0095 (kcl) to +0.1810 (adresso) OK probe minus eGeMAPS per PD/AD set: kcl +0.0095, adress2020 +0.0921, adresso +0.1810, pitt +0.1214, pcgita +0.0609, neurovoz +0.0774 eGeMAPS AUC and probe read from the summary csv
+42 L149_911 0.27 0.2697223140495869 OK eGeMAPS 0.8332 minus recomputed zero-shot 0.5635 
+43 L149_920 0.15 0.1488185046237368 OK eGeMAPS 0.8439 minus recomputed zero-shot 0.6951 
+48 L180_1000 0.95 0.9522946859903382 OK agreement, 311 distinct (flag col; dedupe gives 311): 0.9523 [0.9249, 0.9750]; all 483 rows 0.9470 
+60 L180_991 0.22 0.22428496227408318 OK conflict n=483: 0.2243 [0.1757, 0.2742] 
+49 L180_1662 0.46 0.46194420276582104 OK conflict n=1334 spk=162 
+50 L180_1668 0.42, 0.51 0.4165, 0.5102 OK conflict interval 
+51 L180_1723 0.39 0.39342553232089517 OK agreement distinct 799 segs 0.8554 minus conflict 0.4619; all agreement rows 0.8316 (gap 0.3697) 
+52 L180_1824 0.20 0.1950752266143351 OK conflict & first scorer conflict, n=420 n check 420: True
+53 L180_1881 0.62 0.6150309658943883 OK conflict & first scorer neutral, n=855 n check 855: True
+54 L180_2394 0.53 to 0.61 0.5337 to 0.6075 OK AF2 conflict 0.5835; AF2 agreement 0.5337; AF3 conflict 0.6075; AF3 agreement 0.5855 
+55 L180_2521 0.01 -0.010422316931421927 OK voice 0.6473 minus recording 0.6578 = -0.0104 [-0.0356, +0.0155] tex prints -0.01
+56 L180_2530 0.04 -0.03562499325606624 OK lower bound tex prints -0.04
+57 L180_2536 0.02 0.015537154722843501 OK upper bound 
+58 L180_931 0.15 0.14978066327425865 OK conflict n=483: [0.1131, 0.1887] 
+59 L180_952 0.96 0.9620494240059458 OK agreement distinct 311: 0.9620; all 483 rows 0.9596 
+61 L226_1084 0.77 0.7695854320030996 OK AUC n=468 
+62 L226_1154 +0.02 0.022292301000435 OK FT seed0 0.8589 minus zero-shot 0.8366 = +0.0223 [-0.0064, +0.0547] n=275 
+63 L226_1164 0.01 -0.0063755012224089355 OK lower bound tex prints -0.01
+64 L226_1170 0.05 0.054672203811101744 OK upper bound 
+65 L226_1181 0.82 0.8183630564013339 OK seed1 0.8184 [0.7496, 0.8758] 
+66 L226_1340 0.59 0.5931742410949289 OK after conflict 0.5932 [0.5087, 0.6831] n=483 (p_yes_sft col 0.5985); before 0.2218 from p14_o25_zeroshot_scores.csv n=483 (tex 0.22) 
+67 L226_1379 0.67 0.6686176142697882 OK after agreement distinct 0.6686 [0.5727, 0.7586] n=311; before 0.9647 from T1_perclip_distinct_agreement.csv n=311 (tex 0.96) 
+original omnisft {'overall': 0.7672801239829523, 'conflict': 0.5189218921892189, 'clo': 0.41506175011633817, 'chi': 0.6300319602272727, 'agreement': 0.8593109758523293, 'n': 468}
+seed1 {'overall': 0.7396358000774892, 'conflict': 0.5364136413641364, 'clo': 0.4306252956590606, 'chi': 0.6425905000143579, 'agreement': 0.8212594979512272, 'n': 468}
+seed2 {'overall': 0.8084560247965905, 'conflict': 0.5635863586358636, 'clo': 0.4592808669868795, 'chi': 0.6779085295451001, 'agreement': 0.9021959661057406, 'n': 468}
+seed3 {'overall': 0.7975397132894227, 'conflict': 0.5665566556655666, 'clo': 0.4660165752318899, 'chi': 0.6745659163921527, 'agreement': 0.8843736324939332, 'n': 468}
+standard_rerun {'overall': 0.7720069740410694, 'conflict': 0.46974697469746973, 'clo': 0.3612743532294051, 'chi': 0.5905700089789963, 'agreement': 0.8894856188089272, 'n': 468}
+standard_rerun_r2 {'overall': 0.7734017822549398, 'conflict': 0.448954895489549, 'clo': 0.3384621981171691, 'chi': 0.5682059270516717, 'agreement': 0.8966861598440545, 'n': 468}
+seed0 (extra) {'overall': 0.7954959318093763, 'conflict': 0.5281628162816281, 'clo': 0.41996207655633966, 'chi': 0.6421013240006748, 'agreement': 0.8983371126228269, 'n': 468}
+balanced {'overall': 0.7300561797752809, 'conflict': 0.46930693069306934, 'clo': 0.36859289888724367, 'chi': 0.5854160116554863, 'agreement': 0.8279428730556551, 'n': 468}
+balanced_r2 {'overall': 0.7359938008523829, 'conflict': 0.48096809680968095, 'clo': 0.37745388744167385, 'chi': 0.5990624581827914, 'agreement': 0.8379082627202927, 'n': 468}
+balanced_fold3rerun {'overall': 0.7602963967454474, 'conflict': 0.5003300330033003, 'clo': 0.39356833363775307, 'chi': 0.6170451445717402, 'agreement': 0.8573417671162031, 'n': 468}
+68 L226_469 0.74 to 0.81 0.7396 to 0.8085 OK seeds 1-3 overall 0.7396, 0.8085, 0.7975 
+69 L226_557 0.45 to 0.57 0.4490 to 0.5666 OK conflict arm original omnisft 0.5189, seed1 0.5364, seed2 0.5636, seed3 0.5666, standard_rerun 0.4697, standard_rerun_r2 0.4490 seed0 file (not in the six) conflict 0.5282, agreement 0.8983, overall 0.7955
+70 L226_596 0.5 all contain 0.5: True OK original omnisft [0.4151, 0.6300]; seed1 [0.4306, 0.6426]; seed2 [0.4593, 0.6779]; seed3 [0.4660, 0.6746]; standard_rerun [0.3613, 0.5906]; standard_rerun_r2 [0.3385, 0.5682]; seed0 (extra) [0.4200, 0.6421]; balanced [0.3686, 0.5854]; balanced_r2 [0.3775, 0.5991]; balanced_fold3rerun [0.3936, 0.6170] 0.5 is chance, a claim about intervals
+71 L226_634 0.82 to 0.90 0.8213 to 0.9022 OK agreement arm original omnisft 0.8593, seed1 0.8213, seed2 0.9022, seed3 0.8844, standard_rerun 0.8895, standard_rerun_r2 0.8967 
+72 L226_888 5.0 5.046272 OK json 5,046,272; arithmetic 5,046,272 parameter count in millions, checked at 1 dp as printed
+73 L226_924 4.6 4.591104 OK json 4,591,104; arithmetic 1280x3584+3584 = 4,591,104 parameter count in millions, checked at 1 dp as printed
+74 L226_958 0.825 0.8250000000000002 OK LoRA AUC n=468 (tex 3 dp); conflict arm 0.5520 (tex 0.55) checked at 3 dp as printed
+75 L226_973 0.06 0.057719876017047866 OK LoRA 0.8250 minus projector 0.7673 = +0.0577 [+0.0154, +0.1044] 
+76 L226_979 0.02, 0.10 0.0154, 0.1044 OK interval 
+N rows 70 yes 70
