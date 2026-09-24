@@ -14,7 +14,7 @@ Participant utterance text, per-speaker PHQ-8 values with their ids, participant
 
 The log as it was kept:
 
-Run started 2026-09-22. Rule: never stop, log and keep running. HIGH items are reported immediately.
+Run started 2026-09-22. HIGH items were logged as soon as they were found.
 
 ---
 ## 1. D1. Qwen2.5-Omni cannot ingest "full" E-DAIC files. SEVERITY: HIGH
@@ -187,8 +187,8 @@ Status now: fixed in the paper. This item describes the 14 September draft and i
 ## 13. D13. The E-DAIC valence lexicon (dq_lex) is not on this machine. SEVERITY: HIGH
 What the data shows. `px_build.py` line 12 does `import dq_lex as LX` from
 `/scratch1/parwatka/pd_probing/code_clean`, a cluster path. The module is not on this Mac or the
-G-Drive. The archived working log states it directly: "dq_lex that is not on my disk, so I cannot tell
-you which lexicon it wraps."
+G-Drive. The archived working log records that dq_lex is not on disk, so the lexicon it wraps
+is not known.
 The manifest carries its OUTPUTS (`val`, `npos`, `nneg`) per segment, but not the lexicon itself, so
 truncated text cannot be rescored under the identical rule.
 Consequence for PART 7. The lexicon half of the conflict rule cannot be reproduced bit-identically.
@@ -1145,9 +1145,9 @@ Status now: released here. Files: scores/part17/T7b/T7b_edaic300_meanof5_perclip
 - POD4 appended a MEDIUM entry asserting the Pitt encoder probe value 0.7706 could not be found in any file. That is false.
 - 0.7706 reproduces exactly from `release/overnight2/part10/pitt_enc_nested5_oof.npz`:
   oof shape (5, 468), per-repeat AUCs [0.7598, 0.7725, 0.7459, 0.7903, 0.7843], mean 0.7706, n=468, 228 speakers.
-  Independently confirmed twice tonight: by `part16/M7_pitt_fix.py` and by POD4's own verifier with brute-force pairwise AUC.
+  Independently confirmed twice: by `part16/M7_pitt_fix.py` and by POD4's own verifier with brute-force pairwise AUC.
   It is also written in plain text in `release_public/README.md`, `master/master_lookup.csv` and `bootstrap/bootstrap_cis.csv`.
-- The earlier entry is retracted. This is the second time tonight a job reached for `omni_final/omni_pitt_enc_nested_oof.csv` (single split, 0.7969) instead of the authoritative 5-repeat source.
+- The earlier entry is retracted. This is the second time a run used `omni_final/omni_pitt_enc_nested_oof.csv` (single split, 0.7969) instead of the authoritative 5-repeat source.
 
 Status now: released here. Files: lookup/master_lookup.csv, lookup/SUPERSEDED.csv, scores/part10/pitt_enc_nested5_oof.npz, folds/pitt_groupkfold5_mac_seed0.csv to folds/pitt_groupkfold5_mac_seed4.csv, folds/README.md. 0.7706 reproduces exactly from the released npz with the released Mac fold files.
 

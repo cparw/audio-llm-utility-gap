@@ -135,7 +135,7 @@ footer a:hover{text-decoration:underline}
   <h1>Do audio LLMs use what their own encoders already know?</h1>
   <p class="lede">Audio LLMs can answer a clinical question about a recording. We checked whether the
   answer uses what the model's own audio encoder picks up, on Parkinson's, Alzheimer's and depression
-  speech. Then we went back over every claim and kept only the ones that held.</p>
+  speech. Then we rechecked every claim against the result files and dropped the ones that did not hold.</p>
   <p class="by">Chaitanya Parwatkar, Nima Kelidari, Minoo Ahmadi, Ashutosh Chaubey, Mohammad Soleymani
   &middot; University of Southern California</p>
   <p class="links">
@@ -159,7 +159,7 @@ footer a:hover{text-decoration:underline}
 from resampling speakers.</p>
 
 <section id="gap">
-<h2>On Parkinson's and Alzheimer's speech, the model knows more than it says</h2>
+<h2>On Parkinson's and Alzheimer's speech, the encoder holds more than the answer shows</h2>
 <p>Qwen2.5-Omni's own audio encoder holds more of the diagnosis than its answer shows. We trained a linear
 probe on the encoder and asked the model a yes or no question about the same clips. The probe reads 0.75 to
 0.92 AUC. The answers sit at 0.56 to 0.71. The widest gap is on PC-GITA read speech, 0.89 against 0.56.</p>
@@ -167,7 +167,7 @@ probe on the encoder and asked the model a yes or no question about the same cli
 stays above zero. On MDVR-KCL, with 37 speakers, the two are too close to call. A plain acoustic baseline,
 eGeMAPS, scores above the answer on PC-GITA, NeuroVoz, ADReSSo and ADReSS-2020, level with it on Pitt, and too
 close to call on MDVR-KCL. We did not compute intervals for these baseline comparisons.</p>
-<p>On PC-GITA the probe is not just hearing the microphone. After we normalised loudness and noise floor,
+<p>On PC-GITA the probe reads more than the recording setup. After we normalised loudness and noise floor,
 recording features alone fell to 0.56, and the probe still read 0.83 against an answer of 0.57. Qwen3-Omni
 shows the same gap on PC-GITA, 0.90 against 0.60.</p>
 
@@ -193,7 +193,7 @@ encoder and stays high in the language model, where the probe reaches 0.80.</p>
 <p>At the answer position, a probe on the final hidden state still reads 0.77. The model turns that same vector
 into Yes or No along one direction. Along that direction the two groups separate at only 0.66, the level of
 the answer itself. So the information is there when the answer is made, and the Yes or No readout picks up
-only part of it. Depression is the odd one out, covered next.</p>
+only part of it. Depression differs, as the next section shows.</p>
 
 <figure>
   <div class="key">
@@ -224,7 +224,7 @@ only part of it. Depression is the odd one out, covered next.</p>
 
 <section id="depression">
 <h2>On depression interviews, the answer beats the encoder and language model probes</h2>
-<p>Depression runs the other way. On whole E-DAIC interviews the answer reaches 0.84, while the encoder probe
+<p>On depression the order reverses. On whole E-DAIC interviews the answer reaches 0.84, while the encoder probe
 reads 0.60 and the language model probe 0.74. Both paired intervals stay below zero. A probe at the answer
 position matches the answer, at 0.84. The words seem to carry this task. Given only the whole transcript, the
 same model scores 0.82.</p>
@@ -234,7 +234,7 @@ answer is 0.83 and the probes 0.59 and 0.70. The answer rises with the audio it 
 30 seconds, which is mostly session setup, to 0.72 on a middle 30 seconds, 0.81 on a middle five minutes and
 0.84 on the whole interview.</p>
 <p>Qwen3-Omni, which also hears the whole interview, reaches 0.87, and Audio Flamingo 3, which hears the first
-ten minutes, 0.86. With 275 speakers, the probes may simply be short of data.</p>
+ten minutes, 0.86. With 275 speakers, the probes may not have enough data.</p>
 
 <figure>
   <div class="key">
@@ -348,13 +348,13 @@ agreement arm down from 0.96 to 0.67.</p>
 </section>
 
 <section id="did-not-survive">
-<h2>What to read with care</h2>
+<h2>Caveats</h2>
 <p class="small">We checked every claim in the paper against the result files. The final paper fixed what an
 earlier check found. These points remain.</p>
 <ul class="dns">
   <li><strong>Figure 1's depression panel.</strong> The figure in the paper draws E-DAIC on the first 300
   seconds, where the answer is 0.83. The tables and the text use the whole interview, where it is 0.84. The two
-  tell the same story.</li>
+  lead to the same conclusion.</li>
   <li><strong>What "whole interview" means.</strong> The model hears the participant's turns, taken from the
   transcript timings and joined in order. Where two transcript rows overlap, that stretch is heard twice.</li>
   <li><strong>The gap intervals.</strong> On Pitt the gap of 0.11 has an interval on the paper's own probe, 0.05

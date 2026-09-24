@@ -4,7 +4,7 @@ Rule followed: nothing was recomputed that needed a GPU, no pods rented, nothing
 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/.
 
 ================================================================================
-0. JOIN AND ROW-IDENTITY CHECK (do this before reading any number below)
+0. JOIN AND ROW-IDENTITY CHECK
 ================================================================================
 Scores : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_zeroshot_scores.csv
 Labels : /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all_segments.csv
@@ -169,11 +169,11 @@ Secondary deltas against the full 708, same run:
   conflict 146     - all 708       0.6062 - 0.6695 = -0.0633
   agreement 322    - all 708       0.6958 - 0.6695 = +0.0263
 
-CORRECTION TO PROPOSE FOR D12
+CORRECTION FOR D12
 D12 currently says the Pitt 468 is "a deliberately polarised subset" and implies the Table 1 Pitt
 cells are inflated by that polarisation. The selection claim is fully confirmed - the 468 is exactly
 the extreme-tertile union, 468 of 468 rows verified against the shipped manifest, the middle third
-is discarded, and the selector's own AUC jumps +0.0395 when you keep only the extremes. But on the
+is discarded, and the selector's own AUC rises by +0.0395 when only the extremes are kept. But on the
 one cell that can currently be measured, the audio zero-shot, the inflation is +0.0016 with a CI
 that spans zero. The discarded middle third is not a harder subset for the audio model: it scores
 0.6665 against 0.6695 for everything.
@@ -224,9 +224,9 @@ B. /Users/chaitanyaparwatkar/Desktop/release/scripts/make_fig1_omni.py   (the cu
    Dashed line: NOT a parameter. The grey (0,(5,2)) dashed line is computed inside the script by
         clip_auc() from omni_{k}_zeroshot_scores.csv - it ranks label against p_yes with ties at 0.5.
         The dotted (0,(1,1.6)) line is the same function on the TEXT csv. So to put the dashed line
-        at a given value you either feed it a scores CSV whose AUC IS that value, or add an override.
+        at a given value, either use a scores CSV whose AUC is that value or add an override.
 
-   Good news for the 0.8285 line: no override is needed. Running the script's own clip_auc on
+   No override is needed for the 0.8285 line. Running the script's own clip_auc on
    /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_full_zeroshot_scores.csv
    returns exactly 0.8285 (n 275), matching variants/o25_full_zeroshot.json "auc": 0.8285.
    The same function gives 0.8122 on o25_mid300_zeroshot_scores.csv and 0.7205 on
@@ -250,7 +250,7 @@ B. /Users/chaitanyaparwatkar/Desktop/release/scripts/make_fig1_omni.py   (the cu
         pointing at edaic_rerun/variants with prefix o25_full_, o25_mid300_, o25_mid30_.
      2. Zero-shot scores path. Point the dashed line's source at
         variants/o25_full_zeroshot_scores.csv. The value then comes out at 0.8285 on its own.
-        Only if you want the line pinned regardless of the CSV should you add an explicit
+        To pin the line regardless of the CSV, add an explicit
         dashed-value argument.
      3. Transcript dotted line. There is NO full-window E-DAIC text CSV anywhere under edaic_rerun/,
         so TEXT for these keys must be None or the dotted line will silently keep showing the OLD
@@ -258,7 +258,7 @@ B. /Users/chaitanyaparwatkar/Desktop/release/scripts/make_fig1_omni.py   (the cu
         the text run lands.
    Also add TITLE entries for the new keys, or the script raises a KeyError on TITLE[k].
 
-   FONT WARNING, worth fixing in the same pass. pdffonts on both
+   FONT NOTE. pdffonts on both
    /Users/chaitanyaparwatkar/Desktop/release/paper/fig1_gap_omni.pdf and
    /Users/chaitanyaparwatkar/Desktop/paper1_final/figures/fig1_gap.pdf reports
      BMQQDV+DejaVuSans   Type 3   Custom   emb yes   sub yes   uni no
@@ -272,7 +272,7 @@ B. /Users/chaitanyaparwatkar/Desktop/release/scripts/make_fig1_omni.py   (the cu
    so the deliverable must be called fig1_gap.pdf, not fig1_gap_omni.pdf. (tex mtime is 14 Sep,
    not today, which PART 12 is waiting on.)
 
-   BLOCKER ON THIS MAC. Neither the default python3 nor /usr/bin/python3 nor homebrew 3.11/3.12/3.13
+   MATPLOTLIB ON THIS MAC. Neither the default python3 nor /usr/bin/python3 nor homebrew 3.11/3.12/3.13
    has matplotlib. The only interpreter here that does is
      /Library/Frameworks/Python.framework/Versions/3.10/bin/python3   matplotlib 3.10.7
-   Use that one to run make_fig1. I did not run it.
+   make_fig1 needs that interpreter. It was not run.
