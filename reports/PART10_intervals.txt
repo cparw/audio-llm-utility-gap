@@ -51,7 +51,7 @@ Qwen2.5-Omni Pitt middle tertile zero shot            0.6665   0.5799   0.7479  
      edaic_rerun/variants/o25_<win>_nested_repeats.json                   per-repeat AUC only
      edaic_rerun/pitt_all/o25_pitt_all_{encoder,proj,llm,ans}_perlayer.csv + o25_pitt_all_nested_repeats.json
   `find /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun -name '*oof*'` returns only the three
-  sft_*_oof.csv files. So per the brief these 20 probe cells are SKIPPED, not estimated.
+  sft_*_oof.csv files. So as planned these 20 probe cells are SKIPPED, not estimated.
   Their point estimates from the repeats JSONs, for reference only, no CI:
      E-DAIC mid30     enc 0.5770 (5 repeats)   proj 0.4380 (1)   llm 0.6249 (5)   ans 0.6593 (5)   n=275
         source /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/variants/o25_mid30_nested_repeats.json

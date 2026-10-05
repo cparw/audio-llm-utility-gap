@@ -88,7 +88,7 @@ Nested on held-out speakers: alpha=0 chosen in 4 of 5 folds, delta -0.026.
 
 ## The encoder association  ** PREDICATE CORRECTED **
 - WHISPER PROVENANCE PREDICTS NOTHING: 5 of 6 invert vs 2 of 3, Fisher exact p = 1.00
-- Qwen3-Omni uses AuT, trained from scratch on 20M hours (NOT Whisper) - its own tech report says "replace Whisper"
+- Qwen3-Omni uses AuT, trained from scratch on 20M hours (NOT Whisper), its own tech report says "replace Whisper"
 - WHAT HOLDS: encoder trained with a transcription objective. AuT is 90% ASR data.
   **6 of 7 ASR-trained encoders invert vs 0 of 2 non-ASR. Fisher p = 0.083.**
 - Caveats that must travel with it: predicate swap is post hoc; flamingo 2 has no signal to invert so

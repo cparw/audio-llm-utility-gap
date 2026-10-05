@@ -56,7 +56,7 @@ matched on span within the same speaker at lines 183-190 with a looser fallback 
     165 | NEGW2 = (E.val <= -3) & (E.nneg >= 2) & (E.nneg > E.npos)
     166 | AGR2  = ((E.y == 1) & NEGW2) | ((E.y == 0) & POSW2)
 
-  QUOTED, the interviewer / participant filter the task points at as 98-106 (px_build.py lines 96-107, verbatim):
+  QUOTED, the interviewer / participant filter the run plan points at as 98-106 (px_build.py lines 96-107, verbatim):
      96 | # ---------------------------------------------------------------- 2. interviewer filter
      97 | # E-DAIC *_Transcript.csv is raw ASR of the room with no speaker column, so the
      98 | # virtual interviewer's questions are interleaved with the participant's answers.
@@ -99,7 +99,7 @@ PART 9. Validity checks that need no human raters
     text written to: /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/part9_heard_window_sentiment.csv
 
 9b. SENTIMENT MODEL USED
-    cardiffnlp/twitter-roberta-base-sentiment-latest, the FIRST choice in the task list, installed and run.
+    cardiffnlp/twitter-roberta-base-sentiment-latest, the FIRST choice in the run plan, installed and run.
     NO lexicon fallback was needed. transformers 5.5.4 + torch 2.11.0 under /usr/local/bin/python3 (3.10.2);
     the default python3 on this Mac (3.14.6) has no torch, so the 3.10 interpreter was used.
     id2label = {0: negative, 1: neutral, 2: positive}. Sign rule: p(positive) > p(negative) -> positive,

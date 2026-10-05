@@ -384,7 +384,7 @@ Status now: released here. Files: scores/part17/T6_pitt_text_sep20_arms.csv, sco
 
   Status now: fixed in the paper. The final Table 2 prints the part10 copy, row verbatim: "Audio Flamingo 3 \cite{af3}     & 0.42 & 0.84 & 0.61 & 0.59 \\" The part3 copy (0.6169 and 0.5822) is not used. A pod rescore reproduces part10 exactly (scores/part20/POD4c/work/af3_val10.csv (label column dropped)), and an input-length check shows that the part10 run cut every Pitt window to its first 30 s before the processor, 480,000 samples and 750 audio tokens per clip, as the text says (checks/final_2325Z/af3/AF3_INPUT_LENGTH.md). lookup/master_lookup.csv still cites part3 for these two cells.
 
-- 41. [LOW] M8 (part16) Two older E-DAIC conflict score sets exist under `release/edaic_conflict_new/` with 390 rows per model (the pre-Part-14 build). M8 Set A uses the Part 14 966-clip files under `edaic_rerun/part14/` exclusively, as instructed. The 390-row files are a different clip set, not an alternative scoring of the same clips.
+- 41. [LOW] M8 (part16) Two older E-DAIC conflict score sets exist under `release/edaic_conflict_new/` with 390 rows per model (the pre-Part-14 build). M8 Set A uses the Part 14 966-clip files under `edaic_rerun/part14/` exclusively. The 390-row files are a different clip set, not an alternative scoring of the same clips.
 
   Status now: released here. Files: manifests/edaic_paradox_manifest_390.csv, reports/PART14_table2_old_vs_new.csv. The paper's conflict set is the 483-pair Part 14 set.
 
@@ -942,7 +942,7 @@ two independent implementations, so the effect is below 4 dp everywhere else.
 Status now: released here. Files: scores/part16/POD3/q3o_pcgita_proj_nested_oof.csv (label column dropped).
 
 ## 92. MEDAIC / Part 16: the full-window E-DAIC probe has NO per-clip file, so the requested paired interval cannot be computed (HIGH)
-TASK ASKED FOR: the paired "probe minus answer" interval for E-DAIC on the FULL window
+Needed: the paired "probe minus answer" interval for E-DAIC on the FULL window
 (LM probe ~0.69 against answer ~0.83).
 WHAT EXISTS ON DISK:
   - answer side, per clip, 275 rows: edaic_rerun/variants/o25_full_zeroshot_scores.csv
@@ -1281,7 +1281,7 @@ Status now: fixed in the paper. Quote: "We use the DementiaBank Pitt cookie-thef
 - The folder moved to `gdrive/` (the authors moved it for Mac disk space). exFAT has no symlinks, so the old path cannot be aliased.
 - Affects source paths recorded in `master/master_lookup.csv`, `overnight/perclip/INDEX.csv`, and many sidecars written before today. The data is intact at the new location. Only the recorded path is out of date.
 - `DementiaBank/` did NOT move.
-- A batch folder on the authors' drive (`ashutosh_batch2/`) holds runs made by the TA on a different computer. Not used in the paper, never to be mixed with local results.
+- A batch folder on the authors' drive (`ashutosh_batch2/`) holds runs a co-author made on another computer. They are not used in the paper.
 
 Status now: open. 75 rows of lookup/master_lookup.csv still cite the old gdrive/ prefix (authors' machine path). What decides it: rewriting those source paths to the new prefix. Related files: lookup/master_lookup.csv.
 

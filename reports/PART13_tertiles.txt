@@ -88,14 +88,14 @@ and wrecks the class balance inside each tertile (high tertile is 80.77% positiv
 The audio model does not inherit that inflation.
 
 ================================================================================
-13b. PROBES - CANNOT BE SPLIT. THE PER-CLIP PREDICTIONS WERE NEVER WRITTEN.
+13b. PROBES: CANNOT BE SPLIT. THE PER-CLIP PREDICTIONS WERE NEVER WRITTEN.
 ================================================================================
 The task asks for o25_pitt_all_*_nested_oof.csv. Those files DO NOT EXIST.
   find /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun -name "*nested_oof*"  ->  no results.
 The pitt_all probe run emitted only per-layer aggregates, no per-clip out-of-fold column, so there
 is no way on this Mac to recompute a probe AUC restricted to the middle tertile. There is also no
 log for that run (logs/ holds only podB and podC, neither mentions pitt_all), so it was not lost in
-sync - it was never produced. Getting the split requires re-emitting the OOF vector from the pod
+sync. It was never produced. Getting the split requires re-emitting the OOF vector from the pod
 that ran the probes. This is the one cell of PART 13 that is still outstanding.
 
 What DOES exist, all on the full 708 and therefore not a subset comparison:
@@ -124,12 +124,10 @@ What DOES exist, all on the full 708 and therefore not a subset comparison:
     Qwen2.5-Omni,pitt,encoder probe,0.7706,468 (five split nested, part10 re-run; the lookup notes it
       supersedes omni_final 0.7761 and the single-split 0.7969)
     Qwen2.5-Omni,pitt,answer-state probe,0.7636,468
-  FLAG: the task sheet asks me to print the answer probe beside 0.7709. 0.7709 is NOT the Pitt
-  answer-probe value in master_lookup.csv and does not appear anywhere in master/ or bootstrap/.
-  The value on file is 0.7636. Fix the task sheet or tell me where 0.7709 comes from before it
-  goes in the paper.
+  Note: 0.7709 is the single-split answer-state probe in lookup/readout_direction.csv
+  (row pitt, auc_probe), which README section c prints; 0.7636 is the nested mean of five.
 
-  INCOMPLETE, DO NOT CITE - partial fine-tune OOF, the only per-clip vector that exists for the 708:
+  INCOMPLETE, DO NOT CITE. Partial fine-tune OOF, the only per-clip vector that exists for the 708:
   /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/sft_pitt_all_state.json
   has "done": [0, 1], i.e. 2 of 5 folds, 284 of 708 clips scored (the rest are still 0.0 placeholders).
   On those 284 only:  all 0.8196 | kept 468 rows 0.8187 | DROPPED rows 0.8177 |
@@ -138,7 +136,7 @@ What DOES exist, all on the full 708 and therefore not a subset comparison:
   so nobody re-derives it and mistakes it for a result.
 
 ================================================================================
-13c. TEXT - FILE NOT PRESENT YET
+13c. TEXT: FILE NOT PRESENT YET
 ================================================================================
 /Users/chaitanyaparwatkar/Desktop/release/edaic_rerun/pitt_all/o25_pitt_all_text.csv does not exist.
 Nothing matching *text* exists anywhere under edaic_rerun/. Still running on a pod.
@@ -171,7 +169,7 @@ Secondary deltas against the full 708, same run:
 
 CORRECTION FOR D12
 D12 currently says the Pitt 468 is "a deliberately polarised subset" and implies the Table 1 Pitt
-cells are inflated by that polarisation. The selection claim is fully confirmed - the 468 is exactly
+cells are inflated by that polarisation. The selection claim is fully confirmed: the 468 is exactly
 the extreme-tertile union, 468 of 468 rows verified against the shipped manifest, the middle third
 is discarded, and the selector's own AUC rises by +0.0395 when only the extremes are kept. But on the
 one cell that can currently be measured, the audio zero-shot, the inflation is +0.0016 with a CI
@@ -181,12 +179,12 @@ Suggested wording: say the selection is real and undisclosed and that it inflate
 signal it was built from by +0.0395, and say that for the Qwen2.5-Omni audio zero-shot cell the
 measured inflation is +0.0016 (95% CI -0.0285 to +0.0332), i.e. the audio cell survives the
 selection almost unchanged. Do NOT write that the probe cells are inflated until the per-clip OOF
-from 13b exists - that number is not currently measurable and must not be asserted.
+from 13b exists. That number is not currently measurable and must not be asserted.
 The sharper polarisation effect to report is inside the kept set, not between kept and dropped:
 conflict 0.6062 vs agreement 0.6958, a spread of 0.0896, on 146 and 322 clips.
 
 ================================================================================
-PART 6 PREP - make_fig1, read only, NOT RUN
+PART 6 PREP: make_fig1, read only, NOT RUN
 ================================================================================
 There are two scripts. The one that made the figure now in the paper is the second.
 
@@ -201,7 +199,7 @@ A. /Users/chaitanyaparwatkar/Desktop/paper1_final/make_fig1.py   (Qwen2-Audio er
         llm=None, ans=None, answer_audio=0.65, answer_text=None).
    Dashed line: it is a literal scalar, the "answer_audio" field, drawn with
         ax.hlines(p["answer_audio"], 0, xmax, ...) in a grey (0,(4,2)) dash. "answer_text" is the
-        dotted second line. Both are plain numbers in the dict - no file, no computation.
+        dotted second line. Both are plain numbers in the dict: no file, no computation.
    State right now: this script CANNOT draw an E-DAIC panel. HERE/edaic_encoder_perlayer.csv does
         not exist (paper1_final/ holds only kcl_encoder_perlayer.csv and kcl_llm_perlayer.csv), and
         its other root D = "/Users/chaitanyaparwatkar/Desktop/Hard drive data for paper" does not
@@ -222,7 +220,7 @@ B. /Users/chaitanyaparwatkar/Desktop/release/scripts/make_fig1_omni.py   (the cu
         omni_{k}_zeroshot_scores.csv    columns label, p_yes
    plus TEXT["edaic"] = "/Volumes/G-Drive Pro/paper1_local_runs/omni_edaic30_text.csv" (exists).
    Dashed line: NOT a parameter. The grey (0,(5,2)) dashed line is computed inside the script by
-        clip_auc() from omni_{k}_zeroshot_scores.csv - it ranks label against p_yes with ties at 0.5.
+        clip_auc() from omni_{k}_zeroshot_scores.csv. It ranks label against p_yes with ties at 0.5.
         The dotted (0,(1,1.6)) line is the same function on the TEXT csv. So to put the dashed line
         at a given value, either use a scores CSV whose AUC is that value or add an override.
 

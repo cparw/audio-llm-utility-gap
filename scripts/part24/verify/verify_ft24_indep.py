@@ -22,7 +22,7 @@ ZS_SIDECAR = P23 + "/A/A2_edaic_whole_zeroshot_perclip.sidecar.json"
 TOL = 1e-9
 NDRAW = 2000
 
-# The 4 dp numbers printed in the collect summary (copied from the task text).
+# The 4 dp numbers printed in the collect summary (copied from the run plan).
 SUMMARY = {
     "seed0_pooled_oof_auc": ("0.8589", "0.8050", "0.9029"),
     "seed0_ft_minus_zs_whole_paired": ("0.0223", "-0.0064", "0.0547"),

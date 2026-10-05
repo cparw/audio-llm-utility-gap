@@ -102,8 +102,8 @@ The ADReSSo folder /Volumes/G-Drive Pro/DementiaBank/challenges/ADReSSo holds on
 The 237 scored clips come from the ADReSS-M English training split, whose tree contains mp3 audio,
 ADReSS-M-meta.csv, the format_task csvs and the groundtruth csvs, and no .cha, no .txt and no
 segmentation csv. That is a missing-file fact, checked on disk, not an inference.
-So for ADReSSo the four quantities asked for -- interviewer seconds median and mean, interviewer
-share median and mean, and the count of windows over 5 s -- DO NOT EXIST and are not reported.
+So for ADReSSo the four quantities asked for, interviewer seconds median and mean, interviewer
+share median and mean, and the count of windows over 5 s, DO NOT EXIST and are not reported.
 Reporting a number here would mean inventing one.
 
 What IS measurable for ADReSSo:

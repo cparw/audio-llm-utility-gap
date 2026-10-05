@@ -62,7 +62,7 @@
    "zeroshot": 0.6578,
    "encoder_probe_perclip": 0.7969,
    "encoder_probe_repeats_mean": 0.7761,
-   "note": "the brief quoted 0.7706 for the encoder probe; that value is in no file. See DISCREPANCIES.md."
+   "note": "0.7706 is the five-repeat nested encoder probe in lookup/master_lookup.csv, from scores/part10/pitt_enc_nested5_oof.npz."
   },
   "arm_A_orig": {
    "zeroshot": 0.6497,

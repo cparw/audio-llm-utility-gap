@@ -50,8 +50,8 @@ EXCLUSION CHECK, run before publishing:
 path                                                                     bytes  origin / transformation
 --------------------------------------------------------------------------------------------------------------------------------------------
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
-DISCREPANCIES.md                                                        210150  written for this release
-MANIFEST.txt                                                            957135  this file
+DISCREPANCIES.md                                                        210096  written for this release
+MANIFEST.txt                                                            957575  this file
 README.md                                                               168729  written for this release
 archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
@@ -172,7 +172,7 @@ checks/accel_24sep/page5/page5_words.tsv                                 37900  
 checks/accel_24sep/t5/t5_check.json                                      49522  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/t5/t5_check.json
 checks/accel_24sep/t5/t5_check.py                                        10785  copied, machine paths rewritten (x5)  <- authors-drive/release_from_mac/scores/accel_24sep/t5/t5_check.py
 checks/accel_24sep/t5/t5_check.tsv                                        4584  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/t5/t5_check.tsv
-checks/final_2325Z/af3/AF3_INPUT_LENGTH.md                               12178  copied, machine paths rewritten (x7)  <- authors-drive/paper1_submission_23sep/final_checks_2325Z/af3/AF3_INPUT_LENGTH.md
+checks/final_2325Z/af3/AF3_INPUT_LENGTH.md                               12182  copied, machine paths rewritten (x7), wording edited (1 line)  <- authors-drive/paper1_submission_23sep/final_checks_2325Z/af3/AF3_INPUT_LENGTH.md
 checks/final_2325Z/af3/af3_input_length.log                               2618  copied, machine paths rewritten (x1)  <- authors-drive/paper1_submission_23sep/final_checks_2325Z/af3/af3_input_length.log
 checks/final_2325Z/af3/af3_input_length.py                                3885  copied, machine paths rewritten (x1)  <- authors-drive/paper1_submission_23sep/final_checks_2325Z/af3/af3_input_length.py
 checks/final_2325Z/af3/af3_pitt_bootstrap.csv                              741  copied verbatim  <- authors-drive/paper1_submission_23sep/final_checks_2325Z/af3/af3_pitt_bootstrap.csv
@@ -380,7 +380,7 @@ history/speech-health/docs/CONFOUND_AUDIT.md                              7112  
 history/speech-health/docs/PROTOCOL.md                                    3511  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/TEXT_FREE_PROTOCOL.md                          5762  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/IEEEbib.bst                            17903  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
-history/speech-health/docs/paper1/VERIFIED_NUMBERS.md                     6608  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
+history/speech-health/docs/paper1/VERIFIED_NUMBERS.md                     6607  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564, then the dash in one line replaced by a comma
 history/speech-health/docs/paper1/paper1_draft.tex                       11935  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/paper1_spconf.pdf                     640844  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/paper1_spconf.tex                      24165  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
@@ -770,14 +770,14 @@ manifests/pitt_all_segments.json                                           446  
 manifests/pitt_conflict_manifest_468.csv                                 63626  columns dropped: dx, mmse, age, sex, text; the paper Pitt 468; inv_ms_in_window is a known artefact, see D4  <- authors-drive/DementiaBank/pitt_conflict_manifest.csv. The clinical label dropped on 24 Sep 2026 (grp,label, see lookup/LABELS_DROPPED.tsv)
 prompts/prompts.json                                                      2132  generated for this release
 reports/EDAIC_REPORT.txt                                                  1480  copied, the dash in the title line replaced by a colon  <- release/edaic_rerun/EDAIC_REPORT.txt
-reports/PART10_intervals.txt                                             23930  copied, two dashes in one line replaced by commas, wording edited (4 lines)  <- release/edaic_rerun/PART10_intervals.txt
-reports/PART13_tertiles.txt                                              19382  copied, wording edited (9 lines)  <- release/edaic_rerun/PART13_tertiles.txt
+reports/PART10_intervals.txt                                             23927  copied, two dashes in one line replaced by commas, wording edited (5 lines)  <- release/edaic_rerun/PART10_intervals.txt
+reports/PART13_tertiles.txt                                              19242  copied, wording edited (11 lines, one 4-line note now 2 lines), dashes in 9 lines replaced by colons or full stops  <- release/edaic_rerun/PART13_tertiles.txt
 reports/PART14_bootstrap.txt                                              7132  copied verbatim  <- release/edaic_rerun/PART14_bootstrap.txt
 reports/PART14_bootstrap_rows.csv                                         5894  copied verbatim  <- release/edaic_rerun/PART14_bootstrap_rows.csv
 reports/PART14_table2_old_vs_new.csv                                      1076  copied verbatim  <- release/edaic_rerun/PART14_table2_old_vs_new.csv
 reports/PART14_yes_rates.csv                                               396  copied verbatim  <- release/edaic_rerun/PART14_yes_rates.csv
-reports/PART5_interviewer_measure.txt                                    17441  copied, then the clinical label dropped on 24 Sep 2026 (label N field, see lookup/LABELS_DROPPED.tsv), wording edited (1 line)  <- release/edaic_rerun/PART5_interviewer_measure.txt
-reports/PART8_9_validity.txt                                             14046  copied verbatim  <- release/edaic_rerun/PART8_9_validity.txt
+reports/PART5_interviewer_measure.txt                                    17437  copied, then the clinical label dropped on 24 Sep 2026 (label N field, see lookup/LABELS_DROPPED.tsv), wording edited (1 line), two dashes in two lines replaced by commas  <- release/edaic_rerun/PART5_interviewer_measure.txt
+reports/PART8_9_validity.txt                                             14049  copied, wording edited (2 lines)  <- release/edaic_rerun/PART8_9_validity.txt
 reports/leftovers_23sep/DISCREPANCIES_entry_pod3b.txt                     2706  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/leftovers_23sep/pod3b/DISCREPANCIES_entry_pod3b.txt
 reports/leftovers_23sep/LABELS_DROPPED.tsv                               13958  written for this release: the files of this folder whose clinical label was dropped on copy, with the columns dropped
 reports/leftovers_23sep/LEFTOVERS_NOTES.md                               22363  written for this release: notes on what was staged from the leftover runs and what was left out
@@ -1324,10 +1324,10 @@ scores/leftovers_23sep/m7m11/logs/m11_main.log                            4174  
 scores/leftovers_23sep/m7m11/logs/m11_main_run1.log                       4174  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/logs/m11_main_run1.log
 scores/leftovers_23sep/m7m11/logs/m7_main.log                             1727  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/logs/m7_main.log
 scores/leftovers_23sep/m7m11/m11_group_intervals.csv                     10790  copied, machine paths rewritten (x24)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m11_group_intervals.csv
-scores/leftovers_23sep/m7m11/m11_group_intervals.sidecar.json             2109  copied, machine paths rewritten (x4)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m11_group_intervals.sidecar.json
+scores/leftovers_23sep/m7m11/m11_group_intervals.sidecar.json             2112  copied, machine paths rewritten (x4), wording edited (1 line)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m11_group_intervals.sidecar.json
 scores/leftovers_23sep/m7m11/m7_meanof5_gaps.csv                         16407  copied, machine paths rewritten (x51)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m7_meanof5_gaps.csv
 scores/leftovers_23sep/m7m11/m7_meanof5_gaps.sidecar.json                18309  copied, machine paths rewritten (x52)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m7_meanof5_gaps.sidecar.json
-scores/leftovers_23sep/m7m11/m7m11_values.sidecar.json                    4449  copied, machine paths rewritten (x10)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m7m11_values.sidecar.json
+scores/leftovers_23sep/m7m11/m7m11_values.sidecar.json                    4452  copied, machine paths rewritten (x10), wording edited (1 line)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m7m11_values.sidecar.json
 scores/leftovers_23sep/m7m11/m7m11_values.tsv                            28057  copied, machine paths rewritten (x135)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/m7m11_values.tsv
 scores/leftovers_23sep/m7m11/pod2_inputs.sha256                           2148  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/stage/pod2_inputs.sha256
 scores/leftovers_23sep/m7m11_verify/lo-vm7m11-1/logs/versions.txt           25  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/verify/m7m11_work/pull/lo-vm7m11-1/logs/versions.txt
@@ -2324,7 +2324,7 @@ scores/part16/M/M1_pitt_text_arms.csv                                    50109  
 scores/part16/M/M1_pitt_text_arms.sidecar.json                           10365  copied verbatim  <- release/edaic_rerun/part16/M1_pitt_text_arms.sidecar.json
 scores/part16/M/M2_distilbert_manifest.csv                              319588  copied, columns dropped on copy: label, sev, text (PHQ severity score and clinical label and participant speech)  <- release/edaic_rerun/part16/M2_distilbert_manifest.csv
 scores/part16/M/M2_distilbert_sentiment.csv                             700905  columns dropped: sev, text_sha  <- release/edaic_rerun/part16/M2_distilbert_sentiment.csv. The clinical label dropped on 24 Sep 2026 (label_y, see lookup/LABELS_DROPPED.tsv)
-scores/part16/M/M2_distilbert_sentiment.json                              7811  copied, temporary working-directory path rewritten (x2)  <- release/edaic_rerun/part16/M2_distilbert_sentiment.json
+scores/part16/M/M2_distilbert_sentiment.json                              7796  copied, temporary working-directory path rewritten (x2), wording edited (1 line)  <- release/edaic_rerun/part16/M2_distilbert_sentiment.json
 scores/part16/M/M3_speaker_level.csv                                     16718  copied, then the clinical label dropped on 24 Sep 2026 (label, see lookup/LABELS_DROPPED.tsv)  <- release/edaic_rerun/part16/M3_speaker_level.csv
 scores/part16/M/M3_speaker_level.json                                     5000  copied verbatim  <- release/edaic_rerun/part16/M3_speaker_level.json
 scores/part16/M/M4_yes_rate_diffs.csv                                      325  copied verbatim  <- release/edaic_rerun/part16/M4_yes_rate_diffs.csv
@@ -2505,7 +2505,7 @@ scores/part16/POD4/p16_pitt_paronly_nested.json                            239  
 scores/part16/POD4/p16_pitt_paronly_zeroshot.json                          437  copied verbatim  <- release/edaic_rerun/part16/POD4/p16_pitt_paronly_zeroshot.json
 scores/part16/POD4/p16_pitt_paronly_zeroshot_scores.csv                  87496  copied, then the clinical label dropped on 24 Sep 2026 (label, see lookup/LABELS_DROPPED.tsv)  <- release/edaic_rerun/part16/POD4/p16_pitt_paronly_zeroshot_scores.csv
 scores/part16/POD4/pitt_no_interviewer.csv                               62664  copied, then the clinical label dropped on 24 Sep 2026 (label, see lookup/LABELS_DROPPED.tsv)  <- release/edaic_rerun/part16/POD4/pitt_no_interviewer.csv
-scores/part16/POD4/pitt_no_interviewer.sidecar.json                       6444  copied verbatim  <- release/edaic_rerun/part16/POD4/pitt_no_interviewer.sidecar.json
+scores/part16/POD4/pitt_no_interviewer.sidecar.json                       6470  copied, wording edited (1 line)  <- release/edaic_rerun/part16/POD4/pitt_no_interviewer.sidecar.json
 scores/part16/POD4/spec4a_nv.json                                          952  copied verbatim  <- release/edaic_rerun/part16/POD4/spec4a_nv.json
 scores/part16/POD4/spec4a_pg.json                                          952  copied verbatim  <- release/edaic_rerun/part16/POD4/spec4a_pg.json
 scores/part16/POD4/spec4b.json                                           71769  copied verbatim  <- release/edaic_rerun/part16/POD4/spec4b.json
@@ -4049,7 +4049,7 @@ scripts/core/nested_repeats_all.py                                        2454  
 scripts/core/omni_ablation.py                                             6762  copied verbatim  <- release/scripts/omni_ablation.py
 scripts/core/omni_prompt_variants.py                                      3116  copied verbatim  <- release/scripts/omni_prompt_variants.py
 scripts/core/omni_transfer.py                                             4355  copied verbatim  <- release/scripts/omni_transfer.py
-scripts/core/part10_readout_direction.py                                 19803  copied verbatim  <- release/scripts/part10_readout_direction.py
+scripts/core/part10_readout_direction.py                                 19794  copied, wording edited (3 lines)  <- release/scripts/part10_readout_direction.py
 scripts/core/part10_readout_direction_v2.py                              31383  copied verbatim  <- release/scripts/part10_readout_direction_v2.py
 scripts/core/part11_pitt_speaker_level.py                                 8263  copied verbatim  <- release/scripts/part11_pitt_speaker_level.py
 scripts/core/part12_pitt_agematched.py                                   14256  copied verbatim  <- release/scripts/part12_pitt_agematched.py
@@ -4063,7 +4063,7 @@ scripts/edaic_full/probe_boot.py                                          8016  
 scripts/edaic_full/validate.py                                            3033  copied verbatim  <- release/edaic_rerun/part16/EDAICFULL/validate.py
 scripts/fig_options.py                                                    5896  copied; input folders are now CURVES_DIR and scores/edaic_windows/ in place of authors' machine paths  <- authors-drive/paper1_submission_23sep/fig/fig_options.py
 scripts/leftovers_23sep/m7m11/lo-m7m11-2/m7m11_verify.py                  7017  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/pull/lo-m7m11-2/m7m11_verify.py
-scripts/leftovers_23sep/m7m11/m11_group_intervals.py                     10158  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/scripts/m11_group_intervals.py
+scripts/leftovers_23sep/m7m11/m11_group_intervals.py                     10164  copied, machine paths rewritten (x3), wording edited (2 lines)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/scripts/m11_group_intervals.py
 scripts/leftovers_23sep/m7m11/m7_meanof5_gaps.py                         15637  copied, machine paths rewritten (x8)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/scripts/m7_meanof5_gaps.py
 scripts/leftovers_23sep/m7m11/m7m11_compare.py                            5057  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/scripts/m7m11_compare.py
 scripts/leftovers_23sep/m7m11/m7m11_verify.py                             7108  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/scripts/m7m11_verify.py
@@ -4198,7 +4198,7 @@ scripts/part16/M/M11_kcl_wer.py                                          20421  
 scripts/part16/M/M11_robust.py                                            3388  copied, machine paths rewritten (x2)  <- release/edaic_rerun/part16/M11_robust.py
 scripts/part16/M/M11_verify.py                                            5229  copied, machine paths rewritten (x5)  <- release/edaic_rerun/part16/M11_verify.py
 scripts/part16/M/M1_pitt_text_arms.py                                    15207  copied, machine paths rewritten (x14)  <- release/edaic_rerun/part16/M1_pitt_text_arms.py
-scripts/part16/M/M2_distilbert_sentiment.py                              22145  copied, machine paths rewritten (x5)  <- release/edaic_rerun/part16/scripts/M2_distilbert_sentiment.py
+scripts/part16/M/M2_distilbert_sentiment.py                              22130  copied, machine paths rewritten (x5), wording edited (1 line)  <- release/edaic_rerun/part16/scripts/M2_distilbert_sentiment.py
 scripts/part16/M/M3_speaker_level.py                                      9748  copied, machine paths rewritten (x6)  <- release/edaic_rerun/part16/M3_speaker_level.py
 scripts/part16/M/M4_verify.py                                             4413  copied, machine paths rewritten (x1)  <- release/edaic_rerun/part16/M4_verify.py
 scripts/part16/M/M4_yes_rates.py                                         10785  copied, machine paths rewritten (x1)  <- release/edaic_rerun/part16/M4_yes_rates.py
@@ -4312,7 +4312,7 @@ scripts/part17/part12_prep/build_value_index.py                          30389  
 scripts/part17/part12_prep/diff_tex.py                                    4367  copied verbatim  <- release/edaic_rerun/part17/part12_prep/diff_tex.py
 scripts/part17/part12_prep/extract_tex_numbers.py                        23435  copied verbatim  <- release/edaic_rerun/part17/part12_prep/extract_tex_numbers.py
 scripts/part17/part12_prep/match_tex.py                                  41947  copied verbatim  <- release/edaic_rerun/part17/part12_prep/match_tex.py
-scripts/part17/part12_prep/p12common.py                                   9387  copied, machine paths rewritten (x5)  <- release/edaic_rerun/part17/part12_prep/p12common.py
+scripts/part17/part12_prep/p12common.py                                   9393  copied, machine paths rewritten (x5), wording edited (1 line)  <- release/edaic_rerun/part17/part12_prep/p12common.py
 scripts/part17/part12_prep/part12_handcheck.py                           16607  copied, machine paths rewritten (x4)  <- release/edaic_rerun/part17/part12_prep/part12_handcheck.py
 scripts/part17/part12_prep/red_span_check.py                              7309  copied, wording edited on copy (2 lines)  <- release/edaic_rerun/part17/part12_prep/red_span_check.py
 scripts/part17/part12_prep/run_part12.sh                                  2880  copied, machine paths rewritten (x3)  <- release/edaic_rerun/part17/part12_prep/run_part12.sh
@@ -4438,7 +4438,7 @@ scripts/part20/pitt_noinv_cut/build_pitt_noinv.py                         3951  
 scripts/part20/pitt_noinv_cut/cha_overlap.py                              4917  copied, machine paths rewritten (x1)  <- release/scores/part20/pitt_noinv_cut/src/cha_overlap.py
 scripts/part20/pitt_noinv_cut/cut_arms.py                                 3323  copied verbatim  <- release/scores/part20/pitt_noinv_cut/src/cut_arms.py
 scripts/part20/pitt_noinv_cut/make_intervals.py                           1580  copied, machine paths rewritten (x1)  <- release/scores/part20/pitt_noinv_cut/src/make_intervals.py
-scripts/part20/verify/POD1_verify.py                                     12325  copied verbatim  <- release/scores/part20/verify/POD1_verify.py
+scripts/part20/verify/POD1_verify.py                                     12324  copied, wording edited (1 line)  <- release/scores/part20/verify/POD1_verify.py
 scripts/part20/verify/POD1b_compare.py                                    2484  copied, wording edited on copy (2 lines)  <- release/scores/part20/verify/POD1b_compare.py
 scripts/part20/verify/POD1b_verify.py                                    11471  copied, wording edited on copy (1 line)  <- release/scores/part20/verify/POD1b_verify.py
 scripts/part20/verify/POD2_verify.py                                     11788  copied, wording edited on copy (1 line)  <- release/scores/part20/verify/POD2_verify.py
@@ -4545,7 +4545,7 @@ scripts/part24/verify/fig_item2/verify_item2_indep.py                    19325  
 scripts/part24/verify/hand_check.py                                       4300  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part24/verify/hand_check.py
 scripts/part24/verify/make_synth.py                                       2550  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part24/verify/make_synth.py
 scripts/part24/verify/triage_indep/indep_triage.py                        3016  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part24/verify/triage_indep/indep_triage.py
-scripts/part24/verify/verify_ft24_indep.py                               18326  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part24/verify/verify_ft24_indep.py
+scripts/part24/verify/verify_ft24_indep.py                               18325  copied, machine paths rewritten (x1), wording edited (1 line)  <- authors-drive/release_from_mac/scores/part24/verify/verify_ft24_indep.py
 scripts/part25/A/A_gaps_r2.py                                            13226  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part25/A/retry_tf554/scripts/A_gaps_r2.py
 scripts/part25/A/A_sensitivity_r2.py                                      2949  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/part25/A/retry_tf554/scripts/A_sensitivity_r2.py
 scripts/part25/A/build_stage.py                                           3553  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/part25/A/scripts/build_stage.py

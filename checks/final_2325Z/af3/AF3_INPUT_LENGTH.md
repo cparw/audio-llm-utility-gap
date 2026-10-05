@@ -98,7 +98,7 @@ Method: 2000 speaker-bootstrap draws, a fresh `numpy.random.default_rng(0)` per 
 
 These match POD4c's own files to 4 dp, with the sign of the difference flipped. POD4c reports part10 minus interviewer-free.
 
-**There is no AF3 "30 s minus full segment" pair built the way the task assumed**, because part10 already is the 30 s run. The only full-segment AF3 Pitt run on disk is the 16 Sep whole-array file. It is given here as context only. It used the same clips and prompt, and matches part10 where the inputs coincide (section 4). Its YES/NO sets have four token variants each against five in part10, and its transformers version is not recorded next to the file.
+**There is no AF3 "30 s minus full segment" pair built the way the run plan assumed**, because part10 already is the 30 s run. The only full-segment AF3 Pitt run on disk is the 16 Sep whole-array file. It is given here as context only. It used the same clips and prompt, and matches part10 where the inputs coincide (section 4). Its YES/NO sets have four token variants each against five in part10, and its transformers version is not recorded next to the file.
 
 - Command: `cd "<af3>" && /usr/local/bin/python3 boot_af3_fullseg.py "<af3>/af3_pitt_fullseg_bootstrap.csv"`. Output is in `boot_af3_fullseg.log`.
 

@@ -12,7 +12,7 @@ EDAIC = RELEASE + "/edaic_rerun"
 PREP = EDAIC + "/part17/part12_prep"
 OLD_PREFIX = "<local data dir>/paper1_local_runs/"
 NEW_PREFIX = "<local data dir>/paper work/paper1_local_runs/"
-TA_BATCH = "<local data dir>/paper work/ashutosh_batch2/"   # never canonical
+TA_BATCH = "<local data dir>/paper work/ashutosh_batch2/"   # not used in the paper
 READ_ONLY_ROOTS = [RELEASE + "/omni_final"]                     # never written by any Part 12 tool
 
 MODELS = ["Qwen2-Audio", "Qwen2.5-Omni", "Qwen3-Omni", "Audio Flamingo 2", "Audio Flamingo 3", "Kimi-Audio"]

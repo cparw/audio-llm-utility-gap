@@ -289,10 +289,10 @@ def main():
     ro = torch.load(os.path.join(P, "omni25_readout.pt"), map_location="cpu")
     notes = {
         "pitt": "",
-        "edaic": ("the brief quoted 0.6290 as the E-DAIC zero-shot AUC, but 0.6290 is the "
+        "edaic": ("the run plan quoted 0.6290 as the E-DAIC zero-shot AUC, but 0.6290 is the "
                   "Qwen3-Omni-30B number in q3o_edaic_zeroshot.json. The Qwen2.5-Omni-7B per-clip "
                   "file o25_edaic_zeroshot_scores.csv gives 0.6620, and the gate is checked against "
-                  "that file, as instructed."),
+                  "that file."),
     }
     metas, rows = [], []
     for tag in ("pitt", "edaic"):
@@ -336,7 +336,7 @@ def main():
         "csv_column_notes": {
             "auc_probe_without_d": ("out-of-fold: per training fold, w_perp = w_fold - (w_fold.d/d.d) d, "
                                     "projected on that fold's held-out speakers. The in-sample version "
-                                    "asked for in the brief is kept as auc_probe_without_d_insample; at "
+                                    "asked for in the run plan is kept as auc_probe_without_d_insample; at "
                                     "p=3584 >> n it is perfectly separable and reads 1.0000, so it "
                                     "measures separability, not residual signal."),
             "cosine": "cosine(w_raw, d), w_raw averaged over the 5 outer folds",

@@ -348,7 +348,7 @@ side = dict(
     prompt=None,
     label_mapping_judgement=(
         "SST-2 is binary (NEGATIVE/POSITIVE) while cardiffnlp is three-way "
-        "(negative/neutral/positive). Mapping used, as instructed: "
+        "(negative/neutral/positive). Mapping used: "
         "distilbert_score = P(POSITIVE); distilbert negative score = 1 - P(POSITIVE). "
         "clearly_positive = P(POSITIVE) >= 0.70; clearly_negative = 1-P(POSITIVE) >= 0.70 "
         "i.e. P(POSITIVE) <= 0.30. Everything in 0.30 < P(POSITIVE) < 0.70 is treated as the "

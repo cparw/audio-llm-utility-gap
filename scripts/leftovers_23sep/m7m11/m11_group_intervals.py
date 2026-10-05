@@ -9,7 +9,7 @@ Cause (read from the code, confirmed by recomputing both ways below):
   contain (group size varies from draw to draw). These are two different bootstraps, so the group-mean intervals
   differ although every per-clip value agrees. part16/M11_robust.py (MEDIAN, >=20 words, POOLED rows) used the
   all-37 scheme too, so rows/M11.tsv mixes the two schemes.
-Rule used for the final intervals (the brief's rule, and the main script's): a fresh default_rng(0) per cell,
+Rule used for the final intervals (the run plan's rule, and the main script's): a fresh default_rng(0) per cell,
   idx = rng.choice(N, size=N, replace=True) over the unique sorted speaker ids of the cell. For a one-group cell
   the cell's speakers are that group's speakers (and for the >=20-word rows, that group's speakers inside the
   subset). For a between-group difference, N = the cell's speakers (all 37; the 31 inside the >=20-word subset) and both groups use the same idx.
@@ -130,7 +130,7 @@ side = dict(task="m7m11 (b): M11 KCL group-level intervals, cause and fix",
                    "M11_verify.py and verify/M11_verify.py (mode all37) resample all 37 speakers from one rng(0) stream and keep the group's rows, "
                    "so the group size varies per draw. Different estimators, not an arithmetic error. M11_robust.py used the all-37 scheme, so rows/M11.tsv mixed both."),
             which_was_wrong=("The verifier (and M11_robust.py) for one-group cells: they did not resample the speakers the original script's cell used, "
-                             "which the brief's rule requires. The main script's group-mean intervals stand. The six M11_robust.py group intervals "
+                             "which the run plan's rule requires. The main script's group-mean intervals stand. The six M11_robust.py group intervals "
                              "(MEDIAN, >=20 words, POOLED) are recomputed here under the same rule, and the group rows now carry n = 16 or 21 "
                              "(rows/M11.tsv printed n = 37 for the group means)."),
             rule="fresh numpy default_rng(0) per cell; idx = rng.choice(N, size=N, replace=True) over the unique sorted speaker ids of the cell; "

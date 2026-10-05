@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """POD1 independent verifier, part 20: BALANCED projector fine-tune on Pitt 468.
 
-Written from the task text only. Nothing from the compute side is imported or executed.
+Written from the run plan only. Nothing from the compute side is imported or executed.
 
 AUC     explicit Mann-Whitney over every positive x negative pair, ties count 0.5,
         cross-checked by a trapezoid ROC built by hand (one point per distinct score).
