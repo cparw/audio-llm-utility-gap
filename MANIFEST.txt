@@ -8,8 +8,8 @@ EXCLUSION CHECK, run before publishing:
   audio files (.wav .mp3 .flac .m4a .ogg) present: 0
   CHAT transcripts (.cha) present: 0
   transcript folders present: 0
-  released CSV/TSV scanned for participant speech: 1137 of 1137, 0 hits (3 cells flagged for review hold the paper's own prompt sentence, not speech)
-  released JSON scanned for participant speech: 1020 of 1020, 0 hits
+  released CSV/TSV scanned for participant speech: 1326 of 1326, 0 hits (5 Oct 2026; the 24 Sep 2026 scan is below)
+  released JSON scanned for participant speech: 1327 of 1327, 0 hits (5 Oct 2026; the 24 Sep 2026 scan is below)
   transcript probes: 60 random 8-word sequences plus every 8-word sequence (307481) of three transcript sources, 0 hits
   columns dropped on copy: text, hyp_whisper_large_v3, hyp_whisper_medium, text_sha (participant speech or a hash of it)
                            sev (PHQ severity score)
@@ -20,8 +20,27 @@ EXCLUSION CHECK, run before publishing:
                            text (participant speech), sev (PHQ severity score), from 393 files, each marked in its row
   columns dropped when the PART 25 and PART 26 files were copied: label (clinical label), from 170 files, each marked in its
                            row. The 111 PART 25 files among them are also listed in reports/part25/LABELS_DROPPED.tsv
-  the CSV/TSV and JSON scans above (1137 and 1020 files) ran on 24 Sep 2026. On 4 Oct 2026 this list holds 1326 CSV/TSV
-                           and 1327 JSON files
+  the CSV/TSV and JSON scans first ran on 24 Sep 2026: CSV/TSV 1137 of 1137, 0 hits (3 cells flagged for review hold
+                           the paper's own prompt sentence, not speech), JSON 1020 of 1020, 0 hits. The transcript
+                           probe line above dates from 23 Sep 2026
+  speech scan rerun, 5 Oct 2026, over every file in this list (4783), with the checks of 23 and 24 Sep:
+                           CHAT markers: each hit is a method note, run note or script line that names a CHAT tier or
+                           code, an HTML entity, a URL or a code operator. None is an utterance
+                           runs of 12 or more words in CSV/TSV cells, JSON and JSONL strings and npz string arrays: each
+                           is a prompt, paper, README or page text, a run note, a code comment or one of the fixed test
+                           sentences the authors wrote. None is participant speech
+                           transcript probes: 20 random 8-word sequences and every 8-word sequence of each source, looked
+                           up in the words of every file with text (PDFs through pdftotext, npz string arrays; the PNG
+                           images and docs/.nojekyll have none). Sources: the three above as they are on disk now (Pitt
+                           conflict segment texts, E-DAIC segment texts, rater sheet), the E-DAIC transcripts and other
+                           segment texts, the Pitt segment texts, the heard rater sheet, the ASR text of MDVR-KCL,
+                           NeuroVoz and PC-GITA, and every speaker tier of the DementiaBank Pitt CHAT files. 0 hits of
+                           participant speech. The only matches are the standard Cookie Theft instruction to the
+                           participant, held in a search pattern in scripts/audit_1a1c/report.py, report1c.py and
+                           history/speech-health/scripts/adresso/recut_at_patient.py
+  label value check, 5 Oct 2026: in every CSV/TSV, table-shaped JSON or JSONL part and npz file that holds the ids of
+                           one dataset, no other column on its own separates the two label classes. The label can still
+                           be derived from ids and arms, as README.md lists under "What still carries clinical information"
   header check, 4 Oct 2026: every CSV/TSV header (1326 files) and every JSON key (1327 files), for columns named
                            label, diagnosis, dx, phq, mmse, class, y, group, transcript, text or utterance. 162 names
                            match and each was checked: they hold paper text, PDF words, code excerpts, array shapes
@@ -32,7 +51,7 @@ path                                                                     bytes  
 --------------------------------------------------------------------------------------------------------------------------------------------
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 DISCREPANCIES.md                                                        210150  written for this release
-MANIFEST.txt                                                            954457  this file
+MANIFEST.txt                                                            957124  this file
 README.md                                                               168729  written for this release
 archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
@@ -1208,7 +1227,7 @@ reports/part25/verify/T5_indep/T5v_recompute.log                          7849  
 reports/part25/verify/T5_indep/run.stdout                                 7859  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part25/verify/T5_indep/run.stdout
 reports/part25/verify/verify_B_claims_run.log                             8870  copied verbatim  <- authors-drive/release_from_mac/scores/part25/verify/logs/verify_B_claims_run.log
 reports/part25/verify/verify_B_indep_run.log                              5222  copied verbatim  <- authors-drive/release_from_mac/scores/part25/verify/logs/verify_B_indep_run.log
-reports/part26/INVENTORY.md                                              14503  copied, machine paths rewritten (x3), edited on copy (5 lines)  <- authors-drive/release_from_mac/scores/part26/INVENTORY.md
+reports/part26/INVENTORY.md                                              14503  copied, machine paths rewritten (x5), edited on copy (5 lines)  <- authors-drive/release_from_mac/scores/part26/INVENTORY.md
 reports/part26/PART26_TABLE.md                                           12983  copied, edited on copy (9 lines)  <- authors-drive/release_from_mac/scores/part26/PART26_TABLE.md
 results/README.md                                                          142  written for this release: a note on what the folder holds
 results/interventions.csv                                                  785  summary table from the first release, kept unchanged (commit d8a6045)
@@ -3746,7 +3765,7 @@ scores/part26/Kimi-Audio_ADReSSo/verify/p26_states_check.json             4956  
 scores/part26/Kimi-Audio_ADReSSo/verify/verify26_kimi_adresso.json        3186  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/verify/verify26_kimi_adresso.json
 scores/part26/Kimi-Audio_E-DAIC/draws/p26_kimi_edaic_enc_draws.npz       85548  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/draws/p26_kimi_edaic_enc_draws.npz
 scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.csv           52371  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.csv
-scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.sidecar.json  10304  copied, machine paths rewritten (x10), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.sidecar.json
+scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.sidecar.json  10304  copied, machine paths rewritten (x14), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/p26_kimi_edaic_enc_perclip.sidecar.json
 scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5.json 28325  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5.json
 scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5_oof.csv 40598  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_enc_nested5_oof.csv
 scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_podverify.json 2332  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_E-DAIC/pull/p26-kimi-edaic-cpu2/out/p26_kimi_edaic_podverify.json
@@ -3816,7 +3835,7 @@ scores/part26/Kimi-Audio_Pitt/pull/p26-kimi-pitt-gpu/out/smoke_kimi_pitt_zerosho
 scores/part26/Kimi-Audio_Pitt/stage/stage_check.json                      3812  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/stage/stage_check.json
 scores/part26/Kimi-Audio_Pitt/verify/p26_kimi_pitt_encoder_recompute.json 11981  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/verify/p26_kimi_pitt_encoder_recompute.json
 scores/part26/Kimi-Audio_Pitt/verify/p26_verify.json                      3983  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/verify/p26_verify.json
-scores/part26/PART26_TABLE.sidecar.json                                   1851  copied, machine paths rewritten (x8)  <- authors-drive/release_from_mac/scores/part26/PART26_TABLE.sidecar.json
+scores/part26/PART26_TABLE.sidecar.json                                   1851  copied, machine paths rewritten (x9)  <- authors-drive/release_from_mac/scores/part26/PART26_TABLE.sidecar.json
 scores/part26/PART26_TABLE.tsv                                            9040  copied, machine paths rewritten (x84)  <- authors-drive/release_from_mac/scores/part26/PART26_TABLE.tsv
 scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020.sidecar.json 10760  copied, machine paths rewritten (x17)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020.sidecar.json
 scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020_draws.npz 539627  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/Qwen2-Audio_ADReSS-2020_draws.npz
@@ -3856,7 +3875,7 @@ scores/part26/Qwen2-Audio_MDVR-KCL/verify/verifier2_refit_q2a_kcl_mine.json 2311
 scores/part26/Qwen2-Audio_MDVR-KCL/verify/verifier2_verify_q2a_kcl_mine.json 4235  copied, machine paths rewritten (x5)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_MDVR-KCL/verify/verifier2_verify_q2a_kcl_mine.json
 scores/part26/Qwen2-Audio_NeuroVoz/draws/p26_q2a_neurovoz_draws.npz     396554  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/draws/p26_q2a_neurovoz_draws.npz
 scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.csv 216766  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.csv
-scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.sidecar.json 7786  copied, machine paths rewritten (x14)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.sidecar.json
+scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.sidecar.json 7786  copied, machine paths rewritten (x15)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/per_clip/p26_q2a_neurovoz_perclip.sidecar.json
 scores/part26/Qwen2-Audio_NeuroVoz/pull/p26-q2a-neurovoz/out/p26_q2a_neurovoz_enc_nested5.json 29042  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/pull/p26-q2a-neurovoz/out/p26_q2a_neurovoz_enc_nested5.json
 scores/part26/Qwen2-Audio_NeuroVoz/pull/p26-q2a-neurovoz/out/p26_q2a_neurovoz_enc_nested5_oof.csv 192732  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/pull/p26-q2a-neurovoz/out/p26_q2a_neurovoz_enc_nested5_oof.csv
 scores/part26/Qwen2-Audio_NeuroVoz/pull/p26-q2a-neurovoz/out/p26_q2a_neurovoz_podverify.json 2403  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_NeuroVoz/pull/p26-q2a-neurovoz/out/p26_q2a_neurovoz_podverify.json
@@ -3909,7 +3928,7 @@ scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/verify/verify26.json             3331  
 scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/verify/verify26_run1.json        2895  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_ADReSSo/verify/verify26_run1.json
 scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_draws.npz             969578  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_draws.npz
 scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.csv            57679  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.csv
-scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.sidecar.json    8683  copied, machine paths rewritten (x12)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.sidecar.json
+scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.sidecar.json    8683  copied, machine paths rewritten (x14)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/Q3O_EDAIC_perclip.sidecar.json
 scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_enc_nested5.json 28273  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_enc_nested5.json
 scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_enc_nested5_oof.csv 40745  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_enc_nested5_oof.csv
 scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_podverify.json 2331  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_E-DAIC/pull/p26-q3o-edaic-cpu/out/p26_q3o_edaic_podverify.json
@@ -3924,7 +3943,7 @@ scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/per_clip/p26_q3o_kcl_perclip.sidecar.j
 scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_enc_nested5.json 25621  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_enc_nested5.json
 scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_enc_nested5_oof.csv 5886  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_enc_nested5_oof.csv
 scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_podverify.json 2299  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/pull/p26-q3o-kcl/out/p26_q3o_kcl_podverify.json
-scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/mac_rerun/p26mac_q3o_kcl_enc_nested5.json 25871  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/mac_rerun/p26mac_q3o_kcl_enc_nested5.json
+scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/mac_rerun/p26mac_q3o_kcl_enc_nested5.json 25871  copied, machine paths rewritten (x5)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/mac_rerun/p26mac_q3o_kcl_enc_nested5.json
 scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/mac_rerun/p26mac_q3o_kcl_enc_nested5_oof.csv 5882  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/mac_rerun/p26mac_q3o_kcl_enc_nested5_oof.csv
 scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/p26_verify_q3o_kcl.json  4303  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_MDVR-KCL/verify/p26_verify_q3o_kcl.json
 scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/draws/Qwen3-Omni-30B-A3B_NeuroVoz_draws.npz 396860  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_NeuroVoz/draws/Qwen3-Omni-30B-A3B_NeuroVoz_draws.npz
@@ -4585,7 +4604,7 @@ scripts/part26/Kimi-Audio_ADReSSo/podfiles/setup_kimi.sh                  1935  
 scripts/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/wait_upload.py 278  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/pull/p26-kimi-adresso-gpu/wait_upload.py
 scripts/part26/Kimi-Audio_ADReSSo/scripts/gap26_kimi_adresso.py          12339  copied, machine paths rewritten (x5)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/scripts/gap26_kimi_adresso.py
 scripts/part26/Kimi-Audio_ADReSSo/scripts/p26_states_check.py             5240  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/scripts/p26_states_check.py
-scripts/part26/Kimi-Audio_ADReSSo/scripts/watchdog26.sh                   9680  origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
+scripts/part26/Kimi-Audio_ADReSSo/scripts/watchdog26.sh                   9680  copied, machine paths rewritten (x1), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/scripts/watchdog26.sh
 scripts/part26/Kimi-Audio_ADReSSo/scripts/watchdog26b.sh                  9707  copied, machine paths rewritten (x1), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/scripts/watchdog26b.sh
 scripts/part26/Kimi-Audio_ADReSSo/stage/cpu2/driver26b_cpu.sh             1841  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/stage/cpu2/driver26b_cpu.sh
 scripts/part26/Kimi-Audio_ADReSSo/verify/indep_verify_kimi_adresso.py     8016  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_ADReSSo/verify/indep_verify_kimi_adresso.py
@@ -4654,10 +4673,10 @@ scripts/part26/Kimi-Audio_Pitt/gpu_stage/run_gpu26.sh                     2421  
 scripts/part26/Kimi-Audio_Pitt/gpu_stage/setup_kimi.sh                    2649  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/gpu_stage/setup_kimi.sh
 scripts/part26/Kimi-Audio_Pitt/scripts/build_stage_cpu.py                 4670  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/scripts/build_stage_cpu.py
 scripts/part26/Kimi-Audio_Pitt/scripts/build_stage_gpu.py                 3143  copied, machine paths rewritten (x5)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/scripts/build_stage_gpu.py
-scripts/part26/Kimi-Audio_Pitt/scripts/p26_gap.py                        11585  origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
+scripts/part26/Kimi-Audio_Pitt/scripts/p26_gap.py                        11585  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/scripts/p26_gap.py
 scripts/part26/Kimi-Audio_Pitt/scripts/p26_kimi_pitt_encoder_recompute.py 4488  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/scripts/p26_kimi_pitt_encoder_recompute.py
-scripts/part26/Kimi-Audio_Pitt/scripts/p26_verify.py                     10761  origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
-scripts/part26/Kimi-Audio_Pitt/scripts/watchdog26.sh                      9549  origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
+scripts/part26/Kimi-Audio_Pitt/scripts/p26_verify.py                     10761  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/scripts/p26_verify.py
+scripts/part26/Kimi-Audio_Pitt/scripts/watchdog26.sh                      9549  copied, machine paths rewritten (x1), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/scripts/watchdog26.sh
 scripts/part26/Kimi-Audio_Pitt/stage/driver26.sh                          2178  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/stage/driver26.sh
 scripts/part26/Kimi-Audio_Pitt/stage/guard26.sh                           1451  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/stage/guard26.sh
 scripts/part26/Kimi-Audio_Pitt/stage/p25a_nested5.py                      8263  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Kimi-Audio_Pitt/stage/p25a_nested5.py
@@ -4665,7 +4684,7 @@ scripts/part26/Kimi-Audio_Pitt/stage/p25a_podverify.py                    5933  
 scripts/part26/Qwen2-Audio_ADReSS-2020/scripts/build_stage.py             2623  copied, machine paths rewritten (x4)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/scripts/build_stage.py
 scripts/part26/Qwen2-Audio_ADReSS-2020/scripts/p26_gap.py                10256  copied, machine paths rewritten (x6)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/scripts/p26_gap.py
 scripts/part26/Qwen2-Audio_ADReSS-2020/scripts/p26_verify.py             10460  copied, machine paths rewritten (x4)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/scripts/p26_verify.py
-scripts/part26/Qwen2-Audio_ADReSS-2020/scripts/watchdog26.sh              9363  origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
+scripts/part26/Qwen2-Audio_ADReSS-2020/scripts/watchdog26.sh              9363  copied, machine paths rewritten (x1), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/scripts/watchdog26.sh
 scripts/part26/Qwen2-Audio_ADReSS-2020/stage/driver26.sh                  2173  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/stage/driver26.sh
 scripts/part26/Qwen2-Audio_ADReSS-2020/stage/guard26.sh                   1451  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/stage/guard26.sh
 scripts/part26/Qwen2-Audio_ADReSS-2020/stage/p25a_nested5.py              8263  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_ADReSS-2020/stage/p25a_nested5.py
@@ -4681,7 +4700,7 @@ scripts/part26/Qwen2-Audio_E-DAIC/indep_verifier_retry/iv26_q2a_edaic.py 10037  
 scripts/part26/Qwen2-Audio_E-DAIC/indep_verifier_retry/iv26_q2a_edaic_refit.py 3753  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/indep_verifier_retry/iv26_q2a_edaic_refit.py
 scripts/part26/Qwen2-Audio_E-DAIC/scripts/gap26_q2a_edaic.py             10105  copied, machine paths rewritten (x5)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/scripts/gap26_q2a_edaic.py
 scripts/part26/Qwen2-Audio_E-DAIC/scripts/verify26_q2a_edaic.py          12923  copied, machine paths rewritten (x7)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/scripts/verify26_q2a_edaic.py
-scripts/part26/Qwen2-Audio_E-DAIC/scripts/watchdog26.sh                   9500  origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
+scripts/part26/Qwen2-Audio_E-DAIC/scripts/watchdog26.sh                   9500  copied, machine paths rewritten (x1), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/scripts/watchdog26.sh
 scripts/part26/Qwen2-Audio_E-DAIC/stage/driver26.sh                       2429  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/stage/driver26.sh
 scripts/part26/Qwen2-Audio_E-DAIC/stage/guard26.sh                        1471  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/stage/guard26.sh
 scripts/part26/Qwen2-Audio_E-DAIC/stage/p25a_nested5.py                   8263  copied verbatim  <- authors-drive/release_from_mac/scores/part26/Qwen2-Audio_E-DAIC/stage/p25a_nested5.py
@@ -4792,7 +4811,7 @@ scripts/part26/Qwen3-Omni-30B-A3B_Pitt/podfiles/p26_podverify.py          6240  
 scripts/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/create26.sh                1986  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/create26.sh
 scripts/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/p26_gap.py                11892  copied, machine paths rewritten (x7)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/p26_gap.py
 scripts/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/p26_verify.py              8343  copied, machine paths rewritten (x5), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/p26_verify.py
-scripts/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/watchdog26.sh              9551  origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
+scripts/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/watchdog26.sh              9551  copied, machine paths rewritten (x1), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/scripts/watchdog26.sh
 scripts/part26/Qwen3-Omni-30B-A3B_Pitt/verify/independent/indep_refit_q3o_pitt.py 2053  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/verify/independent/indep_refit_q3o_pitt.py
 scripts/part26/Qwen3-Omni-30B-A3B_Pitt/verify/independent/indep_verify_q3o_pitt.py 8894  copied, machine paths rewritten (x4)  <- authors-drive/release_from_mac/scores/part26/Qwen3-Omni-30B-A3B_Pitt/verify/independent/indep_verify_q3o_pitt.py
 scripts/part26/inventory/inv_check.py                                     3815  copied, machine paths rewritten (x6)  <- authors-drive/release_from_mac/scores/part26/inventory/inv_check.py
@@ -4814,4 +4833,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                167050332  4783 files
+TOTAL                                                                167052999  4783 files
