@@ -51,7 +51,7 @@ path                                                                     bytes  
 --------------------------------------------------------------------------------------------------------------------------------------------
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 DISCREPANCIES.md                                                        210150  written for this release
-MANIFEST.txt                                                            957124  this file
+MANIFEST.txt                                                            957135  this file
 README.md                                                               168729  written for this release
 archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
@@ -1219,7 +1219,7 @@ reports/part25/C/pod/p25C-8/DRIVER.log                                     461  
 reports/part25/C/r2/C_r2_assemble.log                                     5567  copied, machine paths rewritten (x2), edited on copy (1 line)  <- authors-drive/release_from_mac/scores/part25/C/r2/C_r2_assemble.log
 reports/part25/C/r2/C_r2_kimi_enc_supplement.log                          1370  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part25/C/r2/C_r2_kimi_enc_supplement.log
 reports/part25/C/r2/C_r2_recheck.log                                      3551  copied verbatim  <- authors-drive/release_from_mac/scores/part25/C/r2/C_r2_recheck.log
-reports/part25/LABELS_DROPPED.tsv                                         7914  list of the PART 25 files whose clinical label was dropped on copy, with the columns dropped; origin not recorded; added with the PART 25 and PART 26 release on 24 Sep
+reports/part25/LABELS_DROPPED.tsv                                         7914  written for this release (commit abcc122, 24 Sep 2026): list of the PART 25 files whose clinical label was dropped on copy, with the columns dropped
 reports/part25/T5/T5_counts_r2.stdout                                     5028  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/part25/T5/T5_counts_r2.stdout
 reports/part25/T5/verify/T5_verify_r2.log                                41175  copied verbatim  <- authors-drive/release_from_mac/scores/part25/T5/verify/T5_verify_r2.log
 reports/part25/verify/C/vC_recompute.log                                    29  copied verbatim  <- authors-drive/release_from_mac/scores/part25/verify/C/vC_recompute.log
@@ -1228,7 +1228,7 @@ reports/part25/verify/T5_indep/run.stdout                                 7859  
 reports/part25/verify/verify_B_claims_run.log                             8870  copied verbatim  <- authors-drive/release_from_mac/scores/part25/verify/logs/verify_B_claims_run.log
 reports/part25/verify/verify_B_indep_run.log                              5222  copied verbatim  <- authors-drive/release_from_mac/scores/part25/verify/logs/verify_B_indep_run.log
 reports/part26/INVENTORY.md                                              14503  copied, machine paths rewritten (x5), edited on copy (5 lines)  <- authors-drive/release_from_mac/scores/part26/INVENTORY.md
-reports/part26/PART26_TABLE.md                                           12983  copied, edited on copy (9 lines)  <- authors-drive/release_from_mac/scores/part26/PART26_TABLE.md
+reports/part26/PART26_TABLE.md                                           12983  copied, machine paths rewritten (x1), edited on copy (9 lines)  <- authors-drive/release_from_mac/scores/part26/PART26_TABLE.md
 results/README.md                                                          142  written for this release: a note on what the folder holds
 results/interventions.csv                                                  785  summary table from the first release, kept unchanged (commit d8a6045)
 results/table1_main.csv                                                    239  summary table from the first release, kept unchanged (commit d8a6045)
@@ -4833,4 +4833,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                167052999  4783 files
+TOTAL                                                                167053010  4783 files
