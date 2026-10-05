@@ -22,9 +22,9 @@ EXCLUSION CHECK, run before publishing:
 path                                                                     bytes  origin / transformation
 --------------------------------------------------------------------------------------------------------------------------------------------
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
-DISCREPANCIES.md                                                        211434  written for this release
+DISCREPANCIES.md                                                        211884  written for this release
 MANIFEST.txt                                                            755992  this file
-README.md                                                               152806  written for this release
+README.md                                                               163232  written for this release
 archive/README_v1_companion.md                                           11886  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
@@ -229,7 +229,7 @@ docs/.nojekyll                                                               0  
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
 docs/data/explorer_data.json                                             19127  aggregate numbers drawn by docs/explorer.html, written for this release
 docs/explorer.html                                                       33793  interactive explorer page, written for this release
-docs/index.html                                                          54545  project page, written for this release
+docs/index.html                                                          54550  project page, written for this release
 figures/checks/overleaf_vs_repo/fig_overleaf-1.png                       17699  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_overleaf-1.png
 figures/checks/overleaf_vs_repo/fig_repo-1.png                           14837  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_repo-1.png
 figures/checks/repro_option_c/compare_repro_overleaf_diff.png            76275  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/compare_repro_overleaf_diff.png
@@ -3074,8 +3074,8 @@ scores/part20/POD6/C_landed/C_collected.sidecar.json                      3865  
 scores/part20/pitt_noinv_cut/build_report.json                          116335  copied, fields dropped on copy: grp (clinical label)  <- release/scores/part20/pitt_noinv_cut/build_report.json
 scores/part20/pitt_noinv_cut/pitt_noinv_clips.sidecar.json                3870  copied, fields dropped on copy: label (clinical label), machine paths rewritten (x6)  <- release/scores/part20/pitt_noinv_cut/pitt_noinv_clips.sidecar.json
 scores/part22/P22_step1_proc_probe.json                                   6490  copied verbatim  <- release/scores/part22/P22_step1_proc_probe.json
-scores/part22/P22_step1_processor_config.md                              38263  copied verbatim  <- release/scores/part22/P22_step1_processor_config.md
-scores/part22/P22_step1_processor_config.sidecar.json                     9961  copied, temporary working-directory path rewritten (x1)  <- release/scores/part22/P22_step1_processor_config.sidecar.json
+scores/part22/P22_step1_processor_config.md                              38262  copied verbatim  <- release/scores/part22/P22_step1_processor_config.md
+scores/part22/P22_step1_processor_config.sidecar.json                     9956  copied, temporary working-directory path rewritten (x1)  <- release/scores/part22/P22_step1_processor_config.sidecar.json
 scores/part22/edaic_lifted_auc.json                                       6981  copied verbatim  <- release/scores/part22/edaic_lifted_auc.json
 scores/part22/edaic_lifted_auc.sidecar.json                               2369  copied verbatim  <- release/scores/part22/edaic_lifted_auc.sidecar.json
 scores/part22/edaic_lifted_perclip.csv                                   38462  copied, then the clinical label dropped on 24 Sep 2026 (label, see lookup/LABELS_DROPPED.tsv)  <- release/scores/part22/edaic_lifted_perclip.csv
@@ -3827,7 +3827,7 @@ scripts/part22/step1/p22_step1_feature_equality.py                        2301  
 scripts/part22/step1/p22_step1_loadtime_override.py                       1216  copied verbatim  <- release/scores/part22/scripts/p22_step1_loadtime_override.py
 scripts/part22/step1/p22_step1_proc_probe.py                              4032  copied verbatim  <- release/scores/part22/scripts/p22_step1_proc_probe.py
 scripts/part22/step1/p22_step1_verify.py                                  2595  copied, machine paths rewritten (x1)  <- release/scores/part22/scripts/p22_step1_verify.py
-scripts/part22/step1/p22_step1_write_md.py                               17003  copied, machine paths rewritten (x1)  <- release/scores/part22/scripts/p22_step1_write_md.py
+scripts/part22/step1/p22_step1_write_md.py                               17002  copied, machine paths rewritten (x1)  <- release/scores/part22/scripts/p22_step1_write_md.py
 scripts/part22/verify/P22_pod_rows_check.py                               5010  copied, machine paths rewritten (x3)  <- release/scores/part22/verify/ (file renamed on copy)
 scripts/part22/verify/P22_rows.py                                         2199  copied, machine paths rewritten (x1)  <- release/scores/part22/verify/P22_rows.py
 scripts/part22/verify/P22_verify.py                                      14054  copied, wording edited on copy (7 lines)  <- release/scores/part22/verify/P22_verify.py
@@ -3906,4 +3906,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                 98118311  3884 files
+TOTAL                                                                 98129185  3884 files
