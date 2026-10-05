@@ -358,9 +358,12 @@ earlier check found. These points remain.</p>
   direction is near random. But in a space this large, two unrelated directions always look like that. So the
   test could not have failed. We keep the plainer result that the readout direction separates the Pitt groups
   at only 0.66.</li>
-  <li><strong>The Qwen3-Omni readout numbers.</strong> The probe of 0.83, with and without the readout
-  direction, comes from one run. A refit from the saved states gives 0.79, so treat those two numbers with
-  care.</li>
+  <li><strong>The Qwen3-Omni readout numbers.</strong> The probe of 0.83 reproduces exactly with the folds of the
+  run that printed it (0.8307 [0.7833, 0.8741], and 0.8305 without the readout direction); the earlier refit of 0.79
+  used folds from an older scikit-learn. Over 200 speaker splits that differ only in how speakers with the same
+  number of clips are ordered, the probe averages 0.8033 (middle 95 percent 0.7786 to 0.8244), and only 2 of 200
+  reach 0.8307. Without the readout direction it averages 0.8061 or 0.7998, by how the held-out fold is scaled,
+  and the cosine stays between 0.0023 and 0.0090.</li>
 </ul>
 <p class="small">Fixed in the submitted paper:</p>
 <ul class="dns">
@@ -372,6 +375,9 @@ earlier check found. These points remain.</p>
   <li><strong>The gap intervals.</strong> On Pitt the gap of 0.11 has an interval on the paper's own probe, 0.05
   to 0.18. On PC-GITA, NeuroVoz, ADReSSo and ADReSS-2020 the interval behind "significant" comes from one saved
   split of the probe. All four clear zero there.</li>
+  <li><strong>The Qwen3-Omni readout numbers.</strong> The probe of 0.83, with and without the readout
+  direction, comes from one run. A refit from the saved states gives 0.79, so treat those two numbers with
+  care.</li>
 </ul>
 </section>
 

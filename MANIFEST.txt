@@ -24,7 +24,7 @@ path                                                                     bytes  
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 DISCREPANCIES.md                                                        211434  written for this release
 MANIFEST.txt                                                            754754  this file
-README.md                                                               150725  written for this release
+README.md                                                               152054  written for this release
 archive/README_v1_companion.md                                           11886  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
@@ -229,7 +229,7 @@ docs/.nojekyll                                                               0  
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
 docs/data/explorer_data.json                                             19127  aggregate numbers drawn by docs/explorer.html, written for this release
 docs/explorer.html                                                       33793  interactive explorer page, written for this release
-docs/index.html                                                          53922  project page, written for this release
+docs/index.html                                                          54545  project page, written for this release
 figures/checks/overleaf_vs_repo/fig_overleaf-1.png                       17699  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_overleaf-1.png
 figures/checks/overleaf_vs_repo/fig_repo-1.png                           14837  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_repo-1.png
 figures/checks/repro_option_c/compare_repro_overleaf_diff.png            76275  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/compare_repro_overleaf_diff.png
@@ -3900,4 +3900,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                 98098201  3878 files
+TOTAL                                                                 98100153  3878 files

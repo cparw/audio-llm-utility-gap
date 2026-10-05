@@ -368,10 +368,15 @@ text matches a file that was checked independently.
 1. Figure 1, lines 39 and 40. Fixed in the submitted paper. `figures/fig1_gap.pdf` (md5
    a102c1a8872ba59fe73dd58700aae142) draws the E-DAIC panel on the whole interview, answer line 0.84, as in Table 1.
    The note on the earlier figure is kept under "Values of earlier copies".
-2. Qwen3-Omni direction test, line 149. The probe 0.83 and the probe with the readout direction removed, 0.83, come
-   from one pod run with no independent check. A refit of the same probe from the saved states gives 0.7864, not
-   0.8307 (`release/edaic_rerun/part16/verify/POD3_partF_out.json`, authors' machine path). The printed numbers are
-   kept and marked UNVERIFIED.
+2. Qwen3-Omni direction test, line 149. VERIFIED. The probe reproduces exactly on Linux with the pod's own folds
+   (scikit-learn 1.9.1): 0.8307 [0.7833, 0.8741], and 0.8305 [0.7826, 0.8737] with the readout direction removed.
+   The refit of 0.7864 used the folds that scikit-learn 1.7.2 made on the Mac, which order speakers with the same
+   number of clips differently. Over 200 speaker splits that differ only in that order, the probe averages 0.8033
+   (middle 95 percent 0.7786 to 0.8244) and only 2 of 200 reach 0.8307, so the printed 0.83 is near the top of that
+   range. The probe minus the probe without the direction averages -0.0029 with training-fold scaling, as in the
+   run, or +0.0034 with held-out-fold scaling, and the cosine stays between 0.0023 and 0.0090
+   (`scores/leftovers_23sep/verify/pod3b_VERIFIED.tsv`, `scores/leftovers_23sep/pod3b/pod3b_values.tsv`). The
+   earlier note is kept under "Values of earlier copies".
 3. Significance of the gap, lines 52 and 149. Only Pitt has a paired interval on the paper's estimator (mean of five
    per-repeat AUCs): +0.1128 [0.0455, 0.1768]. For PC-GITA, NeuroVoz, ADReSSo and ADReSS-2020 the interval behind
    "excludes zero" uses a single-split probe (`scores/part16/M/M7_gap_per_dataset.csv`). All four exclude zero there.
@@ -456,7 +461,7 @@ printed number is kept. NOTE means the number matches, with a caveat given in th
 | 149 | language model probe at the audio-token positions 0.80, probe on the final-layer answer state 0.77 | Pitt language model probe 0.8032, answer-state probe 0.7709 | `release/omni_final/omni_pitt_nested_repeats.json` (authors' machine path), `lookup/readout_direction.csv` | mean of five, final stage at the first answer position | MATCH |
 | 149 | along the readout direction the groups separate at 0.66; a probe on the same vector reads 0.77, and 0.77 with that direction removed; cosine 0.01, at the level of two random directions | AUC along the direction 0.6608, probe 0.7709, without the direction 0.7662, cosine -0.0109 (random 0.0135) | `lookup/readout_direction.csv`, `scores/part20/POD5/POD5_direction_origrerun_check.csv` | final stage at the first answer position | NOTE: the numbers match; the cosine check cannot fail (audit note 8) |
 | 149 | Qwen2-Audio: readout direction 0.62, probe 0.82, 0.81 with the direction removed | 0.6174, 0.8223, 0.8114 | `scores/part17/T3_q2a_direction.csv`, `scores/part17/T3_q2a_direction_summary.csv` | final stage, held-out fold standardised | MATCH |
-| 149 | Qwen3-Omni: readout direction 0.77, probe 0.83, 0.83 with the direction removed | 0.7656, 0.8307, 0.8305 (0.8276 in the arm file), from one pod run. A refit from the saved states gives 0.7864 for the probe | `scores/part16/pod_sync/q3o_perp_cols.npz`, `release/edaic_rerun/part16/verify/POD3_partF_out.json` (authors' machine path) | final stage | UNVERIFIED (audit note 2) |
+| 149 | Qwen3-Omni: readout direction 0.77, probe 0.83, 0.83 with the direction removed | 0.7656, 0.8307, 0.8305 (0.8276 in the arm file), from one pod run. A refit from the saved states gives 0.7864 for the probe. That refit used the Mac's folds; a Linux refit with the pod's folds gives 0.8307 again | `scores/part16/pod_sync/q3o_perp_cols.npz`, `release/edaic_rerun/part16/verify/POD3_partF_out.json` (authors' machine path), `scores/leftovers_23sep/verify/pod3b_VERIFIED.tsv`, `scores/leftovers_23sep/pod3b/pod3b_values.tsv` | final stage | NOTE: reproduces exactly, near the top of the fold-order spread (audit note 2) |
 | 149 | on E-DAIC the language model probe 0.74 and the encoder probe 0.60, both below the answer of 0.84 (-0.09 [-0.16, -0.03] and -0.24 [-0.32, -0.15]); a probe on the answer state matches the answer (0.84) | 0.7437, 0.5981, answer 0.8366. Paired -0.0929 [-0.1609, -0.0257] and -0.2385 [-0.3244, -0.1505]. Answer state 0.8359, paired -0.0007 [-0.0455, 0.0436] | `part23/A/A2_edaic_whole_zeroshot_perclip.csv`, `part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv` (authors' machine paths), rows 236 to 240 of `lookup/master_lookup.csv` | whole interview, mean of five, paired | MATCH |
 | 180 | four of six models below chance on depression, every model except Audio Flamingo 2 above 0.80 on agreement | conflict as in the line 26 row. Lowest agreement of the other five is Audio Flamingo 3, 0.8425 on the 311 distinct segments | `scores/part17/T1_table2_distinct.csv` | zero shot | MATCH |
 | 180 | intervals for the difference between the arms exclude zero for all six models on depression and for the three Qwen models on Pitt | depression: closest to zero Audio Flamingo 2, -0.1011 [-0.1647, -0.0384]. Pitt: Qwen2-Audio -0.2853 [-0.3950, -0.1485], Qwen2.5-Omni -0.1731 [-0.2958, -0.0392], Qwen3-Omni -0.2165 [-0.3242, -0.1052]; Audio Flamingo 3 +0.0220 [-0.0846, 0.1357] and Kimi-Audio -0.0030 [-0.1134, 0.1065] include zero. No interval was computed for Audio Flamingo 2 on the 30 s clips | `scores/part17/T1_table2_distinct.csv`, `scores/part16/M/M8_conflict_cells.csv`, `scores/part20/POD6/C_landed/C_af3_pitt_part10_arms.csv` | paired speaker bootstrap | MATCH |
@@ -491,7 +496,7 @@ Each row gives the topic, the line of the final tex it supports, the verified va
 | 149 | Qwen3-Omni probe cells | Pitt encoder 0.8122 [0.7613, 0.8625], PC-GITA encoder 0.8969 [0.8322, 0.9454] (AUC of averaged probabilities 0.8354 and 0.9109, not used). Pitt LM 0.8477, answer state 0.8268 (older run) against 0.8445 and 0.8237 in the rerun | `scores/part16/POD3/q3o_pitt_encoder_nested_oof.csv`, `scores/part16/POD3/q3o_pcgita_encoder_nested_oof.csv`, `lookup/master_lookup.csv` | mean of five per-repeat AUCs |
 | 149 | Qwen3-Omni zero-shot, two runs | Pitt 0.7619 (file behind Table 2) and 0.7673 (rerun). The rerun gives 0.7673 with sdpa attention and 0.7679 with eager attention. PC-GITA 0.5967 and 0.6015 | `release/overnight2/q3o_new/q3o_pitt_zeroshot_scores.csv` (authors' machine path), `release/edaic_rerun/part16/POD3/q3o_pitt_zeroshot_scores.csv` (authors' machine path) | zero shot |
 | 149 | direction test, Qwen2.5-Omni | cosine -0.0109 (random 0.0135), probe 0.7709, AUC along the readout direction 0.6608, probe with the direction removed 0.7662 | `lookup/readout_direction.csv` | final stage, first answer position |
-| 149 | direction test, Qwen3-Omni | cosine 0.0051 (random 0.0177 [0.0008, 0.0498]), probe 0.8307 [0.7833, 0.8741], along the direction 0.7656 [0.7088, 0.8179], probe with the direction removed 0.8276 [0.7795, 0.8696] | `scores/part16/pod_sync/q3o_perp_cols.npz` (one pod run, UNVERIFIED, audit note 17) | as above |
+| 149 | direction test, Qwen3-Omni | cosine 0.0051 (random 0.0177 [0.0008, 0.0498]), probe 0.8307 [0.7833, 0.8741], along the direction 0.7656 [0.7088, 0.8179], probe with the direction removed 0.8276 [0.7795, 0.8696] | `scores/part16/pod_sync/q3o_perp_cols.npz` (one pod run, reproduced since on Linux, audit note 2), `scores/leftovers_23sep/verify/pod3b_VERIFIED.tsv` | as above |
 | 149 | direction test, Qwen2-Audio | cosine 0.0145 (random 0.0123 [0.0005, 0.0321]), probe 0.8223 [0.7742, 0.8671], along the direction 0.6174 [0.5539, 0.6800], probe with the direction removed 0.8114 [0.7646, 0.8577] | `scores/part17/T3_q2a_direction.csv`, `scores/part17/T3_q2a_direction_summary.csv` | as above, held-out fold standardised |
 | 149 | readout equality | the AUC along the Yes minus No readout direction equals the zero-shot answer AUC: Qwen2-Audio 0.6174 against 0.6173, conflict 0.4136 against 0.4132, agreement 0.6984 against 0.6985 (Spearman 0.99996 between the projection and p_yes). Qwen2.5-Omni answer-state probe by arm: all 0.7709 [0.7210, 0.8224], conflict 0.5272 [0.4229, 0.6354], agreement 0.8672 [0.8261, 0.9064] | `scores/part17/T3_q2a_direction.json`, `release/edaic_rerun/part15/H_readout_arms.csv` (authors' machine path) | full-fit probe restricted to the arm |
 | 149 | channel normalisation (loudness to -23 LUFS plus shaped noise) | NeuroVoz: five quiet-frame features 0.7977 to 0.6025 (the acceptance bar of 0.60 is missed), spectral centroid alone 0.7782 to 0.5603, zero shot 0.7108 to 0.6991 (paired -0.0117 [-0.0332, 0.0098]), encoder probe 0.9233 to 0.8924 (paired -0.0308 [-0.0608, -0.0012]). PC-GITA: five features 0.6657 to 0.5590 (passes), zero shot 0.5728 to 0.5674 (-0.0054 [-0.0437, 0.0357]), encoder probe 0.8959 to 0.8298 (-0.0661 [-0.1181, -0.0180]) | `release/edaic_rerun/part16/POD4/channel_norm_neurovoz.csv` (authors' machine path), `release/edaic_rerun/part16/POD4/channel_norm_pcgita.csv` (authors' machine path), `release/edaic_rerun/part16/POD4/boot4a_nv.json` (authors' machine path), `release/edaic_rerun/part16/POD4/boot4a_pg.json` (authors' machine path) | GroupKFold(5) by speaker, paired speaker bootstrap |
@@ -532,6 +537,13 @@ Audit notes of the 23:23 copy that the submitted paper fixed, word for word:
    line is labelled 0.83. Table 1 and the text use the whole interview, where the answer is 0.84. A whole-interview
    version of the figure exists (`scripts/make_fig1_whole.py`, curves in `scores/part23/`) but the final tex does
    not include it.
+
+Audit notes of the 23:23 copy that a later check settled, word for word:
+
+2. Qwen3-Omni direction test, line 149. The probe 0.83 and the probe with the readout direction removed, 0.83, come
+   from one pod run with no independent check. A refit of the same probe from the saved states gives 0.7864, not
+   0.8307 (`release/edaic_rerun/part16/verify/POD3_partF_out.json`, authors' machine path). The printed numbers are
+   kept and marked UNVERIFIED.
 
 ---
 
