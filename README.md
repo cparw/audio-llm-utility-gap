@@ -78,7 +78,8 @@ ADReSS-M), E-DAIC, PC-GITA, NeuroVoz and MDVR-KCL.
 ### Clinical labels
 
 On 24 September 2026 the clinical label was dropped from every file that held a participant, speaker or clip id in
-the same row as a label: 237 files. `lookup/LABELS_DROPPED.tsv` lists each file with the columns dropped. They are
+the same row as a label: 237 files. `lookup/LABELS_DROPPED.tsv` lists each file with the columns dropped, and
+`reports/part25/LABELS_DROPPED.tsv` lists the 111 PART 25 files the same way. They are
 the `label` column of the per-clip score files and manifests, the columns whose values name the diagnosis group
 (`grp`, `group`, `label_y`, and the ADReSS-2020 `split`, whose values train_cc and train_cd name the group), the
 `label` array of `scores/part10/pitt_enc_nested5_oof.npz` and `scores/part16/pod_sync/q3o_perp_cols.npz`, the
@@ -919,6 +920,13 @@ docs/
 archive/
   README_v1_companion.md      companion README of the first release, kept for the record. Its claims are superseded
                               and it sits outside docs/ so the project page does not serve it.
+checks/                       checks made on 23 and 24 September 2026, before submission. Where a check reads the
+                              paper, it reads the 23 Sep 23:23 UTC copy, not the submitted tex
+  accel_24sep/                checks of 24 September: Audio Flamingo 3 on Pitt, the E-DAIC cells, Figure 1, font sizes
+                              and page layout of the compiled paper, Holm tests, the three other models, Part 12 rows
+                              and T5
+  final_2325Z/                checks of the 23:23 copy: Audio Flamingo 3 input length, Figure 1 and the Part 12 value
+                              check with its triage, each with an independent rerun (the _indep folders)
 figures/
   fig1_gap.pdf                Figure 1 of the paper as submitted (E-DAIC panel on the whole interview, up to 15 min),
                               md5 a102c1a8872ba59fe73dd58700aae142. The script that drew it is not in this repository
@@ -927,7 +935,17 @@ figures/
   fig1_gap_grayscale_check.png  grayscale render of the earlier one-axes Figure 1
   fig1_gap_300.pdf, fig1_gap_mid.pdf  two renders of the earlier one-axes figure, unused in the paper
   fig1_gap.png, probe_vs_answer.png, conflict_dumbbell.png  figures of the first release
-folds/                        GroupKFold(5) speaker fold assignments, 64 csv files and README.md (section i)
+  checks/                     checks that the option C redraw matches the Overleaf Figure 1 of 23 September
+  fig1_9pt/                   a 9 pt version of the 23:23 draft Figure 1 at the column width, made by
+                              scripts/make_fig1_9pt.py
+  fig1_options/               Figure 1 layout options A to D
+  part24/                     PART 24 whole-interview Figure 1, three-panel and one-axes (v4) layouts, made by
+                              scripts/make_fig1_whole.py
+  probe2/                     an earlier Figure 1 draft from the probe2 runs, made by scripts/probe2/make_fig1_v2.py
+folds/                        GroupKFold(5) speaker fold assignments, 64 csv files and README.md, plus 7 csv files in
+                              folds/part20/ (section i)
+history/speech-health/        earlier project history from the development repository (merge cd8d564), kept for the
+                              record and superseded. See history/README.md
 lookup/
   master_lookup.csv           243 rows after the header: model, dataset, stream, AUC, n, estimator and source path.
                               Row numbers in this README are file line numbers, with the header as line 1, as GitHub
@@ -941,8 +959,18 @@ lookup/
 manifests/                    segment lists and window cut points, speech and clinical columns removed
   confounds/                  recording features per clip and the confound AUC table
   part1e/                     speaker crosswalks between Pitt, ADReSSo and ADReSS-2020
+  part20/                     PART 20 clip lists, cut lists and hashes, one folder per pod, label column dropped
+  part24/                     PART 24 whole-interview E-DAIC clip list and cut hashes, label column dropped
 prompts/prompts.json          every prompt string
 reports/                      text reports of the audit parts (E-DAIC windows, interviewer measure, Part 13, Part 14)
+  part16/, part17/, part20/   run reports, logs and checks of PART 16, PART 17 and PART 20
+  part23/, part24/            PART23_SUMMARY.md and PART24_REPORT.md, the notes of those two runs
+  part25/                     PART 25 pod logs, run and check logs, and LABELS_DROPPED.tsv for the PART 25 files
+  part26/                     PART 26 inventory of encoder states (INVENTORY.md) and the probe minus answer table
+                              (PART26_TABLE.md)
+  leftovers_23sep/            notes on the leftover checks of 23 September (LEFTOVERS_NOTES.md), the columns dropped
+                              from their files (LABELS_DROPPED.tsv) and a drafted audit log entry
+                              (DISCREPANCIES_entry_pod3b.txt)
 results/                      the tables of the 14 September draft as CSV, kept for the record and superseded by sections d and e
 scores/
   edaic_conflict_v2/          Table 2 E-DAIC per-clip scores on the Part 14 pairs, six models
@@ -954,7 +982,23 @@ scores/
   part17/                     T1 distinct agreement, T3 Qwen2-Audio direction test, T5 zero-shot per clip, T6, T7b
   part20/                     PART 20, POD1 to POD6, per-clip csv and sidecar json
   part22/                     PART 22, processor configuration, truncation proof, truncation-off E-DAIC run
-  part23/                     PART 23 whole-interview E-DAIC per-layer probe curves (encoder and language model)
+  part23/                     PART 23 whole-interview E-DAIC: per-clip answers and probes (A/), truncation check (C/),
+                              fine-tune (FT/), verify table (verify/) and per-layer curves
+  part24/                     PART 24 whole-interview E-DAIC projector fine-tune: per-clip scores (FT/), pod outputs
+                              per fold (pods/), Figure 1 plotted values (fig/), Part 12 triage (part12/) and checks
+                              (verify/)
+  part25/                     PART 25: probe minus answer gaps on the mean-of-five probe (A/), Holm correction (B/),
+                              the other models' cells (C/), encoder layers above the answer (T5/) and checks (verify/)
+  part26/                     PART 26 encoder probe cells of Qwen2-Audio, Qwen3-Omni and Kimi-Audio, one folder per
+                              model and dataset, with PART26_TABLE.tsv, the inventory (inventory/) and the pod cost
+                              (table26/)
+  rater/                      agreement of two raters with the sentiment scorer on 80 excerpts. The v2 files are the
+                              second rating round, the one the paper prints. The final files are the first round,
+                              superseded
+  leftovers_23sep/            the leftover checks of 23 September (reports/leftovers_23sep/LEFTOVERS_NOTES.md): M7 and
+                              M11 (m7m11/), PART 16 twins (p16twins/), POD3 3b (pod3b/) and T5 refits (t5/), each with
+                              a separate verifier (the _verify folders), the lookup table edits and summary rebuild
+                              (tables/, tables_check/, tables_rebuild/) and the verified tables (verify/)
 scripts/
   fig_options.py              Figure 1 of the 23:23 draft, E-DAIC on the first 300 s: python3 scripts/fig_options.py C out.pdf. It reads the E-DAIC
                               curves from scores/edaic_windows/ and the PC-GITA and Pitt curves from CURVES_DIR
@@ -969,6 +1013,21 @@ scripts/
   upstream/                   segment builders and the two conflict rules
   audit_1a1c/, part1e/, confounds/  scripts of the audit
   part14/, edaic_full/        the Part 14 pair builders and the E-DAIC interview-window builder
+  part16/                     PART 16: M checks (M/), pods POD1 to POD4B and checks (verify/)
+  part17/                     PART 17: T1 to T7b, the Part 12 preparation (part12_prep/) and checks (verify/)
+  part20/                     PART 20: one folder per pod, POD1 to POD6, the interviewer-free Pitt cut
+                              (pitt_noinv_cut/) and checks (verify/)
+  part22/                     PART 22: processor configuration checks (step1/), pod run (pod/) and checks (verify/)
+  part23/                     PART 23: A/, C/, FT/ and verify/, as in scores/part23/
+  part24/                     PART 24: fine-tune (FT/, pod/), Figure 1 check (fig/), Part 12 (part12/), rater
+                              agreement (rater/) and checks (verify/)
+  part25/                     PART 25: A/, B/, C/, T5/ and verify/, as in scores/part25/
+  part26/                     PART 26: one folder per model and dataset, the inventory check (inventory/), and the
+                              table check and pod cost (table26/)
+  leftovers_23sep/            the leftover checks of 23 September, one folder per check as in scores/leftovers_23sep/
+  probe2/                     make_fig1_v2.py, the script of figures/probe2/
+summary/                      summary tables of 23 September (summary_all_v2.csv, ALL_RESULTS_23sep.md) with their
+                              build and check scripts. Superseded, see summary/README.md
 ```
 
 Most per-clip files carry `clip` or `path`, `speaker`, `p_yes` and `mass` or `answer_mass` (the `label` column was

@@ -23,8 +23,8 @@ path                                                                     bytes  
 --------------------------------------------------------------------------------------------------------------------------------------------
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 DISCREPANCIES.md                                                        210150  written for this release
-MANIFEST.txt                                                            755992  this file
-README.md                                                               163075  written for this release
+MANIFEST.txt                                                            756406  this file
+README.md                                                               168729  written for this release
 archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
@@ -347,6 +347,7 @@ folds/pitt_groupkfold5_pod_unpaddedids_seed1.csv                         20304  
 folds/pitt_groupkfold5_pod_unpaddedids_seed2.csv                         20304  copied verbatim, renamed so the name holds no speaker id or group  <- release/folds/ (the seed 2 file on unpadded Pitt ids)
 folds/pitt_groupkfold5_pod_unpaddedids_seed3.csv                         20304  copied verbatim, renamed so the name holds no speaker id or group  <- release/folds/ (the seed 3 file on unpadded Pitt ids)
 folds/pitt_groupkfold5_pod_unpaddedids_seed4.csv                         20304  copied verbatim, renamed so the name holds no speaker id or group  <- release/folds/ (the seed 4 file on unpadded Pitt ids)
+history/README.md                                                          348  written for this release: a note on what the folder holds
 history/speech-health/docs/CONFOUND_AUDIT.md                              7112  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/PROTOCOL.md                                    3511  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/TEXT_FREE_PROTOCOL.md                          5762  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
@@ -1172,6 +1173,7 @@ reports/part20/verify/chk_sft.log                                         4896  
 reports/part23/PART23_SUMMARY.md                                          4729  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/scores/part23/PART23_SUMMARY.md
 reports/part24/PART24_REPORT.md                                          18223  written for this release: the staging report of this part
 reports/part24/SEED1_PREEMPTIVE.txt                                       4642  written for this release: the staging report of this part
+results/README.md                                                          142  written for this release: a note on what the folder holds
 results/interventions.csv                                                  785  summary table from the first release, kept unchanged (commit d8a6045)
 results/table1_main.csv                                                    239  summary table from the first release, kept unchanged (commit d8a6045)
 results/table2_conflict.csv                                                403  summary table from the first release, kept unchanged (commit d8a6045)
@@ -3899,6 +3901,7 @@ scripts/upstream/make_fig1.py                                             5404  
 scripts/upstream/px_build.py                                             14999  copied verbatim  <- authors-machine/af2_run/speech-health/scripts/audiollm/px_build.py
 scripts/upstream/validate_ad_conflict.py                                  3736  copied verbatim  <- authors-machine/af2_run/speech-health/scripts/dementiabank/validate_ad_conflict.py
 summary/ALL_RESULTS_23sep.md                                            252657  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/ALL_RESULTS_23sep.md
+summary/README.md                                                          300  written for this release: a note on what the folder holds
 summary/build_all_results_md.py                                           2440  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/summary/build_all_results_md.py
 summary/build_summary.py                                                 48455  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/summary/build_summary.py
 summary/check_summary.csv                                               197278  copied, machine paths rewritten (x1014)  <- authors-drive/release_from_mac/summary/check_summary.csv
@@ -3906,4 +3909,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                 98129185  3884 files
+TOTAL                                                                 98134369  3887 files
