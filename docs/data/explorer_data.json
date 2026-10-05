@@ -42,9 +42,12 @@
     "probe_lm": null,
     "gap": {
      "value": 0.3306,
-     "ci": null,
+     "ci": [
+      0.2498,
+      0.4088
+     ],
      "excludes_zero": true,
-     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+     "interval_basis": "Paired interval, probe averaged over five fold assignments (scores/part25/A/A_gaps.tsv)."
     }
    },
    {
@@ -68,9 +71,12 @@
     "probe_lm": null,
     "gap": {
      "value": 0.2262,
-     "ci": null,
+     "ci": [
+      0.1735,
+      0.2851
+     ],
      "excludes_zero": true,
-     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+     "interval_basis": "Paired interval, probe averaged over five fold assignments (scores/part25/A/A_gaps.tsv)."
     }
    },
    {
@@ -204,9 +210,12 @@
     "probe_lm": null,
     "gap": {
      "value": 0.2602,
-     "ci": null,
+     "ci": [
+      0.1755,
+      0.3396
+     ],
      "excludes_zero": true,
-     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+     "interval_basis": "Paired interval, probe averaged over five fold assignments (scores/part25/A/A_gaps.tsv)."
     }
    },
    {
@@ -230,9 +239,12 @@
     "probe_lm": null,
     "gap": {
      "value": 0.1802,
-     "ci": null,
+     "ci": [
+      0.0766,
+      0.2805
+     ],
      "excludes_zero": true,
-     "interval_basis": "Probe minus answer. The significance call uses one saved split, so its interval is not shown here."
+     "interval_basis": "Paired interval, probe averaged over five fold assignments (scores/part25/A/A_gaps.tsv)."
     }
    }
   ]

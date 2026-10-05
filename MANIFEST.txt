@@ -227,9 +227,9 @@ checks/final_2325Z/part12_indep/spot10.py                                 6253  
 checks/final_2325Z/part12_indep/spot10_out.txt                            2210  copied, wording edited on copy (9 lines)  <- authors-drive/paper1_submission_23sep/final_checks_2325Z/part12_independent_check/spot10_out.txt
 docs/.nojekyll                                                               0  empty, tells GitHub Pages to serve the folder as it is
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
-docs/data/explorer_data.json                                             19043  aggregate numbers drawn by docs/explorer.html, written for this release
-docs/explorer.html                                                       33771  interactive explorer page, written for this release
-docs/index.html                                                          53412  project page, written for this release
+docs/data/explorer_data.json                                             19127  aggregate numbers drawn by docs/explorer.html, written for this release
+docs/explorer.html                                                       33793  interactive explorer page, written for this release
+docs/index.html                                                          53922  project page, written for this release
 figures/checks/overleaf_vs_repo/fig_overleaf-1.png                       17699  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_overleaf-1.png
 figures/checks/overleaf_vs_repo/fig_repo-1.png                           14837  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_repo-1.png
 figures/checks/repro_option_c/compare_repro_overleaf_diff.png            76275  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/compare_repro_overleaf_diff.png
@@ -3900,4 +3900,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                 98097585  3878 files
+TOTAL                                                                 98098201  3878 files

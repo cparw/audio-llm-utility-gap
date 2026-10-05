@@ -296,8 +296,7 @@ function vProbe(){
         fm(r.probe_encoder.auc)+(r.probe_encoder.ci?"<br><span class=m>"+ivt(r.probe_encoder.ci)+"</span>":""),
         r.probe_lm?fm(r.probe_lm.auc)+(r.probe_lm.ci?"<br><span class=m>"+ivt(r.probe_lm.ci)+"</span>":""):"not verified",gap];})),
     (anyNote?"* "+rows.filter(function(r){return r.speakers_note;})[0].speakers_note+" ":"")+
-    "Gap intervals for Pitt and E-DAIC are paired, with the probe averaged over five fold assignments. For the other "+
-    "five sets the call on zero uses one saved split, so its interval is not shown.","wide");
+    "Gap intervals for Pitt, E-DAIC, PC-GITA, NeuroVoz, ADReSSo and ADReSS-2020 are paired, with the probe averaged over five fold assignments. For MDVR-KCL the call on zero uses one saved split, so its interval is not shown.","wide");
 }
 
 /* ---------- view 2: words against voice ---------- */
