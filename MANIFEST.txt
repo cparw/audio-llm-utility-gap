@@ -23,8 +23,8 @@ path                                                                     bytes  
 --------------------------------------------------------------------------------------------------------------------------------------------
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 DISCREPANCIES.md                                                        211434  written for this release
-MANIFEST.txt                                                            754754  this file
-README.md                                                               152054  written for this release
+MANIFEST.txt                                                            755992  this file
+README.md                                                               152806  written for this release
 archive/README_v1_companion.md                                           11886  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
@@ -3362,6 +3362,12 @@ scores/pitt_all/sft_pitt_all_sft.json                                      446  
 scores/pitt_all/sft_pitt_all_state.json                                  14348  copied verbatim  <- release/edaic_rerun/pitt_all/sft_pitt_all_state.json
 scores/pitt_all/windows_full.csv                                         10903  same rows and values, reformatted  <- release/edaic_rerun/pitt_all/windows_full.csv
 scores/pitt_all/windows_full.json                                          368  copied verbatim  <- release/edaic_rerun/pitt_all/windows_full.json
+scores/rater/rater_stats_final.csv                                        3743  copied verbatim, superseded by the v2 files  <- authors-drive/release_from_mac/scores/rater_final/rater_stats_final.csv
+scores/rater/rater_stats_final.json                                       3199  copied, machine paths rewritten (x12), release note added, superseded by the v2 files  <- authors-drive/release_from_mac/scores/rater_final/rater_stats_final.json
+scores/rater/rater_stats_paste_final.txt                                  1120  copied verbatim, superseded by the v2 files  <- authors-drive/release_from_mac/scores/rater_final/rater_stats_paste_final.txt
+scores/rater/rater_stats_paste_v2.txt                                     1120  copied verbatim  <- authors-drive/release_from_mac/scores/rater_final/v2_rerated/rater_stats_paste_v2.txt
+scores/rater/rater_stats_v2.csv                                           3743  copied verbatim  <- authors-drive/release_from_mac/scores/rater_final/v2_rerated/rater_stats_v2.csv
+scores/rater/rater_stats_v2.json                                          3243  copied, machine paths rewritten (x12), release note added  <- authors-drive/release_from_mac/scores/rater_final/v2_rerated/rater_stats_v2.json
 scripts/audit_1a1c/ad_offsets.json                                        7559  copied verbatim  <- release/edaic_rerun/scripts_1a1c/ad_offsets.json
 scripts/audit_1a1c/adoff.py                                               1486  copied verbatim  <- release/edaic_rerun/scripts_1a1c/adoff.py
 scripts/audit_1a1c/cha.py                                                 2526  copied verbatim  <- release/edaic_rerun/scripts_1a1c/cha.py
@@ -3900,4 +3906,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                 98100153  3878 files
+TOTAL                                                                 98118311  3884 files

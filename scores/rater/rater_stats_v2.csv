@@ -1,0 +1,31 @@
+subset,scorer,metric,value,k,n,n_speakers,ci_item_lo,ci_item_hi,boot_item_used,boot_item_undefined,ci_spk_lo,ci_spk_hi,boot_spk_used,boot_spk_undefined,reading,note
+all80,roberta_heard,rater1_agree_scorer,0.887500,71,80,48,0.812500,0.950000,2000,0,0.815789,0.950000,2000,0,valence,
+all80,roberta_heard,rater1_kappa_scorer,0.774153,,80,48,0.622642,0.900000,2000,0,0.627125,0.898333,2000,0,valence,
+all80,lexicon_arm,rater1_agree_scorer,0.862500,69,80,48,0.787500,0.937500,2000,0,0.785714,0.929412,2000,0,valence,
+all80,lexicon_arm,rater1_kappa_scorer,0.722573,,80,48,0.556128,0.871630,2000,0,0.571201,0.853226,2000,0,valence,
+all80,roberta_heard,rater2_agree_scorer,0.912500,73,80,48,0.850000,0.962500,2000,0,0.850560,0.963866,2000,0,valence,
+all80,roberta_heard,rater2_kappa_scorer,0.824341,,80,48,0.693878,0.925094,2000,0,0.696924,0.927451,2000,0,valence,
+all80,lexicon_arm,rater2_agree_scorer,0.887500,71,80,48,0.812500,0.950000,2000,0,0.826667,0.947368,2000,0,valence,
+all80,lexicon_arm,rater2_kappa_scorer,0.773014,,80,48,0.620733,0.898477,2000,0,0.648143,0.891361,2000,0,valence,
+all80,none,interrater_agree,0.900000,72,80,48,0.825000,0.962500,2000,0,0.831169,0.955929,2000,0,valence,on dir answers
+all80,none,interrater_kappa,0.799499,,80,48,0.649781,0.924051,2000,0,0.660173,0.910842,2000,0,valence,on dir answers
+conflict40,roberta_heard,rater1_agree_scorer,0.825000,33,40,33,0.700000,0.925000,2000,0,0.702703,0.926829,2000,0,valence,
+conflict40,roberta_heard,rater1_kappa_scorer,0.573171,,40,33,0.263136,0.837838,2000,0,0.266667,0.818853,2000,0,valence,
+conflict40,lexicon_arm,rater1_agree_scorer,0.775000,31,40,33,0.650000,0.900000,2000,0,0.628571,0.897436,2000,0,valence,
+conflict40,lexicon_arm,rater1_kappa_scorer,0.423077,,40,33,0.098332,0.714286,2000,0,0.098888,0.714091,2000,0,valence,
+conflict40,roberta_heard,rater2_agree_scorer,0.875000,35,40,33,0.775000,0.975000,2000,0,0.769231,0.972222,2000,0,valence,
+conflict40,roberta_heard,rater2_kappa_scorer,0.695122,,40,33,0.422984,0.925515,2000,0,0.413985,0.915903,2000,0,valence,
+conflict40,lexicon_arm,rater2_agree_scorer,0.825000,33,40,33,0.700000,0.925000,2000,0,0.717314,0.923077,2000,0,valence,
+conflict40,lexicon_arm,rater2_kappa_scorer,0.551282,,40,33,0.245185,0.817073,2000,0,0.239861,0.809941,2000,0,valence,
+conflict40,none,interrater_agree,0.800000,32,40,33,0.675000,0.925000,2000,0,0.675659,0.916667,2000,0,valence,on dir answers
+conflict40,none,interrater_kappa,0.523810,,40,33,0.189089,0.793103,2000,0,0.189424,0.792605,2000,0,valence,on dir answers
+agreement40,roberta_heard,rater1_agree_scorer,0.950000,38,40,33,0.875000,1.000000,2000,0,0.871795,1.000000,2000,0,valence,
+agreement40,roberta_heard,rater1_kappa_scorer,0.890110,,40,33,0.713262,1.000000,2000,0,0.703496,1.000000,2000,0,valence,
+agreement40,lexicon_arm,rater1_agree_scorer,0.950000,38,40,33,0.875000,1.000000,2000,0,0.871795,1.000000,2000,0,valence,
+agreement40,lexicon_arm,rater1_kappa_scorer,0.893617,,40,33,0.714286,1.000000,2000,0,0.713285,1.000000,2000,0,valence,
+agreement40,roberta_heard,rater2_agree_scorer,0.950000,38,40,33,0.875000,1.000000,2000,0,0.871795,1.000000,2000,0,valence,
+agreement40,roberta_heard,rater2_kappa_scorer,0.890110,,40,33,0.713262,1.000000,2000,0,0.703496,1.000000,2000,0,valence,
+agreement40,lexicon_arm,rater2_agree_scorer,0.950000,38,40,33,0.875000,1.000000,2000,0,0.871795,1.000000,2000,0,valence,
+agreement40,lexicon_arm,rater2_kappa_scorer,0.893617,,40,33,0.714286,1.000000,2000,0,0.713285,1.000000,2000,0,valence,
+agreement40,none,interrater_agree,1.000000,40,40,33,1.000000,1.000000,2000,0,1.000000,1.000000,2000,0,valence,on dir answers
+agreement40,none,interrater_kappa,1.000000,,40,33,1.000000,1.000000,2000,0,1.000000,1.000000,2000,0,valence,on dir answers

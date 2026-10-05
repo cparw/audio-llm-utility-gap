@@ -1,0 +1,7 @@
+reading: valence (every cell is positive/negative)
+All 80 items, the sentiment scorer (RoBERTa, heard window): rater 1 agrees with the scorer direction on 0.8875 (71 of 80, 95% item bootstrap 0.81 to 0.95), rater 2 on 0.9125 (73 of 80, 0.85 to 0.96).
+All 80 items, the lexicon direction that set the arm: rater 1 agrees with the scorer direction on 0.8625 (69 of 80, 95% item bootstrap 0.79 to 0.94), rater 2 on 0.8875 (71 of 80, 0.81 to 0.95).
+All 80 items: the two raters agree on 0.9000 (72 of 80, 0.82 to 0.96), Cohen's kappa 0.7995 (95% item bootstrap 0.65 to 0.92).
+The 40 conflict items, the sentiment scorer (RoBERTa, heard window): rater 1 agrees with the scorer direction on 0.8250 (33 of 40, 95% item bootstrap 0.70 to 0.93), rater 2 on 0.8750 (35 of 40, 0.78 to 0.97).
+The 40 conflict items, the lexicon direction that set the arm: rater 1 agrees with the scorer direction on 0.7750 (31 of 40, 95% item bootstrap 0.65 to 0.90), rater 2 on 0.8250 (33 of 40, 0.70 to 0.93).
+The 40 conflict items: the two raters agree on 0.8000 (32 of 40, 0.68 to 0.93), Cohen's kappa 0.5238 (95% item bootstrap 0.19 to 0.79).
