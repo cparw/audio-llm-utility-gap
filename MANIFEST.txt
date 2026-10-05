@@ -3,6 +3,8 @@ Built 2026-09-24 from the authors' run directories. Sizes in bytes.
 Paths after '<-' name the file on the authors' machine that this copy was made from. They do not resolve outside that machine.
 Prefixes: release/ is the authors' release folder, authors-machine/ is another folder on the authors' laptop, and authors-drive/ is
 the authors' external drive (DementiaBank/ is the authors' copy of that corpus on it).
+README.md, section a, under "Words and path prefixes", matches these prefixes to the shorter ones README.md and
+DISCREPANCIES.md use.
 
 EXCLUSION CHECK, run before publishing:
   audio files (.wav .mp3 .flac .m4a .ogg) present: 0
@@ -46,13 +48,17 @@ EXCLUSION CHECK, run before publishing:
                            match and each was checked: they hold paper text, PDF words, code excerpts, array shapes
                            and hashes, class counts and weights, AUC values or chart labels, not a participant's
                            label or speech
+  files added after these checks: .gitattributes and CITATION.cff, written for this release. They hold a repository
+                           setting and citation metadata only
 
 path                                                                     bytes  origin / transformation
 --------------------------------------------------------------------------------------------------------------------------------------------
+.gitattributes                                                             128  written for this release: keeps the TeX files of history/ and scores/part17/part12_prep/ out of the GitHub language count
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
-DISCREPANCIES.md                                                        210096  written for this release
-MANIFEST.txt                                                            957575  this file
-README.md                                                               168729  written for this release
+CITATION.cff                                                              1572  written for this release: citation metadata of the paper, an ICASSP 2027 submission
+DISCREPANCIES.md                                                        210205  written for this release
+MANIFEST.txt                                                            958253  this file
+README.md                                                               175440  written for this release
 archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
@@ -255,9 +261,9 @@ checks/final_2325Z/part12_indep/spot10.py                                 6253  
 checks/final_2325Z/part12_indep/spot10_out.txt                            2210  copied, wording edited on copy (9 lines)  <- authors-drive/paper1_submission_23sep/final_checks_2325Z/part12_independent_check/spot10_out.txt
 docs/.nojekyll                                                               0  empty, tells GitHub Pages to serve the folder as it is
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
-docs/data/explorer_data.json                                             19127  aggregate numbers drawn by docs/explorer.html, written for this release
-docs/explorer.html                                                       33793  interactive explorer page, written for this release
-docs/index.html                                                          54550  project page, written for this release
+docs/data/explorer_data.json                                             19056  aggregate numbers drawn by docs/explorer.html, written for this release
+docs/explorer.html                                                       34890  interactive explorer page, written for this release
+docs/index.html                                                          56424  project page, written for this release
 figures/checks/overleaf_vs_repo/fig_overleaf-1.png                       17699  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_overleaf-1.png
 figures/checks/overleaf_vs_repo/fig_repo-1.png                           14837  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_repo-1.png
 figures/checks/repro_option_c/compare_repro_overleaf_diff.png            76275  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/compare_repro_overleaf_diff.png
@@ -4833,4 +4839,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                167053010  4783 files
+TOTAL                                                                167065356  4785 files

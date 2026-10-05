@@ -6,6 +6,57 @@ Chaitanya Parwatkar, Nima Kelidari, Minoo Ahmadi, Ashutosh Chaubey, Mohammad Sol
 University of Southern California, Los Angeles, CA, USA. Submitted to ICASSP 2027.
 Corresponding author: soleymani@ict.usc.edu.
 
+## a. Summary
+
+**What the paper asks.** When an audio LLM answers a clinical question about a recording, does the answer use what
+the model's own hidden states hold? We compare linear probes on the frozen hidden states of Qwen2.5-Omni with the
+same model's zero-shot Yes or No answer, on the same clips, in seven datasets from three conditions: Parkinson's read
+speech, depression interviews and Alzheimer's picture descriptions.
+
+**Main result.** On the Parkinson's and Alzheimer's sets the encoder probe reaches 0.75 to 0.92 AUC, while the
+zero-shot answer stays between 0.56 and 0.71. The paired gap between them is significant on every one of these sets
+except MDVR-KCL, from 0.11 on Pitt to 0.33 on PC-GITA. On depression (E-DAIC) the order reverses: the answer reaches
+0.84, above the encoder probe (0.60) and the language model probe (0.74). On depression segments whose words point
+away from the diagnosis, four of six audio LLMs fall below chance. Retraining only the projector lifts the answer
+significantly on every dataset except MDVR-KCL and E-DAIC, but on Pitt the segments whose words point away from the
+diagnosis stay at chance.
+
+<p align="center"><img src="docs/assets/fig1_gap.png" width="560" alt="Figure 1 of the paper: probe AUC across the audio encoder and language model of Qwen2.5-Omni for PC-GITA, Pitt and E-DAIC, with each zero-shot answer as a dotted line and the gap printed in each panel: +0.33, +0.11 and -0.24."></p>
+
+Figure 1 of the paper, as submitted (`figures/fig1_gap.pdf`, shown here from `docs/assets/fig1_gap.png`). Each
+panel prints Δ, the nested encoder probe minus the zero-shot answer.
+
+**Folder map.**
+
+```
+scores/         per-clip score files with sidecar json, one folder per run, clinical label dropped
+lookup/         master_lookup.csv: model, dataset, stream, AUC, n, estimator and source of each cell
+figures/        Figure 1 as submitted (fig1_gap.pdf), earlier drafts in figures/drafts/
+scripts/        the scripts behind the released numbers
+folds/          GroupKFold(5) speaker fold assignments (section i)
+manifests/      segment lists and window cut points, speech and clinical columns removed
+prompts/        prompts.json with part of the prompt strings; section h lists more
+reports/        run reports, logs and checks
+docs/           the project page and the interactive explorer
+checks/, history/, results/, summary/, archive/   earlier checks and drafts, kept for the record
+DISCREPANCIES.md, MANIFEST.txt                    the audit log, and every file with its size and origin
+```
+
+**How to check one number.**
+
+1. Find the sentence in section f, under "Numbers in the submitted tex" (table cells are in sections d and e). Its
+   row gives the tex line, the value in the file, the file, the estimator and a status.
+2. Open that file. Many cells are also a row of `lookup/master_lookup.csv`, whose `source` column names the file the
+   value was read from.
+3. To recompute an AUC from a per-clip file, join the clinical label from your own licensed copy of the corpus on the
+   id column (section b), then use the rank formula in section c.
+
+Reproducing the probe refits needs the hidden states, and redrawing Figure 1 needs the PC-GITA and Pitt per-layer
+curve files. Neither is released. The curve values that `scripts/make_fig1_whole.py` plots are in
+`scores/part24/fig/fig1_gap_whole_plotted.csv`.
+
+### In more detail
+
 When an audio LLM answers a clinical question about a recording, does the answer use
 what the model's own hidden states already hold? We train linear probes on the frozen hidden states of Qwen2.5-Omni
 and ask the same model the same Yes or No question on the same clips. Seven datasets cover three conditions that
@@ -39,6 +90,27 @@ are used for those: `release/` is the authors' release folder, `gdrive/` is the 
 authors' external drive, `part23/`, `part24/` and `part27/` are the PART 23, PART 24 and PART 27 run folders on the same drive,
 `paper1_submission_23sep/` is the submission folder on the same drive, and `DementiaBank/` is the authors' copy of
 the DementiaBank corpus.
+
+### Words and path prefixes
+
+- PART n: a numbered round of checks and reruns. Its files sit in folders named partN, for example `scores/part23/`.
+- POD n: one rented cloud GPU machine within a round, for example `scores/part20/POD4/`.
+- M n and T n: the numbered checks of PART 16 and PART 17 (`scores/part16/M/`, `scores/part17/`).
+- Rule 3: the scoring rule of the PART 20 checks. For the answer it counts every single-token spelling of Yes, yes,
+  YES and No, no, NO, with and without a leading space (`DISCREPANCIES.md`, item 143, and section h).
+- The Mac: the authors' laptop.
+
+The folders that stay on the authors' machines are named one way in this README and in `DISCREPANCIES.md`, and
+another way in the origin column of `MANIFEST.txt`:
+
+| README.md and DISCREPANCIES.md | MANIFEST.txt |
+|---|---|
+| `release/` | `release/` |
+| `part23/`, `part24/`, `part27/` | `authors-drive/release_from_mac/scores/part23/`, `part24/`, `part27/` |
+| `paper1_submission_23sep/` | `authors-drive/paper1_submission_23sep/` |
+| `gdrive/` | `authors-drive/paper1_local_runs/` |
+| `DementiaBank/` | `authors-drive/DementiaBank/` |
+| not used | `authors-machine/`, a folder on the authors' laptop |
 
 ---
 
@@ -216,6 +288,10 @@ Their per-clip p_yes correlate at r 0.99988 (`DISCREPANCIES.md`, item 102).
   outer GroupKFold(5) by speaker, inner GroupKFold(4) on the training speakers picks the layer (`scripts/core/nested_repeats_all.py`).
 - `p_yes` is the probability of Yes given the answer is Yes or No, from the first-token Yes and No logits at the first
   answer position. `mass` or `answer_mass` is the share of the full next-token distribution those tokens hold.
+- Some columns of `scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv`, `A3_edaic_whole_meanof5_perclip.csv` and
+  `A4_ctl300_samegpu_perclip.csv` store numbers as text, for example `np.float64(0.0637583763794425)` in `p_yes_whole`.
+  The `auc_mean` and `auc_std` columns in `scores/leftovers_23sep/t5_verify/` do the same. To read such a column `c`
+  with pandas: `df[c] = df[c].str.removeprefix("np.float64(").str.removesuffix(")").astype(float)`.
 - Probe values by conflict arm use the probe fitted on all 468 Pitt clips, restricted to the arm. A probe refit inside
   one arm is not used (Qwen3-Omni answer state: 0.6394 and 0.9032 used, 0.6145 and 0.9349 not used).
 - Table 2 E-DAIC agreement counts each agreement segment once. The 483 agreement rows hold 311 distinct segments
@@ -257,6 +333,8 @@ lifted (section c).
 | ADReSS-2020 | 156 (156) | audio | 0.62 | 0.6241 | 156 | zero shot, recording wording, 30 s window | `scores/part17/T5_zeroshot_perclip.csv` (dataset adress2020) |
 | ADReSS-2020 | 156 (156) | text | 0.75 | 0.7538 | 156 | transcript only, dataset transcripts, run of 20 Sep | `release/overnight2/text_new/o25_adress2020_text.csv` (authors' machine path) |
 | ADReSS-2020 | 156 (156) | fine-tuned | 0.77 | 0.7684 | 156 | projector only, as above | `release/omni_final/omnisft_adress2020_oof.csv` (authors' machine path) |
+
+Not released: the transcript-only per-clip files of all seven rows and the fine-tuned per-clip files of the six rows other than E-DAIC stay on the authors' machine, so those cells cannot be recomputed from this repository.
 
 Notes on Table 1.
 
@@ -846,7 +924,28 @@ The alternative wordings of section f are recorded with their runs: for the 0.02
 column of `release/edaic_rerun/part16/POD1/p14_o25_audio_p2.csv` (authors' machine path) and
 `release/edaic_rerun/part16/POD1/p14_o25_audio_p3.csv` (authors' machine path).
 
-No prompt contains participant speech. The transcript conditions place the transcript after the prompt at run time.
+Line 86 of the submitted tex says two other wordings are listed with the release. They are the two templates in
+`scripts/core/omni_prompt_variants.py` (lines 9 and 10), where `{CONDNAME}` is Parkinson's disease, depression or
+dementia:
+
+- p2: `Listen to this recording. Does the speaker have {CONDNAME}? Answer Yes or No.`
+- p3: `From the audio alone, is this speaker likely to have {CONDNAME}? Reply with one word, Yes or No.`
+
+Their E-DAIC instances, with the filled prompt in the prompt column, are `scores/part16/POD1/p14_o25_audio_p2.csv` and
+`scores/part16/POD1/p14_o25_audio_p3.csv`, the released copies of the two E-DAIC files above.
+
+Yes and No token spellings. Line 61 of the submitted tex says the single-token spellings of Yes and No are listed in
+the release. They are:
+
+- Audio runs (`scripts/core/extract_probe_layers.py`, line 44): Yes, " Yes", yes, " yes", YES against No, " No", no,
+  " no", NO. The script keeps the first token id of each spelling.
+- Transcript runs (`scripts/core/text_score.py`, lines 35 to 42): Yes, yes, YES, Yeah, yeah against No, no, NO, Nope,
+  nope, each with and without a leading space. Only spellings that are a single token count.
+- Rule 3 of the PART 20 checks adds " YES" and " NO" to the audio lists (`DISCREPANCIES.md`, items 143, 157 and 163,
+  which also name the column of each file that uses it).
+
+No prompt contains participant speech. The transcript conditions place the transcript before the prompt at run time
+(`scripts/core/text_score.py`, line 47).
 Those transcripts are not released.
 
 ---
@@ -911,6 +1010,7 @@ the runs used them, so in some splits this person sits in two folds. `folds/READ
 README.md                     this file
 DISCREPANCIES.md              the audit log
 MANIFEST.txt                  every file with its size, where it came from and what was dropped, plus the exclusion check
+CITATION.cff                  citation metadata of the paper
 docs/
   index.html                  project page, served by GitHub Pages from this folder
   explorer.html               interactive explorer over the released tables

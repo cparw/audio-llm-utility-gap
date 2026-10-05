@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use these files, please cite the paper. The paper is an ICASSP 2027 submission, under review."
+title: "The Representation Utility Gap in Audio LLMs for Clinical Speech"
+type: software
+authors:
+  - given-names: Chaitanya
+    family-names: Parwatkar
+    affiliation: University of Southern California
+  - given-names: Nima
+    family-names: Kelidari
+    affiliation: University of Southern California
+  - given-names: Minoo
+    family-names: Ahmadi
+    affiliation: University of Southern California
+  - given-names: Ashutosh
+    family-names: Chaubey
+    affiliation: University of Southern California
+  - given-names: Mohammad
+    family-names: Soleymani
+    affiliation: University of Southern California
+repository-code: "https://github.com/cparw/audio-llm-utility-gap"
+preferred-citation:
+  type: conference-paper
+  title: "The Representation Utility Gap in Audio LLMs for Clinical Speech"
+  authors:
+    - given-names: Chaitanya
+      family-names: Parwatkar
+      affiliation: University of Southern California
+    - given-names: Nima
+      family-names: Kelidari
+      affiliation: University of Southern California
+    - given-names: Minoo
+      family-names: Ahmadi
+      affiliation: University of Southern California
+    - given-names: Ashutosh
+      family-names: Chaubey
+      affiliation: University of Southern California
+    - given-names: Mohammad
+      family-names: Soleymani
+      affiliation: University of Southern California
+  conference:
+    name: "ICASSP 2027"
+  notes: "Submitted to ICASSP 2027, under review."

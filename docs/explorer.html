@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:,">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231c5cab'/%3E%3Cpath d='M4 12V8M8 12V4M12 12V7' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>Utility Gap Explorer</title>
 <meta name="description" content="Interactive views over the aggregate results of The Representation Utility Gap in Audio LLMs for Clinical Speech: probe against answer, words against voice, layer by layer, and the E-DAIC audio window.">
+<meta property="og:title" content="Utility Gap Explorer">
+<meta property="og:description" content="Interactive views over the aggregate results of The Representation Utility Gap in Audio LLMs for Clinical Speech: probe against answer, words against voice, layer by layer, and the E-DAIC audio window.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cparw.github.io/audio-llm-utility-gap/explorer.html">
+<meta property="og:image" content="https://cparw.github.io/audio-llm-utility-gap/assets/fig1_gap.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
   color-scheme:light;
@@ -91,7 +97,8 @@ svg text{font-family:inherit}
 .caption:empty{display:none}
 .tablehead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:20px 0 4px;
   font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:700}
-.tw{overflow-x:auto}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.swipe{font-size:.8rem;color:var(--ink3);margin:0 0 6px}
 .tw.tall{max-height:420px;overflow-y:auto}
 .tw.wide table{min-width:960px}
 table{width:100%;border-collapse:collapse;font-size:.85rem}
@@ -122,7 +129,7 @@ dd{margin:0;color:var(--ink2)}
 </style>
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
   <p class="kicker"><a href="./">The Representation Utility Gap in Audio LLMs for Clinical Speech</a></p>
   <h1>Explore the numbers</h1>
   <p class="sub">Four views over the same data file behind the paper's tables. Pick a view, then hover or tap
@@ -145,6 +152,7 @@ dd{margin:0;color:var(--ink2)}
     <p class="caption" id="cap"></p>
     <div class="tablehead"><span>Values</span>
       <button type="button" class="chip" id="dp" aria-pressed="false">4 decimals</button></div>
+    <p class="swipe" id="swipe" hidden>Scroll the table sideways to see every column.</p>
     <div class="tw" id="tbl"></div>
     <p class="caption" id="tnote"></p>
   </div>
@@ -161,7 +169,7 @@ dd{margin:0;color:var(--ink2)}
       <a href="https://github.com/cparw/audio-llm-utility-gap">Code</a> &middot;
       ICASSP 2027 submission, under review</span>
   </div>
-</div>
+</main>
 <div id="tip" role="status" aria-live="polite"></div>
 
 <script>
@@ -245,6 +253,7 @@ function setUI(o){document.getElementById("vt").textContent=o.title;
   document.getElementById("key").innerHTML=o.key||"";
   document.getElementById("cap").innerHTML=o.cap||"";}
 function setTable(h,note,cls){var t=document.getElementById("tbl");t.innerHTML=h;t.className="tw"+(cls?" "+cls:"");
+  document.getElementById("swipe").hidden=!(t.scrollWidth>t.clientWidth+1);
   document.getElementById("tnote").innerHTML=note||"";}
 function chips(list,isOn,onClick){var box=document.getElementById("toggles");
   box.innerHTML=list.map(function(c){return '<button type="button" class="chip" data-k="'+c[0]+'" aria-pressed="'+isOn(c[0])+'">'+
@@ -412,7 +421,7 @@ function vWindow(){
   var EW=D.edaic_window,S=st.window;
   chips([["s300","first 300 s"],["whole","up to 15 min"]],function(k){return S[k];},function(k){S[k]=!S[k];if(!S.s300&&!S.whole)S[k]=true;});
   setUI({title:EW.title,
-    key:'<span><i class="sw bar" style="background:var(--ink2);opacity:.45"></i>faded bar: first 300 s</span>'+
+    key:'<span><i class="sw bar" style="background:var(--ink2);opacity:.6"></i>faded bar: first 300 s</span>'+
         '<span><i class="sw bar" style="background:var(--ink2)"></i>solid bar: up to 15 min</span><span><i class="sw wh"></i>95% interval</span>',
     cap:EW.caption+" "+EW.clips+" speakers, one window each. "+EW.windows.s300+" "+EW.windows.whole});
   var rows=EW.rows,wins=["s300","whole"].filter(function(w){return S[w];}),o=begin(),W=o.W,s=o.s,
@@ -427,7 +436,7 @@ function vWindow(){
     add(g,"text",{"class":"lab",x:LW-12,y:y+rowH/2+4,"text-anchor":"end"},nm(r));
     wins.forEach(function(w,j){var c=r[w],by=y+7+j*(bh+4),cy=by+bh/2;
       add(g,"rect",{x:X(.5),y:by,width:Math.max(1,X(c.auc)-X(.5)),height:bh,rx:2.5,
-        style:"fill:"+STREAM_C[r.stream]+(w==="s300"?";opacity:.45":"")});
+        style:"fill:"+STREAM_C[r.stream]+(w==="s300"?";opacity:.6":"")});
       whisker(g,X,c.ci,cy,"var(--ink)",true);
       add(g,"text",{"class":"v",x:X(c.ci[1])+6,y:cy+4},f2(c.auc));});
     var h="<b>"+r.label+"</b>";

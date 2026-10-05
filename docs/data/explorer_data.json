@@ -883,8 +883,8 @@
   "clips": 275,
   "speakers": 275,
   "windows": {
-   "s300": "First 300 s of the participant's turns. The cut shortens 217 of the 275 windows.",
-   "whole": "The participant's turns up to 900 s. 89 of the 275 windows are still capped at 900 s."
+   "s300": "The 300 s cut shortens 217 of the 275 windows.",
+   "whole": "89 of the 275 windows still reach the 900 s cap."
   },
   "rows": [
    {

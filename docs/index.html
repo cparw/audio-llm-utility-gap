@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:,">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231c5cab'/%3E%3Cpath d='M4 12V8M8 12V4M12 12V7' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>The Representation Utility Gap in Audio LLMs for Clinical Speech</title>
 <meta name="description" content="Audio LLMs can answer a clinical question about a recording. We checked whether the answer uses what the model's own audio encoder picks up, on Parkinson's, Alzheimer's and depression speech.">
+<meta property="og:title" content="The Representation Utility Gap in Audio LLMs for Clinical Speech">
+<meta property="og:description" content="Audio LLMs can answer a clinical question about a recording. We checked whether the answer uses what the model's own audio encoder picks up, on Parkinson's, Alzheimer's and depression speech.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cparw.github.io/audio-llm-utility-gap/">
+<meta property="og:image" content="https://cparw.github.io/audio-llm-utility-gap/assets/fig1_gap.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
   color-scheme:light;
@@ -103,7 +109,8 @@ svg text{font-family:inherit}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--card);border-color:var(--ink)}
 details.nums{margin-top:8px;font-size:13px;color:var(--ink2)}
 details.nums summary{cursor:pointer;color:var(--accent);font-weight:600;padding:2px 0}
-.tw{overflow-x:auto;margin-top:6px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+.swipe{font-size:12px;color:var(--ink3);margin:6px 0 0}
 table{border-collapse:collapse;width:100%;font-size:12.5px}
 th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 th{font-weight:600;color:var(--ink3);font-size:11.5px}
@@ -125,6 +132,7 @@ footer a:hover{text-decoration:underline}
   h2{font-size:21px}
   .big{grid-template-columns:1fr}
   figure{padding:12px 12px 10px}
+  .tw table{min-width:540px}
 }
 </style>
 </head>
@@ -180,7 +188,7 @@ shows the same gap on PC-GITA, 0.90 against 0.60.</p>
   <svg id="c1" role="group" aria-label="Encoder probe against zero-shot answer for seven datasets"></svg>
   <figcaption>Qwen2.5-Omni. Probe = linear probe on the audio encoder, speaker-disjoint folds, mean of five
   repeats. Hover or tap any row.</figcaption>
-  <details class="nums"><summary>Show the numbers</summary><div class="tw" id="t1"></div></details>
+  <details class="nums"><summary>Show the numbers</summary><p class="swipe" hidden>Scroll the table sideways to see every column.</p><div class="tw" id="t1"></div></details>
 </figure>
 </section>
 
@@ -248,7 +256,7 @@ ten minutes, 0.86. With 275 speakers, the probes may not have enough data.</p>
   <figcaption>Qwen2.5-Omni on E-DAIC, 275 speakers. Up to 15 min means the participant's own turns joined in
   order and capped at 900 s, which 89 windows still reach. 217 of 275 windows were longer than 300 s and had
   been cut. The transcript line uses the whole transcript.</figcaption>
-  <details class="nums"><summary>Show the numbers</summary><div class="tw" id="t3"></div></details>
+  <details class="nums"><summary>Show the numbers</summary><p class="swipe" hidden>Scroll the table sideways to see every column.</p><div class="tw" id="t3"></div></details>
 </figure>
 </section>
 
@@ -274,7 +282,7 @@ though this does not prove the voice is ignored.</p>
   <svg id="c4" role="group" aria-label="Conflict and agreement AUC on E-DAIC depression pairs for six audio LLMs"></svg>
   <figcaption>483 conflict segments and 311 distinct agreement segments from 138 speakers, first 30 s of each
   segment. Agreement segments are reused across pairs, so each is scored once.</figcaption>
-  <details class="nums"><summary>Show the numbers</summary><div class="tw" id="t4"></div></details>
+  <details class="nums"><summary>Show the numbers</summary><p class="swipe" hidden>Scroll the table sideways to see every column.</p><div class="tw" id="t4"></div></details>
 </figure>
 </section>
 
@@ -307,7 +315,7 @@ agreement arm fell to 0.56.</p>
   </div>
   <svg id="c5b" role="group" aria-label="Encoder probe and answer on Pitt with and without the interviewer"></svg>
   <figcaption>Same 468 segments and folds. Only the interviewer's speech was removed.</figcaption>
-  <details class="nums"><summary>Show the numbers</summary><div class="tw" id="t5"></div></details>
+  <details class="nums"><summary>Show the numbers</summary><p class="swipe" hidden>Scroll the table sideways to see every column.</p><div class="tw" id="t5"></div></details>
 </figure>
 </section>
 
@@ -331,7 +339,7 @@ agreement arm down from 0.96 to 0.67.</p>
   <div class="key">
     <span><i class="sw ring"></i>zero-shot answer</span>
     <span><i class="sw dia"></i>after projector fine-tune</span>
-    <span><i class="sw grey"></i>Pitt reruns of the same recipe</span>
+    <span><i class="sw grey"></i>other runs of the recipe</span>
   </div>
   <svg id="c6" role="group" aria-label="Zero-shot answer against projector fine-tune for seven datasets"></svg>
 
@@ -343,7 +351,7 @@ agreement arm down from 0.96 to 0.67.</p>
   <svg id="c6b" role="group" aria-label="Seven Pitt fine-tune runs on conflict and agreement segments"></svg>
   <figcaption>Projector fine-tune of Qwen2.5-Omni, five speaker-disjoint folds, scored out of fold. The first run fixed
   only the clip order, so Pitt shows every run we have.</figcaption>
-  <details class="nums"><summary>Show the numbers</summary><div class="tw" id="t6"></div></details>
+  <details class="nums"><summary>Show the numbers</summary><p class="swipe" hidden>Scroll the table sideways to see every column.</p><div class="tw" id="t6"></div></details>
 </figure>
 </section>
 
@@ -700,14 +708,16 @@ function drawArms(id,rows){
   var y=T;
   rows.forEach(function(r){
     if(r.muted){add(s,"line",{x1:0,y1:y+4,x2:W,y2:y+4,style:"stroke:var(--line)"});y+=8;}
-    var cy=y+rowH/2,g=add(s,"g",{style:r.muted?"opacity:.6":null});
+    var cy=y+rowH/2,g=add(s,"g",{});
     add(g,"rect",{"class":"bg",x:0,y:y+1,width:W,height:rowH-2,rx:4});
     rowLabel(g,LW-12,cy,r.n2?r.n2:[r.n]);
-    add(g,"line",{x1:X(r.c),y1:cy,x2:X(r.a),y2:cy,style:"stroke:var(--axis);stroke-width:2"});
-    add(g,"line",{x1:X(r.aci[0]),y1:cy-6,x2:X(r.aci[1]),y2:cy-6,style:"stroke:var(--ink2);stroke-width:1.2"});
-    add(g,"line",{x1:X(r.cci[0]),y1:cy+6,x2:X(r.cci[1]),y2:cy+6,style:"stroke:var(--warn);stroke-width:1.2"});
-    add(g,"rect",{x:X(r.a)-4.5,y:cy-4.5,width:9,height:9,style:"fill:var(--ink2);stroke:var(--card);stroke-width:1.5"});
-    add(g,"rect",{x:X(r.c)-5,y:cy-5,width:10,height:10,style:"fill:none;stroke:var(--warn);stroke-width:2"});
+    /* a muted row fades its marks only, so its label stays as readable as the others */
+    var mk=r.muted?add(g,"g",{style:"opacity:.6"}):g;
+    add(mk,"line",{x1:X(r.c),y1:cy,x2:X(r.a),y2:cy,style:"stroke:var(--axis);stroke-width:2"});
+    add(mk,"line",{x1:X(r.aci[0]),y1:cy-6,x2:X(r.aci[1]),y2:cy-6,style:"stroke:var(--ink2);stroke-width:1.2"});
+    add(mk,"line",{x1:X(r.cci[0]),y1:cy+6,x2:X(r.cci[1]),y2:cy+6,style:"stroke:var(--warn);stroke-width:1.2"});
+    add(mk,"rect",{x:X(r.a)-4.5,y:cy-4.5,width:9,height:9,style:"fill:var(--ink2);stroke:var(--card);stroke-width:1.5"});
+    add(mk,"rect",{x:X(r.c)-5,y:cy-5,width:10,height:10,style:"fill:none;stroke:var(--warn);stroke-width:2"});
     bind(g,tipArms(r));
     y+=rowH;
   });
@@ -841,10 +851,14 @@ table("t6",["Dataset","Zero-shot answer","After fine-tune","Paired gain [95%]"],
 
 /* ---------- draw and redraw ---------- */
 function drawAll(){drawC1();drawC2();drawC3();drawArms("c4",C4);drawArms("c5",C5);drawC5b();drawC6();drawC6b();}
-drawAll();
+/* the "scroll sideways" hint shows only where a table is wider than its card */
+function swipeHints(){Array.prototype.forEach.call(document.querySelectorAll(".swipe"),function(p){
+  var t=p.nextElementSibling;p.hidden=!(t&&t.scrollWidth>t.clientWidth+1);});}
+Array.prototype.forEach.call(document.querySelectorAll("details.nums"),function(d){d.addEventListener("toggle",swipeHints);});
+drawAll();swipeHints();
 var lastW=document.documentElement.clientWidth,rt;
 addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(function(){
-  var w=document.documentElement.clientWidth;if(w!==lastW){lastW=w;hide();drawAll();}},120);});
+  var w=document.documentElement.clientWidth;if(w!==lastW){lastW=w;hide();drawAll();swipeHints();}},120);});
 })();
 </script>
 </body>
