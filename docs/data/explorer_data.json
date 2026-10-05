@@ -568,7 +568,7 @@
   "caption": "Linear probe AUC at every stage of Qwen2.5-Omni: 32 audio encoder layers, then 29 language model stages at the audio-token positions. Stage 0 of the language model is the projector output. Each point is one split's out-of-fold AUC with no layer selection. The flat line is the zero-shot answer.",
   "encoder_layers": 32,
   "lm_stages": 29,
-  "note": "These are the saved single-split curves that Figure 1 draws. A refit of one split on another machine moves single Pitt layers by up to 0.05, so read the shape, not single points. The up to 15 min E-DAIC series is a separate run and is not in Figure 1.",
+  "note": "These are the saved single-split curves that Figure 1 draws. A refit of one split on another machine moves single Pitt layers by up to 0.05, so read the shape, not single points. Figure 1 draws E-DAIC on the whole interview, up to 15 min. The first 300 s series is not in Figure 1.",
   "series": [
    {
     "id": "pcgita",

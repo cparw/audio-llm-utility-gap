@@ -402,7 +402,7 @@ function vLayers(){
   },{nofocus:true,leave:function(){hl.style.opacity=0;hc.style.opacity=0;}});
   var trs=[];for(var k=0;k<61;k++){var v=k<32?ser.encoder[k]:ser.lm[k-32];trs.push([stageName(k),f2(v)]);}
   setTable(tbl(["Stage","Probe AUC"],trs),
-    (sid==="edaic_whole"?"Single split values. This series is not in the paper figure.":"Single split values, as drawn in the paper figure.")+
+    (sid==="edaic_300s"?"Single split values. This series is not in the paper figure.":"Single split values, as drawn in the paper figure.")+
     " Printed at 2 decimals only, so read the shape, not single points. Zero-shot answer for this series: "+fm(ser.answer)+".","tall");
 }
 

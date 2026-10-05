@@ -106,7 +106,7 @@ the authors' machine.
 - Also: the PNGs in `figures/part24/`, and the plotted csvs and sidecars in `scores/part24/fig/`.
 
 **Why two files.** make_fig1_v4.py does not draw the figure the tex uses. The tex includes `fig1_gap.pdf`, and Overleaf
-compiles `zip/figures/fig1_gap.pdf` (md5 bbefb559..., the same bytes as `figures/fig1_gap.pdf` here). That file has
+compiles `zip/figures/fig1_gap.pdf` (md5 bbefb559..., the same bytes as `figures/drafts/fig1_gap_overleaf_2325Z.pdf` here). That file has
 three stacked panels, gap shading, a gap swatch, a "proj." band and a "chance" line. v4 has none of these. The
 requested E-DAIC panel and gap swatch only exist in the Overleaf layout.
 

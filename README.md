@@ -365,11 +365,9 @@ This is the short list. Each item names the line of the final tex source, what i
 The printed numbers are kept in the table that follows, with the file value beside them. Every other number in the
 text matches a file that was checked independently.
 
-1. Figure 1, lines 39 and 40. The figure the final tex includes, `figures/fig1_gap.pdf` (the same bytes as the
-   Overleaf copy, md5 bbefb559a5768dcb07d11ed5d440da18), draws the E-DAIC panel from the first 300 s run: its answer
-   line is labelled 0.83. Table 1 and the text use the whole interview, where the answer is 0.84. A whole-interview
-   version of the figure exists (`scripts/make_fig1_whole.py`, curves in `scores/part23/`) but the final tex does
-   not include it.
+1. Figure 1, lines 39 and 40. Fixed in the submitted paper. `figures/fig1_gap.pdf` (md5
+   a102c1a8872ba59fe73dd58700aae142) draws the E-DAIC panel on the whole interview, answer line 0.84, as in Table 1.
+   The note on the earlier figure is kept under "Values of earlier copies".
 2. Qwen3-Omni direction test, line 149. The probe 0.83 and the probe with the readout direction removed, 0.83, come
    from one pod run with no independent check. A refit of the same probe from the saved states gives 0.7864, not
    0.8307 (`release/edaic_rerun/part16/verify/POD3_partF_out.json`, authors' machine path). The printed numbers are
@@ -413,7 +411,7 @@ printed number is kept. NOTE means the number matches, with a caveat given in th
 | 26 | on depression the answer beats every probe | answer 0.8366. Encoder probe 0.5981, projector probe 0.5866, language model probe 0.7437, each with a paired interval below zero. Answer-state probe 0.8359, paired -0.0007 [-0.0455, 0.0436] | `part23/A/A2_edaic_whole_zeroshot_perclip.csv`, `part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv` (authors' machine paths), rows 236 to 240 of `lookup/master_lookup.csv` | whole interview, mean of five per-repeat AUCs, paired speaker bootstrap | MATCH for the encoder, projector and language model probes. The answer-state probe is level with the answer, as line 149 says |
 | 26, 180 | where the words contradict a depression diagnosis, four of six models fall below chance | E-DAIC conflict arm below 0.5: Qwen2-Audio 0.2280, Qwen2.5-Omni 0.2218, Qwen3-Omni 0.3008, Audio Flamingo 3 0.4235, all four intervals below 0.5 | `scores/part17/T1_table2_distinct.csv` | zero shot, 483 conflict segments | MATCH |
 | 26, 53, 226 | retraining only the projector narrows the gap on five of the six Parkinson's and Alzheimer's sets, and recovers the overall AUC on five of seven datasets | paired fine-tune minus zero shot: PC-GITA +0.3227 [0.2391, 0.4040], NeuroVoz +0.2078 [0.1588, 0.2578], MDVR-KCL -0.0149 [-0.2709, 0.2364], Pitt +0.1095 [0.0454, 0.1728], ADReSSo +0.2096 [0.1294, 0.2867], ADReSS-2020 +0.1443 [0.0490, 0.2370]. E-DAIC +0.0223 [-0.0064, 0.0547] (PART 24) | `release/edaic_rerun/part15/C_intervals.csv` (authors' machine path), row 243 of `lookup/master_lookup.csv` | paired speaker bootstrap | MATCH: five of six, not MDVR-KCL, and not E-DAIC |
-| 39, 40 | Figure 1, each point is that layer's out-of-fold AUC | single-split out-of-fold AUC per stage, no layer selection. The Pitt encoder curve peaks at 0.8083 (layer 27), above the nested 0.7706 the text quotes. Answer lines 0.5635, 0.6578 and 0.8285 (labelled 0.83) | `figures/fig1_gap.pdf`, `scripts/fig_options.py`, `scores/edaic_windows/o25_full_encoder_perlayer.csv`, `scores/edaic_windows/o25_full_llm_perlayer.csv`, PC-GITA and Pitt curves in `release/overnight/curves/omni/` (authors' machine path) | per-stage out-of-fold AUC | NOTE: the E-DAIC panel is the first 300 s run, not the whole interview of Table 1 (audit note 1) |
+| 39, 40 | Figure 1, each point is that layer's out-of-fold AUC | single-split out-of-fold AUC per stage, no layer selection. The Pitt encoder curve peaks at 0.8083 (layer 27), above the nested 0.7706 the text quotes. Answer lines 0.5635, 0.6578 and 0.8366 (labelled 0.84). Panel gaps +0.3306, +0.1128, -0.2385 | `figures/fig1_gap.pdf`, `scores/part23/o25_whole_encoder_perlayer.csv`, `scores/part23/o25_whole_llm_perlayer.csv`, `scores/part23/o25_whole_proj_perlayer.csv`, `scores/part25/A/A_gaps.tsv`, row 237 of `lookup/master_lookup.csv` (E-DAIC gap), PC-GITA and Pitt curves in `release/overnight/curves/omni/` (authors' machine path) | per-stage out-of-fold AUC | MATCH on the printed labels |
 | 52 | seven clinical datasets, six Audio LLMs | seven datasets and six models in Tables 1 and 2 | `lookup/master_lookup.csv` | design | MATCH. The three Alzheimer's sets share most speakers (`DISCREPANCIES.md`, item 6) |
 | 52, 149 | the gap is significant on every Parkinson's and Alzheimer's set except MDVR-KCL and reverses on depression | paired probe minus answer: Pitt +0.1128 [0.0455, 0.1768] (mean of five). Single-split probe: PC-GITA 0.3454 [0.2636, 0.4275], NeuroVoz 0.2209 [0.1660, 0.2783], ADReSSo 0.2748 [0.1920, 0.3526], ADReSS-2020 0.1637 [0.0557, 0.2693], MDVR-KCL 0.0625 [-0.1813, 0.2900]. E-DAIC encoder probe minus answer -0.2385 [-0.3244, -0.1505] | `scores/part16/M/M7_gap_per_dataset.csv`, `scores/part16/M/M7_pitt_FIXED.json`, `part23/A/A2_edaic_whole_zeroshot_perclip.csv`, `part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv` (authors' machine paths), rows 236 to 240 of `lookup/master_lookup.csv` | paired speaker bootstrap | NOTE: all hold, but four of the intervals use a single-split probe (audit note 3) |
 | 53 | the conflict segments stay at chance after retraining the projector | Pitt conflict arm 0.4490 to 0.5666 over the seven runs of the standard recipe, every interval including 0.5 | section g, class-balanced fine-tuning and seed repeats | projector fine-tune by arm | MATCH |
@@ -525,6 +523,15 @@ commented them out. Their values stay here.
 | the Alzheimer's and E-DAIC sets stay below 0.64 on every recording feature | largest such feature 0.6358 (ADReSS-2020 noise floor) | `manifests/confounds/confound_auc.csv` |
 | for AD the transcript alone matches the audio on Pitt, beats it on ADReSS-2020 and trails it on ADReSSo (commented out in the final tex) | transcript against audio: Pitt 0.6629 and 0.6578, ADReSS-2020 0.7538 and 0.6241, ADReSSo 0.5542 and 0.6150 | `lookup/master_lookup.csv` |
 | a projector trained on PC-GITA lifts NeuroVoz from 0.70 to 0.74, and one trained on NeuroVoz lifts PC-GITA from 0.56 to 0.68 | 0.6951 to 0.7375, and 0.5635 to 0.6761 | `release/overnight2/part6/transfer_pcgita_transfer.json`, `release/overnight2/part6/transfer_neurovoz_transfer.json` (authors' machine paths) |
+| Figure 1 answer lines 0.5635, 0.6578 and 0.8285 (labelled 0.83), E-DAIC panel on the first 300 s run (23:23 copy) | 0.8285 | `figures/drafts/fig1_gap_overleaf_2325Z.pdf`, `scores/edaic_windows/o25_full_encoder_perlayer.csv`, `scores/edaic_windows/o25_full_llm_perlayer.csv` |
+
+Audit notes of the 23:23 copy that the submitted paper fixed, word for word:
+
+1. Figure 1, lines 39 and 40. The figure the final tex includes, `figures/drafts/fig1_gap_overleaf_2325Z.pdf` (the same bytes as the
+   Overleaf copy, md5 bbefb559a5768dcb07d11ed5d440da18), draws the E-DAIC panel from the first 300 s run: its answer
+   line is labelled 0.83. Table 1 and the text use the whole interview, where the answer is 0.84. A whole-interview
+   version of the figure exists (`scripts/make_fig1_whole.py`, curves in `scores/part23/`) but the final tex does
+   not include it.
 
 ---
 
@@ -862,8 +869,10 @@ archive/
   README_v1_companion.md      companion README of the first release, kept for the record. Its claims are superseded
                               and it sits outside docs/ so the project page does not serve it.
 figures/
-  fig1_gap.pdf                Figure 1 of the paper, the same bytes as the figure the final tex includes (E-DAIC panel
-                              on the first 300 s), made by scripts/fig_options.py (option C)
+  fig1_gap.pdf                Figure 1 of the paper as submitted (E-DAIC panel on the whole interview, up to 15 min),
+                              md5 a102c1a8872ba59fe73dd58700aae142. The script that drew it is not in this repository
+  drafts/fig1_gap_overleaf_2325Z.pdf and .png  Figure 1 of the 23 Sep 23:23 UTC draft (E-DAIC panel on the first
+                              300 s), PDF md5 bbefb559a5768dcb07d11ed5d440da18, made by scripts/fig_options.py (option C)
   fig1_gap_grayscale_check.png  grayscale render of the earlier one-axes Figure 1
   fig1_gap_300.pdf, fig1_gap_mid.pdf  two renders of the earlier one-axes figure, unused in the paper
   fig1_gap.png, probe_vs_answer.png, conflict_dumbbell.png  figures of the first release
@@ -895,14 +904,14 @@ scores/
   part22/                     PART 22, processor configuration, truncation proof, truncation-off E-DAIC run
   part23/                     PART 23 whole-interview E-DAIC per-layer probe curves (encoder and language model)
 scripts/
-  fig_options.py              Figure 1 as submitted: python3 scripts/fig_options.py C out.pdf. It reads the E-DAIC
+  fig_options.py              Figure 1 of the 23:23 draft, E-DAIC on the first 300 s: python3 scripts/fig_options.py C out.pdf. It reads the E-DAIC
                               curves from scores/edaic_windows/ and the PC-GITA and Pitt curves from CURVES_DIR
                               (default curves/), which are not in this repository. The two whole-interview scripts
                               below read CURVES_DIR the same way
   make_fig1_v4.py             the earlier one-axes Figure 1 (make_fig1_v3.py is the version before it)
   make_fig1_whole.py          Figure 1 with the whole-interview E-DAIC curves, three-panel (overleaf) or one-axes (v4)
-                              layout: python3 scripts/make_fig1_whole.py overleaf out.pdf. Not the figure the final
-                              tex includes
+                              layout: python3 scripts/make_fig1_whole.py overleaf out.pdf. Same curves as the
+                              submitted figure, without its Δ labels
   make_fig1_v4_whole.py       make_fig1_v4.py with the whole-interview E-DAIC curves and answer line 0.8366
   core/                       probing, per-layer curves, nested repeats, projector fine-tune, zero-shot and transcript scoring
   upstream/                   segment builders and the two conflict rules
@@ -1046,7 +1055,7 @@ DISCREPANCIES.md numbers 176 items. The table gives one row per item. Fixed in t
 | 121 | Final-stage and nested probe directions differ | released here | scores/part17/T3_q2a_direction_summary.csv, release/edaic_rerun/part17/rows/T3.tsv (authors' machine path) |
 | 122 | Direction weighting differs between the first pass and the verifier | released here | scores/part17/T3_q2a_direction.csv |
 | 123 | One Pitt participant carries two speaker ids | fixed in the paper | "We use the DementiaBank Pitt cookie-theft descriptions \cite{pitt}, with 468 segments from 227 participants (one has sessions in both groups and is grouped under two labels), the top and bottom third of the fluency score defined under Conflict set construction below, the ADReSSo recordings \cite{adresso} from 237 speakers, as released with the ADReSS-M challenge \cite{adressm}, and the ADReSS-2020 benchmark split \cite{adress2020} including 108 training and 48 test recordings." |
-| 124 | make_fig1_v5.py does not exist | released here | figures/fig1_gap.pdf, scripts/fig_options.py. The submitted three-panel figure is option C of fig_options.py. scripts/make_fig1_v4.py made the earlier one-axes figure |
+| 124 | make_fig1_v5.py does not exist | released here | figures/drafts/fig1_gap_overleaf_2325Z.pdf, scripts/fig_options.py. The 23:23 draft figure is option C of fig_options.py. scripts/make_fig1_v4.py made the earlier one-axes figure. The script that drew the submitted figure is not in this repository |
 | 125 | G-Drive paths moved, so recorded paths are stale | open | Decided by: rewriting the 75 stale source paths in lookup/master_lookup.csv that still use the old G-Drive prefix (paper1_local_runs/ at the drive root) |
 | 126 | E-DAIC 300 s probe values used a different estimator from Pitt | fixed in the paper | "On E-DAIC the language model probe reaches 0.74 and the encoder probe 0.60, both below the answer of 0.84 ($-$0.09 [$-$0.16, $-$0.03] and $-$0.24 [$-$0.32, $-$0.15]), while a probe on the answer state matches the answer (0.84)." |
 | 127 | The lookup builder cannot reproduce the lookup | released here | lookup/master_lookup.csv |

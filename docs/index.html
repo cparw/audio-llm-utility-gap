@@ -203,8 +203,8 @@ only part of it. Depression differs, as the next section shows.</p>
   </div>
   <div class="seg" role="group" aria-label="E-DAIC audio window">
     <span>E-DAIC panel:</span>
-    <button type="button" data-w="s300" aria-pressed="true">first 300 s</button>
-    <button type="button" data-w="whole" aria-pressed="false">up to 15 min</button>
+    <button type="button" data-w="s300" aria-pressed="false">first 300 s</button>
+    <button type="button" data-w="whole" aria-pressed="true">up to 15 min</button>
   </div>
   <svg id="c2" role="group" aria-label="Probe AUC at every stage of Qwen2.5-Omni for PC-GITA, Pitt and E-DAIC"></svg>
   <figcaption>Each point is one split's out-of-fold AUC with no layer selection, as in the paper figure. So
@@ -216,9 +216,9 @@ only part of it. Depression differs, as the next section shows.</p>
 
 <figure>
   <div class="plate"><img src="assets/fig1_gap.png" width="678" height="520" loading="lazy"
-    alt="Figure 1 of the paper: probe AUC across the audio encoder and language model of Qwen2.5-Omni for PC-GITA, Pitt and E-DAIC, with each zero-shot answer as a dotted line."></div>
+    alt="Figure 1 of the paper: probe AUC across the audio encoder and language model of Qwen2.5-Omni for PC-GITA, Pitt and E-DAIC, with each zero-shot answer as a dotted line and the gap printed in each panel: +0.33, +0.11 and -0.24."></div>
   <figcaption>Figure 1 of the paper, as submitted. It draws the same saved curves as the chart above, with
-  E-DAIC on the first 300 s. The shaded area is the gap between the probe and the zero-shot answer.</figcaption>
+  E-DAIC on the whole interview, up to 15 min. Each panel prints Δ, the nested encoder probe minus the zero-shot answer. The shaded area is the gap between the probe and the zero-shot answer.</figcaption>
 </figure>
 </section>
 
@@ -352,9 +352,6 @@ agreement arm down from 0.96 to 0.67.</p>
 <p class="small">We checked every claim in the paper against the result files. The final paper fixed what an
 earlier check found. These points remain.</p>
 <ul class="dns">
-  <li><strong>Figure 1's depression panel.</strong> The figure in the paper draws E-DAIC on the first 300
-  seconds, where the answer is 0.83. The tables and the text use the whole interview, where it is 0.84. The two
-  lead to the same conclusion.</li>
   <li><strong>What "whole interview" means.</strong> The model hears the participant's turns, taken from the
   transcript timings and joined in order. Where two transcript rows overlap, that stretch is heard twice.</li>
   <li><strong>The gap intervals.</strong> On Pitt the gap of 0.11 has an interval on the paper's own probe, 0.05
@@ -367,6 +364,10 @@ earlier check found. These points remain.</p>
   <li><strong>The Qwen3-Omni readout numbers.</strong> The probe of 0.83, with and without the readout
   direction, comes from one run. A refit from the saved states gives 0.79, so treat those two numbers with
   care.</li>
+</ul>
+<p class="small">Fixed in the submitted paper:</p>
+<ul class="dns">
+  <li><strong>Figure 1's depression panel.</strong> An earlier draft of Figure 1 drew E-DAIC on the first 300 seconds, where the answer is 0.83. The submitted figure draws the whole interview, where it is 0.84, as in the tables and the text. The chart above can show either window.</li>
 </ul>
 </section>
 
@@ -536,7 +537,7 @@ var CUR={
   enc:[0.5835,0.5593,0.6051,0.5998,0.6071,0.597,0.6047,0.5867,0.5824,0.5932,0.6151,0.6093,0.6013,0.6087,0.6098,0.624,0.6468,0.6604,0.6847,0.6875,0.6752,0.6674,0.6613,0.652,0.6611,0.6654,0.6396,0.6234,0.6291,0.6177,0.598,0.636],
   lm:[0.6094,0.6318,0.6441,0.6641,0.6647,0.6663,0.6341,0.6492,0.6878,0.706,0.7389,0.7607,0.7437,0.7352,0.7444,0.7519,0.7308,0.7163,0.7362,0.7144,0.7186,0.7086,0.7093,0.7324,0.7289,0.7292,0.7474,0.7596,0.7753]}
 };
-var c2win="s300";
+var c2win="whole";
 function stageName(k){return k<32?"audio encoder layer "+k:(k===32?"language model layer 0 (projector output)":"language model layer "+(k-32));}
 function drawC2(){
   var o=measure("c2"),W=o.W,nar=o.narrow,s=o.s;
