@@ -22,10 +22,10 @@ EXCLUSION CHECK, run before publishing:
 path                                                                     bytes  origin / transformation
 --------------------------------------------------------------------------------------------------------------------------------------------
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
-DISCREPANCIES.md                                                        211884  written for this release
+DISCREPANCIES.md                                                        210150  written for this release
 MANIFEST.txt                                                            755992  this file
-README.md                                                               163232  written for this release
-archive/README_v1_companion.md                                           11886  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
+README.md                                                               163075  written for this release
+archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
 checks/accel_24sep/af3/af3_part3_vs_part10.py                             2557  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.py
@@ -275,7 +275,7 @@ figures/part24/fig1_gap_whole_v4layout.png                               49304  
 figures/probe2/fig1_gap_v2.pdf                                           18568  copied verbatim  <- authors-drive/paper1_local_runs/probe2/fig1_gap_v2.pdf
 figures/probe2/fig1_gap_v2.png                                           59923  copied verbatim  <- authors-drive/paper1_local_runs/probe2/fig1_gap_v2.png
 figures/probe_vs_answer.png                                              71821  figure from the first release, kept unchanged (commit d8a6045)
-folds/README.md                                                          28526  copied, then rewritten in short sentences with the same numbers. Privacy fixes this build: the participant listed in both Pitt groups is no longer named, and the unpadded-id files are renamed  <- release/folds/README.md
+folds/README.md                                                          28722  copied, then rewritten in short sentences with the same numbers. Privacy fixes this build: the participant listed in both Pitt groups is no longer named, and the unpadded-id files are renamed  <- release/folds/README.md
 folds/adress2020_groupkfold5_mac.csv                                      2677  copied verbatim  <- release/folds/adress2020_groupkfold5_mac.csv
 folds/adress2020_groupkfold5_pod.csv                                      2677  copied verbatim  <- release/folds/adress2020_groupkfold5_pod.csv
 folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv                     2677  copied verbatim  <- release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv

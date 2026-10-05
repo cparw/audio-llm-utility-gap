@@ -160,9 +160,9 @@ In each entry below, "saved per-repeat AUCs" lists the runs checked. No per-clip
 
 ### Five renumbered splits, Mac tie order (Qwen2.5-Omni Pitt encoder probe, 0.7706)
 
-Speakers renumbered with `default_rng(seed)`, then sklearn GroupKFold(5) as installed on the Mac. These reproduce `overnight2/part10/pitt_enc_nested5_oof.npz` exactly. That file is behind the Table 1 Qwen2.5-Omni Pitt encoder value 0.7706. Its layer choices were not saved, so they were re-derived with the inner GroupKFold(4). The per-clip scores then match exactly.
+Speakers renumbered with `default_rng(seed)`, then sklearn GroupKFold(5) as installed on the Mac. These reproduce `scores/part10/pitt_enc_nested5_oof.npz` exactly. That file is behind the Table 1 Qwen2.5-Omni Pitt encoder value 0.7706. Its layer choices were not saved, so they were re-derived with the inner GroupKFold(4). The per-clip scores then match exactly.
 
-The older value 0.7761 (`omni_final/omni_pitt_nested_repeats.json`) is the same five-repeat probe on the same states, run on a pod. So it uses the pod files of the previous section.
+The older value 0.7761 (`release/omni_final/omni_pitt_nested_repeats.json` (authors' machine path)) is the same five-repeat probe on the same states, run on a pod. So it uses the pod files of the previous section.
 
 - **`pitt_groupkfold5_mac_seed0.csv`** (Pitt, seed 0). CONFIRMED. Per clip vs `omni_part10_pitt_nested5` (enc): max abs diff 0.00e+00. The other tie order misses by 0.99 or more. The participant listed twice: folds 1 and 4.
 - **`pitt_groupkfold5_mac_seed1.csv`** (Pitt, seed 1). CONFIRMED. Per clip vs `omni_part10_pitt_nested5` (enc): max abs diff 0.00e+00. The other tie order misses by 0.96 or more. The participant listed twice: folds 0 and 2.
@@ -182,7 +182,7 @@ Same as the pod files above, but on the unpadded ids (the group name plus the ba
 
 ### E-DAIC full window, shuffled splits (part16 EDAICFULL)
 
-`GroupKFold(5, shuffle=True, random_state=r)` as in `part16/EDAICFULL/probe_boot.py`. No tie order is involved. The saved per-clip file holds only the mean over the five splits, so the five files are checked together. Refitting all five at the saved layers and averaging reproduces the saved mean out-of-fold scores.
+`GroupKFold(5, shuffle=True, random_state=r)` as in `scripts/edaic_full/probe_boot.py`. No tie order is involved. The saved per-clip file holds only the mean over the five splits, so the five files are checked together. Refitting all five at the saved layers and averaging reproduces the saved mean out-of-fold scores.
 
 The five files share one check, so each entry below gives the same numbers. The larger llm and ans differences come from the inner layer choice, which differs in some folds at near ties.
 
@@ -196,11 +196,11 @@ The five files share one check, so each entry below gives the same numbers. The 
 
 | run | where | split |
 |---|---|---|
-| Qwen2-Audio single-split nested probes, `probe2/<ds>_{enc,llm,ans}_nested_oof.csv` (all seven datasets) | Mac | `_mac` |
-| eGeMAPS baseline, `overnight/perclip/egemaps_<ds>_oof.csv` | Mac | `_mac` |
-| Qwen2.5-Omni Pitt encoder probe 0.7706, `part10/pitt_enc_nested5_oof.npz` | Mac | `pitt_groupkfold5_mac_seed0..4` |
-| Qwen2.5-Omni single-split nested probes, `omni_final/omni_<ds>_*_nested_oof.csv` | pod | `_pod` |
-| Qwen3-Omni single-split nested probes, `overnight2/q3o_new/q3o_<ds>_*_nested_oof.csv` | pod | `_pod` |
+| Qwen2-Audio single-split nested probes, `gdrive/probe2/<ds>_{enc,llm,ans}_nested_oof.csv` (authors' machine path) (all seven datasets) | Mac | `_mac` |
+| eGeMAPS baseline, `release/overnight/perclip/egemaps_<ds>_oof.csv` (authors' machine path) | Mac | `_mac` |
+| Qwen2.5-Omni Pitt encoder probe 0.7706, `scores/part10/pitt_enc_nested5_oof.npz` | Mac | `pitt_groupkfold5_mac_seed0..4` |
+| Qwen2.5-Omni single-split nested probes, `release/omni_final/omni_<ds>_*_nested_oof.csv` (authors' machine path) | pod | `_pod` |
+| Qwen3-Omni single-split nested probes, `release/overnight2/q3o_new/q3o_<ds>_*_nested_oof.csv` (authors' machine path) | pod | `_pod` |
 | Qwen2-Audio MDVR-KCL `kcl_local` nested probe | pod | `kcl_groupkfold5_pod` |
 | per-layer AUC curves written on pods (Qwen2-Audio, Qwen2.5-Omni, Kimi-Audio) | pod | `_pod` |
 | five-repeat nested probes behind Table 1 (Qwen2-Audio, Qwen2.5-Omni, Qwen3-Omni, Kimi-Audio), all cells except the one above | pod | `_pod_seed0..4` |
@@ -211,5 +211,5 @@ The five files share one check, so each entry below gives the same numbers. The 
 
 - Projector fine-tunes (`sft_projector.py`) use the same GroupKFold call but saved no fold record. A fine-tune cannot be refitted to check one. The pod-written `pitt468_folds.csv` from part16 POD2, made with the same call, equals `pitt_groupkfold5_pod.csv`.
 - Qwen2.5-Omni states are on disk only for Pitt and E-DAIC. Qwen3-Omni states are on disk only for the five other datasets, plus the part16 POD3 Pitt and PC-GITA re-extractions. Splits of runs without states are named above by inference only.
-- The older E-DAIC conflict manifest (390 rows, `edaic_conflict_new/`) has five-repeat probes but no per-clip out-of-fold file. Its saved AUCs sit near chance, where the layer choice is unstable. Its splits are not released here. The Part 14 conflict set has no nested probe.
+- The older E-DAIC conflict manifest (390 rows, `release/edaic_conflict_new/` (authors' machine path)) has five-repeat probes but no per-clip out-of-fold file. Its saved AUCs sit near chance, where the layer choice is unstable. Its splits are not released here. The Part 14 conflict set has no nested probe.
 - Runs made by others on other machines are not included.
