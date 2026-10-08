@@ -56,9 +56,9 @@ path                                                                     bytes  
 .gitattributes                                                             128  written for this release: keeps the TeX files of history/ and scores/part17/part12_prep/ out of the GitHub language count
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 CITATION.cff                                                              1572  written for this release: citation metadata of the paper, an ICASSP 2027 submission
-DISCREPANCIES.md                                                        210205  written for this release
-MANIFEST.txt                                                            958253  this file
-README.md                                                               175440  written for this release
+DISCREPANCIES.md                                                        211201  written for this release
+MANIFEST.txt                                                            958578  this file
+README.md                                                               175712  written for this release
 archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
@@ -263,7 +263,7 @@ docs/.nojekyll                                                               0  
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
 docs/data/explorer_data.json                                             19056  aggregate numbers drawn by docs/explorer.html, written for this release
 docs/explorer.html                                                       34890  interactive explorer page, written for this release
-docs/index.html                                                          56424  project page, written for this release
+docs/index.html                                                          56678  project page, written for this release
 figures/checks/overleaf_vs_repo/fig_overleaf-1.png                       17699  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_overleaf-1.png
 figures/checks/overleaf_vs_repo/fig_repo-1.png                           14837  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_repo-1.png
 figures/checks/repro_option_c/compare_repro_overleaf_diff.png            76275  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/compare_repro_overleaf_diff.png
@@ -309,7 +309,7 @@ figures/part24/fig1_gap_whole_v4layout.png                               49304  
 figures/probe2/fig1_gap_v2.pdf                                           18568  copied verbatim  <- authors-drive/paper1_local_runs/probe2/fig1_gap_v2.pdf
 figures/probe2/fig1_gap_v2.png                                           59923  copied verbatim  <- authors-drive/paper1_local_runs/probe2/fig1_gap_v2.png
 figures/probe_vs_answer.png                                              71821  figure from the first release, kept unchanged (commit d8a6045)
-folds/README.md                                                          28722  copied, then rewritten in short sentences with the same numbers. Privacy fixes this build: the participant listed in both Pitt groups is no longer named, and the unpadded-id files are renamed  <- release/folds/README.md
+folds/README.md                                                          28753  copied, then rewritten in short sentences with the same numbers. Privacy fixes this build: the participant listed in both Pitt groups is no longer named, and the unpadded-id files are renamed  <- release/folds/README.md
 folds/adress2020_groupkfold5_mac.csv                                      2677  copied verbatim  <- release/folds/adress2020_groupkfold5_mac.csv
 folds/adress2020_groupkfold5_pod.csv                                      2677  copied verbatim  <- release/folds/adress2020_groupkfold5_pod.csv
 folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv                     2677  copied verbatim  <- release/folds/adress2020_groupkfold5_pod_seed0_UNVERIFIED.csv
@@ -382,18 +382,18 @@ folds/pitt_groupkfold5_pod_unpaddedids_seed2.csv                         20304  
 folds/pitt_groupkfold5_pod_unpaddedids_seed3.csv                         20304  copied verbatim, renamed so the name holds no speaker id or group  <- release/folds/ (the seed 3 file on unpadded Pitt ids)
 folds/pitt_groupkfold5_pod_unpaddedids_seed4.csv                         20304  copied verbatim, renamed so the name holds no speaker id or group  <- release/folds/ (the seed 4 file on unpadded Pitt ids)
 history/README.md                                                          348  written for this release: a note on what the folder holds
-history/speech-health/docs/CONFOUND_AUDIT.md                              7112  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
+history/speech-health/docs/CONFOUND_AUDIT.md                              7139  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564. Edited 8 Oct 2026: a person named in the last section is called an earlier lab pipeline.
 history/speech-health/docs/PROTOCOL.md                                    3511  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
-history/speech-health/docs/TEXT_FREE_PROTOCOL.md                          5762  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
+history/speech-health/docs/TEXT_FREE_PROTOCOL.md                          5727  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564. Edited 8 Oct 2026: the opening quote of a meeting is paraphrased.
 history/speech-health/docs/paper1/IEEEbib.bst                            17903  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/VERIFIED_NUMBERS.md                     6607  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564, then the dash in one line replaced by a comma
 history/speech-health/docs/paper1/paper1_draft.tex                       11935  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/paper1_spconf.pdf                     640844  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
-history/speech-health/docs/paper1/paper1_spconf.tex                      24165  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
+history/speech-health/docs/paper1/paper1_spconf.tex                      23990  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564. Edited 8 Oct 2026: two internal comment lines removed.
 history/speech-health/docs/paper1/paper1_v2.blg                            378  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/paper1_v2.log                          14285  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/paper1_v2.pdf                         662506  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
-history/speech-health/docs/paper1/paper1_v2.tex                          27844  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
+history/speech-health/docs/paper1/paper1_v2.tex                          27669  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564. Edited 8 Oct 2026: two internal comment lines removed.
 history/speech-health/docs/paper1/refs.bib                               12132  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/docs/paper1/spconf.sty                              8798  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
 history/speech-health/figures/paper1/ad_encoder_to_llm.pdf               23953  Paper 1 history, brought in unchanged from the authors' own commits in the paralinguistics/speech-health repository by merge cd8d564
@@ -2622,7 +2622,7 @@ scores/part17/T7b/pod_rerun_out/edaic_full_gap.csv                        1083  
 scores/part17/T7b/pod_rerun_out/edaic_full_oof_repeats.npz               30152  copied, arrays dropped on copy: label (clinical label)  <- release/edaic_rerun/part17/T7b/pod_rerun_out/edaic_full_oof_repeats.npz
 scores/part17/paper_vs_omni.csv                                         110295  copied, machine paths rewritten (x300)  <- release/edaic_rerun/part17/paper_vs_omni.csv
 scores/part17/part12_prep/handcheck_values.csv                           35273  copied, machine paths rewritten (x151)  <- release/edaic_rerun/part17/part12_prep/handcheck_values.csv
-scores/part17/part12_prep/pasted_tex_dryrun.tex                          41098  copied, wording edited on copy (6 lines)  <- release/edaic_rerun/part17/part12_prep/pasted_tex_dryrun.tex
+scores/part17/part12_prep/pasted_tex_dryrun.tex                          40923  copied, wording edited on copy (6 lines)  <- release/edaic_rerun/part17/part12_prep/pasted_tex_dryrun.tex. Edited 8 Oct 2026: two internal comment lines removed.
 scores/part17/part12_prep/red_spans_dryrun.csv                            7461  copied, machine paths rewritten (x16)  <- release/edaic_rerun/part17/part12_prep/red_spans_dryrun.csv
 scores/part17/part12_prep/red_spans_spec.csv                               756  copied, wording edited on copy (3 lines)  <- release/edaic_rerun/part17/part12_prep/red_spans_spec.csv
 scores/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_063842/added_vs_baseline.csv 21554  copied verbatim  <- release/edaic_rerun/part17/part12_prep/runs/AudioLLMHealthUtilityGap_20260923_063842/added_vs_baseline.csv
@@ -4839,4 +4839,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                167065356  4785 files
+TOTAL                                                                167066701  4785 files
