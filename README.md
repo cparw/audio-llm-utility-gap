@@ -162,6 +162,8 @@ the `label` column of the per-clip score files and manifests, the columns whose 
 `label` array of `scores/part10/pitt_enc_nested5_oof.npz` and `scores/part16/pod_sync/q3o_perp_cols.npz`, the
 `label` field of `scores/part22/p22_step2_truncation_proof.json`, and the label field of ten lines of
 `reports/PART5_interviewer_measure.txt`. Every id column and every score column is kept.
+On 8 October 2026 the earlier commits of this repository were rewritten the same way, so no commit holds the
+label. Their messages and dates are unchanged.
 
 To recompute an AUC, read the label from your own licensed copy of the corpus and join it on the id column:
 
@@ -1144,7 +1146,7 @@ figures/
   probe2/                     an earlier Figure 1 draft from the probe2 runs, made by scripts/probe2/make_fig1_v2.py
 folds/                        GroupKFold(5) speaker fold assignments, 64 csv files and README.md, plus 7 csv files in
                               folds/part20/ (section i)
-history/speech-health/        earlier project history from the development repository (merge cd8d564), kept for the
+history/speech-health/        earlier project history from the development repository (merge af5aa36), kept for the
                               record and superseded. See history/README.md
 lookup/
   master_lookup.csv           243 rows after the header: model, dataset, stream, AUC, n, estimator and source path.
