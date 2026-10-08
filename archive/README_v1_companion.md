@@ -25,15 +25,15 @@ Companion page for the paper. It holds the figures, the tables as CSV, and the n
 
 **Figure 1 of the paper.** (a) Where we read the model: a linear probe on every encoder layer, every language-model stage at the audio-token positions, and the hidden state the answer is read from; the transcript-only control feeds the words with no audio. (b) Qwen2-Audio on the Pitt Alzheimer's segments: the probe stays above 0.75 at every depth and reaches 0.80 at the answer state, while the model's own answer scores 0.62 and the transcript alone 0.68.
 
-<img src="../figures/fig1_gap.png" width="420">
+<img src="https://raw.githubusercontent.com/cparw/audio-llm-utility-gap/9971d13/figures/fig1_gap.png" width="420">
 
 **Table 1 as a picture.** Probe against the model's own answer on every dataset. The gap is widest on Parkinson's read speech, where every speaker reads the same passage and the words carry nothing, narrower on Alzheimer's, and absent on depression.
 
-<img src="../figures/probe_vs_answer.png" width="720">
+<img src="https://raw.githubusercontent.com/cparw/audio-llm-utility-gap/9971d13/figures/probe_vs_answer.png" width="720">
 
 **Table 2 as a picture.** The same nine models on depression segments where the words agree with the label and where they oppose it. A model that listened would not invert.
 
-<img src="../figures/conflict_dumbbell.png" width="620">
+<img src="https://raw.githubusercontent.com/cparw/audio-llm-utility-gap/9971d13/figures/conflict_dumbbell.png" width="620">
 
 ## 1. Interventions on the conflict sets
 
@@ -143,7 +143,7 @@ Probes on the language model's stages at the audio-token positions: Pitt rises t
 ## Repository layout
 
 ```
-figures/   fig1_gap.pdf and .png (Figure 1 of the paper), probe_vs_answer.png, conflict_dumbbell.png
+figures/   fig1_gap.pdf and .png (Figure 1 of the paper), probe_vs_answer.png, conflict_dumbbell.png (at commit 9971d13)
 results/   table1_main.csv, table2_conflict.csv, table3_cross_dataset.csv, interventions.csv
 code/ (now scripts/)   the scripts that produced the numbers, with a README mapping each script to the table or figure it feeds
 ```

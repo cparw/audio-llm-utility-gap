@@ -1275,7 +1275,7 @@ Status now: fixed in the paper. Quote: "We use the DementiaBank Pitt cookie-thef
 
 - 124. [PART17] [MEDIUM] T5 (2026-09-23 03:59): make_fig1_v5.py does not exist on disk (Desktop, release, paper1_final, public repo clones searched). The newest figure script is edaic_rerun/make_fig1_v4.py. It wrote paper1_final/figures/fig1_gap.pdf (E-DAIC variant full, answer 0.8285) at 22:25 on 22 Sep, and fig1_gray_v5-1.png is the grayscale render of that output. Which E-DAIC variant sits in Overleaf cannot be checked from disk. T5 used make_fig1_v4.py.
 
-  Status now: released here. Files: figures/drafts/fig1_gap_overleaf_2325Z.pdf, scripts/make_fig1_v4.py. Per the authors, figures/drafts/fig1_gap_overleaf_2325Z.pdf is byte identical to the 23:23 UTC Overleaf figure and comes from make_fig1_v4.py. "v5" was the fifth render of that script. That figure has three panels, so it matches scripts/fig_options.py option C (plt.subplots(3, 1), line 67), not the one-axes make_fig1_v4.py (line 95).
+  Status now: released here. Files: figures/drafts/fig1_gap_overleaf_2325Z.pdf (removed from the tree on 8 October 2026, at commit 9971d13), scripts/make_fig1_v4.py. Per the authors, figures/drafts/fig1_gap_overleaf_2325Z.pdf is byte identical to the 23:23 UTC Overleaf figure and comes from make_fig1_v4.py. "v5" was the fifth render of that script. That figure has three panels, so it matches scripts/fig_options.py option C (plt.subplots(3, 1), line 67), not the one-axes make_fig1_v4.py (line 95).
 
 ## 125. [HIGH][PART17] G-Drive paths relocated on 2026-09-23, every `gdrive/...` path is now stale
 - The folder moved to `gdrive/` (the authors moved it for Mac disk space). exFAT has no symlinks, so the old path cannot be aliased.

@@ -64,10 +64,10 @@ path                                                                     bytes  
 .gitattributes                                                             128  written for this release: keeps the TeX files of history/ and scores/part17/part12_prep/ out of the GitHub language count
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 CITATION.cff                                                              1572  written for this release: citation metadata of the paper, an ICASSP 2027 submission
-DISCREPANCIES.md                                                        211201  written for this release
-MANIFEST.txt                                                            964993  this file
-README.md                                                               191572  written for this release
-archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit d5bcc59). A first line now marks it as superseded
+DISCREPANCIES.md                                                        211262  written for this release
+MANIFEST.txt                                                            960511  this file
+README.md                                                               196344  written for this release
+archive/README_v1_companion.md                                           12128  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit d5bcc59). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
 checks/accel_24sep/af3/af3_part3_vs_part10.py                             2557  copied, machine paths rewritten (x2)  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.py
@@ -271,52 +271,22 @@ docs/.nojekyll                                                               0  
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
 docs/data/explorer_data.json                                             19056  aggregate numbers drawn by docs/explorer.html, written for this release
 docs/explorer.html                                                       34890  interactive explorer page, written for this release
-docs/index.html                                                          57728  project page, written for this release
-figures/checks/overleaf_vs_repo/fig_overleaf-1.png                       17699  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_overleaf-1.png
-figures/checks/overleaf_vs_repo/fig_repo-1.png                           14837  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_repo-1.png
-figures/checks/repro_option_c/compare_repro_overleaf_diff.png            76275  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/compare_repro_overleaf_diff.png
-figures/checks/repro_option_c/overleaf-1.png                             39398  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/overleaf-1.png
-figures/checks/repro_option_c/repro-1.png                                39337  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/repro-1.png
-figures/checks/repro_option_c/repro_C.pdf                                44475  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/repro_C.pdf
-figures/conflict_dumbbell.png                                            95366  figure from the first release, kept unchanged (commit d8a6045)
-figures/drafts/fig1_gap1.pdf                                             15947  copied verbatim  <- authors-drive/paper1_submission_23sep/final_overleaf_2325Z/figures/fig1_gap1.pdf
-figures/drafts/fig1_gap_optionA.pdf                                      15889  copied verbatim  <- authors-machine/fig1_gap_optionA.pdf
-figures/drafts/fig1_gap_optionB.pdf                                      16962  copied verbatim  <- authors-machine/fig1_gap_optionB.pdf
-figures/drafts/fig1_gap_overleaf_2325Z.pdf                               16467  copied verbatim, Figure 1 of the 23:23 UTC draft (moved from figures/fig1_gap.pdf), made by scripts/fig_options.py C  <- authors-drive/paper1_submission_23sep/final_overleaf_2325Z/figures/fig1_gap.pdf (the figure the final tex includes, same bytes)
-figures/drafts/fig1_gap_overleaf_2325Z.png                              109160  400 dpi render of the 23:23 draft figure, moved from docs/assets/fig1_gap.png
-figures/drafts/fig1_gap_qwen2audio_neurovoz.pdf                          25446  copied verbatim  <- authors-machine/fig1_gap .pdf (file renamed on copy)
-figures/drafts/fig1old_gap.pdf                                           39349  copied verbatim  <- authors-drive/paper1_submission_23sep/final_overleaf_2325Z/figures/fig1old_gap.pdf
-figures/drafts/qwen2audio_gap.pdf                                        39360  copied verbatim  <- authors-drive/paper1_submission_23sep/final_overleaf_2325Z/figures/qwen2audio_gap.pdf
-figures/fig1_9pt/fig1_gap_9pt.pdf                                        44500  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/tex/fig/fig1_gap_9pt.pdf
-figures/fig1_9pt/fig1_gap_9pt_render.png                                 58473  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/tex/fig/fig1_gap_9pt_render.png
-figures/fig1_9pt/fig1_gap_render.png                                     58864  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/tex/fig/fig1_gap_render.png
+docs/index.html                                                          57831  project page, written for this release
 figures/fig1_gap.pdf                                                     17801  copied verbatim, Figure 1 as submitted to ICASSP 2027 (md5 a102c1a8872ba59fe73dd58700aae142)  <- figures/fig1_gap.pdf of the submitted source
-figures/fig1_gap.png                                                     91015  figure from the first release, kept unchanged (commit d8a6045)
-figures/fig1_gap_300.pdf                                                 32637  copied verbatim  <- authors-machine/paper1_final/figures/fig1_gap_300.pdf
-figures/fig1_gap_300.png                                                 78105  copied verbatim  <- authors-machine/paper1_final/figures/fig1_gap_300.png
-figures/fig1_gap_grayscale_check.png                                     65779  copied verbatim  <- release/edaic_rerun/fig1_gray_v5-1.png
-figures/fig1_gap_mid.pdf                                                 32627  copied verbatim  <- authors-machine/paper1_final/figures/fig1_gap_mid.pdf
-figures/fig1_gap_mid.png                                                 77456  copied verbatim  <- authors-machine/paper1_final/figures/fig1_gap_mid.png
-figures/fig1_gap_v2_grayscale_check.png                                  76322  copied verbatim  <- release/edaic_rerun/fig1_gap_GRAYCHECK-1.png (file renamed on copy)
-figures/fig1_gap_v4_draft_grayscale_check.png                            65647  copied verbatim  <- release/edaic_rerun/fig1_gray_v4-1.png (file renamed on copy)
-figures/fig1_gap_v4_full.png                                             79599  copied verbatim  <- authors-machine/paper1_final/figures/fig1_gap.png (file renamed on copy)
-figures/fig1_gap_wholeinterview.pdf                                      16480  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/fig1_gap_wholeinterview.pdf
-figures/fig1_gap_wholeinterview.png                                      96926  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/fig1_gap_wholeinterview.png
-figures/fig1_options/optA_shaded_gap.pdf                                 30374  copied verbatim  <- release/edaic_rerun/fig_options/optA_shaded_gap.pdf
-figures/fig1_options/optA_shaded_gap.png                                 73154  copied verbatim  <- release/edaic_rerun/fig_options/optA_shaded_gap.png
-figures/fig1_options/optB_stacked.pdf                                    23953  copied verbatim  <- release/edaic_rerun/fig_options/optB_stacked.pdf
-figures/fig1_options/optB_stacked.png                                    60469  copied verbatim  <- release/edaic_rerun/fig_options/optB_stacked.png
-figures/fig1_options/optC_gap_curve.pdf                                  29085  copied verbatim  <- release/edaic_rerun/fig_options/optC_gap_curve.pdf
-figures/fig1_options/optC_gap_curve.png                                  62915  copied verbatim  <- release/edaic_rerun/fig_options/optC_gap_curve.png
-figures/fig1_options/optD_dumbbell.pdf                                   26990  copied verbatim  <- release/edaic_rerun/fig_options/optD_dumbbell.pdf
-figures/fig1_options/optD_dumbbell.png                                   39931  copied verbatim  <- release/edaic_rerun/fig_options/optD_dumbbell.png
-figures/part24/fig1_gap_whole.pdf                                        16511  copied verbatim  <- authors-drive/release_from_mac/scores/part24/fig/fig1_gap_whole.pdf
-figures/part24/fig1_gap_whole.png                                        60271  copied verbatim  <- authors-drive/release_from_mac/scores/part24/fig/fig1_gap_whole.png
-figures/part24/fig1_gap_whole_v4layout.pdf                               12033  copied verbatim  <- authors-drive/release_from_mac/scores/part24/fig/fig1_gap_whole_v4layout.pdf
-figures/part24/fig1_gap_whole_v4layout.png                               49304  copied verbatim  <- authors-drive/release_from_mac/scores/part24/fig/fig1_gap_whole_v4layout.png
-figures/probe2/fig1_gap_v2.pdf                                           18568  copied verbatim  <- authors-drive/paper1_local_runs/probe2/fig1_gap_v2.pdf
-figures/probe2/fig1_gap_v2.png                                           59923  copied verbatim  <- authors-drive/paper1_local_runs/probe2/fig1_gap_v2.png
-figures/probe_vs_answer.png                                              71821  figure from the first release, kept unchanged (commit d8a6045)
+figures/page/conflict-edaic-dark.png                                     96429  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
+figures/page/conflict-edaic-light.png                                    96714  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
+figures/page/depression-dark.png                                        135641  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
+figures/page/depression-light.png                                       136107  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
+figures/page/finetune-dark.png                                          123214  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
+figures/page/finetune-light.png                                         123320  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
+figures/page/gap-dark.png                                                85094  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
+figures/page/gap-light.png                                               85180  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
+figures/page/headline-dark.png                                           81509  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
+figures/page/headline-light.png                                          80681  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
+figures/page/layers-dark.png                                            145318  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
+figures/page/layers-light.png                                           146354  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
+figures/page/pitt-dark.png                                              108664  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
+figures/page/pitt-light.png                                             108736  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
 folds/README.md                                                          28753  copied, then rewritten in short sentences with the same numbers. Privacy fixes this build: the participant listed in both Pitt groups is no longer named, and the unpadded-id files are renamed  <- release/folds/README.md
 folds/adress2020_groupkfold5_mac.csv                                      2677  copied verbatim  <- release/folds/adress2020_groupkfold5_mac.csv
 folds/adress2020_groupkfold5_pod.csv                                      2677  copied verbatim  <- release/folds/adress2020_groupkfold5_pod.csv
@@ -4870,4 +4840,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                167348884  4808 files
+TOTAL                                                                165233860  4778 files
