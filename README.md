@@ -29,8 +29,8 @@ panel prints Δ, the nested encoder probe minus the zero-shot answer.
 **Folder map.**
 
 ```
-scores/         per-clip score files with sidecar json, one folder per run, clinical label dropped
-lookup/         master_lookup.csv: model, dataset, stream, AUC, n, estimator and source of each cell
+scores/         per-clip scores with sidecar json, one folder per run, label column dropped
+lookup/         master_lookup.csv: each cell with its AUC, n, estimator and source file
 figures/        Figure 1 as submitted (fig1_gap.pdf), earlier drafts in figures/drafts/
 scripts/        the scripts behind the released numbers
 folds/          GroupKFold(5) speaker fold assignments (section i)
@@ -38,8 +38,13 @@ manifests/      segment lists and window cut points, speech and clinical columns
 prompts/        prompts.json with part of the prompt strings; section h lists more
 reports/        run reports, logs and checks
 docs/           the project page and the interactive explorer
-checks/, history/, results/, summary/, archive/   earlier checks and drafts, kept for the record
-DISCREPANCIES.md, MANIFEST.txt                    the audit log, and every file with its size and origin
+checks/         earlier checks of the paper text, fonts and page limit
+history/        earlier project history, kept for the record
+results/        tables of the 14 September draft, kept for the record
+summary/        a 23 September snapshot of every value, kept for the record
+archive/        the companion page of the first README
+DISCREPANCIES.md  the audit log: every issue found and its status
+MANIFEST.txt      every released file with its size and origin
 ```
 
 **How to check one number.**
@@ -249,7 +254,7 @@ are listed below as the first 300 s.
 The paired differences are against the zero-shot answer of the same run, 0.8366. The change of the answer from the
 first 300 s, +0.0088, is not significant. Files: `A2_edaic_whole_zeroshot_perclip.csv` in `part23/A/` and
 `A3_edaic_whole_meanof5_perclip.csv` in `part23/pull/p23-a-probes/p23a/out/`, checked in
-`part23/verify/PART23_VERIFIED.tsv` (authors' machine paths; label-free copies of the two per-clip files:
+`scores/part23/verify/PART23_VERIFIED.tsv` (the two per-clip files are authors' machine paths; label-free copies:
 `scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv`, `scores/part23/A/A3_edaic_whole_meanof5_perclip.csv`),
 and recomputed again for this version (rows 236 to 240
 of `lookup/master_lookup.csv`). The per-layer curves of this run are in `scores/part23/`.
@@ -353,7 +358,7 @@ Notes on Table 1.
   the zero-shot answer 0.8366 the paired difference is +0.0223 [-0.0064, 0.0547], so the fine-tune does not move the
   answer. No fold stopped answering (median answer mass 0.9934 or more in every fold). A second seed on all five
   folds gives 0.8184 [0.7496, 0.8758], paired -0.0182 [-0.0519, 0.0139] (row 244 of `lookup/master_lookup.csv`).
-  Both runs are checked in `part24/verify/FT24_VERIFIED.tsv` (authors' machine path) and were recomputed again for
+  Both runs are checked in `scores/part24/verify/FT24_VERIFIED.tsv` and were recomputed again for
   this version.
 - Earlier E-DAIC fine-tunes, not used. The run in earlier copies of the paper, 0.6421, heard only the first 30 s of
   each window: the recipe cut every clip at 30 s (`scripts/core/sft_projector.py`, line 59, `x = x[:16000 * 30]`,
@@ -518,7 +523,7 @@ printed number is kept. NOTE means the number matches, with a caveat given in th
 | 71 | a TF-IDF logistic regression on the transcripts reaches 0.43 to 0.62 on the Parkinson's sets, 0.68 on the E-DAIC transcripts and 0.84 to 0.93 on the Alzheimer's sets | TF-IDF logistic regression: MDVR-KCL 0.4315, NeuroVoz 0.5814, PC-GITA 0.6196, E-DAIC whole transcript 0.6778 (first 30 s 0.4844), Pitt 0.8353, ADReSSo 0.8471, ADReSS-2020 0.9254 | `scores/part20/POD6/A_language_saliency/A_tfidf_<dataset>_oof.csv` | speaker-disjoint folds | MATCH. On the read Parkinson's sets the text is ASR output of fixed words, so the signal there is ASR error (`DISCREPANCIES.md`, item 149) |
 | 73 | read speech tasks: PC-GITA ten sentences and one read text, 1100 clips; NeuroVoz twelve isolated words, 1270 clips from 107 speakers; MDVR-KCL 37 speakers, most reading one of two passages | PC-GITA 1100 clips from 100 speakers (11 each). NeuroVoz 1270 clips from 107 speakers. MDVR-KCL 37 speakers, 32 of them reading one of the two passages | `scores/part17/T5_zeroshot_perclip.csv`, `scores/part16/M/M11_kcl_wer.csv` | clip counts, passage classification | MATCH |
 | 75 | E-DAIC, 275 participants | 275 clips, 275 speakers | `scores/part16/EDAICFULL/edaic_full_perclip.csv` | counts | MATCH |
-| 75 | the model is fed by the whole interview, with interviewer turns removed and capped at 15 minutes | participant turns joined in order, capped at 900 s (89 windows capped, up to 22,500 audio tokens), processor cut lifted. With the default cut, 217 of 275 windows would be cut at 300 s | `manifests/edaic_windows_full.csv`, `scores/part22/P22_step1_processor_config.md`, `scores/part22/p22_step2_truncation_proof.json`, `part23/A/A1_edaic_whole_audiotok.csv` (authors' machine path) | window | NOTE: the turns come from transcript rows joined in file order (audit note 4) |
+| 75 | the model is fed by the whole interview, with interviewer turns removed and capped at 15 minutes | participant turns joined in order, capped at 900 s (89 windows capped, up to 22,500 audio tokens), processor cut lifted. With the default cut, 217 of 275 windows would be cut at 300 s | `manifests/edaic_windows_full.csv`, `scores/part22/P22_step1_processor_config.md`, `scores/part22/p22_step2_truncation_proof.json`, `scores/part23/A/A1_edaic_whole_audiotok.csv` | window | NOTE: the turns come from transcript rows joined in file order (audit note 4) |
 | 75 | the transcript condition uses the whole transcript | transcript of the same window, 0.8230 | `release/overnight2/text_new/o25_edaicfull_text.csv` (authors' machine path) | zero shot on the transcript | MATCH |
 | 77 | Pitt 468 segments from 227 participants; ADReSSo 237 speakers; ADReSS-2020 108 training and 48 test recordings | 468 segments, 227 participants, 228 speaker labels; 237; 108 and 48 | `manifests/pitt_conflict_manifest_468.csv`, `release/edaic_rerun/part17/part12_prep/handcheck_values.csv` (authors' machine path) | counts | MATCH |
 | 77 | models hear the first 30 s, so the conflict test runs on the same clips for all six models | 30 s cap in the zero-shot scorers. Table 2 prints Audio Flamingo 2 on the first 30 s of each window. Audio Flamingo 3, the part10 copy behind Table 2, cut every window to its first 30 s before the processor (750 audio tokens) | `scripts/core/extract_probe_layers.py`, section e | design | MATCH |
@@ -539,7 +544,7 @@ printed number is kept. NOTE means the number matches, with a caveat given in th
 | 95 | 95 percent intervals from 2000 speaker draws, one draw per replicate for paired differences; all 24 differences called significant in this paper survive Holm correction within their family (gaps, arms, fine-tuning, controls) | 2000 speaker draws, `numpy.random.default_rng(0)`, percentiles 2.5 and 97.5. `B_holm.tsv` has 41 rows. The 28 with role claimed all survive: 24 in the four families of the sentence (GAPS 7, ARMS 9, FINE TUNE 6, CONTROLS 2) and 4 E-DAIC conflict arms tested against chance (EXTRA CHANCE) | every sidecar json, `scores/part25/B/B_holm.tsv` | design | MATCH for the 24 claimed rows of the four named families in `scores/part25/B/B_holm.tsv` |
 | 132 | on PC-GITA and NeuroVoz the transcript sits near chance; on MDVR-KCL it is above chance | transcript PC-GITA 0.5246, NeuroVoz 0.5371, MDVR-KCL 0.7634 [0.5936, 0.9118] | `lookup/master_lookup.csv`, `scores/part16/M/M10_kcl_transcript.csv` | zero shot on the transcript | MATCH |
 | 132 | on E-DAIC the audio answer on the whole interview is within 0.02 of the answer from the whole transcript | audio 0.8366, transcript 0.8230 | row 236 of `lookup/master_lookup.csv`, `release/overnight2/text_new/o25_edaicfull_text.csv` (authors' machine path) | zero shot | MATCH on the values. No paired interval on the whole window is in this release. On the first 300 s, transcript minus audio is -0.0055 [-0.0566, 0.0431] |
-| 132 | Qwen3-Omni, which also hears the interviews whole, 0.87; Audio Flamingo 3, which hears the first ten minutes, 0.86; Qwen2-Audio, which hears 30 s, 0.63 | 0.8741 (no window cut), 0.8565 (136 of 275 windows cut at 600 s), 0.6330 | `scores/edaic_windows/q3o_full_zeroshot_scores.csv`, `scores/edaic_windows/af3_full.csv`, `scores/edaic_windows/q2a_full_zeroshot_scores.csv`, `part23/C/C_trunc_275_derived.csv` (authors' machine path) | zero shot | MATCH |
+| 132 | Qwen3-Omni, which also hears the interviews whole, 0.87; Audio Flamingo 3, which hears the first ten minutes, 0.86; Qwen2-Audio, which hears 30 s, 0.63 | 0.8741 (no window cut), 0.8565 (136 of 275 windows cut at 600 s), 0.6330 | `scores/edaic_windows/q3o_full_zeroshot_scores.csv`, `scores/edaic_windows/af3_full.csv`, `scores/edaic_windows/q2a_full_zeroshot_scores.csv`, `scores/part23/C/C_trunc_275_derived.csv` | zero shot | MATCH |
 | 132 | the E-DAIC answer rises with the audio it hears: 0.66 on the first 30 s, 0.72 on a middle 30 s, 0.81 on a middle five minutes and 0.84 on the whole interview, while the encoder probe never exceeds 0.63 on any window | answer 0.6620, 0.7205, 0.8122, 0.8366. Encoder probe, mean of five: 0.5966, 0.5770, 0.6168, 0.5884 (first 300 s) and 0.5981 (whole) | `lookup/new_results_edaic_windows.csv`, `scores/edaic_windows/`, `part23/A/A2_edaic_whole_zeroshot_perclip.csv`, `part23/pull/p23-a-probes/p23a/out/A3_edaic_whole_meanof5_perclip.csv` (authors' machine paths; label-free copies: `scores/part23/A/A2_edaic_whole_zeroshot_perclip.csv`, `scores/part23/A/A3_edaic_whole_meanof5_perclip.csv`), rows 236 to 240 of `lookup/master_lookup.csv` | zero shot, mean of five per-repeat AUCs | MATCH. The single-split per-layer curves peak higher (0.6875 on the whole interview) |
 | 132 | the encoder probe, its layer chosen inside the folds, never exceeds 0.63 on any window | nested encoder probe, mean of five: first 30 s 0.5966, middle 30 s 0.5770, middle 300 s 0.6168, first 300 s 0.5884, whole interview 0.5981. The single-split per-layer curves, with no layer chosen inside the folds, peak higher (0.6875 on the whole interview) | `lookup/new_results_edaic_windows.csv`, `lookup/master_lookup.csv`, `scores/part23/o25_whole_encoder_perlayer.csv` | mean of five per-repeat AUCs, layer chosen by an inner GroupKFold(4) | MATCH |
 | 141 | encoder probe 0.75 to 0.92 on the Parkinson's sets and 0.77 to 0.88 on the Alzheimer's sets | MDVR-KCL 0.7506, PC-GITA 0.8941, NeuroVoz 0.9213; Pitt 0.7706, ADReSS-2020 0.8043, ADReSSo 0.8752 | as in the line 25 row | mean of five per-repeat AUCs, nested | MATCH |
@@ -632,7 +637,7 @@ commented them out. Their values stay here. Rows marked 23:23 copy come from the
 | a projector trained on PC-GITA lifts NeuroVoz from 0.70 to 0.74, and one trained on NeuroVoz lifts PC-GITA from 0.56 to 0.68 | 0.6951 to 0.7375, and 0.5635 to 0.6761 | `release/overnight2/part6/transfer_pcgita_transfer.json`, `release/overnight2/part6/transfer_neurovoz_transfer.json` (authors' machine paths) |
 | Figure 1 answer lines 0.5635, 0.6578 and 0.8285 (labelled 0.83), E-DAIC panel on the first 300 s run (23:23 copy) | 0.8285 | `figures/drafts/fig1_gap_overleaf_2325Z.pdf`, `scores/edaic_windows/o25_full_encoder_perlayer.csv`, `scores/edaic_windows/o25_full_llm_perlayer.csv` |
 | E-DAIC, 275 participants, the released label is stricter than PHQ-8 of 10 or more for 20 participants (23:23 copy, line 81) | 275 clips, 275 speakers, 20 participants whose released label differs from PHQ-8 of 10 or more (counts, MATCH) | `scores/part16/EDAICFULL/edaic_full_perclip.csv`, `DISCREPANCIES.md` item 112 |
-| the model hears the participant's whole interview, interviewer turns removed and capped at 15 minutes for the 89 longest, with the processor's default input limit lifted (23:23 copy, line 81) | participant turns joined in order, capped at 900 s (89 windows capped, up to 22,500 audio tokens), processor cut lifted. With the default cut, 217 of 275 windows would be cut at 300 s (window, NOTE: the turns come from transcript rows joined in file order (audit note 4)) | `manifests/edaic_windows_full.csv`, `scores/part22/P22_step1_processor_config.md`, `scores/part22/p22_step2_truncation_proof.json`, `part23/A/A1_edaic_whole_audiotok.csv` (authors' machine path) |
+| the model hears the participant's whole interview, interviewer turns removed and capped at 15 minutes for the 89 longest, with the processor's default input limit lifted (23:23 copy, line 81) | participant turns joined in order, capped at 900 s (89 windows capped, up to 22,500 audio tokens), processor cut lifted. With the default cut, 217 of 275 windows would be cut at 300 s (window, NOTE: the turns come from transcript rows joined in file order (audit note 4)) | `manifests/edaic_windows_full.csv`, `scores/part22/P22_step1_processor_config.md`, `scores/part22/p22_step2_truncation_proof.json`, `scores/part23/A/A1_edaic_whole_audiotok.csv` |
 | Pitt 468 segments from 227 participants (one grouped under two labels); ADReSSo 237 speakers; ADReSS-2020 108 training and 48 test recordings (23:23 copy, line 83) | 468 segments, 227 participants, 228 speaker labels; 237; 108 and 48 (counts, MATCH) | `manifests/pitt_conflict_manifest_468.csv`, `release/edaic_rerun/part17/part12_prep/handcheck_values.csv` (authors' machine path) |
 | 95 percent intervals from 2000 speaker draws, one draw per replicate for paired differences, no correction for multiple comparisons (23:23 copy, line 101) | 2000 speaker draws, `numpy.random.default_rng(0)`, percentiles 2.5 and 97.5 (design, MATCH) | every sidecar json |
 | all 708 Pitt segments: encoder probe 0.80, zero-shot answer 0.67 (23:23 copy, line 149) | 0.7968 and 0.6695 (mean of five, zero shot, MATCH) | `scores/pitt_all/o25_pitt_all_nested_repeats.json`, `scores/pitt_all/o25_pitt_all_zeroshot_scores.csv` |
@@ -945,7 +950,8 @@ the release. They are:
   which also name the column of each file that uses it).
 
 No prompt contains participant speech. The transcript conditions place the transcript before the prompt at run time
-(`scripts/core/text_score.py`, line 47).
+(`scripts/core/text_score.py`, line 47). An earlier version of this README said after the prompt; line 47 puts the
+transcript first.
 Those transcripts are not released.
 
 ---

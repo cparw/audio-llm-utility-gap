@@ -43,7 +43,7 @@ The Qwen3-Omni part16 POD3 Pitt run wrote the Pitt ids without zero padding (the
 
 **`pitt_groupkfold5_mac.csv`** (Pitt. 468 clips, 228 speaker labels, fold sizes 94/94/94/93/93). CONFIRMED. sklearn GroupKFold(5) as installed on the Mac.
 - Reproduces `q2a_probe2_pitt` (Qwen2-Audio, enc/llm/ans). Max abs diff 1.11e-16. Saved layers re-derived.
-- Reproduces `q2a_probe2_podruns_pitt` (Qwen2-Audio, enc). Max abs diff 1.11e-16. Saved layers re-derived. This pod_runs file is a byte copy of the Mac output probe2/pitt_enc_nested_oof.csv, not a pod result.
+- Reproduces `q2a_probe2_podruns_pitt` (Qwen2-Audio, enc). Max abs diff 1.11e-16. Saved layers re-derived. This pod_runs file is a byte copy of the Mac output gdrive/probe2/pitt_enc_nested_oof.csv (authors' machine path), not a pod result.
 - Reproduces `egemaps_pitt` (eGeMAPS baseline). Max abs diff 1.11e-16.
 - The participant listed twice: folds 1 and 3.
 
