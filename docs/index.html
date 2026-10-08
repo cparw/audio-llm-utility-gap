@@ -164,7 +164,8 @@ footer a:hover{text-decoration:underline}
     and language model probes read lower, 0.60 and 0.74. Here the words carry the task.</span></div>
 </div>
 <p class="small">Every score on this page is AUC. 0.5 is chance and 1.0 is perfect. Intervals are 95 percent,
-from resampling speakers.</p>
+from resampling speakers. All 41 differences the paper calls significant survive Holm correction within their
+family of claimed tests.</p>
 
 <section id="gap">
 <h2>On Parkinson's and Alzheimer's speech, the encoder holds more than the answer shows</h2>
@@ -178,6 +179,9 @@ close to call on MDVR-KCL. We did not compute intervals for these baseline compa
 <p>On PC-GITA the probe reads more than the recording setup. After we normalised loudness and noise floor,
 recording features alone fell to 0.56, and the probe still read 0.83 against an answer of 0.57. Qwen3-Omni
 shows the same gap on PC-GITA, 0.90 against 0.60.</p>
+<p>A Qwen2-Audio encoder probe trained on PC-GITA and applied unchanged to MDVR-KCL reaches 0.88, 0.29 above
+that model's own answer there, 0.59 (95 percent interval of the difference 0.09 to 0.50). Trained on NeuroVoz
+instead, it reaches 0.77, 0.18 above the answer, but that interval, -0.04 to 0.40, includes zero.</p>
 
 <figure>
   <div class="key">
@@ -243,6 +247,10 @@ answer is 0.83 and the probes 0.59 and 0.70. The answer rises with the audio it 
 0.84 on the whole interview.</p>
 <p>Qwen3-Omni, which also hears the whole interview, reaches 0.87, and Audio Flamingo 3, which hears the first
 ten minutes, 0.86. With 275 speakers, the probes may not have enough data.</p>
+<p>We also low-passed the whole interviews at 400 Hz, which removes most of the words for Whisper: on 20 of the
+interviews, its word error rate against its own transcript of the unfiltered audio has a median of 0.95. Yet the
+answer still reaches 0.76, a paired change of -0.08 (95 percent interval -0.14 to -0.01). The language model
+probe reads 0.66 and the encoder probe stays at 0.60.</p>
 
 <figure>
   <div class="key">

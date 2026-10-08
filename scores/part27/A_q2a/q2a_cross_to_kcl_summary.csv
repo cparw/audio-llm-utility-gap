@@ -1,0 +1,6 @@
+direction,variant,layer,kcl_auc,auc_lo,auc_hi,diff_vs_zeroshot,diff_lo,diff_hi,frac_draws_diff_le_0
+zero-shot,answer,,0.5923,0.3939,0.7768,,,,
+pcgita->kcl,script,16,0.8810,0.7545,0.9735,0.2887,0.0865,0.4963,0.0015
+pcgita->kcl,nested,16,0.8810,0.7545,0.9735,0.2887,0.0865,0.4963,0.0015
+neurovoz->kcl,script,20,0.7738,0.6059,0.9121,0.1815,-0.0380,0.3963,0.0435
+neurovoz->kcl,nested,20,0.7738,0.6059,0.9121,0.1815,-0.0380,0.3963,0.0435

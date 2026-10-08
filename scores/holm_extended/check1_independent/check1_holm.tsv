@@ -1,0 +1,42 @@
+family	id	claim	value	lo	hi	p	usable	n_le0	n_ge0	src	sha_ok	B_holm_p	regen_maxabs	same_idx	holm_p	survives	m	hx_id
+GAPS	G_pcgita	encoder probe (mean of five) minus zero-shot answer, PC-GITA	0.330650	0.249800	0.408780	0.001000	2000	0	2000	saved draws part25/B	True	0.001000			0.021989	yes	22	G_pcgita
+GAPS	G_neurovoz	encoder probe (mean of five) minus zero-shot answer, NeuroVoz	0.226195	0.173496	0.285057	0.001000	2000	0	2000	saved draws part25/B	True	0.001000			0.021989	yes	22	G_neurovoz
+GAPS	G_adresso	encoder probe (mean of five) minus zero-shot answer, ADReSSo	0.260178	0.175509	0.339566	0.001000	2000	0	2000	saved draws part25/B	True	0.001000			0.021989	yes	22	G_adresso
+GAPS	G_adress2020	encoder probe (mean of five) minus zero-shot answer, ADReSS-2020	0.180178	0.076603	0.280467	0.001000	2000	0	2000	saved draws part25/B	True	0.001000			0.021989	yes	22	G_adress2020
+GAPS	G_pitt	encoder probe (mean of five) minus zero-shot answer, Pitt	0.112801	0.045501	0.176810	0.002999	2000	2	1998	saved draws part25/B	True	0.003000			0.023988	yes	22	G_pitt
+GAPS	G_edaic_llm	language model probe (mean of five) minus zero-shot answer, E-DAIC whole interview	-0.092881	-0.160934	-0.025736	0.007996	2000	1993	7	saved draws part25/B	True	0.008000			0.023988	yes	22	G_edaic_llm
+GAPS	G_edaic_enc	encoder probe (mean of five) minus zero-shot answer, E-DAIC whole interview	-0.238480	-0.324362	-0.150470	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.021989	yes	22	G_edaic_enc
+ARMS	R_edaic_q2a	conflict minus agreement arm AUC, E-DAIC, Qwen2-Audio	-0.732819	-0.777997	-0.683721	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.008996	yes	9	R_edaic_q2a
+ARMS	R_edaic_o25	conflict minus agreement arm AUC, E-DAIC, Qwen2.5-Omni	-0.742875	-0.786894	-0.694448	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.008996	yes	9	R_edaic_o25
+ARMS	R_edaic_q3o	conflict minus agreement arm AUC, E-DAIC, Qwen3-Omni	-0.671932	-0.726621	-0.610530	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.008996	yes	9	R_edaic_q3o
+ARMS	R_edaic_af2	conflict minus agreement arm AUC, E-DAIC, Audio Flamingo 2	-0.101125	-0.164727	-0.038384	0.003998	2000	1997	3	saved draws part25/B	True	0.004000			0.008996	yes	9	R_edaic_af2
+ARMS	R_edaic_af3	conflict minus agreement arm AUC, E-DAIC, Audio Flamingo 3	-0.418954	-0.487757	-0.346139	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.008996	yes	9	R_edaic_af3
+ARMS	R_edaic_kimi	conflict minus agreement arm AUC, E-DAIC, Kimi-Audio	-0.367780	-0.439439	-0.302007	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.008996	yes	9	R_edaic_kimi
+ARMS	R_pitt_q2a	conflict minus agreement arm AUC, Pitt, Qwen2-Audio	-0.285251	-0.394969	-0.148477	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.008996	yes	9	R_pitt_q2a
+ARMS	R_pitt_o25	conflict minus agreement arm AUC, Pitt, Qwen2.5-Omni	-0.173141	-0.295810	-0.039184	0.011994	2000	1989	11	saved draws part25/B	True	0.012000			0.011994	yes	9	R_pitt_o25
+ARMS	R_pitt_q3o	conflict minus agreement arm AUC, Pitt, Qwen3-Omni	-0.216529	-0.324226	-0.105171	0.001000	2000	2000	0	saved draws part25/B	True	0.001000			0.008996	yes	9	R_pitt_q3o
+FINE TUNE	F_pcgita	projector fine-tune minus zero-shot answer, PC-GITA	0.322740	0.239147	0.403966	0.001000	2000	0	2000	saved draws part25/B	True	0.001000			0.005997	yes	6	F_pcgita
+FINE TUNE	F_neurovoz	projector fine-tune minus zero-shot answer, NeuroVoz	0.207754	0.158818	0.257842	0.001000	2000	0	2000	saved draws part25/B	True	0.001000			0.005997	yes	6	F_neurovoz
+FINE TUNE	F_pitt	projector fine-tune minus zero-shot answer, Pitt	0.109512	0.045417	0.172824	0.002999	2000	2	1998	saved draws part25/B	True	0.003000			0.008996	yes	6	F_pitt
+FINE TUNE	F_adresso	projector fine-tune minus zero-shot answer, ADReSSo	0.209551	0.129382	0.286747	0.001000	2000	0	2000	saved draws part25/B	True	0.001000			0.005997	yes	6	F_adresso
+FINE TUNE	F_adress2020	projector fine-tune minus zero-shot answer, ADReSS-2020	0.144313	0.048958	0.236957	0.002999	2000	2	1998	saved draws part25/B	True	0.003000			0.008996	yes	6	F_adress2020
+FINE TUNE	F_lora_minus_projector	LoRA minus projector fine-tune, Pitt	0.057720	0.015355	0.104423	0.007996	2000	7	1993	saved draws part25/B	True	0.008000			0.008996	yes	6	F_lora_minus_projector
+CONTROLS	C_pg_probe_drop	encoder probe after minus before loudness and noise-floor normalisation, PC-GITA	-0.066073	-0.118077	-0.018009	0.012994	2000	1988	12	saved draws part25/B	True	0.013000			0.029985	yes	4	C_pg_probe_drop
+CONTROLS	C_nv_probe_drop	encoder probe after minus before loudness and noise-floor normalisation, NeuroVoz	-0.030818	-0.060819	-0.001233	0.036982	2000	1964	36	saved draws part25/B	True	0.037000			0.036982	yes	4	C_nv_probe_drop
+GAPS	d_q2a_PC-GITA	(d) Qwen2-Audio probe minus answer, PC-GITA	0.372747	0.310248	0.427067	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_q2a_pcgita
+GAPS	d_q2a_NeuroVoz	(d) Qwen2-Audio probe minus answer, NeuroVoz	0.380490	0.327793	0.432454	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_q2a_neurovoz
+GAPS	d_q2a_Pitt	(d) Qwen2-Audio probe minus answer, Pitt	0.167383	0.094498	0.243284	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_q2a_pitt
+GAPS	d_q2a_ADReSSo	(d) Qwen2-Audio probe minus answer, ADReSSo	0.188831	0.115439	0.268163	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_q2a_adresso
+GAPS	d_q2a_ADReSS-2020	(d) Qwen2-Audio probe minus answer, ADReSS-2020	0.149080	0.064044	0.236836	0.002999	2000	2	1998	part26 saved npz			0.000000	True	0.023988	yes	22	d_q2a_adress2020
+GAPS	d_q3o_PC-GITA	(d) Qwen3-Omni-30B-A3B probe minus answer, PC-GITA	0.300200	0.229835	0.369454	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_q3o_pcgita
+GAPS	d_q3o_NeuroVoz	(d) Qwen3-Omni-30B-A3B probe minus answer, NeuroVoz	0.297956	0.236036	0.357769	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_q3o_neurovoz
+GAPS	d_q3o_ADReSSo	(d) Qwen3-Omni-30B-A3B probe minus answer, ADReSSo	0.097555	0.036236	0.161561	0.002999	2000	2	1998	part26 saved npz			0.000000	True	0.023988	yes	22	d_q3o_adresso
+GAPS	d_q3o_ADReSS-2020	(d) Qwen3-Omni-30B-A3B probe minus answer, ADReSS-2020	0.134780	0.041669	0.233479	0.007996	2000	7	1993	part26 saved npz			0.000000	True	0.023988	yes	22	d_q3o_adress2020
+GAPS	d_kimi_PC-GITA	(d) Kimi-Audio probe minus answer, PC-GITA	0.262064	0.181032	0.336414	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_kimi_pcgita
+GAPS	d_kimi_NeuroVoz	(d) Kimi-Audio probe minus answer, NeuroVoz	0.311525	0.251478	0.367355	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_kimi_neurovoz
+GAPS	d_kimi_Pitt	(d) Kimi-Audio probe minus answer, Pitt	0.093177	0.033058	0.154688	0.004998	2000	4	1996	part26 saved npz			0.000000	True	0.023988	yes	22	d_kimi_pitt
+GAPS	d_kimi_ADReSSo	(d) Kimi-Audio probe minus answer, ADReSSo	0.115146	0.048132	0.183085	0.002999	2000	2	1998	part26 saved npz			0.000000	True	0.023988	yes	22	d_kimi_adresso
+GAPS	d_kimi_ADReSS-2020	(d) Kimi-Audio probe minus answer, ADReSS-2020	0.182857	0.087885	0.273829	0.001000	2000	0	2000	part26 saved npz			0.000000	True	0.021989	yes	22	d_kimi_adress2020
+GAPS	b_q2a_pcgita_to_kcl	(b) Qwen2-Audio PC-GITA probe on KCL minus KCL answer	0.288690	0.086471	0.496314	0.003998	2000	3	1998	regenerated from part27/A_q2a per-clip					0.023988	yes	22	b_q2a_pcgita_to_kcl
+CONTROLS	a_pitt_noinv_answer	(a) Pitt answer, no interviewer minus original	0.065188	0.022782	0.108080	0.003998	2000	3	1997	regenerated from part20/POD4 + omni_final paper file					0.015992	yes	4	a_pitt_noinv_answer
+CONTROLS	c_edaic_lp400_answer	(c) E-DAIC answer, 400 Hz low-pass minus unfiltered	-0.076193	-0.141561	-0.014416	0.009995	2000	1991	9	regenerated from part27/B mainpull + part23 A2					0.029985	yes	4	c_edaic_lp400_answer

@@ -1,0 +1,298 @@
+{
+ "script": "<local data dir>/release_from_mac/scores/part27/A_q2a/q2a_cross_to_kcl.py",
+ "python": "3.10.2",
+ "sklearn": "1.7.2",
+ "numpy": "2.2.6",
+ "method_source": "speech-health-repo/scripts/probing/cross_matrix.py (read task, train-best layer by source GroupKFold(5) by speaker)",
+ "saved_table": "speech-health-repo/results/health/probing_qwen/cross_matrix_read.csv (pcgita->kcl 0.860, neurovoz->kcl 0.744)",
+ "inputs": {
+  "pcgita": "<local data dir>/paper1_local_runs/probe2/pcgita_states.npz",
+  "neurovoz": "<local data dir>/paper1_local_runs/probe2/neurovoz_states.npz",
+  "kcl": "<local data dir>/paper1_local_runs/probe2/kcl_states.npz"
+ },
+ "zeroshot_file": "<local data dir>/paper1_local_runs/probe2/kcl_zeroshot_scores.csv",
+ "kcl_probe2_equals_kcl_probe_recut": true,
+ "kcl_clip_set": "MDVR-KCL ReadText, 37 speakers (16 PD, 21 HC), one clip each, first 30 s of the recording",
+ "bootstrap": {
+  "n": 2000,
+  "rng": "numpy default_rng(0), fresh, one set of draws shared by every row (paired)",
+  "unit": "KCL speaker, rng.choice(unique speakers, 37, replace=True)",
+  "percentiles": [
+   2.5,
+   97.5
+  ],
+  "draws_skipped_one_class": 0
+ },
+ "per_source": {
+  "pcgita": {
+   "n_src": 1100,
+   "n_src_spk": 100,
+   "layer_script": 16,
+   "within_cv_auc": 0.9363023624676519,
+   "kcl_auc_script": 0.8809523809523809,
+   "layer_nested": 16,
+   "kcl_auc_nested": 0.8809523809523809,
+   "saved_value": 0.86,
+   "within_by_layer": [
+    0.8348289506636615,
+    0.9078125052174638,
+    0.8978876366975539,
+    0.9205472910927457,
+    0.9093542031889139,
+    0.9038472326571501,
+    0.9004517906336089,
+    0.8974353451874114,
+    0.8984327573253192,
+    0.9051389932381669,
+    0.9010807246013858,
+    0.9102045245846899,
+    0.9187888805409467,
+    0.923906002170465,
+    0.9233169713665582,
+    0.9279272059437348,
+    0.9363023624676519,
+    0.9315113114617247,
+    0.9297857918023208,
+    0.9256931296435429,
+    0.91166391184573,
+    0.901544536271809,
+    0.8916488855497121,
+    0.8841602804908589,
+    0.9217417146673345,
+    0.9048259454044578,
+    0.8927940562651309,
+    0.8968671842390851,
+    0.9088800400701228,
+    0.8972789047499793,
+    0.9026367810334752,
+    0.8928413056181652,
+    0.8861893313298271
+   ],
+   "kcl_auc_by_layer": [
+    0.8214285714285715,
+    0.8541666666666667,
+    0.8839285714285714,
+    0.8095238095238096,
+    0.8303571428571428,
+    0.8333333333333334,
+    0.8660714285714286,
+    0.7083333333333334,
+    0.7232142857142857,
+    0.7827380952380952,
+    0.7232142857142858,
+    0.7767857142857143,
+    0.7202380952380952,
+    0.7083333333333333,
+    0.8333333333333334,
+    0.9107142857142857,
+    0.8809523809523809,
+    0.8214285714285714,
+    0.7916666666666666,
+    0.8898809523809524,
+    0.7738095238095238,
+    0.75,
+    0.6696428571428572,
+    0.6071428571428572,
+    0.6339285714285714,
+    0.6130952380952381,
+    0.6011904761904763,
+    0.33333333333333337,
+    0.4642857142857143,
+    0.5238095238095238,
+    0.49702380952380953,
+    0.5416666666666667,
+    0.41964285714285715
+   ],
+   "kcl_best_layer_oracle": 15,
+   "kcl_auc_oracle": 0.9107142857142857
+  },
+  "neurovoz": {
+   "n_src": 1270,
+   "n_src_spk": 107,
+   "layer_script": 20,
+   "within_cv_auc": 0.9617083223775815,
+   "kcl_auc_script": 0.7738095238095238,
+   "layer_nested": 20,
+   "kcl_auc_nested": 0.7738095238095238,
+   "saved_value": 0.744,
+   "within_by_layer": [
+    0.8500788521148864,
+    0.8630468860118755,
+    0.8639827789162144,
+    0.8851834136268334,
+    0.887703121626829,
+    0.8929754603626894,
+    0.9012416996570366,
+    0.9034643647325558,
+    0.9117520855493664,
+    0.9204450452404164,
+    0.9178489777820434,
+    0.9347228835691943,
+    0.9470768748022194,
+    0.947865530010381,
+    0.9475796208956557,
+    0.9433621131679658,
+    0.947004070395369,
+    0.9587993340675094,
+    0.9546736746603235,
+    0.9589674746115555,
+    0.9617083223775815,
+    0.9528776382713611,
+    0.9458956597932158,
+    0.9445372511030922,
+    0.9564690335899652,
+    0.95672442911433,
+    0.9546568982613974,
+    0.9514728628902261,
+    0.957669593325145,
+    0.9458448671394579,
+    0.9536567613626954,
+    0.9337306902949244,
+    0.931032416326832
+   ],
+   "kcl_auc_by_layer": [
+    0.5446428571428572,
+    0.5803571428571428,
+    0.5297619047619049,
+    0.38095238095238093,
+    0.45833333333333337,
+    0.4211309523809524,
+    0.5357142857142857,
+    0.6443452380952381,
+    0.5595238095238095,
+    0.505952380952381,
+    0.44345238095238093,
+    0.47023809523809523,
+    0.6607142857142857,
+    0.8124999999999999,
+    0.7738095238095238,
+    0.7232142857142858,
+    0.7321428571428571,
+    0.8869047619047619,
+    0.8333333333333333,
+    0.7976190476190477,
+    0.7738095238095238,
+    0.7708333333333334,
+    0.7946428571428572,
+    0.7857142857142857,
+    0.744047619047619,
+    0.75,
+    0.7440476190476191,
+    0.7529761904761905,
+    0.7678571428571429,
+    0.6666666666666666,
+    0.7708333333333333,
+    0.6845238095238095,
+    0.5952380952380953
+   ],
+   "kcl_best_layer_oracle": 17,
+   "kcl_auc_oracle": 0.8869047619047619
+  }
+ },
+ "table": [
+  {
+   "direction": "zero-shot",
+   "variant": "answer",
+   "layer": "",
+   "kcl_auc": 0.5922619047619048,
+   "auc_ci": [
+    0.39391233766233763,
+    0.7767857142857143
+   ]
+  },
+  {
+   "direction": "pcgita->kcl",
+   "variant": "script",
+   "layer": 16,
+   "kcl_auc": 0.8809523809523809,
+   "auc_ci": [
+    0.7545454545454545,
+    0.9735294117647059
+   ],
+   "diff_vs_zeroshot": 0.28869047619047616,
+   "diff_ci": [
+    0.0864712732919255,
+    0.4963144841269841
+   ],
+   "frac_draws_diff_le_0": 0.0015
+  },
+  {
+   "direction": "pcgita->kcl",
+   "variant": "nested",
+   "layer": 16,
+   "kcl_auc": 0.8809523809523809,
+   "auc_ci": [
+    0.7545454545454545,
+    0.9735294117647059
+   ],
+   "diff_vs_zeroshot": 0.28869047619047616,
+   "diff_ci": [
+    0.0864712732919255,
+    0.4963144841269841
+   ],
+   "frac_draws_diff_le_0": 0.0015
+  },
+  {
+   "direction": "neurovoz->kcl",
+   "variant": "script",
+   "layer": 20,
+   "kcl_auc": 0.7738095238095238,
+   "auc_ci": [
+    0.6058795248868779,
+    0.9121212121212121
+   ],
+   "diff_vs_zeroshot": 0.18154761904761907,
+   "diff_ci": [
+    -0.038017285861713185,
+    0.39630555555555547
+   ],
+   "frac_draws_diff_le_0": 0.0435
+  },
+  {
+   "direction": "neurovoz->kcl",
+   "variant": "nested",
+   "layer": 20,
+   "kcl_auc": 0.7738095238095238,
+   "auc_ci": [
+    0.6058795248868779,
+    0.9121212121212121
+   ],
+   "diff_vs_zeroshot": 0.18154761904761907,
+   "diff_ci": [
+    -0.038017285861713185,
+    0.39630555555555547
+   ],
+   "frac_draws_diff_le_0": 0.0435
+  }
+ ],
+ "zeroshot_auc": 0.5922619047619048,
+ "sha256": {
+  "perclip": "ec0d8b10bdd96fc7ed619469829806c383e056fae51b79c469b11a52556b5037",
+  "summary": "6cb677e557359cd557d32248c9d139e23d1b5f103f6939bd0f714a016850f157"
+ },
+ "runtime_s": 49.9,
+ "reproduction": {
+  "exact": false,
+  "pcgita_to_kcl": {
+   "saved": 0.86,
+   "rerun": 0.881,
+   "layer": 16,
+   "saved_within_diag": 0.932,
+   "rerun_within": 0.9363
+  },
+  "neurovoz_to_kcl": {
+   "saved": 0.744,
+   "rerun": 0.7738,
+   "layer": 20,
+   "saved_within_diag": 0.948,
+   "rerun_within": 0.9617
+  },
+  "why_not_exact": [
+   "The saved matrix used the cluster files features/qwen2/<ds>/encoder_features.npz, which are not on this Mac or the G-Drive. Those came from scripts/probing/extract_features.py: whole recording, cut into 30 s windows, layer means averaged over windows.",
+   "The saved local states came from probe2/extract2.py, which keeps only the first 30 s of each file (x = x[:16000*30]). Any clip longer than 30 s has different features.",
+   "NeuroVoz: the local states hold all 1270 clips of the 12 read sentence items. The cluster 'read' filter used the original manifest task_type, which scripts/probing/fix_neurovoz.py documents had put some read sentences in the 'ddk' bucket, so the cluster read set was likely smaller. Not confirmed: the cluster manifest is not on disk.",
+   "Classifier, scaler, layer rule and KCL clip set (ReadText, 37 speakers) are the same as cross_matrix.py."
+  ],
+  "layer_rule_nested": "For the cross cells the layer is picked by GroupKFold(5) by speaker on the source only; KCL is never used. So the saved cross values are already nested with respect to KCL, and the nested variant gives the same layer and the same scores. Only the diagonal (within dataset) values in the saved matrix are not nested, because the layer is picked and scored on the same folds."
+ }
+}

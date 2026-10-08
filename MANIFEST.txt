@@ -50,6 +50,14 @@ EXCLUSION CHECK, run before publishing:
                            label or speech
   files added after these checks: .gitattributes and CITATION.cff, written for this release. They hold a repository
                            setting and citation metadata only
+  files added on 8 Oct 2026: 23 files under scores/holm_extended/, scores/part27/, scripts/holm_extended/ and
+                           scripts/part27/ (the extended Holm check, the cross-corpus probe and the 400 Hz low-pass
+                           check). Checked before adding: no CSV/TSV column and no JSON key named label, diagnosis,
+                           dx, phq, mmse, class, y, group, transcript, text or utterance; no 8-word sequence of the
+                           Whisper transcripts of the low-pass check in any of them; machine paths rewritten to
+                           <local data dir>/. Not added: the per-clip files of the Holm check (they hold the
+                           clinical label) and its draws files, the per-clip file of the cross-corpus probe (its
+                           MDVR-KCL clip names carry hc or pd) and the Whisper transcripts
 
 path                                                                     bytes  origin / transformation
 --------------------------------------------------------------------------------------------------------------------------------------------
@@ -57,8 +65,8 @@ path                                                                     bytes  
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 CITATION.cff                                                              1572  written for this release: citation metadata of the paper, an ICASSP 2027 submission
 DISCREPANCIES.md                                                        211201  written for this release
-MANIFEST.txt                                                            958578  this file
-README.md                                                               184986  written for this release
+MANIFEST.txt                                                            964993  this file
+README.md                                                               191416  written for this release
 archive/README_v1_companion.md                                           11907  companion README of the first release, kept for the record outside docs/ so the project page does not serve it (commit 89dd96f). A first line now marks it as superseded
 checks/accel_24sep/af3/af3_part3_vs_part10.csv                             415  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.csv
 checks/accel_24sep/af3/af3_part3_vs_part10.log                             616  copied verbatim  <- authors-drive/release_from_mac/scores/accel_24sep/af3/af3_part3_vs_part10.log
@@ -263,7 +271,7 @@ docs/.nojekyll                                                               0  
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
 docs/data/explorer_data.json                                             19056  aggregate numbers drawn by docs/explorer.html, written for this release
 docs/explorer.html                                                       34890  interactive explorer page, written for this release
-docs/index.html                                                          56906  project page, written for this release
+docs/index.html                                                          57728  project page, written for this release
 figures/checks/overleaf_vs_repo/fig_overleaf-1.png                       17699  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_overleaf-1.png
 figures/checks/overleaf_vs_repo/fig_repo-1.png                           14837  copied verbatim  <- authors-drive/paper1_submission_23sep/fig_repo-1.png
 figures/checks/repro_option_c/compare_repro_overleaf_diff.png            76275  copied verbatim  <- authors-drive/paper1_submission_23sep/fig/compare_repro_overleaf_diff.png
@@ -1308,6 +1316,11 @@ scores/edaic_windows/sft_mid30_state.json                                 5753  
 scores/edaic_windows/windows_full.json                                     368  copied verbatim  <- release/edaic_rerun/variants/windows_full.json
 scores/edaic_windows/windows_mid30.json                                    369  copied verbatim  <- release/edaic_rerun/variants/windows_mid30.json
 scores/edaic_windows/windows_mid300.json                                   374  copied verbatim  <- release/edaic_rerun/variants/windows_mid300.json
+scores/holm_extended/check1_independent/check1_holm.tsv                   7841  copied verbatim; first independent recomputation of the 41 Holm rows  <- authors-drive/release_from_mac/scores/holm_extended/check1_independent/check1_holm.tsv
+scores/holm_extended/holm_extended.sidecar.json                          50169  copied, machine paths rewritten (x93); sidecar of the extended Holm check: rule, families, sources and versions  <- authors-drive/release_from_mac/scores/holm_extended/holm_extended.sidecar.json
+scores/holm_extended/holm_extended.tsv                                   23156  copied, machine paths rewritten (x82); Holm correction over the 41 differences the paper calls significant  <- authors-drive/release_from_mac/scores/holm_extended/holm_extended.tsv
+scores/holm_extended/independent_check2/check2_claims.tsv                 6351  copied verbatim; second independent recomputation of the 41 Holm rows  <- authors-drive/release_from_mac/scores/holm_extended/independent_check2/check2_claims.tsv
+scores/holm_extended/independent_check2/check2_out.json                  31670  copied, machine paths rewritten (x47); second independent recomputation, full output  <- authors-drive/release_from_mac/scores/holm_extended/independent_check2/check2_out.json
 scores/leftovers_23sep/m7m11/lo-m7m11-1/adress2020_pod4b_enc_rep5.json     594  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/pull/lo-m7m11-1/out/adress2020_pod4b_enc_rep5.json
 scores/leftovers_23sep/m7m11/lo-m7m11-1/adress2020_pod4b_enc_rep5_oof.csv 19330  copied, columns dropped on copy: label (clinical label)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/pull/lo-m7m11-1/out/adress2020_pod4b_enc_rep5_oof.csv
 scores/leftovers_23sep/m7m11/lo-m7m11-1/logs/DRIVER.log                     35  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/pull/lo-m7m11-1/logs/DRIVER.log
@@ -3991,6 +4004,17 @@ scores/part26/table26/cost26_out.json                                     6930  
 scores/part26/table26/pod_get_status.json                                  912  copied verbatim  <- authors-drive/release_from_mac/scores/part26/table26/pod_get_status.json
 scores/part26/table26/pods_found.json                                     8479  copied verbatim  <- authors-drive/release_from_mac/scores/part26/table26/pods_found.json
 scores/part26/table26/verify_table26_out.json                            78575  copied, machine paths rewritten (x85)  <- authors-drive/release_from_mac/scores/part26/table26/verify_table26_out.json
+scores/part27/A_q2a/check1.tsv                                            2659  copied verbatim; first independent check of the cross-corpus summary  <- authors-drive/release_from_mac/scores/part27/A_q2a/check1.tsv
+scores/part27/A_q2a/check2.tsv                                            3041  copied verbatim; second independent check of the cross-corpus summary  <- authors-drive/release_from_mac/scores/part27/A_q2a/check2.tsv
+scores/part27/A_q2a/q2a_cross_to_kcl.sidecar.json                         8462  copied, machine paths rewritten (x5); sidecar of the cross-corpus run, with the per-layer AUCs  <- authors-drive/release_from_mac/scores/part27/A_q2a/q2a_cross_to_kcl.sidecar.json
+scores/part27/A_q2a/q2a_cross_to_kcl_summary.csv                           439  copied verbatim; Qwen2-Audio encoder probe trained on PC-GITA or NeuroVoz and scored on MDVR-KCL, against the KCL answer  <- authors-drive/release_from_mac/scores/part27/A_q2a/q2a_cross_to_kcl_summary.csv
+scores/part27/B/A_extract_perclip_lp400.csv                              69232  copied verbatim; E-DAIC 400 Hz low-pass answer per clip; the source has no clinical label column, so nothing was dropped  <- authors-drive/release_from_mac/scores/part27/B/mainpull/A_extract_perclip_lp400.csv
+scores/part27/B/B_fastcheck.tsv                                           1840  copied verbatim; independent check of the E-DAIC 400 Hz low-pass answer and probes  <- authors-drive/release_from_mac/scores/part27/verify/B_fastcheck.tsv
+scores/part27/B/probe_lp400/ans_nested.RESULT                              144  copied verbatim; low-pass answer-state probe, per-repeat AUCs and their mean  <- authors-drive/release_from_mac/scores/part27/B/mainpull/probe_lp400/ans_nested.RESULT
+scores/part27/B/probe_lp400/enc_nested.RESULT                              144  copied verbatim; low-pass encoder probe, per-repeat AUCs and their mean  <- authors-drive/release_from_mac/scores/part27/B/mainpull/probe_lp400/enc_nested.RESULT
+scores/part27/B/probe_lp400/llm_nested.RESULT                              145  copied verbatim; low-pass language model probe, per-repeat AUCs and their mean  <- authors-drive/release_from_mac/scores/part27/B/mainpull/probe_lp400/llm_nested.RESULT
+scores/part27/B/probe_lp400/proj_nested.RESULT                             145  copied verbatim; low-pass projector probe, per-repeat AUCs and their mean  <- authors-drive/release_from_mac/scores/part27/B/mainpull/probe_lp400/proj_nested.RESULT
+scores/part27/B2/wer_full_a.json                                           705  copied verbatim; Whisper word error rate of 20 low-passed whole interviews, per interview and pooled, no transcript text  <- authors-drive/release_from_mac/scores/part27/B2/full/wer_full_a.json
 scores/pitt_all/af3_full.csv                                             53861  numbers re-serialized, equal to the source within 1e-12  <- release/edaic_rerun/pitt_all/af3_full.csv. The clinical label dropped on 24 Sep 2026 (label, see lookup/LABELS_DROPPED.tsv)
 scores/pitt_all/af3_full.json                                              362  copied verbatim  <- release/edaic_rerun/pitt_all/af3_full.json
 scores/pitt_all/kimi_full_zeroshot.json                                    518  copied verbatim  <- release/edaic_rerun/pitt_all/kimi_full_zeroshot.json
@@ -4068,6 +4092,7 @@ scripts/edaic_full/perlayer.py                                            2710  
 scripts/edaic_full/probe_boot.py                                          8016  copied verbatim  <- release/edaic_rerun/part16/EDAICFULL/probe_boot.py
 scripts/edaic_full/validate.py                                            3033  copied verbatim  <- release/edaic_rerun/part16/EDAICFULL/validate.py
 scripts/fig_options.py                                                    5896  copied; input folders are now CURVES_DIR and scores/edaic_windows/ in place of authors' machine paths  <- authors-drive/paper1_submission_23sep/fig/fig_options.py
+scripts/holm_extended/holm_extended.py                                   20252  copied, machine paths rewritten (x4); the script of the extended Holm check  <- authors-drive/release_from_mac/scores/holm_extended/holm_extended.py
 scripts/leftovers_23sep/m7m11/lo-m7m11-2/m7m11_verify.py                  7017  copied verbatim  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/pull/lo-m7m11-2/m7m11_verify.py
 scripts/leftovers_23sep/m7m11/m11_group_intervals.py                     10164  copied, machine paths rewritten (x3), wording edited (2 lines)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/scripts/m11_group_intervals.py
 scripts/leftovers_23sep/m7m11/m7_meanof5_gaps.py                         15637  copied, machine paths rewritten (x8)  <- authors-drive/release_from_mac/scores/leftovers_23sep/m7m11/scripts/m7_meanof5_gaps.py
@@ -4823,6 +4848,12 @@ scripts/part26/Qwen3-Omni-30B-A3B_Pitt/verify/independent/indep_verify_q3o_pitt.
 scripts/part26/inventory/inv_check.py                                     3815  copied, machine paths rewritten (x6)  <- authors-drive/release_from_mac/scores/part26/inventory/inv_check.py
 scripts/part26/table26/cost26.py                                          2988  copied verbatim  <- authors-drive/release_from_mac/scores/part26/table26/cost26.py
 scripts/part26/table26/verify_table26.py                                 14871  copied, machine paths rewritten (x3)  <- authors-drive/release_from_mac/scores/part26/table26/verify_table26.py
+scripts/part27/A_q2a/q2a_cross_to_kcl.py                                  9077  copied, machine paths rewritten (x2); the cross-corpus probe script  <- authors-drive/release_from_mac/scores/part27/A_q2a/q2a_cross_to_kcl.py
+scripts/part27/B/p27b_extract.py                                         11483  copied verbatim; the 400 Hz low-pass extraction script  <- authors-drive/release_from_mac/scores/part27/B/stage/p23a/p27b_extract.py
+scripts/part27/B/run27b.sh                                                3747  copied verbatim; the pod driver of the low-pass run  <- authors-drive/release_from_mac/scores/part27/B/stage/run27b.sh
+scripts/part27/B2/b2f_whisper.py                                          1887  copied verbatim; the Whisper run on the low-passed and unfiltered interviews  <- authors-drive/release_from_mac/scores/part27/B2/b2f_whisper.py
+scripts/part27/B2/wer_full_a.py                                           1367  copied verbatim; the word error rate script  <- authors-drive/release_from_mac/scores/part27/B2/wer_full_a.py
+scripts/part27/verify/B_fastcheck.py                                      4902  copied, machine paths rewritten (x1); the script of the low-pass check  <- authors-drive/release_from_mac/scores/part27/verify/B_fastcheck.py
 scripts/probe2/make_fig1_v2.py                                            3634  copied, machine paths rewritten (x1)  <- authors-drive/paper1_local_runs/probe2/make_fig1_v2.py
 scripts/upstream/build_ad_conflict.py                                     5231  copied verbatim  <- authors-machine/af2_run/speech-health/scripts/dementiabank/build_ad_conflict.py
 scripts/upstream/build_pitt_manifest.py                                   2620  copied verbatim  <- authors-machine/af2_run/speech-health/scripts/dementiabank/build_pitt_manifest.py
@@ -4839,4 +4870,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                167076203  4785 files
+TOTAL                                                                167348728  4808 files
