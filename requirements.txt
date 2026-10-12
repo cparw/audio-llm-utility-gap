@@ -1,0 +1,10 @@
+# Environment of the probe refits and the bootstrap intervals (scores/part17/T7b/pod_env.json):
+# Python 3.12 on Linux x86_64. Probe refits match the released files only with scikit-learn 1.9.1,
+# because older versions order tied speakers differently in GroupKFold (records/AUDIT.md, section i).
+numpy==2.1.2
+scipy==1.18.1
+scikit-learn==1.9.1
+pandas==3.0.6
+joblib==1.6.0
+# The model runs (hidden states, zero-shot answers, fine-tuning) also need torch and transformers.
+# Each run records its own versions in its sidecar json under scores/.
