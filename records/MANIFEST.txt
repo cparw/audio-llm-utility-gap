@@ -64,12 +64,12 @@ path                                                                     bytes  
 .gitattributes                                                             128  written for this release: keeps the TeX files of records/history/ and scores/part17/part12_prep/ out of the GitHub language count
 .gitignore                                                                   6  repository setting, carried over from commit d8a6045
 CITATION.cff                                                              1572  written for this release: citation metadata of the paper, an ICASSP 2027 submission
-README.md                                                                11076  written for this release
+README.md                                                                11351  written for this release
 docs/.nojekyll                                                               0  empty, tells GitHub Pages to serve the folder as it is
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
 docs/data/explorer_data.json                                             19056  aggregate numbers drawn by docs/explorer.html, written for this release
 docs/explorer.html                                                       34890  interactive explorer page, written for this release
-docs/index.html                                                          58634  project page, written for this release
+docs/index.html                                                          58962  project page, written for this release
 figures/fig1_gap.pdf                                                     17801  copied verbatim, Figure 1 as submitted to ICASSP 2027 (md5 a102c1a8872ba59fe73dd58700aae142)  <- figures/fig1_gap.pdf of the submitted source
 figures/page/conflict-edaic-dark.png                                     96429  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
 figures/page/conflict-edaic-light.png                                    96714  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
@@ -4844,4 +4844,4 @@ scripts/upstream/make_fig1.py                                             5404  
 scripts/upstream/px_build.py                                             14999  copied verbatim  <- authors-machine/af2_run/speech-health/scripts/audiollm/px_build.py
 scripts/upstream/validate_ad_conflict.py                                  3736  copied verbatim  <- authors-machine/af2_run/speech-health/scripts/dementiabank/validate_ad_conflict.py
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                166809706  4782 files
+TOTAL                                                                166810309  4782 files

@@ -171,7 +171,11 @@ size and origin. Run logs, sidecars and scripts written before 12 October 2026 c
 ```bibtex
 @misc{parwatkar2026utilitygap,
   title  = {The Representation Utility Gap in Audio {LLMs} for Clinical Speech},
-  author = {Parwatkar, Chaitanya and Kelidari, Nima and Ahmadi, Minoo and Chaubey, Ashutosh and Soleymani, Mohammad},
+  author = {Parwatkar, Chaitanya and
+            Kelidari, Nima and
+            Ahmadi, Minoo and
+            Chaubey, Ashutosh and
+            Soleymani, Mohammad},
   year   = {2026},
   note   = {Submitted to ICASSP 2027},
   url    = {https://github.com/cparw/audio-llm-utility-gap}
@@ -180,4 +184,7 @@ size and origin. Run logs, sidecars and scripts written before 12 October 2026 c
 
 ## Contact
 
-Mohammad Soleymani, University of Southern California, [soleymani@ict.usc.edu](mailto:soleymani@ict.usc.edu).
+- Chaitanya Parwatkar, University of Southern California: [parwatka@usc.edu](mailto:parwatka@usc.edu)
+- Ashutosh Chaubey, University of Southern California: [achaubey@usc.edu](mailto:achaubey@usc.edu)
+- Mohammad Soleymani, University of Southern California (corresponding author):
+  [soleymani@ict.usc.edu](mailto:soleymani@ict.usc.edu)
