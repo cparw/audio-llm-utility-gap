@@ -271,7 +271,7 @@ docs/.nojekyll                                                               0  
 docs/assets/fig1_gap.png                                                119973  Figure 1 as submitted, rendered from figures/fig1_gap.pdf at 400 dpi (pdftoppm -r 400)
 docs/data/explorer_data.json                                             19056  aggregate numbers drawn by docs/explorer.html, written for this release
 docs/explorer.html                                                       34890  interactive explorer page, written for this release
-docs/index.html                                                          57831  project page, written for this release
+docs/index.html                                                          56719  project page, written for this release
 figures/fig1_gap.pdf                                                     17801  copied verbatim, Figure 1 as submitted to ICASSP 2027 (md5 a102c1a8872ba59fe73dd58700aae142)  <- figures/fig1_gap.pdf of the submitted source
 figures/page/conflict-edaic-dark.png                                     96429  written for this release: project page chart rendered from docs/index.html (dark scheme, 2x), shown in README.md
 figures/page/conflict-edaic-light.png                                    96714  written for this release: project page chart rendered from docs/index.html (light scheme, 2x), shown in README.md
@@ -4840,4 +4840,4 @@ summary/check_summary.py                                                 50968  
 summary/summary_all_v2.csv                                              921267  copied, machine paths rewritten (x2999)  <- authors-drive/release_from_mac/summary/summary_all_v2.csv
 summary/summary_counts_v2.json                                             552  copied, machine paths rewritten (x1)  <- authors-drive/release_from_mac/summary/summary_counts_v2.json
 --------------------------------------------------------------------------------------------------------------------------------------------
-TOTAL                                                                165233860  4778 files
+TOTAL                                                                166785709  4778 files
